@@ -1,0 +1,38 @@
+{
+  "entity": {
+    "cik": "0000999999",
+    "name": "Synthetic Northstar Corp"
+  },
+  "period": {
+    "start": "2025-01-01",
+    "end": "2024-12-31"
+  },
+  "taxonomy": "us-gaap-2024",
+  "contexts": [
+    {
+      "id": "C-YEAR",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "id": "C-YEAR-DUP",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    }
+  ],
+  "facts": [
+    {
+      "name": "Revenue",
+      "value": 1250000,
+      "context": "C-YEAR-DUP"
+    },
+    {
+      "name": "Assets",
+      "value": 2400000,
+      "context": "C-YEAR"
+    }
+  ],
+  "exhibit": {
+    "filename": "exhibit bad.xml"
+  }
+}

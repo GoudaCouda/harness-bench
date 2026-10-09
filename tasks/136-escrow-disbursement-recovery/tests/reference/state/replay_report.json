@@ -1,0 +1,11 @@
+{
+  "database_byte_stable": true,
+  "external_actions_executed": false,
+  "manifest_byte_stable": true,
+  "packet_byte_stable": true,
+  "receipt_byte_stable": true,
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "556a5842fd21315de702de1087e223b271f198bd31d9f51a7ce567bb457454c1",
+  "status": "pass"
+}

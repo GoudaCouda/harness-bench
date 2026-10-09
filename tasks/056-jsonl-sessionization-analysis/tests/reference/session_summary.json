@@ -1,0 +1,19 @@
+{
+  "total_sessions": 4,
+  "converted_sessions": 2,
+  "excluded_bot_users": [
+    "U300"
+  ],
+  "deduped_event_ids": [
+    "E104"
+  ],
+  "malformed_line_numbers": [
+    9
+  ],
+  "missing_timestamp_event_ids": [
+    "E400"
+  ],
+  "unknown_event_type_ids": [
+    "E401"
+  ]
+}

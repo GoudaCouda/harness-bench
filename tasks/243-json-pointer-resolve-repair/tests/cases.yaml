@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 243-json-pointer-resolve-repair
+pass_threshold: 0.8
+cases:
+- id: function_behavior
+  title: Pointers unescape and fail closed
+  description: Hidden pointer cases match the kernel; missing paths raise ValueError.
+  weight: 0.5
+  core: true
+- id: visible_snapshot
+  title: The mill query snapshot is exact
+  description: repo/resolved.json matches the kernel on query.json.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain escapes and the unittest
+  description: IMPLEMENTATION_NOTES.md covers pointer, tilde, missing, tests, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected inputs remain unchanged
+  description: Document JSON and tests stay byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

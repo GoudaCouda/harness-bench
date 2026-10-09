@@ -1,0 +1,10 @@
+[
+  {
+    "machine_id": "m-east",
+    "capacity": 5
+  },
+  {
+    "machine_id": "m-west",
+    "capacity": 5
+  }
+]

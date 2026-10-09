@@ -1,0 +1,24 @@
+{
+  "backup_id": "base-t2-0920",
+  "external_action": "none_offline_manual_review_only",
+  "incident_id": "DB-INC-2026-0817-04",
+  "input_sha256": {
+    "evidence/backups.json": "2325bffdacf5b816d122267f2e39f45e1739950c0c931305ef9a9ce322207ab0",
+    "evidence/expected_invariants.json": "2a937587bafb4e7d07ab0d10e1fb4b558d3463daeb49ed6f9b904a2b12949778",
+    "evidence/incident.json": "305057c4468d7b6f5efd72a251f69107dc9921c01cff59efbd2d508f1d984625",
+    "evidence/timeline_history.json": "33cb194fafa951d78ba7d4cedbb652213ac4ae249edba58bf113a31095d4dd31",
+    "evidence/wal_archive.json": "0f47e30c5cb0baa744e09854bb15fa0c8a956ccfe6a9920f0123e645f2f3207d",
+    "policy/recovery_policy.json": "c4102cb657bc756b6b7ba0c6c9f36b706ca3056387455127f1ec82b873570977"
+  },
+  "plan_sha256": "0673a24303e865179061b7248b879ad15379b03479d3e4fa2444a1e39287f48b",
+  "policy_version": "DB-PITR-DRILL-2026.08",
+  "probe_runs": 2,
+  "probe_sha256": "cc825ff75bdc9b6e626e2493a25a3509684a048dc1112a5bdbfa9e8384cdbddf",
+  "receipt_sha256": "ff86f9fc12053e53e5918f51c15e1ab789687a86ab84d9034397d8c55a1841ef",
+  "replay_verified": true,
+  "status": "ready_for_manual_promotion_review",
+  "target_lsn": "0/C120000",
+  "target_name": "before_batch_cleanup",
+  "target_timeline": 2,
+  "tool": "pitrctl/1"
+}

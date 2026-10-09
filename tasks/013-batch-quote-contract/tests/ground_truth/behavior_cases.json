@@ -1,0 +1,69 @@
+{
+  "pricing_batches": [
+    {
+      "quote_date": "2026-08-26",
+      "requests": [{"request_id": "P-1", "plan": "starter", "seats": 3, "term_months": 1}],
+      "expected": [{"request_id": "P-1", "status": "quoted", "subtotal_cents": 3600, "term_discount_cents": 0, "coupon_discount_cents": 0, "total_cents": 3600}]
+    },
+    {
+      "quote_date": "2026-09-30",
+      "requests": [{"request_id": "P-2", "plan": "team", "seats": 10, "term_months": 12, "coupon": "TEAM5"}],
+      "expected": [{"request_id": "P-2", "status": "quoted", "subtotal_cents": 330000, "term_discount_cents": 49500, "coupon_discount_cents": 14025, "total_cents": 266475}]
+    },
+    {
+      "quote_date": "2026-08-31",
+      "requests": [
+        {"request_id": "P-3", "plan": "enterprise", "seats": 25, "term_months": 12},
+        {"request_id": "P-4", "plan": "starter", "seats": 1, "term_months": 12, "coupon": "START10"}
+      ],
+      "expected": [
+        {"request_id": "P-3", "status": "quoted", "subtotal_cents": 1499700, "term_discount_cents": 262447, "coupon_discount_cents": 0, "total_cents": 1237253},
+        {"request_id": "P-4", "status": "quoted", "subtotal_cents": 14400, "term_discount_cents": 1440, "coupon_discount_cents": 1296, "total_cents": 11664}
+      ]
+    }
+  ],
+  "validation_batches": [
+    {
+      "quote_date": "2026-08-26",
+      "requests": [
+        {"request_id": "DUP", "plan": "missing", "seats": 1, "term_months": 1},
+        {"request_id": "OK", "plan": "team", "seats": 5, "term_months": 1},
+        {"request_id": "DUP", "plan": "starter", "seats": 2, "term_months": 1}
+      ],
+      "expected": [
+        {"request_id": "DUP", "status": "rejected", "code": "duplicate_request_id"},
+        {"request_id": "OK", "status": "quoted", "subtotal_cents": 13750, "term_discount_cents": 0, "coupon_discount_cents": 0, "total_cents": 13750},
+        {"request_id": "DUP", "status": "rejected", "code": "duplicate_request_id"}
+      ]
+    },
+    {
+      "quote_date": "2026-08-26",
+      "requests": [
+        9,
+        {"request_id": "", "plan": "starter", "seats": 1, "term_months": 1},
+        {"request_id": "V-PLAN", "plan": "missing", "seats": 1, "term_months": 1},
+        {"request_id": "V-BOOL", "plan": "starter", "seats": true, "term_months": 1},
+        {"request_id": "V-LOW", "plan": "team", "seats": 4, "term_months": 1},
+        {"request_id": "V-TERM", "plan": "starter", "seats": 1, "term_months": true},
+        {"request_id": "V-UNK", "plan": "starter", "seats": 1, "term_months": 1, "coupon": "NOPE"},
+        {"request_id": "V-SCOPE", "plan": "team", "seats": 5, "term_months": 1, "coupon": "START10"},
+        {"request_id": "V-OLD", "plan": "enterprise", "seats": 25, "term_months": 1, "coupon": "OLD20"}
+      ],
+      "expected": [
+        {"request_id": null, "status": "rejected", "code": "invalid_item"},
+        {"request_id": "", "status": "rejected", "code": "invalid_request_id"},
+        {"request_id": "V-PLAN", "status": "rejected", "code": "unknown_plan"},
+        {"request_id": "V-BOOL", "status": "rejected", "code": "invalid_seats"},
+        {"request_id": "V-LOW", "status": "rejected", "code": "invalid_seats"},
+        {"request_id": "V-TERM", "status": "rejected", "code": "invalid_term"},
+        {"request_id": "V-UNK", "status": "rejected", "code": "unknown_coupon"},
+        {"request_id": "V-SCOPE", "status": "rejected", "code": "coupon_wrong_plan"},
+        {"request_id": "V-OLD", "status": "rejected", "code": "coupon_expired"}
+      ]
+    }
+  ],
+  "invalid_batches": [
+    {"requests": [], "quote_date": "2026-08-26"},
+    {"requests": {}, "quote_date": "2026-08-26"}
+  ]
+}

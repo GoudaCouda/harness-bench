@@ -1,0 +1,43 @@
+schema_version: 2
+task_id: 267-eldercare-research-evidence-report
+title: eldercare research evidence report
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+design_file: design.md
+timeout_sec: 7200
+domain: Research
+task_category: Research and Analysis
+task_subcategory: Evidence-Based Research
+difficulty: hard
+capability_tags:
+- goal_understanding
+- planning
+- tool_use
+- workspace_operation
+- long_horizon_state
+- self_correction
+- deliverable_completion
+- safety_cost_awareness
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts: &id001
+- output/养老行业研究报告.md
+task_family: 267-eldercare-research-evidence-report
+variant: standalone
+mutation_contract:
+  allowed_created: *id001
+  allowed_modified: []
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_13

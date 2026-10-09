@@ -1,0 +1,65 @@
+[
+  {
+    "id": "TASK-18",
+    "name": "Brand kit cleanup",
+    "category": "backlog",
+    "owner": "Nora Singh",
+    "status": "clear",
+    "primary": 8,
+    "secondary": 0
+  },
+  {
+    "id": "TASK-24",
+    "name": "Motion export QA",
+    "category": "in-progress",
+    "owner": "Felix Cho",
+    "status": "watch",
+    "primary": 13,
+    "secondary": 2
+  },
+  {
+    "id": "TASK-29",
+    "name": "Landing comp fixes",
+    "category": "review",
+    "owner": "Ivy Chen",
+    "status": "review",
+    "primary": 5,
+    "secondary": 1
+  },
+  {
+    "id": "TASK-37",
+    "name": "Illustration handoff",
+    "category": "blocked",
+    "owner": "Omar Reed",
+    "status": "watch",
+    "primary": 21,
+    "secondary": 4
+  },
+  {
+    "id": "TASK-18-R1",
+    "name": "Brand kit cleanup follow-up",
+    "category": "in-progress",
+    "owner": "Ivy Chen",
+    "status": "clear",
+    "primary": 22,
+    "secondary": 6
+  },
+  {
+    "id": "TASK-24-R2",
+    "name": "Motion export QA follow-up",
+    "category": "review",
+    "owner": "Omar Reed",
+    "status": "watch",
+    "primary": 30,
+    "secondary": 9
+  },
+  {
+    "id": "TASK-29-R3",
+    "name": "Landing comp fixes follow-up",
+    "category": "blocked",
+    "owner": "Nora Singh",
+    "status": "review",
+    "primary": 25,
+    "secondary": 9
+  }
+]

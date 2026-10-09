@@ -1,0 +1,11 @@
+{
+  "bundle_byte_stable": true,
+  "database_byte_stable": true,
+  "external_actions_executed": false,
+  "manifest_byte_stable": true,
+  "receipt_byte_stable": true,
+  "recovery_id": "CRR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "680157bb294c7d2983290ed0221cf272254430f4d871b6c3ddb901ac52ee0154",
+  "status": "pass"
+}

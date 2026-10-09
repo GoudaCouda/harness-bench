@@ -1,0 +1,18 @@
+{
+  "changed_paths": [
+    "packages/core/src/money.py",
+    "generated/api_types.py",
+    "packages/web/README.md",
+    "docs/adr/004-cache-policy.md",
+    "packages/core/src/removed_legacy.py",
+    "packages/core/src/money.py"
+  ],
+  "affected_packages": ["core", "api", "cli", "worker", "web"],
+  "direct_causes": {
+    "api": ["generated/api_types.py"],
+    "core": [
+      "packages/core/src/money.py",
+      "packages/core/src/removed_legacy.py"
+    ]
+  }
+}

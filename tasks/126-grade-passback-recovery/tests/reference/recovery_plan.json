@@ -1,0 +1,197 @@
+{
+  "assignment_bindings": [
+    {
+      "assignment_version": 2,
+      "line_item_event_id": "evt-line-q-v2",
+      "lms_line_item_id": "li-alg-q1",
+      "score_maximum": 20,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A"
+    },
+    {
+      "assignment_version": 3,
+      "line_item_event_id": "evt-line-essay-v3",
+      "lms_line_item_id": "li-essay-2",
+      "score_maximum": 50,
+      "sis_assignment_id": "ASG-ESSAY-2",
+      "sis_section_id": "SEC-ENG-8B"
+    }
+  ],
+  "duplicate_event_ids": [
+    "evt-result-alice-v2"
+  ],
+  "external_actions_executed": false,
+  "passback_id": "GP-20260818-DISTRICT-01",
+  "result_actions": [
+    {
+      "assignment_version": 1,
+      "attempt_id": "ATT-ALICE-V1",
+      "disposition": "quarantine",
+      "event_id": "evt-result-alice-v1",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-alice-v1"
+      ],
+      "external_action": "none",
+      "gradebook_action": "quarantine_local",
+      "lms_user_id": "lms-alice-old",
+      "reason_code": "stale_assignment_version",
+      "score_given": 9,
+      "score_maximum": 10,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A",
+      "sis_student_id": "STU-1001",
+      "source_sequence": 4,
+      "submitted_at": "2026-08-11T15:20:00Z"
+    },
+    {
+      "assignment_version": 2,
+      "attempt_id": "ATT-ALICE-V2",
+      "disposition": "accept",
+      "event_id": "evt-result-alice-v2",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-alice-v2"
+      ],
+      "external_action": "none",
+      "gradebook_action": "upsert_local",
+      "lms_user_id": "lms-alice-old",
+      "reason_code": "accepted_on_time",
+      "score_given": 17,
+      "score_maximum": 20,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A",
+      "sis_student_id": "STU-1001",
+      "source_sequence": 5,
+      "submitted_at": "2026-08-12T15:30:00Z"
+    },
+    {
+      "assignment_version": 2,
+      "attempt_id": "ATT-BOB-BADSCALE",
+      "disposition": "quarantine",
+      "event_id": "evt-result-bob-badscale",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-bob-badscale"
+      ],
+      "external_action": "none",
+      "gradebook_action": "quarantine_local",
+      "lms_user_id": "lms-bob",
+      "reason_code": "invalid_score_scale",
+      "score_given": 85,
+      "score_maximum": 100,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A",
+      "sis_student_id": "STU-1002",
+      "source_sequence": 6,
+      "submitted_at": "2026-08-12T15:35:00Z"
+    },
+    {
+      "assignment_version": 2,
+      "attempt_id": "ATT-BOB-CORRECTED",
+      "disposition": "accept",
+      "event_id": "evt-result-bob-corrected",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-bob-corrected"
+      ],
+      "external_action": "none",
+      "gradebook_action": "upsert_local",
+      "lms_user_id": "lms-bob",
+      "reason_code": "accepted_on_time",
+      "score_given": 18,
+      "score_maximum": 20,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A",
+      "sis_student_id": "STU-1002",
+      "source_sequence": 7,
+      "submitted_at": "2026-08-12T15:40:00Z"
+    },
+    {
+      "assignment_version": 3,
+      "attempt_id": "ATT-CAROL-LATE",
+      "disposition": "accept",
+      "event_id": "evt-result-carol-late",
+      "evidence_event_ids": [
+        "evt-line-essay-v3",
+        "evt-result-carol-late"
+      ],
+      "external_action": "none",
+      "gradebook_action": "upsert_local",
+      "lms_user_id": "lms-carol-old",
+      "reason_code": "accepted_late",
+      "score_given": 44,
+      "score_maximum": 50,
+      "sis_assignment_id": "ASG-ESSAY-2",
+      "sis_section_id": "SEC-ENG-8B",
+      "sis_student_id": "STU-1003",
+      "source_sequence": 9,
+      "submitted_at": "2026-08-11T14:00:00Z"
+    },
+    {
+      "assignment_version": 3,
+      "attempt_id": "ATT-DAVE-EXPIRED",
+      "disposition": "quarantine",
+      "event_id": "evt-result-dave-expired",
+      "evidence_event_ids": [
+        "evt-line-essay-v3",
+        "evt-result-dave-expired"
+      ],
+      "external_action": "none",
+      "gradebook_action": "quarantine_local",
+      "lms_user_id": "lms-dave",
+      "reason_code": "late_window_closed",
+      "score_given": 48,
+      "score_maximum": 50,
+      "sis_assignment_id": "ASG-ESSAY-2",
+      "sis_section_id": "SEC-ENG-8B",
+      "sis_student_id": "STU-1005",
+      "source_sequence": 10,
+      "submitted_at": "2026-08-14T09:00:00Z"
+    },
+    {
+      "assignment_version": 2,
+      "attempt_id": "ATT-TEMP-MERGED",
+      "disposition": "accept",
+      "event_id": "evt-result-merged-student",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-merged-student"
+      ],
+      "external_action": "none",
+      "gradebook_action": "upsert_local",
+      "lms_user_id": "lms-temp-440",
+      "reason_code": "accepted_on_time",
+      "score_given": 19,
+      "score_maximum": 20,
+      "sis_assignment_id": "ASG-ALG-Q1",
+      "sis_section_id": "SEC-MATH-8A",
+      "sis_student_id": "STU-1004",
+      "source_sequence": 8,
+      "submitted_at": "2026-08-12T16:00:00Z"
+    },
+    {
+      "assignment_version": 2,
+      "attempt_id": "ATT-UNKNOWN",
+      "disposition": "quarantine",
+      "event_id": "evt-result-unknown",
+      "evidence_event_ids": [
+        "evt-line-q-v2",
+        "evt-result-unknown"
+      ],
+      "external_action": "none",
+      "gradebook_action": "quarantine_local",
+      "lms_user_id": "lms-ghost",
+      "reason_code": "unknown_identity",
+      "score_given": 16,
+      "score_maximum": 20,
+      "sis_assignment_id": null,
+      "sis_section_id": null,
+      "sis_student_id": null,
+      "source_sequence": 11,
+      "submitted_at": "2026-08-12T12:00:00Z"
+    }
+  ],
+  "schema_version": 1,
+  "source_checkpoint": "GP-CHECKPOINT-20260818-012"
+}

@@ -1,0 +1,248 @@
+{
+  "checks": {
+    "approved_ecn_identity": true,
+    "baseline_changes": {
+      "complete_object_set": true,
+      "objects": {
+        "ACTUATOR-MODULE": {
+          "evidence_categories": {
+            "approved_change": true,
+            "released_bom_line": true,
+            "revision_authority": true
+          },
+          "fields": {
+            "approved_substitutes": true,
+            "changed_line_no": true,
+            "evidence_refs": true,
+            "from_component": true,
+            "from_component_revision": true,
+            "from_revision": true,
+            "item_id": true,
+            "quantity": true,
+            "to_component": true,
+            "to_component_revision": true,
+            "to_revision": true,
+            "where_used_path": true
+          }
+        },
+        "FIELD-KIT": {
+          "evidence_categories": {
+            "approved_change": true,
+            "released_bom_line": true,
+            "revision_authority": true
+          },
+          "fields": {
+            "approved_substitutes": true,
+            "changed_line_no": true,
+            "evidence_refs": true,
+            "from_component": true,
+            "from_component_revision": true,
+            "from_revision": true,
+            "item_id": true,
+            "quantity": true,
+            "to_component": true,
+            "to_component_revision": true,
+            "to_revision": true,
+            "where_used_path": true
+          }
+        },
+        "PUMP-100": {
+          "evidence_categories": {
+            "approved_change": true,
+            "released_bom_line": true,
+            "revision_authority": true
+          },
+          "fields": {
+            "approved_substitutes": true,
+            "changed_line_no": true,
+            "evidence_refs": true,
+            "from_component": true,
+            "from_component_revision": true,
+            "from_revision": true,
+            "item_id": true,
+            "quantity": true,
+            "to_component": true,
+            "to_component_revision": true,
+            "to_revision": true,
+            "where_used_path": true
+          }
+        },
+        "SKID-900": {
+          "evidence_categories": {
+            "approved_change": true,
+            "released_bom_line": true,
+            "revision_authority": true
+          },
+          "fields": {
+            "approved_substitutes": true,
+            "changed_line_no": true,
+            "evidence_refs": true,
+            "from_component": true,
+            "from_component_revision": true,
+            "from_revision": true,
+            "item_id": true,
+            "quantity": true,
+            "to_component": true,
+            "to_component_revision": true,
+            "to_revision": true,
+            "where_used_path": true
+          }
+        }
+      }
+    },
+    "exact_schema": true,
+    "external_boundary": true,
+    "fresh_source_checkpoint": true,
+    "work_order_decisions": {
+      "complete_object_set": true,
+      "objects": {
+        "WO-900": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        },
+        "WO-901": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        },
+        "WO-902": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        },
+        "WO-903": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        },
+        "WO-904": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        },
+        "WO-905": {
+          "evidence_categories": {
+            "database_identity": true,
+            "effectivity_policy": true,
+            "protected_work_order": true
+          },
+          "fields": {
+            "disposition": true,
+            "effective": true,
+            "effectivity_basis": true,
+            "effectivity_value": true,
+            "end_item": true,
+            "evidence_refs": true,
+            "external_action": true,
+            "from_revision": true,
+            "issued_component": true,
+            "kit_state": true,
+            "local_mutations": true,
+            "serial_or_lot": true,
+            "status": true,
+            "to_revision": true,
+            "work_order_id": true
+          }
+        }
+      }
+    }
+  },
+  "semantic_plan_sha256": "5c496a3da9597a2b108cce8dd296d07dbf04993a8c4b4c4258b479db07416edd",
+  "status": "pass"
+}

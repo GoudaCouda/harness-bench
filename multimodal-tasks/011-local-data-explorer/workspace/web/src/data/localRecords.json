@@ -1,0 +1,110 @@
+[
+  {
+    "id": "REC-EAST",
+    "name": "East sensor batch",
+    "category": "sensor",
+    "owner": "Ops North",
+    "status": "clear",
+    "primary": 128,
+    "secondary": 2
+  },
+  {
+    "id": "REC-WEST",
+    "name": "West sample batch",
+    "category": "sample",
+    "owner": "Ops West",
+    "status": "watch",
+    "primary": 96,
+    "secondary": 6
+  },
+  {
+    "id": "REC-CENT",
+    "name": "Central import",
+    "category": "import",
+    "owner": "Ops Core",
+    "status": "review",
+    "primary": 141,
+    "secondary": 9
+  },
+  {
+    "id": "REC-SOUTH",
+    "name": "South ledger",
+    "category": "ledger",
+    "owner": "Ops South",
+    "status": "watch",
+    "primary": 117,
+    "secondary": 4
+  },
+  {
+    "id": "REC-EAST-R1",
+    "name": "East sensor batch follow-up",
+    "category": "sample",
+    "owner": "Ops Core",
+    "status": "clear",
+    "primary": 142,
+    "secondary": 8
+  },
+  {
+    "id": "REC-WEST-R2",
+    "name": "West sample batch follow-up",
+    "category": "import",
+    "owner": "Ops South",
+    "status": "watch",
+    "primary": 113,
+    "secondary": 13
+  },
+  {
+    "id": "REC-CENT-R3",
+    "name": "Central import follow-up",
+    "category": "ledger",
+    "owner": "Ops North",
+    "status": "review",
+    "primary": 161,
+    "secondary": 17
+  },
+  {
+    "id": "REC-SOUTH-R4",
+    "name": "South ledger follow-up",
+    "category": "sensor",
+    "owner": "Ops West",
+    "status": "watch",
+    "primary": 140,
+    "secondary": 13
+  },
+  {
+    "id": "REC-WEST-X9",
+    "name": "West sample batch scenario 9",
+    "category": "sample",
+    "owner": "Ops Core",
+    "status": "review",
+    "primary": 170,
+    "secondary": 12
+  },
+  {
+    "id": "REC-WEST-X10",
+    "name": "West sample batch scenario 10",
+    "category": "import",
+    "owner": "Ops South",
+    "status": "clear",
+    "primary": 177,
+    "secondary": 8
+  },
+  {
+    "id": "REC-WEST-X11",
+    "name": "West sample batch scenario 11",
+    "category": "ledger",
+    "owner": "Ops North",
+    "status": "watch",
+    "primary": 184,
+    "secondary": 9
+  },
+  {
+    "id": "REC-WEST-X12",
+    "name": "West sample batch scenario 12",
+    "category": "sample",
+    "owner": "Ops West",
+    "status": "review",
+    "primary": 191,
+    "secondary": 10
+  }
+]

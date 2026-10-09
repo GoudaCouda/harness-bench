@@ -1,0 +1,32 @@
+schema_version: 2
+task_id: 117-calendar-delta-fallback-recovery
+pass_threshold: 0.8
+cases:
+- id: fallback_and_component_plan
+  title: The plan authorizes the fallback and adjudicates every RFC 5545 component
+  description: The checksum and ETag chain, stable identities, evidence references, and all master, override, cancellation, insert, update, and stale dispositions are exact.
+  weight: 0.27
+  core: true
+- id: recurrence_timezone_projection
+  title: Recurrence masters, overrides, tombstones, and zoned instants are projected correctly
+  description: The real SQLite replica has exact master and instance rows, UTC instants, preserved TZIDs, sequence precedence, and unrelated state.
+  weight: 0.27
+  core: true
+- id: checkpoint_transaction_recovery
+  title: The interrupted journal is recovered and one stable transaction advances the checkpoint
+  description: Rollback evidence, page ledger, cursor/ETag transition, recovery identity, atomic transaction, and conflict-safe replay state are exact.
+  weight: 0.26
+  core: true
+- id: verification_receipt_and_replay
+  title: Preview, verification, receipt, and replay close over one semantic state
+  description: All hashes and checks are bound to the accepted source checkpoint and semantic SQLite state; replay proves a no-op.
+  weight: 0.12
+- id: recovery_handoff
+  title: The calendar recovery is reviewable by the next operator
+  description: The handoff explains recurrence, timezone, fallback, interruption, replay, verification, and offline boundaries.
+  weight: 0.08
+- id: safety_and_input_integrity
+  title: Immutable sources and external-action boundaries hold
+  description: Evidence, policy, controller, and unrelated rows are unchanged, with no remote write, invitation, notice, or attendee-message execution claim.
+  weight: 0.0
+  gate: true

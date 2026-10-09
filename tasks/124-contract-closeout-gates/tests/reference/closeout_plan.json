@@ -1,0 +1,108 @@
+{
+  "decisions": [
+    {
+      "contract_id": "C-401",
+      "disposition": "ready_for_controller",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-401",
+        "evidence_events.csv#EV-401-ACCEPT",
+        "evidence_events.csv#EV-401-FUNDS",
+        "evidence_events.csv#EV-401-INVOICE",
+        "evidence_events.csv#EV-401-LEGAL-CLEAR",
+        "evidence_events.csv#EV-401-LEGAL-HOLD"
+      ],
+      "next_action": "approve_closeout_package",
+      "owner": "controller"
+    },
+    {
+      "contract_id": "C-402",
+      "disposition": "hold",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-402",
+        "evidence_events.csv#EV-402-ACCEPT",
+        "evidence_events.csv#EV-402-FUNDS",
+        "evidence_events.csv#EV-402-INVOICE",
+        "evidence_events.csv#EV-402-LEGAL"
+      ],
+      "next_action": "obtain_final_invoice",
+      "owner": "finance"
+    },
+    {
+      "contract_id": "C-403",
+      "disposition": "hold",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-403",
+        "evidence_events.csv#EV-403-ACCEPT",
+        "evidence_events.csv#EV-403-FUNDS",
+        "evidence_events.csv#EV-403-INVOICE",
+        "evidence_events.csv#EV-403-LEGAL-HOLD"
+      ],
+      "next_action": "resolve_legal_hold",
+      "owner": "legal"
+    },
+    {
+      "contract_id": "C-404",
+      "disposition": "hold",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-404",
+        "evidence_events.csv#EV-404-ACCEPT",
+        "evidence_events.csv#EV-404-FUNDS",
+        "evidence_events.csv#EV-404-INVOICE",
+        "evidence_events.csv#EV-404-LEGAL"
+      ],
+      "next_action": "await_option_expiry",
+      "owner": "contracts"
+    },
+    {
+      "contract_id": "C-405",
+      "disposition": "hold",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-405",
+        "evidence_events.csv#EV-405-ACCEPT",
+        "evidence_events.csv#EV-405-FUNDS",
+        "evidence_events.csv#EV-405-INVOICE",
+        "evidence_events.csv#EV-405-LEGAL"
+      ],
+      "next_action": "complete_acceptance",
+      "owner": "program"
+    },
+    {
+      "contract_id": "C-406",
+      "disposition": "ready_for_controller",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-406",
+        "evidence_events.csv#EV-406-ACCEPT",
+        "evidence_events.csv#EV-406-FUNDS-CURE",
+        "evidence_events.csv#EV-406-FUNDS-DRAFT",
+        "evidence_events.csv#EV-406-INVOICE",
+        "evidence_events.csv#EV-406-LEGAL"
+      ],
+      "next_action": "approve_closeout_package",
+      "owner": "controller"
+    },
+    {
+      "contract_id": "C-407",
+      "disposition": "hold",
+      "evidence_refs": [
+        "closeout_policy.md#gate-precedence",
+        "contracts.csv#C-407",
+        "evidence_events.csv#EV-407-ACCEPT",
+        "evidence_events.csv#EV-407-FUNDS",
+        "evidence_events.csv#EV-407-INVOICE",
+        "evidence_events.csv#EV-407-LEGAL"
+      ],
+      "next_action": "complete_deobligation",
+      "owner": "finance"
+    }
+  ],
+  "external_actions_executed": false,
+  "review_id": "CLOSEOUT-2026-08-15-R1",
+  "schema_version": 1,
+  "source_checkpoint_sha256": "177bcdc5b7df571fd258339fec49a91fbf504ee998f986fec0d760b75367e7e2"
+}

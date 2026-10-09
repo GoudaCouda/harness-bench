@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "case_number": 14,
+  "verify": [
+    "verifier/verify.py",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "eligible_event_set",
+      "eligible_minutes_by_event",
+      "eligible_aggregate",
+      "credit_calculation"
+    ],
+    [
+      "credit_rule_evidence",
+      "remediation_rule",
+      "excluded_records_exact",
+      "ignored_sources_exact"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_tree_scan_complete",
+    "workspace_no_unsafe_entries",
+    "workspace_directories_exact",
+    "workspace_files_exact",
+    "protected_inputs_unchanged",
+    "workspace_size_limit",
+    "deliverable_regular_file",
+    "deliverable_strict_json",
+    "trusted_environment_parse",
+    "output_shape",
+    "contract_identity",
+    "eligible_event_set",
+    "eligible_minutes_by_event",
+    "eligible_aggregate",
+    "credit_calculation",
+    "credit_rule_evidence",
+    "remediation_rule",
+    "excluded_records_exact",
+    "ignored_sources_exact"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "outputs/sla_credit_assessment.json"
+  ],
+  "protected_files": {
+    "TASK.md": "1f360a5b7be0b00540054ce3d0d4d482bd1602f16ac3fdf04cf75afa6447a958",
+    "hb_tools/README.md": "9d3481820ca5071166e38f259d020c91eaac0ab6f5ffd8b84738cbec5cbf7699",
+    "hb_tools/tool_contract.json": "fc418210f20b03304f2c07f5f39c96c5b98192bca2ca771006ae5e7e3fdfa338",
+    "inputs/nonbinding_sales_projection.json": "af52754e881b7e35467ecd9eb6b091a61e5a6f1574acb3b5396a11c1a5bfd846",
+    "inputs/output_contract.json": "aaffca632d3ebe87db9ef173ed71d0d941b409c83f7ef174389c103bc6438aa8",
+    "inputs/region_registry.csv": "759d275e0bc6f7c77c4e33d7dc0aeffb4f5188aa049a3d7ae4c605e4c1623e55",
+    "inputs/service_events_2025_q3.jsonl": "fced76d0482626098d3ceb7bb0e4c263371eb5388303c2738ac64dad32b6814f",
+    "inputs/sla_rules.json": "448e7279baa82ed83a821306aa2b700717a9efcc16abf8cbbd324eeac6dc1a9e"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "inputs",
+    "outputs"
+  ],
+  "original_directories": [
+    "inputs"
+  ],
+  "original_modes": {
+    "TASK.md": 420,
+    "inputs": 493,
+    "inputs/nonbinding_sales_projection.json": 420,
+    "inputs/output_contract.json": 420,
+    "inputs/region_registry.csv": 420,
+    "inputs/service_events_2025_q3.jsonl": 420,
+    "inputs/sla_rules.json": 420
+  }
+}

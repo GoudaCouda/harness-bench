@@ -1,0 +1,7 @@
+[
+  {"action":"keep_response","reason":"response_complete","request_id":"r1","status":"settled","target":"none"},
+  {"action":"retry_fresh_connection","reason":"goaway_unprocessed","request_id":"r2","status":"retry","target":"fresh_connection"},
+  {"action":"retry_with_idempotency_key","reason":"keyed_ambiguous","request_id":"r3","status":"retry","target":"fresh_connection"},
+  {"action":"do_not_retry","reason":"ambiguous_non_idempotent","request_id":"r4","status":"blocked","target":"none"},
+  {"action":"do_not_retry","reason":"body_not_replayable","request_id":"r5","status":"blocked","target":"none"}
+]

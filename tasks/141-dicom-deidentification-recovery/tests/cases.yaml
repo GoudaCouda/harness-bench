@@ -1,0 +1,32 @@
+schema_version: 2
+task_id: 141-dicom-deidentification-recovery
+pass_threshold: 0.8
+cases:
+- id: delivery_authority_and_deidentification_decisions
+  title: Dirty DICOM deliveries resolve under published privacy rules
+  description: First-SOP authority, exact duplicate, UID collision, unknown/protected study, SOP support, pixel risk, noneligible evidence, checkpoint, and totals are exact.
+  weight: 0.27
+  core: true
+- id: emitted_datasets_and_uid_reference_graph
+  title: Emitted DICOM datasets are de-identified and referentially consistent
+  description: Three eligible decisions and outputs have exact tag removal, pseudonyms, date shifts, private-tag filtering, deterministic UID remapping, SEG reference mapping, and database-bound hashes.
+  weight: 0.27
+  core: true
+- id: journal_recovery_and_protected_boundary
+  title: Interrupted before-image and protected export boundaries recover atomically
+  description: The orphan partial projection is removed, old journal closes, one new run commits, source tables remain exact, and protected export identity and bytes do not change.
+  weight: 0.26
+  core: true
+- id: verification_packet_replay_and_conflict
+  title: Verification, packet hashes, semantic replay, and conflict proof close
+  description: Preview and independent verification pass, local packet hashes close, reordered semantic replay is byte-stable, and a real conflict is rejected without mutation.
+  weight: 0.12
+- id: deid_handoff
+  title: Privacy, imaging, and research reviewers receive an accurate handoff
+  description: The handoff explains every material delivery, transformation, recovery, verification, protected boundary, replay/conflict result, and local-only limit.
+  weight: 0.08
+- id: source_privacy_and_external_action_gate
+  title: Immutable sources, privacy boundaries, and local-only execution hold
+  description: Source datasets/policy/controller and protected export remain unchanged, outputs contain no prohibited identifiers, and no external export or clinical action is claimed.
+  weight: 0.0
+  gate: true

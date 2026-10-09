@@ -1,0 +1,13 @@
+{
+  "schema_version": "case17_reference_output_v1",
+  "expected_shares_fen": {
+    "p_lin": 29210,
+    "p_tang": 17330,
+    "p_xu": 22880,
+    "p_zhou": 22881
+  },
+  "required_request_participant_ids": ["p_tang", "p_xu", "p_zhou"],
+  "required_note": "澄湾工作坊晚餐（2026-07-15）费用分摊",
+  "required_status": "pending",
+  "forbidden_action": "transfer"
+}

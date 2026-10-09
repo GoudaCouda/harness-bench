@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 015-email-thread-merge
+pass_threshold: 0.8
+cases:
+- id: onboarding_dependency_state
+  title: Three onboarding milestones form the correct dependency state
+  description: Security questionnaire, procurement approval, and pilot kickoff have the correct owners, lifecycle states, targets, blockers, and account-level status after duplicates and unrelated mail are removed.
+  weight: 0.35
+  core: true
+- id: commitment_interpretation
+  title: Requests, commitments, and tentative dates are distinguished
+  description: The state preserves Friday as the accepted questionnaire commitment, treats today's request as a preference, and does not promote team availability or pending procurement into a confirmed kickoff.
+  weight: 0.25
+  core: true
+- id: customer_resolution_draft
+  title: Customer draft advances the unresolved onboarding path
+  description: The reply addresses Morgan, acknowledges urgency, communicates the supported deadline and conditional kickoff, and asks for the procurement confirmation needed to unblock the plan.
+  weight: 0.20
+  core: true
+- id: evidence_and_dedup_trace
+  title: State is traceable to unique relevant message evidence
+  description: Milestone evidence uses the substantive Northwind message IDs once, excludes the forwarded duplicate as a separate event, and records the billing notification as ignored.
+  weight: 0.10
+  core: false
+- id: coherent_account_handoff
+  title: Structured state and customer communication agree
+  description: The reply and milestone package use the same account, deadline, blockers, and tentative status in a concise professional handoff.
+  weight: 0.10
+  core: false
+- id: source_and_execution_boundary
+  title: Email evidence and output integrity are preserved
+  description: Source messages remain unchanged and deliverables are regular files rather than links. A draft that falsely claims an external action completed loses the customer-draft score instead of zeroing the whole task.
+  weight: 0.0
+  gate: true

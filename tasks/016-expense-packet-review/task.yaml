@@ -1,0 +1,49 @@
+task_id: 016-expense-packet-review
+title: Audit An Expense Reimbursement Packet
+prompt_file: instruction.md
+timeout_sec: 7200
+difficulty: hard
+domain: Finance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+- quantitative_analysis
+- evidence_reconciliation
+- policy_application
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- dirty_input
+required_artifacts:
+- missing_docs.md
+- reimbursement_audit.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-016
+task_family: 016-expense-packet-review
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - missing_docs.md
+  - reimbursement_audit.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

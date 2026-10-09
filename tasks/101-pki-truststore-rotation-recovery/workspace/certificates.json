@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-08-16T12:00:00Z",
+  "certificates": {
+    "leaf-api-v1": {"subject": "api.internal", "issuer": "int-a", "not_after": "2026-08-20T00:00:00Z", "kind": "leaf"},
+    "leaf-api-v2": {"subject": "api.internal", "issuer": "int-b", "not_after": "2027-08-01T00:00:00Z", "kind": "leaf"},
+    "leaf-worker-v1": {"subject": "worker.internal", "issuer": "int-a", "not_after": "2026-10-01T00:00:00Z", "kind": "leaf"},
+    "leaf-report-v2": {"subject": "report.internal", "issuer": "int-b", "not_after": "2027-07-15T00:00:00Z", "kind": "leaf"},
+    "int-a": {"subject": "Corp Issuing A", "issuer": "root-2024", "not_after": "2027-01-01T00:00:00Z", "kind": "intermediate"},
+    "int-b": {"subject": "Corp Issuing B", "issuer": "root-2026", "not_after": "2029-01-01T00:00:00Z", "kind": "intermediate"},
+    "root-2024": {"subject": "Corp Root 2024", "issuer": "root-2024", "not_after": "2030-01-01T00:00:00Z", "kind": "root"},
+    "root-2026": {"subject": "Corp Root 2026", "issuer": "root-2026", "not_after": "2036-01-01T00:00:00Z", "kind": "root"}
+  }
+}

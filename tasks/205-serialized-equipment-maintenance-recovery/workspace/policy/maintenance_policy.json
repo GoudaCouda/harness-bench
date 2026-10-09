@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-08-19T16:00:00Z",
+  "completed_execution_boundary": "immutable",
+  "dispositions": [
+    "ready_local_dispatch",
+    "hold_policy_conflict",
+    "hold_bom_effectivity",
+    "hold_technician_qualification",
+    "hold_calibration",
+    "hold_part_availability",
+    "merged_into_survivor",
+    "completed_execution_preserved"
+  ],
+  "duplicate_survivor_rule": "oldest_opened_then_work_order_id",
+  "event_identity_rule": "event_id_then_sequence",
+  "external_action": "none",
+  "recovery_id": "FSR-20260819-04",
+  "schema_version": 1,
+  "selection_tie_breaker": "lexicographic_id",
+  "stage_boundary": "local_offline_packet_only",
+  "symptom_rules": {
+    "bearing_temperature_high": {
+      "component": "drive_bearing",
+      "measurement_kind": "vibration",
+      "skill_code": "MECH-ROTATING"
+    },
+    "bearing_vibration_high": {
+      "component": "drive_bearing",
+      "measurement_kind": "vibration",
+      "skill_code": "MECH-ROTATING"
+    },
+    "belt_slip": {
+      "component": "infeed_belt",
+      "measurement_kind": "tachometer",
+      "skill_code": "MECH-CONVEYOR"
+    },
+    "insulation_resistance_low": {
+      "component": "control_fuse",
+      "measurement_kind": "insulation_resistance",
+      "skill_code": "ELEC-LV"
+    }
+  }
+}

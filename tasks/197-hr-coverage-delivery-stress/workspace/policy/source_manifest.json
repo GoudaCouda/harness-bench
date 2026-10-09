@@ -1,0 +1,9 @@
+{
+  "files": {
+    "evidence/delivery_receipts.jsonl": "79addb352e5abef423da0da203c15935d230558c13f2d162c1552436e67a39a6",
+    "evidence/eligibility_events.jsonl": "d6cb1da7f732bead51c4c0c45db95dc7bd24c58cdb65d0a878c18fa11f85c01e",
+    "policy/continuance_policy.json": "86a5bf11cb4310076b32b5d5d23343d8223f5dfd1d0f32ed4272ff652084aaa0",
+    "state/stale_checkpoint.json": "2394b84fb1487ac8500e3676b7be48224b068d7eae6b79042223f43b767294e1"
+  },
+  "schema_version": 1
+}

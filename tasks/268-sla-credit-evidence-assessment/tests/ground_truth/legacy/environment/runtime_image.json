@@ -1,0 +1,23 @@
+{
+  "host_alias": "local-docker",
+  "repository_tag": "ubuntu:24.04",
+  "image_id": "sha256:786a8b558f7be160c6c8c4a54f9a57274f3b4fb1491cf65146521ae77ff1dc54",
+  "network_mode": "none",
+  "candidate_mounts": ["workspace_only"],
+  "read_only_rootfs": true,
+  "candidate_uid_gid": "2050:4007",
+  "memory_mib": 512,
+  "memory_swap_mib": 512,
+  "pids_limit": 64,
+  "wall_timeout_seconds": 60,
+  "single_file_limit_bytes": 16777216,
+  "workspace_total_limit_bytes": 16777216,
+  "candidate_environment": {
+    "NAMI_FIXED_TIME": "2025-10-15T10:00:00+08:00",
+    "NAMI_TIMEZONE": "Asia/Shanghai",
+    "NAMI_LOCALE": "zh-CN",
+    "NAMI_RANDOM_SEED": "1402",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8"
+  }
+}

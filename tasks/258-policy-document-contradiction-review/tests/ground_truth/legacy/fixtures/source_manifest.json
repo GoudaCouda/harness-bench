@@ -1,0 +1,15 @@
+{
+  "schema_version": "nami_work_synthetic_fixture_manifest_v1",
+  "task_id": "case_04",
+  "source_policy": "fully_synthetic_no_personal_data",
+  "license": "CC0-1.0",
+  "created_at": "2026-07-20",
+  "files": [
+    {"path": "workspace_seed/TASK.md", "sha256": "90270d044332df67cec0b67631080e8106c245dcf6b6987ae1bbfa6f15b336a1", "purpose": "agent-visible task contract"},
+    {"path": "workspace_seed/input/A01_采购管理办法_v3.2.md", "sha256": "be502108ba7d0e874fac098959b8490d6c7bad23d67eba1fcf383b2f8f5a0572", "purpose": "synthetic procurement policy"},
+    {"path": "workspace_seed/input/A02_费用报销细则_v2.0.md", "sha256": "6532bda0653efacd994b185d6ef3ec94d8bff454f2d50920bf36c8fcf957a1f8", "purpose": "synthetic reimbursement policy"},
+    {"path": "workspace_seed/input/A03_信息安全控制标准_v4.0.md", "sha256": "a3bfe5795a37559b808de8a5052376c5ccb484bcf218767caa8b11b21e079aeb", "purpose": "synthetic information security policy"},
+    {"path": "workspace_seed/input/A04_远程办公实施细则_v1.3.md", "sha256": "7dbe53c6a749ba79d44b48228245e031afd32488c1af63c1671bb191b658e4fc", "purpose": "synthetic remote work policy"},
+    {"path": "workspace_seed/input/A05_制度版本与引用目录_2026Q2.md", "sha256": "128ce5f6db7e8ac6f1b2ca79a2f1ae6e0e32e8de1499f31603e0c3dfb82b365a", "purpose": "synthetic controlled version and citation catalog"}
+  ]
+}

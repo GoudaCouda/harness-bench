@@ -1,0 +1,2 @@
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #005fcc; outline-offset: 2px; }
+.menu-button { color: #111; background: #fff; }

@@ -1,0 +1,6 @@
+[
+  {"acquired_paths":[],"changed_paths":[],"conflicts":["/spec/replicas"],"forced_paths":[],"manager":"deployer","released_paths":[],"request_id":"req-1","status":"conflict"},
+  {"acquired_paths":["/metadata/labels/security"],"changed_paths":[],"conflicts":[],"forced_paths":[],"manager":"policy-bot","released_paths":[],"request_id":"req-2","status":"applied"},
+  {"acquired_paths":["/spec/replicas"],"changed_paths":["/spec/containers[name=api]/image","/spec/containers[name=api]/port","/spec/replicas"],"conflicts":["/spec/replicas"],"forced_paths":["/spec/replicas"],"manager":"deployer","released_paths":["/spec/containers[name=api]/port","/spec/strategy"],"request_id":"req-3","status":"applied"},
+  {"acquired_paths":[],"changed_paths":[],"conflicts":["/metadata/labels/security"],"forced_paths":[],"manager":"security","released_paths":[],"request_id":"req-4","status":"conflict"}
+]

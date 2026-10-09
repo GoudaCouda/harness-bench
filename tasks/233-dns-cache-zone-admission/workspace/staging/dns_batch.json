@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-233",
+  "gate_clock_epoch": 1776123200,
+  "events": [
+    {
+      "qname": "www.harbor.test",
+      "qtype": "A",
+      "rcode": "NOERROR",
+      "ttl": 300,
+      "in_zone": true,
+      "cname_loop": false
+    },
+    {
+      "qname": "gone.harbor.test",
+      "qtype": "A",
+      "rcode": "NXDOMAIN",
+      "ttl": 300,
+      "in_zone": true,
+      "cname_loop": false
+    },
+    {
+      "qname": "ns1.other.test",
+      "qtype": "A",
+      "rcode": "NOERROR",
+      "ttl": 300,
+      "in_zone": false,
+      "cname_loop": false
+    },
+    {
+      "qname": "www.harbor.test",
+      "qtype": "A",
+      "rcode": "NOERROR",
+      "ttl": 300,
+      "in_zone": true,
+      "cname_loop": false
+    },
+    {
+      "qname": "loop.harbor.test",
+      "qtype": "CNAME",
+      "rcode": "NOERROR",
+      "ttl": 300,
+      "in_zone": true,
+      "cname_loop": true
+    },
+    {
+      "qname": "api.harbor.test",
+      "qtype": "A",
+      "rcode": "NOERROR",
+      "ttl": 0,
+      "in_zone": true,
+      "cname_loop": false
+    },
+    {
+      "qname": "mail.harbor.test",
+      "qtype": "MX",
+      "rcode": "NOERROR",
+      "ttl": 600,
+      "in_zone": true,
+      "cname_loop": false
+    }
+  ]
+}

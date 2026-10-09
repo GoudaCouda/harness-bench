@@ -1,0 +1,62 @@
+{
+  "stream_id": "siltflow-249",
+  "gate_clock_epoch": 1776468800,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "t1",
+      "waits_for": "t0",
+      "decision": "recorded"
+    },
+    {
+      "index": 1,
+      "item_id": "t2",
+      "waits_for": "t1",
+      "decision": "recorded"
+    },
+    {
+      "index": 2,
+      "item_id": "t0",
+      "waits_for": "t2",
+      "decision": "conflict"
+    },
+    {
+      "index": 3,
+      "item_id": "t1",
+      "waits_for": "t9",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "t5",
+      "waits_for": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "t6",
+      "waits_for": "t6",
+      "decision": "conflict"
+    },
+    {
+      "index": 6,
+      "item_id": "t7",
+      "waits_for": "t1",
+      "decision": "recorded"
+    }
+  ],
+  "counts": {
+    "recorded": 3,
+    "conflict": 2,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "t1",
+    "t2",
+    "t7"
+  ],
+  "conflict_ids": [
+    "t0",
+    "t6"
+  ]
+}

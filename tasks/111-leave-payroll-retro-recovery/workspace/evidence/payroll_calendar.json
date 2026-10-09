@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "periods": [
+    {"period_id": "PP-2026-07-A", "state": "paid_locked", "period_start": "2026-07-01", "period_end": "2026-07-15", "payment_export_id": "PAYEXP-2026-07-A", "locked_at_utc": "2026-07-17T20:00:00+00:00"},
+    {"period_id": "PP-2026-08-A", "state": "open_for_retro_staging", "period_start": "2026-08-01", "period_end": "2026-08-15", "payment_export_id": null, "locked_at_utc": null}
+  ]
+}

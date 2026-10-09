@@ -1,0 +1,15 @@
+{
+  "brand_name": "星桥家居",
+  "canvas": "16:9",
+  "font_family": "Noto Sans SC",
+  "primary_color": "#155EEF",
+  "accent_color": "#F79009",
+  "positive_color": "#039855",
+  "risk_color": "#D92D20",
+  "background_color": "#F8FAFC",
+  "text_color": "#101828",
+  "slide_count_min": 6,
+  "slide_count_max": 6,
+  "required_output": "output/management_review.pptx"
+}
+

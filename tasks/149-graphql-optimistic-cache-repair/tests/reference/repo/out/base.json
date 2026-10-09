@@ -1,0 +1,6 @@
+{
+  "Comment:1":{"author":{"$ref":"User:1"},"content":"server-a","pending":false},
+  "Comment:2":{"author":{"$ref":"User:1"},"content":"new server"},
+  "ROOT_QUERY:root":{"comments":[{"$ref":"Comment:1"},{"$ref":"Comment:2"}]},
+  "User:1":{"name":"Ada Lovelace"}
+}

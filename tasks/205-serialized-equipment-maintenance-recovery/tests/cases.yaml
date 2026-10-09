@@ -1,0 +1,57 @@
+schema_version: 2
+task_id: 205-serialized-equipment-maintenance-recovery
+pass_threshold: 0.8
+cases:
+- id: plan_identity_and_event_routing
+  title: Recovery identity and event routing are exact
+  description: Schema, checkpoint, local-only flag, event sequence, replay, survivor routing, unknown
+    traffic, and completed-boundary traffic agree.
+  weight: 0.15
+  core: true
+  score_group: decision_and_state
+- id: incident_symptoms_bom_and_evidence
+  title: Incident symptoms and effective BOM evidence agree
+  description: Survivor assignments, symptom sets, incident-time BOM revisions, part numbers, and stable
+    local evidence locators are exact.
+  weight: 0.15
+  core: true
+  score_group: decision_and_state
+- id: controls_allocation_holds_and_totals
+  title: Controls, allocation, hold decisions, and totals reconcile
+  description: Technicians, qualifications, instruments, released lots, dispositions, actions, and ready/held/merged/completed
+    conservation totals agree.
+  weight: 0.18
+  core: true
+  score_group: decision_and_state
+- id: work_order_journal_and_recovery_projection
+  title: Work-order, journal, and recovery state reconcile
+  description: Work-order rows project the plan, the interrupted journal is restored, and one recovery
+    transaction advances the system revision.
+  weight: 0.16
+  core: true
+  score_group: validation_and_replay
+- id: resource_inventory_and_event_projection
+  title: Resource, inventory, and event receipt tables reconcile
+  description: Assets, BOMs, qualifications, instruments, part quantities, and event receipts equal the
+    independently derived projection.
+  weight: 0.16
+  core: true
+  score_group: validation_and_replay
+- id: dispatch_hash_and_replay_closure
+  title: Offline dispatch staging closes hashes and semantic replay
+  description: Preview, verification, bundle, manifest, receipt, and replay bind one checkpoint and normalized
+    plan.
+  weight: 0.12
+  core: false
+- id: maintenance_handoff
+  title: The operations handoff explains the recovered state
+  description: The handoff explains event routing, BOM, controls, journal recovery, completed boundary,
+    allocation, hashes, replay, and local-only status.
+  weight: 0.08
+  core: false
+- id: safety_and_input_integrity
+  title: Sources, protected fields, and external-action boundaries are preserved
+  description: Source mutation, irregular filesystem nodes, protected identity/execution changes, or affirmative
+    external action claims force zero; ordinary local analysis files remain controller-level diagnostics.
+  weight: 0.0
+  gate: true

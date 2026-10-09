@@ -1,0 +1,4 @@
+decision_id,recorded_at,status,topic,decision,evidence_ids,supersedes
+DEC-001,2026-08-01T16:00:00Z,confirmed,budget,Use USD 92000 ceiling,FIN-92,
+DEC-002,2026-08-03T18:00:00Z,tentative,connector_start,Start connector on Day 9 assuming verbal approval,CHAT-18,
+DEC-003,2026-08-04T20:00:00Z,confirmed,launch_message,Sales requests Day 21 launch,SALES-31,

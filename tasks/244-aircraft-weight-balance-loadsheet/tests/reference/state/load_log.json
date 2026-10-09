@@ -1,0 +1,55 @@
+{
+  "stream_id": "gullspire-244",
+  "gate_clock_epoch": 1776468800,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "l1",
+      "decision": "recorded"
+    },
+    {
+      "index": 1,
+      "item_id": "l2",
+      "decision": "recorded"
+    },
+    {
+      "index": 2,
+      "item_id": "l3",
+      "decision": "recorded"
+    },
+    {
+      "index": 3,
+      "item_id": "l1",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "l5",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "l6",
+      "decision": "conflict"
+    },
+    {
+      "index": 6,
+      "item_id": "l7",
+      "decision": "recorded"
+    }
+  ],
+  "counts": {
+    "recorded": 4,
+    "conflict": 1,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "l1",
+    "l2",
+    "l3",
+    "l7"
+  ],
+  "conflict_ids": [
+    "l6"
+  ]
+}

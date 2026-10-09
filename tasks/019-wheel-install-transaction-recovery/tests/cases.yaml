@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 019-wheel-install-transaction-recovery
+pass_threshold: 0.8
+cases:
+- id: transaction_rollback_behavior
+  title: Interrupted wheel writes roll back from valid RECORD evidence
+  description: Schemas, journal-to-RECORD mapping, committed state, reverse order, restore, and removal
+    behavior are correct.
+  weight: 0.45
+  core: true
+- id: shared_drift_and_retry_edges
+  title: Shared files, drift, and recovery retries fail safe
+  description: Shared ownership is preserved, retries are idempotent, and any unexplained state atomically
+    suppresses actions.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_recovery_report
+  title: Visible transaction plans are reproducible and exact
+  description: The report preserves case order and contains plans computed by the submitted implementation.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Recovery notes explain and verify the repair
+  description: Notes cover reverse rollback, RECORD ownership, drift, retry behavior, observed verification,
+    and remaining risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Recovery-code defects and unsupported execution claims reduce scored cases.
+  weight: 0.0
+  gate: true

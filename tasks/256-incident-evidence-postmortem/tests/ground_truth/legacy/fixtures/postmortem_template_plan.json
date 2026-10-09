@@ -1,0 +1,20 @@
+{
+  "title": "事故复盘模板",
+  "blocks": [
+    {"type": "table", "headers": ["字段", "内容"], "rows": [["事故编号", "[填写]"]]},
+    {"type": "heading", "level": 1, "text": "1. 事故摘要"},
+    {"type": "paragraph", "text": "[用一段话说明服务、时段、影响、根因和恢复结果]"},
+    {"type": "heading", "level": 1, "text": "2. 影响范围"},
+    {"type": "table", "headers": ["指标", "结果", "证据"], "rows": [["[指标]", "[结果]", "[证据编号]"]]},
+    {"type": "heading", "level": 1, "text": "3. 事件时间线"},
+    {"type": "table", "headers": ["时间", "事件", "证据"], "rows": [["[时间]", "[事件]", "[证据编号]"]]},
+    {"type": "heading", "level": 1, "text": "4. 根因分析与证据链"},
+    {"type": "table", "headers": ["链路环节", "事实", "证据"], "rows": [["[环节]", "[事实]", "[证据编号]"]]},
+    {"type": "heading", "level": 1, "text": "5. 恢复过程"},
+    {"type": "table", "headers": ["时间", "处置", "证据"], "rows": [["[时间]", "[处置]", "[证据编号]"]]},
+    {"type": "heading", "level": 1, "text": "6. 干扰告警排除"},
+    {"type": "table", "headers": ["告警", "判断与理由", "证据"], "rows": [["[告警编号]", "[判断与理由]", "[证据编号]"]]},
+    {"type": "heading", "level": 1, "text": "7. 改进行动项"},
+    {"type": "table", "headers": ["行动项", "负责人", "完成期限", "验收标准"], "rows": [["[行动项]", "[负责人]", "[日期]", "[可检查标准]"]]}
+  ]
+}

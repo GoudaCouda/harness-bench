@@ -1,0 +1,18 @@
+[
+  {
+    "id": "REG-NORTH",
+    "name": "North quay"
+  },
+  {
+    "id": "REG-EAST",
+    "name": "East marsh"
+  },
+  {
+    "id": "REG-WEST",
+    "name": "West mill"
+  },
+  {
+    "id": "REG-SOUTH",
+    "name": "South harbor"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-222",
+  "gate_clock_epoch": 1775172800,
+  "events": [
+    {
+      "rx_id": "rx1",
+      "patient_id": "p-a",
+      "days_supply": 30,
+      "days_used": 25,
+      "controlled": false
+    },
+    {
+      "rx_id": "rx2",
+      "patient_id": "p-a",
+      "days_supply": 30,
+      "days_used": 10,
+      "controlled": false
+    },
+    {
+      "rx_id": "rx3",
+      "patient_id": "p-b",
+      "days_supply": 30,
+      "days_used": 28,
+      "controlled": true
+    },
+    {
+      "rx_id": "rx1",
+      "patient_id": "p-a",
+      "days_supply": 30,
+      "days_used": 25,
+      "controlled": false
+    },
+    {
+      "rx_id": "rx5",
+      "patient_id": "",
+      "days_supply": 30,
+      "days_used": 30,
+      "controlled": false
+    },
+    {
+      "rx_id": "rx6",
+      "patient_id": "p-c",
+      "days_supply": 90,
+      "days_used": 90,
+      "controlled": true
+    },
+    {
+      "rx_id": "rx7",
+      "patient_id": "p-c",
+      "days_supply": 0,
+      "days_used": 10,
+      "controlled": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "acknowledgement_suppresses_critical": true,
+    "broad_urgent_route": true,
+    "duplicate_suppresses_priority": true,
+    "multi_region_route": true,
+    "strict_account_boundary": true,
+    "strict_comparators_declared": true,
+    "strict_deadline_boundary": true
+  },
+  "config_sha256": "e511b30afd57e6c221d5e59ae21bc62f94641d4ce47ce061833733bdfc0f48aa",
+  "status": "pass",
+  "tool": "routing_probe/1"
+}

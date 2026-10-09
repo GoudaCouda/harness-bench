@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "employees": [
+    {"employee_id": "E-101", "time_zone": "America/Los_Angeles", "leave_eligible_since": "2025-01-01", "employment_status": "active"},
+    {"employee_id": "E-202", "time_zone": "America/New_York", "leave_eligible_since": "2024-05-20", "employment_status": "active"},
+    {"employee_id": "E-303", "time_zone": "Asia/Kolkata", "leave_eligible_since": "2023-02-01", "employment_status": "active"},
+    {"employee_id": "E-404", "time_zone": "America/Chicago", "leave_eligible_since": "2026-08-01", "employment_status": "active"}
+  ]
+}

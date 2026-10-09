@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_01 deterministic verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "verdict", "score", "checks"],
+  "properties": {
+    "schema_version": {"const": "case01_verifier_result_v1"},
+    "case_id": {"const": "case_01"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "evidence"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "object"}
+        }
+      }
+    }
+  }
+}

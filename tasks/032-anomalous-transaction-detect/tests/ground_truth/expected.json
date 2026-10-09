@@ -1,0 +1,11 @@
+{
+  "P-3201": {"disposition": "release_ready", "reason_code": "controls_satisfied", "evidence_refs": ["payment_queue.csv#P-3201", "suppliers.csv#SUP-A"]},
+  "P-3202": {"disposition": "quarantine", "reason_code": "bank_mismatch", "evidence_refs": ["bank_change_requests.csv#CH-B-17", "payment_queue.csv#P-3202", "suppliers.csv#SUP-B"]},
+  "P-3203": {"disposition": "release_ready", "reason_code": "controls_satisfied", "evidence_refs": ["approval_events.csv#APR-C-A", "approval_events.csv#APR-C-T", "bank_change_requests.csv#CH-C-22", "callback_events.csv#CB-C-22", "payment_queue.csv#P-3203", "suppliers.csv#SUP-C"]},
+  "P-3204": {"disposition": "quarantine", "reason_code": "invalid_change_chain", "evidence_refs": ["approval_events.csv#APR-D-A", "approval_events.csv#APR-D-T", "bank_change_requests.csv#CH-D-09", "callback_events.csv#CB-D-09", "payment_queue.csv#P-3204", "suppliers.csv#SUP-D"]},
+  "P-3205": {"disposition": "defer", "reason_code": "missing_dual_approval", "evidence_refs": ["approval_events.csv#APR-E-F", "payment_queue.csv#P-3205", "suppliers.csv#SUP-E"]},
+  "P-3206": {"disposition": "defer", "reason_code": "beneficiary_unverified", "evidence_refs": ["payment_queue.csv#P-3206", "suppliers.csv#SUP-F"]},
+  "P-3207": {"disposition": "quarantine", "reason_code": "supplier_inactive", "evidence_refs": ["payment_queue.csv#P-3207", "suppliers.csv#SUP-G"]},
+  "P-3208": {"disposition": "quarantine", "reason_code": "invalid_change_chain", "evidence_refs": ["approval_events.csv#APR-H-A", "approval_events.csv#APR-H-T", "bank_change_requests.csv#CH-H-31", "callback_events.csv#CB-H-31", "payment_queue.csv#P-3208", "suppliers.csv#SUP-H"]},
+  "P-3209": {"disposition": "release_ready", "reason_code": "controls_satisfied", "evidence_refs": ["approval_events.csv#APR-I-F", "approval_events.csv#APR-I-T", "payment_queue.csv#P-3209", "suppliers.csv#SUP-I"]}
+}

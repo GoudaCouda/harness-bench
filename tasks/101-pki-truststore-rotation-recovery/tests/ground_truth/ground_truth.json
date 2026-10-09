@@ -1,0 +1,18 @@
+{
+  "revision": 4,
+  "services": {
+    "billing-api": {
+      "presented_chain": ["leaf-api-v2", "int-b"],
+      "truststore": ["root-2024", "root-2026"]
+    },
+    "event-worker": {
+      "presented_chain": ["leaf-worker-v1", "int-a"],
+      "truststore": ["root-2024"]
+    },
+    "reporting": {
+      "presented_chain": ["leaf-report-v2", "int-b"],
+      "truststore": ["root-2024", "root-2026"]
+    }
+  },
+  "changed_services": ["billing-api"]
+}

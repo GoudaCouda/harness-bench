@@ -1,0 +1,31 @@
+{
+  "external_actions_executed": false,
+  "items": [
+    {
+      "held_amount_cents": 15000,
+      "next_local_action": "await_receipt_or_corrected_invoice",
+      "po_id": "PO-1003",
+      "reason": "hold_quantity_variance"
+    },
+    {
+      "held_amount_cents": 20625,
+      "next_local_action": "request_corrected_invoice_locally",
+      "po_id": "PO-1004",
+      "reason": "hold_invoice_price_mismatch"
+    },
+    {
+      "held_amount_cents": 12000,
+      "next_local_action": "route_to_buyer_for_supplier_rejection",
+      "po_id": "PO-1006",
+      "reason": "hold_supplier_rejected"
+    },
+    {
+      "held_amount_cents": 9000,
+      "next_local_action": "obtain_authoritative_855",
+      "po_id": "PO-NOACK",
+      "reason": "hold_missing_ack"
+    }
+  ],
+  "recovery_id": "EDI-RCV-20260819-01",
+  "schema_version": 1
+}

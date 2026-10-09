@@ -1,0 +1,58 @@
+{
+  "assets": [
+    {
+      "license_id": "project_generated_fixture_license",
+      "media": {
+        "format": {
+          "duration": "12.000000",
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "size": "20307105"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "avg_frame_rate": "30/1",
+            "codec_name": "mpeg4",
+            "codec_type": "video",
+            "duration": "12.000000",
+            "height": 720,
+            "pix_fmt": "yuv420p",
+            "width": 1280
+          },
+          {
+            "avg_frame_rate": "0/0",
+            "channels": 2,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "duration": "12.000000",
+            "sample_rate": "48000"
+          }
+        ]
+      },
+      "path": "fixtures/source/source.mp4",
+      "sha256": "c48c141e27ea4d3fdfa88cbd8cbdeebb3cadd1bbd7d459c0345cb3cef6b24813",
+      "size_bytes": 20307105
+    },
+    {
+      "license_id": "project_authored_text_license",
+      "path": "fixtures/task/instruction.md",
+      "sha256": "9efd57bd218cbfa66b611cefe5e7af83583f483c65e20943a7d0a4414634125b",
+      "size_bytes": 545
+    },
+    {
+      "license_id": "project_authored_text_license",
+      "path": "fixtures/task/target_spec.json",
+      "sha256": "b95d035bfb78b4cc60c522931683d51a5f45b148102427da055651a390ff324d",
+      "size_bytes": 523
+    },
+    {
+      "license_id": "project_authored_text_license",
+      "path": "environment/tool_contract.json",
+      "sha256": "c589eb1bc0d7c2b99fce3c47cc584ae6c80d339c8fb5172b6294286cf92be026",
+      "size_bytes": 782
+    }
+  ],
+  "generator": "environment/build_fixture.py",
+  "generator_policy": "project_owned_synthetic_lavfi_only",
+  "schema_version": "nami_work_case18_asset_manifest_v1"
+}

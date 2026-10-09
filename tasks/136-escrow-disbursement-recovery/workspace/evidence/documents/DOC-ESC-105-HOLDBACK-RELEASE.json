@@ -1,0 +1,10 @@
+{
+  "account_last4": "2468",
+  "amount_cents": 80000,
+  "closing_id": "ESC-105",
+  "document_id": "DOC-ESC-105-HOLDBACK-RELEASE",
+  "document_type": "holdback_release_authorization",
+  "payee_id": "P-HOLD",
+  "schema_version": 1,
+  "signed": true
+}

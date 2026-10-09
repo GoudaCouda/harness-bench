@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "flags": {
+    "checkout_v2": {
+      "type": "boolean",
+      "default": false,
+      "owner": "checkout",
+      "state": "retiring"
+    },
+    "payments_beta": {
+      "type": "boolean",
+      "default": false,
+      "owner": "payments",
+      "state": "active"
+    },
+    "fraud_rules_v3": {
+      "type": "boolean",
+      "default": true,
+      "owner": "risk",
+      "state": "active"
+    }
+  }
+}

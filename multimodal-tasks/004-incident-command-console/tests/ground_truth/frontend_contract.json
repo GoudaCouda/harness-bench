@@ -1,0 +1,318 @@
+{
+  "schema_version": 3,
+  "task_id": "004-incident-command-console",
+  "contract_type": "timeline",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "incident_command_console_protected_local_data",
+    "incident_command_console_timeline_interaction_model",
+    "incident_command_console_timeline_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "minimum_records": 6,
+  "minimum_handlers": 5,
+  "data_profile": {
+    "status_values": [
+      "clear",
+      "watch",
+      "review"
+    ],
+    "minimum_categories": 3,
+    "minimum_owners": 3,
+    "primary_key": "primary",
+    "secondary_key": "secondary"
+  },
+  "record_ids": [
+    "INC-4081",
+    "INC-4084",
+    "INC-4087",
+    "INC-4090",
+    "INC-4081-R1",
+    "INC-4084-R2"
+  ],
+  "identity_tokens": [
+    "INC-4081",
+    "Checkout latency",
+    "payments",
+    "SRE Blue",
+    "review",
+    "92",
+    "47",
+    "INC-4084",
+    "Search error rate",
+    "search",
+    "SRE Green",
+    "watch",
+    "66",
+    "28",
+    "INC-4087",
+    "Webhook backlog",
+    "integrations",
+    "SRE Gold",
+    "clear",
+    "39",
+    "11",
+    "INC-4090",
+    "CDN purge delay",
+    "edge",
+    "SRE Red",
+    "watch",
+    "71",
+    "33",
+    "INC-4081-R1",
+    "Checkout latency follow-up",
+    "search",
+    "SRE Gold",
+    "clear",
+    "106",
+    "53",
+    "INC-4084-R2",
+    "Search error rate follow-up",
+    "integrations",
+    "SRE Red",
+    "watch",
+    "83",
+    "35"
+  ],
+  "required_label_groups": [
+    [
+      "Impact score",
+      "Impact",
+      "Impact score"
+    ],
+    [
+      "Minutes open",
+      "Minutes"
+    ],
+    [
+      "Escalation queue",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Response checkpoint",
+      "incident timeline"
+    ]
+  ],
+  "domain_groups": [
+    [
+      "incident",
+      "outage",
+      "event"
+    ],
+    [
+      "severity",
+      "impact",
+      "priority"
+    ],
+    [
+      "timeline",
+      "incident timeline",
+      "incident"
+    ]
+  ],
+  "state_groups": [
+    [
+      "serviceFilter",
+      "setServiceFilter",
+      "Service filter"
+    ],
+    [
+      "selectedIncidentId",
+      "setSelectedIncidentId",
+      "selected incident"
+    ],
+    [
+      "responseMode",
+      "setResponseMode",
+      "Response mode"
+    ],
+    [
+      "incidentSearch",
+      "setIncidentSearch",
+      "Incident search"
+    ]
+  ],
+  "logic_groups": [
+    [
+      "Date",
+      "timeline"
+    ],
+    [
+      "some",
+      "escalation"
+    ],
+    [
+      "Math.round",
+      "pressure calculation"
+    ],
+    [
+      "visibleRecords",
+      "visible set"
+    ],
+    [
+      "rankedRecords",
+      "ranked order"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "serviceFilter",
+      "setServiceFilter",
+      "service filter"
+    ],
+    [
+      "selectedIncidentId",
+      "setSelectedIncidentId",
+      "timeline selection"
+    ],
+    [
+      "responseMode",
+      "setResponseMode",
+      "response mode"
+    ],
+    [
+      "escalatedOnly",
+      "setEscalatedOnly",
+      "escalation toggle"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "impactLoad",
+      "Impact score",
+      "impact load"
+    ],
+    [
+      "openMinutes",
+      "Minutes open",
+      "time open"
+    ],
+    [
+      "escalationQueue",
+      "Escalation queue",
+      "escalated incidents"
+    ],
+    [
+      "slaAdjustedImpact",
+      "SLA pressure",
+      "response pressure"
+    ],
+    [
+      "ownerSpread",
+      "owner spread",
+      "owner count"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "timeline",
+      "command log",
+      "checkpoint rail"
+    ],
+    [
+      "severity ribbon",
+      "response pane",
+      "incident console"
+    ]
+  ],
+  "optional_logic_groups": [
+    [
+      "useMemo"
+    ],
+    [
+      "useReducer"
+    ],
+    [
+      "custom hook"
+    ]
+  ],
+  "derived_tokens": [],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Service filter",
+        "value": "payments"
+      },
+      {
+        "kind": "fill",
+        "label": "Incident search",
+        "value": "Checkout"
+      },
+      {
+        "kind": "click",
+        "text": "INC-4081"
+      },
+      {
+        "kind": "select",
+        "label": "Response mode",
+        "value": "timeline-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "SLA pressure",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "timeline-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "INC-4081",
+      "category": "payments",
+      "mode": "timeline-review",
+      "search_value": "Checkout",
+      "range_value": 64,
+      "visible_id_subset": [
+        "INC-4081"
+      ],
+      "selected_detail_tokens": [
+        "SRE Blue",
+        "payments",
+        "review",
+        "92",
+        "47"
+      ],
+      "after_clearing_search_subset": [
+        "INC-4081",
+        "INC-4084-R2"
+      ],
+      "focus_subset": [
+        "INC-4081"
+      ],
+      "focus_forbidden": [
+        "INC-4087"
+      ],
+      "detail_switch_id": "INC-4084-R2",
+      "detail_switch_tokens": [
+        "INC-4084-R2",
+        "Search error rate follow-up",
+        "SRE Red",
+        "integrations",
+        "watch",
+        "83",
+        "35"
+      ],
+      "summary_change_labels": [
+        "Impact score",
+        "Minutes open",
+        "Escalation queue",
+        "Response checkpoint"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 6
+    },
+    "action_count": 6
+  }
+}

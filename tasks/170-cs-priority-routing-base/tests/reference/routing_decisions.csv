@@ -1,0 +1,7 @@
+item_id,decision,reason_code,owner,next_action,evidence_refs
+S-201,p1,critical_impact,incident_response,page_primary,service_cases.csv#S-201;routing_policy.md
+S-202,p2,broad_urgent,specialist_queue,assign_specialist,service_cases.csv#S-202;routing_policy.md
+S-203,p3,limited_impact,general_queue,assign_general,service_cases.csv#S-203;routing_policy.md
+S-210,hold,already_acknowledged,current_owner,monitor_ack,service_cases.csv#S-210;routing_policy.md
+S-211,hold,duplicate_alert,queue_control,link_alert,service_cases.csv#S-211;routing_policy.md
+S-212,p1,critical_impact,incident_response,page_primary,service_cases.csv#S-212;routing_policy.md

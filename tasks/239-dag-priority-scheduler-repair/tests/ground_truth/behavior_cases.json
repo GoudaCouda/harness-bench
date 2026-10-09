@@ -1,0 +1,153 @@
+{
+  "valid": [
+    {
+      "jobs": [
+        {
+          "job_id": "load-cache",
+          "deps": [],
+          "priority": 10
+        },
+        {
+          "job_id": "compile-core",
+          "deps": [
+            "load-cache"
+          ],
+          "priority": 5
+        },
+        {
+          "job_id": "compile-ui",
+          "deps": [
+            "load-cache"
+          ],
+          "priority": 5
+        },
+        {
+          "job_id": "link-all",
+          "deps": [
+            "compile-core",
+            "compile-ui"
+          ],
+          "priority": 1
+        },
+        {
+          "job_id": "notify-ops",
+          "deps": [],
+          "priority": 5
+        }
+      ],
+      "expected": {
+        "order": [
+          "load-cache",
+          "compile-core",
+          "compile-ui",
+          "notify-ops",
+          "link-all"
+        ]
+      }
+    },
+    {
+      "jobs": [
+        {
+          "job_id": "z",
+          "deps": [],
+          "priority": 1
+        },
+        {
+          "job_id": "a",
+          "deps": [],
+          "priority": 1
+        },
+        {
+          "job_id": "m",
+          "deps": [
+            "a",
+            "z"
+          ],
+          "priority": 9
+        }
+      ],
+      "expected": {
+        "order": [
+          "a",
+          "z",
+          "m"
+        ]
+      }
+    },
+    {
+      "jobs": [
+        {
+          "job_id": "solo",
+          "deps": [],
+          "priority": 0
+        }
+      ],
+      "expected": {
+        "order": [
+          "solo"
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "jobs": [
+        {
+          "job_id": "a",
+          "deps": [
+            "b"
+          ],
+          "priority": 1
+        },
+        {
+          "job_id": "b",
+          "deps": [
+            "a"
+          ],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "jobs": [
+        {
+          "job_id": "loop",
+          "deps": [
+            "loop"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "jobs": [
+        {
+          "job_id": "ok",
+          "deps": [],
+          "priority": 1
+        },
+        {
+          "job_id": "bad",
+          "deps": [
+            "missing"
+          ],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "jobs": [
+        {
+          "job_id": "dup",
+          "deps": [],
+          "priority": 1
+        },
+        {
+          "job_id": "dup",
+          "deps": [],
+          "priority": 2
+        }
+      ]
+    }
+  ]
+}

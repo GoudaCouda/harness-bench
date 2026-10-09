@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 252-gettext-catalog-leverage
+pass_threshold: 0.8
+cases:
+- id: translated_strings
+  title: Exact msgid hits copy msgstr
+  description: leverage.json translations equal the independent kernel.
+  weight: 0.5
+  core: true
+- id: untranslated_ids
+  title: Empty and missing msgid rows stay untranslated
+  description: The untranslated list matches the kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain msgid matching and risk
+  description: CATALOG_NOTES.md covers msgid, exact, untranslated, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected catalog remains unchanged
+  description: PO and incoming JSON stay byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

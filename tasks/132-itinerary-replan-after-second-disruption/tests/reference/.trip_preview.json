@@ -1,0 +1,22 @@
+{
+  "changed_object_ids": [
+    "AIR-2",
+    "REFUND",
+    "SHUTTLE"
+  ],
+  "external_actions_executed": false,
+  "feasible_option_ids": [
+    "O-F",
+    "O-H"
+  ],
+  "interrupted_recoveries_pending": [
+    "TRIP-20261015-FIRST-INTERRUPTED"
+  ],
+  "inventory_signature_verified": true,
+  "recovery_id": "TRIP-20261015-SECOND-01",
+  "schema_version": 1,
+  "selected_option_id": "O-F",
+  "semantic_plan_digest": "5d43fa94289c63a65a87241336a782eb2dc43164c3b682cb5eb0e03f6a1300ee",
+  "source_checkpoint": "feff16b4db3b4bd61394c2f69226e72d4827cec65d2775d16f583ffb9eeef7bf",
+  "status": "valid"
+}

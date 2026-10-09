@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "approved_windows": true,
+    "duration": true,
+    "minimum_gap": true,
+    "numbering": true,
+    "shot_boundaries": true,
+    "transcript": true
+  },
+  "cue_count": 4,
+  "srt_sha256": "99f9545fdb8934bd311ea183a2f52a09f51b7297161fadb3662767ff0b19d948",
+  "status": "pass",
+  "tool": "subctl/1"
+}

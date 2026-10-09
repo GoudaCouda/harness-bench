@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "details": {"type": "object"},
+          "passed": {"type": "boolean"}
+        },
+        "required": ["passed", "details"],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "schema_version": {"const": "nami_work_case18_verdict_v1"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "workspace_state_sha256_after": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+    "workspace_state_sha256_before": {"pattern": "^[a-f0-9]{64}$", "type": "string"}
+  },
+  "required": [
+    "schema_version",
+    "verdict",
+    "checks",
+    "workspace_state_sha256_before",
+    "workspace_state_sha256_after"
+  ],
+  "type": "object"
+}

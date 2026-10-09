@@ -1,0 +1,349 @@
+{
+  "closing_decisions": [
+    {
+      "authorized_allocations_cents": 10000000,
+      "closing_id": "ESC-101",
+      "disposition": "ready_local_disbursement_packet",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-101-CLOSE.json#DOC-ESC-101-CLOSE",
+        "evidence/documents/DOC-INS-101-BROKER.json#DOC-INS-101-BROKER",
+        "evidence/documents/DOC-INS-101-ESCROW.json#DOC-INS-101-ESCROW",
+        "evidence/documents/DOC-INS-101-HOLDBACK.json#DOC-INS-101-HOLDBACK",
+        "evidence/documents/DOC-INS-101-PAYOFF.json#DOC-INS-101-PAYOFF",
+        "evidence/documents/DOC-INS-101-SELLER.json#DOC-INS-101-SELLER",
+        "evidence/documents/DOC-INS-101-TAX.json#DOC-INS-101-TAX",
+        "evidence/settlement_events.jsonl#EV-101-AUTH",
+        "evidence/settlement_events.jsonl#EV-101-REC",
+        "evidence/settlement_events.jsonl#EV-101-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-101",
+        "state/escrow.db#instructions:INS-101-BROKER",
+        "state/escrow.db#instructions:INS-101-ESCROW",
+        "state/escrow.db#instructions:INS-101-HOLDBACK",
+        "state/escrow.db#instructions:INS-101-PAYOFF",
+        "state/escrow.db#instructions:INS-101-SELLER",
+        "state/escrow.db#instructions:INS-101-TAX"
+      ],
+      "final_state": "ready_local_disbursement_packet",
+      "holdback_cents": 100000,
+      "instruction_ids": [
+        "INS-101-BROKER",
+        "INS-101-ESCROW",
+        "INS-101-HOLDBACK",
+        "INS-101-PAYOFF",
+        "INS-101-SELLER",
+        "INS-101-TAX"
+      ],
+      "next_local_action": "stage_local_disbursement_packet",
+      "property_id": "PROP-ALDER-17",
+      "wire_amount_cents": 10000000
+    },
+    {
+      "authorized_allocations_cents": 0,
+      "closing_id": "ESC-102",
+      "disposition": "hold_instruction_mismatch",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-102-CLOSE.json#DOC-ESC-102-CLOSE",
+        "evidence/documents/DOC-INS-102-ESCROW.json#DOC-INS-102-ESCROW",
+        "evidence/documents/DOC-INS-102-PAYOFF.json#DOC-INS-102-PAYOFF",
+        "evidence/documents/DOC-INS-102-SELLER.json#DOC-INS-102-SELLER",
+        "evidence/settlement_events.jsonl#EV-102-AUTH",
+        "evidence/settlement_events.jsonl#EV-102-REC",
+        "evidence/settlement_events.jsonl#EV-102-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-102",
+        "state/escrow.db#instructions:INS-102-ESCROW",
+        "state/escrow.db#instructions:INS-102-PAYOFF",
+        "state/escrow.db#instructions:INS-102-SELLER"
+      ],
+      "final_state": "held",
+      "holdback_cents": 0,
+      "instruction_ids": [
+        "INS-102-ESCROW",
+        "INS-102-PAYOFF",
+        "INS-102-SELLER"
+      ],
+      "next_local_action": "resolve_instruction_hold",
+      "property_id": "PROP-BAY-42",
+      "wire_amount_cents": 8000000
+    },
+    {
+      "authorized_allocations_cents": 6500000,
+      "closing_id": "ESC-103",
+      "disposition": "already_disbursed_preserved",
+      "evidence_refs": [
+        "evidence/documents/DOC-INS-103-ESCROW.json#DOC-INS-103-ESCROW",
+        "evidence/documents/DOC-INS-103-PAYOFF.json#DOC-INS-103-PAYOFF",
+        "evidence/documents/DOC-INS-103-SELLER.json#DOC-INS-103-SELLER",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-103",
+        "state/escrow.db#instructions:INS-103-ESCROW",
+        "state/escrow.db#instructions:INS-103-PAYOFF",
+        "state/escrow.db#instructions:INS-103-SELLER"
+      ],
+      "final_state": "disbursed",
+      "holdback_cents": 0,
+      "instruction_ids": [
+        "INS-103-ESCROW",
+        "INS-103-PAYOFF",
+        "INS-103-SELLER"
+      ],
+      "next_local_action": "none",
+      "property_id": "PROP-CEDAR-08",
+      "wire_amount_cents": 0
+    },
+    {
+      "authorized_allocations_cents": 7200000,
+      "closing_id": "ESC-104",
+      "disposition": "ready_local_disbursement_packet",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-104-CLOSE.json#DOC-ESC-104-CLOSE",
+        "evidence/documents/DOC-INS-104-ESCROW.json#DOC-INS-104-ESCROW",
+        "evidence/documents/DOC-INS-104-PAYOFF.json#DOC-INS-104-PAYOFF",
+        "evidence/documents/DOC-INS-104-SELLER.json#DOC-INS-104-SELLER",
+        "evidence/settlement_events.jsonl#EV-104-AUTH",
+        "evidence/settlement_events.jsonl#EV-104-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-104",
+        "state/escrow.db#instructions:INS-104-ESCROW",
+        "state/escrow.db#instructions:INS-104-PAYOFF",
+        "state/escrow.db#instructions:INS-104-SELLER"
+      ],
+      "final_state": "ready_local_disbursement_packet",
+      "holdback_cents": 0,
+      "instruction_ids": [
+        "INS-104-ESCROW",
+        "INS-104-PAYOFF",
+        "INS-104-SELLER"
+      ],
+      "next_local_action": "stage_local_disbursement_packet",
+      "property_id": "PROP-DUNE-31",
+      "wire_amount_cents": 7200000
+    },
+    {
+      "authorized_allocations_cents": 5000000,
+      "closing_id": "ESC-105",
+      "disposition": "holdback_release_ready",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-105-HOLDBACK-RELEASE.json#DOC-ESC-105-HOLDBACK-RELEASE",
+        "evidence/documents/DOC-INS-105-ESCROW.json#DOC-INS-105-ESCROW",
+        "evidence/documents/DOC-INS-105-HOLDBACK.json#DOC-INS-105-HOLDBACK",
+        "evidence/documents/DOC-INS-105-PAYOFF.json#DOC-INS-105-PAYOFF",
+        "evidence/documents/DOC-INS-105-SELLER.json#DOC-INS-105-SELLER",
+        "evidence/settlement_events.jsonl#EV-105-REL",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-105",
+        "state/escrow.db#instructions:INS-105-ESCROW",
+        "state/escrow.db#instructions:INS-105-HOLDBACK",
+        "state/escrow.db#instructions:INS-105-PAYOFF",
+        "state/escrow.db#instructions:INS-105-SELLER"
+      ],
+      "final_state": "holdback_release_ready",
+      "holdback_cents": 80000,
+      "instruction_ids": [
+        "INS-105-ESCROW",
+        "INS-105-HOLDBACK",
+        "INS-105-PAYOFF",
+        "INS-105-SELLER"
+      ],
+      "next_local_action": "stage_local_holdback_release_packet",
+      "property_id": "PROP-ELM-55",
+      "wire_amount_cents": 0
+    },
+    {
+      "authorized_allocations_cents": 0,
+      "closing_id": "ESC-106",
+      "disposition": "hold_funds_not_conserved",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-106-CLOSE.json#DOC-ESC-106-CLOSE",
+        "evidence/documents/DOC-INS-106-ESCROW.json#DOC-INS-106-ESCROW",
+        "evidence/documents/DOC-INS-106-PAYOFF.json#DOC-INS-106-PAYOFF",
+        "evidence/documents/DOC-INS-106-SELLER.json#DOC-INS-106-SELLER",
+        "evidence/settlement_events.jsonl#EV-106-AUTH",
+        "evidence/settlement_events.jsonl#EV-106-REC",
+        "evidence/settlement_events.jsonl#EV-106-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-106",
+        "state/escrow.db#instructions:INS-106-ESCROW",
+        "state/escrow.db#instructions:INS-106-PAYOFF",
+        "state/escrow.db#instructions:INS-106-SELLER"
+      ],
+      "final_state": "held",
+      "holdback_cents": 0,
+      "instruction_ids": [
+        "INS-106-ESCROW",
+        "INS-106-PAYOFF",
+        "INS-106-SELLER"
+      ],
+      "next_local_action": "resolve_conservation_hold",
+      "property_id": "PROP-FIR-19",
+      "wire_amount_cents": 9000000
+    },
+    {
+      "authorized_allocations_cents": 0,
+      "closing_id": "ESC-107",
+      "disposition": "hold_missing_closing_authorization",
+      "evidence_refs": [
+        "evidence/documents/DOC-INS-107-ESCROW.json#DOC-INS-107-ESCROW",
+        "evidence/documents/DOC-INS-107-PAYOFF.json#DOC-INS-107-PAYOFF",
+        "evidence/documents/DOC-INS-107-SELLER.json#DOC-INS-107-SELLER",
+        "evidence/settlement_events.jsonl#EV-107-AUTH",
+        "evidence/settlement_events.jsonl#EV-107-REC",
+        "evidence/settlement_events.jsonl#EV-107-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-107",
+        "state/escrow.db#instructions:INS-107-ESCROW",
+        "state/escrow.db#instructions:INS-107-PAYOFF",
+        "state/escrow.db#instructions:INS-107-SELLER"
+      ],
+      "final_state": "held",
+      "holdback_cents": 0,
+      "instruction_ids": [
+        "INS-107-ESCROW",
+        "INS-107-PAYOFF",
+        "INS-107-SELLER"
+      ],
+      "next_local_action": "resolve_authorization_hold",
+      "property_id": "PROP-GROVE-73",
+      "wire_amount_cents": 4400000
+    }
+  ],
+  "event_dispositions": [
+    {
+      "closing_id": "ESC-101",
+      "delivery_id": "DL-001",
+      "disposition": "applied",
+      "event_id": "EV-101-REC",
+      "source_sequence": 30
+    },
+    {
+      "closing_id": "ESC-101",
+      "delivery_id": "DL-002",
+      "disposition": "applied",
+      "event_id": "EV-101-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-101",
+      "delivery_id": "DL-003",
+      "disposition": "applied",
+      "event_id": "EV-101-AUTH",
+      "source_sequence": 20
+    },
+    {
+      "closing_id": "ESC-101",
+      "delivery_id": "DL-004",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-101-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-102",
+      "delivery_id": "DL-005",
+      "disposition": "applied",
+      "event_id": "EV-102-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-102",
+      "delivery_id": "DL-006",
+      "disposition": "applied",
+      "event_id": "EV-102-AUTH",
+      "source_sequence": 20
+    },
+    {
+      "closing_id": "ESC-102",
+      "delivery_id": "DL-007",
+      "disposition": "applied",
+      "event_id": "EV-102-REC",
+      "source_sequence": 30
+    },
+    {
+      "closing_id": "ESC-103",
+      "delivery_id": "DL-008",
+      "disposition": "irreversible_disbursement_ignored",
+      "event_id": "EV-103-LATE",
+      "source_sequence": 90
+    },
+    {
+      "closing_id": "ESC-104",
+      "delivery_id": "DL-009",
+      "disposition": "applied",
+      "event_id": "EV-104-AUTH",
+      "source_sequence": 20
+    },
+    {
+      "closing_id": "ESC-104",
+      "delivery_id": "DL-010",
+      "disposition": "applied",
+      "event_id": "EV-104-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-105",
+      "delivery_id": "DL-011",
+      "disposition": "applied",
+      "event_id": "EV-105-REL",
+      "source_sequence": 80
+    },
+    {
+      "closing_id": "ESC-106",
+      "delivery_id": "DL-012",
+      "disposition": "applied",
+      "event_id": "EV-106-REC",
+      "source_sequence": 30
+    },
+    {
+      "closing_id": "ESC-106",
+      "delivery_id": "DL-013",
+      "disposition": "applied",
+      "event_id": "EV-106-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-106",
+      "delivery_id": "DL-014",
+      "disposition": "applied",
+      "event_id": "EV-106-AUTH",
+      "source_sequence": 20
+    },
+    {
+      "closing_id": "ESC-107",
+      "delivery_id": "DL-015",
+      "disposition": "applied",
+      "event_id": "EV-107-WIRE",
+      "source_sequence": 10
+    },
+    {
+      "closing_id": "ESC-107",
+      "delivery_id": "DL-016",
+      "disposition": "applied",
+      "event_id": "EV-107-REC",
+      "source_sequence": 30
+    },
+    {
+      "closing_id": "ESC-107",
+      "delivery_id": "DL-017",
+      "disposition": "applied",
+      "event_id": "EV-107-AUTH",
+      "source_sequence": 20
+    },
+    {
+      "closing_id": "ESC-999",
+      "delivery_id": "DL-018",
+      "disposition": "unknown_closing_ignored",
+      "event_id": "EV-999-WIRE",
+      "source_sequence": 10
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "source_checkpoint": "d2e2c87366e50cde1a854b53d267a0e89b2d9359e321f0839a3a3c3e0756dae0",
+  "totals": {
+    "locally_stageable_cents": 17280000,
+    "preserved_disbursed_cents": 11420000,
+    "received_wire_cents": 38600000,
+    "retained_holdback_cents": 180000
+  }
+}

@@ -1,0 +1,39 @@
+schema_version: 2
+task_id: 270-idempotent-family-hotel-booking
+title: idempotent family hotel booking
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+hooks_module: environment/hooks.py
+design_file: design.md
+timeout_sec: 7200
+domain: Personal Assistance
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- state_management
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+- safety_boundary
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts: []
+task_family: 270-idempotent-family-hotel-booking
+variant: native-v2
+mutation_contract:
+  allowed_created: []
+  allowed_modified: []
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_16

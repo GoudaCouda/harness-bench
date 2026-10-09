@@ -1,0 +1,4 @@
+[
+  {"occurrence_id":"month-close#0002","action":"skip","rescheduled_local":null},
+  {"occurrence_id":"fall-job#0003","action":"reschedule","rescheduled_local":"2026-11-02T02:15"}
+]

@@ -1,0 +1,10 @@
+source_path,target_path,record_type,record_id,status
+dropbox/customers/customers_01.csv,normalized/customer_C-001.json,customer,C-001,active
+dropbox/customers/customers_01.csv,normalized/customer_C-002.json,customer,C-002,inactive
+dropbox/customers/customers_extra.csv,normalized/customer_C-003.json,customer,C-003,pending
+dropbox/notes/case_500.txt,normalized/note_CASE-500.json,note,CASE-500,open
+dropbox/notes/case_501.txt,normalized/note_CASE-501.json,note,CASE-501,closed
+dropbox/notes/case_502.txt,normalized/note_CASE-502.json,note,CASE-502,pending
+dropbox/orders/2026/order_100.json,normalized/order_O-100.json,order,O-100,active
+dropbox/orders/2026/order_101.JSON,normalized/order_O-101.json,order,O-101,active
+dropbox/orders/2026/order_102.json,normalized/order_O-102.json,order,O-102,active

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_20 verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "task_id", "case_version", "status", "score", "checks", "summary"],
+  "properties": {
+    "schema_version": {"const": "case20_verifier_result_v1"},
+    "task_id": {"const": "case_20"},
+    "case_version": {"type": "string"},
+    "status": {"enum": ["passed", "failed", "invalid"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "evidence"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "object"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["check_count", "passed_count", "failed_count", "failed_check_ids"],
+      "properties": {
+        "check_count": {"type": "integer"},
+        "passed_count": {"type": "integer"},
+        "failed_count": {"type": "integer"},
+        "failed_check_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

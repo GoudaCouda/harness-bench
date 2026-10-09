@@ -1,0 +1,6 @@
+field,type,description,missing_code
+participant_id,string,synthetic study participant key,NA
+visit_date_shifted,date,visit date shifted by a participant-specific offset,NA
+age_band,category,ten-year age band,UNKNOWN
+memory_score,integer,synthetic assessment score,-9
+site,category,synthetic collection site,UNKNOWN

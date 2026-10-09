@@ -1,0 +1,21 @@
+{
+  "decisions": [
+    {
+      "action": "suppressed",
+      "generation": 1,
+      "next_at": 110,
+      "reason": "start_limit",
+      "starts_in_window": 2,
+      "unit": "api"
+    },
+    {
+      "action": "none",
+      "generation": 2,
+      "next_at": null,
+      "reason": "running",
+      "starts_in_window": 1,
+      "unit": "worker"
+    }
+  ],
+  "suppressed": 1
+}

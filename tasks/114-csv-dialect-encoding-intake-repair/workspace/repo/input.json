@@ -1,0 +1,34 @@
+{
+  "policy": {
+    "allowed_delimiters": [
+      ",",
+      "\t",
+      ";"
+    ],
+    "allowed_encodings": [
+      "utf-8",
+      "utf-8-sig",
+      "utf-16-le",
+      "utf-16-be",
+      "latin-1"
+    ],
+    "default_encoding": "utf-8"
+  },
+  "records": [
+    {
+      "declared_encoding": "utf-8-sig",
+      "id": "customers",
+      "payload_hex": "efbbbf6e616d652c6e6f74650a4164612c22612c62220a"
+    },
+    {
+      "delimiter": "\t",
+      "id": "legacy",
+      "payload_hex": "6964096e616d650a3109416e61"
+    },
+    {
+      "declared_encoding": null,
+      "id": "unknown",
+      "payload_hex": "612c620a312c32"
+    }
+  ]
+}

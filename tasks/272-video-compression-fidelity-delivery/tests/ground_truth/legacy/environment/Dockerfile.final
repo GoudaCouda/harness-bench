@@ -1,0 +1,14 @@
+FROM agent-sft/nami-work-gold20-case18@sha256:dc988db44edcaff405c310a8c58b9aae8ad9e65c3f609008a5da26ecefd19593
+
+LABEL agent_sft.run_id="nami_work_gold20_v1" \
+      agent_sft.task_id="20260719_nami_work_gold20_v1" \
+      agent_sft.case_id="case_18" \
+      agent_sft.host_alias="local-docker" \
+      agent_sft.purpose="nami_work_gold20"
+
+RUN set -eu; \
+    test "$(dpkg-query -W -f='${Package}=${Version}\n' ffmpeg python3 python3-minimal python3.12 python3.12-minimal)" = "$(printf '%s\n' 'ffmpeg=7:6.1.1-3ubuntu5' 'python3=3.12.3-0ubuntu2.1' 'python3-minimal=3.12.3-0ubuntu2.1' 'python3.12=3.12.3-1ubuntu0.15' 'python3.12-minimal=3.12.3-1ubuntu0.15')"; \
+    test "$(ffmpeg -version | sed -n '1s/^ffmpeg version \([^ ]*\).*/\1/p')" = "6.1.1-3ubuntu5"; \
+    test "$(ffprobe -version | sed -n '1s/^ffprobe version \([^ ]*\).*/\1/p')" = "6.1.1-3ubuntu5"; \
+    test "$(python3 -c 'import platform; print(platform.python_version())')" = "3.12.3"; \
+    python3 -c 'import hashlib, json, pathlib, subprocess'

@@ -1,0 +1,29 @@
+{
+  "schema_version": "case07_python_runtime_contract_v1",
+  "tool_id": "python_stdlib",
+  "version": "3.11.9",
+  "executable": "/usr/local/bin/python3",
+  "network": "none",
+  "available_modules": [
+    "csv",
+    "datetime",
+    "decimal",
+    "hashlib",
+    "json",
+    "pathlib",
+    "zipfile"
+  ],
+  "allowed_reads": [
+    "/workspace/task.md",
+    "/workspace/input/*",
+    "/opt/agent-tools/tool_contract.json"
+  ],
+  "allowed_writes": [
+    "/workspace/workbook_spec.json",
+    "/workspace/output/sales_analysis.xlsx"
+  ],
+  "required_final_cleanup": [
+    "/workspace/workbook_spec.json"
+  ],
+  "description": "断网、非 root 的 Python 3.11.9 标准库执行环境；不预装答案数据或电子表格第三方库。"
+}

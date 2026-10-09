@@ -1,0 +1,10 @@
+{
+  "checkpoint_id": "DMS-NEURO-042-build-attempt-1",
+  "plan_revision": 1,
+  "status": "interrupted_before_policy_validation",
+  "copied_assets": [
+    "survey_dictionary",
+    "audio_transcript_deid"
+  ],
+  "warning": "The copied set is not approved and must be reconciled from current consent, repository capabilities, and source bytes."
+}

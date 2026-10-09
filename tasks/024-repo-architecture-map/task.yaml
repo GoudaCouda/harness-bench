@@ -1,0 +1,58 @@
+task_id: 024-repo-architecture-map
+title: Repository Architecture Map
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: Software Engineering
+task_category: Content Production
+task_subcategory: Documents and Presentations
+capability_tags:
+- code_execution
+- filesystem
+- local_service
+- structured_data
+- terminal
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- tool_selection
+stressors: []
+required_artifacts:
+- architecture.md
+- doc_code_discrepancies.csv
+- module_map.json
+- onboarding_plan.md
+- risk_register.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-024
+task_family: 024-repo-architecture-map
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - architecture.md
+  - doc_code_discrepancies.csv
+  - module_map.json
+  - onboarding_plan.md
+  - risk_register.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    sqlite3: ">=3.40,<4"
+  grader: {}
+  services: []
+schema_version: 2

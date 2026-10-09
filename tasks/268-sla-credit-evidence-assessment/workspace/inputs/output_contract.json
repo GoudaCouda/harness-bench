@@ -1,0 +1,47 @@
+{
+  "schema_version": "case14_sla_credit_assessment_v2",
+  "required_top_level_fields": [
+    "schema_version",
+    "contract_id",
+    "quarter",
+    "region_id",
+    "event_assessment",
+    "credit",
+    "remediation",
+    "excluded_records",
+    "ignored_sources"
+  ],
+  "event_assessment_fields": [
+    "eligible_event_ids",
+    "eligible_minutes_by_event",
+    "eligible_minutes_total",
+    "p1_event_count"
+  ],
+  "eligible_event_fields": [
+    "event_id",
+    "severity",
+    "duration_minutes",
+    "grace_minutes",
+    "eligible_minutes"
+  ],
+  "credit_fields": [
+    "rate_cny_per_minute",
+    "base_credit_cny",
+    "repeat_incident_threshold",
+    "eligible_event_count",
+    "multiplier_numerator",
+    "multiplier_denominator",
+    "final_credit_cny",
+    "triggered_rule_ids",
+    "evidence_ids"
+  ],
+  "remediation_fields": [
+    "level",
+    "due_business_days",
+    "triggered_rule_id",
+    "evidence_ids"
+  ],
+  "excluded_record_fields": ["event_id", "reason_code"],
+  "ignored_source_fields": ["source_id", "reason_code"],
+  "collection_semantics": "所有 ID 集合均无序且不得重复；不得增加未声明的排除项。"
+}

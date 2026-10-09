@@ -1,0 +1,9 @@
+{
+  "files": {
+    "evidence/telemetry_readings.jsonl": "c7d69d750d634901f197d885baa3df893f07036790c252cdb8844843be114da3",
+    "evidence/work_order_events.jsonl": "1e5575022b36615e8451375884d72a8fb43ce353fa0a2188c3f38a9a37f5ed04",
+    "policy/maintenance_policy.json": "c5cf70ac8b1f7f74740c0e55e8231b9709b10d07370d70e6f57bc1da8ebc9d53"
+  },
+  "schema_version": 1,
+  "synthetic_fixture": true
+}

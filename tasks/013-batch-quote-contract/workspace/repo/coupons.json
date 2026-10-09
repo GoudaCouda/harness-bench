@@ -1,0 +1,5 @@
+{
+  "TEAM5": {"discount_bps": 500, "plan": "team", "expires_on": "2026-09-30"},
+  "START10": {"discount_bps": 1000, "plan": "starter", "expires_on": "2026-08-31"},
+  "OLD20": {"discount_bps": 2000, "plan": "enterprise", "expires_on": "2026-07-31"}
+}

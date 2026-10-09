@@ -1,0 +1,5 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material timeline decisions, edge boundaries, verification commands/results,
+    and offline scope for Repair DNS zone serial update ordering, without claiming external execution?

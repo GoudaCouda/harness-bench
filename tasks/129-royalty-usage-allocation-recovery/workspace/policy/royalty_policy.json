@@ -1,0 +1,21 @@
+{
+  "adjustment_rule": "negative adjustments may offset only an event in this statement and inherit its mapping, rights, and split",
+  "external_actions_permitted": false,
+  "generated_at": "2026-08-19T17:30:00Z",
+  "mapping_rule": "highest uniquely effective recording-to-work mapping version",
+  "money_currency": "USD",
+  "quarantine_states": [
+    "unknown_recording",
+    "ambiguous_mapping",
+    "outside_rights_window",
+    "cross_statement_adjustment"
+  ],
+  "recovery_id": "ROYREC-20260819-01",
+  "schema_version": 1,
+  "split_rule": "highest uniquely effective ownership version in territory on usage date",
+  "statement_id": "RST-2026Q2-NORTH-01",
+  "statement_period": {
+    "from": "2026-04-01",
+    "through": "2026-06-30"
+  }
+}

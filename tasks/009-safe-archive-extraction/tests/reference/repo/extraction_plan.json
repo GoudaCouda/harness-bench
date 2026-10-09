@@ -1,0 +1,15 @@
+{
+  "manifest_id": "acorn-cli-2.8.1-linux-amd64",
+  "destination": "staging/acorn-cli-2.8.1",
+  "entries": [
+    {"path": "release", "type": "dir", "size": 0},
+    {"path": "release/bin", "type": "dir", "size": 0},
+    {"path": "release/bin/acorn", "type": "file", "size": 12000},
+    {"path": "release/config", "type": "dir", "size": 0},
+    {"path": "release/config/default.json", "type": "file", "size": 800},
+    {"path": "release/docs", "type": "dir", "size": 0},
+    {"path": "release/docs/README.md", "type": "file", "size": 1400}
+  ],
+  "file_count": 3,
+  "total_file_bytes": 14200
+}

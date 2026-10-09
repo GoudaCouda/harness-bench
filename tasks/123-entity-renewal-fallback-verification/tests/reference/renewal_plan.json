@@ -1,0 +1,125 @@
+{
+  "bank_information_collected": false,
+  "decisions": [
+    {
+      "beneficial_owner_attestation_status": "not_required",
+      "beneficial_owner_requirement": "not_required",
+      "compliance_state": "compliant_for_review",
+      "evidence_refs": [
+        "evidence/legal_name_corrections.jsonl#LNC-ALP-013",
+        "evidence/registry_snapshot.json#REG-ALP-501",
+        "policy/renewal_policy.json#beneficial_owner_rule"
+      ],
+      "external_action": "none",
+      "legal_name": "Alpine Field Systems LLC",
+      "legal_name_effective_date": "2026-08-12",
+      "legal_name_version": 13,
+      "local_mutations": [
+        "beneficial_owner_attestation_status",
+        "compliance_state",
+        "legal_name",
+        "registration_expires_on",
+        "registry_effective_date",
+        "registry_version",
+        "renewal_state"
+      ],
+      "next_local_action": "route_for_internal_approval",
+      "registration_expires_on": "2026-10-15",
+      "registration_status": "active",
+      "registry_entity_id": "REG-ALP-501",
+      "registry_version": 12,
+      "renewal_state": "ready_for_internal_approval",
+      "vendor_id": "VND-ALP-17"
+    },
+    {
+      "beneficial_owner_attestation_status": "current",
+      "beneficial_owner_requirement": "required",
+      "compliance_state": "compliant_for_review",
+      "evidence_refs": [
+        "evidence/registry_snapshot.json#REG-BOR-772",
+        "policy/renewal_policy.json#beneficial_owner_rule"
+      ],
+      "external_action": "none",
+      "legal_name": "Borealis Scientific Supply LLC",
+      "legal_name_effective_date": "2026-08-05",
+      "legal_name_version": 9,
+      "local_mutations": [
+        "beneficial_owner_attestation_status",
+        "compliance_state",
+        "registration_expires_on",
+        "registry_effective_date",
+        "registry_version",
+        "renewal_state"
+      ],
+      "next_local_action": "route_for_internal_approval",
+      "registration_expires_on": "2026-09-01",
+      "registration_status": "active",
+      "registry_entity_id": "REG-BOR-772",
+      "registry_version": 9,
+      "renewal_state": "ready_for_internal_approval",
+      "vendor_id": "VND-BOR-22"
+    },
+    {
+      "beneficial_owner_attestation_status": "missing",
+      "beneficial_owner_requirement": "required",
+      "compliance_state": "owner_attestation_required",
+      "evidence_refs": [
+        "evidence/registry_snapshot.json#REG-CYP-883",
+        "policy/renewal_policy.json#beneficial_owner_rule"
+      ],
+      "external_action": "none",
+      "legal_name": "Cypress Instrument Services Inc",
+      "legal_name_effective_date": "2026-08-03",
+      "legal_name_version": 4,
+      "local_mutations": [
+        "beneficial_owner_attestation_status",
+        "compliance_state",
+        "registration_expires_on",
+        "registry_effective_date",
+        "registry_version",
+        "renewal_state"
+      ],
+      "next_local_action": "request_minimum_owner_attestation",
+      "registration_expires_on": "2026-09-20",
+      "registration_status": "active",
+      "registry_entity_id": "REG-CYP-883",
+      "registry_version": 4,
+      "renewal_state": "hold_owner_attestation",
+      "vendor_id": "VND-CYP-31"
+    },
+    {
+      "beneficial_owner_attestation_status": "not_required",
+      "beneficial_owner_requirement": "not_required",
+      "compliance_state": "registration_expired",
+      "evidence_refs": [
+        "evidence/registry_snapshot.json#REG-DEL-194",
+        "policy/renewal_policy.json#beneficial_owner_rule"
+      ],
+      "external_action": "none",
+      "legal_name": "Delta Civic Materials Cooperative",
+      "legal_name_effective_date": "2026-07-31",
+      "legal_name_version": 6,
+      "local_mutations": [
+        "beneficial_owner_attestation_status",
+        "compliance_state",
+        "registration_expires_on",
+        "registration_status",
+        "registry_effective_date",
+        "registry_version",
+        "renewal_state"
+      ],
+      "next_local_action": "request_registry_renewal_evidence",
+      "registration_expires_on": "2026-07-31",
+      "registration_status": "expired",
+      "registry_entity_id": "REG-DEL-194",
+      "registry_version": 6,
+      "renewal_state": "pending_external_registry_renewal",
+      "vendor_id": "VND-DEL-40"
+    }
+  ],
+  "external_actions_executed": false,
+  "registry_snapshot_id": "REG-SNAP-20260818-2200Z",
+  "renewal_id": "VRR-20260819-01",
+  "schema_version": 1,
+  "source_checkpoint": "4b8c420eed11ac954df5b93936866e82460dbcdef90a640d36f24f5c9aa7fb9b"
+}

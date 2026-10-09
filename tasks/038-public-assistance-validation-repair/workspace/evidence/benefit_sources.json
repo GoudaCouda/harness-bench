@@ -1,0 +1,8 @@
+{
+  "insurance_allocations": [
+    {"allocation_id": "INS-ALLOC-44", "line_id": "CON-DEB-003", "amount": 30000, "scope": "debris removal under CONTRACT-DB-31", "designated_same_purpose": true, "status": "confirmed"}
+  ],
+  "other_federal_awards": [
+    {"award_id": "HHS-ES-220", "line_id": "SUP-005", "amount": 18000, "scope": "the same emergency water and sanitation kits in PO-SUP-8", "designated_same_purpose": true, "status": "obligated"}
+  ]
+}

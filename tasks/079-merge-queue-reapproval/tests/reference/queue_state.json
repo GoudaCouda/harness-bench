@@ -1,0 +1,7 @@
+{
+  "current_sha": "bbb222",
+  "previous_sha": "aaa111",
+  "queue_state": "blocked_revalidation",
+  "merge_executed": false,
+  "pending_gates": ["security", "license", "owner_approval"]
+}

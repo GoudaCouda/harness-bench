@@ -1,0 +1,12 @@
+{
+  "algorithm": "sha256",
+  "digests": {
+    "source/text/council_minutes_2025-01.pdf": "9b0314eb15925911a8e0a3a9b39e5d4ae3b8c398268a3f98f419f1dfd1bf4f44",
+    "source/image/map_scan_v1.tif": "85cfbd8c9677406ef1703d6f675a6dcc051bf3e8410c1a0d38027239e1d5ee51",
+    "source/image/map_scan_rescan.tif": "ad9d51f2deeed4ef283b3227604bb08ca72dfab67bbaf2ba55faccbad4f3d8ff",
+    "source/audio/hearing_access.wav": "ba491a044743b82bc642ffb5114f49acf0b5e6a2377a214226d2b17ecad2e095",
+    "source/audio/hearing_preservation.wav": "722b21e1a901f19f1c5b387365d39fb3039f4a5f5864cb3c01c99d78e80e8515",
+    "source/data/budget_ledger.csv": "b320dc201ea827f2a5e425af36a9f10c71fcd4a5536d8bc9c2536d869c2183d70"
+  },
+  "note": "Expected digests are controlled evidence. A mismatch is unresolved and may not be self-corrected."
+}

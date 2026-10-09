@@ -1,0 +1,14 @@
+{
+  "trial_id": "NCT-SYN-21021",
+  "policy_version": "CTG-QC-SYN-2026.08",
+  "status": "qc_reconciliation_open",
+  "graph_sha256": null,
+  "ledger_sha256": null,
+  "payload_sha256": null,
+  "input_sha256": null,
+  "replay_verified": false,
+  "submitted": false,
+  "posted": false,
+  "manuscript_changed": false,
+  "external_communication": false
+}

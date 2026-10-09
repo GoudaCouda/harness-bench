@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 131-journal-cursor-resume-repair
+pass_threshold: 0.8
+cases:
+- id: projection_recovery
+  title: Every unique journal event is reflected exactly once
+  description: Account balances and versions equal an independent replay from the durable applied-event boundary.
+  weight: 0.35
+  core: true
+- id: ledger_and_checkpoint
+  title: The idempotency ledger and physical cursor agree with the journal
+  description: Every unique event has provenance and the cursor points to the final physical record.
+  weight: 0.25
+  core: true
+- id: no_op_replay_and_receipt
+  title: Recovery is repeatable and leaves durable evidence
+  description: A second replay is a database no-op and the receipt captures the stale-cursor recovery boundary.
+  weight: 0.2
+  core: true
+- id: engineering_handoff
+  title: The crash recovery is handed off with verification evidence
+  description: Another operator can understand authority, duplicate handling, commands, outcomes, and offline scope.
+  weight: 0.2
+  core: false
+- id: source_and_action_safety
+  title: Immutable incident evidence and execution boundaries remain intact
+  description: Journal, seed, policy, and tool files are unchanged and no unsafe workspace node exists.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 206-bom-engineering-change-propagation
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: ECN recovery handoff is professionally complete
+  question: Does the handoff accurately explain approved ECN-442, all four where-used revisions, serial and lot effectivity, all six work-order dispositions, new-part-only substitute authority, both interrupted mutations, exact SQLite verification, internal-only staging, semantic byte-stable replay, and the no-release/no-physical-action/no-inventory/no-supplier boundary?
+  pass_anchors:
+  - Equivalent professional wording and organization are accepted when all material configuration, production-planning, recovery, closure, and safety facts agree with the structured artifacts.
+  fail_anchors:
+  - Omitting a where-used branch or work order, carrying the obsolete substitute, misstating effectivity or crash restoration, or claiming an external action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

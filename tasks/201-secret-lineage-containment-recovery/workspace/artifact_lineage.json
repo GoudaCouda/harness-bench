@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "nodes": [
+    {"node_id": "ART-417", "kind": "build_archive", "path": "artifact_store/build-417.tar", "label": "release bundle from exposed build"},
+    {"node_id": "MIR-417-A", "kind": "regional_mirror", "path": "mirrors/build-417-copy.tar", "label": "byte copy of ART-417"},
+    {"node_id": "LOG-418", "kind": "pipeline_log", "path": "logs/build-418.log", "label": "debug rerun log"},
+    {"node_id": "IDX-418", "kind": "metadata_index", "path": "artifact_store/index-418.json", "label": "fingerprint-only metadata descendant"},
+    {"node_id": "ART-419", "kind": "build_archive", "path": "artifact_store/build-419.tar", "label": "partially redacted candidate"},
+    {"node_id": "ART-420", "kind": "build_archive", "path": "artifact_store/build-420.tar", "label": "clean rebuild candidate"},
+    {"node_id": "ART-DEMO", "kind": "training_archive", "path": "artifact_store/detector-demo.tar", "label": "unrelated detector example"}
+  ],
+  "edges": [
+    {"edge_id": "EDGE-417-MIR", "from": "ART-417", "to": "MIR-417-A", "relation": "replicated_to", "payload_inherited": true},
+    {"edge_id": "EDGE-417-IDX", "from": "ART-417", "to": "IDX-418", "relation": "indexed_as", "payload_inherited": false},
+    {"edge_id": "EDGE-419-420", "from": "ART-419", "to": "ART-420", "relation": "rebuilt_as", "payload_inherited": false}
+  ]
+}

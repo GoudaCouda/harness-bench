@@ -1,0 +1,39 @@
+{
+  "actions": [
+    {
+      "action": "leased",
+      "connection": "c1",
+      "id": "q1"
+    },
+    {
+      "action": "created",
+      "connection": "new-0",
+      "id": "q2"
+    },
+    {
+      "action": "quarantined",
+      "connection": "c1",
+      "id": "r1"
+    },
+    {
+      "action": "reset",
+      "connection": "c1",
+      "id": "rst"
+    }
+  ],
+  "connections": [
+    {
+      "generation": 2,
+      "id": "c1",
+      "owner": null,
+      "state": "idle"
+    },
+    {
+      "generation": 0,
+      "id": "new-0",
+      "owner": "b",
+      "state": "leased"
+    }
+  ],
+  "queue": []
+}

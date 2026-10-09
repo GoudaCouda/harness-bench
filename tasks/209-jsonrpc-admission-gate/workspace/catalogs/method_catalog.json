@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "payments.get": {
+      "capability": "payments.read",
+      "required_params": [
+        "payment_id"
+      ]
+    },
+    "payments.capture": {
+      "capability": "payments.write",
+      "required_params": [
+        "payment_id",
+        "amount_cents"
+      ]
+    },
+    "payments.refund": {
+      "capability": "payments.write",
+      "required_params": [
+        "payment_id",
+        "amount_cents"
+      ]
+    },
+    "payouts.create": {
+      "capability": "payouts.write",
+      "required_params": [
+        "payout_id",
+        "amount_cents"
+      ]
+    }
+  }
+}

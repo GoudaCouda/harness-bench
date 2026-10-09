@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 207-water-main-isolation-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+  - id: handoff_semantics
+    title: Isolation recovery handoff is operationally complete
+    question: Does the handoff accurately explain telemetry identity and sequence authority, all four boundary admissibility results, the selected minimum-impact boundary, unavailable/locked/critical-feed valves, interrupted SQLite recovery, hash-bound staging, semantic replay, and the no-physical/no-external-action boundary?
+    pass_anchors:
+      - Equivalent professional wording is accepted when all boundary, valve, telemetry, recovery, replay, and safety facts agree with structured state.
+    fail_anchors:
+      - Omitting a candidate boundary, exceptional valve, recovery/replay fact, or claiming a physical or external action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

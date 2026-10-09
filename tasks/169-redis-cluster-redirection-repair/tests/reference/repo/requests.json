@@ -1,0 +1,9 @@
+[
+  {"request_id":"ask-migration","command":"GET","key_slots":[900],"target_node":"node-b","outcome":"ASK","redirect_slot":900,"redirect_node":"node-d","attempt":1,"idempotent":true,"result_received":false,"deadline_remaining_ms":500},
+  {"request_id":"cluster-write","command":"INCR","key_slots":[1200],"target_node":"node-c","outcome":"CLUSTERDOWN","redirect_slot":null,"redirect_node":null,"attempt":1,"idempotent":false,"result_received":false,"deadline_remaining_ms":1000},
+  {"request_id":"cross-slot","command":"MGET","key_slots":[42,900],"target_node":"node-a","outcome":"MOVED","redirect_slot":42,"redirect_node":"node-d","attempt":1,"idempotent":true,"result_received":false,"deadline_remaining_ms":1000},
+  {"request_id":"moved-read","command":"GET","key_slots":[42],"target_node":"node-a","outcome":"MOVED","redirect_slot":42,"redirect_node":"node-e","attempt":2,"idempotent":true,"result_received":false,"deadline_remaining_ms":500},
+  {"request_id":"readonly-refresh","command":"GET","key_slots":[1300],"target_node":"node-c","outcome":"READONLY","redirect_slot":null,"redirect_node":null,"attempt":1,"idempotent":true,"result_received":false,"deadline_remaining_ms":500},
+  {"request_id":"settled","command":"GET","key_slots":[42],"target_node":"node-a","outcome":"OK","redirect_slot":null,"redirect_node":null,"attempt":1,"idempotent":true,"result_received":true,"deadline_remaining_ms":0},
+  {"request_id":"tryagain","command":"MSET","key_slots":[900],"target_node":"node-b","outcome":"TRYAGAIN","redirect_slot":null,"redirect_node":null,"attempt":3,"idempotent":false,"result_received":false,"deadline_remaining_ms":500}
+]

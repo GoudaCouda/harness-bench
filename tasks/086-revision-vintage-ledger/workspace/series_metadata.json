@@ -1,0 +1,5 @@
+{
+  "EMP_SA": {"adjustment": "seasonally_adjusted", "unit": "thousands of jobs"},
+  "HOURS_SA": {"adjustment": "seasonally_adjusted", "unit": "hours per week"},
+  "EMP_NSA": {"adjustment": "not_seasonally_adjusted", "unit": "thousands of jobs"}
+}

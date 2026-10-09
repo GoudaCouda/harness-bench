@@ -1,0 +1,55 @@
+task_id: 020-conflicting-source-resolution
+title: Recover a launch control room after scoped late evidence
+prompt_file: instruction.md
+timeout_sec: 1800
+domain: Office Productivity
+task_category: Business Operations
+task_subcategory: Coordination
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- local_service
+- analysis
+harness_demands:
+- tool_selection
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- conflicting_evidence
+- interrupted_state
+- high_stakes_rules
+required_artifacts:
+- decision_handoff.md
+task_family: 020-conflicting-source-resolution
+variant: standalone
+design_file: design.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-020
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - decision_handoff.md
+  allowed_modified:
+  - control/action_queue.json
+  - control/decision_events.jsonl
+  - control/launch_gate.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    subprocess: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

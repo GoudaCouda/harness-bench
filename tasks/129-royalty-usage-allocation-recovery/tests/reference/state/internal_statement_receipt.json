@@ -1,0 +1,14 @@
+{
+  "logical_ledger_sha256": "bf9faf27188f619d2ded72cbd49754a96517d90db6d6a33f1f1ef9c4e32260d8",
+  "payment_executed": false,
+  "receipt_type": "internal_royalty_statement_stage",
+  "recovery_id": "ROYREC-20260819-01",
+  "rightsholder_contacted": false,
+  "semantic_plan_sha256": "812283c88dacdabbcd7bc4a283ada1c8ce30f98b8d34904610bd8f0a20aadfd3",
+  "source_checkpoint": "7090dabd06308a0aeea01ad357d0acbfd82ad3050a468e164857fd86c977320e",
+  "stage_state": "pending_rights_accounting_review",
+  "stage_token": "210d07dad22019ad8dd9a2330d3c9caec08eeb0004dc622e5414a48c3d330a8a",
+  "statement_id": "RST-2026Q2-NORTH-01",
+  "statement_sent": false,
+  "verification_sha256": "fd51bcb967bd6c4a6dda26a99d227718cf1f7f9f3abc877a4cf0ee543a97be96"
+}

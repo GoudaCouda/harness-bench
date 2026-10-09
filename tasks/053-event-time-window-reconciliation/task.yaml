@@ -1,0 +1,41 @@
+task_id: 053-event-time-window-reconciliation
+title: Reconcile event-time windows after late and replayed events
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [event_time_boundary, replay_deduplication, allowed_lateness, revision_stability]
+required_artifacts:
+- repo/src/window_reconciler.py
+- repo/window_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [BEAM-MODEL-EVENT-TIME, FLINK-EVENT-TIME]
+task_family: streaming-window-state-repair
+variant: watermark-lateness-dedup-and-revision
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/window_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/window_reconciler.py]
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

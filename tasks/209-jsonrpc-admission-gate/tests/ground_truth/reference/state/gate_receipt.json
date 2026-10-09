@@ -1,0 +1,90 @@
+{
+  "batch_id": "batch-2026-03-15",
+  "gate_clock_epoch": 1773565200,
+  "counts": {
+    "admitted": 2,
+    "frozen": 1,
+    "method_not_found": 1,
+    "tenant_denied": 1,
+    "invalid_params": 1,
+    "malformed": 2
+  },
+  "response_batch": [
+    {
+      "jsonrpc": "2.0",
+      "result": {
+        "status": "queued",
+        "method": "payments.get"
+      },
+      "id": "c1"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32002,
+        "message": "tenant_lacks_capability",
+        "data": {
+          "decision": "tenant_denied"
+        }
+      },
+      "id": "c2"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32001,
+        "message": "method_frozen_by_overlay",
+        "data": {
+          "decision": "frozen"
+        }
+      },
+      "id": "c3"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32601,
+        "message": "method_absent_from_catalog",
+        "data": {
+          "decision": "method_not_found"
+        }
+      },
+      "id": "c4"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32602,
+        "message": "missing_required_params",
+        "data": {
+          "decision": "invalid_params"
+        }
+      },
+      "id": "c5"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32600,
+        "message": "bad_jsonrpc",
+        "data": {
+          "decision": "malformed"
+        }
+      },
+      "id": "c6"
+    },
+    {
+      "jsonrpc": "2.0",
+      "error": {
+        "code": -32600,
+        "message": "duplicate_id",
+        "data": {
+          "decision": "malformed"
+        }
+      },
+      "id": "c1"
+    }
+  ],
+  "response_count": 7,
+  "state": "gated"
+}

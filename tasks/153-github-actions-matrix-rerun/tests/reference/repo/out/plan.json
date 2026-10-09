@@ -1,0 +1,8 @@
+[
+ {"job_id":"build","shard":"py310","action":"keep","reason":"successful","attempt":1},
+ {"job_id":"build","shard":"py311","action":"keep","reason":"successful","attempt":1},
+ {"job_id":"test","shard":"integration","action":"rerun","reason":"direct_failure","attempt":2},
+ {"job_id":"test","shard":"unit","action":"keep","reason":"successful","attempt":1},
+ {"job_id":"package","shard":"main","action":"rerun","reason":"upstream_dependency","attempt":2},
+ {"job_id":"deploy","shard":"prod","action":"manual","reason":"side_effect_approval","attempt":2}
+]

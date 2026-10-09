@@ -1,0 +1,197 @@
+{
+  "edges": [
+    {
+      "nodes": [
+        {
+          "id": "a",
+          "mtime": 1,
+          "prereqs": [
+            "b"
+          ],
+          "recipe": true
+        },
+        {
+          "id": "b",
+          "mtime": 1,
+          "prereqs": [
+            "a"
+          ],
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "a"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "a",
+          "mtime": 1,
+          "prereqs": [
+            "lost"
+          ],
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "a"
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "nodes": [
+        {
+          "id": "src.c",
+          "mtime": 20,
+          "recipe": false
+        },
+        {
+          "id": "config",
+          "mtime": 30,
+          "recipe": false
+        },
+        {
+          "id": "obj.o",
+          "mtime": 10,
+          "prereqs": [
+            "src.c"
+          ],
+          "recipe": true
+        },
+        {
+          "id": "app",
+          "mtime": 25,
+          "order_only": [
+            "config"
+          ],
+          "prereqs": [
+            "obj.o"
+          ],
+          "recipe": true
+        },
+        {
+          "id": "src.c",
+          "mtime": 20,
+          "recipe": false
+        }
+      ],
+      "policy": {
+        "targets": [
+          "app"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "a",
+          "mtime": "now",
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "a"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "target",
+          "mtime": 10,
+          "prereqs": [
+            42
+          ],
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": ["target"]
+      }
+    }
+  ],
+  "primary": [
+    {
+      "nodes": [
+        {
+          "id": "src.c",
+          "mtime": 20,
+          "recipe": false
+        },
+        {
+          "id": "config",
+          "mtime": 30,
+          "recipe": false
+        },
+        {
+          "id": "obj.o",
+          "mtime": 10,
+          "prereqs": [
+            "src.c"
+          ],
+          "recipe": true
+        },
+        {
+          "id": "app",
+          "mtime": 25,
+          "order_only": [
+            "config"
+          ],
+          "prereqs": [
+            "obj.o"
+          ],
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "app"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "stamp",
+          "mtime": 100,
+          "recipe": false
+        },
+        {
+          "id": "target",
+          "mtime": 10,
+          "order_only": [
+            "stamp"
+          ],
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "target"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "always",
+          "mtime": 100,
+          "phony": true,
+          "recipe": true
+        }
+      ],
+      "policy": {
+        "targets": [
+          "always"
+        ]
+      }
+    }
+  ]
+}

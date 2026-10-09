@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "rollover_id": "ROL-2026-08-A",
+  "recovery_id": "REC-ROL-2026-08-A-01",
+  "observation_time": "2026-08-19T12:00:00Z",
+  "required_parent_probes": ["ns-parent-a", "ns-parent-b", "ns-parent-c"],
+  "minimum_parent_ds_dwell_seconds": 7200,
+  "minimum_dnskey_dwell_seconds": 3600,
+  "minimum_signature_validity_seconds": 14400,
+  "required_top_level_fields": ["schema_version", "recovery_id", "source_checkpoint", "rollover_id", "zone_decisions", "journal_actions", "external_actions_executed"],
+  "zone_decision_fields": ["zone_name", "key_role", "rollover_phase", "current_serial", "ttl_dwell_state", "signature_state", "parent_ds_state", "action", "evidence_refs"],
+  "journal_action_fields": ["journal_id", "table_name", "record_id", "action"],
+  "vocabulary": {
+    "key_role": ["KSK", "ZSK", "NONE"],
+    "rollover_phase": ["ksk_double_sign", "ksk_parent_propagated", "zsk_prepublish", "zsk_active", "not_in_rollover"],
+    "ttl_dwell_state": ["satisfied", "insufficient", "not_applicable"],
+    "signature_state": ["valid_old_only", "valid_new_coverage", "invalid_or_expiring", "not_applicable"],
+    "parent_ds_state": ["old_only", "old_and_new_quorum", "inconsistent", "not_applicable"],
+    "action": ["monitor_parent_ds", "stage_old_ksk_retirement", "hold_for_dnskey_dwell", "stage_new_zsk_activation", "hold_signature_risk", "preserve_active", "preserve_unrelated"],
+    "journal_action": ["restore_before_image", "remove_partial_insert"]
+  },
+  "locator_grammar": {
+    "zone_snapshot": "zones/<zone>.zone or zones/<zone>.zone#SOA",
+    "key": "keys/<key_id>.key",
+    "inventory": "evidence/key_inventory.json#zones/<zone>",
+    "parent_ds": "evidence/parent_ds_observations.jsonl#<observation_id>",
+    "dns_observation": "evidence/dns_observations.jsonl#<observation_id>",
+    "checkpoint": "state/stale_checkpoint.json#zones/<zone>",
+    "database": "state/dnssec.db#<table>/<stable_id>"
+  },
+  "safety": {"local_stage_only": true, "zone_signing_allowed": false, "authoritative_publish_allowed": false, "parent_or_registrar_change_allowed": false}
+}

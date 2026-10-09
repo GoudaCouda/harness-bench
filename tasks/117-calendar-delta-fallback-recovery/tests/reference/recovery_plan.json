@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "recovery_id": "CALSYNC-FINANCE-20260819-42",
+  "collection_id": "finance-operations",
+  "source_checkpoint": "62db0a06d68abb552e70b31b490a149a4ef84b608da6baf629690e64efd0bfbf",
+  "fallback": {
+    "damaged_page": "evidence/page2.part",
+    "selected_page": "evidence/page2_recovery.ics",
+    "selected_sha256": "485b5c31558285c394443ac8f274d8194fc16195a23b182293f60ab56ea3bed3",
+    "expected_etag": "W/\"cal-42b\"",
+    "reason": "The cached page is truncated and its checksum does not equal the authorized fallback checksum."
+  },
+  "actions": [
+    {
+      "component_id": "ops-rotation@example.test|master",
+      "disposition": "upsert_master",
+      "evidence_refs": [
+        "evidence/page1.ics#ops-rotation@example.test|master",
+        "policy/sync_manifest.json#pages.page1"
+      ]
+    },
+    {
+      "component_id": "ops-rotation@example.test|20260819T090000",
+      "disposition": "upsert_override",
+      "evidence_refs": [
+        "evidence/page1.ics#ops-rotation@example.test|20260819T090000",
+        "policy/sync_manifest.json#pages.page1"
+      ]
+    },
+    {
+      "component_id": "ops-rotation@example.test|20260820T090000",
+      "disposition": "cancel_occurrence",
+      "evidence_refs": [
+        "evidence/page1.ics#ops-rotation@example.test|20260820T090000",
+        "policy/sync_manifest.json#pages.page1"
+      ]
+    },
+    {
+      "component_id": "budget-close@example.test|master",
+      "disposition": "upsert_event",
+      "evidence_refs": [
+        "evidence/page1.ics#budget-close@example.test|master",
+        "policy/sync_manifest.json#pages.page1"
+      ]
+    },
+    {
+      "component_id": "obsolete-briefing@example.test|master",
+      "disposition": "tombstone_event",
+      "evidence_refs": [
+        "evidence/page1.ics#obsolete-briefing@example.test|master",
+        "policy/sync_manifest.json#pages.page1"
+      ]
+    },
+    {
+      "component_id": "ops-rotation@example.test|20260821T090000",
+      "disposition": "upsert_override",
+      "evidence_refs": [
+        "evidence/page2_recovery.ics#ops-rotation@example.test|20260821T090000",
+        "policy/sync_manifest.json#pages.page2"
+      ]
+    },
+    {
+      "component_id": "london-review@example.test|master",
+      "disposition": "insert_event",
+      "evidence_refs": [
+        "evidence/page2_recovery.ics#london-review@example.test|master",
+        "policy/sync_manifest.json#pages.page2"
+      ]
+    },
+    {
+      "component_id": "townhall@example.test|master",
+      "disposition": "ignore_stale",
+      "evidence_refs": [
+        "evidence/page2_recovery.ics#townhall@example.test|master",
+        "policy/sync_manifest.json#pages.page2"
+      ]
+    }
+  ],
+  "external_calendar_write_executed": false
+}

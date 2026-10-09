@@ -1,0 +1,17 @@
+{
+  "batch_id": "westline-0323",
+  "gate_clock_epoch": 1774256400,
+  "counts": {
+    "admitted": 2,
+    "blocked_checks": 1,
+    "blocked_owners": 1,
+    "blocked_rebase": 1,
+    "malformed": 1
+  },
+  "admitted_ids": [
+    "p1",
+    "p5"
+  ],
+  "admitted_count": 2,
+  "state": "gated"
+}

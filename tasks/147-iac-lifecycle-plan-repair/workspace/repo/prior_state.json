@@ -1,0 +1,8 @@
+[
+  {"address":"db.main","generation":3,"depends_on":[],"attributes":{"engine":"v1","password":"old-secret"}},
+  {"address":"service.api","generation":8,"depends_on":["db.main"],"attributes":{"image":"api:v1","replicas":2}},
+  {"address":"cache.main","generation":2,"depends_on":[],"attributes":{"tier":"standard","ttl":60}},
+  {"address":"queue.main","generation":1,"depends_on":[],"attributes":{"encrypted":true}},
+  {"address":"worker.main","generation":4,"depends_on":["service.api"],"attributes":{"image":"worker:v1"}},
+  {"address":"orphan.old","generation":1,"depends_on":[],"attributes":{"size":1}}
+]

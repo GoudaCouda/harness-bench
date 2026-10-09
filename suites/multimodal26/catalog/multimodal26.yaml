@@ -1,0 +1,41 @@
+# BEGIN MULTIMODAL26 ACTIVE TASK SET
+schema_version: 1
+task_set: multimodal26
+status: release_candidate
+source_suite: main
+source_suite_size: 26
+task_count: 26
+selection_policy:
+  selected_at: '2026-10-07'
+  model_outcomes_used: false
+  changes_main_membership: false
+  relocates_task_directories: false
+  purpose: Run all multimodal frontend tasks 001 through 026.
+task_ids:
+- 001-creator-revenue-dashboard
+- 002-studio-task-board
+- 003-pet-care-game
+- 004-incident-command-console
+- 005-research-lab-site
+- 006-appointment-finder-ui
+- 007-budget-planning-workspace
+- 008-media-timeline-editor
+- 009-course-builder-app
+- 010-support-ticket-router
+- 011-local-data-explorer
+- 012-policy-diff-viewer
+- 013-kanban-build-repair
+- 014-accessibility-retrofit
+- 015-responsive-redesign
+- 016-feature-flag-admin
+- 017-travel-itinerary-planner
+- 018-scientific-simulation-controls
+- 019-portfolio-reference-rebuild
+- 020-form-builder-validation
+- 021-choropleth-map-selection
+- 022-waveform-audio-cue-editor
+- 023-spreadsheet-grid-formula
+- 024-image-pair-diff-annotation
+- 025-network-graph-explorer
+- 026-wysiwyg-print-preview
+# END MULTIMODAL26 ACTIVE TASK SET

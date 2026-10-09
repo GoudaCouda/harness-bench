@@ -1,0 +1,7 @@
+{
+  "ledger_rows": 8,
+  "pending_ids": ["S-404", "S-406", "S-407"],
+  "blocked_or_escalated_ids": ["S-403"],
+  "inputs_unchanged": true,
+  "external_actions_executed": false
+}

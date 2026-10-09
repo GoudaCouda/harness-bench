@@ -1,0 +1,11 @@
+{
+  "allocated_part_count": 1,
+  "executed_boundaries_preserved": true,
+  "external_actions_executed": false,
+  "journal_restored": true,
+  "logical_database_digest": "b25895ec6cb877cb1d52df4e40e3368993bbb4abb01f55fa8668d231512aa2c0",
+  "recovery_id": "FSR-20260819-04",
+  "semantic_plan_digest": "0d220e4f366bae682980696e419831b63d8521a82f855914afb9c6ae97757163",
+  "source_checkpoint": "948b61c17c28b8c8ac43db9e08f64460098d400a01ba3d84d8dd2777a22a65f8",
+  "status": "verified"
+}

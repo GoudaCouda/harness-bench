@@ -1,0 +1,145 @@
+{
+  "benchmark": "HarnessBench",
+  "suite": "main",
+  "suite_size": 6,
+  "run_id": "fixture-public-run",
+  "model": "gemma-4-31b-it",
+  "harness": "openclaw",
+  "grading": "oracle_only",
+  "selected_count": 6,
+  "completed_count": 6,
+  "progress": 1.0,
+  "mean_oracle_completed": 0.476,
+  "headline_oracle_score": 0.3967,
+  "eta_sec": 0.0,
+  "updated_epoch": 1785483000.0,
+  "counts": {
+    "not_selected": 0,
+    "queued": 0,
+    "running": 0,
+    "completed": 4,
+    "protocol_error": 0,
+    "model_error": 1,
+    "timeout": 1,
+    "infrastructure_error": 0
+  },
+  "isolation": {
+    "level": "container",
+    "engine": "docker",
+    "server_version": "29.4.2",
+    "rootless": false,
+    "default_runtime": "runc",
+    "network_policy": "controlled-model-access"
+  },
+  "tasks": [
+    {
+      "task_id": "001-research",
+      "title": "Research evidence synthesis",
+      "domain": "Research",
+      "difficulty": "hard",
+      "status": "completed",
+      "outcome_score": 1.0,
+      "required_artifacts": {
+        "declared": ["out/report.md"],
+        "present": ["out/report.md"],
+        "missing": [],
+        "completion_ratio": 1.0
+      },
+      "tool_calls": 8,
+      "tool_failures": 0,
+      "elapsed_sec": 100.0,
+      "review_flag": ""
+    },
+    {
+      "task_id": "002-finance",
+      "title": "Finance reconciliation",
+      "domain": "Finance",
+      "difficulty": "medium",
+      "status": "completed",
+      "outcome_score": 0.74,
+      "required_artifacts": {
+        "declared": ["out/ledger.csv", "out/audit.md"],
+        "present": ["out/ledger.csv"],
+        "missing": ["out/audit.md"],
+        "completion_ratio": 0.5
+      },
+      "tool_calls": 5,
+      "tool_failures": 0,
+      "elapsed_sec": 80.0,
+      "review_flag": "missing_artifacts"
+    },
+    {
+      "task_id": "003-operations",
+      "title": "Operations recovery",
+      "domain": "IT Operations",
+      "difficulty": "hard",
+      "status": "timeout",
+      "outcome_score": 0.1,
+      "required_artifacts": {
+        "declared": ["out/state.json"],
+        "present": [],
+        "missing": ["out/state.json"],
+        "completion_ratio": 0.0
+      },
+      "tool_calls": 2,
+      "tool_failures": 1,
+      "elapsed_sec": 900.0,
+      "review_flag": "timeout_review"
+    },
+    {
+      "task_id": "004-office",
+      "title": "Office workbook repair",
+      "domain": "Office Productivity",
+      "difficulty": "medium",
+      "status": "completed",
+      "outcome_score": 0.4,
+      "required_artifacts": {
+        "declared": ["out/workbook.xlsx"],
+        "present": ["out/workbook.xlsx"],
+        "missing": [],
+        "completion_ratio": 1.0
+      },
+      "tool_calls": 4,
+      "tool_failures": 0,
+      "elapsed_sec": 60.0,
+      "review_flag": "execution_review"
+    },
+    {
+      "task_id": "005-customer",
+      "title": "Customer response workflow",
+      "domain": "Customer Service",
+      "difficulty": "easy",
+      "status": "completed",
+      "outcome_score": 0.14,
+      "required_artifacts": {
+        "declared": ["out/reply.md"],
+        "present": ["out/reply.md"],
+        "missing": [],
+        "completion_ratio": 1.0
+      },
+      "tool_calls": 3,
+      "tool_failures": 0,
+      "elapsed_sec": 50.0,
+      "review_flag": "low_score_review"
+    },
+    {
+      "task_id": "006-hr",
+      "title": "HR packet review",
+      "domain": "Human Resources",
+      "difficulty": "hard",
+      "status": "model_error",
+      "outcome_score": null,
+      "required_artifacts": {
+        "declared": ["out/decision.csv"],
+        "present": [],
+        "missing": ["out/decision.csv"],
+        "completion_ratio": 0.0
+      },
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "elapsed_sec": 20.0,
+      "review_flag": "model_or_harness_failure"
+    }
+  ],
+  "public_snapshot": true
+}

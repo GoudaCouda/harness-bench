@@ -1,0 +1,44 @@
+schema_version: 2
+task_id: 051-smallfile-batch-reject-ledger
+pass_threshold: 0.8
+cases:
+- id: accepted_records
+  title: Every accepted small file is normalized to the correct canonical record
+  description: Every accepted small file is normalized to the correct canonical record;
+    all related facts, relationships, and closed-set constraints must agree before
+    this outcome earns credit.
+  weight: 0.34
+  core: true
+- id: canonical_index
+  title: The index contains every accepted record exactly once
+  description: The index contains every accepted record exactly once; all related
+    facts, relationships, and closed-set constraints must agree before this outcome
+    earns credit.
+  weight: 0.25
+  core: true
+- id: reject_ledger
+  title: All rejected files are classified exactly once in deterministic order
+  description: The reject ledger must be the exact closed rejection set, sorted by
+    source path as required by the downstream batch interface.
+  weight: 0.21
+  core: true
+- id: batch_summary
+  title: Success and rejection totals reconcile by type
+  description: Success and rejection totals reconcile by type; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns
+    credit.
+  weight: 0.1
+  core: false
+- id: ledger_integrity
+  title: Index and reject ledgers use closed published schemas
+  description: Index and reject ledgers use closed published schemas; all related
+    facts, relationships, and closed-set constraints must agree before this outcome
+    earns credit.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary
+    business mistakes lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

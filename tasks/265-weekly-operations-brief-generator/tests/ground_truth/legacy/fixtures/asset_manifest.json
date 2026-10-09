@@ -1,0 +1,29 @@
+{
+  "schema_version": "case11_fixture_asset_manifest_v1",
+  "source_mode": "synthetic_replacement",
+  "license_ref": "fixtures/LICENSES.md",
+  "license_sha256": "56e3743e71f7bcad072f2a2ad5deeee8b9fdd795e2bb0c2f372ee61c11f68a38",
+  "assets": [
+    {
+      "path": "fixtures/weekly_operations.csv",
+      "sha256": "8b9585a6c0e328f7a86cdde303d0ce19cf7a9738aa6d16f0cdd9c9ba8320861e",
+      "media_type": "text/csv",
+      "source": "人工编写的虚构运营数据",
+      "commercial_training_allowed": true
+    },
+    {
+      "path": "fixtures/metric_definitions.json",
+      "sha256": "d25a3195060afa8e8947f96801814586d23d63e0d8680ac948be0521f8aef1cd",
+      "media_type": "application/json",
+      "source": "人工编写的确定性指标口径",
+      "commercial_training_allowed": true
+    },
+    {
+      "path": "fixtures/brief_template.md",
+      "sha256": "f64ed5386fc9541eb314af91df6aa8af86737940461beb1da5fa8111ab821649",
+      "media_type": "text/markdown",
+      "source": "人工编写的中文周简报模板",
+      "commercial_training_allowed": true
+    }
+  ]
+}

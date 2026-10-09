@@ -1,0 +1,12 @@
+{
+  "batch_id": "2026-07-ap-review",
+  "control_sha256": null,
+  "execution_state": "review_only",
+  "external_payments_executed": false,
+  "input_bundle_sha256": "fb1a11a3f4d6a71c3efafa5d9e708c5d72f72eb4fa43d8e64596469babc7a73b",
+  "phase": "draft",
+  "review_sha256": null,
+  "revision": 0,
+  "schema_version": 1,
+  "stage_token": null
+}

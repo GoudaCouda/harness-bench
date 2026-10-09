@@ -1,0 +1,73 @@
+task_id: 049-platform-appeal-review
+title: Review a batch of platform moderation appeals
+prompt_file: instruction.md
+timeout_sec: 7200
+difficulty: hard
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- sqlite
+- data_recovery
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- dirty_input
+- policy_effective_date_boundary
+- advisory_automation_conflict
+- interrupted_sqlite_queue
+- semantic_replay_identity
+required_artifacts:
+- appeal_decisions.csv
+- explanations.md
+- redaction_audit.csv
+- .appeal_preview.json
+- state/appeals.db
+- state/verification.json
+- state/review_receipt.json
+- state/replay_report.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-049
+task_family: 049-platform-appeal-review
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - appeal_decisions.csv
+  - explanations.md
+  - redaction_audit.csv
+  - .appeal_preview.json
+  - state/verification.json
+  - state/review_receipt.json
+  - state/replay_report.json
+  allowed_modified:
+  - state/appeals.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+    sqlite3: ">=3.40"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

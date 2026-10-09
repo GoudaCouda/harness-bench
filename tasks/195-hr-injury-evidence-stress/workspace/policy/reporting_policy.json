@@ -1,0 +1,98 @@
+{
+  "authority_registry": {
+    "CLINIC-B": {
+      "active": true,
+      "scopes": [
+        "medical_outcome"
+      ],
+      "verification_secret": "synthetic-clinic-b-key"
+    },
+    "CORONER-C": {
+      "active": true,
+      "scopes": [
+        "fatality_outcome"
+      ],
+      "verification_secret": "synthetic-coroner-c-key"
+    },
+    "HOSP-A": {
+      "active": true,
+      "scopes": [
+        "medical_outcome"
+      ],
+      "verification_secret": "synthetic-hosp-a-key"
+    },
+    "TEMP-X": {
+      "active": false,
+      "scopes": [],
+      "verification_secret": "expired-temp-x-key"
+    }
+  },
+  "employer_id": "EMP-NORTHSTAR-17",
+  "event_precedence": [
+    "deduplicate event_id by first delivery_index",
+    "reject another employer_id",
+    "reject medical claims without an active issuer, permitted scope, matching payload digest, and valid signature",
+    "within each case_id and stream, apply only the highest eligible sequence"
+  ],
+  "fixed_clock_utc": "2026-07-16T16:00:00Z",
+  "osha_reporting": {
+    "already_submitted_rule": "preserve a verified observed receipt and never enqueue a duplicate",
+    "deadline_anchor": "employer_known_at from the controlling signed outcome",
+    "emergency_room_only_is_reportable": false,
+    "fatality_deadline_hours": 8,
+    "fatality_must_occur_within_days_of_incident": 30,
+    "inpatient_deadline_hours": 24,
+    "inpatient_must_occur_within_hours_of_incident": 24
+  },
+  "privacy": {
+    "allowed_medical_fields": [
+      "medical_category",
+      "outcome_at",
+      "employer_known_at"
+    ],
+    "cause_rule": "Never propagate a claimed cause; retain unverified_not_propagated unless a separate authorized investigation finding exists.",
+    "forbidden_output_fields": [
+      "diagnosis",
+      "treatment_notes",
+      "employee_name"
+    ]
+  },
+  "recordability": {
+    "recordable_medical_categories": [
+      "fatality",
+      "inpatient_admission",
+      "medical_treatment_beyond_first_aid"
+    ],
+    "unknown_rule": "pending_evidence when work-relatedness or an authoritative medical outcome is missing"
+  },
+  "recovery_id": "REC-OSHA-2026-0716-A",
+  "schema_version": 1,
+  "signature_scheme": "sha256(issuer_secret + ':' + canonical_payload_sha256)",
+  "vocabulary": {
+    "cause_status": [
+      "unverified_not_propagated"
+    ],
+    "event_disposition": [
+      "duplicate_delivery_ignored",
+      "employer_mismatch_ignored",
+      "invalid_authority_quarantined",
+      "superseded_by_newer_sequence",
+      "applied_current"
+    ],
+    "osha_reporting_path": [
+      "preserve_observed_submission",
+      "stage_osha_24h_report",
+      "not_osha_reportable",
+      "hold_pending_verified_outcome"
+    ],
+    "recordability": [
+      "recordable",
+      "not_recordable",
+      "pending_evidence"
+    ],
+    "workers_comp_action": [
+      "stage_notice_offline",
+      "hold_pending_evidence"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {"op":"put","key":"c","value":{"generation":1},"size":4,"ttl":20,"pinned":false},
+  {"op":"get","key":"pinned"},
+  {"op":"advance","to":120},
+  {"op":"put","key":"d","value":"new","size":6,"ttl":30,"pinned":false},
+  {"op":"unpin","key":"pinned"},
+  {"op":"put","key":"d","value":"new","size":6,"ttl":30,"pinned":false}
+]

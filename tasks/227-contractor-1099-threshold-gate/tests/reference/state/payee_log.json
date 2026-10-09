@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-227",
+  "gate_clock_epoch": 1775604800,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "v1",
+      "tax_year": "2025",
+      "decision": "admitted"
+    },
+    {
+      "index": 1,
+      "item_id": "v2",
+      "tax_year": "2025",
+      "decision": "held"
+    },
+    {
+      "index": 2,
+      "item_id": "v3",
+      "tax_year": "2025",
+      "decision": "held"
+    },
+    {
+      "index": 3,
+      "item_id": "v1",
+      "tax_year": "2025",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "v5",
+      "tax_year": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "v6",
+      "tax_year": "2025",
+      "decision": "admitted"
+    },
+    {
+      "index": 6,
+      "item_id": "v7",
+      "tax_year": "2025",
+      "decision": "held"
+    }
+  ],
+  "counts": {
+    "admitted": 2,
+    "held": 3,
+    "malformed": 2
+  },
+  "admitted_ids": [
+    "v1",
+    "v6"
+  ],
+  "held_ids": [
+    "v2",
+    "v3",
+    "v7"
+  ]
+}

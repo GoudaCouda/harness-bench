@@ -1,0 +1,61 @@
+# OS and editor noise
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+.claude/
+/.codex/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.tox/
+.nox/
+.hypothesis/
+/site/
+/node_modules/
+
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+/config/
+
+# Evaluation output and local working state
+/artifacts/
+/reports/
+/data/
+/data_/
+/data_old/
+/data_test/
+/data_*/
+/workbench/
+/tmp/
+/cache/
+/.cache/
+/model_cache/
+/*.pid
+
+# Historical material may remain recoverable outside this release tree, but is
+# not part of the canonical repository or its fresh canonical Git history.
+/archive/
+/legacy/
+/old/
+
+# LLM rubrics are not used by the oracle-only leaderboard.
+/tasks/**/llm_rubric.py
+
+# Local helper scripts were used during migration and are not release inputs.
+/scripts/
+/zeroclaw/

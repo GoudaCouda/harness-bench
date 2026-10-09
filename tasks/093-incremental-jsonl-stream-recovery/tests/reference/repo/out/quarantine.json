@@ -1,0 +1,4 @@
+[
+  {"file_id":"events-1","offset":35,"reason":"malformed_record"},
+  {"file_id":"events-1","offset":75,"reason":"truncated_on_rotation"}
+]

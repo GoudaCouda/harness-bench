@@ -1,0 +1,7 @@
+gate,sha,status,next_action,evidence
+build_linux,bbb222,pass,none,current_checks.json:run-201
+build_windows,bbb222,pass,none,current_checks.json:run-202
+security,bbb222,pending,wait_for_current_scan,current_checks.json:run-203
+license,bbb222,fail,remediate_dependency_then_rerun,current_checks.json:run-204
+owner_approval,bbb222,stale,request_current_sha_reapproval,current_reviews.json:owna
+release_approval,bbb222,pass,none,current_reviews.json:rela

@@ -1,0 +1,32 @@
+schema_version: 2
+task_id: 140-pharmacovigilance-case-intake-recovery
+pass_threshold: 0.8
+cases:
+- id: identity_version_and_submission_boundaries
+  title: Case identity, version chains, and submission boundaries reconcile
+  description: Out-of-order contiguous versions are applied by source sequence while identity collisions, accepted submissions, pending acknowledgements, and invalid versions remain protected.
+  weight: 0.28
+  core: true
+- id: delivery_and_pharmacovigilance_dispositions
+  title: Every delivery and drug-safety decision is exact
+  description: Duplicate, unknown, terminology, nullification, accepted, held, expedited, routine, and preserved outcomes are evidence-grounded.
+  weight: 0.27
+  core: true
+- id: journal_and_atomic_database_recovery
+  title: The interrupted write is recovered atomically
+  description: The before-image is restored, the intended projection is committed once, the version ledger is contiguous, and submission history remains immutable.
+  weight: 0.25
+  core: true
+- id: staged_bundle_and_replay_closure
+  title: Preview, verification, staged queue, hashes, and replay close
+  description: All artifacts bind the same checkpoint and semantic plan; equivalent replay is byte-stable and a conflicting probe is rejected without mutation.
+  weight: 0.12
+- id: pv_handoff
+  title: Safety reviewers receive an accurate operational handoff
+  description: The handoff explains actual message and case outcomes, recovery, staging, hashes, replay, holds, and the no-transmission boundary.
+  weight: 0.08
+- id: source_and_external_safety_gate
+  title: Immutable evidence and external-action boundaries hold
+  description: Sources and submission history are unchanged, and no report, acknowledgement, notification, or external update is represented as executed.
+  weight: 0.0
+  gate: true

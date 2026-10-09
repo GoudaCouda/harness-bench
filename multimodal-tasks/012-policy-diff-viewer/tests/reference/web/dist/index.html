@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policy Diff Viewer</title>
+    <style>
+      :root { color: #172026; background: #f6f7f4; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; } body { margin: 0; }
+      main { width: min(1180px, calc(100vw - 32px)); margin: 0 auto; padding: 24px 0 40px; }
+      header, .controls, .metrics, .workspace, .focus { margin-bottom: 18px; } h1,h2,p { margin: 0; }
+      header { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+      .eyebrow { color: #637071; font-size: .78rem; font-weight: 700; text-transform: uppercase; } h1 { font-size: 2rem; margin-top: 4px; }
+      .controls, .metrics, .workspace, .focus-list { display: grid; gap: 12px; }
+      .controls { grid-template-columns: repeat(5, minmax(130px, 1fr)); align-items: end; background: #fff; border: 1px solid #d8dedb; border-radius: 8px; padding: 14px; }
+      label { display: grid; gap: 6px; color: #435052; font-size: .82rem; font-weight: 700; }
+      select,input,button { min-height: 38px; border: 1px solid #aeb9b6; border-radius: 6px; background: #fff; color: #172026; font: inherit; padding: 8px 10px; }
+      button { cursor: pointer; font-weight: 800; } button.active, button[aria-pressed="true"] { border-color: #255f68; background: #e4f1f0; } :focus-visible { outline: 3px solid #255f68; outline-offset: 2px; }
+      .metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); } .workspace { grid-template-columns: minmax(240px,.9fr) minmax(280px,1.1fr); }
+      .metric,.panel,.record,.focus-card { border: 1px solid #d8dedb; border-radius: 8px; background: #fff; } .metric,.panel,.focus { padding: 14px; }
+      .metric span,.fact span { color: #637071; font-size: .78rem; font-weight: 700; } .metric strong { display:block; margin-top:5px; font-size:1.45rem; }
+      .list,.focus-list { display:grid; gap:8px; } .record { width:100%; text-align:left; display:grid; gap:4px; } .record small,.focus-card small { color:#637071; }
+      .detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; } .fact { border:1px solid #d8dedb; border-radius:6px; padding:10px; }
+      .focus { border:1px solid #d8dedb; border-radius:8px; background:#fff; } .focus-list { grid-template-columns:repeat(2,minmax(0,1fr)); } .focus-card { padding:10px; }
+      @media (max-width:760px) { main { width:min(100vw - 20px,560px); padding-top:12px; } header,.controls,.metrics,.workspace,.focus-list { grid-template-columns:1fr; display:grid; } h1 { font-size:1.45rem; } }
+      @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto !important; } }
+    </style>
+  </head>
+  <body>
+    <main aria-label="policy diff viewer">
+      <header><div><p class="eyebrow">diff handoff</p><h1>Policy Diff Viewer</h1><p>policy diff viewer with split diff, comparison pane, redline, clause list, version lens, release review.</p></div><strong>Policy release review</strong></header>
+      <section class="controls" aria-label="Local diff controls">
+        <label>Policy area<select id="filter" aria-label="Policy area"><option value="all">All clauses</option>            <option value="privacy">privacy</option>
+            <option value="security">security</option>
+            <option value="operations">operations</option>
+            <option value="response">response</option></select></label>
+        <label>Version lens<select id="mode" aria-label="Version lens"><option value="baseline">Baseline</option><option value="diff-review">diff-review</option><option value="focused">Focused</option></select></label>
+        <label>Clause search<input id="search" aria-label="Clause search" placeholder="ID, owner, or name" /></label>
+        <label>Review strictness<input id="range" type="range" min="0" max="100" value="50" aria-label="Review strictness" /></label>
+        <button id="toggle" type="button" aria-pressed="false">Changed only</button>
+      </section>
+      <section class="metrics" aria-label="Derived diff metrics">
+        <article class="metric"><span>Impact score</span><strong id="metric0"></strong><small id="visibleCount"></small></article>
+        <article class="metric"><span>Review days</span><strong id="metric1"></strong><small>Average from visible records</small></article>
+        <article class="metric"><span>Change count</span><strong id="metric2"></strong><small>Focus count</small></article>
+        <article class="metric"><span>Policy release review</span><strong id="metric3"></strong><small id="modeReadout"></small></article>
+      </section>
+      <section class="workspace" aria-label="diff workspace"><section class="panel" aria-label="clause list"><p class="eyebrow">Visible clauses</p><h2>policy diff viewer</h2><div id="records" class="list"></div></section><aside class="panel" aria-label="Selected clause inspector"><p class="eyebrow">Selected clause</p><h2 id="detailName"></h2><p id="detailSummary"></p><div class="detail-grid"><div class="fact"><span>Category</span><strong id="detailCategory"></strong></div><div class="fact"><span>Owner</span><strong id="detailOwner"></strong></div><div class="fact"><span>Impact score</span><strong id="detailPrimary"></strong></div><div class="fact"><span>Review days</span><strong id="detailSecondary"></strong></div></div></aside></section>
+      <section class="focus" aria-label="Changed clauses"><p class="eyebrow">Changed only</p><h2>Changed clauses</h2><div id="focus" class="focus-list"></div></section>
+    </main>
+    <script>
+      const records = [{"id": "POL-2.1", "name": "Data retention window", "category": "privacy", "owner": "Legal", "status": "review", "primary": 91, "secondary": 14}, {"id": "POL-3.4", "name": "Vendor access", "category": "security", "owner": "GRC", "status": "watch", "primary": 76, "secondary": 8}, {"id": "POL-5.2", "name": "Training evidence", "category": "operations", "owner": "People Ops", "status": "clear", "primary": 44, "secondary": 3}, {"id": "POL-7.8", "name": "Incident notice", "category": "response", "owner": "GRC", "status": "watch", "primary": 83, "secondary": 5}, {"id": "POL-2.1-R1", "name": "Data retention window follow-up", "category": "security", "owner": "People Ops", "status": "clear", "primary": 105, "secondary": 20}, {"id": "POL-3.4-R2", "name": "Vendor access follow-up", "category": "operations", "owner": "GRC", "status": "watch", "primary": 93, "secondary": 15}, {"id": "POL-5.2-R3", "name": "Training evidence follow-up", "category": "response", "owner": "Legal", "status": "review", "primary": 64, "secondary": 11}, {"id": "POL-7.8-R4", "name": "Incident notice follow-up", "category": "privacy", "owner": "GRC", "status": "watch", "primary": 106, "secondary": 14}];
+      const state = { filter: 'all', mode: 'baseline', search: '', range: 50, toggle: false, selectedId: 'POL-2.1' };
+      const $ = (id) => document.getElementById(id); const fmt = (v) => Number(v).toLocaleString('en-US');
+      function visibleRecords() { const query = state.search.trim().toLowerCase(); return records.filter(r => state.filter === 'all' || r.category === state.filter).filter(r => !query || `${r.id} ${r.name} ${r.owner} ${r.category}`.toLowerCase().includes(query)).filter(r => !state.toggle || r.status !== 'clear').sort((a,b) => b.primary - a.primary); }
+      function render() { const visible = visibleRecords(); const selected = records.find(r => r.id === state.selectedId) || visible[0] || records[0]; const multiplier = state.mode === 'diff-review' ? 1.18 : state.mode === 'focused' ? .9 : 1; const total = visible.reduce((s,r)=>s+r.primary,0); const avg = Math.round(visible.reduce((s,r)=>s+r.secondary,0)/Math.max(visible.length,1)); const focus = visible.filter(r=>r.status==='review'||r.status==='watch').length; const adjusted = Math.round(selected.primary*multiplier + Number(state.range)); $('metric0').textContent=fmt(total); $('visibleCount').textContent=`${visible.length} visible clauses`; $('metric1').textContent=fmt(avg); $('metric2').textContent=fmt(focus); $('metric3').textContent=fmt(adjusted); $('modeReadout').textContent=`${state.mode} at Review strictness ${state.range}`; $('records').innerHTML=visible.map(r=>`<button type="button" class="record ${r.id===state.selectedId?'active':''}" data-id="${r.id}"><strong>${r.id} - ${r.name}</strong><small>${r.category} / ${r.owner} / ${r.status}</small></button>`).join(''); const focusRows=(state.toggle?visible:records).filter(r=>r.status==='review'||r.status==='watch'); $('focus').innerHTML=focusRows.map(r=>`<article class="focus-card"><strong>${r.id}</strong><small>${r.name} / ${r.owner} / ${r.status}</small></article>`).join(''); $('detailName').textContent=selected.name; $('detailSummary').textContent=`${selected.id} is ${selected.status} for ${selected.owner}. Workflow note: local review only.`; $('detailCategory').textContent=selected.category; $('detailOwner').textContent=selected.owner; $('detailPrimary').textContent=fmt(selected.primary); $('detailSecondary').textContent=fmt(selected.secondary); document.querySelectorAll('[data-id]').forEach(button=>button.addEventListener('click',()=>{ state.selectedId=button.getAttribute('data-id'); render(); })); }
+      $('filter').addEventListener('change', e=>{ state.filter=e.target.value; render(); }); $('mode').addEventListener('change', e=>{ state.mode=e.target.value; render(); }); $('search').addEventListener('input', e=>{ state.search=e.target.value; render(); }); $('range').addEventListener('input', e=>{ state.range=Number(e.target.value); render(); }); $('toggle').addEventListener('click',()=>{ state.toggle=!state.toggle; $('toggle').setAttribute('aria-pressed', String(state.toggle)); render(); }); render();
+    </script>
+  </body>
+</html>

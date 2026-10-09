@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "logical_path": "task.md",
+      "mode": "read_only",
+      "sha256": "428feb8dc612f8541c600e33b641e8ccad73ac8de9409056b569f3952da76887",
+      "size_bytes": 1457
+    },
+    {
+      "logical_path": "protocol_contract.json",
+      "mode": "read_only",
+      "sha256": "7c70cbfb02ab391c9212b50186ac3eba23c131cb558475e07c0d1017ca2bd303",
+      "size_bytes": 4375
+    },
+    {
+      "logical_path": "seed.db",
+      "mode": "read_only",
+      "sha256": "0643464c8474a4124947fbcc309ed61afc1f9302a9dbb9274635e42082af2fd8",
+      "size_bytes": 53248
+    },
+    {
+      "logical_path": "submission/service.py",
+      "mode": "writable_deliverable",
+      "sha256": "d284bc0ad188269ee3b57bde52f05c7c523dee711af58dde9c0385588e76380e",
+      "size_bytes": 1099
+    }
+  ],
+  "initial_state_sha256": "e1829750d14909d7069924cc32d7c4e6b29b5ed52d0f7e388f5213159d3cb468",
+  "schema_version": "case09_workspace_manifest_v1"
+}

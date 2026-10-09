@@ -1,0 +1,40 @@
+task_id: 246-interval-capacity-packing
+title: Pack mill cut jobs onto capacity-limited machines
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Business Operations
+task_subcategory: Coordination
+capability_tags: [filesystem, structured_data, terminal, code_execution]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [interval_overlap, capacity_limit, placement_order]
+required_artifacts:
+- assignment.json
+- PACKING_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HB-S200-BOUNDED-ALLOCATION, K8S-POD-PRIORITY]
+task_family: interval-capacity-packing
+variant: earliest-deadline-then-lex-machine
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [assignment.json, PACKING_NOTES.md]
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

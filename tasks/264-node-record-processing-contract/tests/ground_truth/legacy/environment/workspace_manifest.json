@@ -1,0 +1,31 @@
+{
+  "schema_version": "nami_work_case10_workspace_manifest_v1",
+  "files": [
+    {
+      "path": "package-lock.json",
+      "sha256": "929f3b2700c6224b6fcb65f7a1c037e5d3bc20ca20e05cc1609e4ae3c1077e77",
+      "size_bytes": 270
+    },
+    {
+      "path": "package.json",
+      "sha256": "9bed968b29ad701472836cd9ddd740e41a9784196714bc779927bf25baa1fea4",
+      "size_bytes": 321
+    },
+    {
+      "path": "src/process.js",
+      "sha256": "905cc6330a8ea10524635c7000cbbd4f4f79bb67178e8b507683a0f5180030fb",
+      "size_bytes": 1224
+    },
+    {
+      "path": "task.md",
+      "sha256": "09911a35734e0fd746788e91c6d71492644f9abcc7fa4793fce2d8b352be5aee",
+      "size_bytes": 2537
+    },
+    {
+      "path": "test/public.test.js",
+      "sha256": "abe900472103868d2256bc878c019336ed0fc32195cb9bd761ff4d4c545fad9d",
+      "size_bytes": 1288
+    }
+  ],
+  "initial_state_sha256": "b3c971a8d53f93661cbdb9932dfc6cd968b61828f74db5b8509adb6ceeb61d08"
+}

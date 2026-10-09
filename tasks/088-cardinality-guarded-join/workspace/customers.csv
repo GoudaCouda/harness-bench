@@ -1,0 +1,10 @@
+customer_id,segment,version,current
+c1,A,1,true
+c2,B,1,false
+c2,C,2,true
+c3,A,1,true
+c3,B,2,true
+c4,C,1,false
+c4,D,2,false
+c5,D,1,true
+,X,1,true

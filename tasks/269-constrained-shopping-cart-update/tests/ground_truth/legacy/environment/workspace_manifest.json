@@ -1,0 +1,41 @@
+{
+  "schema_version": "case15_workspace_manifest_v1",
+  "environment_template_id": "local_catalog_cart_v1",
+  "environment_version": "1.0.0",
+  "fixed_time": "2026-07-20T08:00:00Z",
+  "timezone": "UTC",
+  "locale": "zh-CN",
+  "docker_image_digest": "sha256:0b0fb54363e05fbf24e2d839cab53e63afb2d1348da47382860ab983f761ca30",
+  "service": {
+    "container_port": 8000,
+    "container_bind": "127.0.0.1",
+    "published_ports": [],
+    "network_mode": "none",
+    "network_policy": "container_loopback_only"
+  },
+  "agent_visible": [
+    "用户任务指令（由执行脚手架注入）",
+    "browser_snapshot 工具",
+    "local_cart_api 工具"
+  ],
+  "service_inputs": [
+    {
+      "path": "fixtures/catalog.json",
+      "sha256": "657c03672649b617ad1ec95b9b28d9cf9f8ad7ce5914e2013a08b28a60736fe7"
+    },
+    {
+      "path": "fixtures/seed_state.json",
+      "sha256": "fb513c734b0fb378d43f30d6a7ad2adbba04b65d89fcc69fedf6f2405b30c940"
+    }
+  ],
+  "hidden_from_agent": [
+    "oracle/",
+    "verifier/",
+    "tests/",
+    "validation/",
+    "fixtures/task_constraints.json",
+    "运行时 state.sqlite"
+  ],
+  "runtime_state_path": "workspace/state.sqlite",
+  "reset_entrypoint": "environment/reset.py"
+}

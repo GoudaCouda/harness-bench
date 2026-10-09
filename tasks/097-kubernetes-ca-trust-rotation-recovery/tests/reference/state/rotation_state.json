@@ -1,0 +1,74 @@
+{
+  "clients": [
+    {
+      "client_id": "kube-controller-manager",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kube-scheduler",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kubelet/node-a",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kubelet/node-b",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "coredns",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kube-proxy",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "metrics-adapter",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kube-apiserver/aggregation-client",
+      "trust": "new_only"
+    },
+    {
+      "client_id": "kube-apiserver/webhook-client",
+      "trust": "new_only"
+    }
+  ],
+  "cluster_id": "northstar-ha",
+  "controller_manager": {
+    "client_ca_file": "pki/new-ca.crt",
+    "cluster_signing_cert_file": "pki/new-ca.crt",
+    "cluster_signing_key_file": "pki/new-ca.key",
+    "root_ca_file": "pki/new-ca.crt",
+    "status": "healthy"
+  },
+  "dual_probe_sha256": "d0d1c49aa85718b1c439655cee60e22fd49b52770703d2f57638ea00267609a0",
+  "old_anchor_present": false,
+  "phase": "new_ca_only_verified",
+  "policy_version": "NORTHSTAR-CA-ROTATION-3",
+  "servers": [
+    {
+      "server_id": "kube-apiserver/cp-1",
+      "signer": "NEW-CA"
+    },
+    {
+      "server_id": "kube-apiserver/cp-2",
+      "signer": "NEW-CA"
+    },
+    {
+      "server_id": "kube-apiserver/cp-3",
+      "signer": "NEW-CA"
+    },
+    {
+      "server_id": "aggregated-api/custom-metrics",
+      "signer": "NEW-CA"
+    },
+    {
+      "server_id": "admission-webhook/policy",
+      "signer": "NEW-CA"
+    }
+  ]
+}

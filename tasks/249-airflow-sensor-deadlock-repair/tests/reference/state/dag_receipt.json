@@ -1,0 +1,19 @@
+{
+  "stream_id": "siltflow-249",
+  "gate_clock_epoch": 1776468800,
+  "counts": {
+    "recorded": 3,
+    "conflict": 2,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "t1",
+    "t2",
+    "t7"
+  ],
+  "conflict_ids": [
+    "t0",
+    "t6"
+  ],
+  "state": "gated"
+}

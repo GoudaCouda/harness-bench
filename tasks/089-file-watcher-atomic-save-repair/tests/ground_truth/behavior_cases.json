@@ -1,0 +1,63 @@
+{
+  "atomic": [
+    {
+      "checkpoint": {"seq": 5, "watched": {"config/a.json": {"inode": 10, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "batch": {"seq": 6, "events": [{"kind": "change", "path": "config/.a.json.tmp"}, {"kind": "rename", "path": "config/a.json"}, {"kind": "change", "path": "config/a.json"}], "snapshot": {"config/.a.json.tmp": {"type": "file", "inode": 19, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}, "config/a.json": {"type": "file", "inode": 20, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}}},
+      "policy": {"roots": ["config", "rules"], "extensions": [".json", ".yaml"], "temporary_prefixes": ["."], "temporary_suffixes": [".tmp", "~"]}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {"config/a.json": {"inode": 10, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "batch": {"seq": 8, "events": [{"kind": "rename", "path": "config/a.json"}], "snapshot": {"config/a.json": {"type": "file", "inode": 11, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": ["~"]}
+    },
+    {
+      "checkpoint": {"seq": 2, "watched": {"rules/a.yaml": {"inode": 4, "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}}},
+      "batch": {"seq": 3, "events": [{"kind": "change", "path": "rules/a.yaml"}], "snapshot": {"rules/a.yaml": {"type": "file", "inode": 4, "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}}},
+      "policy": {"roots": ["rules"], "extensions": [".yaml"], "temporary_prefixes": [], "temporary_suffixes": []}
+    }
+  ],
+  "rescan": [
+    {
+      "checkpoint": {"seq": 9, "watched": {"config/a.json": {"inode": 1, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "config/b.json": {"inode": 2, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}}},
+      "batch": {"seq": 10, "events": [{"kind": "rename", "path": null}], "snapshot": {"config/a.json": {"type": "file", "inode": 1, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "config/c.json": {"type": "file", "inode": 3, "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}, "readme.md": {"type": "file", "inode": 8, "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": ["."], "temporary_suffixes": ["~"]}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {"config/a.json": {"inode": 1, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "batch": {"seq": 2, "events": [{"kind": "rename", "path": "config/a.json"}], "snapshot": {"config/a.json": {"type": "symlink", "inode": null, "digest": null}}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    },
+    {
+      "checkpoint": {"seq": 3, "watched": {}},
+      "batch": {"seq": 4, "events": [{"kind": "change", "path": "config/new.json"}, {"kind": "change", "path": "config/new.json"}, {"kind": "change", "path": "config/new.json~"}], "snapshot": {"config/new.json": {"type": "file", "inode": 7, "digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"}, "config/new.json~": {"type": "file", "inode": 8, "digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"}}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": ["~"]}
+    }
+  ],
+  "invalid": [
+    {
+      "checkpoint": {"seq": 4, "watched": {}},
+      "batch": {"seq": 4, "events": [], "snapshot": {}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {}},
+      "batch": {"seq": 2, "events": [{"kind": "change", "path": "../config/a.json"}], "snapshot": {}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {"other/a.json": {"inode": 1, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "batch": {"seq": 2, "events": [], "snapshot": {}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {}},
+      "batch": {"seq": 2, "events": [], "snapshot": {"config/a.json": {"type": "file", "inode": true, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}},
+      "policy": {"roots": ["config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    },
+    {
+      "checkpoint": {"seq": 1, "watched": {}},
+      "batch": {"seq": 2, "events": [], "snapshot": {}},
+      "policy": {"roots": ["config", "config"], "extensions": [".json"], "temporary_prefixes": [], "temporary_suffixes": []}
+    }
+  ]
+}

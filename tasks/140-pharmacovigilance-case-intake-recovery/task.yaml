@@ -1,0 +1,94 @@
+task_id: 140-pharmacovigilance-case-intake-recovery
+title: Recover an Interrupted Pharmacovigilance Case-Intake Projection
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Science and Laboratory Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- structured_data
+- transaction_recovery
+- pharmacovigilance
+- evidence_integrity
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- interrupted_before_image_journal
+- out_of_order_version_chain
+- duplicate_and_unknown_delivery
+- identity_and_terminology_collision
+- accepted_and_pending_submission_boundaries
+- semantic_replay_identity
+required_artifacts:
+- recovery_plan.json
+- equivalent_recovery_plan.json
+- conflict_probe_plan.json
+- conflict_probe.json
+- .pv_preview.json
+- state/pv.db
+- state/verification.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- staging/pv_review_queue.json
+- staging/packet_manifest.json
+- pv_handoff.md
+task_family: pharmacovigilance-case-intake-recovery
+variant: e2b-version-journal-and-submission-boundaries
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - ICH-E2B-R3
+  - EMA-GVP-MODULE-VI
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recovery_plan.json
+  - equivalent_recovery_plan.json
+  - conflict_probe_plan.json
+  - conflict_probe.json
+  - .pv_preview.json
+  - state/verification.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - staging/pv_review_queue.json
+  - staging/packet_manifest.json
+  - pv_handoff.md
+  allowed_modified:
+  - state/pv.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: pv_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

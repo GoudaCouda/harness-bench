@@ -1,0 +1,4 @@
+{"event":"detector_alert_opened","event_id":"QEV-001","external_action":false,"incident_id":"INC-114-2026-08","recorded_at":"2026-08-18T19:40:00Z","sequence":1,"subject":"SYN-CRED-REL-PUB-A"}
+{"event":"payload_quarantined","event_id":"QEV-002","external_action":false,"incident_id":"INC-114-2026-08","recorded_at":"2026-08-18T20:02:00Z","sequence":2,"subject":"ART-417"}
+{"event":"payload_quarantined","event_id":"QEV-003","external_action":false,"incident_id":"INC-114-2026-08","recorded_at":"2026-08-18T20:03:00Z","sequence":3,"subject":"LOG-418"}
+{"event":"payload_quarantined","event_id":"QEV-004","external_action":false,"incident_id":"INC-114-2026-08","recorded_at":"2026-08-18T20:04:00Z","sequence":4,"subject":"MIR-417-A"}

@@ -1,0 +1,6 @@
+{
+  "max_ticket_age_sec": 600,
+  "max_attempts": 3,
+  "require_anti_replay_consistency": true,
+  "safe_methods": ["GET", "HEAD", "OPTIONS", "TRACE"]
+}

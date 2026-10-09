@@ -1,0 +1,2 @@
+2026-08-12T08:55:00Z generation=55 image=sha256:91a7c0ffee listening=8080 readiness=/ready status=healthy
+2026-08-12T09:11:30Z generation=57 image=sha256:2f57cafe contract_port=9000 readiness=/health/ready configuration_rejected=HTTP_PORT:8080

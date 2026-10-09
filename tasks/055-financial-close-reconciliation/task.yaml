@@ -1,0 +1,51 @@
+task_id: 055-financial-close-reconciliation
+title: Prepare a Bank-Tied Month-End Close Package
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+difficulty: hard
+domain: Finance
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- verification_behavior
+- safety_boundary
+stressors:
+- dirty_input
+- high_stakes_rules
+- conflicting_evidence
+- cross_record_dependency
+required_artifacts:
+- close/reconciliation.csv
+- close/exceptions.csv
+- close/proposed_journal.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-055
+task_family: 055-financial-close-reconciliation
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - close/
+  allowed_modified: []
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader: {}
+  services: []

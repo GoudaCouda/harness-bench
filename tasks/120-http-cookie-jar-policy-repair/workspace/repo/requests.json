@@ -1,0 +1,5 @@
+[
+  {"request_id":"q1","scheme":"https","host":"app.example.com","path":"/app/report","at":1030,"http_api":true},
+  {"request_id":"q2","scheme":"http","host":"app.example.com","path":"/","at":1030,"http_api":true},
+  {"request_id":"q3","scheme":"https","host":"app.example.com","path":"/app/report","at":1600,"http_api":false}
+]

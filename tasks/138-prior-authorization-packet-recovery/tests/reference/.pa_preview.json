@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "attempt_boundaries_exact": true,
+    "event_dispositions_exact": true,
+    "identity_service_windows_exact": true,
+    "local_only": true,
+    "minimum_necessary_evidence": true,
+    "schema_exact": true,
+    "source_checkpoint_current": true,
+    "stable_identity": true
+  },
+  "document_count": 3,
+  "event_count": 7,
+  "external_actions_executed": false,
+  "failed_checks": [],
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "617e1e5fed5b00a50d8c0f45842f4a532bae38b3b704b333cdacf013e17d62ab",
+  "source_checkpoint_match": true,
+  "status": "valid"
+}

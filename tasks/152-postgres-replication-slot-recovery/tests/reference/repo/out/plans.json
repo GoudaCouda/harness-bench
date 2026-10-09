@@ -1,0 +1,6 @@
+[
+  {"slot_name":"billing-slot","action":"resume","reason":"healthy","retained_bytes":180,"resume_lsn":880,"steps":["start_consumer"]},
+  {"slot_name":"events-slot","action":"rebuild","reason":"wal_unavailable","retained_bytes":800,"resume_lsn":1000,"steps":["stop_consumer","drop_slot","create_slot","resnapshot_consumer","start_consumer"]},
+  {"slot_name":"legacy-slot","action":"blocked","reason":"resnapshot_unavailable","retained_bytes":900,"resume_lsn":null,"steps":[]},
+  {"slot_name":"orders-slot","action":"keep","reason":"healthy","retained_bytes":300,"resume_lsn":870,"steps":[]}
+]

@@ -1,0 +1,7 @@
+anomaly_id,timestamp,service,region,metric,observed,expected,z_score,severity,attributed_cause
+A001,2026-04-20T10:00:00Z,checkout,us-east,error_rate,0.0938,0.0100,8.4,high,deployment:D-441
+A002,2026-04-20T10:00:00Z,payments,eu-west,latency_p95_ms,910,210,7.0,high,third_party:I-19
+A003,2026-04-20T11:00:00Z,search,global,requests,410,1000,-5.9,medium,marketing:M-07
+A004,2026-04-20T11:30:00Z,checkout,us-east,latency_p95_ms,880,220,6.6,high,deployment:D-443
+A005,2026-04-20T12:30:00Z,profile,global,error_rate,0.0500,0.0100,4.2,medium,unattributed
+A006,2026-04-20T12:30:00Z,profile,global,latency_p95_ms,260,210,3.1,medium,unattributed

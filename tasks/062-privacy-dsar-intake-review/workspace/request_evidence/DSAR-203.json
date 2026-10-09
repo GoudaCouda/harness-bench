@@ -1,0 +1,13 @@
+{
+  "request_id": "DSAR-203",
+  "self_attestation": true,
+  "account_token": {
+    "token_id": "VT-3308",
+    "account_id": "acct_1003",
+    "verified_at": "2026-05-18T09:38:00Z",
+    "expires_at": "2026-05-18T21:38:00Z",
+    "status": "valid"
+  },
+  "agent_identity_check": null,
+  "authorization": null
+}

@@ -1,0 +1,86 @@
+task_id: 195-hr-injury-evidence-stress
+title: Recover Interrupted OSHA and Workers-Comp Reporting State
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Human Resources
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- event_reconciliation
+- temporal_reasoning
+- signature_verification
+- privacy
+- state_recovery
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+- context_management
+stressors:
+- interrupted_before_image_journal
+- duplicate_out_of_order_events
+- cross_midnight_timezones
+- signed_authority_precedence
+- recording_reporting_distinction
+- observed_irreversible_submission
+- semantic_replay_identity
+required_artifacts:
+- recovery_plan.json
+- .injury_preview.json
+- state/reporting.db
+- state/recovery_receipt.json
+- staging/report_bundle.json
+- staging/bundle_manifest.json
+- state/verification.json
+- state/replay_report.json
+- injury_reporting_handoff.md
+task_family: hr-injury-reporting-recovery
+variant: sqlite-osha-workers-comp-crash-recovery
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - HR-06
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recovery_plan.json
+  - .injury_preview.json
+  - state/recovery_receipt.json
+  - staging/report_bundle.json
+  - staging/bundle_manifest.json
+  - state/verification.json
+  - state/replay_report.json
+  - injury_reporting_handoff.md
+  allowed_modified:
+  - state/reporting.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: injury_reporting_handoff
+  max_fallback_weight: 0.08
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

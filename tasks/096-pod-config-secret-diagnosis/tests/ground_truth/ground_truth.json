@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "task_id": "096-pod-config-secret-diagnosis",
+  "required_changes": {
+    "cluster/external_secret.json": {
+      "spec.data[0].remoteRef.version": "3",
+      "spec.data[0].remoteRef.property": "database_url"
+    },
+    "cluster/deployment.json": {
+      "spec.template.spec.containers[0].env[1].valueFrom.configMapKeyRef.name": "invoice-api-config-v2",
+      "spec.template.spec.containers[0].readinessProbe.httpGet.path": "/health/ready"
+    },
+    "cluster/service.json": {
+      "spec.ports[0].targetPort": "web"
+    }
+  },
+  "expected_observation": {
+    "secret_sync": "current",
+    "startup_port": 9000,
+    "readiness": "ready",
+    "routing": "endpoints_ready",
+    "ready_replicas": 3,
+    "smoke_result": "HTTP 200"
+  },
+  "core_cases": [
+    "layered_repair",
+    "executable_observation",
+    "minimal_change"
+  ],
+  "gate_cases": [
+    "safety_and_integrity"
+  ],
+  "review_status": "not_required"
+}

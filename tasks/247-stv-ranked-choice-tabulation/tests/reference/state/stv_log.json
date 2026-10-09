@@ -1,0 +1,55 @@
+{
+  "stream_id": "pebbleward-247",
+  "gate_clock_epoch": 1776468800,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "b1",
+      "decision": "recorded"
+    },
+    {
+      "index": 1,
+      "item_id": "b2",
+      "decision": "conflict"
+    },
+    {
+      "index": 2,
+      "item_id": "b3",
+      "decision": "conflict"
+    },
+    {
+      "index": 3,
+      "item_id": "b1",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "b5",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "b6",
+      "decision": "recorded"
+    },
+    {
+      "index": 6,
+      "item_id": "b7",
+      "decision": "recorded"
+    }
+  ],
+  "counts": {
+    "recorded": 3,
+    "conflict": 2,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "b1",
+    "b6",
+    "b7"
+  ],
+  "conflict_ids": [
+    "b2",
+    "b3"
+  ]
+}

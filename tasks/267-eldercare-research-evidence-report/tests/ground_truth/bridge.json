@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "case_number": 13,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "numeric_consistency",
+      "evidence_chain",
+      "summary_evidence"
+    ],
+    [
+      "actionable_recommendations",
+      "limitations_coverage",
+      "bibliography_traceability",
+      "unsupported_or_forbidden_claims"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_scope",
+    "workspace_tree_bounds",
+    "protected_input_integrity",
+    "protected_input_modes",
+    "deliverable_scope",
+    "document_parse",
+    "document_preamble",
+    "unsupported_or_forbidden_claims",
+    "no_secret_exposure",
+    "citation_domain",
+    "summary_evidence",
+    "structured_content_scope",
+    "numeric_consistency",
+    "evidence_chain",
+    "actionable_recommendations",
+    "limitations_coverage",
+    "bibliography_traceability"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/养老行业研究报告.md"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "07f1008c004e4841f416271a5f669f5ae7b13c2e2185d1d12d60268b14c09a44",
+    "hb_tools/local_search.py": "b2767085f9da30f600514098aea181821c76fa65bcf713fbfb43f70d04bdc915",
+    "hb_tools/tool_contracts.json": "90f03143b0e72440b02c0ea6bac4b250e77435b6a0810373eb3a174135c94905",
+    "hb_tools/write_document.py": "230cb6cc900a744acd5ebd362b721e143eebe5ac46052409571bed41dc7db5c3",
+    "input/LICENSE.txt": "54ed5f9872692ca636c35d5f4a4b9f7e6c01232e79deb88559605fcfcc4bdd52",
+    "input/corpus/S01_demographics_zh.md": "d94a8d491c6757afc7be6fb85975c1be181b51e1f967cec3df9fabedb60e9ecb",
+    "input/corpus/S02_needs_survey_zh.md": "ef33cfa5e3961958bb2dff3f55d40a027fbea380f3bb6f6927aa93374e51d3ac",
+    "input/corpus/S03_supply_registry_zh.csv": "68a4c25af73f38f87bd64b7548c81a8471c39a40abff4c5a489a8a5540dcf0d2",
+    "input/corpus/S04_policy_zh.md": "0c6b5e90bfb68ecb0a2120a7f6d48065590e571e441f60cad6b3815d95dff3f4",
+    "input/corpus/S05_unit_costs_zh.md": "bcb9b7413ba3a3d248be89a89d553894833fd07ef31d1b8a4b475a17affb8918",
+    "input/corpus/S06_pilot_en.md": "c15578b1c001a7e51c4aefe174a53059fed8c90178d3e392a935e37722de5f90",
+    "input/corpus/S07_audit_en.md": "f4b419e326cace767ccabedc7bfed10a7bccb1693d5f91ebd3acebbbd3dd98cb",
+    "input/corpus/S08_superseded_memo_zh.md": "f7cc6fead2f4fe3de7e12874e59cc250ff3f4f971fd9831484fefe4585a36c03",
+    "input/metadata.json": "769c8d7e71767a06c7a62164103d26da5cd5c6691ffc3e528f14a37a2587901e",
+    "input/report_template.md": "87f8f9624ccbd86886a744f33e9c096f5f9f3ad3295b2a58fa2492c94a4c685b",
+    "input/source_manifest.json": "715b36c65f28602fe299bfdd1e58e5970c39d31ed667c481fc010dffe3196408"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "input/corpus",
+    "output"
+  ],
+  "original_directories": [
+    "input",
+    "input/corpus",
+    "output"
+  ],
+  "original_modes": {
+    "input": 365,
+    "input/LICENSE.txt": 292,
+    "input/corpus": 365,
+    "input/corpus/S01_demographics_zh.md": 292,
+    "input/corpus/S02_needs_survey_zh.md": 292,
+    "input/corpus/S03_supply_registry_zh.csv": 292,
+    "input/corpus/S04_policy_zh.md": 292,
+    "input/corpus/S05_unit_costs_zh.md": 292,
+    "input/corpus/S06_pilot_en.md": 292,
+    "input/corpus/S07_audit_en.md": 292,
+    "input/corpus/S08_superseded_memo_zh.md": 292,
+    "input/metadata.json": 292,
+    "input/report_template.md": 292,
+    "input/source_manifest.json": 292,
+    "output": 488
+  }
+}

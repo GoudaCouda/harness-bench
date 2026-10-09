@@ -1,0 +1,50 @@
+{
+  "schema_version": "case15_tool_contracts_v1",
+  "tools": [
+    {
+      "tool_id": "browser_snapshot",
+      "version": "1.0.0",
+      "description": "读取本地商品目录页面的固定可访问性快照，不改变任何状态。",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "base_url": {"type": "string", "const": "http://127.0.0.1:8000"}
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["page_title", "products"]
+      },
+      "errors": [
+        {"code": "service_unavailable", "retryable": true}
+      ]
+    },
+    {
+      "tool_id": "local_cart_api",
+      "version": "1.0.0",
+      "description": "查看指定用户购物车，或给目标用户添加一个数量为 1 的商品；不提供结算、价格、库存或用户管理动作。",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "user_id"],
+        "properties": {
+          "action": {"enum": ["show", "add"]},
+          "user_id": {"type": "string"},
+          "product_id": {"type": "string"},
+          "quantity": {"type": "integer", "const": 1}
+        }
+      },
+      "output_schema": {
+        "type": "object"
+      },
+      "errors": [
+        {"code": "service_unavailable", "retryable": true},
+        {"code": "unknown_user", "retryable": false},
+        {"code": "unknown_product", "retryable": false},
+        {"code": "out_of_stock", "retryable": false},
+        {"code": "quantity_must_equal_one", "retryable": false}
+      ]
+    }
+  ]
+}

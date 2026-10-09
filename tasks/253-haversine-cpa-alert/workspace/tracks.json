@@ -1,0 +1,38 @@
+[
+  {
+    "vessel_id": "v-north",
+    "t": 0,
+    "lat": 31.2,
+    "lon": 121.5
+  },
+  {
+    "vessel_id": "v-south",
+    "t": 0,
+    "lat": 31.1,
+    "lon": 121.5
+  },
+  {
+    "vessel_id": "v-north",
+    "t": 10,
+    "lat": 31.205,
+    "lon": 121.505
+  },
+  {
+    "vessel_id": "v-south",
+    "t": 10,
+    "lat": 31.201,
+    "lon": 121.504
+  },
+  {
+    "vessel_id": "v-north",
+    "t": 20,
+    "lat": 31.22,
+    "lon": 121.52
+  },
+  {
+    "vessel_id": "v-south",
+    "t": 20,
+    "lat": 31.18,
+    "lon": 121.51
+  }
+]

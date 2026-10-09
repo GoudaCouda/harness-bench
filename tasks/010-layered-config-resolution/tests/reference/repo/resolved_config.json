@@ -1,0 +1,16 @@
+{
+  "values": {
+    "api_token": "<redacted>",
+    "cache_url": null,
+    "listen_port": 9090,
+    "log_level": "warning",
+    "telemetry": false
+  },
+  "sources": {
+    "api_token": "environment",
+    "cache_url": "cli",
+    "listen_port": "environment",
+    "log_level": "cli",
+    "telemetry": "cli"
+  }
+}

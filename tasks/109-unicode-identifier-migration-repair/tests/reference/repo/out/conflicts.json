@@ -1,0 +1,6 @@
+[
+  {"canonical_identifier":"caf\u00e9","reason":"collision","record_ids":["r1","r2"]},
+  {"canonical_identifier":"strasse","reason":"collision","record_ids":["r3","r4"]},
+  {"canonical_identifier":null,"reason":"invalid","record_ids":["r8"]},
+  {"canonical_identifier":"admin","reason":"reserved","record_ids":["r7"]}
+]

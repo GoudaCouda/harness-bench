@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 239-dag-priority-scheduler-repair
+pass_threshold: 0.8
+cases:
+- id: scheduler_behavior
+  title: Ready jobs follow priority then job_id; cycles fail closed
+  description: Hidden DAGs emit the contract order and cyclic or unknown graphs raise ValueError.
+  weight: 0.5
+  core: true
+- id: visible_schedule
+  title: The mill snapshot order is exact
+  description: repo/schedule.json matches the independent kernel on jobs.json.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: The scheduler has a truthful implementation handoff
+  description: Notes explain topology, ties, failure, the unittest command, and a residual risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Immutable evidence and workspace integrity are preserved
+  description: Protected inputs stay unchanged and the submission creates no linked or special artifacts.
+  weight: 0.0
+  core: false
+  gate: true

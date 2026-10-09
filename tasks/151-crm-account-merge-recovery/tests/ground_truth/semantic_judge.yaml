@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 151-crm-account-merge-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: CRM merge handoff is complete
+  question: Does the handoff accurately identify survivor, duplicate and preserved near-match, moved dependencies, restrictive consent and tombstone outcomes, transaction/replay evidence, and offline scope?
+  pass_anchors: [Equivalent opt-out and idempotency terminology is acceptable.]
+  fail_anchors: [Merging the near-match, relaxing consent, or claiming customer contact fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

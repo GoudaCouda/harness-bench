@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "preserve-compatible-peer-set",
+    "manifest": {"dependencies": {"ui-kit": "^2.0.0", "view-core": "^4.0.0"}, "optionalDependencies": {}},
+    "registry": {
+      "ui-kit": [{"version": "2.1.0", "peerDependencies": {"view-core": "^4.0.0"}}, {"version": "2.2.0", "peerDependencies": {"view-core": "^5.0.0"}}],
+      "view-core": [{"version": "4.3.0"}, {"version": "5.0.0"}]
+    },
+    "current_lock": {"ui-kit": "2.1.0", "view-core": "4.3.0"},
+    "target": {"os": "linux", "cpu": "x64"}
+  },
+  {
+    "case_id": "skip-platform-optional",
+    "manifest": {"dependencies": {"builder": "^1.0.0"}, "optionalDependencies": {"native-watch": "^3.0.0"}},
+    "registry": {
+      "builder": [{"version": "1.1.0"}],
+      "native-watch": [{"version": "3.0.0", "os": ["darwin"], "cpu": ["x64", "arm64"]}]
+    },
+    "current_lock": {"builder": "1.1.0", "native-watch": "3.0.0"},
+    "target": {"os": "win32", "cpu": "x64"}
+  }
+]

@@ -1,0 +1,27 @@
+schema_version: 2
+task_id: 259-editable-management-review-deck
+pass_threshold: 0.8
+cases:
+- id: business_result
+  title: Business result
+  description: 'Original result checks: numeric_grounding chart_data_binding'
+  weight: 0.4
+  core: true
+- id: evidence_consistency
+  title: Evidence and cross-artifact consistency
+  description: 'Original evidence checks: slide_1_evidence slide_2_evidence slide_3_evidence
+    slide_4_evidence slide_5_evidence slide_6_evidence'
+  weight: 0.4
+  core: true
+- id: complete_delivery
+  title: Complete usable delivery
+  description: All applicable original checks pass, including format, required structure
+    and final-state consistency.
+  weight: 0.2
+  core: false
+- id: protected_workspace
+  title: Input, public-tool and path integrity
+  description: Frozen inputs and tools are unchanged; no extra files, unsafe paths,
+    symlinks or special nodes.
+  weight: 0.0
+  gate: true

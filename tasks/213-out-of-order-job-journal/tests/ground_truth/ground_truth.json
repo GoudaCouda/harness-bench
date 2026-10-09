@@ -1,0 +1,35 @@
+{
+  "policy": {
+    "journal_clock_epoch": 1773910800
+  },
+  "artifacts": {
+    "journal_receipt": {
+      "stream_id": "completions-0319",
+      "journal_clock_epoch": 1773910800,
+      "counts": {
+        "applied": 4,
+        "replayed": 1,
+        "stale": 1,
+        "held": 1,
+        "blocked": 1,
+        "rejected": 1
+      },
+      "state": "reconciled"
+    },
+    "verification": {
+      "controller": "journalctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "succeeded": [
+      "job-a",
+      "job-b",
+      "job-c"
+    ],
+    "failed": [
+      "job-d"
+    ],
+    "held_remaining": []
+  }
+}

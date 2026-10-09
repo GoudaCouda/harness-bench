@@ -1,0 +1,67 @@
+{
+  "page": 4,
+  "pages": 4,
+  "works": [
+    {
+      "id": "W4-ALIAS",
+      "doi": "10.oa/delta-v2",
+      "title": "Delta extraction protocol",
+      "publication_year": 2024,
+      "authors": ["A6"],
+      "referenced_works": ["W1"],
+      "concepts": ["C1"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W5-CONFLICT",
+      "doi": "10.oa/epsilon",
+      "title": "Epsilon contradiction note",
+      "publication_year": 2024,
+      "authors": ["A2", "A7"],
+      "referenced_works": ["W4"],
+      "concepts": ["C2"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W7",
+      "doi": "https://dx.doi.org/10.oa/theta",
+      "title": "Theta coauthor bridge",
+      "publication_year": 2025,
+      "authors": ["A1", "A2"],
+      "referenced_works": ["W5"],
+      "concepts": ["C1", "C2"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W8-CORR",
+      "doi": "10.oa/iota",
+      "title": "Iota intervention effect estimate",
+      "publication_year": 2024,
+      "authors": ["A9"],
+      "referenced_works": ["W2"],
+      "concepts": ["C2"],
+      "claim_relation": "contradicts",
+      "correction_event_id": "CE-1"
+    },
+    {
+      "id": "W9",
+      "doi": "10.oa/delta-v2",
+      "title": "Delta extraction protocol extension",
+      "publication_year": 2025,
+      "authors": ["A6"],
+      "referenced_works": ["W4"],
+      "concepts": ["C1", "C3"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W10",
+      "doi": "10.oa/kappa",
+      "title": "Kappa downstream synthesis note",
+      "publication_year": 2025,
+      "authors": ["A5"],
+      "referenced_works": ["W7"],
+      "concepts": ["C3"],
+      "claim_relation": "supports"
+    }
+  ]
+}

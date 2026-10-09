@@ -1,0 +1,15 @@
+{
+  "external_transmissions_executed": false,
+  "packet_count": 3,
+  "packet_order": [
+    "ICSR-2402",
+    "ICSR-2404",
+    "ICSR-2407"
+  ],
+  "packet_path": "staging/pv_review_queue.json",
+  "packet_sha256": "e5dbf1cf7a6810c0dddc649db4970ee8a65a4a3afe82e0c17d0fcf0141fb5dcb",
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "schema_version": 1,
+  "semantic_plan_digest": "f30185a577832814eda0610dc810e81a2a3cb1ff6744ae5ea5a7f3922ca884b7",
+  "source_checkpoint": "86c4d6a2485037b57155cceebea70e4c03dfbc4afe35c156001531b95cd3b862"
+}

@@ -1,0 +1,10 @@
+approval_id,subject_type,subject_id,role,decision,occurred_at
+APR-C-T,bank_change,CH-C-22,treasury,approved,2026-08-14T13:00:00Z
+APR-C-A,bank_change,CH-C-22,ap_manager,approved,2026-08-14T14:10:00Z
+APR-D-T,bank_change,CH-D-09,treasury,approved,2026-08-15T13:00:00Z
+APR-D-A,bank_change,CH-D-09,ap_manager,approved,2026-08-15T14:00:00Z
+APR-H-T,bank_change,CH-H-31,treasury,approved,2026-08-16T09:10:00Z
+APR-H-A,bank_change,CH-H-31,ap_manager,approved,2026-08-16T09:35:00Z
+APR-E-F,payment,P-3205,finance_manager,approved,2026-08-19T14:05:00Z
+APR-I-F,payment,P-3209,finance_manager,approved,2026-08-19T14:10:00Z
+APR-I-T,payment,P-3209,treasury,approved,2026-08-19T14:18:00Z

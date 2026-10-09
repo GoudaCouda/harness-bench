@@ -1,0 +1,134 @@
+{
+  "modules": [
+    {
+      "name": "minisvc.cli",
+      "path": "minisvc/cli.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.api.handlers",
+      "path": "minisvc/api/handlers.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.api.routes",
+      "path": "minisvc/api/routes.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.storage.repo",
+      "path": "minisvc/storage/repo.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.models",
+      "path": "minisvc/models.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.config",
+      "path": "minisvc/config.py",
+      "purpose": "runtime module"
+    },
+    {
+      "name": "minisvc.audit",
+      "path": "minisvc/audit.py",
+      "purpose": "runtime module"
+    }
+  ],
+  "entry_points": [
+    "minisvc.cli:main",
+    "minisvc.api.routes:register_routes"
+  ],
+  "dependency_edges": [
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.config",
+      "type": "imports"
+    },
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.config",
+      "type": "calls"
+    },
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.config",
+      "type": "reads_config"
+    },
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.storage.repo",
+      "type": "imports"
+    },
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.storage.repo",
+      "type": "instantiates"
+    },
+    {
+      "from": "minisvc.cli",
+      "to": "minisvc.storage.repo",
+      "type": "calls"
+    },
+    {
+      "from": "minisvc.api.routes",
+      "to": "minisvc.api.handlers",
+      "type": "imports"
+    },
+    {
+      "from": "minisvc.api.routes",
+      "to": "minisvc.api.handlers",
+      "type": "calls"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.storage.repo",
+      "type": "imports"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.storage.repo",
+      "type": "instantiates"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.storage.repo",
+      "type": "calls"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.audit",
+      "type": "imports"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.audit",
+      "type": "calls"
+    },
+    {
+      "from": "minisvc.api.handlers",
+      "to": "minisvc.audit",
+      "type": "persists_to"
+    },
+    {
+      "from": "minisvc.storage.repo",
+      "to": "minisvc.models",
+      "type": "imports"
+    }
+  ],
+  "key_functions": [
+    "main",
+    "load_settings",
+    "register_routes",
+    "create_order",
+    "get_order",
+    "order_event",
+    "OrderRepository.save",
+    "OrderRepository.get"
+  ],
+  "runtime_flows": [
+    "cli -> load_settings -> init_schema",
+    "POST /orders -> create_order -> repo.save -> order_event"
+  ]
+}

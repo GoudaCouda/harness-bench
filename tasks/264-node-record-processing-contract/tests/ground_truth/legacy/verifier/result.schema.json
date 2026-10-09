@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verdict", "candidate_source_sha256", "contract_sha256", "checks", "metrics"],
+  "properties": {
+    "schema_version": {"const": "nami_work_case10_verifier_result_v3"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "candidate_source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "evidence"],
+        "properties": {
+          "check_id": {"type": "string", "minLength": 1},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "object"}
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["attempt_count", "max_duration_seconds", "max_stdout_bytes", "max_stderr_bytes", "post_restart_process_count", "post_restart_runtime_entries"],
+      "additionalProperties": true
+    }
+  }
+}

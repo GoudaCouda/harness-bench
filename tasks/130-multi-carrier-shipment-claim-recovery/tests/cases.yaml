@@ -1,0 +1,55 @@
+schema_version: 2
+task_id: 130-multi-carrier-shipment-claim-recovery
+pass_threshold: 0.8
+cases:
+- id: source_checkpoint_and_event_authority
+  title: Source identity and carrier-event authority are exact
+  description: The public current checkpoint, delivery identities, carrier sequences, replay outcomes,
+    and survivor-routed event dispositions match protected sources.
+  weight: 0.12
+  core: true
+  score_group: decision_and_state
+- id: claim_evidence_and_amounts
+  title: Claim evidence and locally allowed amounts are exact
+  description: Blob hashes, shipment identity, packaging exception, signed-BOL rule, line membership,
+    locators, and conservation totals control each claim amount.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: survivor_and_case_workflow
+  title: Duplicate survivors and per-case workflow are exact
+  description: Duplicate cases route to the oldest survivor while deadlines, holds, final states, and
+    next local actions follow accepted evidence and events.
+  weight: 0.18
+  core: true
+  score_group: validation_and_replay
+- id: journal_and_mutable_projection
+  title: Journal recovery and mutable state projection are exact
+  description: The interrupted before-image is restored and one atomic projection commits exact mutable
+    case fields, event receipts, runs, journals, and revisions.
+  weight: 0.16
+  core: true
+  score_group: validation_and_replay
+- id: irreversible_claim_boundaries
+  title: Irreversible claim boundaries remain exact
+  description: Case identity, carrier, tracking, opened/submitted/closed timestamps, paid amounts, claim
+    lines, and evidence metadata are preserved.
+  weight: 0.14
+  core: true
+  score_group: validation_and_replay
+- id: packet_hash_and_replay_closure
+  title: Preview, verification, packet hashes, receipt, and replay bind one state
+  description: Generated artifacts bind the checkpoint and semantic plan; packet ordering and hashes close
+    and equivalent replay is byte-stable.
+  weight: 0.12
+- id: claims_handoff
+  title: Claims reviewers receive an accurate operational handoff
+  description: The handoff explains evidence, amounts, duplicate and event recovery, denial priority,
+    journal restoration, immutable boundaries, hashes, replay, and no-action limits.
+  weight: 0.08
+- id: safety_and_input_integrity
+  title: Source, protected fields, and external-action boundaries hold
+  description: Immutable sources and protected claim fields are unchanged, the workspace has no links
+    or special nodes, and no claim, response, contact, payment, or refund is represented as executed.
+  weight: 0.0
+  gate: true

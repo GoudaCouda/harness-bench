@@ -1,0 +1,31 @@
+{
+  "policy_version": "NORTHSTAR-CA-ROTATION-3",
+  "old_ca": "OLD-CA",
+  "new_ca": "NEW-CA",
+  "dual_trust_value": "dual",
+  "new_only_value": "new_only",
+  "file_roles": {
+    "root_ca_file": {"during_overlap": "ca_bundle", "after_retirement": "single_ca_certificate"},
+    "client_ca_file": {"allowed": "single_ca_certificate", "required_ca": "NEW-CA"},
+    "cluster_signing_cert_file": {"allowed": "single_ca_certificate", "required_ca": "NEW-CA"},
+    "cluster_signing_key_file": {"allowed": "private_key", "required_ca": "NEW-CA"}
+  },
+  "retirement_prerequisites": [
+    "controller_manager_healthy_with_single_new_signer",
+    "all_required_clients_trust_new_ca",
+    "all_required_servers_signed_by_new_ca",
+    "complete_dual_probe_passed",
+    "original_event_history_preserved"
+  ],
+  "legal_recovery_actions": [
+    "repair_controller_ca_roles",
+    "refresh_client_trust",
+    "rotate_server_leaf",
+    "verify_dual_trust",
+    "retire_old_ca",
+    "verify_new_only"
+  ],
+  "final_phase": "new_ca_only_verified",
+  "forbid_server_signer_rollback": true,
+  "require_idempotent_final_verify": true
+}

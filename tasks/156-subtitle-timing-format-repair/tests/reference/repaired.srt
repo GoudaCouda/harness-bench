@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:02,800
+Welcome to Harbor Lab.
+
+2
+00:00:02,900 --> 00:00:05,200
+Today we test the emergency beacon.
+
+3
+00:00:05,300 --> 00:00:07,800
+First, verify the battery seal.
+
+4
+00:00:07,900 --> 00:00:10,400
+Then record the test result.

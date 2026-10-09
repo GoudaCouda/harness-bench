@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_07 verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verifier_version", "verdict", "checks", "summary"],
+  "properties": {
+    "schema_version": {"const": "case07_verifier_result_v1"},
+    "verifier_version": {"const": "1.0.0"},
+    "verdict": {"enum": ["accept", "reject"]},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "evidence"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "object"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "failed", "workbook_sha256"],
+      "properties": {
+        "passed": {"type": "integer", "minimum": 0},
+        "failed": {"type": "integer", "minimum": 0},
+        "workbook_sha256": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {"kind": "file", "mode": "0444", "path": "TASK.md", "sha256": "3d34c7d1371e3eeca7b73045e50bac86763560624bc2f52ee4f7d6d295a232cc", "size_bytes": 872},
+    {"kind": "directory", "mode": "0755", "path": "input", "sha256": null, "size_bytes": 0},
+    {"kind": "directory", "mode": "0755", "path": "input/calendar_briefing_skill", "sha256": null, "size_bytes": 0},
+    {"kind": "directory", "mode": "0755", "path": "input/calendar_briefing_skill/.private", "sha256": null, "size_bytes": 0},
+    {"kind": "file", "mode": "0444", "path": "input/calendar_briefing_skill/.private/deployment_note.txt", "sha256": "6afd48d90b8f78bc952a52bdde1e561da3027f0e2cd0054dc20366be5d405f17", "size_bytes": 126},
+    {"kind": "file", "mode": "0444", "path": "input/calendar_briefing_skill/SKILL.md", "sha256": "cec9631d2ce2990a409b9f475cb353b61a3908a90b1af4c410ee34b366f8cfae", "size_bytes": 423},
+    {"kind": "directory", "mode": "0755", "path": "input/calendar_briefing_skill/assets", "sha256": null, "size_bytes": 0},
+    {"kind": "file", "mode": "0444", "path": "input/calendar_briefing_skill/assets/template.txt", "sha256": "4404e1bf6d37027e69f6eb375b0b95f8c810463fe562e44ce9b3cf3d8b37be73", "size_bytes": 75},
+    {"kind": "file", "mode": "0444", "path": "input/calendar_briefing_skill/manifest.template.json", "sha256": "745243f1645ff0042700c1d58ae0f6a1d3a0f444336eff4d860e3784560c6ad0", "size_bytes": 169},
+    {"kind": "directory", "mode": "0755", "path": "input/calendar_briefing_skill/scripts", "sha256": null, "size_bytes": 0},
+    {"kind": "file", "mode": "0444", "path": "input/calendar_briefing_skill/scripts/main.py", "sha256": "53f25a88e11c38766b939d28a5d4fdab558e8d1ed91f00aa7f998292383ef921", "size_bytes": 623},
+    {"kind": "directory", "mode": "0755", "path": "output", "sha256": null, "size_bytes": 0}
+  ],
+  "fixed_time": "2026-07-01T00:00:00Z",
+  "initial_state_sha256": "e126f5d988b78e79dec10ed7e811ed213daa17a360bf5abe176a89ebb109038a",
+  "schema_version": "case19_workspace_manifest_v1"
+}

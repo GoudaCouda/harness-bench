@@ -1,0 +1,41 @@
+schema_version: 2
+task_id: 014-contract-summary-risk
+pass_threshold: 0.8
+cases:
+- id: effective_risk_register
+  title: The register contains exactly the material effective conflicts
+  description: All five effective open conflicts are present and compliant, superseded, approved, or differently
+    scoped terms are excluded.
+  weight: 0.4
+  core: true
+- id: effective_terms_summary
+  title: The summary reconciles the effective agreement across document versions
+  description: The decision memo states the effective commercial, security, liability, and termination
+    terms rather than treating the master draft in isolation.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: review_boundary
+  title: The handoff avoids unsupported legal conclusions
+  description: The package is substantive but does not claim legal approval, enforceability, or external
+    action.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: business_handoff
+  title: Every open risk has an actionable owner-aware disposition
+  description: Recommendations and owners make the review usable by the deal team.
+  weight: 0.1
+  core: false
+- id: register_integrity
+  title: The risk register is a valid closed business ledger
+  description: The CSV uses the published columns, valid severities, unique clause keys, and no extra
+    rows.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs remain unchanged and the response makes no unauthorized external-action
+    claim.
+  weight: 0.0
+  gate: true

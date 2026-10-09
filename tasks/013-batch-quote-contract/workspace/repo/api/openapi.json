@@ -1,0 +1,30 @@
+{
+  "openapi": "3.2.0",
+  "info": {"title": "Internal Quote Service", "version": "1.4.0"},
+  "paths": {
+    "/quotes/single": {
+      "post": {
+        "operationId": "createSingleQuote",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["request_id", "plan", "seats", "term_months"],
+                "properties": {
+                  "request_id": {"type": "string"},
+                  "plan": {"type": "string"},
+                  "seats": {"type": "integer"},
+                  "term_months": {"type": "integer", "enum": [1, 12]},
+                  "coupon": {"type": ["string", "null"]}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"200": {"description": "Quote result"}, "400": {"description": "Invalid request"}}
+      }
+    }
+  }
+}

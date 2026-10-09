@@ -1,0 +1,180 @@
+{
+  "task_id": "014-accessibility-retrofit",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "accessibility_retrofit_protected_assets",
+    "accessibility_retrofit_annotation_interaction_model",
+    "accessibility_retrofit_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/audit-target.svg",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "A11Y-NAV",
+      "label": "Keyboard focus gap",
+      "category": "focus",
+      "owner": "Design Systems",
+      "severity": "watch",
+      "x": 18,
+      "y": 18,
+      "w": 30,
+      "h": 12,
+      "fix": "Add visible focus state to primary navigation links"
+    },
+    {
+      "id": "A11Y-FORM",
+      "label": "Missing input label",
+      "category": "label",
+      "owner": "Growth",
+      "severity": "review",
+      "x": 59,
+      "y": 44,
+      "w": 24,
+      "h": 14,
+      "fix": "Bind visible label text to the email field"
+    },
+    {
+      "id": "A11Y-CARD",
+      "label": "Low contrast price text",
+      "category": "contrast",
+      "owner": "Catalog",
+      "severity": "review",
+      "x": 18,
+      "y": 67,
+      "w": 26,
+      "h": 16,
+      "fix": "Raise price text contrast and keep the sale badge readable"
+    },
+    {
+      "id": "A11Y-MODAL",
+      "label": "Modal close target",
+      "category": "keyboard",
+      "owner": "Marketing",
+      "severity": "watch",
+      "x": 70,
+      "y": 16,
+      "w": 17,
+      "h": 12,
+      "fix": "Expose close button name and tab stop"
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "accessibility",
+      "a11y"
+    ],
+    [
+      "annotation",
+      "marker"
+    ],
+    [
+      "target image",
+      "audit-target"
+    ],
+    [
+      "keyboard",
+      "focus"
+    ],
+    [
+      "contrast"
+    ],
+    [
+      "remediation"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "annotation-board"
+    ],
+    [
+      "data-issue-id"
+    ],
+    [
+      "Issue category"
+    ],
+    [
+      "Severity filter"
+    ],
+    [
+      "Show remediations"
+    ],
+    [
+      "selectedId",
+      "Selected finding"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Visible findings"
+    ],
+    [
+      "Review severity"
+    ],
+    [
+      "Keyboard blockers"
+    ],
+    [
+      "Annotated area"
+    ],
+    [
+      "Selected finding",
+      "Selected finding detail",
+      "Finding details",
+      "Finding detail",
+      "Issue detail"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "coordinate_tolerance_percent": 8,
+    "markers": {
+      "A11Y-NAV": {
+        "x": 18,
+        "y": 18,
+        "w": 30,
+        "h": 12
+      },
+      "A11Y-FORM": {
+        "x": 59,
+        "y": 44,
+        "w": 24,
+        "h": 14
+      },
+      "A11Y-CARD": {
+        "x": 18,
+        "y": 67,
+        "w": 26,
+        "h": 16
+      },
+      "A11Y-MODAL": {
+        "x": 70,
+        "y": 16,
+        "w": 17,
+        "h": 12
+      }
+    }
+  }
+}

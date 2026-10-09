@@ -1,0 +1,48 @@
+task_id: 014-contract-summary-risk
+title: Summarize Contract Terms And Extract Policy Risks
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: Compliance
+task_category: Research and Analysis
+task_subcategory: Evidence-Based Research
+capability_tags:
+- document_editing
+- filesystem
+- structured_data
+- version_reconciliation
+- policy_application
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- high_stakes_rules
+required_artifacts:
+- contract_summary.md
+- risk_clauses.csv
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - ICO-CONTROLLER-PROCESSOR
+task_family: 014-contract-summary-risk
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - contract_summary.md
+  - risk_clauses.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

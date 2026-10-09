@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "consent": true,
+    "dependencies": true,
+    "near_match": true,
+    "single_transaction": true,
+    "survivor_and_tombstone": true
+  },
+  "logical_state_sha256": "772851098213dcf98b8aa8343a8c4fd745d083ec8d9abef125ed437dc287655a",
+  "status": "pass",
+  "tool": "crmctl/1"
+}

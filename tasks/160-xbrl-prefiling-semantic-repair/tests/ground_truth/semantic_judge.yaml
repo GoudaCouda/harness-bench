@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 160-xbrl-prefiling-semantic-repair
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Prefiling verification handoff is complete
+  question: Does verification.md accurately explain resolved issue-level changes, preserved filing semantics, independent validator closure, remaining boundary, and that no live filing occurred?
+  pass_anchors: [Equivalent accounting and validation terminology is acceptable.]
+  fail_anchors: [Misstating numeric/context semantics or claiming submission fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

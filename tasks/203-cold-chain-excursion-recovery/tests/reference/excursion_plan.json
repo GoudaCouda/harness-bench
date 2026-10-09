@@ -1,0 +1,82 @@
+{
+  "decisions": [
+    {
+      "container_id": "CT-01",
+      "disposition": "quarantine_do_not_use",
+      "evidence_refs": [
+        "evidence/logger_readings.jsonl#device=P-A1",
+        "evidence/logger_readings.jsonl#device=S-A1",
+        "evidence/secondary_ranges.json#RANGE-A-50-53",
+        "policy/cold_chain_policy.json#temperature_band_c",
+        "state/cold_chain.db#calibrations/CAL-SA-2026",
+        "state/cold_chain.db#device_assignments/ASN-PA",
+        "state/cold_chain.db#device_assignments/ASN-SA",
+        "state/cold_chain.db#lots/LOT-AURORA"
+      ],
+      "fallback_calibration_id": "CAL-SA-2026",
+      "fallback_device_id": "S-A1",
+      "gap_intervals_utc": [
+        "2026-11-01T05:30:00Z/2026-11-01T06:00:00Z"
+      ],
+      "local_mutations": [
+        "disposition",
+        "do_not_use"
+      ],
+      "lot_id": "LOT-AURORA",
+      "next_local_action": "retain_in_do_not_use_quarantine",
+      "observed_max_c": 8.4,
+      "observed_min_c": 4.9,
+      "out_of_range_minutes": 20,
+      "primary_device_id": "P-A1"
+    },
+    {
+      "container_id": "CT-02",
+      "disposition": "hold_evidence_gap",
+      "evidence_refs": [
+        "evidence/logger_readings.jsonl#device=P-B1",
+        "evidence/secondary_ranges.json#unqualified-fallback",
+        "policy/cold_chain_policy.json#temperature_band_c",
+        "state/cold_chain.db#device_assignments/ASN-PB",
+        "state/cold_chain.db#lots/LOT-BIRCH"
+      ],
+      "fallback_calibration_id": null,
+      "fallback_device_id": null,
+      "gap_intervals_utc": [
+        "2026-11-01T05:30:00Z/2026-11-01T05:50:00Z"
+      ],
+      "local_mutations": [
+        "disposition"
+      ],
+      "lot_id": "LOT-BIRCH",
+      "next_local_action": "route_to_qa_for_missing_evidence",
+      "observed_max_c": null,
+      "observed_min_c": null,
+      "out_of_range_minutes": null,
+      "primary_device_id": "P-B1"
+    },
+    {
+      "container_id": "CT-03",
+      "disposition": "available",
+      "evidence_refs": [
+        "evidence/logger_readings.jsonl#device=P-C1",
+        "policy/cold_chain_policy.json#temperature_band_c",
+        "state/cold_chain.db#device_assignments/ASN-PC",
+        "state/cold_chain.db#lots/LOT-CEDAR"
+      ],
+      "fallback_calibration_id": null,
+      "fallback_device_id": null,
+      "gap_intervals_utc": [],
+      "local_mutations": [],
+      "lot_id": "LOT-CEDAR",
+      "next_local_action": "none",
+      "observed_max_c": 4.5,
+      "observed_min_c": 3.0,
+      "out_of_range_minutes": 0,
+      "primary_device_id": "P-C1"
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "CCR-20261101-01",
+  "schema_version": 1,
+  "source_checkpoint": "4f53d0dd201920729ce538c12809ae4bf0c7c6312a440ea8a4d3c5966095cf8e"
+}

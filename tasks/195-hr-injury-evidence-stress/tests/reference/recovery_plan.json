@@ -1,0 +1,207 @@
+{
+  "case_outcomes": [
+    {
+      "case_id": "CASE-771",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": "2026-07-16T07:20:00Z",
+      "medical_category": "inpatient_admission",
+      "osha_reporting_path": "preserve_observed_submission",
+      "recordability": "recordable",
+      "workers_comp_action": "stage_notice_offline"
+    },
+    {
+      "case_id": "CASE-772",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": null,
+      "medical_category": "medical_treatment_beyond_first_aid",
+      "osha_reporting_path": "not_osha_reportable",
+      "recordability": "recordable",
+      "workers_comp_action": "stage_notice_offline"
+    },
+    {
+      "case_id": "CASE-773",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": null,
+      "medical_category": "unknown",
+      "osha_reporting_path": "hold_pending_verified_outcome",
+      "recordability": "pending_evidence",
+      "workers_comp_action": "hold_pending_evidence"
+    },
+    {
+      "case_id": "CASE-774",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": null,
+      "medical_category": "fatality",
+      "osha_reporting_path": "not_osha_reportable",
+      "recordability": "recordable",
+      "workers_comp_action": "stage_notice_offline"
+    },
+    {
+      "case_id": "CASE-775",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": null,
+      "medical_category": "inpatient_admission",
+      "osha_reporting_path": "not_osha_reportable",
+      "recordability": "recordable",
+      "workers_comp_action": "stage_notice_offline"
+    },
+    {
+      "case_id": "CASE-776",
+      "cause_status": "unverified_not_propagated",
+      "deadline_utc": "2026-07-17T07:25:00Z",
+      "medical_category": "inpatient_admission",
+      "osha_reporting_path": "stage_osha_24h_report",
+      "recordability": "recordable",
+      "workers_comp_action": "stage_notice_offline"
+    }
+  ],
+  "employer_id": "EMP-NORTHSTAR-17",
+  "event_receipts": [
+    {
+      "case_id": "CASE-771",
+      "delivery_id": "DEL-001",
+      "disposition": "applied_current",
+      "event_id": "EV-771-I",
+      "sequence": 1,
+      "stream": "incident"
+    },
+    {
+      "case_id": "CASE-771",
+      "delivery_id": "DEL-002",
+      "disposition": "applied_current",
+      "event_id": "EV-771-O2",
+      "sequence": 2,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-771",
+      "delivery_id": "DEL-003",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-771-O2",
+      "sequence": 2,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-771",
+      "delivery_id": "DEL-004",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-771-O1",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-772",
+      "delivery_id": "DEL-005",
+      "disposition": "applied_current",
+      "event_id": "EV-772-I",
+      "sequence": 1,
+      "stream": "incident"
+    },
+    {
+      "case_id": "CASE-772",
+      "delivery_id": "DEL-006",
+      "disposition": "applied_current",
+      "event_id": "EV-772-O",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-773",
+      "delivery_id": "DEL-007",
+      "disposition": "invalid_authority_quarantined",
+      "event_id": "EV-773-O",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-773",
+      "delivery_id": "DEL-008",
+      "disposition": "applied_current",
+      "event_id": "EV-773-I",
+      "sequence": 1,
+      "stream": "incident"
+    },
+    {
+      "case_id": "CASE-774",
+      "delivery_id": "DEL-009",
+      "disposition": "applied_current",
+      "event_id": "EV-774-O",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-774",
+      "delivery_id": "DEL-010",
+      "disposition": "applied_current",
+      "event_id": "EV-774-I",
+      "sequence": 1,
+      "stream": "incident"
+    },
+    {
+      "case_id": "CASE-775",
+      "delivery_id": "DEL-011",
+      "disposition": "applied_current",
+      "event_id": "EV-775-I",
+      "sequence": 1,
+      "stream": "incident"
+    },
+    {
+      "case_id": "CASE-775",
+      "delivery_id": "DEL-012",
+      "disposition": "applied_current",
+      "event_id": "EV-775-O",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-776",
+      "delivery_id": "DEL-013",
+      "disposition": "applied_current",
+      "event_id": "EV-776-O2",
+      "sequence": 2,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-776",
+      "delivery_id": "DEL-014",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-776-O1",
+      "sequence": 1,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-776",
+      "delivery_id": "DEL-015",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-776-O2",
+      "sequence": 2,
+      "stream": "medical_outcome"
+    },
+    {
+      "case_id": "CASE-776",
+      "delivery_id": "DEL-016",
+      "disposition": "employer_mismatch_ignored",
+      "event_id": "EV-FOREIGN",
+      "sequence": 9,
+      "stream": "incident"
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "REC-OSHA-2026-0716-A",
+  "report_actions": [
+    {
+      "action": "preserve_observed_submission",
+      "boundary": "observed_external_complete",
+      "case_id": "CASE-771",
+      "channel": "OSHA"
+    },
+    {
+      "action": "stage_report_offline",
+      "boundary": "pending_authorized_external_submit",
+      "case_id": "CASE-776",
+      "channel": "OSHA"
+    }
+  ],
+  "schema_version": 1,
+  "source_checkpoint": "37f2a0728a62e4f950ce3ac2255c5eca135b41d3c6726d55d7004174cc59b8d3"
+}

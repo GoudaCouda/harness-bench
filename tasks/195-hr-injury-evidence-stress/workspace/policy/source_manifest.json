@@ -1,0 +1,8 @@
+{
+  "files": {
+    "evidence/event_deliveries.jsonl": "b936b38802867754e500dde126c9d38729b2f2502ec69b0cd20c0796587766bc",
+    "evidence/signed_outcomes.jsonl": "e2edc792bb75306102fffea8e1d2a31e066a2463173fbce8e4188f4114bd2b77",
+    "policy/reporting_policy.json": "3b19cb22669ab8e247421b4f6117f0370576722235ed44d18ed7dfedbe6807db"
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,5 @@
+session_id,user_key,session_start,session_end,event_count,landing_page,last_page,converted,campaign_source
+U100-1,U100,2026-04-10T10:00:00Z,2026-04-10T10:25:00Z,4,/home,/checkout,true,google
+U100-2,U100,2026-04-10T11:00:00Z,2026-04-10T11:00:00Z,1,/account,/account,false,direct
+U200-1,U200,2026-04-10T09:00:00Z,2026-04-10T09:30:00Z,2,/home,/features,false,email
+U200-2,U200,2026-04-10T10:00:01Z,2026-04-10T10:00:01Z,1,/checkout,/checkout,true,email

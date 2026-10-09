@@ -1,0 +1,19 @@
+{
+  "checkpoint_id": "GP-CHECKPOINT-20260818-012",
+  "files": {
+    "evidence/grade_feed.jsonl": "eb35a403a93d537e5c3c73519efa72d5b392da04f5b6623ae49b6b49c47fb2fe",
+    "evidence/identity_rekeys.json": "a6d5bcca525f8b7e98f39bc45d5807a3000557eba3f469b68b0df998618c19ab",
+    "gradepassctl.py": "498636b0e12d672b16f512f20c4cd2b973460103f4258fe27bb0817ed70b090f",
+    "policy/passback_policy.json": "a5b5a399619cf9642b6b7190a09cfba8c2fe917ed0cc0132ada4d5b95db5b7ee"
+  },
+  "protected_tables": {
+    "assignments": "fabf6e6bc0d14be95d6c24ceb72bcdcf96af8681eda1205927357b1e1b125f9b",
+    "enrollments": "f16c205c648f8ed2916ec4c731bd6e904ffec091d2d1adcb40c025c591792ce2",
+    "identity_aliases": "ea94a6e546e27400e0d547f2ada4e56ca4a9da653b98f6974243610619d45fb2",
+    "lms_attempts": "51ada3a93c376ccd6d0ce33e1499d9c7a708c47c0d81b344e1c2a51dbc81fc5f",
+    "manual_overrides": "178b1846994860d15f888e125599f317d0ee9ef6da7324436341da9b4e51f176",
+    "sections": "8514a046c9e8f1e802c21c222cefdefd69d0a4129b075510dce41611c703688c",
+    "students": "158bf7ea137e7c4fe4e85febe9f6da3745614e2ccdb225c48e3f4780d0768508"
+  },
+  "schema_version": 1
+}

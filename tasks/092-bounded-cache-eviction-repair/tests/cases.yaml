@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 092-bounded-cache-eviction-repair
+pass_threshold: 0.8
+cases:
+- id: ttl_lru_and_overwrite
+  title: TTL and LRU state transitions preserve exact recency and capacity
+  description: Inclusive expiry, access stamps, lexical ties, overwrite accounting, values, and canonical state are correct.
+  weight: 0.3
+  core: true
+- id: pinned_transactional_failure
+  title: Pinned capacity and failed writes preserve durable cache state
+  description: Rejected size and capacity writes apply no planned eviction or overwrite while valid siblings
+    continue.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_cache_replay
+  title: Protected replay artifacts match the repaired state machine
+  description: State and event JSON are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Cache invariants and verification are handed off clearly
+  description: Another engineer can understand expiry recency pinning transactional writes validation
+    and checks.
+  weight: 0.2
+  core: false
+- id: source_and_runtime_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

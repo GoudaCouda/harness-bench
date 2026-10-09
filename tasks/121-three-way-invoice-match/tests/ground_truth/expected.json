@@ -1,0 +1,46 @@
+{
+  "invoice_total": "2855.60",
+  "approved_total": "1489.60",
+  "held_total": "1366.00",
+  "quantity_ids": ["IL-01", "IL-02", "IL-05", "IL-09", "IL-10"],
+  "control_ids": ["IL-03", "IL-04", "IL-06", "IL-07", "IL-08", "IL-11"],
+  "exception_ids": ["IL-02", "IL-03", "IL-04", "IL-05", "IL-08", "IL-10"],
+  "evidence_requirements": {
+    "IL-01": {"required": ["invoices.csv#IL-01", "purchase_orders.csv#PO-10-L1", "receipts.csv#R-01", "receipts.csv#R-02"], "allowed": ["invoices.csv#IL-01", "purchase_orders.csv#PO-10-L1", "receipts.csv#R-01", "receipts.csv#R-02"]},
+    "IL-02": {"required": ["invoices.csv#IL-02", "purchase_orders.csv#PO-10-L2", "receipts.csv#R-03"], "allowed": ["invoices.csv#IL-02", "purchase_orders.csv#PO-10-L2", "receipts.csv#R-03"]},
+    "IL-03": {"required": ["invoices.csv#IL-03", "paid_invoice_register.csv#DUP-7"], "allowed": ["invoices.csv#IL-03", "paid_invoice_register.csv#DUP-7"]},
+    "IL-04": {"required": ["invoices.csv#IL-04", "purchase_orders.csv#PO-11-L1"], "allowed": ["invoices.csv#IL-04", "purchase_orders.csv#PO-11-L1", "receipts.csv#R-04"]},
+    "IL-05": {"required": ["invoices.csv#IL-05", "purchase_orders.csv#PO-12-L1", "receipts.csv#R-05", "receipts.csv#R-06"], "allowed": ["invoices.csv#IL-05", "purchase_orders.csv#PO-12-L1", "receipts.csv#R-05", "receipts.csv#R-06"]},
+    "IL-06": {"required": ["invoices.csv#IL-06", "purchase_orders.csv#PO-13-L1", "receipts.csv#R-07"], "allowed": ["invoices.csv#IL-06", "purchase_orders.csv#PO-13-L1", "receipts.csv#R-07"]},
+    "IL-07": {"required": ["invoices.csv#IL-07", "purchase_orders.csv#PO-14-L1", "receipts.csv#R-08"], "allowed": ["invoices.csv#IL-07", "purchase_orders.csv#PO-14-L1", "receipts.csv#R-08"]},
+    "IL-08": {"required": ["invoices.csv#IL-08", "paid_invoice_register.csv#PEND-9"], "allowed": ["invoices.csv#IL-08", "paid_invoice_register.csv#PEND-9"]},
+    "IL-09": {"required": ["invoices.csv#IL-09", "purchase_orders.csv#PO-16-L1", "receipts.csv#R-09"], "allowed": ["invoices.csv#IL-09", "purchase_orders.csv#PO-16-L1", "receipts.csv#R-09"]},
+    "IL-10": {"required": ["invoices.csv#IL-10", "purchase_orders.csv#PO-17-L1", "receipts.csv#R-10"], "allowed": ["invoices.csv#IL-10", "purchase_orders.csv#PO-17-L1", "receipts.csv#R-10"]},
+    "IL-11": {"required": ["invoices.csv#IL-11", "purchase_orders.csv#PO-18-L1", "receipts.csv#R-11", "paid_invoice_register.csv#REV-8"], "allowed": ["invoices.csv#IL-11", "purchase_orders.csv#PO-18-L1", "receipts.csv#R-11", "paid_invoice_register.csv#REV-8"]}
+  },
+  "control": {
+    "batch_id": "2026-07-ap-review",
+    "policy_id": "AP-POL-7.2",
+    "cutoff_date": "2026-07-31",
+    "currency": "USD",
+    "execution_state": "review_only",
+    "invoice_line_count": 11,
+    "exception_line_count": 6,
+    "invoice_total": "2855.60",
+    "approved_total": "1489.60",
+    "held_total": "1366.00"
+  },
+  "rows": {
+    "IL-01": ["matched", "200.00", "0.00", "none", "ap_review"],
+    "IL-02": ["partial_hold", "150.00", "100.00", "receipt_shortfall", "receiving"],
+    "IL-03": ["full_hold", "0.00", "108.00", "duplicate_control", "ap_control"],
+    "IL-04": ["full_hold", "0.00", "208.00", "price_variance", "buyer"],
+    "IL-05": ["partial_hold", "150.00", "150.00", "receipt_shortfall", "receiving"],
+    "IL-06": ["matched", "102.00", "0.00", "none", "ap_review"],
+    "IL-07": ["matched", "117.60", "0.00", "none", "ap_review"],
+    "IL-08": ["full_hold", "0.00", "300.00", "duplicate_control", "ap_control"],
+    "IL-09": ["matched", "180.00", "0.00", "none", "ap_review"],
+    "IL-10": ["partial_hold", "500.00", "500.00", "receipt_shortfall", "receiving"],
+    "IL-11": ["matched", "90.00", "0.00", "none", "ap_review"]
+  }
+}

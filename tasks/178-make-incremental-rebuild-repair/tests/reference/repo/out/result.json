@@ -1,0 +1,18 @@
+{
+  "cycles": [],
+  "missing": [],
+  "order": [
+    "config",
+    "src.c",
+    "obj.o",
+    "app"
+  ],
+  "rebuild": [
+    "obj.o",
+    "app"
+  ],
+  "up_to_date": [
+    "config",
+    "src.c"
+  ]
+}

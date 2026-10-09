@@ -1,0 +1,20 @@
+{
+  "blockers": ["CVE-SYN-2026-7101", "CVE-SYN-2026-7103", "CVE-SYN-2026-7104", "CVE-SYN-2026-7105"],
+  "decision_ledger_sha256": "66993009090ed4c9589915cdf995ebbb2f73e3f547ba2c83b6beaad402cb29cb",
+  "gate_state": "blocked_vulnerability_review",
+  "input_sha256": {
+    "evidence/kev_snapshot.json": "9099d71f96aff559ff2542ba972cd091eafe68e785bd5b83f5de77b4410f670d",
+    "evidence/release.cdx.json": "47db72b4b8d52087730539cc3032db3bf7bf4a165a964bdc732cf87621ef3c84",
+    "evidence/supplier.vex.json": "c8dc9dd0cc2acf6a066fa8431125aea92950f205137a3c9ed81d9b58d0b97a18",
+    "evidence/trust_store.json": "1cf5b85f76dad573722b5f95f792452418c00703ee315863832fb72a16a0b8fd",
+    "evidence/vulnerability_feed.json": "867f1eb1155be95debcc051d6430839dc201dff73d7a41ae6a7fb9121ca31e8d",
+    "policy/release_policy.json": "0acb39a36609e607503163c674c8cc958616d6e7508ca037ea5f7d58ed29ca28"
+  },
+  "policy_version": "2026.08",
+  "rejections_sha256": "ea52e6f93dabd9a2afc6fbafccfd63c0b6588c00d72bb4cab7db4fad9726e221",
+  "release_id": "REL-2026-08-17-A",
+  "replay_fingerprint": "c755a988096de96d713005215ccd49647cf5fb8892de04f16ac0102c408af5f4",
+  "replay_verified": true,
+  "status": "pass",
+  "tool": "releasectl/1"
+}

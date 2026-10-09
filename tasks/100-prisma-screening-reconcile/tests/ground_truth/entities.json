@@ -1,0 +1,145 @@
+{
+  "source_ids": [
+    "P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10",
+    "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09"
+  ],
+  "evidence_requirements": {
+    "P01": {
+      "required": ["pubmed_export.csv#P01"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P01", "scopus_export.ris#S01"]
+    },
+    "S01": {
+      "required": ["scopus_export.ris#S01"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P01", "scopus_export.ris#S01"]
+    },
+    "P02": {
+      "required": ["pubmed_export.csv#P02"],
+      "one_of": [["registry_crosswalk.csv#BETA-STEP-02", "registry_crosswalk.csv#NCT1002"]],
+      "allowed": ["pubmed_export.csv#P02", "scopus_export.ris#S02", "registry_crosswalk.csv#BETA-STEP-02", "registry_crosswalk.csv#NCT1002"]
+    },
+    "S02": {
+      "required": ["scopus_export.ris#S02"],
+      "one_of": [["registry_crosswalk.csv#BETA-STEP-02", "registry_crosswalk.csv#NCT1002"]],
+      "allowed": ["pubmed_export.csv#P02", "scopus_export.ris#S02", "registry_crosswalk.csv#BETA-STEP-02", "registry_crosswalk.csv#NCT1002"]
+    },
+    "P03": {
+      "required": ["pubmed_export.csv#P03"],
+      "one_of": [["registry_crosswalk.csv#GAMMA-WORK-03", "registry_crosswalk.csv#NCT1003"]],
+      "allowed": ["pubmed_export.csv#P03", "registry_crosswalk.csv#GAMMA-WORK-03", "registry_crosswalk.csv#NCT1003"]
+    },
+    "S03": {
+      "required": ["scopus_export.ris#S03"],
+      "one_of": [["registry_crosswalk.csv#GAMMA-WORK-03", "registry_crosswalk.csv#NCT1003"]],
+      "allowed": ["scopus_export.ris#S03", "registry_crosswalk.csv#GAMMA-WORK-03", "registry_crosswalk.csv#NCT1003"]
+    },
+    "P04": {
+      "required": ["pubmed_export.csv#P04"],
+      "one_of": [["registry_crosswalk.csv#DELTA-TEAM-04", "registry_crosswalk.csv#NCT1004"]],
+      "allowed": ["pubmed_export.csv#P04", "registry_crosswalk.csv#DELTA-TEAM-04", "registry_crosswalk.csv#NCT1004"]
+    },
+    "S04": {
+      "required": ["scopus_export.ris#S04"],
+      "one_of": [["registry_crosswalk.csv#DELTA-TEAM-04", "registry_crosswalk.csv#NCT1004"]],
+      "allowed": ["scopus_export.ris#S04", "registry_crosswalk.csv#DELTA-TEAM-04", "registry_crosswalk.csv#NCT1004"]
+    },
+    "P05": {
+      "required": ["pubmed_export.csv#P05"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P05", "scopus_export.ris#S05"]
+    },
+    "S05": {
+      "required": ["scopus_export.ris#S05"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P05", "scopus_export.ris#S05"]
+    },
+    "P06": {
+      "required": ["pubmed_export.csv#P06"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P06"]
+    },
+    "S06": {
+      "required": ["scopus_export.ris#S06"],
+      "one_of": [],
+      "allowed": ["scopus_export.ris#S06"]
+    },
+    "P07": {
+      "required": ["pubmed_export.csv#P07"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P07", "scopus_export.ris#S07"]
+    },
+    "S07": {
+      "required": ["scopus_export.ris#S07"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P07", "scopus_export.ris#S07"]
+    },
+    "P08": {
+      "required": ["pubmed_export.csv#P08"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P08", "registry_crosswalk.csv#IOTA-HOSPITAL-08", "registry_crosswalk.csv#NCT1008"]
+    },
+    "S08": {
+      "required": ["scopus_export.ris#S08"],
+      "one_of": [],
+      "allowed": ["scopus_export.ris#S08", "registry_crosswalk.csv#KAPPA-STUDENT-09", "registry_crosswalk.csv#NCT1009"]
+    },
+    "P09": {
+      "required": ["pubmed_export.csv#P09"],
+      "one_of": [["registry_crosswalk.csv#SHIFT-DIGITAL-10", "registry_crosswalk.csv#NCT1010"]],
+      "allowed": ["pubmed_export.csv#P09", "registry_crosswalk.csv#SHIFT-DIGITAL-10", "registry_crosswalk.csv#NCT1010"]
+    },
+    "S09": {
+      "required": ["scopus_export.ris#S09"],
+      "one_of": [["registry_crosswalk.csv#SHIFT-DIGITAL-10", "registry_crosswalk.csv#NCT1010"]],
+      "allowed": ["scopus_export.ris#S09", "registry_crosswalk.csv#SHIFT-DIGITAL-10", "registry_crosswalk.csv#NCT1010"]
+    },
+    "P10": {
+      "required": ["pubmed_export.csv#P10"],
+      "one_of": [],
+      "allowed": ["pubmed_export.csv#P10"]
+    }
+  },
+  "reports": [
+    {"members": ["P01", "S01"], "normalized_doi": "10.7777/alpha.2024", "decision": "include", "reason": ""},
+    {"members": ["P02", "S02"], "normalized_doi": "10.7777/beta.2023", "decision": "include", "reason": ""},
+    {"members": ["P03"], "normalized_doi": "", "decision": "include", "reason": ""},
+    {"members": ["S03"], "normalized_doi": "10.7777/gamma.full", "decision": "include", "reason": ""},
+    {"members": ["P04"], "normalized_doi": "10.7777/delta.protocol", "decision": "exclude", "reason": "wrong_publication_type"},
+    {"members": ["S04"], "normalized_doi": "10.7777/delta.results", "decision": "include", "reason": ""},
+    {"members": ["P05", "S05"], "normalized_doi": "10.7777/epsilon.editorial", "decision": "exclude", "reason": "editorial"},
+    {"members": ["P06"], "normalized_doi": "10.7777/zeta.animals", "decision": "exclude", "reason": "wrong_population"},
+    {"members": ["S06"], "normalized_doi": "10.7777/eta.observational", "decision": "exclude", "reason": "wrong_design"},
+    {"members": ["P07", "S07"], "normalized_doi": "10.7777/theta.2025", "decision": "include", "reason": ""},
+    {"members": ["P08"], "normalized_doi": "10.7777/iota.hospital", "decision": "include", "reason": ""},
+    {"members": ["S08"], "normalized_doi": "10.7777/kappa.students", "decision": "exclude", "reason": "wrong_population"},
+    {"members": ["P09"], "normalized_doi": "", "decision": "exclude", "reason": "wrong_publication_type"},
+    {"members": ["S09"], "normalized_doi": "10.7777/lambda.results", "decision": "include", "reason": ""},
+    {"members": ["P10"], "normalized_doi": "", "decision": "not_retrieved", "reason": "full_text_unavailable"}
+  ],
+  "studies": [
+    ["P01", "S01"],
+    ["P02", "S02"],
+    ["P03", "S03"],
+    ["P04", "S04"],
+    ["P05", "S05"],
+    ["P06"],
+    ["S06"],
+    ["P07", "S07"],
+    ["P08"],
+    ["S08"],
+    ["P09", "S09"],
+    ["P10"]
+  ],
+  "flow": {
+    "records_identified": 19,
+    "duplicate_records_removed": 4,
+    "reports_sought_for_retrieval": 15,
+    "reports_not_retrieved": 1,
+    "reports_assessed_for_eligibility": 14,
+    "reports_excluded": 6,
+    "included_reports": 8,
+    "included_studies": 7,
+    "flow_closes": true
+  }
+}

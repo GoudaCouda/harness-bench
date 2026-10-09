@@ -1,0 +1,4 @@
+cohort,visit_users,purchase_users,purchase_rate,largest_dropoff_transition
+beta,2,0,0.0000,trial_start->purchase
+control,6,3,0.5000,trial_start->purchase
+variant,6,2,0.3333,trial_start->purchase

@@ -1,0 +1,10 @@
+{
+  "errors": {
+    "acquisitions": [],
+    "event_dispositions": [],
+    "plan": [],
+    "scope_actions": []
+  },
+  "semantic_digest": "de1ff34c7323a1dcd286f18c40cb6355cea191fefe112cb103f223797b7ba6f5",
+  "valid": true
+}

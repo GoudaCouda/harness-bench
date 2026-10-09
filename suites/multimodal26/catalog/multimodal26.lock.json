@@ -1,0 +1,117 @@
+{
+  "hash_policy": {
+    "complete_package": "snapshot_v1_includes_hidden_files_excludes_cache_and_llm_rubric",
+    "task_definition": "runner_v1_excludes_reference_cache_and_llm_rubric"
+  },
+  "schema_version": 1,
+  "task_count": 26,
+  "task_ids_sha256": "sha256:5764149e9f2a01d882aa53bab2f441249334a1a1eeaa45ce6d69e0b3a5074fb4",
+  "task_set": "multimodal26",
+  "task_set_manifest_sha256": "sha256:d0a37bb3e4dc6550a6599b013d7677e53630d44fa5cd39bd93dbb60641018342",
+  "tasks": {
+    "001-creator-revenue-dashboard": {
+      "complete_package_sha256": "749fd904f4d0708f503fb4990103e52ceac0b527474c4197a8c688d309fbc45a",
+      "task_definition_sha256": "493dbc7ce8b595885f0b8374f1c1f682ed83dfdec62cab1aaf602102f28f6791"
+    },
+    "002-studio-task-board": {
+      "complete_package_sha256": "15ba7e86ed5309d3d36dc42171b0e656563d4f505f6d74014e47c5944ebda182",
+      "task_definition_sha256": "37113f08fcb62dad1946f7d42f4f8ea89a400079824d1f4e438c1b1856fbb8ac"
+    },
+    "003-pet-care-game": {
+      "complete_package_sha256": "994d27960cfc5f47bf9a7fc708081b5be843e043e5ccadcb6cecb312aabb8b67",
+      "task_definition_sha256": "d5718da439208ccfdc090ac7d386b251c05b824cce258663a4347e22a9ac9a56"
+    },
+    "004-incident-command-console": {
+      "complete_package_sha256": "1899636c3dbcd1d63472d59c1a4138a9d783bc4ed319e9a6609c1aed8fc6c716",
+      "task_definition_sha256": "bc6a0364a40bb7d0e34ced1c81648c7caafe957386a138802c6d0c4f9a1bcd6f"
+    },
+    "005-research-lab-site": {
+      "complete_package_sha256": "551924e6be7e8ea109910d41421280ea88a553d6981f5fab710778f0deb2c362",
+      "task_definition_sha256": "ed7efe8288b772bb715b3eda68a4d3cfa6f065ddc854a8fdd1f8a31db2fae56c"
+    },
+    "006-appointment-finder-ui": {
+      "complete_package_sha256": "d2c3fcd84a63b069acbca345d069279b9adaa8a3257dbde2da0056b14208afee",
+      "task_definition_sha256": "967c23929871868350c6528ecd2cc7c2387b22fd27521bf1712cf39c3adc0932"
+    },
+    "007-budget-planning-workspace": {
+      "complete_package_sha256": "24773e37404352a7d75333977ec622b21e49525d78fa62318b6a41cb55b4fe95",
+      "task_definition_sha256": "6ad7ebc193554e4e08cf9de74758dbe37bc0f4e25b2bdc95a6f1d6a72db2b793"
+    },
+    "008-media-timeline-editor": {
+      "complete_package_sha256": "a32418286b7647813f8ceacc1f45eded09a8873e82224c771e73868e7fa3dcf9",
+      "task_definition_sha256": "f24c296782530ca9f36217afe84bf2a338383269325a2cc82cc93e08076d7bd4"
+    },
+    "009-course-builder-app": {
+      "complete_package_sha256": "8b70bcfd02defdd0e192d0f4d61c788633182311b3e4a15f748804af1911545f",
+      "task_definition_sha256": "3877f62ed3233f1c569656c47298efe9a2a501ef42b75d454938f2363d238c28"
+    },
+    "010-support-ticket-router": {
+      "complete_package_sha256": "794b191abd7b608f295ffa59040585d681fdd201ce85985a4387e66c126ef685",
+      "task_definition_sha256": "1dd9eb2daf1979ae9d478324b220edc93643404001de1b542b41e3e6928be480"
+    },
+    "011-local-data-explorer": {
+      "complete_package_sha256": "43d618786462352e8592baea2d0f287976d5f30c820447d8014338890da8a4ad",
+      "task_definition_sha256": "83cdde082313ad2a083f00e62f9b9890f0c5575239b30fa5fc457e15ab5976db"
+    },
+    "012-policy-diff-viewer": {
+      "complete_package_sha256": "80ad17a28c04eb06ec614e6060e3e14aa538ba3fbf926033d5d14faa58a0a385",
+      "task_definition_sha256": "38e5454bd283a71739d66d18f3d23d10fc01c8f88ffd7fa355ce58ba481126f7"
+    },
+    "013-kanban-build-repair": {
+      "complete_package_sha256": "f8da3e1a374e97121d8fc83fbf5a870d4cb8ccc8f633c4a34a438bdc5b0f51b4",
+      "task_definition_sha256": "cf57256d62fa99be5dbf5ec88dd80f60fd4bb9418870e97d944a4c5fa058bac2"
+    },
+    "014-accessibility-retrofit": {
+      "complete_package_sha256": "ecf5872325432531a36482aae80701517396b3cb4f5ecd23e52838407884c1ae",
+      "task_definition_sha256": "8200c2815162b1c42fbd23a8bdc02161e44744aced9363c6a65c09a5b46f6051"
+    },
+    "015-responsive-redesign": {
+      "complete_package_sha256": "4688241081b45d201e219f25514ba488275fdef3d35548346b3f312ac086cbaf",
+      "task_definition_sha256": "6785afacd623b112c2e252ddb83bfd8f64b1532107ac6ed6f821f4297017c8fb"
+    },
+    "016-feature-flag-admin": {
+      "complete_package_sha256": "153f8e1e1e3a4a8e0c95b67b6168ede07c8190c782d932dfa656b445a9fe1478",
+      "task_definition_sha256": "e3fbb646490be06dda214d9492e201713a095b95129b30a38734aabd24916056"
+    },
+    "017-travel-itinerary-planner": {
+      "complete_package_sha256": "5fc5479083d13c5e00956d061ae4c69defc8335cba29780b6189697231b39856",
+      "task_definition_sha256": "0fb79e19bbd0525a4776a722f563375f6929b8f9e8c403d8fc0d9d53cbe5eeea"
+    },
+    "018-scientific-simulation-controls": {
+      "complete_package_sha256": "197da54ee061bda142b071ad5b2db64ec53aa53dce938feeccada67edff03e4b",
+      "task_definition_sha256": "9687537425ea43d3868cad67f4307b40f0ff003c78ac910e57116717ba0597bb"
+    },
+    "019-portfolio-reference-rebuild": {
+      "complete_package_sha256": "0e499fc255749344ca37cc1537f07f71357f69f29c81f7f62d76bc7efc1bedb8",
+      "task_definition_sha256": "501ebbfb64577fe84565fa101fc53261648eea2851ff7e4e98e704d7b14a1fef"
+    },
+    "020-form-builder-validation": {
+      "complete_package_sha256": "9100606a2f044c03dde5510e9398b0a1dae4c81fc20634f2507b2838aa683e4b",
+      "task_definition_sha256": "c6dd9c5c6c6e5f0ea81e4b432c85ded2b6019d58eb0e6edcf015c14b4c7738c5"
+    },
+    "021-choropleth-map-selection": {
+      "complete_package_sha256": "046177de7b1f31b4b118dd84da2a938de461b165cb239ca9c3056a8fd921e15d",
+      "task_definition_sha256": "6997e1129db917f93ebfa6272288ffabff854cba251d23f2c28ddb9a3d2c24b8"
+    },
+    "022-waveform-audio-cue-editor": {
+      "complete_package_sha256": "4b43c1e7b408ebc8e37a0c9659d345d6d85cb2759f216c26e69eb0a461a736ed",
+      "task_definition_sha256": "8acb9bcaf7f80922b9327b1f3b744c504bdb980d9814f2216ae6979b7b45f59b"
+    },
+    "023-spreadsheet-grid-formula": {
+      "complete_package_sha256": "17ccc23aaa462749cacf3c288fbacf3aff8d5e70bda240a327b7c3bbaffddaed",
+      "task_definition_sha256": "edd430aec88fb0b8ae1b4764851370674d64ccedd33513a88225fee79d6606c3"
+    },
+    "024-image-pair-diff-annotation": {
+      "complete_package_sha256": "19227699547e6d566a5294bedef8bf4ff54add6bbc8e53041445a6bc1109170f",
+      "task_definition_sha256": "13696d5f8e35e0ff6e70cb31eaabcf5f04aa16b7e44ffe402f06b51d2344a75a"
+    },
+    "025-network-graph-explorer": {
+      "complete_package_sha256": "a18bf65eefd7fe97fc5e621f5d1fdd9be1765b72263b81bc52f7a6d7c3971cac",
+      "task_definition_sha256": "ea1935e5b5491ec22b923ffac26bfae65b7f4139fd2ef65e6be01f3c64731728"
+    },
+    "026-wysiwyg-print-preview": {
+      "complete_package_sha256": "fe0173f6e551387340b1d1336493235e681b694185f1dd5266d10b2f53a65f1a",
+      "task_definition_sha256": "108e9dd3966a146a9a334bf0618a0e8334b72a84a0a9940bf569d1488ba9c25b"
+    }
+  }
+}

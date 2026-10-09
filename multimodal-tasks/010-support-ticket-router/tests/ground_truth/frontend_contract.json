@@ -1,0 +1,326 @@
+{
+  "schema_version": 3,
+  "task_id": "010-support-ticket-router",
+  "contract_type": "router",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "support_ticket_router_protected_local_data",
+    "support_ticket_router_router_interaction_model",
+    "support_ticket_router_router_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "minimum_records": 6,
+  "minimum_handlers": 5,
+  "data_profile": {
+    "status_values": [
+      "clear",
+      "watch",
+      "review"
+    ],
+    "minimum_categories": 3,
+    "minimum_owners": 3,
+    "primary_key": "primary",
+    "secondary_key": "secondary"
+  },
+  "record_ids": [
+    "TCK-7004",
+    "TCK-7011",
+    "TCK-7020",
+    "TCK-7033",
+    "TCK-7004-R1",
+    "TCK-7011-R2"
+  ],
+  "identity_tokens": [
+    "TCK-7004",
+    "Chargeback threat",
+    "billing",
+    "Gold customer",
+    "review",
+    "96",
+    "9",
+    "TCK-7011",
+    "Late replacement",
+    "fulfillment",
+    "Standard customer",
+    "watch",
+    "74",
+    "28",
+    "TCK-7020",
+    "Sizing confusion",
+    "returns",
+    "Silver customer",
+    "clear",
+    "45",
+    "6",
+    "TCK-7033",
+    "Damaged bundle",
+    "warehouse",
+    "Gold customer",
+    "watch",
+    "82",
+    "17",
+    "TCK-7004-R1",
+    "Chargeback threat follow-up",
+    "fulfillment",
+    "Silver customer",
+    "clear",
+    "110",
+    "15",
+    "TCK-7011-R2",
+    "Late replacement follow-up",
+    "returns",
+    "Gold customer",
+    "watch",
+    "91",
+    "35"
+  ],
+  "required_label_groups": [
+    [
+      "Priority score",
+      "Priority",
+      "Urgency score"
+    ],
+    [
+      "Age hours",
+      "Age"
+    ],
+    [
+      "Queue load",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Routing confidence",
+      "ticket router"
+    ]
+  ],
+  "domain_groups": [
+    [
+      "ticket",
+      "case",
+      "request"
+    ],
+    [
+      "urgency",
+      "priority"
+    ],
+    [
+      "queue",
+      "inbox",
+      "backlog",
+      "route",
+      "routing",
+      "assign"
+    ],
+    [
+      "router",
+      "ticket router",
+      "ticket"
+    ]
+  ],
+  "state_groups": [
+    [
+      "queueFilter",
+      "setQueueFilter",
+      "Queue filter"
+    ],
+    [
+      "selected ticket",
+      "selected case",
+      "selected ticket"
+    ],
+    [
+      "routingMode",
+      "setRoutingMode",
+      "Routing mode"
+    ],
+    [
+      "ticketSearch",
+      "setTicketSearch",
+      "Ticket search"
+    ]
+  ],
+  "logic_groups": [
+    [
+      "some",
+      "urgent detection"
+    ],
+    [
+      "Map",
+      "queue grouping"
+    ],
+    [
+      "Math.max",
+      "capacity floor"
+    ],
+    [
+      "visibleRecords",
+      "visible set"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "queueFilter",
+      "setQueueFilter",
+      "queue filter"
+    ],
+    [
+      "selected ticket",
+      "selected case",
+      "ticket selection"
+    ],
+    [
+      "routingMode",
+      "setRoutingMode",
+      "routing mode"
+    ],
+    [
+      "urgentOnly",
+      "setUrgentOnly",
+      "urgent toggle"
+    ],
+    [
+      "agentCapacity",
+      "setAgentCapacity",
+      "agent capacity"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "priorityScore",
+      "Priority score",
+      "priority total"
+    ],
+    [
+      "ageHours",
+      "Age hours",
+      "age average"
+    ],
+    [
+      "queueLoad",
+      "Queue load",
+      "queue load"
+    ],
+    [
+      "routingConfidence",
+      "Routing confidence",
+      "confidence score"
+    ],
+    [
+      "agent capacity",
+      "capacity floor",
+      "routing confidence"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "routing desk",
+      "queue lanes",
+      "triage card"
+    ],
+    [
+      "assignee panel",
+      "priority meter",
+      "sla rail"
+    ]
+  ],
+  "optional_logic_groups": [
+    [
+      "useMemo"
+    ],
+    [
+      "useReducer"
+    ],
+    [
+      "custom hook"
+    ]
+  ],
+  "derived_tokens": [],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Queue filter",
+        "value": "billing"
+      },
+      {
+        "kind": "fill",
+        "label": "Ticket search",
+        "value": "Chargeback"
+      },
+      {
+        "kind": "click",
+        "text": "TCK-7004"
+      },
+      {
+        "kind": "select",
+        "label": "Routing mode",
+        "value": "router-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Agent capacity",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "router-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "TCK-7004",
+      "category": "billing",
+      "mode": "router-review",
+      "search_value": "Chargeback",
+      "range_value": 64,
+      "visible_id_subset": [
+        "TCK-7004"
+      ],
+      "selected_detail_tokens": [
+        "Gold customer",
+        "billing",
+        "review",
+        "96",
+        "9"
+      ],
+      "after_clearing_search_subset": [
+        "TCK-7004",
+        "TCK-7011-R2"
+      ],
+      "focus_subset": [
+        "TCK-7004"
+      ],
+      "focus_forbidden": [
+        "TCK-7020"
+      ],
+      "detail_switch_id": "TCK-7011-R2",
+      "detail_switch_tokens": [
+        "TCK-7011-R2",
+        "Late replacement follow-up",
+        "Gold customer",
+        "returns",
+        "watch",
+        "91",
+        "35"
+      ],
+      "summary_change_labels": [
+        "Priority score",
+        "Age hours",
+        "Queue load",
+        "Routing confidence"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 6
+    },
+    "action_count": 6
+  }
+}

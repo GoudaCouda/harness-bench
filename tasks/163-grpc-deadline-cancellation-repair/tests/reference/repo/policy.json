@@ -1,0 +1,1 @@
+{"base_backoff_ms":100,"max_attempts":3,"max_backoff_ms":400,"per_try_timeout_ms":1000,"reserve_ms":50,"retryable_statuses":["RESOURCE_EXHAUSTED","UNAVAILABLE"]}

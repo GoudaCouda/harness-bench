@@ -1,0 +1,25 @@
+order_id,booked_at,region,account,gross_amount,status,currency
+N-1001,2026-07-03,North,Aster Labs,1250.00,fulfilled,USD
+N-1002,2026-07-18,North,Beacon Retail,800.00,fulfilled,USD
+N-1003,2026-08-02,North,Cedar Works,500.00,cancelled,USD
+N-1004,2026-08-19,North,Delta Health,950.00,fulfilled,USD
+N-1005,2026-09-10,North,Elm Studio,400.00,pending,USD
+N-1006,2026-09-28,North,Fairview Co,620.00,fulfilled,USD
+N-1007,2026-06-30,North,Grove Market,600.00,fulfilled,USD
+S-2001,2026-07-07,South,Harbor Foods,1100.00,fulfilled,USD
+S-2002,2026-07-29,South,Ibis Design,750.00,fulfilled,USD
+S-2003,2026-08-16,South,Juniper School,300.00,fulfilled,USD
+S-2004,2026-09-01,South,Kite Services,500.00,cancelled,USD
+S-2005,2026-09-22,South,Lumen Group,900.00,fulfilled,USD
+E-3001,2026-07-09,East,Morrow Clinic,1400.00,fulfilled,USD
+E-3002,2026-07-24,East,Nova Office,650.00,fulfilled,USD
+E-3003,2026-08-11,East,Orchard LLC,475.00,fulfilled,USD
+E-3004,2026-08-30,East,Pioneer Cafe,325.00,pending,USD
+E-3005,2026-09-14,East,Quartz Media,525.00,fulfilled,USD
+E-3006,2026-09-27,East,River Books,275.00,fulfilled,USD
+W-4001,2026-07-12,West,Summit Tools,980.00,fulfilled,USD
+W-4002,2026-07-31,West,Trellis Hotel,1020.00,fulfilled,USD
+W-4003,2026-08-21,West,Unity Arts,480.00,cancelled,USD
+W-4004,2026-09-05,West,Valley Transit,700.00,fulfilled,USD
+W-4005,2026-09-25,West,Willow Dental,360.00,fulfilled,USD
+W-4006,2026-10-01,West,Xenon Systems,900.00,fulfilled,USD

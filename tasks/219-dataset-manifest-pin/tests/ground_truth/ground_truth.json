@@ -1,0 +1,51 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1774429200
+  },
+  "artifacts": {
+    "manifest_receipt": {
+      "catalog_id": "shorefront-0325",
+      "gate_clock_epoch": 1774429200,
+      "counts": {
+        "ingested": 2,
+        "updated": 1,
+        "pin_protected": 1,
+        "digest_mismatch": 1,
+        "rejected_scheme": 1,
+        "malformed": 2
+      },
+      "dataset_ids": [
+        "d1",
+        "d11",
+        "d2",
+        "d3"
+      ],
+      "pinned_ids": [
+        "d11",
+        "d2"
+      ],
+      "state": "pinned"
+    },
+    "verification": {
+      "controller": "manifestctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "ingested",
+      "1": "pin_protected",
+      "2": "updated",
+      "3": "digest_mismatch",
+      "4": "malformed",
+      "5": "malformed",
+      "6": "rejected_scheme",
+      "7": "ingested"
+    },
+    "pinned_ids": [
+      "d11",
+      "d2"
+    ],
+    "d2_uri": "https://data.example/d2.nc"
+  }
+}

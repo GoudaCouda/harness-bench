@@ -1,0 +1,38 @@
+{
+  "policy": {
+    "emergency_age": 1100,
+    "io_budget_mb": 80,
+    "warn_age": 900,
+    "worker_slots": 2
+  },
+  "requests": [
+    {
+      "age": 950,
+      "database": "shop",
+      "id": "orders",
+      "locked": false,
+      "size_mb": 30
+    },
+    {
+      "age": 1200,
+      "database": "shop",
+      "id": "audit",
+      "locked": false,
+      "size_mb": 70
+    },
+    {
+      "age": 1300,
+      "database": "core",
+      "id": "locked",
+      "locked": true,
+      "size_mb": 10
+    },
+    {
+      "age": 100,
+      "database": "core",
+      "id": "fresh",
+      "locked": false,
+      "size_mb": 5
+    }
+  ]
+}

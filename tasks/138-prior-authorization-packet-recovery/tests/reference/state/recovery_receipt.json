@@ -1,0 +1,9 @@
+{
+  "external_actions_executed": false,
+  "manifest_sha256": "22b45c8a75699c942f2bc84464d9d2e1c61774b55d3c7875b100f16c4842ae5f",
+  "packet_sha256": "b72acb691a2ca9d449bed1369e2dfcdaa421cd6708888c5750dae6da1ca94091",
+  "queue_id": "Q-PA-502",
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "status": "staged_offline"
+}

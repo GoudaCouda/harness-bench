@@ -1,0 +1,4 @@
+[
+  {"role_id":"deploy-prod","issuer":"https://token.actions.githubusercontent.com","audiences":["sts.example.test"],"owner_id":"1001","repository_ids":["2001"],"subject_mode":"immutable","allowed_refs":[],"allowed_environments":["production"],"required_workflow":"trusted/platform/.github/workflows/deploy.yml@0123456789abcdef0123456789abcdef01234567"},
+  {"role_id":"publish-preview","issuer":"https://token.actions.githubusercontent.com","audiences":["sts.example.test"],"owner_id":"1001","repository_ids":["2002"],"subject_mode":"immutable","allowed_refs":["refs/heads/main"],"allowed_environments":[],"required_workflow":null}
+]

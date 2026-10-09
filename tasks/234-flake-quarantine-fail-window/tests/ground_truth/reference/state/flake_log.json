@@ -1,0 +1,61 @@
+{
+  "stream_id": "harborwatch-234",
+  "gate_clock_epoch": 1776209600,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "test_login",
+      "suite": "api",
+      "decision": "recorded"
+    },
+    {
+      "index": 1,
+      "item_id": "test_search",
+      "suite": "api",
+      "decision": "conflict"
+    },
+    {
+      "index": 2,
+      "item_id": "test_pay",
+      "suite": "api",
+      "decision": "conflict"
+    },
+    {
+      "index": 3,
+      "item_id": "test_login",
+      "suite": "api",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "test_empty",
+      "suite": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "test_cart",
+      "suite": "api",
+      "decision": "recorded"
+    },
+    {
+      "index": 6,
+      "item_id": "test_broken",
+      "suite": "api",
+      "decision": "malformed"
+    }
+  ],
+  "counts": {
+    "recorded": 2,
+    "conflict": 2,
+    "malformed": 3
+  },
+  "recorded_ids": [
+    "test_login",
+    "test_cart"
+  ],
+  "conflict_ids": [
+    "test_search",
+    "test_pay"
+  ]
+}

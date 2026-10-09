@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 044-legal-compliance-review
+pass_threshold: 0.8
+cases:
+- {id: compliant_campaign_revision, title: Unsupported claims are removed or bounded, description: Absolute medical regulatory endorsement comparative and perpetual-pricing risks are remediated in the external copy., weight: 0.35, core: true}
+- {id: legitimate_message_preservation, title: Product purpose technical identifiers and bounded offer survive revision, description: The edit remains useful marketing copy and does not over-remove benign content., weight: 0.20, core: true}
+- {id: evidence_grounded_launch_review, title: The internal review explains policy and evidence boundaries, description: CLAIM-1 through CLAIM-7 manifest gaps and INTERNAL-1 conflict are translated into a supported recommendation., weight: 0.25, core: true}
+- {id: publication_decision_trace, title: Publication status and remaining ownership are clear, description: The owner receives a conditional recommendation without false approval or publication claims., weight: 0.10, core: false}
+- {id: audience_ready_copy, title: Revised copy is coherent audience-ready prose, description: The campaign is not reduced to a token list disclaimer pile or audit checklist., weight: 0.10, core: false}
+- {id: source_and_authority_boundary, title: Source evidence and approval authority are preserved, description: Protected sources remain unchanged and the outputs neither give legal advice nor claim external execution., weight: 0.0, gate: true}

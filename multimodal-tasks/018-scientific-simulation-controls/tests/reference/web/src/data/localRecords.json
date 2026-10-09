@@ -1,0 +1,56 @@
+[
+  {
+    "id": "SIM-TEMP",
+    "name": "Temperature delta",
+    "category": "climate",
+    "owner": "Model Core",
+    "status": "watch",
+    "primary": 3,
+    "secondary": 71
+  },
+  {
+    "id": "SIM-FLOW",
+    "name": "River flow rate",
+    "category": "hydrology",
+    "owner": "Model Core",
+    "status": "clear",
+    "primary": 42,
+    "secondary": 28
+  },
+  {
+    "id": "SIM-SOIL",
+    "name": "Soil absorption",
+    "category": "land",
+    "owner": "Model Core",
+    "status": "review",
+    "primary": 58,
+    "secondary": 83
+  },
+  {
+    "id": "SIM-WIND",
+    "name": "Wind shear",
+    "category": "atmosphere",
+    "owner": "Model Core",
+    "status": "watch",
+    "primary": 26,
+    "secondary": 64
+  },
+  {
+    "id": "SIM-TEMP-R1",
+    "name": "Temperature delta follow-up",
+    "category": "hydrology",
+    "owner": "Model Core",
+    "status": "clear",
+    "primary": 17,
+    "secondary": 77
+  },
+  {
+    "id": "SIM-FLOW-R2",
+    "name": "River flow rate follow-up",
+    "category": "land",
+    "owner": "Model Core",
+    "status": "watch",
+    "primary": 59,
+    "secondary": 35
+  }
+]

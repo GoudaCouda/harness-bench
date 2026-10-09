@@ -1,0 +1,38 @@
+task_id: 139-oci-layer-whiteout-merge-repair
+title: Repair OCI image layer merging across whiteouts and type replacement
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Infrastructure Implementation
+difficulty: hard
+capability_tags: [filesystem, coding, containers, structured_data]
+harness_demands: [tool_selection, multi_step_execution, verification_behavior]
+stressors: [hidden_variation, adversarial_paths, state_reconstruction]
+required_artifacts: [repo/src/layer_merge.py, repo/out/rootfs.json, repo/out/audit.json, repo/LAYER_NOTES.md]
+task_family: 139-oci-layer-whiteout-merge-repair
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [OCI-IMAGE-LAYER]
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/out/, repo/out/rootfs.json, repo/out/audit.json, repo/LAYER_NOTES.md]
+  allowed_modified: [repo/src/layer_merge.py]
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

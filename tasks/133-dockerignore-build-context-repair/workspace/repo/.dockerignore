@@ -1,0 +1,10 @@
+.git-private
+node_modules
+dist
+.env*
+secrets
+tests
+docs
+config/*
+!config/*.json
+!docs/runbook.md

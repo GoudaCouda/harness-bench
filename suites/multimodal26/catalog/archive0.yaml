@@ -1,0 +1,15 @@
+# BEGIN MULTIMODAL26 EMPTY ARCHIVE
+schema_version: 1
+task_set: archive0
+status: empty_current_release_partition
+source_suite: archive
+source_suite_size: 0
+task_count: 0
+selection_policy:
+  selected_at: '2026-10-07'
+  model_outcomes_used: false
+  changes_main_membership: true
+  relocates_task_directories: true
+  purpose: This focused suite contains only the active multimodal tasks 001 through 026.
+task_ids: []
+# END MULTIMODAL26 EMPTY ARCHIVE

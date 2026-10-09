@@ -1,0 +1,11 @@
+{
+  "tenants": {
+    "tn-acme": [
+      "payments.read",
+      "payments.write"
+    ],
+    "tn-beta": [
+      "payments.read"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+task_id: 058-policy-version-conflict-resolution
+title: Policy Version Conflict Resolution with Evidence Priority
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- conflicting_evidence
+- dirty_input
+required_artifacts:
+- conflict_audit.csv
+- policy_rulings.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-058
+task_family: 058-policy-version-conflict-resolution
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - conflict_audit.csv
+  - policy_rulings.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader: {}
+  services: []

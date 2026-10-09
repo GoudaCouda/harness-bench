@@ -1,0 +1,9 @@
+{
+  "ar_ledger.csv": "8f9cab14e6524884326cd4eda47f48688bede65c23d617e3ace64e460f0b93cd",
+  "bank_statement.csv": "d72f9d1a35eb84d652dff76a61735ca4de535aa7febe8f4c619f3dbda55e6c24",
+  "close_policy.md": "f745c12a6922a57caceb5dffbbb42d50c4cae1fc1277d871fd26d85beca13c67",
+  "fx_rates.csv": "8c17bbcb84988c64de076efe57814f8c6afccc7f9aaedc96284bbec2970897e2",
+  "journal_import_template.csv": "65d25f730da51b4b9d4ff7608bc5bc62d9b64f244dd8cb97667c12846ec6bead",
+  "processor_refunds.csv": "846ea80e562975e778cd18f378b195bf6cde5f11062489be849b1f55a481f53c",
+  "processor_settlements.csv": "0f93380cacd6d0320160a275d6c5e007e07068b25a4e3ebe117a5741ddb703ed"
+}

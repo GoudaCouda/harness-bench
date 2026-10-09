@@ -1,0 +1,1 @@
+{"serve_stale":true,"allow_stale_negative":true,"refused_preempts_stale":true,"stale_answer_ttl":30,"client_response_ms":1200,"max_negative_ttl":3600}

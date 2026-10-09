@@ -1,0 +1,35 @@
+{
+  "policy": {
+    "intent": "checkout"
+  },
+  "records": [
+    {
+      "attr_lfs": true,
+      "conflicted": false,
+      "id": "hydrate",
+      "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "object_present": true,
+      "object_size": 10,
+      "path": "data.bin",
+      "pointer": {
+        "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "size": 10,
+        "version": "https://git-lfs.github.com/spec/v1"
+      },
+      "worktree_kind": "pointer"
+    },
+    {
+      "attr_lfs": true,
+      "conflicted": false,
+      "id": "missing",
+      "object_present": false,
+      "path": "model.bin",
+      "pointer": {
+        "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "size": 20,
+        "version": "https://git-lfs.github.com/spec/v1"
+      },
+      "worktree_kind": "missing"
+    }
+  ]
+}

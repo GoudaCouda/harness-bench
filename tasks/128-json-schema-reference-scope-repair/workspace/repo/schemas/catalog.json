@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example/catalog/root.json",
+  "type": "object",
+  "properties": {
+    "order": {"$ref": "orders/order.json"}
+  },
+  "required": ["order"]
+}

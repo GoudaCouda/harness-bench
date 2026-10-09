@@ -1,0 +1,48 @@
+schema_version: 2
+task_id: 083-census-geography-align
+pass_threshold: 0.8
+cases:
+- id: observed_panel
+  title: The requested observed county-year records are aligned correctly
+  description: Every requested observed county-year uses its stable key, year-specific variable, estimate,
+    and separate margin of error.
+  weight: 0.3
+  core: true
+- id: change_analysis
+  title: Comparable county changes are calculated from the correct years
+  description: The county-level changes, percent changes, counts, and stable geography key are correct.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: incomplete_evidence
+  title: Suppressed evidence remains explicit and is not imputed
+  description: The suppressed county-year stays in the panel with blank numerics and is excluded from
+    the comparable-change population.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: method_handoff
+  title: The method explains the professionally material boundaries
+  description: The handoff explains stable keys, variable mapping, MOE semantics, suppression, excluded
+    name/aggregate records, and final reconciliation.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: panel_integrity
+  title: The panel is closed and uniquely keyed
+  description: The panel is closed and uniquely keyed; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: cross_artifact_closure
+  title: The panel and analysis reconcile dynamically
+  description: Counts, comparable counties, incomplete counties, and changes in the analysis agree with
+    the submitted panel rather than merely repeating hidden totals.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

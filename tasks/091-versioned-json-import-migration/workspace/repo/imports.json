@@ -1,0 +1,6 @@
+[
+  {"source_id":"legacy-null","document":{"schema_version":1,"name":"billing","endpoint":"https://billing.internal","retries":null,"region":null,"extensions":{"x-owner":"payments"}}},
+  {"source_id":"v2-flags","document":{"schema_version":2,"identity":{"name":"catalog"},"connection":{"endpoint":"https://catalog.internal","retry_limit":5},"features":{"shadow":false,"streaming":true,"audit":true},"extensions":{"x-ticket":"PLAT-204"}}},
+  {"source_id":"v3-reorder","document":{"schema_version":3,"identity":{"name":"search"},"connection":{"endpoint":"https://search.internal","retry_limit":2,"region":"eu-west"},"enabled_features":["zonal","cache"],"extensions":{}}},
+  {"source_id":"future","document":{"schema_version":4,"identity":{"name":"unknown"}}}
+]

@@ -1,0 +1,328 @@
+{
+  "schema_version": 3,
+  "task_id": "005-research-lab-site",
+  "contract_type": "site",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "research_lab_site_protected_local_data",
+    "research_lab_site_site_interaction_model",
+    "research_lab_site_site_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "minimum_records": 8,
+  "minimum_handlers": 5,
+  "data_profile": {
+    "status_values": [
+      "clear",
+      "watch",
+      "review"
+    ],
+    "minimum_categories": 3,
+    "minimum_owners": 3,
+    "primary_key": "primary",
+    "secondary_key": "secondary"
+  },
+  "record_ids": [
+    "LAB-A11",
+    "LAB-B24",
+    "LAB-C31",
+    "LAB-D09",
+    "LAB-A11-R1",
+    "LAB-B24-R2",
+    "LAB-C31-R3",
+    "LAB-D09-R4"
+  ],
+  "identity_tokens": [
+    "LAB-A11",
+    "Wetland Sensors",
+    "field",
+    "Dr. Vale",
+    "clear",
+    "6",
+    "18",
+    "LAB-B24",
+    "Urban Heat Maps",
+    "climate",
+    "Dr. Hsu",
+    "watch",
+    "4",
+    "35",
+    "LAB-C31",
+    "Open Soil Models",
+    "modeling",
+    "Dr. Okafor",
+    "review",
+    "8",
+    "42",
+    "LAB-D09",
+    "River DNA Atlas",
+    "bioinformatics",
+    "Dr. Marin",
+    "watch",
+    "3",
+    "27",
+    "LAB-A11-R1",
+    "Wetland Sensors follow-up",
+    "climate",
+    "Dr. Okafor",
+    "clear",
+    "20",
+    "24",
+    "LAB-B24-R2",
+    "Urban Heat Maps follow-up",
+    "modeling",
+    "Dr. Marin",
+    "watch",
+    "21",
+    "42",
+    "LAB-C31-R3",
+    "Open Soil Models follow-up",
+    "bioinformatics",
+    "Dr. Vale",
+    "review",
+    "28",
+    "50",
+    "LAB-D09-R4",
+    "River DNA Atlas follow-up",
+    "field",
+    "Dr. Hsu",
+    "watch",
+    "26",
+    "36"
+  ],
+  "required_label_groups": [
+    [
+      "Publication count",
+      "Publication",
+      "Publication count"
+    ],
+    [
+      "Replication risk",
+      "Replication"
+    ],
+    [
+      "Collaboration depth",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Lab contact triage",
+      "research project site"
+    ]
+  ],
+  "domain_groups": [
+    [
+      "research",
+      "lab",
+      "laboratory",
+      "study"
+    ],
+    [
+      "publication",
+      "paper",
+      "papers",
+      "published work"
+    ],
+    [
+      "team",
+      "group",
+      "collaboration",
+      "collab",
+      "partner",
+      "contact",
+      "outreach"
+    ],
+    [
+      "site",
+      "research project site",
+      "project"
+    ]
+  ],
+  "state_groups": [
+    [
+      "researchArea",
+      "setResearchArea",
+      "Research area"
+    ],
+    [
+      "selected project",
+      "selected study",
+      "selected project"
+    ],
+    [
+      "reviewLens",
+      "setReviewLens",
+      "Review lens"
+    ],
+    [
+      "projectSearch",
+      "setProjectSearch",
+      "Project search"
+    ]
+  ],
+  "logic_groups": [
+    [
+      "Set",
+      "collaborator spread"
+    ],
+    [
+      "includes",
+      "project search"
+    ],
+    [
+      "reduce",
+      "publication total"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "researchArea",
+      "setResearchArea",
+      "research area"
+    ],
+    [
+      "selected project",
+      "selected study",
+      "project profile"
+    ],
+    [
+      "reviewLens",
+      "setReviewLens",
+      "review lens"
+    ],
+    [
+      "replicationWatch",
+      "setReplicationWatch",
+      "replication watch"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "publicationTotal",
+      "Publication count",
+      "publication total"
+    ],
+    [
+      "replicationIndex",
+      "Replication risk",
+      "replication index"
+    ],
+    [
+      "collaborationDepth",
+      "Collaboration depth",
+      "collaboration spread"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "hero",
+      "lab site",
+      "publication cards"
+    ],
+    [
+      "collaborator rail",
+      "project profile",
+      "contact-safe triage"
+    ]
+  ],
+  "optional_logic_groups": [
+    [
+      "useMemo"
+    ],
+    [
+      "useReducer"
+    ],
+    [
+      "custom hook"
+    ]
+  ],
+  "derived_tokens": [],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Research area",
+        "value": "field"
+      },
+      {
+        "kind": "fill",
+        "label": "Project search",
+        "value": "Wetland"
+      },
+      {
+        "kind": "click",
+        "text": "LAB-A11"
+      },
+      {
+        "kind": "select",
+        "label": "Review lens",
+        "value": "site-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Evidence weight",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "site-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "LAB-A11",
+      "category": "field",
+      "mode": "site-review",
+      "search_value": "Wetland",
+      "range_value": 64,
+      "visible_id_subset": [
+        "LAB-A11"
+      ],
+      "selected_detail_tokens": [
+        "Dr. Vale",
+        "field",
+        "clear",
+        "6",
+        "18"
+      ],
+      "after_clearing_search_subset": [
+        "LAB-A11",
+        "LAB-D09-R4"
+      ],
+      "focus_subset": [
+        "LAB-C31",
+        "LAB-C31-R3"
+      ],
+      "focus_forbidden": [
+        "LAB-A11"
+      ],
+      "detail_switch_id": "LAB-D09-R4",
+      "detail_switch_tokens": [
+        "LAB-D09-R4",
+        "River DNA Atlas follow-up",
+        "Dr. Hsu",
+        "field",
+        "watch",
+        "26",
+        "36"
+      ],
+      "summary_change_labels": [
+        "Publication count",
+        "Replication risk",
+        "Collaboration depth",
+        "Lab contact triage"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 8
+    },
+    "action_count": 6
+  }
+}

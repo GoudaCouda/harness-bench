@@ -1,0 +1,26 @@
+{
+  "policy": {
+    "preserve_special": true,
+    "umask": 18
+  },
+  "records": [
+    {
+      "id": "new-file",
+      "is_dir": false,
+      "operation": "create"
+    },
+    {
+      "id": "shared-dir",
+      "is_dir": true,
+      "operation": "create",
+      "requested_mode": 511
+    },
+    {
+      "current_mode": 2541,
+      "id": "tighten",
+      "is_dir": false,
+      "operation": "chmod",
+      "symbolic": "g-w,o="
+    }
+  ]
+}

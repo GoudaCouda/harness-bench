@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "checked": [
+    "fresh_replay",
+    "heads",
+    "idempotent",
+    "merge",
+    "reverse",
+    "upgrade_replay",
+    "uses_historical_model"
+  ]
+}

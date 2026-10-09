@@ -1,0 +1,9 @@
+item_id,decision,reason_code,owner,next_action,evidence_refs
+R-201,clear,CURRENT_NO_MATCH,payment_controls,stage_for_authorization,recovery_queue.csv#R-201;fail_closed_policy.md;context.md
+R-202,pending_system,SCREENING_UNAVAILABLE,screening_ops,retry_or_rescreen,recovery_queue.csv#R-202;fail_closed_policy.md;context.md
+R-203,review,POSSIBLE_MATCH,compliance,perform_identity_review,recovery_queue.csv#R-203;fail_closed_policy.md;context.md
+R-204,blocked,BANK_CHANGE_UNVERIFIED,payment_controls,verify_bank_change,recovery_queue.csv#R-204;fail_closed_policy.md;context.md
+R-205,pending_system,SCREENING_UNAVAILABLE,screening_ops,retry_or_rescreen,recovery_queue.csv#R-205;fail_closed_policy.md;context.md
+R-206,blocked,EXACT_RESTRICTED_MATCH,compliance,open_restricted_match_review,recovery_queue.csv#R-206;fail_closed_policy.md;context.md
+R-207,pending_system,SCREENING_UNAVAILABLE,screening_ops,retry_or_rescreen,recovery_queue.csv#R-207;fail_closed_policy.md;context.md
+R-208,hold,DUPLICATE_CORRELATION,screening_ops,link_duplicate_without_rescreen,recovery_queue.csv#R-208;fail_closed_policy.md;context.md

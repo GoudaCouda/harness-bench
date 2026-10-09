@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "allowed_tzids": [
+    "America/Los_Angeles",
+    "America/New_York",
+    "Europe/London",
+    "UTC"
+  ]
+}

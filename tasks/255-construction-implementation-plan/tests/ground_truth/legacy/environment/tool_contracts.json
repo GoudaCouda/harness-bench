@@ -1,0 +1,20 @@
+{
+  "schema_version": "case01_tool_contracts_v1",
+  "tools": [
+    {
+      "tool_id": "filesystem_read",
+      "entrypoint": "python3 environment/filesystem_tool.py --workspace <workspace> --path <inputs/path>",
+      "side_effect": "read_only"
+    },
+    {
+      "tool_id": "document_parser",
+      "entrypoint": "python3 environment/docx_tool.py inspect --input <docx>",
+      "side_effect": "read_only"
+    },
+    {
+      "tool_id": "docx_writer",
+      "entrypoint": "python3 environment/docx_tool.py render --template <docx> --plan <json> --output <docx>",
+      "side_effect": "workspace_write"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "base": "release/2026.08",
+  "head": "incident/cache-fix",
+  "paths": [
+    "packages/core/src/money.py",
+    "generated/api_types.py",
+    "packages/web/README.md",
+    "docs/adr/004-cache-policy.md",
+    "packages/core/src/removed_legacy.py",
+    "packages/core/src/money.py"
+  ]
+}

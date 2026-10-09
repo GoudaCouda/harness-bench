@@ -1,0 +1,11 @@
+{
+  "resources": [
+    {"path": "schemas/catalog.json", "retrieval_uri": "https://schemas.example/catalog/root.json"},
+    {"path": "schemas/orders/order.json", "retrieval_uri": "https://schemas.example/catalog/orders/order.json"},
+    {"path": "schemas/common/address.json", "retrieval_uri": "https://schemas.example/catalog/common/address.json"}
+  ],
+  "examples": [
+    {"path": "examples/order-valid.json", "expected_valid": true},
+    {"path": "examples/order-missing-address.json", "expected_valid": false}
+  ]
+}

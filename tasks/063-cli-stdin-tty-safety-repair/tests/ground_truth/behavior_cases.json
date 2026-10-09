@@ -1,0 +1,22 @@
+{
+  "precedence": [
+    {"config":{"mode":"plan","target_count":3,"yes":false,"no_input":true,"stdin_is_tty":false},"stdin_text":"yes"},
+    {"config":{"mode":"apply","target_count":3,"yes":true,"no_input":true,"stdin_is_tty":false},"stdin_text":"no"},
+    {"config":{"mode":"apply","target_count":0,"yes":false,"no_input":true,"stdin_is_tty":true},"stdin_text":"yes"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":true,"stdin_is_tty":true},"stdin_text":"yes"}
+  ],
+  "stream": [
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":true},"stdin_text":"yes"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":" YES \n"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":"n"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":""},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":"yes\nno\n"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":"sure"}
+  ],
+  "invalid": [
+    {"config":{"mode":"apply","target_count":true,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":"yes"},
+    {"config":{"mode":"delete","target_count":1,"yes":true,"no_input":false,"stdin_is_tty":false},"stdin_text":""},
+    {"config":{"mode":"apply","target_count":1,"yes":1,"no_input":false,"stdin_is_tty":false},"stdin_text":"yes"},
+    {"config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false,"extra":"x"},"stdin_text":"yes"}
+  ]
+}

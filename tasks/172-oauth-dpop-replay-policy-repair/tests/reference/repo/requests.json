@@ -1,0 +1,6 @@
+[
+  {"request_id":"accepted","method":"GET","htu":"https://api.example.test/items","now":1000,"token_jkt":"key-a","access_token_hash":"hash-a","required_nonce":"nonce-1"},
+  {"request_id":"bad-token","method":"POST","htu":"https://api.example.test/items","now":1000,"token_jkt":"key-b","access_token_hash":"hash-b","required_nonce":"nonce-1"},
+  {"request_id":"replayed","method":"GET","htu":"https://api.example.test/profile","now":1000,"token_jkt":"key-a","access_token_hash":"hash-c","required_nonce":"nonce-2"},
+  {"request_id":"same-batch","method":"GET","htu":"https://api.example.test/items","now":1010,"token_jkt":"key-a","access_token_hash":"hash-a","required_nonce":"nonce-1"}
+]

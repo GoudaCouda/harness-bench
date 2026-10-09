@@ -1,0 +1,9 @@
+{
+  "workflow_id": "155-payee-screening-service-recovery",
+  "total_items": 8,
+  "decision_counts": {"blocked": 2, "clear": 1, "hold": 1, "pending_system": 3, "review": 1},
+  "blocked_or_escalated_ids": ["R-204", "R-206", "R-208"],
+  "pending_ids": ["R-202", "R-205", "R-207"],
+  "status": "complete_with_exceptions",
+  "external_actions_executed": false
+}

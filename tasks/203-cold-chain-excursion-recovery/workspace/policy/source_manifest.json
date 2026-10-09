@@ -1,0 +1,10 @@
+{
+  "files": {
+    "evidence/logger_readings.jsonl": "ad1f8b18be35292be0bee7ef86dc86ee63beb78c3a6d9d5a1e202ed4375933ea",
+    "evidence/logger_trust.json": "91289ed9e25c24bb33ec694fc9e8694afcaf65bc07d34fa401200d0c8699028a",
+    "evidence/secondary_ranges.json": "5dda9ccf50ce04ca18b02113ba910320614bd39341ae2fa8a4520e0f24545e2a",
+    "evidence/transport_events.json": "abebebd0ac0cb70b59c54e936e78e6c1cd31c3b17bb5ae54ff4ac5cbe33f4a3c",
+    "policy/cold_chain_policy.json": "c8c17fc0822caafffb22cdf4c8a0ff63f49fefc3975b6afb539305fd5bcf3184"
+  },
+  "schema_version": 1
+}

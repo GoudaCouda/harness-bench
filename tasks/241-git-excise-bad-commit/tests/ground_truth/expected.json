@@ -1,0 +1,10 @@
+{
+  "app_marker": "HELIX_APP_READY",
+  "runbook_marker": "HELIX_RUNBOOK_OK",
+  "secret": "hb-cutover-leak-4417",
+  "protected": [
+    "README.md",
+    "HISTORY_POLICY.md",
+    "tools/hist_check.py"
+  ]
+}

@@ -1,0 +1,42 @@
+schema_version: 2
+task_id: 086-revision-vintage-ledger
+pass_threshold: 0.8
+cases:
+- id: revision_rows
+  title: Preliminary and revised values are reconciled exactly
+  description: Preliminary and revised values are reconciled exactly; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.4
+  core: true
+- id: claim_state
+  title: The direction change and claim status follow the selected series
+  description: The direction change and claim status follow the selected series; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: revision_handoff
+  title: The brief explains vintages, series, reversal, and exclusion
+  description: The brief explains vintages, series, reversal, and exclusion; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: ledger_integrity
+  title: Revision records are closed and uniquely keyed
+  description: Revision records are closed and uniquely keyed; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: analysis_closure
+  title: Rows and state form one consistent revision decision
+  description: Rows and state form one consistent revision decision; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

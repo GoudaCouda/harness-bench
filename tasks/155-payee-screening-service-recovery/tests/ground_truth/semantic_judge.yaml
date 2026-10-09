@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 155-payee-screening-service-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: audit_semantics
+  title: Fail-closed screening audit is complete
+  question: Does the audit accurately explain current versus stale list versions, verified retry recovery, service-error and pending items, exact/possible matches, duplicate handling, safe repeat behavior, and that no external action occurred?
+  pass_anchors: [Idempotency is equivalent to idempotent repeat behavior.]
+  fail_anchors: [Clearing unavailable or stale screening, or claiming payment/authorization, fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

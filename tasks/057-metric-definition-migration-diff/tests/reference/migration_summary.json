@@ -1,0 +1,8 @@
+{
+  "total_metrics": 5,
+  "expected_definition_change_count": 2,
+  "unexpected_regression_count": 1,
+  "no_material_change_count": 1,
+  "requires_review_count": 1,
+  "largest_relative_diff_metric": "activation_rate"
+}

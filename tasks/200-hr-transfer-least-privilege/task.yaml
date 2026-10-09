@@ -1,0 +1,65 @@
+task_id: 200-hr-transfer-least-privilege
+title: Stage a Cross-System Least-Privilege Transfer Plan
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+domain: Human Resources
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- context_management
+- state_management
+- error_recovery
+- evidence_grounding
+- verification_behavior
+- safety_boundary
+stressors:
+- partial_failure
+- conflicting_evidence
+- cross_system_state
+- nested_group_expansion
+- segregation_of_duties
+- asynchronous_receipt
+- idempotent_recovery
+- high_stakes_rules
+required_artifacts:
+- access_change_plan.csv
+- access_review.csv
+- .access_review_state.json
+- access_review_receipt.json
+task_family: hr-access-transfer
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - HR-08
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - access_change_plan.csv
+  - access_review.csv
+  - access_review_receipt.json
+  allowed_modified:
+  - .access_review_state.json
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

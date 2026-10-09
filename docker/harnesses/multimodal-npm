@@ -1,0 +1,20 @@
+#!/bin/sh
+# BEGIN MULTIMODAL OFFLINE NPM INSTALLER
+set -eu
+
+case "${1:-}" in
+  install|i|ci)
+    if [ -f package.json ] && [ -d /opt/frontend-deps/node_modules ]; then
+      rm -rf node_modules
+      cp -a /opt/frontend-deps/node_modules ./node_modules
+      printf '%s\n' 'Installed pinned multimodal dependencies from the offline image.'
+      exit 0
+    fi
+    ;;
+esac
+
+if [ -x /usr/local/bin/npm ]; then
+  exec /usr/local/bin/npm "$@"
+fi
+exec /usr/bin/npm "$@"
+# END MULTIMODAL OFFLINE NPM INSTALLER

@@ -1,0 +1,10 @@
+{
+  "account_last4": "2468",
+  "amount_cents": 80000,
+  "closing_id": "ESC-105",
+  "document_id": "DOC-INS-105-HOLDBACK",
+  "instruction_id": "INS-105-HOLDBACK",
+  "payee_id": "P-HOLD",
+  "schema_version": 1,
+  "signed": true
+}

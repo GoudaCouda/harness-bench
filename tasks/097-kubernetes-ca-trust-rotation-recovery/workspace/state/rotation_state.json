@@ -1,0 +1,32 @@
+{
+  "cluster_id": "northstar-ha",
+  "policy_version": "NORTHSTAR-CA-ROTATION-3",
+  "phase": "signer_rotation_incomplete",
+  "controller_manager": {
+    "status": "degraded",
+    "root_ca_file": "pki/ca-bundle.crt",
+    "client_ca_file": "pki/ca-bundle.crt",
+    "cluster_signing_cert_file": "pki/ca-bundle.crt",
+    "cluster_signing_key_file": "pki/new-ca.key"
+  },
+  "clients": [
+    {"client_id": "kube-controller-manager", "trust": "dual"},
+    {"client_id": "kube-scheduler", "trust": "dual"},
+    {"client_id": "kubelet/node-a", "trust": "dual"},
+    {"client_id": "kubelet/node-b", "trust": "dual"},
+    {"client_id": "coredns", "trust": "dual"},
+    {"client_id": "kube-proxy", "trust": "dual"},
+    {"client_id": "metrics-adapter", "trust": "old_only"},
+    {"client_id": "kube-apiserver/aggregation-client", "trust": "dual"},
+    {"client_id": "kube-apiserver/webhook-client", "trust": "dual"}
+  ],
+  "servers": [
+    {"server_id": "kube-apiserver/cp-1", "signer": "NEW-CA"},
+    {"server_id": "kube-apiserver/cp-2", "signer": "NEW-CA"},
+    {"server_id": "kube-apiserver/cp-3", "signer": "OLD-CA"},
+    {"server_id": "aggregated-api/custom-metrics", "signer": "NEW-CA"},
+    {"server_id": "admission-webhook/policy", "signer": "NEW-CA"}
+  ],
+  "dual_probe_sha256": null,
+  "old_anchor_present": true
+}

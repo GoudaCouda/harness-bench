@@ -1,0 +1,120 @@
+{
+  "actions": [
+    {
+      "change_id": "CH-01",
+      "disposition": "accept",
+      "evidence": [
+        "revision_manifest.json#EV-114",
+        "authority_policy.md#SIGNED-LEGAL",
+        "signature_registry.json#SIG-LEGAL-2026-08"
+      ],
+      "selected_event_id": "EV-114"
+    },
+    {
+      "change_id": "CH-02",
+      "disposition": "accept",
+      "evidence": [
+        "revision_manifest.json#EV-203",
+        "authority_policy.md#SIGNED-LEGAL",
+        "signature_registry.json#SIG-LEGAL-2026-08",
+        "revision_dependencies.csv#CH-02"
+      ],
+      "selected_event_id": "EV-203"
+    },
+    {
+      "change_id": "CH-03",
+      "disposition": "reject",
+      "evidence": [
+        "revision_manifest.json#EV-304",
+        "authority_policy.md#LOWER-AUTHORITY"
+      ],
+      "selected_event_id": "EV-304"
+    },
+    {
+      "change_id": "CH-04",
+      "disposition": "invalidate_dependency",
+      "evidence": [
+        "revision_manifest.json#EV-405",
+        "authority_policy.md#LOWER-AUTHORITY",
+        "revision_dependencies.csv#CH-04"
+      ],
+      "selected_event_id": "EV-405"
+    },
+    {
+      "change_id": "CH-05",
+      "disposition": "accept",
+      "evidence": [
+        "revision_manifest.json#EV-508",
+        "authority_policy.md#VERIFIED-DIRECTORY",
+        "signature_registry.json#DIR-V3",
+        "review_state.db#TX-04"
+      ],
+      "selected_event_id": "EV-508"
+    },
+    {
+      "change_id": "CH-06",
+      "disposition": "reject",
+      "evidence": [
+        "revision_manifest.json#EV-606",
+        "authority_policy.md#LOWER-AUTHORITY"
+      ],
+      "selected_event_id": "EV-606"
+    },
+    {
+      "change_id": "CH-07",
+      "disposition": "invalidate_dependency",
+      "evidence": [
+        "revision_manifest.json#EV-709",
+        "authority_policy.md#LOWER-AUTHORITY",
+        "revision_dependencies.csv#CH-07"
+      ],
+      "selected_event_id": "EV-709"
+    },
+    {
+      "change_id": "CH-08",
+      "disposition": "accept",
+      "evidence": [
+        "revision_manifest.json#EV-810",
+        "authority_policy.md#RELEASE-COORDINATOR",
+        "signature_registry.json#SIG-RELEASE-V5",
+        "revision_dependencies.csv#CH-08"
+      ],
+      "selected_event_id": "EV-810"
+    },
+    {
+      "change_id": "CH-09",
+      "disposition": "accept",
+      "evidence": [
+        "revision_manifest.json#EV-912",
+        "authority_policy.md#SIGNED-LEGAL",
+        "signature_registry.json#SIG-LEGAL-2026-08"
+      ],
+      "selected_event_id": "EV-912"
+    },
+    {
+      "change_id": "CH-10",
+      "disposition": "reject",
+      "evidence": [
+        "revision_manifest.json#EV-1005",
+        "authority_policy.md#LOWER-AUTHORITY",
+        "revision_dependencies.csv#CH-10"
+      ],
+      "selected_event_id": "EV-1005"
+    }
+  ],
+  "adjudication_order": [
+    "CH-01",
+    "CH-02",
+    "CH-03",
+    "CH-04",
+    "CH-05",
+    "CH-06",
+    "CH-07",
+    "CH-08",
+    "CH-09",
+    "CH-10"
+  ],
+  "approval_boundary": "staged_for_internal_approval",
+  "source_document": "bulletin_working.docx",
+  "workflow_id": "NORTHSTAR-BULLETIN-REV5"
+}

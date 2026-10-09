@@ -1,0 +1,7 @@
+[
+  {"action":"emit_object","reason":"converged","request_id":"r1","status":"admitted","webhook_count":2},
+  {"action":"emit_object","reason":"converged","request_id":"r2","status":"admitted","webhook_count":1},
+  {"action":"emit_object","reason":"converged","request_id":"r3","status":"admitted","webhook_count":1},
+  {"action":"reject","reason":"side_effect_policy","request_id":"r4","status":"blocked","webhook_count":1},
+  {"action":"unchanged","reason":"no_matching_webhook","request_id":"r5","status":"unchanged","webhook_count":1}
+]

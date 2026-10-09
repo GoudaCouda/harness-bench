@@ -1,0 +1,10 @@
+country,year,indicator,unit,value,revision_from_prior
+Aster,2023,GDPCON15,constant 2015 credits,502,2
+Aster,2024,GDPCON15,constant 2015 credits,510,5
+Aster,2025,GDPCON15,constant 2015 credits,525,
+Boron,2023,GDPCON15,constant 2015 credits,482,2
+Boron,2024,GDPCON15,constant 2015 credits,490,-5
+Boron,2025,GDPCON15,constant 2015 credits,530,
+Cygnus,2023,GDPCON15,constant 2015 credits,518,-2
+Cygnus,2024,GDPCON15,constant 2015 credits,538,3
+Cygnus,2025,GDPCON15,constant 2015 credits,540,

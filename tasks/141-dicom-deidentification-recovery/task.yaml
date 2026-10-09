@@ -1,0 +1,99 @@
+task_id: 141-dicom-deidentification-recovery
+title: Recover an interrupted DICOM de-identification export
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Compliance
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- medical_imaging
+- data_recovery
+- privacy
+- binary_artifacts
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- interrupted_before_image_journal
+- duplicate_and_uid_collision
+- burned_in_annotation
+- private_tag_policy
+- referential_uid_mapping
+- temporal_date_shift
+- protected_export_boundary
+- semantic_replay_identity
+required_artifacts:
+- deid_plan.json
+- equivalent_deid_plan.json
+- conflict_deid_plan.json
+- conflict_probe.json
+- .deid_preview.json
+- state/imaging.db
+- state/verification.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- exports/research_review_packet.json
+- exports/packet_manifest.json
+- deid_handoff.md
+task_family: dicom-deidentification-recovery
+variant: interrupted-multistudy-uid-reference-and-pixel-risk
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - DICOM-PS3-15
+  - DICOM-PS3-10
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - deid_plan.json
+  - equivalent_deid_plan.json
+  - conflict_deid_plan.json
+  - conflict_probe.json
+  - .deid_preview.json
+  - state/verification.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - exports/research_review_packet.json
+  - exports/packet_manifest.json
+  - exports/deidentified/CT-141-A.dcm
+  - exports/deidentified/SEG-141-A.dcm
+  - exports/deidentified/MR-141-B.dcm
+  - deid_handoff.md
+  allowed_modified:
+  - state/imaging.db
+  - exports/orphan/INTERRUPTED-141.dcm
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: deid_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

@@ -1,0 +1,2 @@
+{"event_id":"EV-001","request_id":"REL-411-PROD","event":"request_opened","subject":"v4.1.0","previous":"GENESIS"}
+{"event_id":"EV-002","request_id":"REL-411-PROD","event":"bundle_blocked_after_revocation","subject":"B-404","previous":"EV-001","evidence":"APR-805;BASE-CVE-77"}

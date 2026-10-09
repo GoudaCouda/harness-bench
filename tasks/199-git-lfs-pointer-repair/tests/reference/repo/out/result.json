@@ -1,0 +1,27 @@
+{
+  "action_counts": {
+    "block": 0,
+    "fetch_required": 1,
+    "hydrate": 1,
+    "keep": 0,
+    "rewrite_pointer": 0
+  },
+  "decisions": [
+    {
+      "action": "hydrate",
+      "id": "hydrate",
+      "path": "data.bin",
+      "pointer_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pointer_size": 10,
+      "reason": "object_available"
+    },
+    {
+      "action": "fetch_required",
+      "id": "missing",
+      "path": "model.bin",
+      "pointer_oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pointer_size": 20,
+      "reason": "object_missing"
+    }
+  ]
+}

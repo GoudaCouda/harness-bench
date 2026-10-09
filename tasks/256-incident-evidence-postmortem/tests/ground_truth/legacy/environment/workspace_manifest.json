@@ -1,0 +1,50 @@
+{
+  "schema_version": "nami_work_case02_workspace_manifest_v1",
+  "task_id": "case_02",
+  "fixture_root": "fixtures/agent_visible",
+  "initial_state_sha256": "cac0fab7be20bdbb6f857efde22c33940b65e682c65f25304aaf13b0a9f9d143",
+  "directories": ["input", "output"],
+  "fixture_files": [
+    {
+      "source_path": "fixtures/agent_visible/USER_TASK.md",
+      "workspace_path": "USER_TASK.md",
+      "sha256": "7adbe4b00c1efabb435bebf75a3d40f37594ac3306c7018be399a95b4b1564f0",
+      "size_bytes": 666
+    },
+    {
+      "source_path": "fixtures/agent_visible/input/alerts.json",
+      "workspace_path": "input/alerts.json",
+      "sha256": "56764ed55f5007e68b77d1d48d7d5a1abe2f21898ec4fce2b375f9418cbf732d",
+      "size_bytes": 1368
+    },
+    {
+      "source_path": "fixtures/agent_visible/input/change_ticket.json",
+      "workspace_path": "input/change_ticket.json",
+      "sha256": "10436d8f4c94e9a7b363f809641da4ea7fc087a91262db6bd4d4aea14645caee",
+      "size_bytes": 1184
+    },
+    {
+      "source_path": "fixtures/agent_visible/input/impact_summary.json",
+      "workspace_path": "input/impact_summary.json",
+      "sha256": "f258830fa5feb47878c8d50f0a1ee6291436165903bb454be8727873c1d94ad5",
+      "size_bytes": 603
+    },
+    {
+      "source_path": "fixtures/agent_visible/input/postmortem_template.docx",
+      "workspace_path": "input/postmortem_template.docx",
+      "sha256": "7925ecb0f6edc653c47c1f26d18083407f49268e35828f27798676a07069dde6",
+      "size_bytes": 3195
+    },
+    {
+      "source_path": "fixtures/agent_visible/input/service_events.jsonl",
+      "workspace_path": "input/service_events.jsonl",
+      "sha256": "85797f277b40498193c0e87ac7436868bf5ad1d6fc083e4742f0b6258f081970",
+      "size_bytes": 2979
+    }
+  ],
+  "output_policy": {
+    "required_files": ["output/incident_postmortem.docx"],
+    "additional_files_allowed": false,
+    "input_files_mutable": false
+  }
+}

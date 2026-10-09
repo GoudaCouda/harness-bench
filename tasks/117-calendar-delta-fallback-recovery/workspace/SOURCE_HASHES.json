@@ -1,0 +1,9 @@
+{
+  "evidence/page1.ics": "65fde2c0e0e142bfc905f6567f07fee5f805c746ce9ae93a2be1112e722e3274",
+  "evidence/page2.part": "7153cf315618cade11ce92ad659ccb09c44b0f7b2426868ecf66ee0035fa784e",
+  "evidence/page2_recovery.ics": "485b5c31558285c394443ac8f274d8194fc16195a23b182293f60ab56ea3bed3",
+  "policy/recovery_policy.md": "da64416cc2c2be9eff1ff9378f4d2a6ccb563929cd9531d70110c5cbf61b43e1",
+  "policy/sync_manifest.json": "a806826dc68e2f4cfd5bb7f2198b3a8dce9f6f8864c7e965af6b5dbf91396406",
+  "policy/timezone_registry.json": "b076803d7da5af93bf2cfe219f919fab255d5bc6372846b626249f659e091725",
+  "syncctl.py": "8e82362951a8ca752da5b0fcd6ee7670eb5193e123b46f373eff169b2fc6b7a4"
+}

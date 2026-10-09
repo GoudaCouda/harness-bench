@@ -1,0 +1,17 @@
+{
+  "external_actions_executed": false,
+  "local_hold_tokens": {
+    "AIR-2": "4e894a57a7f7377a4be8d4698a440e7363c306dd84829480f89c6707421ec1ce",
+    "SHUTTLE": "3d42e3a96bead390c172c265f87c256555fbd6e7f4bcc88ab636b48124c2b96a"
+  },
+  "local_request_tokens": {
+    "REFUND": "fba490d0fe8b8290238d0392731250794e4e16f16fe31c2baeccb0a79654c251"
+  },
+  "recovery_id": "TRIP-20261015-SECOND-01",
+  "schema_version": 1,
+  "semantic_db_digest": "2a63e3d9e889beed36e2e0df82671400c5d70d5fcb69593097023234cfbe0784",
+  "semantic_plan_digest": "5d43fa94289c63a65a87241336a782eb2dc43164c3b682cb5eb0e03f6a1300ee",
+  "source_checkpoint": "feff16b4db3b4bd61394c2f69226e72d4827cec65d2775d16f583ffb9eeef7bf",
+  "stage_boundary": "local_proposal_holds_and_requests_only",
+  "status": "staged_local_only"
+}

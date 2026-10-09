@@ -1,0 +1,4 @@
+[
+  {"id":"INV-401","invoice":{"region":"US","trial":false,"status":"suspended","amount_due":91.25},"expected":[false,"account_status"]},
+  {"id":"INV-402","invoice":{"region":"GB","trial":false,"status":"delinquent","amount_due":44.00},"expected":[true,"eligible_balance"]}
+]

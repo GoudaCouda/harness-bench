@@ -1,0 +1,19 @@
+{
+  "migration": [
+    {"records":[{"source_id":"v1-missing","document":{"schema_version":1,"name":"one","endpoint":"https://one","extensions":{"x-nested":{"a":[1,true,null]}}}},{"source_id":"v1-null","document":{"schema_version":1,"name":"two","endpoint":"https://two","retries":null,"region":null}}],"defaults":{"retry_limit":4,"region":"ap-south"}},
+    {"records":[{"source_id":"v2","document":{"schema_version":2,"identity":{"name":"worker"},"connection":{"endpoint":"https://worker","retry_limit":1,"region":null},"features":{"beta":false,"fast":true,"audit":true},"extensions":{"x-count":2}}}],"defaults":{"retry_limit":8,"region":"default"}},
+    {"records":[{"source_id":"v3","document":{"schema_version":3,"identity":{"name":"current"},"connection":{"endpoint":"https://current","retry_limit":10,"region":"west"},"enabled_features":["z","a"],"extensions":{"x-owner":"ops"}}}],"defaults":{"retry_limit":2,"region":"east"}}
+  ],
+  "rejection": [
+    {"records":[{"source_id":"bad-known","document":{"schema_version":2,"identity":{"name":"x"},"connection":{"endpoint":"http://plain","retry_limit":2},"features":{}}},{"source_id":"future","document":{"schema_version":9}},{"source_id":"good","document":{"schema_version":1,"name":"ok","endpoint":"https://ok","retries":0}}],"defaults":{"retry_limit":3,"region":"r"}},
+    {"records":[{"source_id":"unknown-field","document":{"schema_version":1,"name":"x","endpoint":"https://x","extra":1}},{"source_id":"bad-features","document":{"schema_version":3,"identity":{"name":"x"},"connection":{"endpoint":"https://x","retry_limit":2,"region":null},"enabled_features":["same","same"],"extensions":{}}}],"defaults":{"retry_limit":3,"region":"r"}},
+    {"records":[{"source_id":"bad-extension","document":{"schema_version":1,"name":"x","endpoint":"https://x","extensions":{"owner":"no-prefix"}}}],"defaults":{"retry_limit":3,"region":"r"}}
+  ],
+  "invalid": [
+    {"records":{},"defaults":{"retry_limit":3,"region":"r"}},
+    {"records":[],"defaults":{"retry_limit":true,"region":"r"}},
+    {"records":[{"source_id":"dup","document":{}},{"source_id":"dup","document":{}}],"defaults":{"retry_limit":3,"region":"r"}},
+    {"records":[{"source_id":"x","document":[]}],"defaults":{"retry_limit":3,"region":"r"}},
+    {"records":[{"source_id":"x","document":{},"extra":1}],"defaults":{"retry_limit":3,"region":"r"}}
+  ]
+}

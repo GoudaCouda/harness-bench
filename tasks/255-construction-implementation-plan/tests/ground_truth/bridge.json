@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "case_number": 1,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "check_fact_anchors",
+      "check_no_fabrication"
+    ],
+    [
+      "check_required_sections",
+      "check_tables_and_styles"
+    ]
+  ],
+  "expected_checks": [
+    "check_output_exists",
+    "check_ooxml_valid",
+    "check_required_sections",
+    "check_fact_anchors",
+    "check_tables_and_styles",
+    "check_no_fabrication",
+    "check_inputs_unchanged",
+    "check_allowed_file_scope",
+    "check_runtime_network_none"
+  ],
+  "runtime_checks": [
+    "check_runtime_network_none"
+  ],
+  "outputs": [
+    "outputs/新桥市综合管廊监控升级项目_施工实施方案.docx"
+  ],
+  "protected_files": {
+    ".case_id": "5b4510e62d6691a4bd94012a5e8e2c6006b8d3502a616b3c2ecf0875c1f14d02",
+    "hb_tools/README.md": "2423c44e07d1c0da995989680eddda78bd71a4742fbd22fa8a4b3c88a2f1f777",
+    "hb_tools/docx_ooxml.py": "f3009858fc78a1542e2885f6ebe6f3ac842ed9120c1d8b278279536e8bbf12ee",
+    "hb_tools/docx_tool.py": "a8897e3a6ea6bbe5f324478cdba87ae43e2bf4e7f01ad72606aef1e3ee82792a",
+    "hb_tools/filesystem_tool.py": "67171b3cd907a62fd674b36832827eb505cb90b9a1e4becf57dfff6ea3425bc7",
+    "inputs/01_招标要求.md": "85cbad72374c67529156c559f587e9bc629f61e7f29c6a098d7c81cc30b023bf",
+    "inputs/02_公司资质.json": "d11c17694e90aec33c2d49ff87c6bf75a47dd145c401dcfee95019a0285e74a5",
+    "inputs/03_评审标准.csv": "dc9c95b58fdfa989d53e2a7583b7f022241ee1739f551873c1768fa56c4e70aa",
+    "inputs/04_编制约束.md": "d78a6955447686e7697dac2fd9c43d030d7619923b4ecd1a085404499ef7d1ac",
+    "inputs/05_实施方案模板.docx": "ed6e4c3a537c0e9ab289f6267af9e83773c1ddd6ea183b4fc84b982baf59357b"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "inputs",
+    "outputs"
+  ],
+  "original_directories": [
+    "inputs",
+    "outputs"
+  ],
+  "original_modes": {
+    ".case_id": 436,
+    "inputs": 509,
+    "inputs/01_招标要求.md": 436,
+    "inputs/02_公司资质.json": 436,
+    "inputs/03_评审标准.csv": 436,
+    "inputs/04_编制约束.md": 436,
+    "inputs/05_实施方案模板.docx": 436,
+    "outputs": 509
+  }
+}

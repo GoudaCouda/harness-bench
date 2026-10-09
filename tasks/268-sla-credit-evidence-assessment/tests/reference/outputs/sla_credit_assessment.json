@@ -1,0 +1,86 @@
+{
+  "contract_id": "SYN-SLA-7306",
+  "credit": {
+    "base_credit_cny": 1850000,
+    "eligible_event_count": 3,
+    "evidence_ids": [
+      "evt-q3-101",
+      "evt-q3-144",
+      "evt-q3-207"
+    ],
+    "final_credit_cny": 2220000,
+    "multiplier_denominator": 5,
+    "multiplier_numerator": 6,
+    "rate_cny_per_minute": 12500,
+    "repeat_incident_threshold": 3,
+    "triggered_rule_ids": [
+      "sla-rule-minute-credit",
+      "sla-rule-repeat-multiplier"
+    ]
+  },
+  "event_assessment": {
+    "eligible_event_ids": [
+      "evt-q3-101",
+      "evt-q3-144",
+      "evt-q3-207"
+    ],
+    "eligible_minutes_by_event": [
+      {
+        "duration_minutes": 58,
+        "eligible_minutes": 50,
+        "event_id": "evt-q3-101",
+        "grace_minutes": 8,
+        "severity": "P1"
+      },
+      {
+        "duration_minutes": 41,
+        "eligible_minutes": 33,
+        "event_id": "evt-q3-144",
+        "grace_minutes": 8,
+        "severity": "P2"
+      },
+      {
+        "duration_minutes": 73,
+        "eligible_minutes": 65,
+        "event_id": "evt-q3-207",
+        "grace_minutes": 8,
+        "severity": "P1"
+      }
+    ],
+    "eligible_minutes_total": 148,
+    "p1_event_count": 2
+  },
+  "excluded_records": [
+    {
+      "event_id": "evt-ln4-118",
+      "reason_code": "out_of_scope_region"
+    },
+    {
+      "event_id": "evt-q3-190",
+      "reason_code": "scheduled_maintenance"
+    },
+    {
+      "event_id": "evt-q3-301",
+      "reason_code": "unvalidated_record"
+    }
+  ],
+  "ignored_sources": [
+    {
+      "reason_code": "non_contractual_projection",
+      "source_id": "sales-projection-2025-q3-nonbinding"
+    }
+  ],
+  "quarter": "2025-Q3",
+  "region_id": "SYN-REGION-QH2",
+  "remediation": {
+    "due_business_days": 6,
+    "evidence_ids": [
+      "evt-q3-101",
+      "evt-q3-207",
+      "sla-rule-enhanced-remediation"
+    ],
+    "level": "enhanced",
+    "triggered_rule_id": "sla-rule-enhanced-remediation"
+  },
+  "schema_version": "case14_sla_credit_assessment_v2"
+}

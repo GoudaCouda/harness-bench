@@ -1,0 +1,1 @@
+{"name":"@dispatch/worker","version":"1.6.0","private":true,"engines":{"node":"18.x"},"dependencies":{"upload-agent":"2.7.2","storage-sdk":"4.1.1"}}

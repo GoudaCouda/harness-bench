@@ -1,0 +1,11 @@
+{
+  "audit_sha256": "9d2c70ce945d69a1160e0851f287380625c9cc820703e1ede67ca34b95d3099a",
+  "checks": {
+    "eligibility": true,
+    "plan": true,
+    "plan_digest": true,
+    "satisfied_and_missing": true
+  },
+  "status": "pass",
+  "tool": "degreectl/1"
+}

@@ -1,0 +1,23 @@
+{
+  "archive_id": "nl-logs-0318",
+  "objects": {
+    "obj-a": {
+      "bytes": 2000,
+      "checksum": "ccca685709aa9e68d44ebb8e4aa02743fbf0c32b65ab5ac93ab6b1fd3d7ec7aa",
+      "pinned": true,
+      "ingested_at": 1773819400
+    },
+    "obj-b": {
+      "bytes": 3000,
+      "checksum": "19f2a4b976c8390457042c54cbaa196fe13b2747caddd9f160754a63029b8ac8",
+      "pinned": false,
+      "ingested_at": 1773820400
+    },
+    "obj-c": {
+      "bytes": 1500,
+      "checksum": "82c733bb0e5260806f75566f28d156cc30f17c0f094b619eb503da412e7e17c2",
+      "pinned": false,
+      "ingested_at": 1773821400
+    }
+  }
+}

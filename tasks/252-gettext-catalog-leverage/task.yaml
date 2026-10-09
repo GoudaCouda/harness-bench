@@ -1,0 +1,40 @@
+task_id: 252-gettext-catalog-leverage
+title: Leverage a gettext catalog with exact msgid matches
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Content Production
+task_subcategory: Document Processing
+capability_tags: [filesystem, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [empty_msgstr, missing_msgid, exact_only]
+required_artifacts:
+- leverage.json
+- CATALOG_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [UNICODE-LDML-TR35, ICU-MESSAGE-FORMAT]
+task_family: gettext-catalog-leverage
+variant: exact-msgid-skip-empty
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [leverage.json, CATALOG_NOTES.md]
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

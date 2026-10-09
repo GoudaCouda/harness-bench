@@ -1,0 +1,6 @@
+[
+  {"slot_name":"billing-slot","database":"appdb","plugin":"pgoutput","active":false,"restart_lsn":820,"confirmed_flush_lsn":900,"wal_status":"reserved","invalidation_reason":null,"failover":true,"synced":true},
+  {"slot_name":"events-slot","database":"appdb","plugin":"pgoutput","active":false,"restart_lsn":200,"confirmed_flush_lsn":500,"wal_status":"unreserved","invalidation_reason":null,"failover":false,"synced":false},
+  {"slot_name":"legacy-slot","database":"legacydb","plugin":"pgoutput","active":false,"restart_lsn":100,"confirmed_flush_lsn":450,"wal_status":"lost","invalidation_reason":"wal_removed","failover":false,"synced":false},
+  {"slot_name":"orders-slot","database":"appdb","plugin":"pgoutput","active":true,"restart_lsn":700,"confirmed_flush_lsn":880,"wal_status":"reserved","invalidation_reason":null,"failover":true,"synced":true}
+]

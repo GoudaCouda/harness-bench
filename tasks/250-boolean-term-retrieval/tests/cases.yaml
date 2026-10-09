@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 250-boolean-term-retrieval
+pass_threshold: 0.8
+cases:
+- id: ranked_docs
+  title: Conjunctive ranking order is exact
+  description: ranking.json ranked lists equal the independent kernel.
+  weight: 0.5
+  core: true
+- id: term_scores
+  title: Term-count scores are exact
+  description: ranking.json scores equal the independent kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain all-term matching and risk
+  description: RETRIEVAL_NOTES.md covers all, term, doc_id, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected corpus remains unchanged
+  description: Queries and corpus files stay byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

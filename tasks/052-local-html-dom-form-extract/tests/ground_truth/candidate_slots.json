@@ -1,0 +1,23 @@
+{
+  "service_code": "passport_renewal",
+  "window_start": "2026-08-17",
+  "window_end": "2026-08-20",
+  "not_before": "15:30:00",
+  "allowed_offices": ["downtown", "westside"],
+  "office_tie_break": ["downtown", "westside"],
+  "requires_wheelchair_accessible": true,
+  "slots": [
+    {"id": "PAS-199", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-17T15:00:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-200", "service_code": "passport_renewal", "office_id": "northgate", "start_local": "2026-08-17T16:00:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-201", "service_code": "first_passport", "office_id": "downtown", "start_local": "2026-08-17T15:30:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-202", "service_code": "passport_renewal", "office_id": "westside", "start_local": "2026-08-18T15:30:00", "availability": "waitlist", "wheelchair_accessible": true},
+    {"id": "PAS-203", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-18T15:45:00", "availability": "available", "wheelchair_accessible": false},
+    {"id": "PAS-204", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-18T16:00:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-209", "service_code": "passport_renewal", "office_id": "westside", "start_local": "2026-08-18T16:00:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-205", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-18T16:15:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-206", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-19T15:30:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-207", "service_code": "passport_renewal", "office_id": "westside", "start_local": "2026-08-20T15:45:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "PAS-208", "service_code": "passport_renewal", "office_id": "downtown", "start_local": "2026-08-21T16:00:00", "availability": "available", "wheelchair_accessible": true},
+    {"id": "NTR-301", "service_code": "notary", "office_id": "downtown", "start_local": "2026-08-17T15:30:00", "availability": "available", "wheelchair_accessible": true}
+  ]
+}

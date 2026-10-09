@@ -1,0 +1,16 @@
+{
+  "decision_count": 8,
+  "delivery_count": 9,
+  "external_actions_executed": false,
+  "recovery_id": "CRR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "680157bb294c7d2983290ed0221cf272254430f4d871b6c3ddb901ac52ee0154",
+  "source_checkpoint": "63ac4d7ca1eaa7c6303fadaf46345b4a42a921361d2e41f74e1fe326a0126493",
+  "status": "valid",
+  "totals": {
+    "active_requested_amount_cents": 330000,
+    "preserved_paid_amount_cents": 25000,
+    "preserved_submitted_amount_cents": 100000,
+    "ready_packet_amount_cents": 136000
+  }
+}

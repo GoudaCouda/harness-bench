@@ -1,0 +1,146 @@
+[
+  {
+    "digest": null,
+    "implicit": false,
+    "kind": "dir",
+    "layer_digest": "sha256:base",
+    "mode": 493,
+    "path": "etc",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": false,
+    "kind": "dir",
+    "layer_digest": "sha256:base",
+    "mode": 493,
+    "path": "etc/app",
+    "target": null
+  },
+  {
+    "digest": "sha256:new",
+    "implicit": false,
+    "kind": "file",
+    "layer_digest": "sha256:update",
+    "mode": 420,
+    "path": "etc/app/new.conf",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:base",
+    "mode": 493,
+    "path": "opt",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "opt/tool",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "opt/tool/bin",
+    "target": null
+  },
+  {
+    "digest": "sha256:run",
+    "implicit": false,
+    "kind": "file",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "opt/tool/bin/run",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "usr",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "usr/local",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": false,
+    "kind": "symlink",
+    "layer_digest": "sha256:update",
+    "mode": 511,
+    "path": "usr/local/current",
+    "target": "../releases/v2"
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "usr/local/releases",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "usr/local/releases/v2",
+    "target": null
+  },
+  {
+    "digest": "sha256:app2",
+    "implicit": false,
+    "kind": "file",
+    "layer_digest": "sha256:update",
+    "mode": 493,
+    "path": "usr/local/releases/v2/app",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:base",
+    "mode": 493,
+    "path": "var",
+    "target": null
+  },
+  {
+    "digest": null,
+    "implicit": true,
+    "kind": "dir",
+    "layer_digest": "sha256:base",
+    "mode": 493,
+    "path": "var/log",
+    "target": null
+  },
+  {
+    "digest": "sha256:log",
+    "implicit": false,
+    "kind": "file",
+    "layer_digest": "sha256:base",
+    "mode": 420,
+    "path": "var/log/app.log",
+    "target": null
+  }
+]

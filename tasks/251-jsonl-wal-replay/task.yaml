@@ -1,0 +1,41 @@
+task_id: 251-jsonl-wal-replay
+title: Replay a torn JSONL write-ahead log with idempotent ops
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+capability_tags: [filesystem, structured_data, terminal, local_state_machine]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management, safety_boundary]
+stressors: [torn_tail, duplicate_op_id, delete_after_put]
+required_artifacts:
+- store.json
+- replay_report.json
+- REPLAY_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HB-S200-EVENT-STATE, SQLITE-TRANSACTIONS]
+task_family: jsonl-wal-replay
+variant: first-op-wins-and-drop-torn-tail
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [store.json, replay_report.json, REPLAY_NOTES.md]
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

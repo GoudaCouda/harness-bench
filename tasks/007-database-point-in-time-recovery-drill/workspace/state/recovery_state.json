@@ -1,0 +1,16 @@
+{
+  "incident_id": "DB-INC-2026-0817-04",
+  "policy_version": "DB-PITR-DRILL-2026.08",
+  "phase": "unready",
+  "verified_backup_id": null,
+  "plan_sha256": null,
+  "restored_timeline": null,
+  "restored_target_name": null,
+  "restored_target_lsn": null,
+  "probe_runs": 0,
+  "probe_sha256": null,
+  "replay_verified": false,
+  "promotion_status": "not_eligible",
+  "promoted": false,
+  "production_changed": false
+}

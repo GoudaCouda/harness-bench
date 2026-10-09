@@ -1,0 +1,14 @@
+{
+  "art-cached-ok": {
+    "digest": "6cdda425ef5e156652d6d52b0f47dd1bd4bf0366b4a74b2daed0ce2af98258e0",
+    "key_id": "k-root-2",
+    "key_generation": 2,
+    "decision": "accepted"
+  },
+  "art-stale-cache": {
+    "digest": "66777cdf0568b64d18fb40a9bcf3009f632d349c45433dce9bece66c22af6e87",
+    "key_id": "k-root-2",
+    "key_generation": 1,
+    "decision": "accepted"
+  }
+}

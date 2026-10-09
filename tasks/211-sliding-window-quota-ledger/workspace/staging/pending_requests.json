@@ -1,0 +1,53 @@
+{
+  "batch_id": "quota-pending-0317",
+  "requests": [
+    {
+      "request_id": "q1",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 40000
+    },
+    {
+      "request_id": "q2",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 10000
+    },
+    {
+      "request_id": "q3",
+      "tenant_id": "tn-east",
+      "kind": "debit",
+      "amount_cents": 30000
+    },
+    {
+      "request_id": "q4",
+      "kind": "debit",
+      "amount_cents": 1000
+    },
+    {
+      "request_id": "q5",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 50000
+    },
+    {
+      "request_id": "q6",
+      "tenant_id": "tn-west",
+      "kind": "refund",
+      "amount_cents": 50000,
+      "refund_of": "e1"
+    },
+    {
+      "request_id": "q7",
+      "tenant_id": "tn-east",
+      "kind": "debit",
+      "amount_cents": 70000
+    },
+    {
+      "request_id": "q8",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 1000
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-230",
+  "gate_clock_epoch": 1775864000,
+  "events": [
+    {
+      "sample_id": "sm1",
+      "lot_id": "lot-a",
+      "receipt_c": 4.0,
+      "max_c": 8.0,
+      "custody_gap": false
+    },
+    {
+      "sample_id": "sm2",
+      "lot_id": "lot-a",
+      "receipt_c": 12.0,
+      "max_c": 8.0,
+      "custody_gap": false
+    },
+    {
+      "sample_id": "sm3",
+      "lot_id": "lot-b",
+      "receipt_c": 3.0,
+      "max_c": 8.0,
+      "custody_gap": true
+    },
+    {
+      "sample_id": "sm1",
+      "lot_id": "lot-a",
+      "receipt_c": 4.0,
+      "max_c": 8.0,
+      "custody_gap": false
+    },
+    {
+      "sample_id": "sm5",
+      "lot_id": "",
+      "receipt_c": 4.0,
+      "max_c": 8.0,
+      "custody_gap": false
+    },
+    {
+      "sample_id": "sm6",
+      "lot_id": "lot-c",
+      "receipt_c": 8.0,
+      "max_c": 8.0,
+      "custody_gap": false
+    },
+    {
+      "sample_id": "sm7",
+      "lot_id": "lot-c",
+      "receipt_c": 8.1,
+      "max_c": 8.0,
+      "custody_gap": false
+    }
+  ]
+}

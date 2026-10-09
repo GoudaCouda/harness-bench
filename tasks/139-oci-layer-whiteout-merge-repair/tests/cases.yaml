@@ -1,0 +1,39 @@
+schema_version: 2
+task_id: 139-oci-layer-whiteout-merge-repair
+pass_threshold: 0.8
+cases:
+- id: whiteout_and_opaque_reconstruction
+  title: Lower-layer state is reconstructed under OCI whiteout rules
+  description: Explicit opaque order-independent and same-layer semantics are correct.
+  weight: 0.3
+  core: true
+- id: hierarchy_type_and_link_safety
+  title: Hierarchy type replacement and links remain coherent and safe
+  description: Descendants ancestors modes duplicate entries and link targets are handled exactly.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_layer_replay
+  title: Protected fixture outputs match the repaired merger
+  description: Rootfs and audit are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: layer_handoff
+  title: Layer reconstruction and safety boundaries are handed off clearly
+  description: Another engineer can audit provenance markers replacement paths and verification.
+  weight: 0.2
+  core: false
+- id: source_and_extraction_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+
+- id: safety_and_input_integrity
+  title: Protected evidence and extraction boundaries remain intact
+  description: Source fixtures are unchanged, unsafe filesystem nodes are absent, and no live extraction or image mutation is claimed.
+  weight: 0.0
+  gate: true

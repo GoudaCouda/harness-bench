@@ -1,0 +1,5 @@
+decision_key,winning_source,superseded_sources,resolution_reason,priority_rule
+launch_date,email/thread.json#email-004,meeting/meeting_transcript.md#MT-1,The later decision email moved the tentative June 20 date to July 15.,Later decision email governs schedule changes.
+deployment_mode,docs/security_review.md#SEC-2,docs/product_requirements.md#PRD-2 | meeting/meeting_transcript.md#MT-2,Formal security blocked mode A because it cannot enforce audit logging.,Formal security governs its scoped domain.
+budget_cap,docs/finance_constraints.md#FIN-1,meeting/meeting_transcript.md#MT-5,Formal finance set the cleared cap at USD 180000 while the meeting only noted unsigned extra budget.,Formal finance governs its scoped domain.
+feature_scope,docs/legal_notes.md#LEGAL-1,docs/product_requirements.md#PRD-1 | meeting/meeting_transcript.md#MT-3,Formal legal excluded real-time export until the data-processing addendum is approved.,Formal legal governs its scoped domain.

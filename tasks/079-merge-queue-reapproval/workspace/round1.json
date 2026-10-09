@@ -1,0 +1,11 @@
+{
+  "sha": "aaa111",
+  "checks": {
+    "build_linux": "pass",
+    "build_windows": "pass",
+    "security": "pass",
+    "license": "pass"
+  },
+  "reviews": {"owner_approval": "pass", "release_approval": "pass"},
+  "queue": "ready"
+}

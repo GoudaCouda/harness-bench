@@ -1,0 +1,82 @@
+{
+  "schema_version": "multi_policy_review_report_v1",
+  "review_scope": {
+    "files_reviewed": [
+      "input/A01_采购管理办法_v3.2.md",
+      "input/A02_费用报销细则_v2.0.md",
+      "input/A03_信息安全控制标准_v4.0.md",
+      "input/A04_远程办公实施细则_v1.3.md",
+      "input/A05_制度版本与引用目录_2026Q2.md"
+    ],
+    "scope_statement": "逐条比对五份制度文件中的审批、保存、终端、版本和引用要求。"
+  },
+  "summary": {
+    "total_findings": 5,
+    "high": 2,
+    "medium": 3,
+    "low": 0,
+    "conclusion": "共发现五项有直接原文证据的问题，应先统一高风险访问与审批规则，再更新版本和引用。"
+  },
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "issue_type": "fact_conflict",
+      "severity": "high",
+      "title": "采购委员会审批金额门槛不一致",
+      "evidence": [
+        {"file": "input/A01_采购管理办法_v3.2.md", "section": "第 3.2 节 采购审批", "quote": "单笔含税金额达到人民币 50,000 元的采购，应在下单前取得采购委员会书面批准。"},
+        {"file": "input/A02_费用报销细则_v2.0.md", "section": "第 4.2 节 采购类费用附件", "quote": "单笔含税金额达到人民币 30,000 元的采购报销，必须附采购委员会在下单前出具的书面批准。"}
+      ],
+      "judgment": "两份制度对同一采购委员会事前审批义务设置了 50,000 元和 30,000 元两个门槛，使 30,000 至 49,999.99 元采购无法获得一致执行口径。",
+      "recommendation": {"action": "以采购管理办法的 50,000 元门槛统一报销附件要求，并同步发布修订通知。", "target_file": "input/A02_费用报销细则_v2.0.md", "target_section": "第 4.2 节 采购类费用附件", "replacement_text": "单笔含税金额达到人民币 50,000 元的采购报销，必须附采购委员会在下单前出具的书面批准。"}
+    },
+    {
+      "finding_id": "F-002",
+      "issue_type": "fact_conflict",
+      "severity": "medium",
+      "title": "采购档案保存期限不一致",
+      "evidence": [
+        {"file": "input/A01_采购管理办法_v3.2.md", "section": "第 8.2 节 档案保存", "quote": "采购合同、询价记录与审批材料的保存期限统一为 5 年，自合同关闭之日起计算。"},
+        {"file": "input/A02_费用报销细则_v2.0.md", "section": "第 6.1 节 采购档案保存", "quote": "采购合同、询价记录与审批材料的保存期限统一为 3 年，自合同关闭之日起计算。"}
+      ],
+      "judgment": "相同档案范围和相同起算点分别规定保存 5 年和 3 年，执行部门无法同时满足。",
+      "recommendation": {"action": "将费用报销细则的采购档案期限统一为 5 年。", "target_file": "input/A02_费用报销细则_v2.0.md", "target_section": "第 6.1 节 采购档案保存", "replacement_text": "采购合同、询价记录与审批材料的保存期限统一为 5 年，自合同关闭之日起计算。"}
+    },
+    {
+      "finding_id": "F-003",
+      "issue_type": "fact_conflict",
+      "severity": "high",
+      "title": "核心系统远程接入设备范围冲突",
+      "evidence": [
+        {"file": "input/A03_信息安全控制标准_v4.0.md", "section": "第 5.2 节 远程访问终端", "quote": "接入公司核心业务系统的远程终端必须是纳入公司统一管理的设备，并启用多因素认证。"},
+        {"file": "input/A04_远程办公实施细则_v1.3.md", "section": "第 3.1 节 可用终端", "quote": "员工可使用个人设备或公司统一管理设备接入公司核心业务系统，但终端磁盘必须加密。"}
+      ],
+      "judgment": "安全标准只允许公司统一管理设备且要求多因素认证，实施细则却允许个人设备，直接扩大了核心系统访问范围。",
+      "recommendation": {"action": "删除个人设备访问许可，并补充多因素认证要求。", "target_file": "input/A04_远程办公实施细则_v1.3.md", "target_section": "第 3.1 节 可用终端", "replacement_text": "员工仅可使用公司统一管理设备接入公司核心业务系统，并启用多因素认证。"}
+    },
+    {
+      "finding_id": "F-004",
+      "issue_type": "version_mismatch",
+      "severity": "medium",
+      "title": "费用报销细则引用了失效的采购制度版本",
+      "evidence": [
+        {"file": "input/A02_费用报销细则_v2.0.md", "section": "第 8.1 节 采购制度依据", "quote": "本细则涉及采购事项时，依据《采购管理办法》v3.1 执行。"},
+        {"file": "input/A05_制度版本与引用目录_2026Q2.md", "section": "第 1.1 节 当前有效版本", "quote": "《采购管理办法》当前有效版本为 v3.2，生效日期为 2026-04-01；v3.1 已于 2026-03-31 终止有效。"}
+      ],
+      "judgment": "费用报销细则仍要求依据 v3.1，而版本目录明确 v3.1 已终止有效且当前版本为 v3.2。",
+      "recommendation": {"action": "将采购制度依据更新为当前有效 v3.2。", "target_file": "input/A02_费用报销细则_v2.0.md", "target_section": "第 8.1 节 采购制度依据", "replacement_text": "本细则涉及采购事项时，依据《采购管理办法》v3.2 执行。"}
+    },
+    {
+      "finding_id": "F-005",
+      "issue_type": "reference_error",
+      "severity": "medium",
+      "title": "远程访问控制基线章节引用错误",
+      "evidence": [
+        {"file": "input/A04_远程办公实施细则_v1.3.md", "section": "第 7.1 节 规范引用", "quote": "远程访问终端的控制基线见《信息安全控制标准》v4.0 第 4.3 节。"},
+        {"file": "input/A05_制度版本与引用目录_2026Q2.md", "section": "第 2.1 节 规范引用索引", "quote": "远程访问终端控制基线的规范位置为《信息安全控制标准》v4.0 第 5.2 节。"}
+      ],
+      "judgment": "实施细则引用第 4.3 节，但受控引用目录将远程终端基线定位到第 5.2 节。",
+      "recommendation": {"action": "将错误章节号修正为第 5.2 节。", "target_file": "input/A04_远程办公实施细则_v1.3.md", "target_section": "第 7.1 节 规范引用", "replacement_text": "远程访问终端的控制基线见《信息安全控制标准》v4.0 第 5.2 节。"}
+    }
+  ]
+}

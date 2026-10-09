@@ -1,0 +1,5 @@
+risk_id,area,evidence,impact,mitigation,owner_hint
+R1,storage,repo.py SQLite write path,unexpected mutation,document transactions and add tests,storage
+R2,audit,audit.py persistence path,retention exposure,define audit retention,security
+R3,config,cli.py load_settings call,runtime misconfiguration,validate config at startup,platform
+R4,validation,handlers.py create_order path,invalid input accepted,centralize validation and tests,api

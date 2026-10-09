@@ -1,0 +1,33 @@
+schema_version: 1
+task_id: 115-cdc-scd2-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_event_semantics
+  title: Event decisions and SCD2 effects are complete
+  question: Does the handoff explicitly explain every unique event disposition,
+    the out-of-order complete version chain, stale and exact-duplicate handling,
+    CORR-88 historical correction and the field inherited into the current
+    projection, HOLD-77, missing consent, and unsupported schema 3?
+  pass_anchors:
+  - Equivalent wording is accepted only when the correction's inherited
+    current-field effect and all event/quarantine relationships are explicit.
+  fail_anchors:
+  - Listing CORR-88 without explaining its inherited current-projection effect,
+    or omitting any event/quarantine decision, fails.
+- id: handoff_recovery_closure
+  title: Interrupted recovery and local stage are closed
+  question: Does the handoff explicitly explain the prepared-journal recovery,
+    verification, idempotent apply or replay, and that the resulting local stage
+    remains pending independent publish approval?
+  pass_anchors:
+  - All recovery, replay, verification, and pending-stage relationships must be
+    stated; merely listing generated artifacts does not establish them.
+  fail_anchors:
+  - Omitting the pending-approval status, journal recovery, verification, or
+    idempotent replay fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

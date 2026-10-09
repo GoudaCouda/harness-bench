@@ -1,0 +1,15 @@
+{
+  "capacity": [
+    {"state":{"capacity":5,"next_fence":8,"leases":[{"request_id":"x","owner":"a","units":5,"acquired_ms":1,"expires_ms":10,"fence":7}]},"requests":[{"request_id":"n","owner":"b","units":5,"requested_ms":10,"ttl_ms":2}],"now_ms":10},
+    {"state":{"capacity":4,"next_fence":3,"leases":[]},"requests":[{"request_id":"a","owner":"x","units":3,"requested_ms":1,"ttl_ms":5},{"request_id":"b","owner":"y","units":2,"requested_ms":2,"ttl_ms":5}],"now_ms":2}
+  ],
+  "replay": [
+    {"state":{"capacity":6,"next_fence":31,"leases":[{"request_id":"replay-30","owner":"worker-z","units":4,"acquired_ms":100,"expires_ms":900,"fence":30}]},"requests":[{"request_id":"replay-30","owner":"worker-z","units":4,"requested_ms":200,"ttl_ms":999}],"now_ms":500},
+    {"state":{"capacity":4,"next_fence":2,"leases":[]},"requests":[{"request_id":"z","owner":"b","units":2,"requested_ms":9,"ttl_ms":5},{"request_id":"a","owner":"a","units":3,"requested_ms":8,"ttl_ms":5}],"now_ms":10},
+    {"state":{"capacity":2,"next_fence":2,"leases":[{"request_id":"r","owner":"a","units":1,"acquired_ms":0,"expires_ms":9,"fence":1}]},"requests":[{"request_id":"r","owner":"b","units":1,"requested_ms":2,"ttl_ms":5}],"now_ms":3}
+  ],
+  "invalid": [
+    {"state":{"capacity":1,"next_fence":1,"leases":[]},"requests":[{"request_id":"a","owner":"x","units":1,"requested_ms":0,"ttl_ms":0}],"now_ms":0},
+    {"state":{"capacity":1,"next_fence":1,"leases":[]},"requests":[{"request_id":"a","owner":"x","units":1,"requested_ms":0,"ttl_ms":1},{"request_id":"a","owner":"x","units":1,"requested_ms":0,"ttl_ms":1}],"now_ms":0}
+  ]
+}

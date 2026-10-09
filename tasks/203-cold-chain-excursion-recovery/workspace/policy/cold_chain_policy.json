@@ -1,0 +1,33 @@
+{
+  "as_of_utc": "2026-11-01T07:00:00Z",
+  "dispositions": [
+    "available",
+    "hold_evidence_gap",
+    "quarantine_do_not_use"
+  ],
+  "excursion_minimum_minutes": 20,
+  "immutable_lot_fields": [
+    "product_code",
+    "quantity",
+    "container_id"
+  ],
+  "next_local_actions": [
+    "none",
+    "route_to_qa_for_missing_evidence",
+    "retain_in_do_not_use_quarantine"
+  ],
+  "prohibited_actions": [
+    "destroy",
+    "release",
+    "administer",
+    "notify",
+    "ship"
+  ],
+  "recovery_id": "CCR-20261101-01",
+  "sample_interval_minutes": 10,
+  "schema_version": 1,
+  "temperature_band_c": {
+    "lower_inclusive": 2.0,
+    "upper_inclusive": 8.0
+  }
+}

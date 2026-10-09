@@ -1,0 +1,190 @@
+{
+  "index_rows": [
+    {
+      "record_id": "C-001",
+      "record_type": "customer",
+      "source_path": "dropbox/customers/customers_01.csv",
+      "status": "active",
+      "target_path": "normalized/customer_C-001.json"
+    },
+    {
+      "record_id": "C-002",
+      "record_type": "customer",
+      "source_path": "dropbox/customers/customers_01.csv",
+      "status": "inactive",
+      "target_path": "normalized/customer_C-002.json"
+    },
+    {
+      "source_path": "dropbox/customers/customers_extra.csv",
+      "target_path": "normalized/customer_C-003.json",
+      "record_type": "customer",
+      "record_id": "C-003",
+      "status": "pending"
+    },
+    {
+      "record_id": "CASE-500",
+      "record_type": "note",
+      "source_path": "dropbox/notes/case_500.txt",
+      "status": "open",
+      "target_path": "normalized/note_CASE-500.json"
+    },
+    {
+      "record_id": "CASE-501",
+      "record_type": "note",
+      "source_path": "dropbox/notes/case_501.txt",
+      "status": "closed",
+      "target_path": "normalized/note_CASE-501.json"
+    },
+    {
+      "source_path": "dropbox/notes/case_502.txt",
+      "target_path": "normalized/note_CASE-502.json",
+      "record_type": "note",
+      "record_id": "CASE-502",
+      "status": "pending"
+    },
+    {
+      "record_id": "O-100",
+      "record_type": "order",
+      "source_path": "dropbox/orders/2026/order_100.json",
+      "status": "active",
+      "target_path": "normalized/order_O-100.json"
+    },
+    {
+      "record_id": "O-101",
+      "record_type": "order",
+      "source_path": "dropbox/orders/2026/order_101.JSON",
+      "status": "active",
+      "target_path": "normalized/order_O-101.json"
+    },
+    {
+      "source_path": "dropbox/orders/2026/order_102.json",
+      "target_path": "normalized/order_O-102.json",
+      "record_type": "order",
+      "record_id": "O-102",
+      "status": "active"
+    }
+  ],
+  "outputs": {
+    "customer_C-001.json": {
+      "email": "ada@example.com",
+      "name": "Ada Lovelace",
+      "record_id": "C-001",
+      "record_type": "customer",
+      "status": "active"
+    },
+    "customer_C-002.json": {
+      "email": "lin@example.com",
+      "name": "Lin Chen",
+      "record_id": "C-002",
+      "record_type": "customer",
+      "status": "inactive"
+    },
+    "note_CASE-500.json": {
+      "owner": "ana",
+      "record_id": "CASE-500",
+      "record_type": "note",
+      "status": "open"
+    },
+    "note_CASE-501.json": {
+      "owner": "bo",
+      "record_id": "CASE-501",
+      "record_type": "note",
+      "status": "closed"
+    },
+    "order_O-100.json": {
+      "amount": 120.5,
+      "currency": "USD",
+      "customer_id": "C-001",
+      "record_id": "O-100",
+      "record_type": "order",
+      "status": "active"
+    },
+    "order_O-101.json": {
+      "amount": 88.0,
+      "currency": "EUR",
+      "customer_id": "C-002",
+      "record_id": "O-101",
+      "record_type": "order",
+      "status": "active"
+    },
+    "customer_C-003.json": {
+      "email": "mira@example.com",
+      "name": "Mira Patel",
+      "record_id": "C-003",
+      "record_type": "customer",
+      "status": "pending"
+    },
+    "note_CASE-502.json": {
+      "owner": "cy",
+      "record_id": "CASE-502",
+      "record_type": "note",
+      "status": "pending"
+    },
+    "order_O-102.json": {
+      "amount": 42.75,
+      "currency": "USD",
+      "customer_id": "C-003",
+      "record_id": "O-102",
+      "record_type": "order",
+      "status": "active"
+    }
+  },
+  "reject_rows": [
+    {
+      "details": "C-003",
+      "error_type": "invalid_status",
+      "source_path": "dropbox/customers/customers_bad.csv"
+    },
+    {
+      "details": "C-004 email",
+      "error_type": "missing_required_field",
+      "source_path": "dropbox/customers/customers_bad.csv"
+    },
+    {
+      "source_path": "dropbox/customers/customers_extra.csv",
+      "error_type": "duplicate_record_id",
+      "details": "C-002"
+    },
+    {
+      "details": ".md",
+      "error_type": "unsupported_extension",
+      "source_path": "dropbox/misc/empty.md"
+    },
+    {
+      "details": ".png",
+      "error_type": "unsupported_extension",
+      "source_path": "dropbox/misc/image.png"
+    },
+    {
+      "details": "Case",
+      "error_type": "missing_required_field",
+      "source_path": "dropbox/notes/case_bad.txt"
+    },
+    {
+      "details": "O-102",
+      "error_type": "invalid_amount",
+      "source_path": "dropbox/orders/2026/order_bad.json"
+    },
+    {
+      "details": "O-100",
+      "error_type": "duplicate_record_id",
+      "source_path": "dropbox/orders/2026/order_dup.json"
+    },
+    {
+      "source_path": "dropbox/orders/2026/order_missing_currency.json",
+      "error_type": "missing_required_field",
+      "details": "currency"
+    }
+  ],
+  "summary": {
+    "by_type": {
+      "customer": 3,
+      "note": 3,
+      "order": 3
+    },
+    "reject_count": 9,
+    "success_count": 9
+  }
+}
+
+

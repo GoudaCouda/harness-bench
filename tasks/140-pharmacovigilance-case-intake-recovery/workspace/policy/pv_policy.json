@@ -1,0 +1,19 @@
+{
+  "permitted_meddra_versions": [
+    "27.1"
+  ],
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "rules": {
+    "accepted_boundary": "an acknowledged accepted version is immutable and later local messages are held",
+    "case_identity": "case_id, sender_case_id, patient_key, and suspect_product_key must all match",
+    "delivery_identity": "first occurrence of a message_id wins; later deliveries are duplicates",
+    "event_order": "process accepted messages by source_sequence, then message_id",
+    "execution": "local review staging only; no regulatory transmission or acknowledgement is executed",
+    "nullification": "requires a non-empty nullification_reason and exact identity",
+    "pending_boundary": "do not change a case while its durable submission acknowledgement is pending",
+    "queue": "accepted serious cases stage to expedited_review; accepted non-serious cases stage to routine_review",
+    "terminology": "MedDRA version must be permitted",
+    "version_chain": "new versions must be contiguous from the durable current version"
+  },
+  "schema_version": 1
+}

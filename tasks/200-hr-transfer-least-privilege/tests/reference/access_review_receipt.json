@@ -1,0 +1,12 @@
+{
+  "execution_state": "proposed_only",
+  "external_actions_executed": false,
+  "input_bundle_sha256": "0fb8860dc3b7b1fb891aae40da72e66c2e40d52508ab9941ff472d60bbdb534a",
+  "phase": "staged_for_approval",
+  "plan_sha256": "a013a3b7d4032362e3f5be85ee2109b339a73192fcc24fdff93ccfa8766a1cc5",
+  "receipt_type": "local_access_review_stage",
+  "review_sha256": "ba2651467eb5283e70d34b61fee9bc5cedffa45addb8783470bfb821e35c2d70",
+  "stage_token": "6863ed47db0cf945e259fe0b0ac7c7b2565444386130a804837e69762909694c",
+  "state_revision": 1,
+  "transfer_id": "TR-200"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "synthetic_impact_summary_v1",
+  "incident_id": "INC-2026-0712-SETTLE-01",
+  "severity": "SEV-1",
+  "service": "settlement-api",
+  "region": "east-1",
+  "impact_window": {
+    "start": "2026-07-12T10:03:00+08:00",
+    "end_exclusive": "2026-07-12T10:24:00+08:00",
+    "duration_minutes": 21
+  },
+  "requests_total": 4200,
+  "requests_failed": 1260,
+  "failure_rate_pct": 30.0,
+  "affected_merchants": 87,
+  "orders_queued_for_retry": 934,
+  "queue_drained_at": "2026-07-12T10:42:00+08:00",
+  "lost_orders": 0,
+  "duplicate_settlements": 0,
+  "evidence_id": "METRIC-EV-IMPACT-01"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "C1",
+    "from": "10.paper/alpha",
+    "to": "10.data/cohort.v2",
+    "date": "2024-05-12",
+    "note": "analysis used the v2 follow-up release"
+  },
+  {
+    "id": "C1-DUP",
+    "from": "10.paper/alpha",
+    "to": "10.data/cohort.v2",
+    "date": "2024-05-12",
+    "note": "duplicate Crossref export row"
+  },
+  {
+    "id": "C2",
+    "from": "10.paper/beta",
+    "to": "10.data/cohort.v3",
+    "date": "2026-05-18",
+    "note": "cites the newly added 2026 pediatric cohort that reused the v3 DOI in the provider export"
+  },
+  {
+    "id": "C3",
+    "from": "10.paper/gamma",
+    "to": "10.data/cohort",
+    "date": "2026-06-01",
+    "note": "method overview cites the dataset family landing page, not a specific version"
+  }
+]

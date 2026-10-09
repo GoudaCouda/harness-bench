@@ -1,0 +1,1 @@
+{"image":"registry.example.invalid/invoice-api@sha256:2f57cafe","runtime":{"port_from_env":"HTTP_PORT","supported_port":9000,"readiness_path":"/health/ready"},"required_env":["DATABASE_URL","HTTP_PORT"],"evidence_id":"IMG-57"}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "case17_workspace_manifest_v1",
+  "environment_template_id": "local_expense_coordination_v1",
+  "reset_entrypoint": "environment/reset.py",
+  "fixed_time": "2026-07-20T09:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "locale": "zh-CN",
+  "random_seed": 170017,
+  "network_policy": "offline",
+  "agent_visible_inputs": [
+    "expense_ledger.json",
+    "contacts.json"
+  ],
+  "tool_backend_state": "state.sqlite",
+  "agent_visible_tool_ids": [
+    "local_file_api",
+    "local_contacts_api",
+    "local_payment_request_api",
+    "local_status_report_api"
+  ],
+  "hidden_from_agent": [
+    "fixtures/seed_state.json",
+    "oracle/",
+    "verifier/",
+    "tests/",
+    "validation/"
+  ],
+  "permitted_terminal_mutations": [
+    "payment_requests rows with run_tag=case_17",
+    "one status_reports row with run_tag=case_17",
+    "corresponding audit_log rows"
+  ]
+}

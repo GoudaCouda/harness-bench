@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "deletion_timestamp": 10,
+      "dependents_gone": true,
+      "finalizers": [
+        "example.io/cleanup"
+      ],
+      "id": "parent",
+      "owner": null
+    },
+    {
+      "deletion_timestamp": 11,
+      "dependents_gone": true,
+      "finalizers": [
+        "example.io/cleanup"
+      ],
+      "id": "child",
+      "owner": "parent"
+    },
+    {
+      "deletion_timestamp": null,
+      "dependents_gone": false,
+      "finalizers": [],
+      "id": "live",
+      "owner": null
+    }
+  ],
+  "policy": {
+    "managed_finalizers": [
+      "example.io/cleanup"
+    ],
+    "propagation": "foreground",
+    "protected": []
+  }
+}

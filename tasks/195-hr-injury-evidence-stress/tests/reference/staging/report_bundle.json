@@ -1,0 +1,34 @@
+{
+  "contains_private_medical_detail": false,
+  "external_delivery": false,
+  "osha_reports": [
+    {
+      "case_id": "CASE-776",
+      "deadline_utc": "2026-07-17T07:25:00Z",
+      "status": "staged_local"
+    }
+  ],
+  "recovery_id": "REC-OSHA-2026-0716-A",
+  "workers_comp_notices": [
+    {
+      "case_id": "CASE-771",
+      "status": "staged_local"
+    },
+    {
+      "case_id": "CASE-772",
+      "status": "staged_local"
+    },
+    {
+      "case_id": "CASE-774",
+      "status": "staged_local"
+    },
+    {
+      "case_id": "CASE-775",
+      "status": "staged_local"
+    },
+    {
+      "case_id": "CASE-776",
+      "status": "staged_local"
+    }
+  ]
+}

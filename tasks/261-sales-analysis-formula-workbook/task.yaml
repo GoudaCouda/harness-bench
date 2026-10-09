@@ -1,0 +1,41 @@
+schema_version: 2
+task_id: 261-sales-analysis-formula-workbook
+title: sales analysis formula workbook
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+design_file: design.md
+timeout_sec: 7200
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Quantitative Analysis
+difficulty: hard
+capability_tags:
+- goal_understanding
+- planning
+- tool_use
+- workspace_operation
+- self_correction
+- deliverable_completion
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts: &id001
+- output/sales_analysis.xlsx
+task_family: 261-sales-analysis-formula-workbook
+variant: standalone
+mutation_contract:
+  allowed_created: *id001
+  allowed_modified: []
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_07

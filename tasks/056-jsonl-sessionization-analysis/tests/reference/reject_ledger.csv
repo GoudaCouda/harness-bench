@@ -1,0 +1,6 @@
+line_number,event_id,reason,notes
+7,E104,duplicate_event_id,duplicate after first valid E104
+8,E300,bot_user,SyntheticBot
+9,,malformed_json,could not parse JSON
+10,E400,missing_timestamp,timestamp blank
+11,E401,unknown_event_type,scroll

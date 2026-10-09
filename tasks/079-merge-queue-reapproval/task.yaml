@@ -1,0 +1,49 @@
+task_id: 079-merge-queue-reapproval
+title: Re-evaluate a protected merge queue after a late commit
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Repository Maintenance
+difficulty: medium
+capability_tags:
+- filesystem
+- structured_data
+- analysis
+harness_demands:
+- multi_step_execution
+- safety_boundary
+- verification_behavior
+stressors:
+- conflicting_evidence
+required_artifacts:
+- queue_gates.csv
+- queue_state.json
+- transition.md
+task_family: 079-merge-queue-reapproval
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SE-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - queue_gates.csv
+  - queue_state.json
+  - transition.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

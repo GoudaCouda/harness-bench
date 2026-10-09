@@ -1,0 +1,4 @@
+[
+  {"job": "windows", "sha": "91ac2e", "status": "pass", "attempt": 2},
+  {"job": "macos", "sha": "91ac2e", "status": "runner_lost", "attempt": 2}
+]

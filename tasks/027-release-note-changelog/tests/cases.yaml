@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 027-release-note-changelog
+pass_threshold: 0.8
+cases:
+- id: shipped_release_record
+  title: Changelog represents the exact shipped product set once
+  description: Six shipped issues appear once with correct category and meaning while reverted, deferred, and docs-only issues are not promoted to shipped product work.
+  weight: 0.35
+  core: true
+- id: actionable_breaking_migrations
+  title: Every shipped breaking change has actionable migration guidance
+  description: The four breaking issues each connect old interface, new interface, and pre-upgrade validation without omitting credential or webhook compatibility impact.
+  weight: 0.25
+  core: true
+- id: safe_security_and_release_disposition
+  title: Security disclosure and non-shipped disposition are safe and complete
+  description: Public and embargoed security work are handled at appropriate detail and reverted, deferred, and docs-only work are clearly separated from shipped features.
+  weight: 0.20
+  core: true
+- id: operator_readability
+  title: Release artifacts are readable by customers and operators
+  description: Version/date, headings, concise issue descriptions, and validation-oriented migration sections form usable documents rather than an ID dump.
+  weight: 0.10
+  core: false
+- id: cross_document_traceability
+  title: Changelog and migration guide agree on compatibility scope
+  description: Breaking issue IDs and interface names reconcile across both documents with no duplicated or contradictory release state.
+  weight: 0.10
+  core: false
+- id: source_and_disclosure_boundary
+  title: Release sources and embargo boundaries are preserved
+  description: Sources remain unchanged, embargoed exploit details are not exposed, and deliverables are regular files. Unsupported publication claims reduce the scored release-disposition case rather than zeroing the task.
+  weight: 0.0
+  gate: true

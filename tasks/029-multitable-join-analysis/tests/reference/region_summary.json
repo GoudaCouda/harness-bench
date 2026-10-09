@@ -1,0 +1,27 @@
+{
+  "Central": {
+    "canonical_customer_count": 1,
+    "gross_revenue_usd": 550.0,
+    "net_revenue_usd": 500.0
+  },
+  "East": {
+    "canonical_customer_count": 1,
+    "gross_revenue_usd": 338.0,
+    "net_revenue_usd": 284.0
+  },
+  "North": {
+    "canonical_customer_count": 2,
+    "gross_revenue_usd": 440.0,
+    "net_revenue_usd": 418.0
+  },
+  "South": {
+    "canonical_customer_count": 1,
+    "gross_revenue_usd": 100.0,
+    "net_revenue_usd": 100.0
+  },
+  "West": {
+    "canonical_customer_count": 2,
+    "gross_revenue_usd": 0.0,
+    "net_revenue_usd": 0.0
+  }
+}

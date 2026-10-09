@@ -1,0 +1,7 @@
+# Repair Git LFS pointer and object reconciliation contract
+
+Reconcile canonical Git LFS v1 pointers, attributes, index conflicts, worktree state, and local object evidence. Conflicts/attribute mismatch or present object oid/size mismatch block. Matching hydrated content is kept. Checkout intent hydrates pointer/missing worktrees only when the matching object is present; absent objects yield fetch_required without claiming a fetch. Stage-worktree intent may rewrite a pointer only from a supplied canonical lowercase `sha256:` oid and nonnegative size. Return exactly `decisions` and `action_counts`; each id-sorted decision has exactly `id,path,action,reason,pointer_oid,pointer_size`, and counts always contain `keep,hydrate,rewrite_pointer,fetch_required,block`. Canonical pointers require the exact v1 version, `sha256:` plus 64 lowercase hexadecimal characters, nonnegative size, and unique ids.
+
+The output object has exactly `decisions,action_counts`. Each id-sorted decision has exactly `id,path,action,reason,pointer_oid,pointer_size`; action counts always include `keep,hydrate,rewrite_pointer,fetch_required,block`. Reasons are `index_conflict,attribute_mismatch,object_oid_mismatch,object_size_mismatch,hydrated_matches_pointer,object_available,stage_content_identity,object_missing`, or `unreconciled_state`.
+
+The function must not mutate inputs. Run `python3 -m unittest discover -s tests -v` and `python3 bin/run_repair.py`, re-open `out/result.json`, and document verification evidence plus the offline boundary in `REPAIR_NOTES.md`.

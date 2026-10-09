@@ -1,0 +1,7 @@
+{
+  "config_version": "FILTER-7",
+  "list_version": "LIST-2026-06-30",
+  "alias_normalization": "ascii_lower",
+  "fail_closed_on_probe_error": false,
+  "authorized_clearance_roles": ["analyst", "compliance_officer"]
+}

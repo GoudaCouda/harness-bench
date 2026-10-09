@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 037-multiday-project-state
+pass_threshold: 0.8
+cases:
+- {id: feasible_recovery, title: Recovery plan satisfies coupled constraints, description: Choice, cost, dependencies, availability, gates and freeze are jointly feasible., weight: 0.4, core: true}
+- {id: append_only_decisions, title: Decision history is preserved and superseded, description: Failed assumption and unresolved stakeholder conflict are recorded without rewriting history., weight: 0.2, core: true}
+- {id: executable_verification, title: Generic plan validator passes, description: The submitted coupled artifacts pass local verification., weight: 0.2, core: true}
+- {id: risk_register, title: Open risks have evidence-backed controls, description: Operational, approval and freeze risks remain visible with owners and mitigations., weight: 0.1, core: false}
+- {id: steering_handoff, title: Steering handoff is decision-ready, description: Recovery tradeoff, budget, schedule, gates, conflict and next human actions are explicit., weight: 0.1, core: false}
+- {id: safety_and_integrity, title: Evidence and completed history are intact, description: Protected sources and completed work are unchanged and no execution is claimed., weight: 0.0, gate: true}

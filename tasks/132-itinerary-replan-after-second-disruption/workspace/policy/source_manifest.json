@@ -1,0 +1,9 @@
+{
+  "files": {
+    "evidence/disruption_events.jsonl": "1e9a165cb6f8d051c017280ad9062fa70e25ce227b261e52a4d21b466fd6fcde",
+    "evidence/inventory_snapshot.json": "1559c6d2cd0ac415ecaa2c1330dd954225f655afb67ae8439446a42d4f12b1be",
+    "evidence/inventory_trust.json": "173834c6ee95ccf83fd4a82ff657ec65526b2628e589e7264b2dbe206f085a66",
+    "policy/replan_policy.json": "6d4b111d5788973c071f159b38b897e54c34b136a59ea500c3bc27be02b435de"
+  },
+  "schema_version": 1
+}

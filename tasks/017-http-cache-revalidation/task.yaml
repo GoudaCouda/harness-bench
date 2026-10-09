@@ -1,0 +1,41 @@
+task_id: 017-http-cache-revalidation
+title: Repair HTTP cache revalidation across validators and Vary variants
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [validator_precedence, weak_etags, vary_keys, malformed_headers]
+required_artifacts:
+- repo/src/cache_revalidation.py
+- repo/revalidation_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HTTP-SEMANTICS-RFC9110, HTTP-CACHING-RFC9111]
+task_family: http-cache-revalidation-repair
+variant: conditional-precedence-and-vary-selection
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/revalidation_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/cache_revalidation.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    datetime: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

@@ -1,0 +1,9 @@
+{
+  "database_byte_stable": true,
+  "external_actions_executed": false,
+  "recovery_id": "MCR-20260815-01",
+  "review_packet_byte_stable": true,
+  "schema_version": 1,
+  "single_committed_recovery": true,
+  "status": "pass"
+}

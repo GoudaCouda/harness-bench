@@ -1,0 +1,9 @@
+{"event_id":"AUD-700","at":"2026-07-30T10:00:00Z","request_id":"DSAR-8821","type":"job_started","job_id":"export-job-77"}
+{"event_id":"AUD-701","at":"2026-07-30T10:11:00Z","request_id":"DSAR-8821","type":"fanout_staged","job_ids":["export-job-77","export-job-78"],"artifact_count":4}
+{"event_id":"AUD-702","at":"2026-07-30T10:12:40Z","request_id":"DSAR-8821","type":"child_spawned","job_id":"export-job-79","parent_job_id":"export-job-78","evidence_id":"FAN-79"}
+{"event_id":"AUD-703","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"fanout_fenced","generation":13,"job_ids":["export-job-77","export-job-78","export-job-79"]}
+{"event_id":"AUD-704","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"worker_drain_requested","job_ids":["export-job-77","export-job-78","export-job-79"]}
+{"event_id":"AUD-705","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"worker_checkpoints_confirmed","lease_ids":["lease-77","lease-79"]}
+{"event_id":"AUD-706","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"jobs_cancelled","job_ids":["export-job-77","export-job-78","export-job-79"]}
+{"event_id":"AUD-707","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"transfers_withdrawn","transfer_ids":["xfer-901","xfer-902","xfer-904"]}
+{"event_id":"AUD-708","at":"2026-07-30T10:15:00Z","request_id":"DSAR-8821","type":"staging_cleanup_applied","purged":["staging/job77-part-000.csv","staging/job78-part-000.jsonl","staging/job79-part-000.jsonl","staging/upload-key-79.txt"],"retained":["staging/delivery-receipt-901.json","staging/delivery-receipt-903.json","staging/hold-slice-78.csv"]}

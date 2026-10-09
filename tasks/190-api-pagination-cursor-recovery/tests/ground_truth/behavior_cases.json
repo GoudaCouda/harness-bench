@@ -1,0 +1,285 @@
+{
+  "edges": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 0,
+          "id": "order",
+          "pages": [
+            {
+              "cursor": "a",
+              "items": [
+                {
+                  "id": "x",
+                  "sort_key": 2
+                },
+                {
+                  "id": "y",
+                  "sort_key": 1
+                }
+              ],
+              "snapshot": "s",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 5,
+          "id": "empty",
+          "pages": []
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": 11
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c2",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s1",
+              "status": "invalid_cursor"
+            }
+          ]
+        },
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": 11
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c2",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s1",
+              "status": "invalid_cursor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": "11"
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c2",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s1",
+              "status": "invalid_cursor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": 11
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c2",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s1",
+              "status": "invalid_cursor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": 11
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c2",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s2",
+              "status": "invalid_cursor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "checkpoint_key": 10,
+          "id": "feed",
+          "pages": [
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "a",
+                  "sort_key": 11
+                },
+                {
+                  "id": "b",
+                  "sort_key": 12
+                }
+              ],
+              "snapshot": "s1",
+              "status": "ok"
+            },
+            {
+              "cursor": "c1",
+              "items": [
+                {
+                  "id": "b",
+                  "sort_key": 12
+                },
+                {
+                  "id": "c",
+                  "sort_key": 13
+                }
+              ],
+              "snapshot": "s1",
+              "status": "invalid_cursor"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

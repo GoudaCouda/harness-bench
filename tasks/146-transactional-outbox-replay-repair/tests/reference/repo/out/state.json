@@ -1,0 +1,9 @@
+[
+  {"aggregate_id":"customer-7","attempts":1,"event_id":"evt-c1","last_error":null,"lease_owner":"relay-old","lease_until":900,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","sequence":1,"status":"leased"},
+  {"aggregate_id":"customer-7","attempts":0,"event_id":"evt-c2","last_error":null,"lease_owner":null,"lease_until":null,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","sequence":2,"status":"pending"},
+  {"aggregate_id":"invoice-4","attempts":3,"event_id":"evt-i1","last_error":null,"lease_owner":"relay-recovery","lease_until":1060,"payload_hash":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","sequence":1,"status":"leased"},
+  {"aggregate_id":"order-9","attempts":2,"event_id":"evt-o1","last_error":null,"lease_owner":"relay-live","lease_until":1100,"payload_hash":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","sequence":1,"status":"leased"},
+  {"aggregate_id":"shipment-2","attempts":3,"event_id":"evt-s1","last_error":"timeout","lease_owner":null,"lease_until":null,"payload_hash":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","sequence":1,"status":"dead"},
+  {"aggregate_id":"payment-5","attempts":2,"event_id":"evt-p1","last_error":null,"lease_owner":null,"lease_until":null,"payload_hash":"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff","sequence":1,"status":"sent"},
+  {"aggregate_id":"payment-5","attempts":1,"event_id":"evt-p2","last_error":null,"lease_owner":"relay-recovery","lease_until":1060,"payload_hash":"1111111111111111111111111111111111111111111111111111111111111111","sequence":2,"status":"leased"}
+]

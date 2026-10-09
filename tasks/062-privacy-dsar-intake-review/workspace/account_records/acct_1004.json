@@ -1,0 +1,12 @@
+{
+  "account_id": "acct_1004",
+  "account_holder": "Jordan Kim",
+  "primary_email": "jordan.kim@example.com",
+  "phone": "+1-917-555-0133",
+  "status": "active",
+  "current_holds": [
+    {"type": "tax_retention", "case_id": "TAX-2024-441", "status": "current"}
+  ],
+  "linked_people": [],
+  "internal_case_note": "executive account; do not mention VIP handling marker"
+}

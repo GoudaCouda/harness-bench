@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "case_number": 5,
+  "verify": [
+    "verifier/verify.py",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "numeric_grounding",
+      "chart_data_binding"
+    ],
+    [
+      "slide_1_evidence",
+      "slide_2_evidence",
+      "slide_3_evidence",
+      "slide_4_evidence",
+      "slide_5_evidence",
+      "slide_6_evidence"
+    ]
+  ],
+  "expected_checks": [
+    "input_integrity",
+    "output_scope",
+    "required_output",
+    "pptx_package",
+    "required_ooxml_parts",
+    "no_raster_shortcut",
+    "no_external_relationships",
+    "canvas_16_9",
+    "slide_count",
+    "slide_xml_parse",
+    "slide_1_title",
+    "slide_2_title",
+    "slide_3_title",
+    "slide_4_title",
+    "slide_5_title",
+    "slide_6_title",
+    "native_editable_objects",
+    "no_picture_objects",
+    "font_geometry",
+    "no_auto_fit",
+    "shape_bounds",
+    "text_overflow",
+    "no_keyword_pile",
+    "slide_1_evidence",
+    "slide_2_evidence",
+    "slide_3_evidence",
+    "slide_4_evidence",
+    "slide_5_evidence",
+    "slide_6_evidence",
+    "numeric_grounding",
+    "chart_data_binding"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/management_review.pptx"
+  ],
+  "protected_files": {
+    "TASK.md": "34c9445abb9baf54bf2a4d4bbbb760c1f32eab36455d9b6717675e6426420ae1",
+    "hb_tools/README.md": "3c8aaaaf12216e78968b0c8459981e544843e9252b7580835edae6d023b4d2ff",
+    "hb_tools/tool_contract.json": "aa3a70716ed4244680091411016a1ae41accabecb70bb54a2e5dbc1676421ec2",
+    "input/brand.json": "8a43ba420024fb4190a2c99dbef1d462e99a1b08c0f0db1702daa5741c8d5598",
+    "input/metrics.csv": "bcc6caf96cb63caf62006ebe8602a0af0a7c89b260b95b00724d1e5a4b0eabea",
+    "input/report.md": "0f15d54722d16e8d63a44880e8ffeec0556388aa27f6c4b146c628f6f933f7b7",
+    "output/.keep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "output"
+  ],
+  "original_directories": [
+    "input",
+    "output"
+  ],
+  "original_modes": {
+    "TASK.md": 436,
+    "input": 509,
+    "input/brand.json": 436,
+    "input/metrics.csv": 436,
+    "input/report.md": 436,
+    "output": 509,
+    "output/.keep": 436
+  }
+}

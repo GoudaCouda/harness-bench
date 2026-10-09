@@ -1,0 +1,21 @@
+{
+  "graph": [
+    {"state":{"generation":1,"active":[],"registrations":[]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]},{"name":"c","depends":["a"],"hooks":["hc"]},{"name":"d","depends":["b","c"],"hooks":["hd"]}],"request":{"enable":["d"],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":2,"active":["a","b","c","d"],"registrations":[{"plugin":"a","hook":"ha"},{"plugin":"b","hook":"hb"},{"plugin":"c","hook":"hc"},{"plugin":"d","hook":"hd"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]},{"name":"c","depends":["a"],"hooks":["hc"]},{"name":"d","depends":["b","c"],"hooks":["hd"]}],"request":{"enable":[],"disable":["a"]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":5,"active":["a"],"registrations":[{"plugin":"zombie","hook":"x"},{"plugin":"a","hook":"ha"},{"plugin":"a","hook":"ha"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]}],"request":{"enable":[],"disable":[]},"faults":{"activate":[],"deactivate":[]}}
+  ],
+  "transactions": [
+    {"state":{"generation":3,"active":[],"registrations":[{"plugin":"old","hook":"stale"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]},{"name":"c","depends":["b"],"hooks":["hc"]}],"request":{"enable":["c"],"disable":[]},"faults":{"activate":["c"],"deactivate":[]}},
+    {"state":{"generation":3,"active":["a","b","c"],"registrations":[{"plugin":"a","hook":"ha"},{"plugin":"b","hook":"hb"},{"plugin":"c","hook":"hc"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]},{"name":"c","depends":["b"],"hooks":["hc"]}],"request":{"enable":[],"disable":["a"]},"faults":{"activate":[],"deactivate":["b"]}},
+    {"state":{"generation":1,"active":["a"],"registrations":[{"plugin":"a","hook":"ha"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]}],"request":{"enable":["missing"],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":1,"active":["a"],"registrations":[{"plugin":"a","hook":"ha"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]},{"name":"b","depends":["a"],"hooks":["hb"]}],"request":{"enable":["b"],"disable":["a"]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":1,"active":["a"],"registrations":[{"plugin":"a","hook":"ha"}]},"catalog":[{"name":"a","depends":[],"hooks":["ha"]}],"request":{"enable":["a"],"disable":[]},"faults":{"activate":["unknown"],"deactivate":[]}}
+  ],
+  "invalid": [
+    {"state":{"generation":0,"active":[],"registrations":[]},"catalog":{},"request":{"enable":[],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":true,"active":[],"registrations":[]},"catalog":[],"request":{"enable":[],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":0,"active":[],"registrations":[]},"catalog":[{"name":"a","depends":["b"],"hooks":[]},{"name":"b","depends":["a"],"hooks":[]}],"request":{"enable":[],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":0,"active":[],"registrations":[]},"catalog":[{"name":"a","depends":[],"hooks":["same"]},{"name":"b","depends":[],"hooks":["same"]}],"request":{"enable":[],"disable":[]},"faults":{"activate":[],"deactivate":[]}},
+    {"state":{"generation":0,"active":[],"registrations":[]},"catalog":[],"request":{"enable":[],"disable":[],"extra":1},"faults":{"activate":[],"deactivate":[]}}
+  ]
+}

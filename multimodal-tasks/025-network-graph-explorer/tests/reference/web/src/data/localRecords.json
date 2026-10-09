@@ -1,0 +1,18 @@
+[
+  {
+    "id": "NODE-A",
+    "label": "Intake"
+  },
+  {
+    "id": "NODE-B",
+    "label": "Join"
+  },
+  {
+    "id": "NODE-C",
+    "label": "Store"
+  },
+  {
+    "id": "NODE-D",
+    "label": "Audit"
+  }
+]

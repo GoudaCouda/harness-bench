@@ -1,0 +1,5 @@
+[
+  {"schedule_id":"spring-job","start_local":"2026-03-07T02:30","frequency":"daily","interval":1,"count":4,"duration_minutes":45,"timezone_history":[{"effective_date":"2026-03-01","timezone":"America/New_York"},{"effective_date":"2026-03-10","timezone":"America/Chicago"}],"gap_policy":"shift_forward","fold_policy":"later"},
+  {"schedule_id":"month-close","start_local":"2026-01-31T01:30","frequency":"monthly","interval":1,"count":4,"duration_minutes":30,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"skip","fold_policy":"earlier"},
+  {"schedule_id":"fall-job","start_local":"2026-10-31T01:30","frequency":"daily","interval":1,"count":3,"duration_minutes":60,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"shift_forward","fold_policy":"later"}
+]

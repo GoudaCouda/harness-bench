@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 010-layered-config-resolution
+pass_threshold: 0.8
+cases:
+- id: typed_precedence_behavior
+  title: Typed values resolve from the highest supplied layer
+  description: CLI, environment, file, and default membership, explicit false/null, types, bounds, enums,
+    and source labels follow the schema.
+  weight: 0.45
+  core: true
+- id: fail_closed_config_edges
+  title: Invalid winning values and schema defects fail closed
+  description: Invalid highest-layer values never fall back; unknown keys, missing required values, duplicate
+    env names, and malformed schema raise ValueError.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: redacted_visible_snapshot
+  title: The visible resolved snapshot is exact and secret-safe
+  description: Final values and source labels match protected layers while every sensitive value is replaced
+    by the required redaction marker.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The resolver has a truthful implementation handoff
+  description: Notes explain precedence, null, fail-closed typing, and redaction, record the exact test
+    command/result, and name an integration risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Immutable evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Source, redaction, and claim defects remain proportionally scored.
+  weight: 0.0
+  gate: true

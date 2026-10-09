@@ -1,0 +1,7 @@
+# Repair CSV dialect and encoding intake contract
+
+The function receives `records` and `policy`. Each record has a unique string `id`, hexadecimal `payload_hex`, optional `declared_encoding` (missing differs from explicit null), and optional one-character `delimiter`. Detect UTF-8/UTF-16 BOMs before declarations; a conflicting non-null declaration rejects the record. Missing declarations use `default_encoding`; explicit null yields review unless a BOM resolves it. Decode bytes, parse RFC-4180-style doubled quotes and CR/LF/CRLF rows, and evaluate allowed delimiters. A usable delimiter produces at least two rows, a stable width, and more than one column. Zero choices reject; multiple choices require review. Return `decisions` sorted by id with exactly `id,status,encoding,delimiter,columns,reason`, plus accept/review/reject counts in `summary`. Malformed top-level values, hex, policy entries, delimiter hints, and duplicate ids raise `ValueError`.
+
+The output object has exactly `decisions` and `summary`. Each id-sorted decision has exactly `id,status,encoding,delimiter,columns,reason`; reason is `validated`, `encoding_conflict`, `encoding_unknown`, `decode_error`, `malformed_or_inconsistent_rows`, or `ambiguous_delimiter`. Summary has exactly `accept,review,reject`.
+
+The function must not mutate inputs. Run `python3 -m unittest discover -s tests -v` and `python3 bin/run_repair.py`, re-open `out/result.json`, and document verification evidence plus the offline boundary in `REPAIR_NOTES.md`.

@@ -1,0 +1,52 @@
+task_id: 061-three-source-decision-record-synthesis
+title: Three-Source Decision Record from Meeting, Email, and Documents
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Coordination
+capability_tags:
+- document_editing
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- conflicting_evidence
+- dirty_input
+- high_stakes_rules
+required_artifacts:
+- action_items.csv
+- decision_record.json
+- source_conflicts.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-061
+task_family: 061-three-source-decision-record-synthesis
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - action_items.csv
+  - decision_record.json
+  - source_conflicts.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader: {}
+  services: []

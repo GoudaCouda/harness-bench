@@ -1,0 +1,14 @@
+{
+  "incident_id": "INC-CR-204",
+  "signed_at": "2026-08-19T02:10:00Z",
+  "scope_revision": 3,
+  "accounts": [
+    {"account_id": "svc-api", "compromised": true, "target_version": 8},
+    {"account_id": "svc-billing", "compromised": true, "target_version": 13},
+    {"account_id": "svc-catalog", "compromised": false, "target_version": null},
+    {"account_id": "svc-metrics", "compromised": false, "target_version": null},
+    {"account_id": "svc-search", "compromised": true, "target_version": 12},
+    {"account_id": "svc-vault", "compromised": true, "target_version": 4},
+    {"account_id": "svc-worker", "compromised": true, "target_version": 5}
+  ]
+}

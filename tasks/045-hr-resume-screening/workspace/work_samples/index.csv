@@ -1,0 +1,5 @@
+candidate_id,sample_id,artifact,review_note
+candidate_A,WS-A1,sql_dashboard_excerpt,"Confirms joined order/support analysis and customer-operations use"
+candidate_A,WS-A2,refund_qa_excerpt,"Confirms spreadsheet QA and written exception handoff"
+candidate_C,WS-C1,support_weekly_excerpt,"Confirms support metrics and written operating handoff"
+candidate_B,WS-B1,launch_recap_excerpt,"Confirms product-launch writing; no support-data analysis"

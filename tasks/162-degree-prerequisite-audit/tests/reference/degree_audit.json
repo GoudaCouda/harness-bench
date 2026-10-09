@@ -1,0 +1,22 @@
+{
+  "catalog": "2026-CS",
+  "completion_ratio": "5/6",
+  "eligible_next_courses": [
+    "CS-301"
+  ],
+  "missing": [
+    "capstone"
+  ],
+  "plan_sha256": "eb828e2bf838dca8fc3dc0126723acd28c643b0eb0ffc466ceba94eb9531359d",
+  "satisfied": [
+    "core_intro",
+    "core_data",
+    "math",
+    "statistics",
+    "ethics"
+  ],
+  "student_id": "S-42",
+  "unused_courses": [
+    "CALC-A"
+  ]
+}

@@ -1,0 +1,5 @@
+[
+  {"request_id":"q1","traceparent":["00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-00"],"tracestate":["rojo=00f067aa0ba902b7,acme=old"],"baggage":["tenant=blue,user.id=alice"],"participate":true,"boundary":"internal","local_parent_id":"1111111111111111","fallback_trace_id":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","vendor_value":"v2","sampled":true},
+  {"request_id":"q2","traceparent":["00-00000000000000000000000000000000-00f067aa0ba902b7-01"],"tracestate":["rojo=stale"],"baggage":["auth=secret,tenant=green"],"participate":true,"boundary":"external","local_parent_id":"2222222222222222","fallback_trace_id":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","vendor_value":"v3","sampled":false},
+  {"request_id":"q3","traceparent":["00-cccccccccccccccccccccccccccccccc-3333333333333333-01"],"tracestate":["bad==value"],"baggage":["region=eu%20west,user.id=bob"],"participate":false,"boundary":"external","local_parent_id":"4444444444444444","fallback_trace_id":"dddddddddddddddddddddddddddddddd","vendor_value":"v4","sampled":false}
+]

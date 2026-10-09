@@ -1,0 +1,7 @@
+{
+  "database_byte_stable": true,
+  "qa_packet_sha256": "c92ba596d35504f80aa73dbfa8547e06c5acadce03cd78373d1fcab4980d7655",
+  "recovery_id": "CCR-20261101-01",
+  "semantic_plan_sha256": "77a133fe87c1ee4b26e558434c70bd67d92e167247acbc42b8990d8fc890b4dd",
+  "status": "idempotent"
+}

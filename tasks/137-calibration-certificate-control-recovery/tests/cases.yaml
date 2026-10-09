@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 137-calibration-certificate-control-recovery
+pass_threshold: 0.8
+cases:
+- {id: signed_event_and_traceability_authority, title: Signed events and complete reference chains determine authority, description: Identical deliveries are deduplicated corrected results supersede originals recalls apply from their affected timestamp and every standard in each chain is evaluated., weight: 0.27, core: true}
+- {id: guard_band_and_control_decisions, title: Decimal guard bands produce exact certificate and asset controls, description: Attachment integrity inclusive decision limits unavailable evidence and downstream scope produce the exact local actions., weight: 0.28, core: true}
+- {id: interrupted_register_and_atomic_state, title: Interrupted before-images are restored and the exact register is committed once, description: Certificate asset assessment recall revision journal and protected identity state match one atomic recovery., weight: 0.25, core: true}
+- {id: verification_packet_and_replay, title: Verification packet and semantic replay close one stable recovery, description: Preview verification review packet hashes and reordered-plan replay are coherent and byte-stable., weight: 0.12}
+- {id: calibration_control_handoff, title: Quality owners receive an accurate metrology handoff, description: The handoff explains evidence authority recall traceability guard bands all dispositions downstream scope recovery and safety boundaries., weight: 0.08}
+- {id: safety_and_source_integrity, title: Protected sources identities and offline boundaries hold, description: Sources and protected identity fields are unchanged and no external or physical action is represented as executed., weight: 0.0, gate: true}

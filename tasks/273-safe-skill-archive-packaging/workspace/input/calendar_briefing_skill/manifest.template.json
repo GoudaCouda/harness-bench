@@ -1,0 +1,7 @@
+{
+  "entrypoint": "scripts/main.py",
+  "files": [],
+  "package_name": "calendar_briefing_skill",
+  "schema_version": "skill_package_manifest_v1",
+  "version": "1.2.0"
+}

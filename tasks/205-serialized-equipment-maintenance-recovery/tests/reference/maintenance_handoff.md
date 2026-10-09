@@ -1,0 +1,9 @@
+# Recovered field-service batch
+
+The event ledger was de-duplicated by event ID before sequence order was applied. DLV-08 is the byte-identical replay of EVT-200-VIB, and WO-201 shares PKG-PX8-00041 and ALM-77 with older WO-200, so its accepted observation routes to survivor WO-200. The unknown WO-999 delivery is ignored, while the late WO-190 observation is rejected at the completed execution boundary.
+
+WO-200 uses incident-time BOM PX8-R2 and effective part BRG-42B, not superseded BRG-42A. TECH-A is the lexicographically first current MECH-ROTATING qualification, VIB-A is active and calibrated, and released LOT-B42-REL has one unit, so one offline dispatch packet is ready. WO-202 has qualified TECH-E and effective FUSE-9E, but every insulation-resistance instrument is expired or inactive, so it remains on calibration hold. WO-203 has qualified TECH-C and calibrated TACH-A, but BELT-9C has only an exhausted released lot and a quarantined lot, so it remains on part-availability hold. No quarantined, exhausted, superseded, or wrong part was allocated.
+
+The interrupted journal restored WO-200 and LOT-B42-REL to their before-images before one atomic projection. Exactly one released unit was allocated and the part balance moved from one to zero once. WO-190's completed replace-drive-bearing action, timestamp, serialized identity, and historical lot remain unchanged; it was not reopened. The verification digest closes the logical SQLite state, and the dispatch bundle SHA-256 closes through the manifest and local staging receipt. Equivalent ordering and JSON formatting replay under FSR-20260819-04 is byte-stable and idempotent; conflicting semantics are rejected.
+
+All artifacts remain an offline local handoff. No technician was dispatched, no part was externally reserved or installed, no permit or lockout was issued or executed, no equipment was energized, and no external maintenance action occurred.

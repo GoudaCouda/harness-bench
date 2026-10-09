@@ -1,0 +1,22 @@
+{
+  "bridged_event_ids": [
+    "evt_C302",
+    "evt_O102"
+  ],
+  "decision_count": 4,
+  "duplicate_event_ids": [
+    "evt_C303"
+  ],
+  "external_actions_executed": false,
+  "plan_hash": "1aedd6736ff6604cc6a0d7b694e8b70b059c0c11d60bc9ee0d2e9c42588a68da",
+  "quarantined_event_ids": [
+    "evt_X901"
+  ],
+  "run_id": "ER-20260818-01",
+  "schema_version": 1,
+  "snapshot_id": "psnap_20260818_0900",
+  "snapshot_signature_verified": true,
+  "source_bundle_hash": "bf4ad07c9dea4e6c7054dd1295ff8c751101c5d6d4be80d7f16f460fb954ab7f",
+  "status": "valid",
+  "unique_event_count": 10
+}

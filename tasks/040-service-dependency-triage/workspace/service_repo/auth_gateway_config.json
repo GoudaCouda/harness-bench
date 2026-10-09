@@ -1,0 +1,22 @@
+{
+  "service": "auth-gateway",
+  "deployment_revision": "AUTH-2026-0318",
+  "allowed_issuers": [
+    "https://issuer.internal/v1",
+    "https://issuer.partner/v1"
+  ],
+  "accepted_audiences": [
+    "checkout-web",
+    "payment-api"
+  ],
+  "jwks_keys": {
+    "https://issuer.internal/v1": [
+      "internal-2026-a"
+    ],
+    "https://issuer.partner/v2": [
+      "partner-2026-b"
+    ]
+  },
+  "cache_ttl_seconds": 300,
+  "fail_closed": true
+}

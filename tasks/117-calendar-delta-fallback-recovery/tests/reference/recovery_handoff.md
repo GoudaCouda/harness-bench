@@ -1,0 +1,7 @@
+# Calendar sync recovery handoff
+
+Recovery `CALSYNC-FINANCE-20260819-42` remained offline. I rejected the truncated `page2.part` after its parse failure and checksum mismatch, then selected `page2_recovery.ics` because its SHA-256 and the page-1-to-page-2 ETag chain matched the manifest.
+
+The prepared page-1 journal was rolled back and the complete two-page chain was applied atomically. The `ops-rotation@example.test` master advanced independently from its RFC 5545 `RECURRENCE-ID` instances: the August 19 instance moved, August 20 became a cancellation tombstone, and the August 21 override crosses from an America/New_York recurrence identity to a Europe/London start. The timezone conversion resolves the latter to 15:00Z, while the new London review resolves to 13:00Z. The budget event advanced, the obsolete standalone event became a tombstone, and the lower-SEQUENCE town-hall copy was ignored as stale. The protected legal-hold row was preserved.
+
+The stable recovery identity and immutable source checkpoint own one committed SQLite transaction. Preview passed, verification reconciled component, tombstone, ledger, cursor `cursor-42b`, and ETag `W/"cal-42b"` state, and staging created only a pending owner-review receipt. Replay returned an idempotent no-op with the same semantic database digest. No remote calendar write, invitation, cancellation notice, attendee message, or other external action occurred.

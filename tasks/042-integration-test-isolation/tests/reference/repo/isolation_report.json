@@ -1,0 +1,16 @@
+[
+  {
+    "case_id": "nested-leak-and-expiry",
+    "result": [
+      {"test_id":"mutates","status":"passed","failures":[],"observed":{"count":1,"events":["x"],"config":{"mode":"safe"}}},
+      {"test_id":"expects-clean","status":"passed","failures":[],"observed":{"count":0,"events":[],"config":{"mode":"safe"}}}
+    ]
+  },
+  {
+    "case_id": "stable-random-regression",
+    "result": [
+      {"test_id":"sampler-b","status":"passed","failures":[],"observed":{"bucket":6}},
+      {"test_id":"real-failure","status":"quarantined_failed","failures":[{"operation":1,"key":"bucket","expected":4,"actual":3}],"observed":{"bucket":3}}
+    ]
+  }
+]

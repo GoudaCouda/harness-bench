@@ -1,0 +1,35 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:5dc57665-bacd-4e65-a9e6-071000000001",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-15T18:30:00Z",
+    "component": {
+      "type": "application",
+      "name": "meridian-api",
+      "version": "4.8.0",
+      "purl": "pkg:generic/meridian-api@4.8.0",
+      "bom-ref": "pkg:generic/meridian-api@4.8.0"
+    },
+    "properties": [
+      {"name": "release:id", "value": "REL-2026-08-17-A"},
+      {"name": "release:environment", "value": "production-candidate"}
+    ]
+  },
+  "components": [
+    {"type": "library", "name": "requests", "version": "2.31.0", "purl": "pkg:pypi/requests@2.31.0", "bom-ref": "pkg:pypi/requests@2.31.0", "scope": "required", "hashes": [{"alg": "SHA-256", "content": "a10f5740b4a014d6027b6e74bf17f46567194dd29e7b27c8177bb7f31eebc254"}]},
+    {"type": "library", "name": "jinja2", "version": "3.1.2", "purl": "pkg:pypi/jinja2@3.1.2", "bom-ref": "pkg:pypi/jinja2@3.1.2", "scope": "required", "hashes": [{"alg": "SHA-256", "content": "b0f6b3a25c3445016402429ff881174f9452a6d210a3918e4ba279955731eba7"}]},
+    {"type": "library", "name": "urllib3", "version": "2.0.4", "purl": "pkg:pypi/urllib3@2.0.4", "bom-ref": "pkg:pypi/urllib3@2.0.4", "scope": "required", "hashes": [{"alg": "SHA-256", "content": "c39b1848e08d97d4db333be7b1bd168f9f5a6af90a2598f77d29e8d5a51af9c2"}]},
+    {"type": "library", "name": "pyyaml", "version": "6.0.1", "purl": "pkg:pypi/pyyaml@6.0.1", "bom-ref": "pkg:pypi/pyyaml@6.0.1", "scope": "required", "hashes": [{"alg": "SHA-256", "content": "d307a76adfd01c08fe1b730491427071ccb2e1f20674367e7195595291177820"}]},
+    {"type": "library", "name": "idna", "version": "3.6", "purl": "pkg:pypi/idna@3.6", "bom-ref": "pkg:pypi/idna@3.6", "scope": "required", "hashes": [{"alg": "SHA-256", "content": "e5274b85a420ad8922b459e70c9eae3717a09d47cf9b02f7b8f0abf8dd401a04"}]}
+  ],
+  "dependencies": [
+    {"ref": "pkg:generic/meridian-api@4.8.0", "dependsOn": ["pkg:pypi/requests@2.31.0", "pkg:pypi/jinja2@3.1.2", "pkg:pypi/pyyaml@6.0.1"]},
+    {"ref": "pkg:pypi/requests@2.31.0", "dependsOn": ["pkg:pypi/urllib3@2.0.4", "pkg:pypi/idna@3.6"]},
+    {"ref": "pkg:pypi/jinja2@3.1.2", "dependsOn": []},
+    {"ref": "pkg:pypi/urllib3@2.0.4", "dependsOn": []},
+    {"ref": "pkg:pypi/pyyaml@6.0.1", "dependsOn": []},
+    {"ref": "pkg:pypi/idna@3.6", "dependsOn": []}
+  ]
+}

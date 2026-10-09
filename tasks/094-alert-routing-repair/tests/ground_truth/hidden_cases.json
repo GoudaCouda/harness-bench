@@ -1,0 +1,99 @@
+{
+  "root_cause": [
+    {
+      "name": "payments deployment critical still pages",
+      "labels": {
+        "cluster": "east",
+        "service": "payments",
+        "alertname": "DeployNoise",
+        "severity": "critical",
+        "team": "checkout"
+      },
+      "receivers": ["platform-page"]
+    },
+    {
+      "name": "payroll critical bypasses low defaults",
+      "labels": {
+        "cluster": "central",
+        "service": "payroll",
+        "alertname": "LedgerUnavailable",
+        "severity": "critical"
+      },
+      "receivers": ["platform-page"]
+    }
+  ],
+  "warning_and_inhibition": {
+    "routing": [
+      {
+        "name": "payments warning with extra dimensions stays low",
+        "labels": {
+          "cluster": "west",
+          "service": "payments",
+          "alertname": "AuthorizationErrors",
+          "severity": "warning",
+          "region": "us-west"
+        },
+        "receivers": ["payments-low"]
+      }
+    ],
+    "pairs": [
+      {
+        "name": "same incident identity is inhibited",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "target": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "warning"},
+        "inhibited": true
+      },
+      {
+        "name": "different cluster remains visible",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "target": {"cluster": "west", "service": "payments", "alertname": "DatabaseDown", "severity": "warning"},
+        "inhibited": false
+      },
+      {
+        "name": "different alert remains visible",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "target": {"cluster": "east", "service": "payments", "alertname": "HighLatency", "severity": "warning"},
+        "inhibited": false
+      }
+    ]
+  },
+  "unseen": {
+    "routing": [
+      {
+        "name": "payments informational alert inherits operations",
+        "labels": {"cluster": "east", "service": "payments", "alertname": "DeploymentStarted", "severity": "info"},
+        "receivers": ["operations-low"]
+      },
+      {
+        "name": "unclassified service alert inherits operations",
+        "labels": {"cluster": "south", "service": "search", "alertname": "CapacityForecast"},
+        "receivers": ["operations-low"]
+      },
+      {
+        "name": "critical with distracting labels pages once",
+        "labels": {"cluster": "north", "service": "search", "alertname": "IndexUnavailable", "severity": "critical", "priority": "low", "environment": "rehearsal"},
+        "receivers": ["platform-page"]
+      }
+    ],
+    "pairs": [
+      {
+        "name": "different service remains visible",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "target": {"cluster": "east", "service": "billing", "alertname": "DatabaseDown", "severity": "warning"},
+        "inhibited": false
+      },
+      {
+        "name": "critical target is never inhibited",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "target": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical"},
+        "inhibited": false
+      },
+      {
+        "name": "extra labels do not split the same identity",
+        "source": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "critical", "pod": "db-1"},
+        "target": {"cluster": "east", "service": "payments", "alertname": "DatabaseDown", "severity": "warning", "pod": "api-9"},
+        "inhibited": true
+      }
+    ]
+  }
+}

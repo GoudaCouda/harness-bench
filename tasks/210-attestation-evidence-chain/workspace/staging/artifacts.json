@@ -1,0 +1,93 @@
+{
+  "bundle_id": "att-2026-03-16",
+  "artifacts": [
+    {
+      "artifact_id": "art-ok",
+      "payload": {
+        "lot": "L-100",
+        "qty": 12
+      },
+      "digest": "522ee0c3c2232e3874308962f41e54453b12ecf3891677c9f88ee8eb1a7833b0",
+      "signature": "0bf1674bb9a7d8be1ef39e5be6db8561e0bbea4e511de4c283fb7f7b0636ff25",
+      "key_id": "k-root-2",
+      "signed_at": 1773651000
+    },
+    {
+      "artifact_id": "art-bad-digest",
+      "payload": {
+        "lot": "L-101",
+        "qty": 4
+      },
+      "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "signature": "1eee400775783fa95b51578c63d85f9300819210297f2ab61294bd1b2cd1a0fc",
+      "key_id": "k-root-2",
+      "signed_at": 1773651100
+    },
+    {
+      "artifact_id": "art-bad-sig",
+      "payload": {
+        "lot": "L-102",
+        "qty": 9
+      },
+      "digest": "4afd3b725f86da385b76d39c99268a3db4d881ef697b149aabea89040613c3f3",
+      "signature": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "key_id": "k-root-2",
+      "signed_at": 1773651200
+    },
+    {
+      "artifact_id": "art-revoked",
+      "payload": {
+        "lot": "L-103",
+        "qty": 2
+      },
+      "digest": "04e3745484ea4b20e94b9f1f9a963251469805c70f76e7585d1eee611b206f78",
+      "signature": "b8ceb72f0e5f395cb00af27e516adba86e63beeabdae7da659ef45bf13bf4263",
+      "key_id": "k-old",
+      "signed_at": 1773651540
+    },
+    {
+      "artifact_id": "art-expired",
+      "payload": {
+        "lot": "L-104",
+        "qty": 3
+      },
+      "digest": "ecbfd3245960546d1ccfdd40aec5203b516327ecc74e7e86d2f671dca200a7bd",
+      "signature": "0f4a3bd2a4476c11df34445723d86f28aec410575e961ad14c053fff956fa7b0",
+      "key_id": "k-root-1",
+      "signed_at": 1773651480
+    },
+    {
+      "artifact_id": "art-unknown",
+      "payload": {
+        "lot": "L-105",
+        "qty": 1
+      },
+      "digest": "b5d995890cc03815f8c52b5d6b7319c790c2e51831d65dfa9cbce8bcac0715d9",
+      "signature": "abababababababababababababababababababababababababababababababab",
+      "key_id": "k-missing",
+      "signed_at": 1773651510
+    },
+    {
+      "artifact_id": "art-cached-ok",
+      "payload": {
+        "lot": "L-106",
+        "qty": 8
+      },
+      "digest": "6cdda425ef5e156652d6d52b0f47dd1bd4bf0366b4a74b2daed0ce2af98258e0",
+      "signature": "42898fd65caa914fa7ba003e101f88cd72ac12d86b920447e45886238f54bba7",
+      "key_id": "k-root-2",
+      "signed_at": 1773651300
+    },
+    {
+      "artifact_id": "art-stale-cache",
+      "payload": {
+        "lot": "L-107",
+        "qty": 5
+      },
+      "digest": "66777cdf0568b64d18fb40a9bcf3009f632d349c45433dce9bece66c22af6e87",
+      "signature": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "key_id": "k-root-2",
+      "signed_at": 1773651400
+    }
+  ]
+}

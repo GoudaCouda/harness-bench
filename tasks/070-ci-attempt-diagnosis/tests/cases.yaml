@@ -1,0 +1,57 @@
+schema_version: 2
+task_id: 070-ci-attempt-diagnosis
+pass_threshold: 0.8
+cases:
+- id: preserve_and_runner_recovery
+  title: Valid success is preserved and runner loss uses the bounded retry
+  description: Unit remains on its valid first result, while the Windows runner loss alone consumes one
+    permitted retry and closes on attempt two.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: code_failure_recovery
+  title: The deterministic integration failure is patched before rerun
+  description: The assertion failure is classified as code, uses patch evidence, and reaches a passing
+    second attempt without a blind infrastructure retry.
+  weight: 0.25
+  core: true
+  score_group: decision_and_state
+- id: artifact_recovery
+  title: The stale package is replaced by the current-SHA artifact
+  description: Package state comes from the passing current-head attempt and preserves the updated artifact
+    evidence rather than the old-SHA success.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: aggregate_run_state
+  title: Run state is regenerated from the final jobs
+  description: Run state is regenerated from the final jobs; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: diagnostic_handoff
+  title: The diagnosis explains evidence and verification
+  description: The diagnosis explains evidence and verification; all related facts, relationships, and
+    closed-set constraints must agree before this outcome earns credit.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: ledger_integrity
+  title: The job ledger is closed and uniquely keyed
+  description: The job ledger is closed and uniquely keyed; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: recovery_closure
+  title: All eight job outcomes form one consistent recovery record
+  description: All eight job outcomes form one consistent recovery record; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

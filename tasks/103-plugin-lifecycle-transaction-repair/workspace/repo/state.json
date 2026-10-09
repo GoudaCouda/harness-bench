@@ -1,0 +1,1 @@
+{"generation":7,"active":["core","legacy"],"registrations":[{"plugin":"core","hook":"load-config"},{"plugin":"legacy","hook":"legacy-route"},{"plugin":"legacy","hook":"legacy-route"},{"plugin":"removed","hook":"ghost"}]}

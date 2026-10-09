@@ -1,0 +1,74 @@
+{
+  "applied_plan_digest": "c1a11304babd6ffff4e3d924838d442efa0a87ebf7c8ab412d8f2fd12894138d",
+  "batch_id": "AP-RG-2026-08-19-15",
+  "execution_mode": "review_only",
+  "external_actions_executed": false,
+  "handoff_sha256": "331d27c2787eccfb62f4286c03a1769fc9f97cc5d69f17fee7c993f7cfe6db45",
+  "phase": "staged_for_controller",
+  "recovery": {
+    "committed_records_before_recovery": 0,
+    "prior_phase": "interrupted_apply",
+    "rolled_back_prepared_records": 2,
+    "status": "completed"
+  },
+  "review_records": [
+    {
+      "disposition": "release_ready",
+      "evidence_refs": ["payment_queue.csv#P-3201", "suppliers.csv#SUP-A"],
+      "payment_id": "P-3201",
+      "reason_code": "controls_satisfied"
+    },
+    {
+      "disposition": "quarantine",
+      "evidence_refs": ["bank_change_requests.csv#CH-B-17", "payment_queue.csv#P-3202", "suppliers.csv#SUP-B"],
+      "payment_id": "P-3202",
+      "reason_code": "bank_mismatch"
+    },
+    {
+      "disposition": "release_ready",
+      "evidence_refs": ["approval_events.csv#APR-C-A", "approval_events.csv#APR-C-T", "bank_change_requests.csv#CH-C-22", "callback_events.csv#CB-C-22", "payment_queue.csv#P-3203", "suppliers.csv#SUP-C"],
+      "payment_id": "P-3203",
+      "reason_code": "controls_satisfied"
+    },
+    {
+      "disposition": "quarantine",
+      "evidence_refs": ["approval_events.csv#APR-D-A", "approval_events.csv#APR-D-T", "bank_change_requests.csv#CH-D-09", "callback_events.csv#CB-D-09", "payment_queue.csv#P-3204", "suppliers.csv#SUP-D"],
+      "payment_id": "P-3204",
+      "reason_code": "invalid_change_chain"
+    },
+    {
+      "disposition": "defer",
+      "evidence_refs": ["approval_events.csv#APR-E-F", "payment_queue.csv#P-3205", "suppliers.csv#SUP-E"],
+      "payment_id": "P-3205",
+      "reason_code": "missing_dual_approval"
+    },
+    {
+      "disposition": "defer",
+      "evidence_refs": ["payment_queue.csv#P-3206", "suppliers.csv#SUP-F"],
+      "payment_id": "P-3206",
+      "reason_code": "beneficiary_unverified"
+    },
+    {
+      "disposition": "quarantine",
+      "evidence_refs": ["payment_queue.csv#P-3207", "suppliers.csv#SUP-G"],
+      "payment_id": "P-3207",
+      "reason_code": "supplier_inactive"
+    },
+    {
+      "disposition": "quarantine",
+      "evidence_refs": ["approval_events.csv#APR-H-A", "approval_events.csv#APR-H-T", "bank_change_requests.csv#CH-H-31", "callback_events.csv#CB-H-31", "payment_queue.csv#P-3208", "suppliers.csv#SUP-H"],
+      "payment_id": "P-3208",
+      "reason_code": "invalid_change_chain"
+    },
+    {
+      "disposition": "release_ready",
+      "evidence_refs": ["approval_events.csv#APR-I-F", "approval_events.csv#APR-I-T", "payment_queue.csv#P-3209", "suppliers.csv#SUP-I"],
+      "payment_id": "P-3209",
+      "reason_code": "controls_satisfied"
+    }
+  ],
+  "revision": 5,
+  "schema_version": 1,
+  "source_checkpoint": "fde46d41f3708150666b36247204eceff6497e1ee903d214e0a8898d6cfe777d",
+  "verification_sha256": "1c6ae4976bbfe41f2f961d5b5fd12358ad54cb791ab6c5ba04c1cc6c90ba9eeb"
+}

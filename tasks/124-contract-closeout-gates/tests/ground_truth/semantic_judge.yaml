@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 124-contract-closeout-gates
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+  - id: handoff_semantics
+    title: Contract closeout recovery handoff is operationally accurate
+    question: Does the handoff accurately cover all seven contracts, primary-blocker precedence, both late-evidence cures, interrupted audit recovery, semantic replay, and the proposal-only boundary?
+    pass_anchors:
+      - Equivalent plain-language descriptions of owners, cures, and pending controller approval are acceptable.
+    fail_anchors:
+      - Missing a held contract, reversing evidence precedence, or claiming an external closeout action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

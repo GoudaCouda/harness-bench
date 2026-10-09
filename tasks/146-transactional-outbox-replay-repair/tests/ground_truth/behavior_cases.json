@@ -1,0 +1,86 @@
+{
+  "receipt_lease_and_retry_recovery": [
+    {
+      "events": [
+        {"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":2,"lease_owner":"old","lease_until":40,"last_error":null},
+        {"event_id":"e2","aggregate_id":"b","sequence":1,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","status":"leased","attempts":1,"lease_owner":"old","lease_until":40,"last_error":null}
+      ],
+      "receipts": [
+        {"event_id":"e1","attempt":2,"outcome":"unknown","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":50},
+        {"event_id":"e2","attempt":1,"outcome":"acked","payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","observed_at":60}
+      ],
+      "policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    },
+    {
+      "events": [
+        {"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":3,"lease_owner":"old","lease_until":80,"last_error":"timeout"},
+        {"event_id":"e2","aggregate_id":"b","sequence":1,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","status":"leased","attempts":2,"lease_owner":"live","lease_until":101,"last_error":null}
+      ],
+      "receipts": [],
+      "policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    },
+    {
+      "events": [{"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":1,"lease_owner":"old","lease_until":150,"last_error":null}],
+      "receipts": [
+        {"event_id":"e1","attempt":1,"outcome":"rejected","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":90},
+        {"event_id":"e1","attempt":1,"outcome":"rejected","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":90}
+      ],
+      "policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    },
+    {
+      "events": [{"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":2,"lease_owner":"new","lease_until":150,"last_error":null}],
+      "receipts": [
+        {"event_id":"e1","attempt":1,"outcome":"acked","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":80},
+        {"event_id":"e1","attempt":2,"outcome":"unknown","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":90}
+      ],
+      "policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    }
+  ],
+  "aggregate_order_and_action_identity": [
+    {
+      "events": [
+        {"event_id":"a2","aggregate_id":"a","sequence":2,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","status":"pending","attempts":0,"lease_owner":null,"lease_until":null,"last_error":null},
+        {"event_id":"z1","aggregate_id":"z","sequence":1,"payload_hash":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","status":"pending","attempts":1,"lease_owner":null,"lease_until":null,"last_error":"rejected"},
+        {"event_id":"a1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":1,"lease_owner":"live","lease_until":150,"last_error":null}
+      ],
+      "receipts": [],
+      "policy":{"now":100,"worker":"relay","lease_seconds":25,"max_attempts":3}
+    },
+    {
+      "events": [
+        {"event_id":"x1","aggregate_id":"x","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"sent","attempts":1,"lease_owner":null,"lease_until":null,"last_error":null},
+        {"event_id":"x2","aggregate_id":"x","sequence":2,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","status":"pending","attempts":0,"lease_owner":null,"lease_until":null,"last_error":null},
+        {"event_id":"a1","aggregate_id":"a","sequence":1,"payload_hash":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","status":"dead","attempts":3,"lease_owner":null,"lease_until":null,"last_error":"rejected"},
+        {"event_id":"a2","aggregate_id":"a","sequence":2,"payload_hash":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","status":"pending","attempts":0,"lease_owner":null,"lease_until":null,"last_error":null}
+      ],
+      "receipts": [],
+      "policy":{"now":100,"worker":"relay","lease_seconds":25,"max_attempts":3}
+    },
+    {
+      "events": [
+        {"event_id":"a1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":3,"lease_owner":"old","lease_until":50,"last_error":null},
+        {"event_id":"a2","aggregate_id":"a","sequence":2,"payload_hash":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","status":"pending","attempts":0,"lease_owner":null,"lease_until":null,"last_error":null}
+      ],
+      "receipts": [],
+      "policy":{"now":100,"worker":"relay","lease_seconds":25,"max_attempts":3}
+    }
+  ],
+  "invalid": [
+    {"events":[],"receipts":[],"policy":{"now":100,"worker":"Relay","lease_seconds":20,"max_attempts":3}},
+    {
+      "events":[{"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"pending","attempts":3,"lease_owner":null,"lease_until":null,"last_error":null}],
+      "receipts":[],"policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    },
+    {
+      "events":[{"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":1,"lease_owner":"old","lease_until":50,"last_error":null}],
+      "receipts":[
+        {"event_id":"e1","attempt":1,"outcome":"unknown","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":90},
+        {"event_id":"e1","attempt":1,"outcome":"acked","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":91}
+      ],"policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    },
+    {
+      "events":[{"event_id":"e1","aggregate_id":"a","sequence":1,"payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","status":"leased","attempts":1,"lease_owner":"old","lease_until":50,"last_error":null}],
+      "receipts":[{"event_id":"e1","attempt":2,"outcome":"acked","payload_hash":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_at":90}],"policy":{"now":100,"worker":"relay","lease_seconds":20,"max_attempts":3}
+    }
+  ]
+}

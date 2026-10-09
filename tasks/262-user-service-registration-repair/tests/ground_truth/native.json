@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "case_number": 8,
+  "blocks": [
+    [
+      "registration_transaction",
+      "注册事务与安全密码存储",
+      "valid_registration password_storage audit_event"
+    ],
+    [
+      "compatibility_and_rejection",
+      "兼容现有认证并拒绝冲突与非法请求",
+      "existing_authentication database_unique_constraints case_insensitive_conflicts invalid_input_rejection transaction_rollback"
+    ]
+  ],
+  "gates": [
+    "protected_inputs",
+    "database_side_effect_scope"
+  ],
+  "protected_files": {
+    "POLICY.md": "d3918bc6ebe3a3f15365d3c8be2ea9dd19aa9e5d5527e18980294e92241e18c9",
+    "README.md": "76638c12e9553126fddc326e16d3755601e5e67314f0fe1421177aeac65c0525",
+    "TASK.md": "54ba08babb442bdd64b96563203fbc78f22d2249e5211c54569786e2b64bdc0d",
+    "nami_service/__init__.py": "a1e2236cd9f75ea9ea513fb4c9c5806d86288cd8deeff1c8d181343aa865f614",
+    "nami_service/db.py": "f7ce96a0e54f1ba0f0e2ef0ba9065be4c8e8548528287adae4e36d79564f6fac",
+    "nami_service/security.py": "d5004964930ef7b1a033d0cefa4c29f5688dee7cf5b2f882364409ec0b077d5a",
+    "run_public_tests.py": "d7bac73bdf04a0300d12d2843787a9331e1d74696816f81a04bd039c4180e7d0",
+    "state/service.db": "e786129ded4e5b02601ae3fb82e87dcfdad9e2de1b84ae4e61a5a9b939821c39",
+    "tests/__init__.py": "c6e6f56bddcd5a280eb0f436c6428a12b774a9086fc03d563a4b312949684c39",
+    "tests/test_public_contract.py": "720cfdba72dee9a876d34b0f1c08a94c84e16445322816ae6f7974c8eced6d65"
+  },
+  "required_artifacts": [
+    "nami_service/users.py"
+  ],
+  "provisional_id": 245,
+  "candidate_image": "sha256:2dbecc39ca3daffb01059a35e83cad038aad568d106c3540bef0c47e59cf911f",
+  "controller_image": "python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b"
+}

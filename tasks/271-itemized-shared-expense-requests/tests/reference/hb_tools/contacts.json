@@ -1,0 +1,35 @@
+{
+  "schema_version": "case17_contacts_v1",
+  "contacts": [
+    {
+      "participant_id": "p_lin",
+      "display_name": "林澄",
+      "account_id": "acct_lin",
+      "active": true
+    },
+    {
+      "participant_id": "p_zhou",
+      "display_name": "周雨菲",
+      "account_id": "acct_zhou_yf",
+      "active": true
+    },
+    {
+      "participant_id": "p_xu",
+      "display_name": "徐闻舟",
+      "account_id": "acct_xu_wz",
+      "active": true
+    },
+    {
+      "participant_id": "p_tang",
+      "display_name": "唐小屿",
+      "account_id": "acct_tang_xy",
+      "active": true
+    },
+    {
+      "participant_id": "p_zhao",
+      "display_name": "赵楠",
+      "account_id": "acct_zhao_nan",
+      "active": true
+    }
+  ]
+}

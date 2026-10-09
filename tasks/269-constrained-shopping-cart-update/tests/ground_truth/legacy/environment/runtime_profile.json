@@ -1,0 +1,14 @@
+{
+  "execution_mode": "docker",
+  "base_image_tag": "python:3.11.9-slim-bookworm",
+  "base_image_digest": "sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317",
+  "built_image_digest": "sha256:0b0fb54363e05fbf24e2d839cab53e63afb2d1348da47382860ab983f761ca30",
+  "container_port": 8000,
+  "container_bind_address": "127.0.0.1",
+  "published_ports": [],
+  "cpu_limit": 2,
+  "memory_mib": 1024,
+  "pids_limit": 128,
+  "network_mode": "none",
+  "fixed_time": "2026-07-20T08:00:00Z"
+}

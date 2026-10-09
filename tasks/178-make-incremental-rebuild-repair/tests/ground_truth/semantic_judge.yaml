@@ -1,0 +1,5 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material graph decisions, edge boundaries, verification commands/results,
+    and offline scope for Repair an incremental build dependency plan, without claiming external execution?

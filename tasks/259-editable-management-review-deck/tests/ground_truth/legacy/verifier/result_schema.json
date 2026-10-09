@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_05 deterministic verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verdict", "score", "checks", "hard_failures", "evidence"],
+  "properties": {
+    "schema_version": {"const": "nami_work_case05_verifier_result_v1"},
+    "verdict": {"enum": ["accept", "reject"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {"type": "array"},
+    "hard_failures": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "object"}
+  }
+}
+

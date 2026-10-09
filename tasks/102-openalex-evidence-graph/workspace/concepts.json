@@ -1,0 +1,5 @@
+[
+  {"id": "C1", "display_name": "Evidence retrieval"},
+  {"id": "C2", "display_name": "Contradiction analysis"},
+  {"id": "C3", "display_name": "Coverage audit"}
+]

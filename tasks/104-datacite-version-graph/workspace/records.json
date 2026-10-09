@@ -1,0 +1,41 @@
+[
+  {
+    "id": "REC-CONCEPT",
+    "doi": "10.data/cohort",
+    "kind": "concept",
+    "state": "findable",
+    "title": "Longitudinal Cohort Dataset"
+  },
+  {
+    "id": "REC-V1",
+    "doi": "10.data/cohort.v1",
+    "kind": "version",
+    "state": "findable",
+    "publication_date": "2023-01-15",
+    "cohort": "baseline"
+  },
+  {
+    "id": "REC-V2",
+    "doi": "10.data/cohort.v2",
+    "kind": "version",
+    "state": "findable",
+    "publication_date": "2024-02-20",
+    "cohort": "baseline plus follow-up"
+  },
+  {
+    "id": "REC-V3",
+    "doi": "10.data/cohort.v3",
+    "kind": "version",
+    "state": "findable",
+    "publication_date": "2025-03-10",
+    "cohort": "2025 refresh"
+  },
+  {
+    "id": "REC-DRAFT",
+    "doi": "10.data/cohort.v3-draft",
+    "kind": "version",
+    "state": "draft",
+    "publication_date": null,
+    "cohort": "internal pre-release"
+  }
+]

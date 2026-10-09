@@ -1,0 +1,12 @@
+{
+  "batch_id": "2026-07-ap-review",
+  "control_sha256": "a16d768834fe34f09d73be27f27cb45ef3dd352bb21d52485fffb48c2d78bbd0",
+  "execution_state": "review_only",
+  "external_payments_executed": false,
+  "input_bundle_sha256": "fb1a11a3f4d6a71c3efafa5d9e708c5d72f72eb4fa43d8e64596469babc7a73b",
+  "phase": "staged_for_controller_review",
+  "review_sha256": "73110b4b9428cbb147bb0815917fb4ee31e4dec227decfa4abd9611ccdce60bb",
+  "revision": 1,
+  "schema_version": 1,
+  "stage_token": "ccf431f0c81c17cb046347d1938cdf85fc07da3c3a169118af2eac601ff1c924"
+}

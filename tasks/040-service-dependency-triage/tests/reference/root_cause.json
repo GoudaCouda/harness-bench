@@ -1,0 +1,44 @@
+{
+  "incident_id": "UNKNOWN",
+  "root_cause_service": "auth-gateway",
+  "root_cause_change_id": "AUTH-2026-0318",
+  "affected_services": [
+    "checkout-web",
+    "payment-api"
+  ],
+  "evidence": [
+    {
+      "source_file": "logs/auth-gateway.log",
+      "observation": "AUTH-2026-0318 changed issuer and JWKS state immediately before issuer_not_allowed failures."
+    },
+    {
+      "source_file": "logs/checkout-web.log",
+      "observation": "Checkout submissions receive 401 from payment-api."
+    },
+    {
+      "source_file": "logs/payment-api.log",
+      "observation": "Payment rejects requests after auth-gateway reports invalid issuer."
+    },
+    {
+      "source_file": "metrics/service_metrics.csv",
+      "observation": "401 rates rise across checkout, payment, and auth while orders-db query errors remain zero."
+    },
+    {
+      "source_file": "topology.json",
+      "observation": "The dependency path is checkout-web to payment-api to auth-gateway."
+    }
+  ],
+  "excluded_red_herrings": [
+    {
+      "orders-db": "excluded by timing and dependency evidence"
+    },
+    {
+      "cdn-edge": "excluded by timing and dependency evidence"
+    }
+  ],
+  "recommended_next_steps": [
+    "Move the allowlist from retired partner-v1 to partner-v2 while preserving the internal issuer and every other auth boundary.",
+    "Verify all six positive and negative token cases, then monitor checkout and payment 401 rates; restore the original allowlist if the scoped repair regresses."
+  ],
+  "confidence": "high"
+}

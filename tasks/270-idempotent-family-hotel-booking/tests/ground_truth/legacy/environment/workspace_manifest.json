@@ -1,0 +1,30 @@
+{
+  "schema_version": "nami_work_case16_workspace_manifest_v2",
+  "runtime_layout": {
+    "agent_workspace": {
+      "visible": true,
+      "read_only": true,
+      "entries": [
+        {"path": "task.md", "source": "fixtures/agent_task.md", "sha256": "05984b1cd9f713c0a1a128305838d2bc7973c79f6d788a0fd4439d167ecdce58"},
+        {"path": "tool_client.py", "source": "fixtures/tool_client.py", "sha256": "d5d3e46db4117bb7cbd452b1e687a1243ed0da0513c314381419b1384c4c6b0b"},
+        {"path": "tool_contract.json", "source": "fixtures/tool_contract.json", "sha256": "e788aa0c2291221e111b8da7412fcbb669c9b3a91593d2c34590126e85a8022b"}
+      ]
+    },
+    "state": {
+      "visible": false,
+      "managed_by": "structured_local_tools",
+      "entries": ["hotel_booking.db"]
+    }
+  },
+  "initial_state_sha256": "4b2b28b47d9a01c104a72621b4b1a4bfd9fbd5f7267f0443afc7285e20c8b1e5",
+  "runtime_manifest_sha256": "b6f15e68899eeade2de8e9c6444a345b563f9a91cebb1b1a205f8b85d2091556",
+  "forbidden_agent_entries": ["oracle", "verifier", "tests", "validation", "reference_output"],
+  "network": "none",
+  "published_ports": [],
+  "tool_gateway": {
+    "transport": "unix_socket_jsonl",
+    "candidate_socket_path": "/tool_gateway/hotel.sock",
+    "candidate_mount_mode": "read_only",
+    "state_visible_to_candidate": false
+  }
+}

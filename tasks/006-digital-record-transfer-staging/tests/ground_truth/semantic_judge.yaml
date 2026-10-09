@@ -1,0 +1,7 @@
+schema_version: 1
+criteria:
+- id: handoff_semantics
+  question: Does the handoff accurately explain selection, exclusions, quarantine, validation closure, and the staged-only boundary?
+  title: Records-transfer handoff is substantively correct
+  description: The handoff accurately explains why the rescan and PCM preservation master were selected, why the two alternatives were excluded, why REC-004 is quarantined without blessing a new checksum, what validation closed, and that the package remains staged rather than submitted or accessioned.
+  weight: 1.0

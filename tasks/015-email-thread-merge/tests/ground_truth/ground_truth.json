@@ -1,0 +1,16 @@
+{
+  "account": "Northwind",
+  "as_of": "2026-08-04T11:30:00-04:00",
+  "overall_status": "blocked",
+  "milestones": {
+    "security_questionnaire": ["Sam Patel", "in_progress", "2026-08-07", []],
+    "procurement_approval": ["Northwind procurement", "blocked", null, ["security_questionnaire"]],
+    "pilot_kickoff": ["Sam Patel", "tentative", "2026-08-18", ["procurement_approval"]]
+  },
+  "evidence": {
+    "security_questionnaire": ["m-100", "m-101", "m-102"],
+    "procurement_approval": ["m-100", "m-102"],
+    "pilot_kickoff": ["m-100", "m-101", "m-102"]
+  },
+  "ignored": ["m-200"]
+}

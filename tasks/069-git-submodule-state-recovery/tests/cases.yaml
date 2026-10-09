@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 069-git-submodule-state-recovery
+pass_threshold: 0.8
+cases:
+- id: gitlink_authority_and_checkout_state
+  title: Recorded gitlinks govern initialization and checkout recovery
+  description: Remote tips are ignored while exact, missing, and mismatched checkout states remain distinct.
+  weight: 0.35
+  core: true
+- id: local_change_conflict_and_recursion_safety
+  title: Local work, conflicts, missing objects, and nesting fail closed
+  description: Recovery preserves dirty state and includes nested records only under explicit recursion.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_recovery_report
+  title: Visible submodule incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Gitlink recovery and executor risk are handed off
+  description: Notes explain authority, safety blocks, verification, and remaining execution risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_git_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

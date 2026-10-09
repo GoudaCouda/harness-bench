@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "zones": [
+    {"zone_name":"alpha.example","key_role":"KSK","old_key_id":"K-alpha-100","new_key_id":"K-alpha-200","target_phase":"ksk_parent_propagated"},
+    {"zone_name":"bravo.example","key_role":"KSK","old_key_id":"K-bravo-110","new_key_id":"K-bravo-210","target_phase":"ksk_parent_propagated"},
+    {"zone_name":"charlie.example","key_role":"ZSK","old_key_id":"Z-charlie-120","new_key_id":"Z-charlie-220","target_phase":"zsk_active"},
+    {"zone_name":"delta.example","key_role":"ZSK","old_key_id":"Z-delta-130","new_key_id":"Z-delta-230","target_phase":"zsk_active"},
+    {"zone_name":"echo.example","key_role":"ZSK","old_key_id":"Z-echo-140","new_key_id":"Z-echo-240","target_phase":"zsk_active"},
+    {"zone_name":"foxtrot.example","key_role":"NONE","old_key_id":null,"new_key_id":null,"target_phase":"not_in_rollover"},
+    {"zone_name":"golf.example","key_role":"KSK","old_key_id":"K-golf-160","new_key_id":"K-golf-260","target_phase":"ksk_parent_propagated"}
+  ]
+}

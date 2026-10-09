@@ -1,0 +1,10 @@
+{
+  "account_id": "acct_1006",
+  "account_holder": "Morgan Blake",
+  "primary_email": "morgan.blake@example.net",
+  "phone": "+1-512-555-0183",
+  "status": "active",
+  "current_holds": [],
+  "linked_people": [],
+  "internal_case_note": "representative previously authorized for access only"
+}

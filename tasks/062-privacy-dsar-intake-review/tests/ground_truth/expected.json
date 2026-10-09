@@ -1,0 +1,155 @@
+{
+  "register_header": [
+    "request_id",
+    "authority_status",
+    "scope_status",
+    "intake_disposition",
+    "eligible_systems",
+    "retained_systems",
+    "queue",
+    "next_action",
+    "policy_basis"
+  ],
+  "requests": {
+    "DSAR-201": {
+      "authority_status": "verified_self",
+      "scope_status": "in_scope",
+      "intake_disposition": "route_for_deletion_review",
+      "eligible_systems": ["profile_store", "marketing_prefs", "support_history", "analytics_events"],
+      "retained_systems": [],
+      "queue": "deletion_review",
+      "policy_basis": ["P-1", "P-5", "DM-1"],
+      "next_action_terms": [["review"], ["eligible", "listed"]]
+    },
+    "DSAR-202": {
+      "authority_status": "needs_identity_evidence",
+      "scope_status": "pending_authority",
+      "intake_disposition": "needs_more_information",
+      "eligible_systems": [],
+      "retained_systems": [],
+      "queue": "identity_followup",
+      "policy_basis": ["P-1", "P-5"],
+      "next_action_terms": [["verification", "verify"], ["token", "login"]]
+    },
+    "DSAR-203": {
+      "authority_status": "verified_self",
+      "scope_status": "in_scope",
+      "intake_disposition": "route_with_retention",
+      "eligible_systems": ["profile_store", "marketing_prefs", "support_history", "analytics_events"],
+      "retained_systems": ["billing_ledger", "chargeback_casework"],
+      "queue": "retention_review",
+      "policy_basis": ["P-1", "P-4", "P-5", "DM-1", "DM-2"],
+      "next_action_terms": [["review"], ["hold", "retain", "retention"]]
+    },
+    "DSAR-204": {
+      "authority_status": "verified_agent",
+      "scope_status": "in_scope",
+      "intake_disposition": "route_with_retention",
+      "eligible_systems": ["profile_store", "marketing_prefs", "support_history", "analytics_events"],
+      "retained_systems": ["billing_ledger"],
+      "queue": "retention_review",
+      "policy_basis": ["P-2", "P-4", "P-5", "DM-1", "DM-2"],
+      "next_action_terms": [["review"], ["hold", "retain", "retention"]]
+    },
+    "DSAR-205": {
+      "authority_status": "verified_self",
+      "scope_status": "out_of_scope",
+      "intake_disposition": "reject_out_of_scope",
+      "eligible_systems": [],
+      "retained_systems": [],
+      "queue": "scope_response",
+      "policy_basis": ["P-1", "P-3", "P-5"],
+      "next_action_terms": [["scope"], ["other person", "linked person", "third party"]]
+    },
+    "DSAR-206": {
+      "authority_status": "needs_agent_authorization",
+      "scope_status": "pending_authority",
+      "intake_disposition": "needs_more_information",
+      "eligible_systems": [],
+      "retained_systems": [],
+      "queue": "identity_followup",
+      "policy_basis": ["P-2", "P-5"],
+      "next_action_terms": [["authorization"], ["deletion", "requested action"]]
+    },
+    "DSAR-207": {
+      "authority_status": "verified_self",
+      "scope_status": "in_scope",
+      "intake_disposition": "route_with_retention",
+      "eligible_systems": ["profile_store", "support_history", "analytics_events"],
+      "retained_systems": ["legal_hold_archive"],
+      "queue": "retention_review",
+      "policy_basis": ["P-1", "P-4", "P-5", "DM-1", "DM-2"],
+      "next_action_terms": [["review"], ["legal", "hold", "retain"]]
+    },
+    "DSAR-208": {
+      "authority_status": "verified_self",
+      "scope_status": "partial_scope",
+      "intake_disposition": "route_for_deletion_review",
+      "eligible_systems": ["profile_store", "marketing_prefs", "support_history"],
+      "retained_systems": [],
+      "queue": "deletion_review",
+      "policy_basis": ["P-1", "P-3", "P-5", "DM-1", "DM-3"],
+      "next_action_terms": [["review"], ["exclude", "scope", "linked person", "third party"]]
+    }
+  },
+  "draft_term_groups": {
+    "DSAR-201": [["ready", "accepted"], ["deletion review", "administrative review"]],
+    "DSAR-202": [["additional verification", "more information"], ["login", "account token"], ["before"]],
+    "DSAR-203": [["retention", "retained"], ["billing dispute"], ["chargeback"], ["eligible data", "remaining data"]],
+    "DSAR-204": [["authorized agent", "authorized representative", "authorization is valid"], ["tax retention"], ["review"]],
+    "DSAR-205": [["outside", "out of scope", "cannot process"], ["another person", "other person", "third-party"]],
+    "DSAR-206": [["authorization"], ["deletion", "requested action"], ["corrected", "new", "updated"]],
+    "DSAR-207": [["legal hold"], ["retention", "retained"], ["review"]],
+    "DSAR-208": [["own account", "your own"], ["another person", "other person", "linked-person", "third-party"], ["exclude", "cannot include", "out of scope"], ["review"]]
+  },
+  "queue_members": {
+    "deletion_review": ["DSAR-201", "DSAR-208"],
+    "retention_review": ["DSAR-203", "DSAR-204", "DSAR-207"],
+    "identity_followup": ["DSAR-202", "DSAR-206"],
+    "scope_response": ["DSAR-205"]
+  },
+  "retention_handoff": {
+    "DSAR-203": ["billing_ledger", "Finance Records", "chargeback_casework", "Payments Legal"],
+    "DSAR-204": ["billing_ledger", "Finance Records"],
+    "DSAR-207": ["legal_hold_archive", "Privacy Legal"]
+  },
+  "verified_self_name_by_request": {
+    "DSAR-201": "Maya Chen",
+    "DSAR-203": "Avery Lopez",
+    "DSAR-205": "Noah Singh",
+    "DSAR-207": "Sam Ortiz",
+    "DSAR-208": "Leila Hassan"
+  },
+  "names_forbidden_everywhere": [
+    "Jules Park",
+    "Jordan Kim",
+    "Priya Singh",
+    "Morgan Blake",
+    "Ahmed Farouk"
+  ],
+  "internal_private_terms": [
+    "IR-882",
+    "identity review ticket",
+    "refund abuse",
+    "executive account",
+    "VIP handling",
+    "litigation matter",
+    "complaint escalation",
+    "CS-77"
+  ],
+  "draft_forbidden_codes": [
+    "profile_store",
+    "marketing_prefs",
+    "support_history",
+    "analytics_events",
+    "billing_ledger",
+    "chargeback_casework",
+    "legal_hold_archive",
+    "household_links",
+    "emergency_contact_registry",
+    "identity_followup",
+    "retention_review",
+    "scope_response",
+    "acct_"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "case03_source_manifest_v1",
+  "asset_policy": "fully_synthetic_replacement",
+  "license_id": "project_internal_synthetic_v1",
+  "privacy_statement": "所有机构名、设备、位置、班组和表单内容均由项目人工合成，不含真实医院、患者或员工信息。",
+  "source_intent": {
+    "path": "tasks/20260719_nami_work_gold20_v1/source_packets/case_03.json",
+    "sha256": "be3b6dcb30495a2307c7d2121cd6bd4aff64304a4596a30fba78d30be23df2f7",
+    "use": "仅使用脱敏任务意图与环境类型；不复制原始指令或助手输出。"
+  },
+  "files": [
+    {
+      "path": "fixtures/hospital_header.json",
+      "origin": "project_authored_synthetic",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "c0e1ea3a253243e54bd701de893cd708a050b17037a345cced2c9ed9389485cf"
+    },
+    {
+      "path": "fixtures/equipment_registry.json",
+      "origin": "project_authored_synthetic",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "ad6e94677c58e4dbc5e861391e444579a3ce61eae8588892c2556ff372943b63"
+    },
+    {
+      "path": "fixtures/inspection_standard.json",
+      "origin": "project_authored_synthetic",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "8c65eb6cc1b2fd387c777ecd98676f5160725d68f13103a18892670e16953858"
+    },
+    {
+      "path": "fixtures/instruction.md",
+      "origin": "project_authored_from_restricted_intent",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "1e725a8a8b33bb5ecdec02df2bc494f915341864abeed2b38df8d6a2f7b7a468"
+    },
+    {
+      "path": "environment/docx_writer.py",
+      "origin": "project_authored_code",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "4d294b46503eb4fd6c739b32fa0918ffbcd184cc0fe16546781ba0f243568029"
+    },
+    {
+      "path": "fixtures/tool_contract.json",
+      "origin": "project_authored_contract",
+      "license_id": "project_internal_synthetic_v1",
+      "sha256": "319667edf4ae0ba05dccb3e479a664600f26f587161db4553d5afd72213e958f"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Complete CPython 3.12 Linux dependency closure.
+# lxml hashes cover the official manylinux2014 x86_64 and aarch64 wheels.
+lxml==5.3.1 \
+    --hash=sha256:1c93ed3c998ea8472be98fb55aed65b5198740bfceaec07b2eba551e55b7b9ae \
+    --hash=sha256:c2e49dc23a10a1296b04ca9db200c44d3eb32c8d8ec532e8c1fd24792276522a
+python-docx==1.1.2 \
+    --hash=sha256:08c20d6058916fb19853fcf080f7f42b6270d89eac9fa5f8c15f691c0017fabe
+typing_extensions==4.12.2 \
+    --hash=sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d

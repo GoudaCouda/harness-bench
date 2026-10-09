@@ -1,0 +1,56 @@
+{
+  "schema_version": "nami_work_case16_source_manifest_v1",
+  "components": [
+    {
+      "path": "fixtures/agent_task.md",
+      "source_kind": "hybrid",
+      "source_ref": "api_bank@483554eae102996f5ec1f4feab4e78ef29c2a394:BookHotel-level-3-1:0",
+      "transformation": "仅采用开源训练样本中的结构化酒店预订任务类型；酒店名、城市、日期、客户、约束和全部文本均重新合成，不复制原指令或测试任务。",
+      "sha256": "05984b1cd9f713c0a1a128305838d2bc7973c79f6d788a0fd4439d167ecdce58",
+      "license_id": "api_bank_apache_2_0"
+    },
+    {
+      "path": "fixtures/tool_contract.json",
+      "source_kind": "hybrid",
+      "source_ref": "api_bank@483554eae102996f5ec1f4feab4e78ef29c2a394:tool-schema-pattern",
+      "transformation": "借鉴开源训练样本的工具调用范式并重新设计为确定性、本地、无网络的三个结构化工具。",
+      "sha256": "e788aa0c2291221e111b8da7412fcbb669c9b3a91593d2c34590126e85a8022b",
+      "license_id": "api_bank_apache_2_0"
+    },
+    {
+      "path": "fixtures/tool_client.py",
+      "source_kind": "synthetic",
+      "source_ref": "human-authored:case_16:tool_client_v1",
+      "transformation": "本项目原创的最小 Unix socket JSONL 客户端，只暴露结构化工具调用面，不暴露状态、验收器或参考答案。",
+      "sha256": "d5d3e46db4117bb7cbd452b1e687a1243ed0da0513c314381419b1384c4c6b0b",
+      "license_id": "project_synthetic_asset"
+    },
+    {
+      "path": "fixtures/initial_database.json",
+      "source_kind": "synthetic",
+      "source_ref": "human-authored:case_16:2026-07-20",
+      "transformation": "酒店、客户、价格、日期、库存和初态均为本项目人工合成数据。",
+      "sha256": "d50d0ee90228dc723c59e46ff6f00c7b67af854934aa427c1b090bad52b3a7eb",
+      "license_id": "project_synthetic_asset"
+    },
+    {
+      "path": "fixtures/LICENSES.md",
+      "source_kind": "human",
+      "source_ref": "api_bank_license_and_project_policy",
+      "transformation": "汇总逐组件许可与再利用边界。",
+      "sha256": "0197fbb125f362e64b77481a30e3e9b48b0cfe94fa8032c6c7efecc86adc89fe",
+      "license_id": "project_synthetic_asset"
+    }
+  ],
+  "upstream": {
+    "repository": "API-Bank",
+    "revision": "483554eae102996f5ec1f4feab4e78ef29c2a394",
+    "split": "upstream_training_samples",
+    "upstream_task_id": "BookHotel-level-3-1:0",
+    "source_file_sha256": "77c9f9ba666012d61f1ba36e8fc74b79dc6e04b0ce3e8451fb19d3b8c3816f82",
+    "instruction_sha256": "be8eece50e89efe2a4cb1f2bedd3bdc8653487fce0077a7f1bcde1531c62b9f8",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license": "Apache-2.0",
+    "test_or_holdout_content_used": false
+  }
+}

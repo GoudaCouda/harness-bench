@@ -1,0 +1,68 @@
+{
+  "cap_add": [],
+  "cap_drop": [
+    "ALL"
+  ],
+  "case_id": "case_09",
+  "contract_sha256": "244a90619f856ea785716fa10d5b5ffa6c01840da596913edd8653ee923814c1",
+  "fixture_mounts": [
+    {
+      "case_relative_path": "fixtures/protocol_contract.json",
+      "container_path": "/protocol_contract.json",
+      "read_only": true
+    },
+    {
+      "case_relative_path": "fixtures/seed.db",
+      "container_path": "/seed.db",
+      "read_only": true
+    }
+  ],
+  "forbidden_candidate_paths": [
+    "/case",
+    "/oracle",
+    "/reference",
+    "/verifier",
+    "/tests",
+    "/validation",
+    "/var/run/docker.sock"
+  ],
+  "image_digest": "sha256:6c4dd321d176d61ea848dc8c73a4f7dbae8f70e0ee48bb411ea2f045b599fa8e",
+  "init_command": [
+    "sleep",
+    "infinity"
+  ],
+  "network_mode": "none",
+  "ownership": {
+    "contract_hash_label": "agent_sft.sandbox_contract_sha256",
+    "dynamic_label_keys": {
+      "host_alias": "agent_sft.host_alias",
+      "run_id": "agent_sft.run_id",
+      "task_id": "agent_sft.task_id"
+    },
+    "static_labels": {
+      "agent_sft.case_id": "case_09",
+      "agent_sft.purpose": "nami_work_gold20",
+      "agent_sft.runtime_role": "untrusted_candidate_execution"
+    }
+  },
+  "privileged": false,
+  "published_ports": [],
+  "resources": {
+    "memory_bytes": 2147483648,
+    "nano_cpus": 2000000000,
+    "pids_limit": 128
+  },
+  "rootfs_readonly": true,
+  "runtime_role": "untrusted_candidate_execution",
+  "schema_version": "case09_candidate_sandbox_contract_v1",
+  "security_options": [
+    "no-new-privileges"
+  ],
+  "tmpfs": {
+    "container_path": "/submission",
+    "maximum_bytes": 8388608,
+    "options": "rw,noexec,nosuid,nodev,size=8m,uid=2050,gid=4007,mode=0770"
+  },
+  "user": "2050:4007",
+  "working_dir": "/submission"
+}

@@ -1,0 +1,15 @@
+{
+  "policy_version": "2026-07",
+  "categories": {
+    "textual": {"accepted": [{"extension": ".pdf", "profile": "PDF/A-2b"}]},
+    "image": {"accepted": [{"extension": ".tif", "compression": "LZW"}]},
+    "audio": {"accepted": [{"extension": ".wav", "codec": "PCM", "bit_depth": 24}]},
+    "data": {"accepted": [{"extension": ".csv", "encoding": "UTF-8"}]}
+  },
+  "rules": [
+    "A candidate must pass QC and match its recorded SHA-256 before staging.",
+    "For multiple candidates, use the approved preservation master, never a convenience derivative.",
+    "An unresolved checksum mismatch is quarantined; do not recompute and bless a new expected digest.",
+    "The final package remains staged and must not claim submission or accession."
+  ]
+}

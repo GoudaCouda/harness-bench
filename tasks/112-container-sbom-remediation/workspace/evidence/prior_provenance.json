@@ -1,0 +1,18 @@
+{
+  "base": {
+    "digest": "sha256:e4fb44a385da07034dbd157ed8788f05e2cba6913ddd0df69dcc8308ae26cde2",
+    "uri": "synthetic.registry/runtime/node20"
+  },
+  "build_type": "https://example.invalid/buildtypes/oci-offline/v1",
+  "builder_id": "urn:synthetic:builder:hermetic-image-v3",
+  "source": {
+    "digest": "sha256:4a6ae1028f2d632c7c8df2b0eb42530df2d7d7bcf6ecef79e3333cf9426df499",
+    "uri": "git+https://example.invalid/synthetic/report-worker"
+  },
+  "statement_id": "PROV-REPORT-RC1",
+  "subject": {
+    "digest": "sha256:9e3d8c5a712db6616ea56a6ca7e1ae0879348ed9b71734086a06ed6411d1036b",
+    "name": "report-worker"
+  },
+  "verified": true
+}

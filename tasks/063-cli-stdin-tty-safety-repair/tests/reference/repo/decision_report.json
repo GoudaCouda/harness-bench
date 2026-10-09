@@ -1,0 +1,7 @@
+[
+  {"case_id":"explicit-yes","result":{"action":"execute","exit_code":0,"confirmation":"flag","stdin_consumed":false}},
+  {"case_id":"tty-prompt","result":{"action":"prompt","exit_code":null,"confirmation":"tty","stdin_consumed":false}},
+  {"case_id":"pipe-no","result":{"action":"abort","exit_code":1,"confirmation":"pipe","stdin_consumed":true}},
+  {"case_id":"empty-pipe","result":{"action":"blocked","exit_code":2,"confirmation":"empty_stdin","stdin_consumed":true}},
+  {"case_id":"plan-mode","result":{"action":"preview","exit_code":0,"confirmation":"not_required","stdin_consumed":false}}
+]

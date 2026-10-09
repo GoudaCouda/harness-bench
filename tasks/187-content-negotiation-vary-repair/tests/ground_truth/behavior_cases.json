@@ -1,0 +1,243 @@
+{
+  "edges": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "application/json;q=0",
+          "accept_language": "*",
+          "id": "none",
+          "variants": [
+            {
+              "id": "j",
+              "language": "en",
+              "media_type": "application/json",
+              "size": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "*/*",
+          "accept_language": "*",
+          "id": "vary",
+          "variants": [
+            {
+              "id": "a",
+              "language": "en",
+              "media_type": "text/plain",
+              "size": 1
+            },
+            {
+              "id": "b",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "*/*",
+          "accept_language": "*",
+          "id": "tie",
+          "variants": [
+            {
+              "id": "z",
+              "language": "en",
+              "media_type": "text/plain",
+              "size": 1
+            },
+            {
+              "id": "a",
+              "language": "en",
+              "media_type": "text/plain",
+              "size": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "text/plain;q=oops",
+          "accept_language": "fr;q=0.8, en-US;q=1",
+          "id": "r",
+          "variants": [
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            },
+            {
+              "id": "text-fr",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "text/*;q=0.7, application/json;q=1",
+          "accept_language": "fr;q=0.8, en-US;q=1",
+          "id": "r",
+          "variants": [
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            },
+            {
+              "id": "text-fr",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 50
+            }
+          ]
+        },
+        {
+          "accept": "text/*;q=0.7, application/json;q=1",
+          "accept_language": "fr;q=0.8, en-US;q=1",
+          "id": "r",
+          "variants": [
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            },
+            {
+              "id": "text-fr",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "text/*;q=0.7, application/json;q=1",
+          "accept_language": "fr;q=0.8, en-US;q=1",
+          "id": "r",
+          "variants": [
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            },
+            {
+              "id": "text-fr",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 50
+            },
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "text/*;q=0.7, application/json;q=1",
+          "accept_language": "fr;q=0.8, en-US;q=1",
+          "id": "r",
+          "variants": [
+            {
+              "id": "json-en",
+              "language": "en-US",
+              "media_type": "application/json",
+              "size": 100
+            },
+            {
+              "id": "text-fr",
+              "language": "fr",
+              "media_type": "text/plain",
+              "size": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "text/*;q=1, text/html;q=0",
+          "accept_language": "*",
+          "id": "wild",
+          "variants": [
+            {
+              "id": "html",
+              "language": "en",
+              "media_type": "text/html",
+              "size": 1
+            },
+            {
+              "id": "plain",
+              "language": "en",
+              "media_type": "text/plain",
+              "size": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "accept": "*/*",
+          "accept_language": "en;q=.5, en-US;q=.9",
+          "id": "lang",
+          "variants": [
+            {
+              "id": "us",
+              "language": "en-US",
+              "media_type": "text/plain",
+              "size": 5
+            },
+            {
+              "id": "gb",
+              "language": "en-GB",
+              "media_type": "text/plain",
+              "size": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

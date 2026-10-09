@@ -1,0 +1,14 @@
+{
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "policy_version": "PA-VAYGO-SYN-2026.08",
+  "status": "validation_pending",
+  "selected_line_ids": [],
+  "control_totals": null,
+  "review_sha256": null,
+  "exceptions_sha256": null,
+  "validation_fingerprint": null,
+  "replay_verified": false,
+  "submitted": false,
+  "posted": false,
+  "disbursed_amount": 0
+}

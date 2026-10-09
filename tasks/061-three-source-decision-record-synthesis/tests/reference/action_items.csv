@@ -1,0 +1,5 @@
+action_id,owner,due_date,action,status,source_file,evidence_signal
+customer_notice,Sam,2026-06-05,customer notice | June 5,pending,email/thread.json#email-006,customer notice | June 5
+mode_b_checklist,Morgan,2026-05-20,mode B | checklist,pending,docs/security_review.md,mode B | checklist
+budget_memo,Omar,2026-05-15,budget clearance | memo,pending,docs/finance_constraints.md,budget clearance | memo
+legal_addendum,Lena,2026-06-01,data-processing | addendum,pending,docs/legal_notes.md,data-processing | addendum

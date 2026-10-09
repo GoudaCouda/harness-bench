@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 011-calendar-scheduling-conflict
+pass_threshold: 0.8
+cases:
+- id: recommended_customer_window
+  title: Best eligible customer window is recommended
+  description: The recommended candidate is the highest-ranked eligible interval after notice, working-hour, calendar, buffer, grid, and customer-preference constraints are jointly applied.
+  weight: 0.35
+  core: true
+- id: resilient_fallback_sequence
+  title: Ordered fallbacks preserve a usable escalation path
+  description: Two distinct non-overlapping fallbacks are valid and ordered under the same policy rather than repeating near-identical or conflicting times.
+  weight: 0.20
+  core: true
+- id: customer_ready_coordination
+  title: Customer draft communicates the actual coordination decision
+  description: The draft consistently presents the recommendation and fallbacks in customer and planning time zones, names the purpose, duration, and attendee roles, and asks for confirmation.
+  weight: 0.25
+  core: true
+- id: auditable_time_zone_handoff
+  title: Recommended local-time conversion and evidence are auditable
+  description: The plan gives each participant the correct local view of the recommended interval and identifies all request/calendar evidence used.
+  weight: 0.10
+  core: false
+- id: professional_contingency_language
+  title: Coordination language is professional and contingent
+  description: The reply clearly distinguishes recommendation from fallback, avoids ambiguity about dates and zones, and frames all options as pending confirmation.
+  weight: 0.10
+  core: false
+- id: source_and_execution_boundary
+  title: Calendar evidence and draft-only boundary are preserved
+  description: Source snapshots remain unchanged and the agent does not claim to have sent invitations, placed holds, or made unsupported commercial or incident commitments.
+  weight: 0.0
+  gate: true

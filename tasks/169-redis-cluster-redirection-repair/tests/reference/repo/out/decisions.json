@@ -1,0 +1,75 @@
+[
+  {
+    "action": "retry_redirect",
+    "backoff_ms": 0,
+    "next_attempt": 2,
+    "reason": "ask",
+    "request_id": "ask-migration",
+    "send_asking": true,
+    "target_node": "node-d",
+    "update_slot": null
+  },
+  {
+    "action": "block",
+    "backoff_ms": 0,
+    "next_attempt": null,
+    "reason": "ambiguous_non_idempotent",
+    "request_id": "cluster-write",
+    "send_asking": false,
+    "target_node": null,
+    "update_slot": null
+  },
+  {
+    "action": "block",
+    "backoff_ms": 0,
+    "next_attempt": null,
+    "reason": "cross_slot",
+    "request_id": "cross-slot",
+    "send_asking": false,
+    "target_node": null,
+    "update_slot": null
+  },
+  {
+    "action": "retry_redirect",
+    "backoff_ms": 0,
+    "next_attempt": 3,
+    "reason": "moved",
+    "request_id": "moved-read",
+    "send_asking": false,
+    "target_node": "node-e",
+    "update_slot": {
+      "node": "node-e",
+      "slot": 42
+    }
+  },
+  {
+    "action": "refresh_and_retry",
+    "backoff_ms": 0,
+    "next_attempt": 2,
+    "reason": "readonly",
+    "request_id": "readonly-refresh",
+    "send_asking": false,
+    "target_node": null,
+    "update_slot": null
+  },
+  {
+    "action": "complete",
+    "backoff_ms": 0,
+    "next_attempt": null,
+    "reason": "response",
+    "request_id": "settled",
+    "send_asking": false,
+    "target_node": null,
+    "update_slot": null
+  },
+  {
+    "action": "retry_backoff",
+    "backoff_ms": 400,
+    "next_attempt": 4,
+    "reason": "tryagain",
+    "request_id": "tryagain",
+    "send_asking": false,
+    "target_node": "node-b",
+    "update_slot": null
+  }
+]

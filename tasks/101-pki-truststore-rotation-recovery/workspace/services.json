@@ -1,0 +1,7 @@
+{
+  "services": {
+    "billing-api": {"dns_name": "api.internal", "expected_leaf": "leaf-api-v2", "rotation_scope": true},
+    "event-worker": {"dns_name": "worker.internal", "expected_leaf": "leaf-worker-v1", "rotation_scope": false},
+    "reporting": {"dns_name": "report.internal", "expected_leaf": "leaf-report-v2", "rotation_scope": false}
+  }
+}

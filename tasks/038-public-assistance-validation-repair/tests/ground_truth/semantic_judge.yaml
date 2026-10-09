@@ -1,0 +1,7 @@
+schema_version: 1
+criteria:
+- id: handoff_semantics
+  question: Does the handoff accurately cover all five line outcomes, invoice supersession, each reduction without double subtraction, the missing approval, exact controls, replay, next actions, and the staged-not-disbursed boundary?
+  title: Evidence-grounded Public Assistance validation handoff
+  description: Equivalent professional wording must preserve every financial relationship and external-action boundary.
+  weight: 1.0

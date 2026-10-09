@@ -1,0 +1,23 @@
+[
+  {
+    "event_id": "evt-7301",
+    "event_time": "2026-07-31T23:59:59Z",
+    "received_at": "2026-08-03T09:12:00Z",
+    "account_id": "acct-17",
+    "flag_snapshot": {"checkout_v2": false}
+  },
+  {
+    "event_id": "evt-7302",
+    "event_time": "2026-08-01T00:00:00Z",
+    "received_at": "2026-08-01T00:00:02Z",
+    "account_id": "acct-42",
+    "flag_snapshot": {"checkout_v2": false}
+  },
+  {
+    "event_id": "evt-7303",
+    "event_time": "2026-08-12T18:30:00Z",
+    "received_at": "2026-08-12T18:30:01Z",
+    "account_id": "acct-63",
+    "flag_snapshot": null
+  }
+]

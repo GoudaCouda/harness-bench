@@ -1,0 +1,6 @@
+source,clause_id,risk,severity,recommended_action,owner
+contract.md,C-01,Renewal notice is shorter than policy,Medium,Negotiate at least 60 calendar days' notice,Commercial Legal
+contract.md,C-05,Customer termination notice is shorter than policy,Medium,Revise customer convenience termination to at least 30 calendar days,Commercial Legal
+contract.md,C-06,Subprocessor notice is shorter than policy,High,Revise advance notice to at least 15 calendar days,Privacy
+order_form.md,O-03,Cyber insurance is below the required limit,High,Increase coverage to USD 2 million or obtain a scoped approved exception,Risk
+order_form.md,O-04,Standing logo permission bypasses publication approval,Medium,Require prior written approval for each publication,Brand

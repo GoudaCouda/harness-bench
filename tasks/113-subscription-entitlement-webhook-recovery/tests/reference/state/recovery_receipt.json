@@ -1,0 +1,12 @@
+{
+  "external_actions_executed": false,
+  "plan_hash": "1aedd6736ff6604cc6a0d7b694e8b70b059c0c11d60bc9ee0d2e9c42588a68da",
+  "run_id": "ER-20260818-01",
+  "schema_version": 1,
+  "semantic_db_hash": "e05864027562092bf077db010ed237274d2bc2b4bb4a95463dd26a3b4ee92737",
+  "source_bundle_hash": "bf4ad07c9dea4e6c7054dd1295ff8c751101c5d6d4be80d7f16f460fb954ab7f",
+  "stage_boundary": "local_only_pending_support_approval",
+  "stage_token": "e372374639459cb61d64b3a9e6c73822c8150e280b5977396d80428dae1d1e10",
+  "status": "staged_pending_support_approval",
+  "verification_hash": "be70537371eb5cfaab61e721210c58f2edc1693e1d6b35e24a7827bad1b75687"
+}

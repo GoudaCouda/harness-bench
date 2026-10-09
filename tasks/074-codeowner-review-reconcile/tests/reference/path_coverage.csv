@@ -1,0 +1,9 @@
+path,owner,approval,reviewer,reason
+src/payments/core.py,payments,satisfied,paya,current_team_approval
+src/payments/generated/client.py,platform,missing,platb,old_sha_path_scoped_approval
+infra/payment-job.json,sre,blocked,srec,changes_requested
+docs/payments/runbook.md,payments-docs,satisfied,doca,current_team_approval
+config/secrets/payment.yaml,security,satisfied,seca,current_team_approval
+scripts/release-payments.sh,release,missing,rela,dismissed_review
+src/shared/logging.py,platform,satisfied,platd,current_scoped_approval
+.github/workflows/payment.yml,ci,satisfied,cia,current_team_approval

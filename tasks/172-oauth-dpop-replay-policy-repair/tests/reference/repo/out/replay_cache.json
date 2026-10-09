@@ -1,0 +1,12 @@
+[
+  {
+    "expires_at": 1300,
+    "jkt": "key-a",
+    "jti": "proof-a"
+  },
+  {
+    "expires_at": 1200,
+    "jkt": "key-a",
+    "jti": "used"
+  }
+]

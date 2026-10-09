@@ -1,0 +1,92 @@
+[
+  {
+    "id": "PET-FINCH",
+    "name": "Comet Finch",
+    "category": "bird",
+    "owner": "Rae",
+    "status": "clear",
+    "primary": 76,
+    "secondary": 18
+  },
+  {
+    "id": "PET-CAT",
+    "name": "Miso Cat",
+    "category": "cat",
+    "owner": "Dee",
+    "status": "watch",
+    "primary": 64,
+    "secondary": 31
+  },
+  {
+    "id": "PET-PUP",
+    "name": "Juniper Pup",
+    "category": "dog",
+    "owner": "Ash",
+    "status": "review",
+    "primary": 58,
+    "secondary": 44
+  },
+  {
+    "id": "PET-LIZ",
+    "name": "Pixel Lizard",
+    "category": "reptile",
+    "owner": "Sol",
+    "status": "watch",
+    "primary": 69,
+    "secondary": 26
+  },
+  {
+    "id": "PET-FINCH-R1",
+    "name": "Comet Finch follow-up",
+    "category": "cat",
+    "owner": "Ash",
+    "status": "clear",
+    "primary": 90,
+    "secondary": 24
+  },
+  {
+    "id": "PET-CAT-R2",
+    "name": "Miso Cat follow-up",
+    "category": "dog",
+    "owner": "Sol",
+    "status": "watch",
+    "primary": 81,
+    "secondary": 38
+  },
+  {
+    "id": "PET-PUP-R3",
+    "name": "Juniper Pup follow-up",
+    "category": "reptile",
+    "owner": "Rae",
+    "status": "review",
+    "primary": 78,
+    "secondary": 52
+  },
+  {
+    "id": "PET-LIZ-R4",
+    "name": "Pixel Lizard follow-up",
+    "category": "bird",
+    "owner": "Dee",
+    "status": "watch",
+    "primary": 92,
+    "secondary": 35
+  },
+  {
+    "id": "PET-CAT-X9",
+    "name": "Miso Cat scenario 9",
+    "category": "cat",
+    "owner": "Ash",
+    "status": "clear",
+    "primary": 130,
+    "secondary": 35
+  },
+  {
+    "id": "PET-CAT-X10",
+    "name": "Miso Cat scenario 10",
+    "category": "dog",
+    "owner": "Sol",
+    "status": "watch",
+    "primary": 137,
+    "secondary": 31
+  }
+]

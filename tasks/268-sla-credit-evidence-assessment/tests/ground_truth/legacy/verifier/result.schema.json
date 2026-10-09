@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case14 verifier result v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "passed", "checks", "summary"],
+  "properties": {
+    "schema_version": {"const": "case14_verifier_result_v2"},
+    "passed": {"type": "boolean"},
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "detail"],
+        "properties": {
+          "check_id": {"type": "string", "minLength": 1},
+          "passed": {"type": "boolean"},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "passed", "failed"],
+      "properties": {
+        "total": {"type": "integer", "minimum": 1},
+        "passed": {"type": "integer", "minimum": 0},
+        "failed": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

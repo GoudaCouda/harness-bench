@@ -1,0 +1,40 @@
+task_id: 240-cidr-pool-allocation
+title: Allocate mill CIDRs from a pool without overlap
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+capability_tags: [filesystem, structured_data, terminal, networking]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [prefix_alignment, largest_first, leftover_capacity]
+required_artifacts:
+- allocation.json
+- ALLOC_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HB-S200-BOUNDED-ALLOCATION, OCI-CONTENT-ADDRESSABLE]
+task_family: cidr-pool-allocation
+variant: largest-prefix-then-lowest-address
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [allocation.json, ALLOC_NOTES.md]
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

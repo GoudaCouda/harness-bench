@@ -1,0 +1,18 @@
+{
+  "request_id": "DSAR-204",
+  "self_attestation": false,
+  "account_token": null,
+  "agent_identity_check": {
+    "check_id": "AIC-204",
+    "status": "completed",
+    "completed_at": "2026-05-18T09:58:00Z"
+  },
+  "authorization": {
+    "document_id": "AUTH-204",
+    "signed": true,
+    "holder_account_id": "acct_1004",
+    "authorized_action": "delete_personal_data",
+    "signed_at": "2026-05-12",
+    "expires_at": "2026-08-12"
+  }
+}

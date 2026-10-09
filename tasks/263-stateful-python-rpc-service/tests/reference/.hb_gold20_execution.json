@@ -1,0 +1,24 @@
+{
+  "case_number": 9,
+  "checks": {
+    "native_durable_requests": true,
+    "native_read_protocol": true,
+    "protocol_and_state": true,
+    "sandbox_ownership_contract": true,
+    "sandbox_post_reset": true,
+    "sandbox_pre_reset": true,
+    "workspace_contract": true
+  },
+  "config_sha256": "f80b2140ef98cd75f3814e2c4b142eb042a060790ea1f6fffc0150ed82c42733",
+  "forged_snapshot": false,
+  "legacy_accepted": true,
+  "schema_version": 1,
+  "status": "finished",
+  "unsafe_workspace": false,
+  "workspace_files": {
+    "protocol_contract.json": "7c70cbfb02ab391c9212b50186ac3eba23c131cb558475e07c0d1017ca2bd303",
+    "seed.db": "0643464c8474a4124947fbcc309ed61afc1f9302a9dbb9274635e42082af2fd8",
+    "submission/service.py": "bda7404cc33382ff3995ce3433ed56ad4840895a84335a24b685c1a881f72762",
+    "task.md": "428feb8dc612f8541c600e33b641e8ccad73ac8de9409056b569f3952da76887"
+  }
+}

@@ -1,0 +1,2 @@
+a:focus, button:focus, input:focus { outline: none; }
+.menu-button { color: #111; background: #fff; }

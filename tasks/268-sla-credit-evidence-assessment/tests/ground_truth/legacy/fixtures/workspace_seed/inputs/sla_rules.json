@@ -1,0 +1,40 @@
+{
+  "contract_id": "SYN-SLA-7306",
+  "quarter": "2025-Q3",
+  "target_region_id": "SYN-REGION-QH2",
+  "currency": "CNY",
+  "eligibility": {
+    "rule_id": "sla-rule-eligible-events",
+    "require_validated": true,
+    "included_event_type": "unplanned_outage",
+    "per_event_grace_minutes": 8
+  },
+  "credit": {
+    "base_rule_id": "sla-rule-minute-credit",
+    "rate_cny_per_eligible_minute": 12500,
+    "repeat_rule_id": "sla-rule-repeat-multiplier",
+    "repeat_incident_threshold": 3,
+    "multiplier_numerator": 6,
+    "multiplier_denominator": 5
+  },
+  "remediation": {
+    "rule_id": "sla-rule-enhanced-remediation",
+    "minimum_p1_events": 2,
+    "minimum_total_eligible_minutes": 120,
+    "triggered_level": "enhanced",
+    "default_level": "standard",
+    "triggered_due_business_days": 6,
+    "default_due_business_days": 12
+  },
+  "exclusion_reason_by_condition": {
+    "scheduled_maintenance": "scheduled_maintenance",
+    "unvalidated": "unvalidated_record",
+    "other_region": "out_of_scope_region"
+  },
+  "ignored_sources": [
+    {
+      "source_id": "sales-projection-2025-q3-nonbinding",
+      "reason_code": "non_contractual_projection"
+    }
+  ]
+}

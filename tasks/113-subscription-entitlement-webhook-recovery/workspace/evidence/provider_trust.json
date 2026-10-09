@@ -1,0 +1,6 @@
+{
+  "algorithm": "sha256-canonical-json-plus-verification-material",
+  "key_id": "synthetic-provider-snapshot-2026",
+  "schema_version": 1,
+  "verification_material": "offline-synthetic-verifier-113-v1"
+}

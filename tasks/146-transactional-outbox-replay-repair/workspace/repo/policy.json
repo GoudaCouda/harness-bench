@@ -1,0 +1,6 @@
+{
+  "lease_seconds": 60,
+  "max_attempts": 3,
+  "now": 1000,
+  "worker": "relay-recovery"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "case08_candidate_sandbox_contract_envelope_v1",
+  "canonicalization": "json_utf8_sort_keys_compact",
+  "contract_sha256": "7d6a15d44f13a1a42087dad7f6b0d0ce0db8a9f060873402ee3ed416b14757b6",
+  "contract": {
+    "schema_version": "case08_candidate_sandbox_contract_v3",
+    "case_id": "case_08",
+    "variant": "case_08_isolation_v2",
+    "role": "candidate-sandbox",
+    "user": "2050:4007",
+    "network_mode": "none",
+    "published_ports": [],
+    "readonly_rootfs": true,
+    "cap_drop": ["ALL"],
+    "security_options": ["no-new-privileges:true"],
+    "cpu_cores": 2,
+    "memory_bytes": 536870912,
+    "memory_swap_bytes": 536870912,
+    "pids_limit": 64,
+    "file_size_limit_bytes": 67108864,
+    "open_files_limit": 128,
+    "mounts": [
+      {
+        "destination": "/workspace",
+        "mode": "read_write",
+        "content": "candidate_execution_workspace_only"
+      }
+    ],
+    "tmpfs": [
+      {
+        "destination": "/scratch",
+        "size_bytes": 67108864,
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "uid=2050",
+          "gid=4007",
+          "mode=0700"
+        ]
+      }
+    ],
+    "forbidden_mounts": [
+      "/case",
+      "/project",
+      "/var/run/docker.sock",
+      "oracle",
+      "verifier",
+      "tests",
+      "validation",
+      ".env"
+    ],
+    "runtime_adapter": {
+      "path": "/opt/case08-runtime/adapter.py",
+      "answer_independent": true,
+      "request_transport": "docker_exec_stdin",
+      "response_transport": "bounded_stdout_json",
+      "hidden_expected_values_present": false
+    },
+    "restart_contract": {
+      "inspect_before_first_restart": true,
+      "exact_id_restart_before_attempt": true,
+      "exact_id_restart_after_attempt": true,
+      "tmpfs_must_clear": true,
+      "candidate_processes_must_clear": true
+    }
+  }
+}

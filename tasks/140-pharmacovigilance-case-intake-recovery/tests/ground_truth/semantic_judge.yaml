@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 140-pharmacovigilance-case-intake-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Pharmacovigilance recovery handoff is operationally complete
+  question: Does the handoff accurately explain each case and message outcome, accepted and pending submission boundaries, identity/nullification/terminology holds, version and duplicate processing, serious versus routine local review, interrupted SQLite recovery, checkpoint and packet hashes, equivalent replay and rejected conflict, and that no safety report or acknowledgement was transmitted?
+  pass_anchors:
+  - Equivalent professional wording is accepted when all case-specific evidence relationships, recovery facts, and external-action boundaries agree with structured state.
+  fail_anchors:
+  - Omitting a material case, hold, submission boundary, recovery/replay fact, or claiming an external action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

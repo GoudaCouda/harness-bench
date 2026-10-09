@@ -1,0 +1,11 @@
+{
+  "vintages_retained": ["preliminary", "revised"],
+  "series_used": ["EMP_SA", "HOURS_SA"],
+  "latest_period": "2026-06",
+  "claim_decisions": {
+    "employment_increased": "withdraw_and_replace_with_decrease",
+    "average_hours_decreased": "withdraw_and_replace_with_increase",
+    "employment_above_january": "retain_supported"
+  },
+  "nsa_rows_excluded": true
+}

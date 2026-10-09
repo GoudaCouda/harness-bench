@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_08 isolated verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "attempt_id",
+    "accepted",
+    "score",
+    "checks",
+    "initial_state_sha256",
+    "final_state_sha256",
+    "sandbox",
+    "runner_calls",
+    "derived_evidence"
+  ],
+  "properties": {
+    "schema_version": {"const": "case08_isolated_verifier_result_v2"},
+    "attempt_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "accepted": {"type": "boolean"},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "detail"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "initial_state_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "final_state_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "sandbox": {"type": "object"},
+    "runner_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["call_id", "status", "exit_code", "output_bytes", "output_sha256"],
+        "properties": {
+          "call_id": {"type": "string"},
+          "status": {"type": "string"},
+          "exit_code": {"type": ["integer", "null"]},
+          "output_bytes": {"type": "integer", "minimum": 0},
+          "output_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "derived_evidence": {"type": "object"}
+  }
+}

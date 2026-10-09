@@ -1,0 +1,66 @@
+{
+  "batch_id": "aerowake-0324",
+  "gate_clock_epoch": 1774342800,
+  "decisions": [
+    {
+      "index": 0,
+      "case_id": "c1",
+      "name": "wing",
+      "decision": "recorded",
+      "digest": "68df7e068cec6decbbb7a1246169b06a133e50959bc9594eadefe9e8d21060bb"
+    },
+    {
+      "index": 1,
+      "case_id": "c2",
+      "name": "wing",
+      "decision": "already_recorded",
+      "digest": "68df7e068cec6decbbb7a1246169b06a133e50959bc9594eadefe9e8d21060bb"
+    },
+    {
+      "index": 2,
+      "case_id": "c3",
+      "name": "wing",
+      "decision": "conflict",
+      "digest": "abd9913adcad4480c86e61a8c35ba3b1cbb188c9413edc5a6146bc5b191c293d"
+    },
+    {
+      "index": 3,
+      "case_id": "c4",
+      "name": "fuse",
+      "decision": "recorded",
+      "digest": "cf12eb3f5105f5729944a6567857aca57238bdf185c5b517a54c12081041b665"
+    },
+    {
+      "index": 4,
+      "case_id": "c5",
+      "name": "empty",
+      "decision": "malformed",
+      "digest": ""
+    },
+    {
+      "index": 5,
+      "case_id": "c1",
+      "name": "wing",
+      "decision": "malformed",
+      "digest": ""
+    },
+    {
+      "index": 6,
+      "case_id": "c7",
+      "name": "tail",
+      "decision": "recorded",
+      "digest": "6109342fe1db974f3bf55fa1f0d38b2d951bb185f3320922fd895a742b827278"
+    }
+  ],
+  "counts": {
+    "recorded": 3,
+    "already_recorded": 1,
+    "conflict": 1,
+    "malformed": 2
+  },
+  "recorded_names": [
+    "fuse",
+    "tail",
+    "wing"
+  ]
+}

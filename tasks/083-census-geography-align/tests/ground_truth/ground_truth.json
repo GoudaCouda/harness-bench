@@ -1,0 +1,83 @@
+{
+  "task_id": "083-census-geography-align",
+  "rows": [
+    {
+      "state": "06",
+      "county": "001",
+      "year": "2024",
+      "variable": "P001",
+      "estimate": "1000",
+      "moe": "30",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "001",
+      "year": "2025",
+      "variable": "P101",
+      "estimate": "1080",
+      "moe": "35",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "003",
+      "year": "2024",
+      "variable": "P001",
+      "estimate": "120",
+      "moe": "11",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "003",
+      "year": "2025",
+      "variable": "P101",
+      "estimate": "126",
+      "moe": "12",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "005",
+      "year": "2024",
+      "variable": "P001",
+      "estimate": "800",
+      "moe": "25",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "005",
+      "year": "2025",
+      "variable": "P101",
+      "estimate": "760",
+      "moe": "24",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "007",
+      "year": "2024",
+      "variable": "P001",
+      "estimate": "450",
+      "moe": "20",
+      "status": "observed"
+    },
+    {
+      "state": "06",
+      "county": "007",
+      "year": "2025",
+      "variable": "P101",
+      "estimate": "",
+      "moe": "",
+      "status": "suppressed"
+    }
+  ],
+  "changes": {
+    "001": [1000, 1080, 80, 8.0],
+    "003": [120, 126, 6, 5.0],
+    "005": [800, 760, -40, -5.0]
+  },
+  "incomplete_counties": ["007"]
+}

@@ -1,0 +1,50 @@
+{
+  "policy": {
+    "archive_clock_epoch": 1773824400,
+    "max_bytes": 10000,
+    "max_objects": 4
+  },
+  "artifacts": {
+    "ingest_receipt": {
+      "queue_id": "ingest-0318",
+      "archive_clock_epoch": 1773824400,
+      "counts": {
+        "ingested": 4,
+        "replayed": 1,
+        "conflict": 1,
+        "checksum_mismatch": 1,
+        "capacity_exceeded": 1,
+        "rejected": 0
+      },
+      "state": "ingested"
+    },
+    "verification": {
+      "controller": "archivectl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_object": {
+      "obj-d": "ingested",
+      "obj-e": "checksum_mismatch",
+      "obj-b": "conflict",
+      "obj-c": "replayed",
+      "obj-h": "ingested",
+      "obj-i": "ingested",
+      "obj-j": "ingested",
+      "obj-k": "capacity_exceeded"
+    },
+    "final_object_ids": [
+      "obj-a",
+      "obj-i",
+      "obj-j"
+    ],
+    "used_bytes": 5000,
+    "evicted": [
+      "obj-b",
+      "obj-c",
+      "obj-d",
+      "obj-h"
+    ]
+  }
+}

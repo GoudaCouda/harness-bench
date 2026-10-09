@@ -1,0 +1,8 @@
+{
+  "transaction_id": "PC-204",
+  "merchant": "Metro AV",
+  "currency": "USD",
+  "subtotal_cents": 26000,
+  "tax_cents": 0,
+  "total_cents": 26000
+}

@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "allocation_rows_match_plan": true,
+    "event_money_conservation": true,
+    "event_unit_conservation": true,
+    "journal_recovered_once": true,
+    "one_canonical_disposition_per_event": true,
+    "source_checkpoint_current": true,
+    "statement_money_conservation": true,
+    "statement_unit_conservation": true
+  },
+  "external_actions_executed": false,
+  "logical_ledger_sha256": "bf9faf27188f619d2ded72cbd49754a96517d90db6d6a33f1f1ef9c4e32260d8",
+  "recovery_id": "ROYREC-20260819-01",
+  "semantic_plan_sha256": "812283c88dacdabbcd7bc4a283ada1c8ce30f98b8d34904610bd8f0a20aadfd3",
+  "source_checkpoint": "7090dabd06308a0aeea01ad357d0acbfd82ad3050a468e164857fd86c977320e",
+  "statement_id": "RST-2026Q2-NORTH-01",
+  "status": "pass",
+  "tool": "royaltyctl/1"
+}

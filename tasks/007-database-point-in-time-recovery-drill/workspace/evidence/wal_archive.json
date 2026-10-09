@@ -1,0 +1,20 @@
+{
+  "system_identifier": "7419026813374501127",
+  "segments": [
+    {"name": "00000002000000000000000A", "timeline": 2, "start_lsn": "0/A000000", "end_lsn": "0/AFFFFFF", "readable": true},
+    {"name": "00000002000000000000000B", "timeline": 2, "start_lsn": "0/B000000", "end_lsn": "0/BFFFFFF", "readable": true},
+    {"name": "00000002000000000000000C", "timeline": 2, "start_lsn": "0/C000000", "end_lsn": "0/CFFFFFF", "readable": true},
+    {"name": "00000002000000000000000D", "timeline": 2, "start_lsn": "0/D000000", "end_lsn": "0/DFFFFFF", "readable": true},
+    {"name": "00000003000000000000000B", "timeline": 3, "start_lsn": "0/B000000", "end_lsn": "0/BFFFFFF", "readable": true},
+    {"name": "00000003000000000000000C", "timeline": 3, "start_lsn": "0/C000000", "end_lsn": "0/CFFFFFF", "readable": false}
+  ],
+  "restore_points": [
+    {"name": "before_batch_cleanup", "timeline": 2, "lsn": "0/C120000", "created_at": "2026-08-17T10:15:42Z", "event_id": "RP-880"}
+  ],
+  "transactions": [
+    {"event_id": "TX-877", "timeline": 2, "lsn": "0/C100000", "committed_at": "2026-08-17T10:15:41Z", "effect": "insert_invoice_INV-9912_amount_2190"},
+    {"event_id": "RP-880", "timeline": 2, "lsn": "0/C120000", "committed_at": "2026-08-17T10:15:42Z", "effect": "named_restore_point_before_batch_cleanup"},
+    {"event_id": "TX-881", "timeline": 2, "lsn": "0/C130000", "committed_at": "2026-08-17T10:15:42Z", "effect": "delete_active_customers_batch"},
+    {"event_id": "TX-882", "timeline": 2, "lsn": "0/C140000", "committed_at": "2026-08-17T10:15:43Z", "effect": "write_cleanup_audit_marker"}
+  ]
+}

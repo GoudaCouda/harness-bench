@@ -1,0 +1,104 @@
+{
+  "attempt_actions": [
+    {
+      "action": "preserve_denied",
+      "attempt_id": "ATT-DEN-402",
+      "protected_boundary": "denial_record_irreversible"
+    },
+    {
+      "action": "recover_partial_and_replace",
+      "attempt_id": "ATT-PART-502",
+      "protected_boundary": "local_partial"
+    },
+    {
+      "action": "preserve_submitted",
+      "attempt_id": "ATT-SUB-401",
+      "protected_boundary": "payer_submission_irreversible"
+    }
+  ],
+  "case_id": "PA-502",
+  "event_dispositions": [
+    {
+      "delivery_id": "DEL-001",
+      "disposition": "applied_current",
+      "event_id": "EV-ELIG-12",
+      "event_type": "eligibility",
+      "sequence": 12
+    },
+    {
+      "delivery_id": "DEL-002",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-ORD-04",
+      "event_type": "order",
+      "sequence": 4
+    },
+    {
+      "delivery_id": "DEL-003",
+      "disposition": "applied_current",
+      "event_id": "EV-ORD-05",
+      "event_type": "order",
+      "sequence": 5
+    },
+    {
+      "delivery_id": "DEL-004",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-ELIG-11",
+      "event_type": "eligibility",
+      "sequence": 11
+    },
+    {
+      "delivery_id": "DEL-005",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-ORD-05",
+      "event_type": "order",
+      "sequence": 5
+    },
+    {
+      "delivery_id": "DEL-006",
+      "disposition": "identity_mismatch_ignored",
+      "event_id": "EV-ELIG-X",
+      "event_type": "eligibility",
+      "sequence": 99
+    },
+    {
+      "delivery_id": "DEL-007",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-ELIG-12",
+      "event_type": "eligibility",
+      "sequence": 12
+    }
+  ],
+  "external_actions_executed": false,
+  "packet": {
+    "authorization_window": {
+      "from": "2026-09-15",
+      "to": "2026-10-14"
+    },
+    "diagnosis_code": "M54.16",
+    "documents": [
+      "DOC-CLN-22",
+      "DOC-ORD-77",
+      "DOC-PT-09"
+    ],
+    "evidence_refs": [
+      "evidence/documents.json#DOC-CLN-22",
+      "evidence/documents.json#DOC-ORD-77",
+      "evidence/documents.json#DOC-PT-09",
+      "evidence/events.jsonl#EV-ELIG-12",
+      "evidence/events.jsonl#EV-ORD-05",
+      "policy/prior_auth_policy.json#minimum_necessary",
+      "state/portal.db#cases:PA-502"
+    ],
+    "member_id": "MEM-8731",
+    "patient_id": "PAT-4102",
+    "payer_id": "SYN-PAYER-A",
+    "service_code": "72148",
+    "service_window": {
+      "from": "2026-09-15",
+      "to": "2026-09-30"
+    }
+  },
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "source_checkpoint": "ef9c34a3268e60e29e1eeb973dc9168cb4447de155a829889a578038b7b99ecb"
+}

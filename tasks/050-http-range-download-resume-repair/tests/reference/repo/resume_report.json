@@ -1,0 +1,4 @@
+[
+  {"case_id": "server-ignored-range", "result": {"action": "complete", "reason": "full_verified", "offset": 8}},
+  {"case_id": "valid-final-range", "result": {"action": "complete", "reason": "range_complete", "offset": 8}}
+]

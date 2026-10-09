@@ -1,0 +1,21 @@
+{
+  "task_id": "020-conflicting-source-resolution",
+  "expected_gate": {
+    "project": "kestrel",
+    "review_id": "KST-2025-0821",
+    "gate": "hold",
+    "effective_date": "2025-09-01",
+    "authorized_scope": ["east_market"],
+    "approved_budget_musd": 42.5,
+    "primary_operator": "Northstar Mobility",
+    "customer_cohort": 1240,
+    "blockers": ["legal_ct9_approval"],
+    "deferred_scope": ["airport_connectors"]
+  },
+  "expected_action_status": {
+    "announce-all-customers": "blocked",
+    "activate-east-market": "blocked",
+    "reserve-airport-fleet": "blocked",
+    "east-market-readiness": "ready"
+  }
+}

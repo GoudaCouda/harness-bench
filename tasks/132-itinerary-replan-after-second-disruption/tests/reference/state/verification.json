@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "event_delivery_deduplicated": true,
+    "interrupted_journal_recovered": true,
+    "inventory_snapshot_verified": true,
+    "local_only": true,
+    "minimum_change_then_cost_objective": true,
+    "object_projection_exact": true,
+    "semantic_plan_matches": true,
+    "single_committed_recovery": true,
+    "source_checkpoint_matches": true
+  },
+  "external_actions_executed": false,
+  "final_revision": 42,
+  "recovery_id": "TRIP-20261015-SECOND-01",
+  "schema_version": 1,
+  "semantic_db_digest": "2a63e3d9e889beed36e2e0df82671400c5d70d5fcb69593097023234cfbe0784",
+  "semantic_plan_digest": "5d43fa94289c63a65a87241336a782eb2dc43164c3b682cb5eb0e03f6a1300ee",
+  "source_checkpoint": "feff16b4db3b4bd61394c2f69226e72d4827cec65d2775d16f583ffb9eeef7bf",
+  "status": "pass"
+}

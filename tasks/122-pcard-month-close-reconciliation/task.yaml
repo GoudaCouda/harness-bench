@@ -1,0 +1,68 @@
+task_id: 122-pcard-month-close-reconciliation
+title: Recover an Interrupted Purchase-Card Month Close
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Finance
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- document_parsing
+- reconciliation
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- missing_evidence
+- split_purchase_graph
+- nonreimbursable_tax
+- prior_period_refund
+- interrupted_close
+- idempotent_replay
+required_artifacts:
+- pcard_close_state.db
+- reconciliation_plan.json
+- pcard_verification.json
+- pcard_stage_receipt.json
+- close_handoff.md
+task_family: finance-pcard-close-recovery
+variant: interrupted-close-with-receipt-lineage
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - GAO-PCARD
+  - IRS-RECEIPTS
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - reconciliation_plan.json
+  - pcard_verification.json
+  - pcard_stage_receipt.json
+  - close_handoff.md
+  allowed_modified:
+  - pcard_close_state.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

@@ -1,0 +1,245 @@
+{
+  "case_decisions": [
+    {
+      "case_id": "ICSR-2401",
+      "deadline_class": "immutable_accepted_boundary",
+      "disposition": "preserve_submitted_accepted",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2401-V3",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2401"
+      ],
+      "final_state": "submitted_accepted",
+      "final_version": 2,
+      "next_local_action": "none",
+      "prior_version": 2,
+      "queue": "expedited",
+      "selected_message_ids": []
+    },
+    {
+      "case_id": "ICSR-2402",
+      "deadline_class": "seven_calendar_days",
+      "disposition": "ready_expedited_review",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2402-V2",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2402-V3",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2402"
+      ],
+      "final_state": "local_review_ready",
+      "final_version": 3,
+      "next_local_action": "stage_local_review",
+      "prior_version": 1,
+      "queue": "expedited_review",
+      "selected_message_ids": [
+        "MSG-2402-V2",
+        "MSG-2402-V3"
+      ]
+    },
+    {
+      "case_id": "ICSR-2403",
+      "deadline_class": "none",
+      "disposition": "hold_nullification_incomplete",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2403-V2",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2403-V2B",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2403"
+      ],
+      "final_state": "held",
+      "final_version": 1,
+      "next_local_action": "obtain_nullification_reason",
+      "prior_version": 1,
+      "queue": "none",
+      "selected_message_ids": []
+    },
+    {
+      "case_id": "ICSR-2404",
+      "deadline_class": "seven_calendar_days",
+      "disposition": "ready_expedited_review",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2404-V1",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2404"
+      ],
+      "final_state": "local_review_ready",
+      "final_version": 1,
+      "next_local_action": "stage_local_review",
+      "prior_version": 0,
+      "queue": "expedited_review",
+      "selected_message_ids": [
+        "MSG-2404-V1"
+      ]
+    },
+    {
+      "case_id": "ICSR-2405",
+      "deadline_class": "none",
+      "disposition": "hold_identity_collision",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2405-V2",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2405"
+      ],
+      "final_state": "held",
+      "final_version": 1,
+      "next_local_action": "stage_local_review",
+      "prior_version": 1,
+      "queue": "none",
+      "selected_message_ids": []
+    },
+    {
+      "case_id": "ICSR-2406",
+      "deadline_class": "none",
+      "disposition": "duplicate_preserved",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2406-V1-DUP",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2406"
+      ],
+      "final_state": "draft",
+      "final_version": 1,
+      "next_local_action": "review_inbound",
+      "prior_version": 1,
+      "queue": "none",
+      "selected_message_ids": []
+    },
+    {
+      "case_id": "ICSR-2407",
+      "deadline_class": "routine_processing",
+      "disposition": "ready_routine_review",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2407-V2",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2407"
+      ],
+      "final_state": "local_review_ready",
+      "final_version": 2,
+      "next_local_action": "stage_local_review",
+      "prior_version": 1,
+      "queue": "routine_review",
+      "selected_message_ids": [
+        "MSG-2407-V2"
+      ]
+    },
+    {
+      "case_id": "ICSR-2408",
+      "deadline_class": "await_ack_boundary",
+      "disposition": "preserve_pending_ack",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2408-V2",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2408"
+      ],
+      "final_state": "submitted_pending_ack",
+      "final_version": 1,
+      "next_local_action": "await_ack",
+      "prior_version": 1,
+      "queue": "routine",
+      "selected_message_ids": []
+    }
+  ],
+  "delivery_dispositions": [
+    {
+      "case_id": "ICSR-2401",
+      "delivery_id": "DEL-01",
+      "disposition": "accepted_boundary_held",
+      "message_id": "MSG-2401-V3",
+      "version": 3
+    },
+    {
+      "case_id": "ICSR-2402",
+      "delivery_id": "DEL-02",
+      "disposition": "accepted_local_projection",
+      "message_id": "MSG-2402-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2402",
+      "delivery_id": "DEL-02-RETRY",
+      "disposition": "duplicate_delivery_ignored",
+      "message_id": "MSG-2402-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2403",
+      "delivery_id": "DEL-03",
+      "disposition": "nullification_incomplete_held",
+      "message_id": "MSG-2403-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2404",
+      "delivery_id": "DEL-04",
+      "disposition": "accepted_local_projection",
+      "message_id": "MSG-2404-V1",
+      "version": 1
+    },
+    {
+      "case_id": "ICSR-2405",
+      "delivery_id": "DEL-05",
+      "disposition": "identity_collision_held",
+      "message_id": "MSG-2405-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2406",
+      "delivery_id": "DEL-06",
+      "disposition": "duplicate_content_ignored",
+      "message_id": "MSG-2406-V1-DUP",
+      "version": 1
+    },
+    {
+      "case_id": "ICSR-2407",
+      "delivery_id": "DEL-07",
+      "disposition": "accepted_local_projection",
+      "message_id": "MSG-2407-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2408",
+      "delivery_id": "DEL-08",
+      "disposition": "pending_ack_boundary_held",
+      "message_id": "MSG-2408-V2",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2402",
+      "delivery_id": "DEL-09",
+      "disposition": "accepted_local_projection",
+      "message_id": "MSG-2402-V3",
+      "version": 3
+    },
+    {
+      "case_id": "ICSR-9999",
+      "delivery_id": "DEL-10",
+      "disposition": "unknown_case_ignored",
+      "message_id": "MSG-UNKNOWN",
+      "version": 2
+    },
+    {
+      "case_id": "ICSR-2403",
+      "delivery_id": "DEL-11",
+      "disposition": "terminology_version_held",
+      "message_id": "MSG-2403-V2B",
+      "version": 2
+    }
+  ],
+  "external_transmissions_executed": false,
+  "queue_totals": {
+    "expedited_review": 2,
+    "held": 2,
+    "preserved": 3,
+    "routine_review": 1
+  },
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "schema_version": 1,
+  "source_checkpoint": "86c4d6a2485037b57155cceebea70e4c03dfbc4afe35c156001531b95cd3b862"
+}

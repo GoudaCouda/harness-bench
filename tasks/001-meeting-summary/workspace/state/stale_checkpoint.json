@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "worker_revision": 18,
+  "zones": [
+    {"zone_name":"alpha.example","phase":"ksk_parent_propagated","queue_written":true},
+    {"zone_name":"bravo.example","phase":"ksk_double_sign","queue_written":false},
+    {"zone_name":"charlie.example","phase":"zsk_prepublish","queue_written":false},
+    {"zone_name":"delta.example","phase":"zsk_active","queue_written":true},
+    {"zone_name":"echo.example","phase":"zsk_active","queue_written":true},
+    {"zone_name":"foxtrot.example","phase":"not_in_rollover","queue_written":false},
+    {"zone_name":"golf.example","phase":"ksk_parent_propagated","queue_written":true}
+  ]
+}

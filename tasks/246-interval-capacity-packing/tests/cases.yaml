@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 246-interval-capacity-packing
+pass_threshold: 0.8
+cases:
+- id: machine_assignment
+  title: Placed jobs match earliest-deadline first-fit
+  description: assignment.json assignments equal the independent packing kernel.
+  weight: 0.5
+  core: true
+- id: unplaced_jobs
+  title: Jobs that never fit remain unplaced
+  description: The unplaced list matches the kernel, including identifier order.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain order, overlap, and residual risk
+  description: PACKING_NOTES.md covers placement order, capacity, unplaced jobs, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected job and machine inputs remain unchanged
+  description: JSON inputs stay byte-identical and the workspace has no linked or special artifacts.
+  weight: 0.0
+  core: false
+  gate: true

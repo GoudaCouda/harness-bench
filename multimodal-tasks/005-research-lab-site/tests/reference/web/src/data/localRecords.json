@@ -1,0 +1,74 @@
+[
+  {
+    "id": "LAB-A11",
+    "name": "Wetland Sensors",
+    "category": "field",
+    "owner": "Dr. Vale",
+    "status": "clear",
+    "primary": 6,
+    "secondary": 18
+  },
+  {
+    "id": "LAB-B24",
+    "name": "Urban Heat Maps",
+    "category": "climate",
+    "owner": "Dr. Hsu",
+    "status": "watch",
+    "primary": 4,
+    "secondary": 35
+  },
+  {
+    "id": "LAB-C31",
+    "name": "Open Soil Models",
+    "category": "modeling",
+    "owner": "Dr. Okafor",
+    "status": "review",
+    "primary": 8,
+    "secondary": 42
+  },
+  {
+    "id": "LAB-D09",
+    "name": "River DNA Atlas",
+    "category": "bioinformatics",
+    "owner": "Dr. Marin",
+    "status": "watch",
+    "primary": 3,
+    "secondary": 27
+  },
+  {
+    "id": "LAB-A11-R1",
+    "name": "Wetland Sensors follow-up",
+    "category": "climate",
+    "owner": "Dr. Okafor",
+    "status": "clear",
+    "primary": 20,
+    "secondary": 24
+  },
+  {
+    "id": "LAB-B24-R2",
+    "name": "Urban Heat Maps follow-up",
+    "category": "modeling",
+    "owner": "Dr. Marin",
+    "status": "watch",
+    "primary": 21,
+    "secondary": 42
+  },
+  {
+    "id": "LAB-C31-R3",
+    "name": "Open Soil Models follow-up",
+    "category": "bioinformatics",
+    "owner": "Dr. Vale",
+    "status": "review",
+    "primary": 28,
+    "secondary": 50
+  },
+  {
+    "id": "LAB-D09-R4",
+    "name": "River DNA Atlas follow-up",
+    "category": "field",
+    "owner": "Dr. Hsu",
+    "status": "watch",
+    "primary": 26,
+    "secondary": 36
+  }
+]

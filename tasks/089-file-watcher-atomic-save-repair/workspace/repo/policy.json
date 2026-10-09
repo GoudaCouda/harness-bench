@@ -1,0 +1,6 @@
+{
+  "roots": ["config", "rules"],
+  "extensions": [".json", ".yaml"],
+  "temporary_prefixes": ["."],
+  "temporary_suffixes": ["~", ".tmp", ".swp"]
+}

@@ -1,0 +1,9 @@
+{
+  "expr": "0 6 * * 1",
+  "after": {
+    "month": 1,
+    "day": 1,
+    "hour": 0,
+    "minute": 0
+  }
+}

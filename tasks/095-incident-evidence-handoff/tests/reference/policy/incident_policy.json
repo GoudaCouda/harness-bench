@@ -1,0 +1,40 @@
+{
+  "acquisition_actions": [
+    "preserve_offline",
+    "quarantine_hash_mismatch",
+    "quarantine_chain_break"
+  ],
+  "acquisition_phase_order": [
+    "volatile",
+    "identity",
+    "dual_use_context",
+    "disk"
+  ],
+  "event_dispositions": [
+    "applied_current",
+    "superseded_by_newer_sequence",
+    "duplicate_delivery_ignored",
+    "identity_mismatch_ignored",
+    "hash_mismatch_quarantined"
+  ],
+  "incident_id": "INC-8842",
+  "recovery_id": "IER-20260819-01",
+  "rules": {
+    "deduplication": "first delivery of an event_id is authoritative; later deliveries are duplicates",
+    "dual_use": "signed dual-use tooling with a valid ticket but an operator mismatch remains ambiguous",
+    "evidence": "verify blob sha256 and predecessor custody link before preservation",
+    "external_boundary": "offline staging only; never isolate, disable, delete, contact, or clean an external system",
+    "ordering": "after identity filtering and de-duplication, highest sequence per stream is current",
+    "recovery": "restore interrupted before-images before one atomic local projection",
+    "scope": "contain only the evidenced host or session; a session signal cannot disable its account"
+  },
+  "schema_version": 1,
+  "scope_actions": [
+    "preserve_observed_isolation",
+    "stage_session_disable",
+    "preserve_account_scope",
+    "analyst_review_no_containment",
+    "observe_no_containment"
+  ],
+  "source_revision": 19
+}

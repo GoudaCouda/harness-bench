@@ -1,0 +1,52 @@
+task_id: 068-release-approval-gate-plan
+title: Release Approval Gate with Blockers and Pending Actions
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- state_management
+stressors:
+- high_stakes_rules
+required_artifacts:
+- approval_packet.json
+- audit_trail.md
+- blockers.csv
+- pending_actions.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-068
+task_family: 068-release-approval-gate-plan
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - approval_packet.json
+  - audit_trail.md
+  - blockers.csv
+  - pending_actions.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

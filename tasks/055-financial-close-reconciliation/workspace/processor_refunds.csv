@@ -1,0 +1,4 @@
+refund_id,invoice_id,refund_date,currency,amount
+R002,INV002,2026-03-15,EUR,50.00
+R006,INV006,2026-03-21,USD,30.00
+R404,INV404,2026-03-16,USD,10.00

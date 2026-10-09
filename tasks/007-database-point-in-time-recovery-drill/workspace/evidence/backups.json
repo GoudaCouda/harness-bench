@@ -1,0 +1,8 @@
+{
+  "system_identifier": "7419026813374501127",
+  "backups": [
+    {"backup_id": "base-t2-0840", "timeline": 2, "started_at": "2026-08-17T08:40:00Z", "ended_at": "2026-08-17T08:47:00Z", "start_lsn": "0/8000000", "end_lsn": "0/8300000", "system_identifier": "7419026813374501127", "manifest_status": "checksum_mismatch", "file_status": "failed", "wal_manifest_status": "not_checked"},
+    {"backup_id": "base-t2-0920", "timeline": 2, "started_at": "2026-08-17T09:20:00Z", "ended_at": "2026-08-17T09:27:00Z", "start_lsn": "0/A000000", "end_lsn": "0/A300000", "system_identifier": "7419026813374501127", "manifest_status": "verified", "file_status": "verified", "wal_manifest_status": "verified", "manifest_sha256": "98d7218175f85044facdc065059f7911d881042805334a196ea2d52eb214e181"},
+    {"backup_id": "base-t3-1005", "timeline": 3, "started_at": "2026-08-17T10:05:00Z", "ended_at": "2026-08-17T10:11:00Z", "start_lsn": "0/B500000", "end_lsn": "0/BA00000", "system_identifier": "7419026813374501127", "manifest_status": "verified", "file_status": "verified", "wal_manifest_status": "verified", "manifest_sha256": "30540d80ed5371e5a1a75efad19ed4e4e1838e6259c3635491b26bf86ff738c1"}
+  ]
+}

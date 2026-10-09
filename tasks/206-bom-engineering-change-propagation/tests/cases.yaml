@@ -1,0 +1,32 @@
+schema_version: 2
+task_id: 206-bom-engineering-change-propagation
+pass_threshold: 0.8
+cases:
+- id: where_used_configuration_baseline
+  title: Released where-used closure becomes exact review baselines
+  description: The direct component and every multi-level parent receive exact target revisions, child links, quantities, paths, substitutes, and evidence without replacing released history.
+  weight: 0.27
+  core: true
+- id: effectivity_kit_and_as_built_boundaries
+  title: Serial, lot, kit, substitute, and as-built boundaries are respected
+  description: All protected work orders receive exact evidence-bound dispositions while physical and historical boundaries remain intact.
+  weight: 0.27
+  core: true
+- id: interrupted_journal_and_atomic_sqlite_state
+  title: Partial propagation is restored into one atomic SQLite recovery
+  description: Both interrupted mutations are restored, exact baseline and work-order rows are committed once, and recovery identity binds the final logical store.
+  weight: 0.26
+  core: true
+- id: verification_stage_and_semantic_replay
+  title: Verification, internal staging, and semantic replay bind one state
+  description: Preview, verification, internal receipt, and replay bind source, plan and database hashes while equivalent representation is byte-stable.
+  weight: 0.12
+- id: engineering_handoff
+  title: Configuration and planning reviewers receive a complete handoff
+  description: The handoff explains where-used propagation, effectivity, every work order, substitutions, crash restoration, validation, replay, and action boundaries.
+  weight: 0.08
+- id: source_and_external_safety
+  title: Protected sources and external-action boundaries hold
+  description: Inputs and controller are unchanged and no release, physical re-kit, inventory movement, shop-floor instruction, or supplier order is represented as executed.
+  weight: 0.0
+  gate: true

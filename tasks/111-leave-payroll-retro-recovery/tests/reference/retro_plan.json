@@ -1,0 +1,104 @@
+{
+  "adjustments": [
+    {
+      "adjustment_id": "RA-9001-ADD-SICK-R2",
+      "hours_delta": 4.0,
+      "pay_code": "SICK",
+      "request_id": "LR-9001",
+      "source_line_id": "PL-1001",
+      "source_revision": 2,
+      "target_period_id": "PP-2026-08-A"
+    },
+    {
+      "adjustment_id": "RA-9001-REV-PTO-R2",
+      "hours_delta": -8.0,
+      "pay_code": "PTO",
+      "request_id": "LR-9001",
+      "source_line_id": "PL-1001",
+      "source_revision": 2,
+      "target_period_id": "PP-2026-08-A"
+    },
+    {
+      "adjustment_id": "RA-9002-ADD-PFL-R3",
+      "hours_delta": 8.0,
+      "pay_code": "PFL",
+      "request_id": "LR-9002",
+      "source_line_id": "PL-1002",
+      "source_revision": 3,
+      "target_period_id": "PP-2026-08-A"
+    },
+    {
+      "adjustment_id": "RA-9002-REV-PTO-R3",
+      "hours_delta": -8.0,
+      "pay_code": "PTO",
+      "request_id": "LR-9002",
+      "source_line_id": "PL-1002",
+      "source_revision": 3,
+      "target_period_id": "PP-2026-08-A"
+    }
+  ],
+  "approval_boundary": "staged_pending_payroll_approval",
+  "batch_id": "RB-2026-08-A",
+  "dispositions": [
+    {
+      "disposition": "stage_retro",
+      "evidence": [
+        "evidence/late_approvals.json#APR-9001-R2",
+        "evidence/approval_keys.json#K-HR-7",
+        "evidence/employees.json#E-101",
+        "policy/retro_policy.json#rule_order",
+        "state/hris_payroll.db#payroll_lines/PL-1001"
+      ],
+      "reason_code": "authoritative_revision_after_paid_lock",
+      "request_id": "LR-9001",
+      "selected_approval_id": "APR-9001-R2",
+      "selected_revision": 2
+    },
+    {
+      "disposition": "stage_retro",
+      "evidence": [
+        "evidence/late_approvals.json#APR-9002-R3",
+        "evidence/approval_keys.json#K-HR-7",
+        "evidence/employees.json#E-202",
+        "policy/retro_policy.json#rule_order",
+        "state/hris_payroll.db#payroll_lines/PL-1002"
+      ],
+      "reason_code": "authoritative_revision_after_paid_lock",
+      "request_id": "LR-9002",
+      "selected_approval_id": "APR-9002-R3",
+      "selected_revision": 3
+    },
+    {
+      "disposition": "held_authority",
+      "evidence": [
+        "evidence/late_approvals.json#APR-9003-R2",
+        "evidence/approval_keys.json#K-MGR-3",
+        "evidence/employees.json#E-303",
+        "policy/retro_policy.json#rule_order"
+      ],
+      "reason_code": "unverified_or_unauthorized_signer",
+      "request_id": "LR-9003",
+      "selected_approval_id": "APR-9003-R2",
+      "selected_revision": 2
+    },
+    {
+      "disposition": "held_eligibility",
+      "evidence": [
+        "evidence/late_approvals.json#APR-9004-R2",
+        "evidence/approval_keys.json#K-HR-7",
+        "evidence/employees.json#E-404",
+        "policy/retro_policy.json#rule_order"
+      ],
+      "reason_code": "ineligible_on_local_start_date",
+      "request_id": "LR-9004",
+      "selected_approval_id": "APR-9004-R2",
+      "selected_revision": 2
+    }
+  ],
+  "external_actions_executed": false,
+  "frozen_source_action": "preserve_paid_locked",
+  "schema_version": 1,
+  "source_period_id": "PP-2026-07-A",
+  "strategy": "authoritative_revision_retro",
+  "target_period_id": "PP-2026-08-A"
+}

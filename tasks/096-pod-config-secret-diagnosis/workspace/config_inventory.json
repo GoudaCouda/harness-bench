@@ -1,0 +1,1 @@
+{"config_maps":[{"name":"invoice-api-config-v1","state":"retired","data":{"HTTP_PORT":"8080"},"generation":11},{"name":"invoice-api-config-v2","state":"current","data":{"HTTP_PORT":"9000"},"generation":12}],"evidence_id":"CFG-212"}

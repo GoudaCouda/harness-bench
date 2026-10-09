@@ -1,0 +1,91 @@
+task_id: 201-secret-lineage-containment-recovery
+title: Quarantine a propagated synthetic credential and recover the release graph
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- sqlite
+- repository_history
+- artifact_lineage
+- incident_response
+- local_state_machine
+harness_demands:
+- context_management
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- partial_redaction
+- propagated_secret
+- conflicting_evidence
+- version_precedence
+- permission_boundary
+- replay_safety
+required_artifacts:
+- exposure_scan.json
+- containment_plan.json
+- sanitized_repository.db
+- distribution_state.json
+- revocation_registry.jsonl
+- quarantine_events.jsonl
+- containment_state.json
+- replacement_credential.json
+- recovery_receipt.json
+- incident_handoff.md
+task_family: cybersecurity-secret-lineage-containment
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - GITHUB-SENSITIVE-DATA-REMOVAL
+  - OWASP-SECRETS-INCIDENT-RESPONSE
+  - GITLAB-ARTIFACT-DELETE
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - exposure_scan.json
+  - containment_plan.json
+  - sanitized_repository.db
+  - containment_state.json
+  - replacement_credential.json
+  - recovery_receipt.json
+  - incident_handoff.md
+  allowed_modified:
+  - distribution_state.json
+  - revocation_registry.jsonl
+  - quarantine_events.jsonl
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: incident_handoff
+  max_fallback_weight: 0.06
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

@@ -1,0 +1,10 @@
+{
+  "account_last4": "9900",
+  "amount_cents": 200000,
+  "closing_id": "ESC-107",
+  "document_id": "DOC-INS-107-ESCROW",
+  "instruction_id": "INS-107-ESCROW",
+  "payee_id": "P-ESCROW",
+  "schema_version": 1,
+  "signed": true
+}

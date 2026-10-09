@@ -1,0 +1,29 @@
+{
+  "decisions": [
+    {
+      "action": "bypass",
+      "id": "cidr",
+      "matched": "10.0.0.0/8",
+      "reason": "entry_match"
+    },
+    {
+      "action": "bypass",
+      "id": "domain",
+      "matched": "example.com",
+      "reason": "entry_match"
+    },
+    {
+      "action": "bypass",
+      "id": "port",
+      "matched": "db.internal:5432",
+      "reason": "entry_match"
+    },
+    {
+      "action": "proxy",
+      "id": "public",
+      "matched": null,
+      "reason": "no_match"
+    }
+  ],
+  "source": "configured"
+}

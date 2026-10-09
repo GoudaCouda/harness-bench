@@ -1,0 +1,15 @@
+{
+  "blocked": false,
+  "delete_chunks": [
+    "c3"
+  ],
+  "keep_chunks": [
+    "c1",
+    "c2"
+  ],
+  "missing": [],
+  "reachable_snapshots": [
+    "s0",
+    "s1"
+  ]
+}

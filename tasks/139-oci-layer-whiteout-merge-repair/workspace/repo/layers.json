@@ -1,0 +1,18 @@
+[
+  {"digest":"sha256:base","entries":[
+    {"path":"etc","kind":"dir","digest":null,"target":null,"mode":493},
+    {"path":"etc/app","kind":"dir","digest":null,"target":null,"mode":493},
+    {"path":"etc/app/old.conf","kind":"file","digest":"sha256:old","target":null,"mode":420},
+    {"path":"etc/app/keep.conf","kind":"file","digest":"sha256:keep","target":null,"mode":420},
+    {"path":"opt/tool","kind":"file","digest":"sha256:tool1","target":null,"mode":493},
+    {"path":"var/log/app.log","kind":"file","digest":"sha256:log","target":null,"mode":420}
+  ]},
+  {"digest":"sha256:update","entries":[
+    {"path":"etc/app/new.conf","kind":"file","digest":"sha256:new","target":null,"mode":420},
+    {"path":"etc/app/.wh..wh..opq","kind":"file","digest":"sha256:empty","target":null,"mode":0},
+    {"path":"opt/.wh.tool","kind":"file","digest":"sha256:empty","target":null,"mode":0},
+    {"path":"opt/tool/bin/run","kind":"file","digest":"sha256:run","target":null,"mode":493},
+    {"path":"usr/local/current","kind":"symlink","digest":null,"target":"../releases/v2","mode":511},
+    {"path":"usr/local/releases/v2/app","kind":"file","digest":"sha256:app2","target":null,"mode":493}
+  ]}
+]

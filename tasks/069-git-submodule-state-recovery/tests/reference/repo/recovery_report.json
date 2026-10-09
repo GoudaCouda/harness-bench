@@ -1,0 +1,5 @@
+[
+  {"case_id":"mixed-top-level","result":[{"path":"vendor/api","status":"planned","action":"checkout_recorded","target_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","reason":"checked_out_mismatch"},{"path":"vendor/ui","status":"blocked","action":"preserve_local_changes","target_sha":null,"reason":"dirty_or_untracked"}]},
+  {"case_id":"uninitialized","result":[{"path":"third_party/lib","status":"planned","action":"init_checkout_recorded","target_sha":"1111111111111111111111111111111111111111","reason":"not_initialized"}]},
+  {"case_id":"recursive-missing","result":[{"path":"vendor/parent","status":"verified","action":"verify","target_sha":null,"reason":"recorded_commit_checked_out"},{"path":"vendor/parent/nested","status":"blocked","action":"obtain_recorded_object","target_sha":null,"reason":"recorded_object_missing"}]}
+]

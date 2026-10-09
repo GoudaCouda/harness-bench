@@ -1,0 +1,9 @@
+schema_version: 2
+task_id: 135-log-rotation-checkpoint-recovery
+pass_threshold: 0.8
+cases:
+- {id: recovered_delta, title: Only unprocessed records are recovered in physical order, description: The delta contains r405 and r406 without duplicates or prior records., weight: 0.35, core: true}
+- {id: durable_state, title: Ledger and checkpoint converge at active-file EOF, description: All unique IDs are ledgered and device inode offset and last ID match the active log., weight: 0.25, core: true}
+- {id: no_op_replay, title: A second recovery is a no-op, description: Replaying a copied final state produces an empty delta and unchanged durable state., weight: 0.2, core: true}
+- {id: engineering_handoff, title: Recovery is handed off with evidence, description: Another operator can understand identity offset ledger rotation and verification., weight: 0.2, core: false}
+- {id: source_and_action_safety, title: Logs and recovery boundaries remain intact, description: Immutable evidence and utility files are unchanged., weight: 0.0, gate: true}

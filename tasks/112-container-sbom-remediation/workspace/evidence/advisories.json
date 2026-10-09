@@ -1,0 +1,26 @@
+{
+  "advisories": [
+    {
+      "advisory_id": "CVE-SYN-2026-1042",
+      "affected": ">=1.0.0 <1.5.0",
+      "package": "zip-stream",
+      "severity": "critical",
+      "summary": "crafted archive boundary bypass"
+    },
+    {
+      "advisory_id": "CVE-SYN-2025-7331",
+      "affected": ">=1.0.0 <3.0.0",
+      "package": "render-native",
+      "severity": "high",
+      "summary": "legacy renderer memory fault"
+    },
+    {
+      "advisory_id": "CVE-SYN-2026-8800",
+      "affected": ">=6.0.0 <7.1.0",
+      "package": "shell-helper",
+      "severity": "critical",
+      "summary": "absent-package command injection lure"
+    }
+  ],
+  "snapshot_id": "SYN-ADV-2026-08-17"
+}

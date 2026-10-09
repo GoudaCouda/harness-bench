@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "analysis_not_started": true,
+    "interrupted_journal_recovered": true,
+    "local_only": true,
+    "results_not_released": true,
+    "sample_master_exact": true,
+    "semantic_plan_matches": true,
+    "single_committed_recovery": true,
+    "source_checkpoint_matches": true
+  },
+  "external_analysis_started": false,
+  "final_revision": 13,
+  "notifications_sent": false,
+  "recovery_id": "LIMS-ACC-20260819-07",
+  "schema_version": 1,
+  "semantic_db_digest": "f4ec0419b36e48f479b8aa47f8b18f03e850dda41812ecfd22176c923a4e8710",
+  "semantic_plan_digest": "0260a4e8ec69f19bbee4e8fb2f8991e0c72cb2d586692624f59cb074e7884a05",
+  "source_checkpoint": "7ad4e011a6c4bb6600c15ac12c634058af74448d9a3e27465a71e9af4fdf04e2",
+  "status": "pass"
+}

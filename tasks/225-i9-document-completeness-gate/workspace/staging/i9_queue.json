@@ -1,0 +1,69 @@
+{
+  "stream_id": "harborwatch-225",
+  "gate_clock_epoch": 1775432000,
+  "events": [
+    {
+      "case_id": "c1",
+      "employee_id": "e-a",
+      "list_a": true,
+      "list_b": false,
+      "list_c": false,
+      "expired": false,
+      "note": "ok"
+    },
+    {
+      "case_id": "c2",
+      "employee_id": "e-a",
+      "list_a": false,
+      "list_b": true,
+      "list_c": false,
+      "expired": false,
+      "note": "ssn-fragment-0044"
+    },
+    {
+      "case_id": "c3",
+      "employee_id": "e-b",
+      "list_a": true,
+      "list_b": false,
+      "list_c": false,
+      "expired": true,
+      "note": "ok"
+    },
+    {
+      "case_id": "c1",
+      "employee_id": "e-a",
+      "list_a": true,
+      "list_b": false,
+      "list_c": false,
+      "expired": false,
+      "note": "dup"
+    },
+    {
+      "case_id": "c5",
+      "employee_id": "",
+      "list_a": true,
+      "list_b": false,
+      "list_c": false,
+      "expired": false,
+      "note": "ok"
+    },
+    {
+      "case_id": "c6",
+      "employee_id": "e-c",
+      "list_a": false,
+      "list_b": true,
+      "list_c": true,
+      "expired": false,
+      "note": "ok"
+    },
+    {
+      "case_id": "c7",
+      "employee_id": "e-c",
+      "list_a": false,
+      "list_b": false,
+      "list_c": true,
+      "expired": false,
+      "note": "ok"
+    }
+  ]
+}

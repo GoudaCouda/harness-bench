@@ -1,0 +1,246 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 80,
+        "warn_age": 900,
+        "worker_slots": 2
+      },
+      "requests": [
+        {
+          "age": 900,
+          "database": "d",
+          "id": "warn",
+          "locked": false,
+          "size_mb": 1
+        },
+        {
+          "age": 1100,
+          "database": "d",
+          "id": "em",
+          "locked": false,
+          "size_mb": 1
+        }
+      ]
+    },
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 50,
+        "warn_age": 900,
+        "worker_slots": 1
+      },
+      "requests": [
+        {
+          "age": 1200,
+          "database": "d",
+          "id": "large",
+          "locked": false,
+          "size_mb": 100
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 80,
+        "warn_age": 900,
+        "worker_slots": 2
+      },
+      "requests": [
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        },
+        {
+          "age": 1200,
+          "database": "shop",
+          "id": "audit",
+          "locked": false,
+          "size_mb": 70
+        },
+        {
+          "age": 1300,
+          "database": "core",
+          "id": "locked",
+          "locked": true,
+          "size_mb": 10
+        },
+        {
+          "age": 100,
+          "database": "core",
+          "id": "fresh",
+          "locked": false,
+          "size_mb": 5
+        },
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        }
+      ]
+    },
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 80,
+        "warn_age": 1200,
+        "worker_slots": 2
+      },
+      "requests": [
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        },
+        {
+          "age": 1200,
+          "database": "shop",
+          "id": "audit",
+          "locked": false,
+          "size_mb": 70
+        },
+        {
+          "age": 1300,
+          "database": "core",
+          "id": "locked",
+          "locked": true,
+          "size_mb": 10
+        },
+        {
+          "age": 100,
+          "database": "core",
+          "id": "fresh",
+          "locked": false,
+          "size_mb": 5
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 80,
+        "warn_age": 900,
+        "worker_slots": 2
+      },
+      "requests": [
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        },
+        {
+          "age": 1200,
+          "database": "shop",
+          "id": "audit",
+          "locked": false,
+          "size_mb": 70
+        },
+        {
+          "age": 1300,
+          "database": "core",
+          "id": "locked",
+          "locked": true,
+          "size_mb": 10
+        },
+        {
+          "age": 100,
+          "database": "core",
+          "id": "fresh",
+          "locked": false,
+          "size_mb": 5
+        }
+      ]
+    },
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 80,
+        "warn_age": 900,
+        "worker_slots": 1
+      },
+      "requests": [
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        },
+        {
+          "age": 1200,
+          "database": "shop",
+          "id": "audit",
+          "locked": false,
+          "size_mb": 70
+        },
+        {
+          "age": 1300,
+          "database": "core",
+          "id": "locked",
+          "locked": true,
+          "size_mb": 10
+        },
+        {
+          "age": 100,
+          "database": "core",
+          "id": "fresh",
+          "locked": false,
+          "size_mb": 5
+        }
+      ]
+    },
+    {
+      "policy": {
+        "emergency_age": 1100,
+        "io_budget_mb": 30,
+        "warn_age": 900,
+        "worker_slots": 2
+      },
+      "requests": [
+        {
+          "age": 950,
+          "database": "shop",
+          "id": "orders",
+          "locked": false,
+          "size_mb": 30
+        },
+        {
+          "age": 1200,
+          "database": "shop",
+          "id": "audit",
+          "locked": false,
+          "size_mb": 70
+        },
+        {
+          "age": 1300,
+          "database": "core",
+          "id": "locked",
+          "locked": true,
+          "size_mb": 10
+        },
+        {
+          "age": 100,
+          "database": "core",
+          "id": "fresh",
+          "locked": false,
+          "size_mb": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "deposit_id": "RP-2026-17",
+  "paper_freeze": "freeze-2026-04-18",
+  "raw_data_snapshot": "freeze-2026-05-02",
+  "analysis_code_snapshot": "freeze-2026-04-18",
+  "results_snapshot": "freeze-2026-04-18",
+  "expected_python": "3.11",
+  "expected_main_rows": 1681,
+  "deposited_raw_rows": 20,
+  "subgroup_artifact": "results/subgroup_ablation.csv"
+}

@@ -1,0 +1,84 @@
+task_id: 123-entity-renewal-fallback-verification
+title: Recover a vendor-master renewal after a truncated registry export
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- data_recovery
+- vendor_master
+- compliance
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- truncated_primary_export
+- signed_fallback
+- version_and_effective_date_precedence
+- interrupted_sqlite_journal
+- data_minimization
+- semantic_replay_identity
+- irreversible_action_boundary
+required_artifacts:
+- renewal_plan.json
+- .renewal_preview.json
+- state/vendor_master.db
+- state/verification.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- renewal_handoff.md
+task_family: vendor-master-renewal-recovery
+variant: signed-registry-fallback-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SQLITE-TRANSACTIONS
+  - GLEIF-DATA-QUALITY
+  - FATF-BENEFICIAL-OWNERSHIP
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - renewal_plan.json
+  - .renewal_preview.json
+  - state/verification.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - renewal_handoff.md
+  allowed_modified:
+  - state/vendor_master.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: renewal_handoff
+  max_fallback_weight: 0.08
+schema_version: 2

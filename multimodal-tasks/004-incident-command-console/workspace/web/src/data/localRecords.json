@@ -1,0 +1,56 @@
+[
+  {
+    "id": "INC-4081",
+    "name": "Checkout latency",
+    "category": "payments",
+    "owner": "SRE Blue",
+    "status": "review",
+    "primary": 92,
+    "secondary": 47
+  },
+  {
+    "id": "INC-4084",
+    "name": "Search error rate",
+    "category": "search",
+    "owner": "SRE Green",
+    "status": "watch",
+    "primary": 66,
+    "secondary": 28
+  },
+  {
+    "id": "INC-4087",
+    "name": "Webhook backlog",
+    "category": "integrations",
+    "owner": "SRE Gold",
+    "status": "clear",
+    "primary": 39,
+    "secondary": 11
+  },
+  {
+    "id": "INC-4090",
+    "name": "CDN purge delay",
+    "category": "edge",
+    "owner": "SRE Red",
+    "status": "watch",
+    "primary": 71,
+    "secondary": 33
+  },
+  {
+    "id": "INC-4081-R1",
+    "name": "Checkout latency follow-up",
+    "category": "search",
+    "owner": "SRE Gold",
+    "status": "clear",
+    "primary": 106,
+    "secondary": 53
+  },
+  {
+    "id": "INC-4084-R2",
+    "name": "Search error rate follow-up",
+    "category": "integrations",
+    "owner": "SRE Red",
+    "status": "watch",
+    "primary": 83,
+    "secondary": 35
+  }
+]

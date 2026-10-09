@@ -1,0 +1,177 @@
+{
+    "schema_version": 1,
+    "recovery_id": "CONT-REC-2026-08-14",
+    "source_checkpoint": "997ef2987a116b58ae937cedbffb7fc66decf170ba1dd4bc037a355f61a5fb3c",
+    "as_of": "2026-08-14T16:00:00Z",
+    "case_decisions": [
+        {
+            "case_id": "COV-7207",
+            "baseline_state": "eligible_unsent",
+            "disposition": "escalate_deadline_review",
+            "notice_version": 1,
+            "address_version": 1,
+            "beneficiary_keys": [
+                "P-7207-E"
+            ],
+            "delivery_evidence": "none",
+            "deadline_state": "expired",
+            "next_local_action": "stage_compliance_review",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7207",
+                "state/continuance.db#cases:COV-7207",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/eligibility_events.jsonl#event_id:EV-7207-QUAL"
+            ]
+        },
+        {
+            "case_id": "COV-7206",
+            "baseline_state": "drafted",
+            "disposition": "hold_identity_conflict",
+            "notice_version": 1,
+            "address_version": 1,
+            "beneficiary_keys": [
+                "P-7206-E"
+            ],
+            "delivery_evidence": "none",
+            "deadline_state": "open",
+            "next_local_action": "resolve_identity",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7206",
+                "state/continuance.db#notices:NOTICE-7206",
+                "state/continuance.db#cases:COV-7206",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/eligibility_events.jsonl#event_id:EV-7206-COLLIDE"
+            ]
+        },
+        {
+            "case_id": "COV-7205",
+            "baseline_state": "elected",
+            "disposition": "preserve_post_notice_state",
+            "notice_version": 2,
+            "address_version": 2,
+            "beneficiary_keys": [
+                "P-7205-E"
+            ],
+            "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7205-D",
+            "deadline_state": "satisfied",
+            "next_local_action": "none",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7205",
+                "state/continuance.db#notices:NOTICE-7205",
+                "state/continuance.db#cases:COV-7205",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/eligibility_events.jsonl#event_id:EV-7205-ELECT",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7205-D"
+            ]
+        },
+        {
+            "case_id": "COV-7204",
+            "baseline_state": "delivery_timeout",
+            "disposition": "hold_delivery_investigation",
+            "notice_version": 1,
+            "address_version": 1,
+            "beneficiary_keys": [
+                "P-7204-S"
+            ],
+            "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-A",
+            "deadline_state": "open",
+            "next_local_action": "investigate_provider_receipt",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7204",
+                "state/continuance.db#notices:NOTICE-7204",
+                "state/continuance.db#cases:COV-7204",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-T",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-A"
+            ]
+        },
+        {
+            "case_id": "COV-7203",
+            "baseline_state": "returned",
+            "disposition": "reissue_to_verified_address",
+            "notice_version": 2,
+            "address_version": 2,
+            "beneficiary_keys": [
+                "P-7203-E",
+                "P-7203-C"
+            ],
+            "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7203-R",
+            "deadline_state": "open",
+            "next_local_action": "stage_reissue_package",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7203",
+                "state/continuance.db#notices:NOTICE-7203",
+                "state/continuance.db#cases:COV-7203",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/eligibility_events.jsonl#event_id:EV-7203-REPLAY",
+                "evidence/eligibility_events.jsonl#event_id:EV-7203-ADDR2",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7203-R"
+            ]
+        },
+        {
+            "case_id": "COV-7202",
+            "baseline_state": "delivery_timeout",
+            "disposition": "preserve_delivered",
+            "notice_version": 1,
+            "address_version": 2,
+            "beneficiary_keys": [
+                "P-7202-E"
+            ],
+            "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-D",
+            "deadline_state": "satisfied",
+            "next_local_action": "none",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7202",
+                "state/continuance.db#notices:NOTICE-7202",
+                "state/continuance.db#cases:COV-7202",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-T",
+                "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-D"
+            ]
+        },
+        {
+            "case_id": "COV-7201",
+            "baseline_state": "drafted",
+            "disposition": "rebuild_beneficiary_notice",
+            "notice_version": 2,
+            "address_version": 1,
+            "beneficiary_keys": [
+                "P-7201-S",
+                "P-7201-E"
+            ],
+            "delivery_evidence": "none",
+            "deadline_state": "open",
+            "next_local_action": "stage_corrected_notice",
+            "evidence_refs": [
+                "state/stale_checkpoint.json#cases/COV-7201",
+                "state/continuance.db#notices:NOTICE-7201",
+                "state/continuance.db#cases:COV-7201",
+                "policy/continuance_policy.json#decision_precedence",
+                "evidence/eligibility_events.jsonl#event_id:EV-7201-QUAL",
+                "evidence/eligibility_events.jsonl#event_id:EV-7201-BEN3"
+            ]
+        }
+    ],
+    "journal_actions": [
+        {
+            "journal_id": "J-OLD-QUEUE-7203",
+            "table_name": "recovery_queue",
+            "record_id": "Q-PARTIAL-7203",
+            "action": "remove_partial_insert"
+        },
+        {
+            "journal_id": "J-OLD-CASE-7203",
+            "table_name": "cases",
+            "record_id": "COV-7203",
+            "action": "restore_before_image"
+        }
+    ],
+    "queue_totals": {
+        "corrected_notice": 1,
+        "reissue": 1,
+        "delivery_investigation": 1,
+        "compliance_review": 1
+    },
+    "external_notices_sent": false,
+    "coverage_changed": false
+}

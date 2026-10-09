@@ -1,0 +1,84 @@
+{
+  "valid": [
+    {
+      "expr": "* * * * *",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      },
+      "expected": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 1
+      }
+    },
+    {
+      "expr": "0 0 * * *",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      },
+      "expected": {
+        "month": 1,
+        "day": 2,
+        "hour": 0,
+        "minute": 0
+      }
+    },
+    {
+      "expr": "0 6 * * 1",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      },
+      "expected": {
+        "month": 1,
+        "day": 2,
+        "hour": 6,
+        "minute": 0
+      }
+    },
+    {
+      "expr": "0 0 1,15 * 1",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      },
+      "expected": {
+        "month": 1,
+        "day": 2,
+        "hour": 0,
+        "minute": 0
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "expr": "0 0",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      }
+    },
+    {
+      "expr": "99 0 * * *",
+      "after": {
+        "month": 1,
+        "day": 1,
+        "hour": 0,
+        "minute": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"allowed_origins":["https://admin.example.test","https://login.example.test"],"rp_id":"example.test","require_user_verification":true,"device_counter_action":"reject","synced_counter_action":"flag"}

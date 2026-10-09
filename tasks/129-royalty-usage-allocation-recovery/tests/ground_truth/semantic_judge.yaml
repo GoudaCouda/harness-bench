@@ -1,0 +1,24 @@
+schema_version: 1
+task_id: 129-royalty-usage-allocation-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Royalty allocation recovery handoff is professionally complete
+  question: Does the handoff accurately explain canonical event version selection,
+    recording-to-work and rights/split effective dates, the unknown/ambiguous/window/
+    cross-statement quarantines, target-split inheritance for the negative adjustment,
+    signed units and cents conservation, interrupted SQLite recovery, verified internal
+    staging and semantic replay, and the no-payment/no-delivery/no-contact boundary?
+  pass_anchors:
+  - Equivalent professional wording and organization are accepted when all material
+    evidence relationships, recovery facts, conservation claims, and boundaries agree
+    with the structured artifacts.
+  fail_anchors:
+  - Omitting a distinct quarantine, using the adjustment-date split, misstating totals
+    or journal recovery, or claiming payment, statement delivery, or contact fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

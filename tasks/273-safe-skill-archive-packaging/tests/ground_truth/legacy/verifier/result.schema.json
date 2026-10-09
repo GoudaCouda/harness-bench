@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "check_id": {"pattern": "^[a-z0-9][a-z0-9._-]+$", "type": "string"},
+          "evidence": {"type": "object"},
+          "passed": {"type": "boolean"}
+        },
+        "required": ["check_id", "passed", "evidence"],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {"const": "case19_verifier_result_v1"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]}
+  },
+  "required": ["schema_version", "verdict", "checks"],
+  "type": "object"
+}

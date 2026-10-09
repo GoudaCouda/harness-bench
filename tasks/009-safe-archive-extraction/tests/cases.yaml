@@ -1,0 +1,37 @@
+schema_version: 2
+task_id: 009-safe-archive-extraction
+pass_threshold: 0.8
+cases:
+- id: safe_manifest_behavior
+  title: Safe members preserve archive order and values
+  description: Valid files and directories at ordinary and exact resource boundaries return new normalized
+    records without mutating inputs.
+  weight: 0.4
+  core: true
+- id: fail_closed_security_edges
+  title: Cross-platform namespace and resource violations reject the manifest
+  description: Dangerous paths, member types, collisions, file parents, malformed values, and exceeded
+    budgets raise ValueError before extraction.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: visible_extraction_plan
+  title: The supplied release has an exact auditable preflight plan
+  description: Manifest identity, destination, ordered entries, file count, and total bytes agree with
+    the protected fixtures and repaired function.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The security repair has a truthful reviewer handoff
+  description: Notes explain path, link, collision, and budget decisions, record the exact public test
+    command and result, and name an integration risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Immutable evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Unsafe code and unsupported action claims lose their scored behavior or
+    handoff cases rather than automatically zeroing the task.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,116 @@
+{
+  "contract_version": "case09-jsonrpc-tools-v1.0.0",
+  "framing": {
+    "encoding": "UTF-8",
+    "request_transport": "stdin_ndjson",
+    "response_transport": "stdout_ndjson",
+    "response_per_request": 1,
+    "extra_stdout_forbidden": true
+  },
+  "jsonrpc": {
+    "version": "2.0",
+    "request_id_types": ["string", "integer"],
+    "notifications_supported": false,
+    "methods": ["tools/list", "tools/call"]
+  },
+  "runtime": {
+    "entrypoint": "python -B submission/service.py",
+    "seed_db_env": "CASE09_SEED_DB",
+    "state_db_env": "CASE09_STATE_DB",
+    "fixed_created_at": "2026-07-20T09:00:00Z"
+  },
+  "tool_catalog": [
+    {
+      "name": "contacts.search",
+      "description": "Search active contacts by case-insensitive substring in display name or email.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["query"],
+        "properties": {
+          "query": {"type": "string", "minLength": 1, "maxLength": 80},
+          "limit": {"type": "integer", "minimum": 1, "maximum": 10, "default": 5}
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["items", "count"],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["contact_id", "display_name", "email", "region"],
+              "properties": {
+                "contact_id": {"type": "string"},
+                "display_name": {"type": "string"},
+                "email": {"type": "string"},
+                "region": {"type": "string"}
+              }
+            }
+          },
+          "count": {"type": "integer", "minimum": 0}
+        }
+      },
+      "sideEffect": "read_only",
+      "idempotent": true
+    },
+    {
+      "name": "requests.create",
+      "description": "Create one pending request with durable idempotency and deterministic error handling.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request_id", "contact_id", "amount_cents", "memo", "idempotency_key"],
+        "properties": {
+          "request_id": {"type": "string", "pattern": "^req_[a-z0-9]{6,20}$"},
+          "contact_id": {"type": "string", "pattern": "^c_[0-9]{3}$"},
+          "amount_cents": {"type": "integer", "minimum": 1, "maximum": 500000},
+          "memo": {"type": "string", "minLength": 1, "maxLength": 200},
+          "idempotency_key": {"type": "string", "pattern": "^idem_[a-z0-9]{6,24}$"}
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request"],
+        "properties": {
+          "request": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["request_id", "contact_id", "amount_cents", "memo", "idempotency_key", "status", "created_at"],
+            "properties": {
+              "request_id": {"type": "string"},
+              "contact_id": {"type": "string"},
+              "amount_cents": {"type": "integer"},
+              "memo": {"type": "string"},
+              "idempotency_key": {"type": "string"},
+              "status": {"const": "pending"},
+              "created_at": {"const": "2026-07-20T09:00:00Z"}
+            }
+          }
+        }
+      },
+      "sideEffect": "state_db_write",
+      "idempotent": true
+    }
+  ],
+  "errors": [
+    {"code": -32700, "name": "parse_error", "retryable": false},
+    {"code": -32600, "name": "invalid_request", "retryable": false},
+    {"code": -32601, "name": "method_not_found", "retryable": false},
+    {"code": -32602, "name": "invalid_params", "retryable": false},
+    {"code": -32603, "name": "internal_error", "retryable": false},
+    {"code": -32001, "name": "transient_busy", "retryable": true},
+    {"code": -32010, "name": "contact_inactive", "retryable": false},
+    {"code": -32011, "name": "idempotency_conflict", "retryable": false}
+  ],
+  "state_policy": {
+    "seed_tables": ["contacts", "fault_rules", "protected_policy"],
+    "mutable_tables": ["requests", "fault_consumptions"],
+    "forbidden_changes": ["seed_db", "contacts", "fault_rules", "protected_policy", "schema", "views", "triggers"],
+    "allowed_runtime_files": ["state.db"]
+  }
+}

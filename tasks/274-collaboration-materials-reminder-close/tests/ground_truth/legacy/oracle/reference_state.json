@@ -1,0 +1,146 @@
+{
+  "archive_files": [
+    {
+      "attachment_id": "a001",
+      "path": "archive/u001/project_resume/packet_001.pdf",
+      "sha256": "06ff1333f75fda4853fee4d10b399daebf0a015753ac3593882ffeaa4b76995f"
+    },
+    {
+      "attachment_id": "a002",
+      "path": "archive/u001/compliance_declaration/packet_002.pdf",
+      "sha256": "e7d9a9225353a23ab230a41e591d1948c6a009b48a57dca195c7eac32826762f"
+    },
+    {
+      "attachment_id": "a003",
+      "path": "archive/u002/project_resume/packet_003.pdf",
+      "sha256": "3d44e7c80280f4d09c60c91e5e8c7ef56b2b21bda26ce5834efa43b8f984e381"
+    },
+    {
+      "attachment_id": "a006",
+      "path": "archive/u003/project_resume/packet_006.pdf",
+      "sha256": "ce4d39bcbb44cd60ac2ebffd82ab1f3066582ade00c42f2fede611d5fb72fb74"
+    },
+    {
+      "attachment_id": "a005",
+      "path": "archive/u003/compliance_declaration/packet_005.pdf",
+      "sha256": "7b5b61c3d26bc11f4b6988c25ba2ec8628d8a90c25a568873072ce5daf304f17"
+    },
+    {
+      "attachment_id": "a007",
+      "path": "archive/u004/compliance_declaration/packet_007.pdf",
+      "sha256": "7ec62d23f6dc5042fc5e69e6acee946e118cb41c342a3c317c8e6af0462997b9"
+    },
+    {
+      "attachment_id": "a008",
+      "path": "archive/u005/project_resume/packet_008.pdf",
+      "sha256": "e865efe53ed85932e77706db36cdf108f083b391c1701359d1a3ed8d45c8cef9"
+    },
+    {
+      "attachment_id": "a009",
+      "path": "archive/u005/compliance_declaration/packet_009.pdf",
+      "sha256": "cf8588fc8211828e20b64a6081c53d7eaa3fe3b6cf48f90949cfbd8ee6f5fa5f"
+    }
+  ],
+  "fixed_time": "2026-07-20T10:00:00+08:00",
+  "register_fields": [
+    "person_id",
+    "name",
+    "project_resume_status",
+    "project_resume_file",
+    "project_resume_source_attachment_id",
+    "compliance_declaration_status",
+    "compliance_declaration_file",
+    "compliance_declaration_source_attachment_id",
+    "overall_status",
+    "reminder_status"
+  ],
+  "register_rows": [
+    {
+      "compliance_declaration_file": "archive/u001/compliance_declaration/packet_002.pdf",
+      "compliance_declaration_source_attachment_id": "a002",
+      "compliance_declaration_status": "submitted",
+      "name": "林妍",
+      "overall_status": "complete",
+      "person_id": "u001",
+      "project_resume_file": "archive/u001/project_resume/packet_001.pdf",
+      "project_resume_source_attachment_id": "a001",
+      "project_resume_status": "submitted",
+      "reminder_status": "not_required"
+    },
+    {
+      "compliance_declaration_file": "",
+      "compliance_declaration_source_attachment_id": "",
+      "compliance_declaration_status": "missing",
+      "name": "周航",
+      "overall_status": "incomplete",
+      "person_id": "u002",
+      "project_resume_file": "archive/u002/project_resume/packet_003.pdf",
+      "project_resume_source_attachment_id": "a003",
+      "project_resume_status": "submitted",
+      "reminder_status": "sent"
+    },
+    {
+      "compliance_declaration_file": "archive/u003/compliance_declaration/packet_005.pdf",
+      "compliance_declaration_source_attachment_id": "a005",
+      "compliance_declaration_status": "submitted",
+      "name": "赵宁",
+      "overall_status": "complete",
+      "person_id": "u003",
+      "project_resume_file": "archive/u003/project_resume/packet_006.pdf",
+      "project_resume_source_attachment_id": "a006",
+      "project_resume_status": "submitted",
+      "reminder_status": "not_required"
+    },
+    {
+      "compliance_declaration_file": "archive/u004/compliance_declaration/packet_007.pdf",
+      "compliance_declaration_source_attachment_id": "a007",
+      "compliance_declaration_status": "submitted",
+      "name": "陈澈",
+      "overall_status": "incomplete",
+      "person_id": "u004",
+      "project_resume_file": "",
+      "project_resume_source_attachment_id": "",
+      "project_resume_status": "missing",
+      "reminder_status": "sent"
+    },
+    {
+      "compliance_declaration_file": "archive/u005/compliance_declaration/packet_009.pdf",
+      "compliance_declaration_source_attachment_id": "a009",
+      "compliance_declaration_status": "submitted",
+      "name": "罗嘉",
+      "overall_status": "complete",
+      "person_id": "u005",
+      "project_resume_file": "archive/u005/project_resume/packet_008.pdf",
+      "project_resume_source_attachment_id": "a008",
+      "project_resume_status": "submitted",
+      "reminder_status": "not_required"
+    },
+    {
+      "compliance_declaration_file": "",
+      "compliance_declaration_source_attachment_id": "",
+      "compliance_declaration_status": "missing",
+      "name": "孙恺",
+      "overall_status": "incomplete",
+      "person_id": "u006",
+      "project_resume_file": "",
+      "project_resume_source_attachment_id": "",
+      "project_resume_status": "missing",
+      "reminder_status": "sent"
+    }
+  ],
+  "reminders": [
+    {
+      "body": "【材料补交提醒】周航（u002）：截至 2026-07-20 10:00，尚缺：合规声明。请在 2026-07-25 17:00 前补交；如已提交，请回复本消息。",
+      "recipient_id": "u002"
+    },
+    {
+      "body": "【材料补交提醒】陈澈（u004）：截至 2026-07-20 10:00，尚缺：项目履历。请在 2026-07-25 17:00 前补交；如已提交，请回复本消息。",
+      "recipient_id": "u004"
+    },
+    {
+      "body": "【材料补交提醒】孙恺（u006）：截至 2026-07-20 10:00，尚缺：项目履历、合规声明。请在 2026-07-25 17:00 前补交；如已提交，请回复本消息。",
+      "recipient_id": "u006"
+    }
+  ],
+  "schema_version": "case20_reference_state_v2"
+}

@@ -1,0 +1,85 @@
+task_id: 126-grade-passback-recovery
+title: Recover an interrupted LMS-to-SIS grade passback
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Education Administration
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- event_replay
+- gradebook_reconciliation
+- identity_resolution
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- out_of_order_events
+- duplicate_delivery
+- section_and_student_rekey
+- assignment_version_drift
+- invalid_score_scale
+- late_window_boundary
+- interrupted_transaction
+- irreversible_action_boundary
+required_artifacts:
+- recovery_plan.json
+- .gradepass_preview.json
+- state/gradepass.db
+- state/verification.json
+- state/stage_receipt.json
+- state/replay_report.json
+- registrar_handoff.md
+task_family: lms-sis-grade-passback-recovery
+variant: rekey-version-scale-and-interrupted-sqlite-replay
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - 1EDTECH-LTI-AGS-20
+  - 1EDTECH-ONEROSTER-12-GRADEBOOK
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recovery_plan.json
+  - .gradepass_preview.json
+  - state/verification.json
+  - state/stage_receipt.json
+  - state/replay_report.json
+  - registrar_handoff.md
+  allowed_modified:
+  - state/gradepass.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: registrar_handoff
+  max_fallback_weight: 0.08
+schema_version: 2

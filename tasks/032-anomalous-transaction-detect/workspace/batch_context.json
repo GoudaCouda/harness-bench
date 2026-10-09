@@ -1,0 +1,8 @@
+{
+  "batch_id": "AP-RG-2026-08-19-15",
+  "cutoff_at": "2026-08-19T15:00:00Z",
+  "execution_mode": "review_only",
+  "high_value_threshold_usd": "15000.00",
+  "policy_id": "AP-BANK-9.4",
+  "recent_change_days": 14
+}

@@ -1,0 +1,8 @@
+path,action,reason,evidence_id
+staging/job77-part-000.csv,purge,row data without hold,MAN-77-A
+staging/job78-part-000.jsonl,purge,row data without hold,MAN-78-A
+staging/delivery-receipt-901.json,retain,audit receipt retained for escalation,REC-901
+staging/hold-slice-78.csv,retain,row data under legal hold HOLD-44,MAN-78-H;HOLD-44
+staging/job79-part-000.jsonl,purge,descendant row data without hold,MAN-79-A;FAN-79
+staging/delivery-receipt-903.json,retain,audit receipt retained for confirmed-recipient review,REC-903
+staging/upload-key-79.txt,purge,transient upload credential must not survive containment,KEY-79

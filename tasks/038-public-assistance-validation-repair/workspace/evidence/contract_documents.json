@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {"document_id": "CONTRACT-DB-31", "line_id": "CON-DEB-003", "kind": "signed_contract", "amount": 120000, "signed": true},
+    {"document_id": "INV-DB-31-A", "line_id": "CON-DEB-003", "kind": "invoice", "amount": 102000, "signed": false, "status": "superseded", "superseded_by": "INV-DB-31-B"},
+    {"document_id": "INV-DB-31-B", "line_id": "CON-DEB-003", "kind": "corrected_invoice", "amount": 120000, "signed": true, "status": "authoritative"},
+    {"document_id": "CO-DB-31-1", "line_id": "CON-DEB-003", "kind": "signed_change_order", "amount": 18000, "signed": true, "explains_difference_between": ["INV-DB-31-A", "INV-DB-31-B"]},
+    {"document_id": "POP-DB-31", "line_id": "CON-DEB-003", "kind": "proof_of_payment", "amount": 120000, "payment_id": "PAY-203"},
+    {"document_id": "LEASE-EQ-14", "line_id": "EQUIP-004", "kind": "signed_rental_agreement", "amount": 25000, "signed": true, "vendor_id": "V-RIVER-9"},
+    {"document_id": "INV-EQ-14", "line_id": "EQUIP-004", "kind": "invoice", "amount": 25000, "signed": true, "vendor_id": "V-RIVER-9"},
+    {"document_id": "POP-EQ-14", "line_id": "EQUIP-004", "kind": "proof_of_payment", "amount": 25000, "payment_id": "PAY-204"},
+    {"document_id": "PO-SUP-8", "line_id": "SUP-005", "kind": "purchase_order", "amount": 18000, "signed": true},
+    {"document_id": "INV-SUP-8", "line_id": "SUP-005", "kind": "invoice", "amount": 18000, "signed": true},
+    {"document_id": "POP-SUP-8", "line_id": "SUP-005", "kind": "proof_of_payment", "amount": 18000, "payment_id": "PAY-205"}
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "packages": {
+    "core": {
+      "dependencies": [],
+      "source_roots": ["packages/core/src/"],
+      "generated_inputs": ["generated/core_schema.py"],
+      "buildable": true
+    },
+    "api": {
+      "dependencies": ["core"],
+      "source_roots": ["packages/api/src/"],
+      "generated_inputs": ["generated/api_types.py"],
+      "buildable": true
+    },
+    "cli": {
+      "dependencies": ["core"],
+      "source_roots": ["packages/cli/src/"],
+      "generated_inputs": [],
+      "buildable": true
+    },
+    "web": {
+      "dependencies": ["api"],
+      "source_roots": ["packages/web/src/"],
+      "generated_inputs": [],
+      "buildable": true
+    },
+    "worker": {
+      "dependencies": ["core"],
+      "source_roots": ["packages/worker/src/"],
+      "generated_inputs": [],
+      "buildable": true
+    },
+    "docs": {
+      "dependencies": ["api"],
+      "source_roots": ["docs/"],
+      "generated_inputs": [],
+      "buildable": false
+    }
+  },
+  "global_inputs": {
+    "pnpm-lock.yaml": ["core", "api", "cli", "web", "worker"],
+    "toolchain.toml": ["core", "api", "cli", "web", "worker"]
+  }
+}

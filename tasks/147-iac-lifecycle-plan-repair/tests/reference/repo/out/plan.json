@@ -1,0 +1,19 @@
+{
+  "resources": [
+    {"action":"replace","address":"app.api","after":{"image":"api:v2","replicas":2},"before":{"image":"api:v1","replicas":3},"create_before_destroy":true,"reasons":["configuration:image","create_before_destroy_propagated","drift:replicas","moved_from:service.api","replace_triggered_by:db.main"]},
+    {"action":"no-op","address":"cache.main","after":{"tier":"standard","ttl":90},"before":{"tier":"standard","ttl":90},"create_before_destroy":false,"reasons":[]},
+    {"action":"replace","address":"db.main","after":{"engine":"v2","password":"<sensitive>"},"before":{"engine":"v1","password":"<sensitive>"},"create_before_destroy":true,"reasons":["configuration:engine","configuration:password","drift:password"]},
+    {"action":"delete","address":"orphan.old","after":null,"before":{"size":1},"create_before_destroy":false,"reasons":["removed_configuration"]},
+    {"action":"blocked","address":"queue.main","after":{"encrypted":true},"before":{"encrypted":"<unknown>"},"create_before_destroy":false,"reasons":["unknown_immutable","unknown_observed:encrypted"]},
+    {"action":"replace","address":"worker.main","after":{"image":"worker:v1"},"before":{"image":"worker:v1"},"create_before_destroy":true,"reasons":["replace_triggered_by:app.api"]}
+  ],
+  "steps": [
+    {"address":"db.main","operation":"create_replacement"},
+    {"address":"app.api","operation":"create_replacement"},
+    {"address":"worker.main","operation":"create_replacement"},
+    {"address":"worker.main","operation":"destroy_deposed"},
+    {"address":"app.api","operation":"destroy_deposed"},
+    {"address":"db.main","operation":"destroy_deposed"},
+    {"address":"orphan.old","operation":"delete"}
+  ]
+}

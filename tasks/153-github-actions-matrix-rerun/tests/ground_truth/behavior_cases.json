@@ -1,0 +1,17 @@
+{
+ "dag_matrix_and_status_closure":[
+  {"workflow":[{"job_id":"build","needs":[],"shards":["a","b"],"consumes":[],"side_effect":false},{"job_id":"test","needs":["build"],"shards":["x","y"],"consumes":["build"],"side_effect":false}],"runs":[{"job_id":"build","shard":"a","status":"failure","attempt":2,"artifact_fresh":false},{"job_id":"build","shard":"b","status":"success","attempt":1,"artifact_fresh":true},{"job_id":"test","shard":"x","status":"skipped","attempt":1,"artifact_fresh":false},{"job_id":"test","shard":"y","status":"skipped","attempt":1,"artifact_fresh":false}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["one"],"consumes":[],"side_effect":false}],"runs":[{"job_id":"a","shard":"one","status":"cancelled","attempt":3,"artifact_fresh":false}],"policy":{"rerun_cancelled":false,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["one"],"consumes":[],"side_effect":false},{"job_id":"b","needs":["a"],"shards":["one"],"consumes":[],"side_effect":false}],"runs":[{"job_id":"a","shard":"one","status":"failure","attempt":1,"artifact_fresh":false},{"job_id":"b","shard":"one","status":"success","attempt":1,"artifact_fresh":true}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}}
+ ],
+ "artifact_and_side_effect_boundary":[
+  {"workflow":[{"job_id":"a","needs":[],"shards":["one"],"consumes":[],"side_effect":false},{"job_id":"b","needs":["a"],"shards":["one"],"consumes":["a"],"side_effect":false},{"job_id":"deploy","needs":["b"],"shards":["prod"],"consumes":["b"],"side_effect":true}],"runs":[{"job_id":"a","shard":"one","status":"success","attempt":1,"artifact_fresh":false},{"job_id":"b","shard":"one","status":"success","attempt":1,"artifact_fresh":true},{"job_id":"deploy","shard":"prod","status":"success","attempt":1,"artifact_fresh":true}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["one"],"consumes":[],"side_effect":false},{"job_id":"deploy","needs":["a"],"shards":["prod"],"consumes":["a"],"side_effect":true}],"runs":[{"job_id":"a","shard":"one","status":"failure","attempt":1,"artifact_fresh":false},{"job_id":"deploy","shard":"prod","status":"skipped","attempt":1,"artifact_fresh":false}],"policy":{"rerun_cancelled":true,"allow_side_effects":true}}
+ ],
+ "invalid":[
+  {"workflow":[{"job_id":"a","needs":["b"],"shards":["x"],"consumes":[],"side_effect":false},{"job_id":"b","needs":["a"],"shards":["x"],"consumes":[],"side_effect":false}],"runs":[{"job_id":"a","shard":"x","status":"success","attempt":1,"artifact_fresh":true},{"job_id":"b","shard":"x","status":"success","attempt":1,"artifact_fresh":true}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["x"],"consumes":[],"side_effect":false}],"runs":[],"policy":{"rerun_cancelled":true,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["x"],"consumes":["a"],"side_effect":false}],"runs":[{"job_id":"a","shard":"x","status":"success","attempt":1,"artifact_fresh":true}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}},
+  {"workflow":[{"job_id":"a","needs":[],"shards":["x"],"consumes":[],"side_effect":false}],"runs":[{"job_id":"a","shard":"x","status":"success","attempt":true,"artifact_fresh":true}],"policy":{"rerun_cancelled":true,"allow_side_effects":false}}
+ ]
+}

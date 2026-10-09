@@ -1,0 +1,16 @@
+[
+  {"id": "A1", "display_name": "Alex Kim", "institution_id": "I1"},
+  {"id": "A2", "display_name": "Alex Kim", "institution_id": "I2"},
+  {"id": "A3", "display_name": "Rin Vale", "institution_id": null},
+  {"id": "A4", "display_name": "Alex Kim", "institution_id": null},
+  {"id": "A5", "display_name": "Mo Chen", "institution_id": "I3"},
+  {"id": "A6", "display_name": "Priya Rao", "institution_id": "I4"},
+  {"id": "A7", "display_name": "Dana Noor", "institution_id": "I5"},
+  {"id": "A8", "display_name": "Eli Park", "institution_id": "I6"},
+  {
+    "id": "A9",
+    "display_name": "Casey Lin",
+    "institution_id": null,
+    "stale_affiliation_note": "Formerly listed with I7 in a 2021 export; do not use this note as current affiliation evidence."
+  }
+]

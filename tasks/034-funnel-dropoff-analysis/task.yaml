@@ -1,0 +1,50 @@
+task_id: 034-funnel-dropoff-analysis
+title: Product funnel dropoff analysis from JSONL events
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: medium
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Quantitative Analysis
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- multi_step_execution
+- safety_boundary
+stressors:
+- high_stakes_rules
+required_artifacts:
+- cohort_comparison.csv
+- dropoff_insights.md
+- funnel_metrics.json
+- stage_user_sets.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-034
+task_family: 034-funnel-dropoff-analysis
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - cohort_comparison.csv
+  - dropoff_insights.md
+  - funnel_metrics.json
+  - stage_user_sets.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  grader: {}
+  services: []
+schema_version: 2

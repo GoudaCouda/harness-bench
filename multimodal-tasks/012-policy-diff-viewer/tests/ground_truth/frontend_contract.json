@@ -1,0 +1,338 @@
+{
+  "schema_version": 3,
+  "task_id": "012-policy-diff-viewer",
+  "contract_type": "diff",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "policy_diff_viewer_protected_local_data",
+    "policy_diff_viewer_diff_interaction_model",
+    "policy_diff_viewer_diff_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "minimum_records": 8,
+  "minimum_handlers": 5,
+  "data_profile": {
+    "status_values": [
+      "clear",
+      "watch",
+      "review"
+    ],
+    "minimum_categories": 3,
+    "minimum_owners": 3,
+    "primary_key": "primary",
+    "secondary_key": "secondary"
+  },
+  "record_ids": [
+    "POL-2.1",
+    "POL-3.4",
+    "POL-5.2",
+    "POL-7.8",
+    "POL-2.1-R1",
+    "POL-3.4-R2",
+    "POL-5.2-R3",
+    "POL-7.8-R4"
+  ],
+  "identity_tokens": [
+    "POL-2.1",
+    "Data retention window",
+    "privacy",
+    "Legal",
+    "review",
+    "91",
+    "14",
+    "POL-3.4",
+    "Vendor access",
+    "security",
+    "GRC",
+    "watch",
+    "76",
+    "8",
+    "POL-5.2",
+    "Training evidence",
+    "operations",
+    "People Ops",
+    "clear",
+    "44",
+    "3",
+    "POL-7.8",
+    "Incident notice",
+    "response",
+    "GRC",
+    "watch",
+    "83",
+    "5",
+    "POL-2.1-R1",
+    "Data retention window follow-up",
+    "security",
+    "People Ops",
+    "clear",
+    "105",
+    "20",
+    "POL-3.4-R2",
+    "Vendor access follow-up",
+    "operations",
+    "GRC",
+    "watch",
+    "93",
+    "15",
+    "POL-5.2-R3",
+    "Training evidence follow-up",
+    "response",
+    "Legal",
+    "review",
+    "64",
+    "11",
+    "POL-7.8-R4",
+    "Incident notice follow-up",
+    "privacy",
+    "GRC",
+    "watch",
+    "106",
+    "14"
+  ],
+  "required_label_groups": [
+    [
+      "Impact score",
+      "Impact",
+      "Impact score"
+    ],
+    [
+      "Review days",
+      "Review"
+    ],
+    [
+      "Change count",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Policy release review",
+      "policy diff"
+    ]
+  ],
+  "domain_groups": [
+    [
+      "policy",
+      "rule",
+      "guideline"
+    ],
+    [
+      "section",
+      "clause",
+      "paragraph"
+    ],
+    [
+      "compare",
+      "diff",
+      "comparison",
+      "difference",
+      "change"
+    ],
+    [
+      "diff",
+      "policy diff",
+      "section"
+    ]
+  ],
+  "state_groups": [
+    [
+      "policyArea",
+      "setPolicyArea",
+      "Policy area"
+    ],
+    [
+      "selected section",
+      "selected clause",
+      "selected section"
+    ],
+    [
+      "versionLens",
+      "setVersionLens",
+      "Version lens"
+    ],
+    [
+      "clauseSearch",
+      "setClauseSearch",
+      "Clause search"
+    ]
+  ],
+  "logic_groups": [
+    [
+      "replace",
+      "redline text"
+    ],
+    [
+      "includes",
+      "clause search"
+    ],
+    [
+      "some",
+      "change detection"
+    ],
+    [
+      "visibleRecords",
+      "visible set"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "policyArea",
+      "setPolicyArea",
+      "policy area"
+    ],
+    [
+      "selected section",
+      "selected clause",
+      "section selection"
+    ],
+    [
+      "versionLens",
+      "setVersionLens",
+      "version lens"
+    ],
+    [
+      "changedOnly",
+      "setChangedOnly",
+      "changed only toggle"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "impactScore",
+      "Impact score",
+      "impact total"
+    ],
+    [
+      "reviewDays",
+      "Review days",
+      "review days"
+    ],
+    [
+      "changeCount",
+      "Change count",
+      "change count"
+    ],
+    [
+      "releaseRisk",
+      "Policy release review",
+      "release risk"
+    ],
+    [
+      "review strictness",
+      "strictness",
+      "Review strictness"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "split diff",
+      "comparison pane",
+      "redline"
+    ],
+    [
+      "clause list",
+      "version lens",
+      "release review"
+    ]
+  ],
+  "optional_logic_groups": [
+    [
+      "useMemo"
+    ],
+    [
+      "useReducer"
+    ],
+    [
+      "custom hook"
+    ]
+  ],
+  "derived_tokens": [],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Policy area",
+        "value": "privacy"
+      },
+      {
+        "kind": "fill",
+        "label": "Clause search",
+        "value": "Data"
+      },
+      {
+        "kind": "click",
+        "text": "POL-2.1"
+      },
+      {
+        "kind": "select",
+        "label": "Version lens",
+        "value": "diff-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Review strictness",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "diff-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "POL-2.1",
+      "category": "privacy",
+      "mode": "diff-review",
+      "search_value": "Data",
+      "range_value": 64,
+      "visible_id_subset": [
+        "POL-2.1"
+      ],
+      "selected_detail_tokens": [
+        "Legal",
+        "privacy",
+        "review",
+        "91",
+        "14"
+      ],
+      "after_clearing_search_subset": [
+        "POL-2.1",
+        "POL-7.8-R4"
+      ],
+      "focus_subset": [
+        "POL-2.1",
+        "POL-5.2-R3"
+      ],
+      "focus_forbidden": [
+        "POL-5.2"
+      ],
+      "detail_switch_id": "POL-7.8-R4",
+      "detail_switch_tokens": [
+        "POL-7.8-R4",
+        "Incident notice follow-up",
+        "GRC",
+        "privacy",
+        "watch",
+        "106",
+        "14"
+      ],
+      "summary_change_labels": [
+        "Impact score",
+        "Review days",
+        "Change count",
+        "Policy release review"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 8
+    },
+    "action_count": 6
+  }
+}

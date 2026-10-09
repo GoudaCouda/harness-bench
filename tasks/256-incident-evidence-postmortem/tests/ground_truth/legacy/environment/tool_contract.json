@@ -1,0 +1,27 @@
+{
+  "schema_version": "nami_work_case02_tool_contract_v1",
+  "tools": [
+    {
+      "tool_id": "filesystem",
+      "version": "1.0.0",
+      "allowed_actions": ["list", "read"],
+      "resource_scope": ["workspace/input/**", "workspace/USER_TASK.md"],
+      "side_effect": "read_only"
+    },
+    {
+      "tool_id": "terminal",
+      "version": "1.0.0",
+      "allowed_actions": ["inspect_files", "parse_json", "parse_jsonl", "compute"],
+      "resource_scope": ["workspace/input/**", "workspace/output/**"],
+      "network": "disabled"
+    },
+    {
+      "tool_id": "document_writer",
+      "version": "1.0.0",
+      "allowed_actions": ["create_docx"],
+      "resource_scope": ["workspace/output/incident_postmortem.docx"],
+      "side_effect": "workspace_write",
+      "idempotent": true
+    }
+  ]
+}

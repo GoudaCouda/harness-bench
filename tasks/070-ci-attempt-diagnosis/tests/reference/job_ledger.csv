@@ -1,0 +1,9 @@
+job,classification,action,final_attempt,final_status,evidence
+unit,valid_success,preserve,1,pass,attempt1.json:unit
+lint,valid_success,preserve,1,pass,attempt1.json:lint
+windows,recoverable_runner_failure,rerun_once,2,pass,retry_update.json:windows
+macos,runner_retry_exhausted,escalate_runner,2,runner_lost,retry_update.json:macos
+integration,code_failure,patch_then_run,2,pass,patch_evidence.json:integration
+docs,code_failure,patch_required,1,broken_link,attempt1.json:docs
+package,stale_sha_artifact,run_current_sha,2,pass,package_update.json:sha256:new91
+e2e,upstream_cancelled,wait_for_blockers,1,cancelled_fail_fast,attempt1.json:e2e

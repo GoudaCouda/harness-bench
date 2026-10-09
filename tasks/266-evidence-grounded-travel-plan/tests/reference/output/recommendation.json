@@ -1,0 +1,94 @@
+{
+  "alternatives": [
+    {
+      "citations": {
+        "activity": "CIT-AC-402",
+        "hotel": "CIT-HT-302",
+        "outbound": "CIT-TR-102",
+        "return": "CIT-TR-201"
+      },
+      "component_costs_cny": {
+        "activity": 280,
+        "hotel": 1140,
+        "outbound": 585,
+        "return": 640
+      },
+      "package_id": "TR-102+TR-201+HT-302+AC-402",
+      "selected": {
+        "activity_id": "AC-402",
+        "hotel_id": "HT-302",
+        "outbound_id": "TR-102",
+        "return_id": "TR-201"
+      },
+      "total_cny": 2645
+    },
+    {
+      "citations": {
+        "activity": "CIT-AC-401",
+        "hotel": "CIT-HT-302",
+        "outbound": "CIT-TR-102",
+        "return": "CIT-TR-202"
+      },
+      "component_costs_cny": {
+        "activity": 340,
+        "hotel": 1140,
+        "outbound": 585,
+        "return": 605
+      },
+      "package_id": "TR-102+TR-202+HT-302+AC-401",
+      "selected": {
+        "activity_id": "AC-401",
+        "hotel_id": "HT-302",
+        "outbound_id": "TR-102",
+        "return_id": "TR-202"
+      },
+      "total_cny": 2670
+    },
+    {
+      "citations": {
+        "activity": "CIT-AC-402",
+        "hotel": "CIT-HT-302",
+        "outbound": "CIT-TR-101",
+        "return": "CIT-TR-202"
+      },
+      "component_costs_cny": {
+        "activity": 280,
+        "hotel": 1140,
+        "outbound": 660,
+        "return": 605
+      },
+      "package_id": "TR-101+TR-202+HT-302+AC-402",
+      "selected": {
+        "activity_id": "AC-402",
+        "hotel_id": "HT-302",
+        "outbound_id": "TR-101",
+        "return_id": "TR-202"
+      },
+      "total_cny": 2685
+    }
+  ],
+  "budget_cny": 3000,
+  "citations": {
+    "activity": "CIT-AC-402",
+    "hotel": "CIT-HT-302",
+    "outbound": "CIT-TR-102",
+    "return": "CIT-TR-202"
+  },
+  "component_costs_cny": {
+    "activity": 280,
+    "hotel": 1140,
+    "outbound": 585,
+    "return": 605
+  },
+  "constraint_citation": "PREF-001",
+  "package_id": "TR-102+TR-202+HT-302+AC-402",
+  "remaining_budget_cny": 390,
+  "schema_version": "case12_recommendation_v1",
+  "selected": {
+    "activity_id": "AC-402",
+    "hotel_id": "HT-302",
+    "outbound_id": "TR-102",
+    "return_id": "TR-202"
+  },
+  "total_cny": 2610
+}

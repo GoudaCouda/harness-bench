@@ -1,0 +1,86 @@
+task_id: 144-formulary-substitution-review-recovery
+title: Recover an Interrupted Formulary-Substitution Review
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- filesystem
+- sqlite
+- structured_data
+- event_replay
+- transaction_recovery
+- healthcare_administration
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- conflicting_evidence
+- out_of_order_events
+- temporal_policy
+- partial_commit
+- protected_boundaries
+required_artifacts:
+- formulary_recovery_plan.json
+- .formulary_preview.json
+- formulary_handoff.md
+- state/formulary.db
+- state/recovery_receipt.json
+- state/verification.json
+- state/replay_report.json
+- staging/formulary_review_packet.json
+- staging/packet_manifest.json
+task_family: formulary-substitution-control-recovery
+variant: effective-rule-daw-allergy-step-pa-channel-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - CMS-PART-D-FORMULARY
+  - FDA-ORANGE-BOOK
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - formulary_recovery_plan.json
+  - .formulary_preview.json
+  - formulary_handoff.md
+  - state/recovery_receipt.json
+  - state/verification.json
+  - state/replay_report.json
+  - staging/formulary_review_packet.json
+  - staging/packet_manifest.json
+  allowed_modified:
+  - state/formulary.db
+  allowed_deleted: []
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: formulary_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

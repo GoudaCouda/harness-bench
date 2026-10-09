@@ -1,0 +1,1 @@
+{"registry_version":"2026-08-19","supported":{"1":{"region_field":"region","consent_field":"consent_state"},"2":{"region_field":"market","consent_field":"consent_status","consent_map":{"yes":"granted","no":"denied"}}}}

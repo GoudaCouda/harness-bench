@@ -1,0 +1,64 @@
+{
+  "atomic_conflict_force_and_ownership": [
+    {
+      "live":{"/spec/a":1,"/spec/b":2,"/spec/c":3},
+      "ownership":[{"path":"/spec/a","managers":["alpha"]},{"path":"/spec/b","managers":["beta"]},{"path":"/spec/c","managers":["alpha","beta"]}],
+      "defaults":{},
+      "intents":[
+        {"request_id":"r1","manager":"alpha","force":false,"fields":{"/spec/b":9,"/spec/c":3}},
+        {"request_id":"r2","manager":"gamma","force":false,"fields":{"/spec/b":2}},
+        {"request_id":"r3","manager":"alpha","force":true,"fields":{"/spec/b":9,"/spec/c":3}}
+      ],
+      "policy":{"allowed_paths":["/spec/a","/spec/b","/spec/c"],"protected_prefixes":[]}
+    },
+    {
+      "live":{"/metadata/security/level":"high","/spec/image":"v1"},
+      "ownership":[{"path":"/metadata/security/level","managers":["policy"]},{"path":"/spec/image","managers":["deploy"]}],
+      "defaults":{},
+      "intents":[{"request_id":"r1","manager":"deploy","force":true,"fields":{"/metadata/security/level":"low","/spec/image":"v2"}}],
+      "policy":{"allowed_paths":["/metadata/security/level","/spec/image"],"protected_prefixes":["/metadata/security"]}
+    },
+    {
+      "live":{"/spec/image":"v1"},"ownership":[],"defaults":{},
+      "intents":[{"request_id":"r1","manager":"deploy","force":false,"fields":{"/spec/image":"v2","/spec/replicas":2}}],
+      "policy":{"allowed_paths":["/spec/image","/spec/replicas"],"protected_prefixes":[]}
+    }
+  ],
+  "omission_default_and_sequential_state": [
+    {
+      "live":{"/spec/a":1,"/spec/b":2},
+      "ownership":[{"path":"/spec/a","managers":["alpha"]},{"path":"/spec/b","managers":["alpha","beta"]}],
+      "defaults":{"/spec/a":0},
+      "intents":[{"request_id":"r1","manager":"alpha","force":false,"fields":{}}],
+      "policy":{"allowed_paths":["/spec/a","/spec/b"],"protected_prefixes":[]}
+    },
+    {
+      "live":{"/spec/a":1,"/spec/b":2},
+      "ownership":[{"path":"/spec/a","managers":["alpha"]}],
+      "defaults":{},
+      "intents":[
+        {"request_id":"r1","manager":"alpha","force":false,"fields":{"/spec/b":3}},
+        {"request_id":"r2","manager":"beta","force":false,"fields":{"/spec/a":4,"/spec/b":3}}
+      ],
+      "policy":{"allowed_paths":["/spec/a","/spec/b"],"protected_prefixes":[]}
+    },
+    {
+      "live":{"/spec/x":1,"/spec/y":2},
+      "ownership":[{"path":"/spec/x","managers":["one"]},{"path":"/spec/y","managers":["two"]}],
+      "defaults":{},
+      "intents":[
+        {"request_id":"r1","manager":"one","force":false,"fields":{"/spec/x":5}},
+        {"request_id":"r2","manager":"two","force":false,"fields":{"/spec/x":6,"/spec/y":7}},
+        {"request_id":"r3","manager":"two","force":true,"fields":{"/spec/x":6,"/spec/y":7}}
+      ],
+      "policy":{"allowed_paths":["/spec/x","/spec/y"],"protected_prefixes":[]}
+    }
+  ],
+  "invalid": [
+    {"live":{},"ownership":[],"defaults":{},"intents":[],"policy":{"allowed_paths":["/spec/b","/spec/a"],"protected_prefixes":[]}},
+    {"live":{"/spec/a":1},"ownership":[{"path":"/spec/b","managers":["x"]}],"defaults":{},"intents":[],"policy":{"allowed_paths":["/spec/a","/spec/b"],"protected_prefixes":[]}},
+    {"live":{},"ownership":[],"defaults":{},"intents":[{"request_id":"r","manager":"x","force":false,"fields":{}},{"request_id":"r","manager":"y","force":false,"fields":{}}],"policy":{"allowed_paths":[],"protected_prefixes":[]}},
+    {"live":{"/spec/a":1.5},"ownership":[],"defaults":{},"intents":[],"policy":{"allowed_paths":["/spec/a"],"protected_prefixes":[]}},
+    {"live":{},"ownership":[],"defaults":{},"intents":[],"policy":{"allowed_paths":["/spec/../a"],"protected_prefixes":[]}}
+  ]
+}

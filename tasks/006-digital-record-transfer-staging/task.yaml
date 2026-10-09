@@ -1,0 +1,77 @@
+task_id: 006-digital-record-transfer-staging
+title: Stage a Permanent Electronic-Record Transfer
+prompt_file: instruction.md
+timeout_sec: 3600
+domain: Business Operations
+task_category: Content Production
+task_subcategory: Document Processing
+difficulty: hard
+capability_tags:
+- terminal
+- records_management
+- structured_data
+- checksums
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- superseded_scan
+- wrapper_codec_mismatch
+- checksum_quarantine
+- closed_record_set
+required_artifacts:
+- transfer_plan.json
+- staged_transfer/manifest.json
+- staged_transfer/checksums.sha256
+- quarantine.json
+- validation_receipt.json
+- records_handoff.md
+task_family: digital-record-transfer-staging
+variant: preservation-master-and-checksum-quarantine
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - NARA-TRANSFER-01
+  - NARA-QM-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - transfer_plan.json
+  - staged_transfer/manifest.json
+  - staged_transfer/checksums.sha256
+  - staged_transfer/records/REC-001/january_council_minutes.pdf
+  - staged_transfer/records/REC-002/district_boundary_map.tif
+  - staged_transfer/records/REC-003/public_budget_hearing.wav
+  - quarantine.json
+  - validation_receipt.json
+  - records_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: records_handoff
+  max_fallback_weight: 0.2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    sha256: hashlib
+  grader: {}
+  services: []
+schema_version: 2

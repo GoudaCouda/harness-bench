@@ -1,0 +1,14 @@
+{
+  "task_id": "084-indicator-vintage-reconcile",
+  "expected_keys": [
+    "Aster/2023", "Aster/2024", "Aster/2025",
+    "Boron/2023", "Boron/2024", "Boron/2025",
+    "Cygnus/2023", "Cygnus/2024", "Cygnus/2025"
+  ],
+  "indicator": "GDPCON15",
+  "unit": "constant 2015 credits",
+  "vintage": "2026-07",
+  "pages_consumed": [1, 2, 3],
+  "row_count": 9,
+  "2025_leader": "Cygnus"
+}

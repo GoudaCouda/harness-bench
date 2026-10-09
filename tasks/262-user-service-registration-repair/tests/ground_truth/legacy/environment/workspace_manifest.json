@@ -1,0 +1,27 @@
+{
+  "schema_version": "case08_workspace_manifest_v2",
+  "environment_template_id": "python_sqlite_feature_repo_isolated_verifier_v2",
+  "fixed_time": "2026-07-20T00:00:00Z",
+  "locale": "zh-CN",
+  "timezone": "UTC",
+  "network_policy": "offline",
+  "reset_additions": [
+    {
+      "path": "state/service.db",
+      "generator": "environment/reset.py:nami_service.db.initialize_database",
+      "seed_profile": "case08_seed_v1"
+    }
+  ],
+  "fixture_files": [
+    {"path": "POLICY.md", "sha256": "d3918bc6ebe3a3f15365d3c8be2ea9dd19aa9e5d5527e18980294e92241e18c9"},
+    {"path": "README.md", "sha256": "76638c12e9553126fddc326e16d3755601e5e67314f0fe1421177aeac65c0525"},
+    {"path": "TASK.md", "sha256": "54ba08babb442bdd64b96563203fbc78f22d2249e5211c54569786e2b64bdc0d"},
+    {"path": "nami_service/__init__.py", "sha256": "a1e2236cd9f75ea9ea513fb4c9c5806d86288cd8deeff1c8d181343aa865f614"},
+    {"path": "nami_service/db.py", "sha256": "f7ce96a0e54f1ba0f0e2ef0ba9065be4c8e8548528287adae4e36d79564f6fac"},
+    {"path": "nami_service/security.py", "sha256": "d5004964930ef7b1a033d0cefa4c29f5688dee7cf5b2f882364409ec0b077d5a"},
+    {"path": "nami_service/users.py", "sha256": "307e2d6e3cf5393e47a4d2d5cd4a2c8cc816004e9f10765c82fdf6f68100db7f"},
+    {"path": "run_public_tests.py", "sha256": "d7bac73bdf04a0300d12d2843787a9331e1d74696816f81a04bd039c4180e7d0"},
+    {"path": "tests/__init__.py", "sha256": "c6e6f56bddcd5a280eb0f436c6428a12b774a9086fc03d563a4b312949684c39"},
+    {"path": "tests/test_public_contract.py", "sha256": "720cfdba72dee9a876d34b0f1c08a94c84e16445322816ae6f7974c8eced6d65"}
+  ]
+}

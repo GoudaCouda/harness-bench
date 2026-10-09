@@ -1,0 +1,7 @@
+[
+  {"address":"db.main","depends_on":[],"attributes":{"engine":"v2","password":"new-secret"},"immutable":["engine"],"lifecycle":{"create_before_destroy":true,"prevent_destroy":false,"ignore_changes":[],"replace_triggered_by":[],"moved_from":null}},
+  {"address":"app.api","depends_on":["db.main"],"attributes":{"image":"api:v2","replicas":2},"immutable":[],"lifecycle":{"create_before_destroy":false,"prevent_destroy":false,"ignore_changes":[],"replace_triggered_by":["db.main"],"moved_from":"service.api"}},
+  {"address":"cache.main","depends_on":[],"attributes":{"tier":"standard","ttl":60},"immutable":[],"lifecycle":{"create_before_destroy":false,"prevent_destroy":false,"ignore_changes":["ttl"],"replace_triggered_by":[],"moved_from":null}},
+  {"address":"queue.main","depends_on":[],"attributes":{"encrypted":true},"immutable":["encrypted"],"lifecycle":{"create_before_destroy":false,"prevent_destroy":true,"ignore_changes":[],"replace_triggered_by":[],"moved_from":null}},
+  {"address":"worker.main","depends_on":["app.api"],"attributes":{"image":"worker:v1"},"immutable":[],"lifecycle":{"create_before_destroy":true,"prevent_destroy":false,"ignore_changes":[],"replace_triggered_by":["app.api"],"moved_from":null}}
+]

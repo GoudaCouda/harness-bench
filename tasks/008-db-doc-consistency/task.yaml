@@ -1,0 +1,50 @@
+task_id: 008-db-doc-consistency
+title: Repair a Production Runbook Before an On-Call Handoff
+prompt_file: instruction.md
+timeout_sec: 1800
+domain: IT Operations
+task_category: Content Production
+task_subcategory: Document Processing
+difficulty: medium
+capability_tags:
+- state_reconciliation
+- technical_writing
+- structured_data
+- change_management
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- state_management
+- verification_behavior
+- safety_boundary
+stressors:
+- conflicting_evidence
+required_artifacts:
+- db/deployment_guide.md
+- change_review.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - POSTGRES-BACKUP-RESTORE
+  - GOOGLE-SRE-INCIDENT
+task_family: 008-db-doc-consistency
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - change_review.md
+  allowed_modified:
+  - db/deployment_guide.md
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

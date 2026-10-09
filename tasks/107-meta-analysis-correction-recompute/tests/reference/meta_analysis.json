@@ -1,0 +1,110 @@
+{
+  "analysis_id": "SR-NIMBUS-2026-U1",
+  "effect_measure": "risk_ratio",
+  "heterogeneity": {
+    "band": "low",
+    "degrees_of_freedom": 5,
+    "i_squared_percent": 0.0,
+    "q": 2.592586,
+    "tau_squared": 0.0
+  },
+  "included_record_ids": [
+    "EXT-ASTER-P12",
+    "EXT-BOREALIS-P12-V2",
+    "EXT-CEDAR-P12",
+    "EXT-DELTA-P12",
+    "EXT-ELM-P12",
+    "EXT-FLINT-P12"
+  ],
+  "model": "random_effects_dl_inverse_variance_log_rr",
+  "pooled_random_effects": {
+    "ci_high": 0.853138,
+    "ci_low": 0.537718,
+    "conclusion": "benefit_supported",
+    "risk_ratio": 0.677309,
+    "standard_error": 0.117754
+  },
+  "prior_comparison": {
+    "ci_high": 1.247758,
+    "ci_low": 0.593568,
+    "i_squared_percent": 59.608978,
+    "replacement_record_id": "EXT-BOREALIS-P12-V2",
+    "risk_ratio": 0.860598,
+    "superseded_record_id": "EXT-BOREALIS-P12-V1"
+  },
+  "protocol_version": "3.2",
+  "studies": [
+    {
+      "ci_high": 0.998577,
+      "ci_low": 0.348596,
+      "control_events": 30,
+      "control_total": 118,
+      "intervention_events": 18,
+      "intervention_total": 120,
+      "record_id": "EXT-ASTER-P12",
+      "risk_ratio": 0.59,
+      "study_id": "ASTER",
+      "weight_percent": 19.236658
+    },
+    {
+      "ci_high": 0.877213,
+      "ci_low": 0.361677,
+      "control_events": 42,
+      "control_total": 138,
+      "intervention_events": 24,
+      "intervention_total": 140,
+      "record_id": "EXT-BOREALIS-P12-V2",
+      "risk_ratio": 0.563265,
+      "study_id": "BOREALIS",
+      "weight_percent": 27.141901
+    },
+    {
+      "ci_high": 1.404793,
+      "ci_low": 0.417452,
+      "control_events": 20,
+      "control_total": 97,
+      "intervention_events": 15,
+      "intervention_total": 95,
+      "record_id": "EXT-CEDAR-P12",
+      "risk_ratio": 0.765789,
+      "study_id": "CEDAR",
+      "weight_percent": 14.469181
+    },
+    {
+      "ci_high": 1.32408,
+      "ci_low": 0.285651,
+      "control_events": 15,
+      "control_total": 82,
+      "intervention_events": 9,
+      "intervention_total": 80,
+      "record_id": "EXT-DELTA-P12",
+      "risk_ratio": 0.615,
+      "study_id": "DELTA",
+      "weight_percent": 9.057833
+    },
+    {
+      "ci_high": 1.601432,
+      "ci_low": 0.548462,
+      "control_events": 22,
+      "control_total": 108,
+      "intervention_events": 21,
+      "intervention_total": 110,
+      "record_id": "EXT-ELM-P12",
+      "risk_ratio": 0.93719,
+      "study_id": "ELM",
+      "weight_percent": 18.556392
+    },
+    {
+      "ci_high": 1.423505,
+      "ci_low": 0.36576,
+      "control_events": 17,
+      "control_total": 92,
+      "intervention_events": 12,
+      "intervention_total": 90,
+      "record_id": "EXT-FLINT-P12",
+      "risk_ratio": 0.721569,
+      "study_id": "FLINT",
+      "weight_percent": 11.538036
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "case12_workspace_manifest_v1",
+  "agent_visible_roots": ["input", "output", "runtime"],
+  "seed_files": [
+    {"path": "input/citation_index.json", "sha256": "5e06c3b82c4f4f890dca6a69eef2f36c215799d1899b307254b0ea1e18dcea29", "mode": "read_only"},
+    {"path": "input/preferences.json", "sha256": "49ad86055cc11e584a46a584762b6de2710e35d3ed8c6729d1c933e3c03990af", "mode": "read_only"},
+    {"path": "input/travel_snapshot.json", "sha256": "f447aff603893a04306d47237c7b817c35bc9051d32d08e6755874b3e423914e", "mode": "read_only"}
+  ],
+  "reset_created_entries": [
+    {"path": "output", "type": "directory"},
+    {"path": "runtime", "type": "directory"},
+    {"path": "runtime/network_events.jsonl", "type": "empty_file"}
+  ],
+  "allowed_outputs": [
+    "output/recommendation.json",
+    "output/comparison.csv",
+    "output/report.md"
+  ],
+  "hidden_from_agent": ["oracle", "verifier", "tests", "validation"]
+}

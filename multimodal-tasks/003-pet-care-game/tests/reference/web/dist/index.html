@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Care Game Stage</title>
+    <style>
+      :root {
+        color: #17231c;
+        background: #f5f8f2;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 24px 0 40px;
+      }
+
+      header,
+      .controls,
+      .metrics,
+      .workspace,
+      .routine {
+        margin-bottom: 18px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: start;
+      }
+
+      .eyebrow {
+        color: #65736b;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 4px;
+      }
+
+      .controls,
+      .metrics,
+      .workspace,
+      .routine-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .controls {
+        grid-template-columns: repeat(5, minmax(130px, 1fr));
+        align-items: end;
+        background: #ffffff;
+        border: 1px solid #d8e0d8;
+        border-radius: 8px;
+        padding: 14px;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        color: #435147;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      select,
+      input,
+      button {
+        min-height: 38px;
+        border: 1px solid #adbaaf;
+        border-radius: 6px;
+        background: #fff;
+        color: #17231c;
+        font: inherit;
+        padding: 8px 10px;
+      }
+
+      button {
+        cursor: pointer;
+        font-weight: 800;
+      }
+
+      button.active,
+      button[aria-pressed="true"] {
+        border-color: #3b6a4d;
+        background: #e7f1e8;
+      }
+
+      :focus-visible {
+        outline: 3px solid #3b6a4d;
+        outline-offset: 2px;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .metric,
+      .panel,
+      .record,
+      .routine-card {
+        border: 1px solid #d8e0d8;
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .metric {
+        padding: 14px;
+      }
+
+      .metric span,
+      .fact span {
+        color: #65736b;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.45rem;
+      }
+
+      .workspace {
+        grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.1fr);
+      }
+
+      .list,
+      .routine-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .panel,
+      .routine {
+        padding: 14px;
+        border: 1px solid #d8e0d8;
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .record {
+        width: 100%;
+        text-align: left;
+        display: grid;
+        gap: 4px;
+      }
+
+      .record small,
+      .routine-card small {
+        color: #65736b;
+      }
+
+      .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .fact {
+        border: 1px solid #d8e0d8;
+        border-radius: 6px;
+        padding: 10px;
+      }
+
+      .routine-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .routine-card {
+        padding: 10px;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          width: min(100vw - 20px, 560px);
+          padding-top: 12px;
+        }
+
+        header,
+        .controls,
+        .metrics,
+        .workspace,
+        .routine-list {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        h1 {
+          font-size: 1.45rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-label="Pet care game workspace">
+      <header>
+        <div>
+          <p class="eyebrow">Care game stage</p>
+          <h1>Pet care game stage</h1>
+          <p>Game stage with care meter, companion card, routine tray, energy meter, and action log.</p>
+        </div>
+        <strong>Energy forecast</strong>
+      </header>
+
+      <section class="controls" aria-label="Local game controls">
+        <label>
+          Species filter
+          <select id="species" aria-label="Species filter">
+            <option value="all">All pets</option>
+            <option value="bird">bird</option>
+            <option value="cat">cat</option>
+            <option value="dog">dog</option>
+            <option value="reptile">reptile</option>
+          </select>
+        </label>
+        <label>
+          Care mode
+          <select id="mode" aria-label="Care mode">
+            <option value="baseline">Baseline</option>
+            <option value="game-review">game-review</option>
+            <option value="focused">Focused</option>
+          </select>
+        </label>
+        <label>
+          Companion search
+          <input id="search" aria-label="Companion search" placeholder="ID, owner, or name" />
+        </label>
+        <label>
+          Energy boost
+          <input id="boost" type="range" min="0" max="100" value="50" aria-label="Energy boost" />
+        </label>
+        <button id="night" type="button" aria-pressed="false">Night routine</button>
+      </section>
+
+      <section class="metrics" aria-label="Derived game metrics">
+        <article class="metric"><span>Care score</span><strong id="care"></strong><small id="visibleCount"></small></article>
+        <article class="metric"><span>Hunger risk</span><strong id="hunger"></strong><small>Average from current evidence</small></article>
+        <article class="metric"><span>Action streak</span><strong id="streak"></strong><small>Care loop pressure</small></article>
+        <article class="metric"><span>Energy forecast</span><strong id="forecast"></strong><small id="modeReadout"></small></article>
+      </section>
+
+      <section class="workspace" aria-label="Game stage workspace">
+        <section class="panel" aria-label="pet list">
+          <p class="eyebrow">Companion card rail</p>
+          <h2>Visible pets</h2>
+          <div id="records" class="list"></div>
+        </section>
+
+        <aside class="panel" aria-label="Selected pet inspector">
+          <p class="eyebrow">Selected pet</p>
+          <h2 id="detailName"></h2>
+          <p id="detailSummary"></p>
+          <div class="detail-grid">
+            <div class="fact"><span>Category</span><strong id="detailCategory"></strong></div>
+            <div class="fact"><span>Owner</span><strong id="detailOwner"></strong></div>
+            <div class="fact"><span>Care score</span><strong id="detailPrimary"></strong></div>
+            <div class="fact"><span>Hunger risk</span><strong id="detailSecondary"></strong></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="routine" aria-label="Night routine tray">
+        <p class="eyebrow">Routine tray</p>
+        <h2>Night routine care queue</h2>
+        <div id="routine" class="routine-list"></div>
+      </section>
+    </main>
+
+    <script>
+      const records = [
+        { id: "PET-FINCH", name: "Comet Finch", category: "bird", owner: "Rae", status: "clear", primary: 76, secondary: 18 },
+        { id: "PET-CAT", name: "Miso Cat", category: "cat", owner: "Dee", status: "watch", primary: 64, secondary: 31 },
+        { id: "PET-PUP", name: "Juniper Pup", category: "dog", owner: "Ash", status: "review", primary: 58, secondary: 44 },
+        { id: "PET-LIZ", name: "Pixel Lizard", category: "reptile", owner: "Sol", status: "watch", primary: 69, secondary: 26 },
+        { id: "PET-FINCH-R1", name: "Comet Finch follow-up", category: "cat", owner: "Ash", status: "clear", primary: 90, secondary: 24 },
+        { id: "PET-CAT-R2", name: "Miso Cat follow-up", category: "dog", owner: "Sol", status: "watch", primary: 81, secondary: 38 },
+        { id: "PET-PUP-R3", name: "Juniper Pup follow-up", category: "reptile", owner: "Rae", status: "review", primary: 78, secondary: 52 },
+        { id: "PET-LIZ-R4", name: "Pixel Lizard follow-up", category: "bird", owner: "Dee", status: "watch", primary: 92, secondary: 35 },
+        { id: "PET-CAT-X9", name: "Miso Cat scenario 9", category: "cat", owner: "Ash", status: "clear", primary: 130, secondary: 35 },
+        { id: "PET-CAT-X10", name: "Miso Cat scenario 10", category: "dog", owner: "Sol", status: "watch", primary: 137, secondary: 31 }
+      ];
+
+      const state = {
+        species: "all",
+        mode: "baseline",
+        search: "",
+        boost: 50,
+        night: false,
+        selectedId: "PET-CAT"
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const fmt = (value) => Number(value).toLocaleString("en-US");
+
+      function visibleRecords() {
+        const query = state.search.trim().toLowerCase();
+        return records
+          .filter((record) => state.species === "all" || record.category === state.species)
+          .filter((record) => !query || `${record.id} ${record.name} ${record.owner} ${record.category}`.toLowerCase().includes(query))
+          .filter((record) => !state.night || record.status !== "clear")
+          .sort((a, b) => b.primary - a.primary);
+      }
+
+      function render() {
+        const visible = visibleRecords();
+        const selected = records.find((record) => record.id === state.selectedId) || visible[0] || records[0];
+        const multiplier = state.mode === "game-review" ? 1.18 : state.mode === "focused" ? 0.9 : 1;
+        const care = visible.reduce((sum, record) => sum + record.primary, 0);
+        const hunger = Math.round(visible.reduce((sum, record) => sum + record.secondary, 0) / Math.max(visible.length, 1));
+        const streak = visible.filter((record) => record.status === "review" || record.status === "watch").length;
+        const forecast = Math.round(selected.primary * multiplier + Number(state.boost));
+
+        $("care").textContent = fmt(care);
+        $("visibleCount").textContent = `${visible.length} visible pets`;
+        $("hunger").textContent = fmt(hunger);
+        $("streak").textContent = fmt(streak);
+        $("forecast").textContent = fmt(forecast);
+        $("modeReadout").textContent = `${state.mode} at boost ${state.boost}`;
+
+        $("records").innerHTML = visible.map((record) => `
+          <button type="button" class="record ${record.id === state.selectedId ? "active" : ""}" data-id="${record.id}">
+            <strong>${record.id} - ${record.name}</strong>
+            <small>${record.category} / ${record.owner} / ${record.status}</small>
+          </button>
+        `).join("");
+
+        const routineRows = state.night
+          ? visible
+          : records.filter((record) => record.status === "review" || record.status === "watch");
+        $("routine").innerHTML = routineRows
+          .filter((record) => record.status === "review" || record.status === "watch")
+          .map((record) => `
+            <article class="routine-card">
+              <strong>${record.id}</strong>
+              <small>${record.name} / ${record.owner} / ${record.status}</small>
+            </article>
+          `).join("");
+
+        $("detailName").textContent = selected.name;
+        $("detailSummary").textContent = `${selected.id} is ${selected.status} for ${selected.owner}. Workflow note: local care routine only.`;
+        $("detailCategory").textContent = selected.category;
+        $("detailOwner").textContent = selected.owner;
+        $("detailPrimary").textContent = fmt(selected.primary);
+        $("detailSecondary").textContent = fmt(selected.secondary);
+
+        document.querySelectorAll("[data-id]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.selectedId = button.getAttribute("data-id");
+            render();
+          });
+        });
+      }
+
+      $("species").addEventListener("change", (event) => {
+        state.species = event.target.value;
+        render();
+      });
+      $("mode").addEventListener("change", (event) => {
+        state.mode = event.target.value;
+        render();
+      });
+      $("search").addEventListener("input", (event) => {
+        state.search = event.target.value;
+        render();
+      });
+      $("boost").addEventListener("input", (event) => {
+        state.boost = Number(event.target.value);
+        render();
+      });
+      $("night").addEventListener("click", () => {
+        state.night = !state.night;
+        $("night").setAttribute("aria-pressed", String(state.night));
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>

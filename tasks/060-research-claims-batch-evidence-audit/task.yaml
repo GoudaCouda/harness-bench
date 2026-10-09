@@ -1,0 +1,46 @@
+task_id: 060-research-claims-batch-evidence-audit
+title: Batch Research Claims Evidence Audit
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: Research
+task_category: Research and Analysis
+task_subcategory: Evidence-Based Research
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors: []
+required_artifacts:
+- claim_audit.csv
+- evidence_matrix.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-060
+task_family: 060-research-claims-batch-evidence-audit
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - claim_audit.csv
+  - evidence_matrix.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader: {}
+  services: []

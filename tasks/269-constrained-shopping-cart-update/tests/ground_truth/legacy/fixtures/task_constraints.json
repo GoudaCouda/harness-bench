@@ -1,0 +1,10 @@
+{
+  "target_user_id": "user_alpha",
+  "required_size": "M",
+  "required_color": "海蓝",
+  "minimum_rating_x10": 46,
+  "maximum_price_cents": 30000,
+  "required_quantity": 1,
+  "require_in_stock": true,
+  "selection_rule": "unique_lowest_price"
+}

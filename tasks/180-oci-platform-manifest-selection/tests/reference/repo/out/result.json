@@ -1,0 +1,15 @@
+{
+  "compatible": [
+    "sha256:ccc",
+    "sha256:aaa"
+  ],
+  "reason": "most_preferred_compatible",
+  "rejected": [
+    {
+      "id": "arm",
+      "reason": "os_arch_mismatch"
+    }
+  ],
+  "selected_digest": "sha256:ccc",
+  "status": "selected"
+}

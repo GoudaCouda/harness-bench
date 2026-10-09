@@ -1,0 +1,11 @@
+{
+  "records": {
+    "edge.mill.local": "10.1.2.3",
+    "api.mill.local": "10.1.2.3",
+    "web.mill.local": "10.1.2.3"
+  },
+  "loops": [
+    "a.mill.local",
+    "b.mill.local"
+  ]
+}

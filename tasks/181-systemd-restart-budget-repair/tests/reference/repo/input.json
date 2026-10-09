@@ -1,0 +1,48 @@
+{
+  "events": [
+    {
+      "at": 70,
+      "event": "start",
+      "generation": 1,
+      "id": "s1",
+      "unit": "api"
+    },
+    {
+      "at": 72,
+      "event": "exit",
+      "generation": 1,
+      "id": "e1",
+      "result": "failure",
+      "unit": "api"
+    },
+    {
+      "at": 80,
+      "event": "start",
+      "generation": 1,
+      "id": "s2",
+      "unit": "api"
+    },
+    {
+      "at": 82,
+      "event": "exit",
+      "generation": 1,
+      "id": "e2",
+      "result": "watchdog",
+      "unit": "api"
+    },
+    {
+      "at": 90,
+      "event": "start",
+      "generation": 2,
+      "id": "w1",
+      "unit": "worker"
+    }
+  ],
+  "policy": {
+    "burst": 2,
+    "interval": 40,
+    "now": 100,
+    "restart_sec": 5,
+    "success_reset_sec": 30
+  }
+}

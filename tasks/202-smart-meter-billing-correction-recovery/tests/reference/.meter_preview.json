@@ -1,0 +1,15 @@
+{
+  "correction_count": 4,
+  "customer_contacted": false,
+  "decision_count": 5,
+  "external_actions_executed": false,
+  "fallback_checksum_verified": true,
+  "fallback_signature_verified": true,
+  "hold_count": 1,
+  "primary_batch_rejected_as_damaged": true,
+  "recovery_id": "MBR-202611-FALLBACK-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "970ba363c2ad2e8bc68f815779e107cc027d5904ebcecece144f88c71351b6a5",
+  "source_checkpoint": "fb47226dd5faacd6fe27fab9d10e722222544ed26ebc163563d8785293c739cb",
+  "status": "valid"
+}

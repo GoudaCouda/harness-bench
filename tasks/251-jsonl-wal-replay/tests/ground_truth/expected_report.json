@@ -1,0 +1,12 @@
+{
+  "applied_op_ids": [
+    "op-10",
+    "op-11",
+    "op-12",
+    "op-13"
+  ],
+  "skipped_duplicate_op_ids": [
+    "op-10"
+  ],
+  "torn_tail": true
+}

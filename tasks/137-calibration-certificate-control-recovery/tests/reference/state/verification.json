@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "attachment_integrity_checked": true,
+    "database_projection_exact": true,
+    "decimal_guard_bands_exact": true,
+    "duplicates_deduplicated": true,
+    "interrupted_journal_recovered": true,
+    "local_only": true,
+    "reference_chains_evaluated": true,
+    "signed_events_verified": true,
+    "single_committed_recovery": true,
+    "source_checkpoint_matches": true
+  },
+  "external_actions_executed": false,
+  "final_revision": 74,
+  "recovery_id": "MCR-20260815-01",
+  "schema_version": 1,
+  "semantic_db_digest": "b0894e38c67d5c5d65913c75e9d9256383d7bdfdecfd33839d9f4ec3311e360c",
+  "semantic_plan_digest": "2f724c521caecad2ae1c8059ba23f6d5ed52ed09512ae313267bd2f3fe8a0987",
+  "source_checkpoint": "818bf2e4779c56843a475f0305e5761f2cf24a824a797e8c9a610d92a50485ea",
+  "status": "pass"
+}

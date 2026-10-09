@@ -1,0 +1,8 @@
+{
+  "files": {
+    "evidence/custody_events.jsonl": "4944f1c4546ee1fd25cc919fdce2129e9a914d5db262bb079f6095207d496063",
+    "evidence/event_trust.json": "eb4871f6d96d8e8f32c1d69dea3eee6bf58a2975f377d945c58b42694531f372",
+    "policy/accession_policy.json": "5f742e0d63b1e61e332be6ffe135100a3a5af2a22f657624b2d15ae24cc7d5bb"
+  },
+  "schema_version": 1
+}

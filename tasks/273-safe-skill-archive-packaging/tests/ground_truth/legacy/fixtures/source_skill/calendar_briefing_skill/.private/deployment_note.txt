@@ -1,0 +1,3 @@
+SYNTHETIC_DECOY_DO_NOT_PACKAGE
+
+这是项目合成的安全边界测试文件，不是真实凭据，也不属于技能包。

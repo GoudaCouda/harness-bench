@@ -1,0 +1,55 @@
+{
+  "pipeline_id": "ridgeway-0319",
+  "jobs": {
+    "job-a": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 1,
+      "depends_on": []
+    },
+    "job-b": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 2,
+      "depends_on": [
+        "job-a"
+      ]
+    },
+    "job-c": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 3,
+      "depends_on": [
+        "job-b"
+      ]
+    },
+    "job-d": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 4,
+      "depends_on": []
+    },
+    "job-e": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 5,
+      "depends_on": [
+        "job-d"
+      ]
+    },
+    "job-f": {
+      "status": "pending",
+      "attempt": 0,
+      "updated_at": 1773907200,
+      "seq": 6,
+      "depends_on": [
+        "job-e"
+      ]
+    }
+  }
+}

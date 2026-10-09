@@ -1,0 +1,30 @@
+schema_version: 1
+task_id: 086-revision-vintage-ledger
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: vintage_and_series
+  title: Comparable vintages and series are identified
+  question: Does the brief compare preliminary and revised vintages for both seasonally adjusted EMP_SA and HOURS_SA?
+  pass_anchors: [Equivalent plain-language series descriptions are acceptable if identity and adjustment are unambiguous.]
+  fail_anchors: [A vintage, series, or seasonal-adjustment boundary is absent or contradicted.]
+- id: changed_claims
+  title: Both reversed latest-month claims are corrected
+  question: Does the brief withdraw the old EMP_SA increase in favor of a decrease and the old HOURS_SA decrease in favor of an increase after revision?
+  pass_anchors: [Rise/fall, growth/decline, or equivalent directional wording is acceptable.]
+  fail_anchors: [Either old claim remains supported or a corrected direction is missing.]
+- id: retained_claim
+  title: The still-valid January comparison is retained
+  question: Does the brief retain the claim that revised June EMP_SA remains above revised January EMP_SA?
+  pass_anchors: [Equivalent above-baseline wording is acceptable.]
+  fail_anchors: [The claim is omitted, withdrawn, or compared across different series.]
+- id: exclusion_boundary
+  title: Non-seasonally-adjusted evidence remains outside conclusions
+  question: Does the brief exclude EMP_NSA from trend conclusions because it is not seasonally adjusted and lacks a comparable preliminary row?
+  pass_anchors: [Equivalent non-comparability reasoning is acceptable.]
+  fail_anchors: [EMP_NSA is mixed into conclusions or exclusion is unexplained.]
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

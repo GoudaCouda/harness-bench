@@ -1,0 +1,7 @@
+{
+  "index_id": "IDX-418",
+  "source_artifact": "ART-417",
+  "detector_id": "DET-REL-7",
+  "credential_fingerprint": "sha256:redacted-in-index",
+  "payload_materialized": false
+}

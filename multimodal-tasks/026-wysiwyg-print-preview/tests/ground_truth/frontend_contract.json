@@ -1,0 +1,200 @@
+{
+  "task_id": "026-wysiwyg-print-preview",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "wysiwyg_print_preview_protected_inputs",
+    "wysiwyg_print_preview_interaction_model",
+    "wysiwyg_print_preview_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/print-pages.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "PAGE-1",
+      "title": "Abstract"
+    },
+    {
+      "id": "PAGE-2",
+      "title": "Methods"
+    },
+    {
+      "id": "PAGE-3",
+      "title": "Results"
+    },
+    {
+      "id": "PAGE-4",
+      "title": "Notes"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "PAGE-1",
+      "title": "Abstract",
+      "page": 1,
+      "words": 180,
+      "x": 26,
+      "y": 40
+    },
+    {
+      "id": "PAGE-2",
+      "title": "Methods",
+      "page": 2,
+      "words": 420,
+      "x": 74,
+      "y": 40
+    },
+    {
+      "id": "PAGE-3",
+      "title": "Results",
+      "page": 3,
+      "words": 360,
+      "x": 26,
+      "y": 78
+    },
+    {
+      "id": "PAGE-4",
+      "title": "Notes",
+      "page": 4,
+      "words": 90,
+      "x": 74,
+      "y": 78
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "print"
+    ],
+    [
+      "page"
+    ],
+    [
+      "header"
+    ],
+    [
+      "Paper size"
+    ],
+    [
+      "Pinned count"
+    ],
+    [
+      "Word total"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "print-board"
+    ],
+    [
+      "data-page-id"
+    ],
+    [
+      "Pin page"
+    ],
+    [
+      "Clear pins"
+    ],
+    [
+      "running-header"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Pinned pages"
+    ],
+    [
+      "Word total"
+    ],
+    [
+      "Selected page"
+    ],
+    [
+      "letter"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"print-board\"]",
+    "marker": {
+      "attr": "data-page-id",
+      "id": "PAGE-2",
+      "x": 74,
+      "y": 40,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-page-id",
+        "id": "PAGE-1",
+        "x": 26,
+        "y": 40,
+        "tol": 10
+      },
+      {
+        "attr": "data-page-id",
+        "id": "PAGE-2",
+        "x": 74,
+        "y": 40,
+        "tol": 10
+      },
+      {
+        "attr": "data-page-id",
+        "id": "PAGE-3",
+        "x": 26,
+        "y": 78,
+        "tol": 10
+      },
+      {
+        "attr": "data-page-id",
+        "id": "PAGE-4",
+        "x": 74,
+        "y": 78,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "pin page"
+      ]
+    ],
+    "body_has": [
+      "PAGE-2",
+      "Methods",
+      "420",
+      "Pinned",
+      "1"
+    ],
+    "selects": [
+      [
+        "Paper size",
+        "letter"
+      ]
+    ],
+    "toggles": [],
+    "after_toggle": [],
+    "name": "wysiwyg_print_preview"
+  }
+}

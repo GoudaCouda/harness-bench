@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "approvals": [
+    {"approval_id": "APR-9001-R1", "request_id": "LR-9001", "revision": 1, "employee_id": "E-101", "leave_code": "PTO", "start_local": "2026-07-14T22:00:00-07:00", "end_local": "2026-07-15T06:00:00-07:00", "signed_at_utc": "2026-07-10T16:00:00+00:00", "key_id": "K-HR-7", "supersedes": null, "signature": "ec4d7860fb5b2b4bbb43312eb1de7c7b36b0451f552932bd855a2613c0a49b8f"},
+    {"approval_id": "APR-9001-R2", "request_id": "LR-9001", "revision": 2, "employee_id": "E-101", "leave_code": "SICK", "start_local": "2026-07-14T22:00:00-07:00", "end_local": "2026-07-15T02:00:00-07:00", "signed_at_utc": "2026-07-29T17:20:00+00:00", "key_id": "K-HR-7", "supersedes": "APR-9001-R1", "signature": "e701d04a94ea3fad25ad4181797ddd398e264ded75f62d975b35ff30fd39c2a2"},
+    {"approval_id": "APR-9002-R2", "request_id": "LR-9002", "revision": 2, "employee_id": "E-202", "leave_code": "PTO", "start_local": "2026-07-09T09:00:00-04:00", "end_local": "2026-07-09T17:00:00-04:00", "signed_at_utc": "2026-07-08T14:00:00+00:00", "key_id": "K-HR-OLD", "supersedes": null, "signature": "3663f63691c53f87567d922e9dc2659f9a039399923cab5e04ba167c0f61d7cb"},
+    {"approval_id": "APR-9002-R3", "request_id": "LR-9002", "revision": 3, "employee_id": "E-202", "leave_code": "PFL", "start_local": "2026-07-09T09:00:00-04:00", "end_local": "2026-07-09T17:00:00-04:00", "signed_at_utc": "2026-07-31T19:10:00+00:00", "key_id": "K-HR-7", "supersedes": "APR-9002-R2", "signature": "60335e853a31dc5b4c775c04cf4a7ce371d8e7df59a47e96641c9027fd641c5d"},
+    {"approval_id": "APR-9003-R2", "request_id": "LR-9003", "revision": 2, "employee_id": "E-303", "leave_code": "SICK", "start_local": "2026-07-11T13:00:00+05:30", "end_local": "2026-07-11T17:00:00+05:30", "signed_at_utc": "2026-07-30T10:00:00+00:00", "key_id": "K-MGR-3", "supersedes": "APR-9003-R1", "signature": "4b8adf8a54ea76fd7b36b0c8ac03661147c6d9fd568ddade78d3eb08fa524a7f"},
+    {"approval_id": "APR-9004-R2", "request_id": "LR-9004", "revision": 2, "employee_id": "E-404", "leave_code": "PFL", "start_local": "2026-07-15T08:00:00-05:00", "end_local": "2026-07-15T14:00:00-05:00", "signed_at_utc": "2026-08-01T15:00:00+00:00", "key_id": "K-HR-7", "supersedes": "APR-9004-R1", "signature": "7f99aa4e86ebaa20270c8e2240baa26f570cd057d19d57ff694402b1817181a9"}
+  ]
+}

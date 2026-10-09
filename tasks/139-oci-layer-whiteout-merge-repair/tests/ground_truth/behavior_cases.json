@@ -1,0 +1,231 @@
+{
+  "whiteout_and_opaque_reconstruction": [
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "a",
+              "kind": "dir",
+              "digest": null,
+              "target": null,
+              "mode": 493
+            },
+            {
+              "path": "a/x",
+              "kind": "file",
+              "digest": "x",
+              "target": null,
+              "mode": 420
+            },
+            {
+              "path": "a/y",
+              "kind": "file",
+              "digest": "y",
+              "target": null,
+              "mode": 420
+            }
+          ]
+        },
+        {
+          "digest": "n",
+          "entries": [
+            {
+              "path": "a/z",
+              "kind": "file",
+              "digest": "z",
+              "target": null,
+              "mode": 420
+            },
+            {
+              "path": "a/.wh..wh..opq",
+              "kind": "file",
+              "digest": "sha256:empty",
+              "target": null,
+              "mode": 0
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    },
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "d/x",
+              "kind": "file",
+              "digest": "x",
+              "target": null,
+              "mode": 420
+            },
+            {
+              "path": "d/y/z",
+              "kind": "file",
+              "digest": "z",
+              "target": null,
+              "mode": 420
+            }
+          ]
+        },
+        {
+          "digest": "n",
+          "entries": [
+            {
+              "path": "d/.wh.y",
+              "kind": "file",
+              "digest": "sha256:empty",
+              "target": null,
+              "mode": 0
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    }
+  ],
+  "hierarchy_type_and_link_safety": [
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "a/x",
+              "kind": "file",
+              "digest": "x",
+              "target": null,
+              "mode": 420
+            }
+          ]
+        },
+        {
+          "digest": "n",
+          "entries": [
+            {
+              "path": "a",
+              "kind": "file",
+              "digest": "a",
+              "target": null,
+              "mode": 420
+            },
+            {
+              "path": "link",
+              "kind": "symlink",
+              "digest": null,
+              "target": "a",
+              "mode": 511
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 488
+      }
+    },
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "target",
+              "kind": "symlink",
+              "digest": null,
+              "target": "real",
+              "mode": 511
+            }
+          ]
+        },
+        {
+          "digest": "n",
+          "entries": [
+            {
+              "path": "jump",
+              "kind": "symlink",
+              "digest": null,
+              "target": "target/x",
+              "mode": 511
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "a",
+              "kind": "file",
+              "digest": "x",
+              "target": null,
+              "mode": 420
+            },
+            {
+              "path": "a/x",
+              "kind": "file",
+              "digest": "y",
+              "target": null,
+              "mode": 420
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    },
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "../x",
+              "kind": "file",
+              "digest": "x",
+              "target": null,
+              "mode": 420
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    },
+    {
+      "layers": [
+        {
+          "digest": "b",
+          "entries": [
+            {
+              "path": "x",
+              "kind": "symlink",
+              "digest": null,
+              "target": "../../escape",
+              "mode": 511
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "implicit_dir_mode": 493
+      }
+    }
+  ]
+}

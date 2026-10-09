@@ -1,0 +1,117 @@
+{
+  "plan_header": ["change_id", "system", "action", "target_principal", "target_value", "idempotency_key", "approval_owner", "execution_state", "evidence_refs"],
+  "review_header": ["system", "effective_entitlements", "review_status", "planned_change_ids", "owner", "conflict_state", "execution_state", "evidence_refs"],
+  "changes": {
+    "source_control|remove_membership|GROUP-ENG-PLATFORM": {
+      "system": "source_control",
+      "action": "remove_membership",
+      "target_principal": "E-200",
+      "target_value": "GROUP-ENG-PLATFORM",
+      "idempotency_key": "TR-200:source_control:GROUP-ENG-PLATFORM:remove_membership:v1",
+      "approval_owner": "scm_owner",
+      "execution_state": "proposed_only",
+      "required_evidence": ["group_memberships.csv#GM-17", "group_graph.csv#GE-17", "group_entitlements.csv#GA-17", "target_role_matrix.csv#source_control"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-101", "direct_entitlements.csv#DX-102", "group_memberships.csv#GM-17", "group_graph.csv#GE-17", "group_entitlements.csv#GA-17", "target_role_matrix.csv#source_control"]
+    },
+    "analytics|add_entitlement|dashboard_view": {
+      "system": "analytics",
+      "action": "add_entitlement",
+      "target_principal": "E-200",
+      "target_value": "dashboard_view",
+      "idempotency_key": "TR-200:analytics:dashboard_view:add_entitlement:v1",
+      "approval_owner": "analytics_owner",
+      "execution_state": "proposed_only",
+      "required_evidence": ["target_role_matrix.csv#analytics", "direct_entitlements.csv"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "target_role_matrix.csv#analytics", "direct_entitlements.csv"]
+    },
+    "crm|remove_entitlement|refund_approve": {
+      "system": "crm",
+      "action": "remove_entitlement",
+      "target_principal": "E-200",
+      "target_value": "refund_approve",
+      "idempotency_key": "TR-200:crm:refund_approve:remove_entitlement:v1",
+      "approval_owner": "identity_control",
+      "execution_state": "proposed_only",
+      "required_evidence": ["direct_entitlements.csv#DX-602", "sod_policy.csv#SOD-SUPPORT-REFUND", "target_role_matrix.csv#crm"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-601", "direct_entitlements.csv#DX-602", "sod_policy.csv#SOD-SUPPORT-REFUND", "target_role_matrix.csv#crm"]
+    },
+    "legacy_hr|remove_membership|GROUP-LEGACY-PAY": {
+      "system": "legacy_hr",
+      "action": "remove_membership",
+      "target_principal": "E-200",
+      "target_value": "GROUP-LEGACY-PAY",
+      "idempotency_key": "TR-200:legacy_hr:GROUP-LEGACY-PAY:remove_membership:v1",
+      "approval_owner": "hris_owner",
+      "execution_state": "proposed_only",
+      "required_evidence": ["group_memberships.csv#GM-07", "group_entitlements.csv#GA-07", "target_role_matrix.csv#legacy_hr"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "group_memberships.csv#GM-07", "group_entitlements.csv#GA-07", "target_role_matrix.csv#legacy_hr"]
+    }
+  },
+  "nested_change_keys": ["source_control|remove_membership|GROUP-ENG-PLATFORM", "legacy_hr|remove_membership|GROUP-LEGACY-PAY"],
+  "target_and_sod_change_keys": ["analytics|add_entitlement|dashboard_view", "crm|remove_entitlement|refund_approve"],
+  "reviews": {
+    "source_control": {
+      "effective_entitlements": ["issues_write", "repo_admin", "repo_read"],
+      "review_status": "change_planned",
+      "owner": "scm_owner",
+      "conflict_state": "forbidden_nested_grant",
+      "plan_key": "source_control|remove_membership|GROUP-ENG-PLATFORM",
+      "required_evidence": ["direct_entitlements.csv#DX-101", "direct_entitlements.csv#DX-102", "group_memberships.csv#GM-17", "group_graph.csv#GE-17", "group_entitlements.csv#GA-17", "target_role_matrix.csv#source_control"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-101", "direct_entitlements.csv#DX-102", "group_memberships.csv#GM-17", "group_graph.csv#GE-17", "group_entitlements.csv#GA-17", "target_role_matrix.csv#source_control"]
+    },
+    "finance": {
+      "effective_entitlements": ["expense_submit"],
+      "review_status": "receipt_reconciled_no_change",
+      "owner": "finance_control",
+      "conflict_state": "none",
+      "plan_key": null,
+      "required_evidence": ["direct_entitlements.csv#DX-201", "direct_entitlements.csv#DX-202", "change_events.csv#FIN-72-REQUEST", "change_events.csv#FIN-72-TIMEOUT", "change_events.csv#FIN-72-SUCCESS", "target_role_matrix.csv#finance"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-201", "direct_entitlements.csv#DX-202", "change_events.csv#FIN-72-REQUEST", "change_events.csv#FIN-72-TIMEOUT", "change_events.csv#FIN-72-SUCCESS", "target_role_matrix.csv#finance"]
+    },
+    "support": {
+      "effective_entitlements": ["ticket_agent"],
+      "review_status": "compliant_no_change",
+      "owner": "support_owner",
+      "conflict_state": "none",
+      "plan_key": null,
+      "required_evidence": ["direct_entitlements.csv#DX-301", "target_role_matrix.csv#support", "sod_policy.csv#SOD-SUPPORT-REFUND"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-301", "target_role_matrix.csv#support", "sod_policy.csv#SOD-SUPPORT-REFUND"]
+    },
+    "analytics": {
+      "effective_entitlements": [],
+      "review_status": "change_planned",
+      "owner": "analytics_owner",
+      "conflict_state": "missing_required_entitlement",
+      "plan_key": "analytics|add_entitlement|dashboard_view",
+      "required_evidence": ["target_role_matrix.csv#analytics", "direct_entitlements.csv"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "target_role_matrix.csv#analytics", "direct_entitlements.csv"]
+    },
+    "vpn": {
+      "effective_entitlements": ["vpn_privileged", "vpn_standard"],
+      "review_status": "evidence_hold",
+      "owner": "network_security",
+      "conflict_state": "exclusive_slot_conflict",
+      "plan_key": null,
+      "required_evidence": ["direct_entitlements.csv#DX-501", "direct_entitlements.csv#DX-502", "target_role_matrix.csv#vpn"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-501", "direct_entitlements.csv#DX-502", "target_role_matrix.csv#vpn"]
+    },
+    "crm": {
+      "effective_entitlements": ["customer_profile_read", "refund_approve"],
+      "review_status": "change_planned",
+      "owner": "identity_control",
+      "conflict_state": "sod_conflict",
+      "plan_key": "crm|remove_entitlement|refund_approve",
+      "required_evidence": ["direct_entitlements.csv#DX-601", "direct_entitlements.csv#DX-602", "sod_policy.csv#SOD-SUPPORT-REFUND", "target_role_matrix.csv#crm"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "direct_entitlements.csv#DX-601", "direct_entitlements.csv#DX-602", "sod_policy.csv#SOD-SUPPORT-REFUND", "target_role_matrix.csv#crm"]
+    },
+    "legacy_hr": {
+      "effective_entitlements": ["payroll_export"],
+      "review_status": "change_planned",
+      "owner": "hris_owner",
+      "conflict_state": "forbidden_nested_grant",
+      "plan_key": "legacy_hr|remove_membership|GROUP-LEGACY-PAY",
+      "required_evidence": ["group_memberships.csv#GM-07", "group_entitlements.csv#GA-07", "target_role_matrix.csv#legacy_hr"],
+      "allowed_evidence": ["employee_transfer.csv#TR-200", "least_privilege_policy.md", "group_memberships.csv#GM-07", "group_entitlements.csv#GA-07", "target_role_matrix.csv#legacy_hr"]
+    }
+  }
+}

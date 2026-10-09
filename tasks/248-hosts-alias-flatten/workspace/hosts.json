@@ -1,0 +1,27 @@
+[
+  {
+    "host_id": "h-edge",
+    "name": "edge.mill.local",
+    "target": "10.1.2.3"
+  },
+  {
+    "host_id": "h-api",
+    "name": "api.mill.local",
+    "target": "edge.mill.local"
+  },
+  {
+    "host_id": "h-loop-a",
+    "name": "a.mill.local",
+    "target": "b.mill.local"
+  },
+  {
+    "host_id": "h-loop-b",
+    "name": "b.mill.local",
+    "target": "a.mill.local"
+  },
+  {
+    "host_id": "h-web",
+    "name": "web.mill.local",
+    "target": "api.mill.local"
+  }
+]

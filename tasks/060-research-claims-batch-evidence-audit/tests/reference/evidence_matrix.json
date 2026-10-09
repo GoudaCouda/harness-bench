@@ -1,0 +1,88 @@
+{
+  "claims": [
+    {
+      "claim_id": "CL-01",
+      "status": "overstated",
+      "evidence": [{"source_file": "sources/errata.md", "location": "ERR-1", "supports_or_refutes": "limits", "signal": "8.2 was corrected to 7.4"}],
+      "reproducibility_note": "The correction and shipped table can be audited, but no raw-data rerun is claimed."
+    },
+    {
+      "claim_id": "CL-02",
+      "status": "contradicted",
+      "evidence": [{"source_file": "sources/results_table.csv", "location": "retention_lift, cohort=partner", "supports_or_refutes": "refutes", "signal": "partner value -1.0"}],
+      "reproducibility_note": "This is a direct table comparison, not an independent rerun."
+    },
+    {
+      "claim_id": "CL-03",
+      "status": "contradicted",
+      "evidence": [{"source_file": "sources/methods_appendix.md", "location": "M-1", "supports_or_refutes": "refutes", "signal": "activation is primary and retention is secondary"}],
+      "reproducibility_note": "The registration wording is document-verifiable."
+    },
+    {
+      "claim_id": "CL-04",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/study_summary.md", "location": "SUM-1", "supports_or_refutes": "supports", "signal": "2400 participants"}],
+      "reproducibility_note": "The supplied summary supports the count; underlying participant data were not rerun."
+    },
+    {
+      "claim_id": "CL-05",
+      "status": "not_reproducible",
+      "evidence": [{"source_file": "sources/repro_readme.md", "location": "results/subgroup_ablation.csv package inventory", "supports_or_refutes": "reproducibility_gap", "signal": "deposit does not contain results/subgroup_ablation.csv"}],
+      "reproducibility_note": "The named subgroup_ablation.csv artifact is missing."
+    },
+    {
+      "claim_id": "CL-06",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/results_table.csv", "location": "support_ticket_change, cohort=overall", "supports_or_refutes": "supports", "signal": "value -12 percent"}],
+      "reproducibility_note": "The shipped table supports the value; no raw-data rerun is claimed."
+    },
+    {
+      "claim_id": "CL-07",
+      "status": "unsupported",
+      "evidence": [{"source_file": "sources/peer_review_notes.md", "location": "R2-1", "supports_or_refutes": "insufficient", "signal": "adverse-event appendix was not supplied"}],
+      "reproducibility_note": "The missing appendix prevents verification of the universal absence claim."
+    },
+    {
+      "claim_id": "CL-08",
+      "status": "not_reproducible",
+      "evidence": [{"source_file": "sources/repro_readme.md", "location": "package inventory", "supports_or_refutes": "reproducibility_gap", "signal": "raw/events.parquet, analysis_config.yaml, and scripts/run_analysis.py are absent"}],
+      "reproducibility_note": "The raw input, configuration, and driver required for an end-to-end rerun are missing."
+    },
+    {
+      "claim_id": "CL-09",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/results_table.csv", "location": "retention_lift, cohort=mobile", "supports_or_refutes": "supports", "signal": "mobile value 9.1 is the largest reported retention lift"}],
+      "reproducibility_note": "The ranking is reproducible from the shipped table rows."
+    },
+    {
+      "claim_id": "CL-10",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/errata.md", "location": "ERR-1", "supports_or_refutes": "supports", "signal": "corrected retention lift is 7.4"}],
+      "reproducibility_note": "The correction is document-verifiable and agrees with the shipped table."
+    },
+    {
+      "claim_id": "CL-11",
+      "status": "contradicted",
+      "evidence": [{"source_file": "sources/results_table.csv", "location": "activation_lift, cohort=south", "supports_or_refutes": "refutes", "signal": "south value -0.4"}],
+      "reproducibility_note": "The contradiction is reproducible from the exported regional rows."
+    },
+    {
+      "claim_id": "CL-12",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/results_table.csv", "location": "retention_lift, cohort=overall, p_value", "supports_or_refutes": "supports", "signal": "p_value 0.031"}],
+      "reproducibility_note": "The p-value's presence is directly verifiable in the export."
+    },
+    {
+      "claim_id": "CL-13",
+      "status": "overstated",
+      "evidence": [{"source_file": "sources/study_summary.md", "location": "SUM-3", "supports_or_refutes": "limits", "signal": "observed enterprise sample does not prove causal impact for all customers"}],
+      "reproducibility_note": "The scope limitation is document-verifiable; a broader causal claim is not supported."
+    },
+    {
+      "claim_id": "CL-14",
+      "status": "supported",
+      "evidence": [{"source_file": "sources/methods_appendix.md", "location": "M-2", "supports_or_refutes": "supports", "signal": "trial accounts were excluded"}],
+      "reproducibility_note": "The exclusion statement is directly verifiable in the methods appendix."
+    }
+  ]
+}

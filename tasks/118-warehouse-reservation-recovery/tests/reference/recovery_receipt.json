@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "baseline_plan_valid": true,
+    "inventory_closes": true,
+    "inventory_nonnegative": true,
+    "protected_baseline_matches_checkpoint": true,
+    "recovery_identity": true,
+    "semantic_plan_bound": true,
+    "single_recovery_transaction": true,
+    "source_checkpoint_bound": true,
+    "terminal_state_matches_projection": true
+  },
+  "logical_state_sha256": "a017fca8bb1f0461c23e482c3b4b13e7c6d91aaddc7730b44a8d14709ff230f2",
+  "recovery_id": "WMS-REC-2026-08-16-01",
+  "semantic_plan_sha256": "1e060f281e95e5c748a00e91b2eb6526c34717c90f2a0edabe2cc072ebc8b957",
+  "source_state_sha256": "3f1d7d4a24567dc1a04a16424544647f8d60c6ba4becbfa66391dacd0ab11ba6",
+  "status": "pass",
+  "tool": "warehousectl/2"
+}

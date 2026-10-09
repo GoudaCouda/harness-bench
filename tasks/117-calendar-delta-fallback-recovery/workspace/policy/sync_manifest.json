@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "collection_id": "finance-operations",
+  "recovery_id": "CALSYNC-FINANCE-20260819-42",
+  "source_checkpoint": "62db0a06d68abb552e70b31b490a149a4ef84b608da6baf629690e64efd0bfbf",
+  "pages": {
+    "page1": {
+      "path": "evidence/page1.ics",
+      "sha256": "65fde2c0e0e142bfc905f6567f07fee5f805c746ce9ae93a2be1112e722e3274",
+      "cursor_in": "cursor-41",
+      "cursor_out": "cursor-42a",
+      "etag_in": "W/\"cal-41\"",
+      "etag_out": "W/\"cal-42a\""
+    },
+    "page2": {
+      "damaged_path": "evidence/page2.part",
+      "damaged_sha256": "7153cf315618cade11ce92ad659ccb09c44b0f7b2426868ecf66ee0035fa784e",
+      "fallback_path": "evidence/page2_recovery.ics",
+      "fallback_sha256": "485b5c31558285c394443ac8f274d8194fc16195a23b182293f60ab56ea3bed3",
+      "cursor_in": "cursor-42a",
+      "cursor_out": "cursor-42b",
+      "etag_in": "W/\"cal-42a\"",
+      "etag_out": "W/\"cal-42b\""
+    }
+  }
+}

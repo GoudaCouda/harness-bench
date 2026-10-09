@@ -1,0 +1,41 @@
+{
+  "stream_id": "harborwatch-235",
+  "gate_clock_epoch": 1776296000,
+  "events": [
+    {
+      "request_id": "q1",
+      "section_id": "sec-101",
+      "kind": "enroll"
+    },
+    {
+      "request_id": "q2",
+      "section_id": "sec-101",
+      "kind": "waitlist"
+    },
+    {
+      "request_id": "q3",
+      "section_id": "sec-101",
+      "kind": "enroll"
+    },
+    {
+      "request_id": "q1",
+      "section_id": "sec-101",
+      "kind": "enroll"
+    },
+    {
+      "request_id": "q5",
+      "section_id": "",
+      "kind": "enroll"
+    },
+    {
+      "request_id": "q6",
+      "section_id": "sec-101",
+      "kind": "enroll"
+    },
+    {
+      "request_id": "q7",
+      "section_id": "sec-101",
+      "kind": "waitlist"
+    }
+  ]
+}

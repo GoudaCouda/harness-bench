@@ -1,0 +1,7 @@
+[
+  {"request_id":"r1","operation":"CREATE","resource":"pods","namespace":"apps","dry_run":false,"mirror_pod":false,"fields":{"metadata/name":"api"}},
+  {"request_id":"r2","operation":"UPDATE","resource":"pods","namespace":"apps","dry_run":false,"mirror_pod":false,"fields":{"metadata/name":"worker","spec/security/run_as_non_root":false}},
+  {"request_id":"r3","operation":"CREATE","resource":"pods","namespace":"kube-system","dry_run":false,"mirror_pod":false,"fields":{"metadata/name":"dns"}},
+  {"request_id":"r4","operation":"CREATE","resource":"deployments","namespace":"apps","dry_run":false,"mirror_pod":false,"fields":{"metadata/name":"web"}},
+  {"request_id":"r5","operation":"CREATE","resource":"services","namespace":"apps","dry_run":false,"mirror_pod":false,"fields":{"metadata/name":"edge"}}
+]

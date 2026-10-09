@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "standards": [
+    {
+      "parent_standard_id": null,
+      "recorded_status": "valid",
+      "standard_id": "STD-ROOT-A",
+      "valid_from_utc": "2025-01-01T00:00:00Z",
+      "valid_to_utc": "2027-01-01T00:00:00Z"
+    },
+    {
+      "parent_standard_id": "STD-ROOT-A",
+      "recorded_status": "valid",
+      "standard_id": "STD-P9",
+      "valid_from_utc": "2026-01-01T00:00:00Z",
+      "valid_to_utc": "2026-12-31T23:59:59Z"
+    },
+    {
+      "parent_standard_id": "STD-ROOT-A",
+      "recorded_status": "valid",
+      "standard_id": "STD-T4",
+      "valid_from_utc": "2026-01-01T00:00:00Z",
+      "valid_to_utc": "2026-12-31T23:59:59Z"
+    },
+    {
+      "parent_standard_id": "STD-ROOT-A",
+      "recorded_status": "valid",
+      "standard_id": "STD-M2",
+      "valid_from_utc": "2025-08-01T00:00:00Z",
+      "valid_to_utc": "2026-08-01T00:00:00Z"
+    },
+    {
+      "parent_standard_id": "STD-ROOT-A",
+      "recorded_status": "valid",
+      "standard_id": "STD-H7",
+      "valid_from_utc": "2026-01-01T00:00:00Z",
+      "valid_to_utc": "2026-12-31T23:59:59Z"
+    },
+    {
+      "parent_standard_id": "STD-ROOT-A",
+      "recorded_status": "valid",
+      "standard_id": "STD-C3",
+      "valid_from_utc": "2026-01-01T00:00:00Z",
+      "valid_to_utc": "2026-12-31T23:59:59Z"
+    }
+  ]
+}

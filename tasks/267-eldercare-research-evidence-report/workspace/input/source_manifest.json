@@ -1,0 +1,67 @@
+{
+  "as_of": "2025-04-10",
+  "current_source_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07"
+  ],
+  "files": [
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S01_demographics_zh.md",
+      "sha256": "d94a8d491c6757afc7be6fb85975c1be181b51e1f967cec3df9fabedb60e9ecb"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S02_needs_survey_zh.md",
+      "sha256": "ef33cfa5e3961958bb2dff3f55d40a027fbea380f3bb6f6927aa93374e51d3ac"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S03_supply_registry_zh.csv",
+      "sha256": "68a4c25af73f38f87bd64b7548c81a8471c39a40abff4c5a489a8a5540dcf0d2"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S04_policy_zh.md",
+      "sha256": "0c6b5e90bfb68ecb0a2120a7f6d48065590e571e441f60cad6b3815d95dff3f4"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S05_unit_costs_zh.md",
+      "sha256": "bcb9b7413ba3a3d248be89a89d553894833fd07ef31d1b8a4b475a17affb8918"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S06_pilot_en.md",
+      "sha256": "c15578b1c001a7e51c4aefe174a53059fed8c90178d3e392a935e37722de5f90"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S07_audit_en.md",
+      "sha256": "f4b419e326cace767ccabedc7bfed10a7bccb1693d5f91ebd3acebbbd3dd98cb"
+    },
+    {
+      "fictional": true,
+      "license": "project-authored-synthetic",
+      "path": "corpus/S08_superseded_memo_zh.md",
+      "sha256": "f7cc6fead2f4fe3de7e12874e59cc250ff3f4f971fd9831484fefe4585a36c03"
+    }
+  ],
+  "license_terms": "fixtures/LICENSE.txt",
+  "schema_version": "case13_source_manifest_v1",
+  "superseded_source_ids": [
+    "S08"
+  ]
+}

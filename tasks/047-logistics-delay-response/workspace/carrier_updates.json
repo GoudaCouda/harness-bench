@@ -1,0 +1,8 @@
+[
+  {"shipment_id":"S-7001","estimated_delivery":"2026-06-08","recovery_option":"none","action_cutoff":null,"internal_note":"weather backlog at hub 4"},
+  {"shipment_id":"S-7002","estimated_delivery":"2026-06-06","recovery_option":"none","action_cutoff":null,"internal_note":"on schedule"},
+  {"shipment_id":"S-7003","estimated_delivery":"2026-06-10","recovery_option":"none","action_cutoff":null,"internal_note":"sort center backlog"},
+  {"shipment_id":"S-7004","estimated_delivery":"2026-06-09","recovery_option":"upgrade_original_to_2026-06-08","action_cutoff":"2026-06-04T16:00:00Z","internal_note":"missed linehaul"},
+  {"shipment_id":"S-7005","estimated_delivery":null,"recovery_option":"trace_required","action_cutoff":"2026-06-04T17:00:00Z","internal_note":"scan feed incomplete; location unconfirmed"},
+  {"shipment_id":"S-7006","estimated_delivery":"2026-06-07","recovery_option":"none","action_cutoff":null,"internal_note":"late trailer arrival"}
+]

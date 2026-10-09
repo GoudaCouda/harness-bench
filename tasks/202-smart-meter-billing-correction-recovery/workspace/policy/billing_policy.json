@@ -1,0 +1,55 @@
+{
+  "authority_methods": [
+    "interval_utc_deduplicated",
+    "register_rollover",
+    "bidirectional_interval",
+    "signed_fallback_snapshot",
+    "insufficient_evidence"
+  ],
+  "billing_cycle": "2026-11",
+  "correction_states": [
+    "correction_pending_review",
+    "hold_insufficient_evidence"
+  ],
+  "energy_rounding_decimals": 3,
+  "external_actions_prohibited": [
+    "issue_bill",
+    "post_refund",
+    "take_payment",
+    "send_meter_command",
+    "contact_customer"
+  ],
+  "meters": [
+    {
+      "account_id": "ACCT-DST-17",
+      "authority_method": "interval_utc_deduplicated",
+      "expected_interval_count": 4,
+      "meter_id": "MTR-DST-17"
+    },
+    {
+      "account_id": "ACCT-ROL-42",
+      "authority_method": "register_rollover",
+      "meter_id": "MTR-ROL-42"
+    },
+    {
+      "account_id": "ACCT-SOL-09",
+      "authority_method": "bidirectional_interval",
+      "expected_interval_count": 4,
+      "meter_id": "MTR-SOL-09"
+    },
+    {
+      "account_id": "ACCT-FBK-88",
+      "authority_method": "signed_fallback_snapshot",
+      "meter_id": "MTR-FBK-88"
+    },
+    {
+      "account_id": "ACCT-HLD-55",
+      "authority_method": "insufficient_evidence",
+      "meter_id": "MTR-HLD-55",
+      "minimum_complete_intervals": 4
+    }
+  ],
+  "recovery_id": "MBR-202611-FALLBACK-01",
+  "schema_version": 1,
+  "timezone": "America/New_York"
+}

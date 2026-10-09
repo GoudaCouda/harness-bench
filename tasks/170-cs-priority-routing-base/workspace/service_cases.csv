@@ -1,0 +1,7 @@
+item_id,request_type,current_state,event_time,evidence_state,policy_facts,prior_action
+S-201,regional checkout outage,unassigned,2026-07-29T09:00Z,monitor confirms two regions,43 accounts; deadline 2h; not acknowledged,none
+S-202,batch export delay,unassigned,2026-07-29T09:10Z,support telemetry verified,27 accounts; deadline 3h; one region,none
+S-203,single login issue,unassigned,2026-07-29T09:20Z,one requester,1 account; no deadline; not acknowledged,none
+S-210,already owned payment incident,acknowledged,2026-07-29T09:25Z,monitor confirms two regions,58 accounts; deadline 1h; acknowledged by oncall,current owner accepted page
+S-211,duplicate alert fingerprint,unassigned,2026-07-29T09:30Z,fingerprint repeats S-202,27 accounts; deadline 3h; duplicate alert,none
+S-212,safety telemetry alert,unassigned,2026-07-29T09:35Z,safety impact confirmed,1 account; no deadline; not acknowledged,none

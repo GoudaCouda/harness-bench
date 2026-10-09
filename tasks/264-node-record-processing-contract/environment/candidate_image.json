@@ -1,0 +1,10 @@
+{
+  "build": {
+    "dockerfile": "environment/candidate.Dockerfile",
+    "context": "environment",
+    "args": {
+      "NODE_IMAGE": "docker.io/library/node@sha256:e21fc383b50d5347dc7a9f1cae45b8f4e2f0d39f7ade28e4eef7d2934522b752",
+      "PYTHON_IMAGE": "docker.io/library/python@sha256:6c4dd321d176d61ea848dc8c73a4f7dbae8f70e0ee48bb411ea2f045b599fa8e"
+    }
+  }
+}

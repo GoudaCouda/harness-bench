@@ -1,0 +1,3 @@
+metric,value,n_control,n_treatment,data_snapshot
+conversion_lift,0.124,842,839,freeze-2026-04-18
+retention_lift,0.031,842,839,freeze-2026-04-18

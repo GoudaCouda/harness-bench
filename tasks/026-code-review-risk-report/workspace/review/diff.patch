@@ -1,0 +1,126 @@
+diff --git a/app/export_api.py b/app/export_api.py
+index 21bca11..f7d2990 100644
+--- a/app/export_api.py
++++ b/app/export_api.py
+@@ -18,16 +18,17 @@ def create_export(request, actor, repo):
+     require_scope(actor, "exports:read")
+     body = request.json
+     include_pii = bool(body.get("include_pii", False))
+-    if include_pii:
+-        require_scope(actor, "customers:pii")
+ 
+-    existing = repo.find_by_token(actor.tenant_id, body["request_token"])
++    existing = repo.find_by_token(body["request_token"])
+     if existing:
+         return export_response(existing), 200
+ 
+     job = repo.create(
+         tenant_id=actor.tenant_id,
+         request_token=body["request_token"],
+         include_pii=include_pii,
++        requested_by=actor.user_id,
+     )
+     enqueue_export(job.id)
+     return export_response(job), 202
+diff --git a/app/export_repo.py b/app/export_repo.py
+index e112d1e..d9ac662 100644
+--- a/app/export_repo.py
++++ b/app/export_repo.py
+@@ -41,18 +41,22 @@ class ExportRepo:
+-    def claim_next(self, worker_id, now):
+-        return self.db.fetch_one(
+-            """update export_jobs
+-               set state = 'running', lease_owner = ?, lease_until = ?
+-               where id = (
+-                 select id from export_jobs where state = 'queued'
+-                 order by created_at, id limit 1
+-               )
+-               returning *""",
+-            worker_id, now + LEASE,
+-        )
++    def next_queued(self):
++        return self.db.fetch_one(
++            "select * from export_jobs where state = 'queued' "
++            "order by created_at, id limit 1"
++        )
++
++    def mark_running(self, job_id, worker_id, now):
++        self.db.execute(
++            "update export_jobs set state = 'running', lease_owner = ?, "
++            "lease_until = ? where id = ?",
++            worker_id, now + LEASE, job_id,
++        )
+ 
+-    def find_by_token(self, tenant_id, request_token):
++    def find_by_token(self, request_token):
+         return self.db.fetch_one(
+-            "select * from export_jobs where tenant_id = ? and request_token = ?",
+-            tenant_id, request_token,
++            "select * from export_jobs where request_token = ? order by created_at desc limit 1",
++            request_token,
+         )
+diff --git a/app/export_worker.py b/app/export_worker.py
+index 112aad0..3a2dfe4 100644
+--- a/app/export_worker.py
++++ b/app/export_worker.py
+@@ -9,18 +9,25 @@ def run_once(repo, object_store, retry_queue, worker_id, now):
+-    job = repo.claim_next(worker_id, now)
++    job = repo.next_queued()
+     if not job:
+         return False
++    repo.mark_running(job.id, worker_id, now)
+ 
+     rows = load_snapshot(job)
+     payload, checksum = build_archive(rows, include_pii=job.include_pii)
+     try:
+         uploaded = object_store.put(job.object_key, payload, checksum=checksum)
+-    except TransientUploadError:
++    except TransientUploadError as exc:
+         retry_queue.publish(job.id)
+-        repo.requeue(job.id, worker_id)
++        logger.warning("export upload deferred", extra={"job_id": job.id, "error": str(exc)})
++        uploaded = None
++    repo.mark_complete(
++        job.id,
++        etag=uploaded.etag if uploaded else None,
++        checksum=checksum,
++    )
+     return True
+diff --git a/app/customer_snapshot.py b/app/customer_snapshot.py
+index 44f7d03..18367bb 100644
+--- a/app/customer_snapshot.py
++++ b/app/customer_snapshot.py
+@@ -27,11 +27,12 @@ def page_after(db, tenant_id, cursor, limit):
+     return db.fetch_all(
+         """select id, updated_at, email, display_name
+              from customers
+             where tenant_id = ?
+-              and (updated_at > ? or (updated_at = ? and id > ?))
++              and (updated_at > ? or id > ?)
+             order by updated_at asc, id asc
+             limit ?""",
+-        tenant_id, cursor.updated_at, cursor.updated_at, cursor.id, limit,
++        tenant_id, cursor.updated_at, cursor.id, limit,
+     )
+diff --git a/app/retention.py b/app/retention.py
+index 861e3b1..01d8dc2 100644
+--- a/app/retention.py
++++ b/app/retention.py
+@@ -4,7 +4,7 @@ DEFAULT_TTL_HOURS = 24
+ 
+ def resolve_ttl_hours(raw_policy):
+-    return DEFAULT_TTL_HOURS if "ttl_hours" not in raw_policy else int(raw_policy["ttl_hours"])
++    return int(raw_policy.get("ttl_hours") or DEFAULT_TTL_HOURS)
+diff --git a/app/downloads.py b/app/downloads.py
+index 91ca87d..100fc0e 100644
+--- a/app/downloads.py
++++ b/app/downloads.py
+@@ -31,6 +31,9 @@ def issue_download(job, signer, logger):
+     expires_at = utc_now() + timedelta(minutes=10)
+     signed_url = signer.sign(job.object_key, expires_at=expires_at)
+-    logger.info("export download issued", extra={"job_id": job.id})
++    logger.info(
++        "export download issued",
++        extra={"job_id": job.id, "download_url": signed_url},
++    )
+     return {"url": signed_url, "expires_at": expires_at.isoformat()}

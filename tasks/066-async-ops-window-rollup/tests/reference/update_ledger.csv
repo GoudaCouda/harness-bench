@@ -1,0 +1,9 @@
+update_id,component,timestamp,classification,status,reason
+UP-001,edge,2026-05-04T01:02:00Z,seen,healthy,first occurrence inside inclusive window
+UP-002,checkout-api,2026-05-04T01:08:00Z,seen,degraded,first occurrence inside inclusive window
+UP-003,inventory-db,2026-05-04T01:13:00Z,seen,degraded,first occurrence inside inclusive window
+UP-002,checkout-api,2026-05-04T01:15:00Z,duplicate,degraded,duplicate ignored and first UP-002 retained
+UP-OLD,payment-worker,2026-05-04T00:55:00Z,ignored,healthy,before window_start
+UP-004,payment-worker,2026-05-04T01:31:00Z,seen,healthy,first occurrence inside inclusive window
+UP-LATE,notification-worker,2026-05-04T02:05:00Z,ignored,degraded,after window_end
+UP-005,notification-worker,2026-05-04T01:44:00Z,seen,healthy,first occurrence inside inclusive window

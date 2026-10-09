@@ -1,0 +1,94 @@
+{
+  "external_actions_executed": false,
+  "packet_items": [
+    {
+      "amount_cents": 10000000,
+      "closing_id": "ESC-101",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-101-CLOSE.json#DOC-ESC-101-CLOSE",
+        "evidence/documents/DOC-INS-101-BROKER.json#DOC-INS-101-BROKER",
+        "evidence/documents/DOC-INS-101-ESCROW.json#DOC-INS-101-ESCROW",
+        "evidence/documents/DOC-INS-101-HOLDBACK.json#DOC-INS-101-HOLDBACK",
+        "evidence/documents/DOC-INS-101-PAYOFF.json#DOC-INS-101-PAYOFF",
+        "evidence/documents/DOC-INS-101-SELLER.json#DOC-INS-101-SELLER",
+        "evidence/documents/DOC-INS-101-TAX.json#DOC-INS-101-TAX",
+        "evidence/settlement_events.jsonl#EV-101-AUTH",
+        "evidence/settlement_events.jsonl#EV-101-REC",
+        "evidence/settlement_events.jsonl#EV-101-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-101",
+        "state/escrow.db#instructions:INS-101-BROKER",
+        "state/escrow.db#instructions:INS-101-ESCROW",
+        "state/escrow.db#instructions:INS-101-HOLDBACK",
+        "state/escrow.db#instructions:INS-101-PAYOFF",
+        "state/escrow.db#instructions:INS-101-SELLER",
+        "state/escrow.db#instructions:INS-101-TAX"
+      ],
+      "instruction_ids": [
+        "INS-101-BROKER",
+        "INS-101-ESCROW",
+        "INS-101-HOLDBACK",
+        "INS-101-PAYOFF",
+        "INS-101-SELLER",
+        "INS-101-TAX"
+      ],
+      "packet_type": "disbursement_review",
+      "position": 1
+    },
+    {
+      "amount_cents": 7200000,
+      "closing_id": "ESC-104",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-104-CLOSE.json#DOC-ESC-104-CLOSE",
+        "evidence/documents/DOC-INS-104-ESCROW.json#DOC-INS-104-ESCROW",
+        "evidence/documents/DOC-INS-104-PAYOFF.json#DOC-INS-104-PAYOFF",
+        "evidence/documents/DOC-INS-104-SELLER.json#DOC-INS-104-SELLER",
+        "evidence/settlement_events.jsonl#EV-104-AUTH",
+        "evidence/settlement_events.jsonl#EV-104-WIRE",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-104",
+        "state/escrow.db#instructions:INS-104-ESCROW",
+        "state/escrow.db#instructions:INS-104-PAYOFF",
+        "state/escrow.db#instructions:INS-104-SELLER"
+      ],
+      "instruction_ids": [
+        "INS-104-ESCROW",
+        "INS-104-PAYOFF",
+        "INS-104-SELLER"
+      ],
+      "packet_type": "disbursement_review",
+      "position": 2
+    },
+    {
+      "amount_cents": 80000,
+      "closing_id": "ESC-105",
+      "evidence_refs": [
+        "evidence/documents/DOC-ESC-105-HOLDBACK-RELEASE.json#DOC-ESC-105-HOLDBACK-RELEASE",
+        "evidence/documents/DOC-INS-105-ESCROW.json#DOC-INS-105-ESCROW",
+        "evidence/documents/DOC-INS-105-HOLDBACK.json#DOC-INS-105-HOLDBACK",
+        "evidence/documents/DOC-INS-105-PAYOFF.json#DOC-INS-105-PAYOFF",
+        "evidence/documents/DOC-INS-105-SELLER.json#DOC-INS-105-SELLER",
+        "evidence/settlement_events.jsonl#EV-105-REL",
+        "policy/escrow_policy.json#evidence_rules",
+        "state/escrow.db#closings:ESC-105",
+        "state/escrow.db#instructions:INS-105-ESCROW",
+        "state/escrow.db#instructions:INS-105-HOLDBACK",
+        "state/escrow.db#instructions:INS-105-PAYOFF",
+        "state/escrow.db#instructions:INS-105-SELLER"
+      ],
+      "instruction_ids": [
+        "INS-105-ESCROW",
+        "INS-105-HOLDBACK",
+        "INS-105-PAYOFF",
+        "INS-105-SELLER"
+      ],
+      "packet_type": "holdback_release",
+      "position": 3
+    }
+  ],
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "556a5842fd21315de702de1087e223b271f198bd31d9f51a7ce567bb457454c1",
+  "source_checkpoint": "d2e2c87366e50cde1a854b53d267a0e89b2d9359e321f0839a3a3c3e0756dae0",
+  "stage_boundary": "local_review_only_not_disbursed"
+}

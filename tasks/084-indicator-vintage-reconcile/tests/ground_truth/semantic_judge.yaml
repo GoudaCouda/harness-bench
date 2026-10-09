@@ -1,0 +1,51 @@
+schema_version: 1
+task_id: 084-indicator-vintage-reconcile
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: indicator_identity
+  title: Indicator identity and units are clear
+  question: >-
+    Does the note correctly identify GDPCON15 and explain that its values use
+    constant-2015 units?
+  pass_anchors:
+  - Equivalent constant-price or 2015-base-year wording is acceptable.
+  fail_anchors:
+  - The code, constant-price meaning, or base year is omitted or contradicted.
+- id: source_page_coverage
+  title: All source pages are acknowledged
+  question: >-
+    Does the note say that all three supplied pages were consumed for the reconciliation?
+  pass_anchors:
+  - Naming pages 1, 2, and 3 or an unambiguous equivalent is acceptable.
+  fail_anchors:
+  - Fewer than all three pages are identified or coverage is left ambiguous.
+- id: signed_revisions
+  title: Prior-vintage revisions have the right countries, years, and signs
+  question: >-
+    Does the note accurately summarize the supplied 2023 and 2024 revisions:
+    Aster +2/+5, Boron +2/-5, and Cygnus -2/+3, relative to the prior vintage?
+  pass_anchors:
+  - Increased/decreased wording is equivalent to signed numeric notation.
+  fail_anchors:
+  - A country, year, vintage relationship, magnitude, or sign is omitted or contradicted.
+- id: bounded_leader_claim
+  title: The 2025 leader claim is scoped to available data
+  question: >-
+    Does the note limit Cygnus's 2025 leader conclusion to the supplied countries
+    or available data rather than claiming a global or all-country lead?
+  pass_anchors:
+  - Among Aster, Boron, and Cygnus, among the requested countries, or equivalent wording is acceptable.
+  fail_anchors:
+  - The note makes an unbounded global or all-country leader claim.
+output_schema:
+  verdict_values:
+  - pass
+  - fail
+  required_per_criterion:
+  - id
+  - verdict
+  - evidence
+  - reason
+  evidence_max_items: 2

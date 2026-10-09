@@ -1,0 +1,85 @@
+task_id: 206-bom-engineering-change-propagation
+title: Recover an approved ECN across a multi-level configuration baseline
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- data_recovery
+- manufacturing_configuration
+- dependency_graph
+- local_state_machine
+harness_demands:
+- context_management
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- multilevel_where_used_revision_cascade
+- serial_and_lot_effectivity
+- issued_material_and_as_built_boundaries
+- approved_substitute_scope
+- interrupted_sqlite_journal
+- stable_recovery_identity
+- semantic_replay
+required_artifacts:
+- ecn_recovery_plan.json
+- .ecn_preview.json
+- state/configuration.db
+- state/verification.json
+- state/internal_change_receipt.json
+- state/replay_report.json
+- engineering_handoff.md
+task_family: manufacturing-ecn-configuration-recovery
+variant: where-used-effectivity-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - MFG-ECN-01
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - ecn_recovery_plan.json
+  - .ecn_preview.json
+  - state/verification.json
+  - state/internal_change_receipt.json
+  - state/replay_report.json
+  - engineering_handoff.md
+  allowed_modified:
+  - state/configuration.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: engineering_handoff
+  max_fallback_weight: 0.08
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

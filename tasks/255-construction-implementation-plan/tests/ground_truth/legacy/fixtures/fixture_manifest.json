@@ -1,0 +1,48 @@
+{
+  "case_id": "case_01",
+  "files": [
+    {
+      "fixture_path": "fixtures/input/01_招标要求.md",
+      "license": "project_synthetic_cc0_1_0",
+      "logical_path": "inputs/01_招标要求.md",
+      "provenance": "fully_synthetic_case01_v1",
+      "sha256": "85cbad72374c67529156c559f587e9bc629f61e7f29c6a098d7c81cc30b023bf",
+      "size_bytes": 1178
+    },
+    {
+      "fixture_path": "fixtures/input/02_公司资质.json",
+      "license": "project_synthetic_cc0_1_0",
+      "logical_path": "inputs/02_公司资质.json",
+      "provenance": "fully_synthetic_case01_v1",
+      "sha256": "d11c17694e90aec33c2d49ff87c6bf75a47dd145c401dcfee95019a0285e74a5",
+      "size_bytes": 759
+    },
+    {
+      "fixture_path": "fixtures/input/03_评审标准.csv",
+      "license": "project_synthetic_cc0_1_0",
+      "logical_path": "inputs/03_评审标准.csv",
+      "provenance": "fully_synthetic_case01_v1",
+      "sha256": "dc9c95b58fdfa989d53e2a7583b7f022241ee1739f551873c1768fa56c4e70aa",
+      "size_bytes": 398
+    },
+    {
+      "fixture_path": "fixtures/input/04_编制约束.md",
+      "license": "project_synthetic_cc0_1_0",
+      "logical_path": "inputs/04_编制约束.md",
+      "provenance": "fully_synthetic_case01_v1",
+      "sha256": "d78a6955447686e7697dac2fd9c43d030d7619923b4ecd1a085404499ef7d1ac",
+      "size_bytes": 903
+    },
+    {
+      "fixture_path": "fixtures/input/05_实施方案模板.docx",
+      "license": "project_synthetic_cc0_1_0",
+      "logical_path": "inputs/05_实施方案模板.docx",
+      "provenance": "fully_synthetic_case01_v1",
+      "sha256": "ed6e4c3a537c0e9ab289f6267af9e83773c1ddd6ea183b4fc84b982baf59357b",
+      "size_bytes": 3027
+    }
+  ],
+  "fixed_time": "2026-04-08T09:00:00+08:00",
+  "schema_version": "case01_fixture_manifest_v1",
+  "synthetic": true
+}

@@ -1,0 +1,88 @@
+task_id: 207-water-main-isolation-recovery
+title: Recover an Interrupted Water-Main Isolation Projection
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- graph_constraints
+- event_replay
+- transaction_recovery
+- safety_critical_workflow
+harness_demands:
+- context_management
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- conflicting_evidence
+- at_least_once_delivery
+- graph_selection
+- partial_commit
+- protected_boundaries
+required_artifacts:
+- isolation_recovery_plan.json
+- .isolation_preview.json
+- isolation_handoff.md
+- state/network.db
+- state/recovery_receipt.json
+- state/verification.json
+- state/replay_report.json
+- staging/isolation_review_packet.json
+- staging/packet_manifest.json
+task_family: municipal-water-isolation-recovery
+variant: telemetry-collision-boundary-selection-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - EPA-AWIA-EMERGENCY-RESPONSE
+  - AWWA-WATER-AUDITS
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - isolation_recovery_plan.json
+  - .isolation_preview.json
+  - isolation_handoff.md
+  - state/recovery_receipt.json
+  - state/verification.json
+  - state/replay_report.json
+  - staging/isolation_review_packet.json
+  - staging/packet_manifest.json
+  allowed_modified:
+  - state/network.db
+  allowed_deleted: []
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: isolation_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

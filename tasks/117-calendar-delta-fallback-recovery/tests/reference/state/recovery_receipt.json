@@ -1,0 +1,12 @@
+{
+  "collection_id": "finance-operations",
+  "external_calendar_write_executed": false,
+  "phase": "staged_pending_calendar_owner_review",
+  "plan_sha256": "476bbab3c94c991f134a06a901ebc17e630747e8f3cc1fffd390f7c1c4fa9838",
+  "receipt_type": "local_calendar_recovery_stage",
+  "recovery_id": "CALSYNC-FINANCE-20260819-42",
+  "semantic_database_sha256": "8fd66fb8b366a117f6d7621a24d66782bde3cc5d994ef37062cd98afee835ae3",
+  "source_checkpoint": "62db0a06d68abb552e70b31b490a149a4ef84b608da6baf629690e64efd0bfbf",
+  "stage_token": "2a422cf5352cd782c08822561d64158095f35249e3c1ce35e2d991d6598f5ffd",
+  "verification_sha256": "5a7c7485c19ca42b59b5994ce1ed7f85933d02ffd7309ea6d644dcde5cb903ac"
+}

@@ -1,0 +1,55 @@
+{
+  "catalog_effective": "2026-01-25",
+  "repositories": [
+    {
+      "name": "OpenBox",
+      "external": true,
+      "accepts_controlled_files": false,
+      "accepts_public_files": true,
+      "supports_metadata_only_record": true,
+      "supports_dua_workflow": false,
+      "supports_access_committee": false,
+      "accepts_code": true
+    },
+    {
+      "name": "SafeRepo",
+      "external": true,
+      "accepts_controlled_files": true,
+      "accepts_public_files": false,
+      "supports_metadata_only_record": true,
+      "supports_dua_workflow": true,
+      "supports_access_committee": true,
+      "accepts_code": false
+    },
+    {
+      "name": "HybridShare",
+      "external": true,
+      "accepts_controlled_files": true,
+      "accepts_public_files": true,
+      "supports_metadata_only_record": true,
+      "supports_dua_workflow": false,
+      "supports_access_committee": false,
+      "accepts_code": true
+    },
+    {
+      "name": "CodeArchive",
+      "external": true,
+      "accepts_controlled_files": false,
+      "accepts_public_files": true,
+      "supports_metadata_only_record": false,
+      "supports_dua_workflow": false,
+      "supports_access_committee": false,
+      "accepts_code": true
+    },
+    {
+      "name": "AudioVault",
+      "external": false,
+      "accepts_controlled_files": true,
+      "accepts_public_files": false,
+      "supports_metadata_only_record": false,
+      "supports_dua_workflow": true,
+      "supports_access_committee": true,
+      "accepts_code": false
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "event_actions": [
+    {
+      "disposition": "ignore_stale",
+      "event_id": "EV-500",
+      "evidence_refs": [
+        "recall.db#shipments/SH-A",
+        "shipment_events.jsonl#EV-500",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "apply_current",
+      "event_id": "EV-501",
+      "evidence_refs": [
+        "recall.db#shipments/SH-A",
+        "shipment_events.jsonl#EV-501",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "apply_current",
+      "event_id": "EV-502",
+      "evidence_refs": [
+        "recall.db#shipments/SH-B",
+        "shipment_events.jsonl#EV-502",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "ignore_stale",
+      "event_id": "EV-503",
+      "evidence_refs": [
+        "recall.db#shipments/SH-B",
+        "shipment_events.jsonl#EV-503",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "apply_current",
+      "event_id": "EV-504",
+      "evidence_refs": [
+        "recall.db#shipments/SH-E",
+        "shipment_events.jsonl#EV-504",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "quarantine_unknown_shipment",
+      "event_id": "EV-505",
+      "evidence_refs": [
+        "recall.db#shipments/SH-UNKNOWN",
+        "shipment_events.jsonl#EV-505",
+        "recall_policy.md#feed-adjudication"
+      ]
+    },
+    {
+      "disposition": "apply_current",
+      "event_id": "EV-506",
+      "evidence_refs": [
+        "recall.db#shipments/SH-D",
+        "shipment_events.jsonl#EV-506",
+        "recall_policy.md#feed-adjudication"
+      ]
+    }
+  ],
+  "external_actions_executed": false,
+  "lot_actions": [
+    {
+      "disposition": "affected",
+      "evidence_refs": [
+        "recall.db#lots/LOT-A",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-A"
+    },
+    {
+      "disposition": "affected",
+      "evidence_refs": [
+        "recall.db#lots/LOT-B",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-B"
+    },
+    {
+      "disposition": "unaffected",
+      "evidence_refs": [
+        "recall.db#lots/LOT-C",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-C"
+    },
+    {
+      "disposition": "pending_trace",
+      "evidence_refs": [
+        "recall.db#lots/LOT-D",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-D"
+    },
+    {
+      "disposition": "affected",
+      "evidence_refs": [
+        "recall.db#lots/LOT-E",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-E"
+    },
+    {
+      "disposition": "unaffected",
+      "evidence_refs": [
+        "recall.db#lots/LOT-F",
+        "signed_scope_revisions.json#revisions",
+        "recall_policy.md#genealogy-decisions"
+      ],
+      "lot_id": "LOT-F"
+    }
+  ],
+  "recall_id": "RC-2026-0417",
+  "schema_version": 1,
+  "scope_revision_id": "SCOPE-02",
+  "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b"
+}

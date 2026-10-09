@@ -1,0 +1,14 @@
+[
+  {
+    "case_id": "mobile-v1-directionality",
+    "baseline": {"createOrder": {"request": {"properties": {"sku": {"type": ["string"]}}, "required": ["sku"]}, "response": {"properties": {"status": {"type": ["string"], "enum": ["queued", "shipped"]}}, "required": ["status"]}}},
+    "candidate": {"createOrder": {"request": {"properties": {"sku": {"type": ["string"]}, "region": {"type": ["string"]}}, "required": ["sku", "region"]}, "response": {"properties": {"status": {"type": ["string"], "enum": ["queued", "shipped", "held"]}, "trace_id": {"type": ["string"]}}, "required": ["status"]}}},
+    "consumers": [{"consumer_id": "mobile-v1", "operations": ["createOrder"], "always_sends": {"createOrder": ["sku"]}, "request_values": {"createOrder": {}}, "response_fields": {"createOrder": ["status"]}, "accepts_null": {"createOrder": []}, "exhaustive_enums": {"createOrder": ["status"]}, "reject_unknown_response": {"createOrder": false}}]
+  },
+  {
+    "case_id": "tolerant-reader-addition",
+    "baseline": {"getOrder": {"request": {"properties": {}, "required": []}, "response": {"properties": {"id": {"type": ["string"]}}, "required": ["id"]}}},
+    "candidate": {"getOrder": {"request": {"properties": {}, "required": []}, "response": {"properties": {"id": {"type": ["string"]}, "eta": {"type": ["string", "null"]}}, "required": ["id"]}}},
+    "consumers": [{"consumer_id": "web-v3", "operations": ["getOrder"], "always_sends": {"getOrder": []}, "request_values": {"getOrder": {}}, "response_fields": {"getOrder": ["id"]}, "accepts_null": {"getOrder": []}, "exhaustive_enums": {"getOrder": []}, "reject_unknown_response": {"getOrder": false}}]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "incident_id": "INC-114-2026-08",
+  "opened_at": "2026-08-18T19:40:00Z",
+  "detector_id": "DET-REL-7",
+  "credential_id": "SYN-CRED-REL-PUB-A",
+  "fingerprint_sha256": "b68d7fa33c328f61ed84125cd4b11e37fa9e06c31124197d66059b7f10620173",
+  "pattern": "HB_SYNTH_SECRET_[A-Z0-9_]+_NOT_VALID",
+  "revocation_authority": "release-security",
+  "replacement": {
+    "secret_ref": "vault://synthetic/nimbus/release-publisher@v3",
+    "scope": [
+      "release:publish:nimbus"
+    ],
+    "owner": "release-automation",
+    "activation_authority": "release-security"
+  },
+  "external_connectivity": false
+}

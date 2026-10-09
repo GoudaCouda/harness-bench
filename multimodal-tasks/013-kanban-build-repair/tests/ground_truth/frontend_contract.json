@@ -1,0 +1,175 @@
+{
+  "task_id": "013-kanban-build-repair",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "kanban_build_repair_protected_local_data",
+    "kanban_build_repair_migration_interaction_model",
+    "kanban_build_repair_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "KAN-101",
+      "title": "Restore drag fallback",
+      "lane": "Backlog",
+      "owner": "Kai",
+      "status": "blocked",
+      "estimate": 8,
+      "blockers": 3
+    },
+    {
+      "id": "KAN-108",
+      "title": "Fix card overflow",
+      "lane": "In Progress",
+      "owner": "Mira",
+      "status": "active",
+      "estimate": 5,
+      "blockers": 1
+    },
+    {
+      "id": "KAN-117",
+      "title": "Column count audit",
+      "lane": "Review",
+      "owner": "Leo",
+      "status": "ready",
+      "estimate": 3,
+      "blockers": 0
+    },
+    {
+      "id": "KAN-126",
+      "title": "Release note cleanup",
+      "lane": "Done",
+      "owner": "Mira",
+      "status": "done",
+      "estimate": 2,
+      "blockers": 0
+    },
+    {
+      "id": "KAN-132",
+      "title": "Repair flaky smoke test",
+      "lane": "Backlog",
+      "owner": "Ari",
+      "status": "blocked",
+      "estimate": 6,
+      "blockers": 2
+    },
+    {
+      "id": "KAN-144",
+      "title": "Keyboard reorder path",
+      "lane": "In Progress",
+      "owner": "Kai",
+      "status": "active",
+      "estimate": 4,
+      "blockers": 1
+    },
+    {
+      "id": "KAN-155",
+      "title": "Regression checklist",
+      "lane": "Review",
+      "owner": "Mira",
+      "status": "ready",
+      "estimate": 7,
+      "blockers": 0
+    },
+    {
+      "id": "KAN-166",
+      "title": "Archive stale fixture",
+      "lane": "Done",
+      "owner": "Leo",
+      "status": "done",
+      "estimate": 1,
+      "blockers": 0
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "kanban",
+      "lane"
+    ],
+    [
+      "Backlog"
+    ],
+    [
+      "In Progress"
+    ],
+    [
+      "Review"
+    ],
+    [
+      "Done"
+    ],
+    [
+      "blocked",
+      "blockers"
+    ],
+    [
+      "estimate",
+      "points"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "Move selected to Review",
+      "moveSelected"
+    ],
+    [
+      "Move selected to Done"
+    ],
+    [
+      "Undo last move",
+      "undo"
+    ],
+    [
+      "selectedId",
+      "selected"
+    ],
+    [
+      "history",
+      "Last move"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Blocked points"
+    ],
+    [
+      "Review count"
+    ],
+    [
+      "Active WIP"
+    ],
+    [
+      "Last move"
+    ],
+    [
+      "Selected card"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "move_id": "KAN-101",
+    "second_move_id": "KAN-108"
+  }
+}

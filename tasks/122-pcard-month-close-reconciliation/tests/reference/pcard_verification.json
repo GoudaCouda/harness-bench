@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "amounts_balance": true,
+    "journal_committed": true,
+    "one_close_run": true,
+    "prepared_action_consumed": true,
+    "refund_link_retained": true,
+    "split_graph_retained": true,
+    "transaction_dispositions": true
+  },
+  "close_id": "PCLOSE-2026-07-CARDOPS",
+  "external_actions_executed": false,
+  "logical_close_sha256": "b3ede772d26e84e4539d2cea6bcfb80cd045eebf8fdc8f0d624e397e7ee8da8a",
+  "period": "2026-07",
+  "source_checkpoint": "7ce3d7997ec3bedafbad8de3dd82f952c413f0d5c7aed09794fcdddd6dfdafeb",
+  "status": "pass",
+  "tool": "pcardctl/1"
+}

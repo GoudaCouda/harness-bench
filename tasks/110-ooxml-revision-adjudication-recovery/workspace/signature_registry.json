@@ -1,0 +1,35 @@
+{
+  "registry_version": "northstar-signers-2026-08-18",
+  "credentials": {
+    "DIR-V2": {
+      "role": "directory_owner",
+      "verified": false,
+      "status": "retired"
+    },
+    "DIR-V3": {
+      "role": "directory_owner",
+      "verified": true,
+      "status": "current"
+    },
+    "SIG-LEGAL-2026-07": {
+      "role": "legal_signer",
+      "verified": true,
+      "status": "current"
+    },
+    "SIG-LEGAL-2026-08": {
+      "role": "legal_signer",
+      "verified": true,
+      "status": "current"
+    },
+    "SIG-RELEASE-V5": {
+      "role": "release_coordinator",
+      "verified": true,
+      "status": "current"
+    },
+    "SIG-UNVERIFIED": {
+      "role": "legal_signer",
+      "verified": false,
+      "status": "unverified"
+    }
+  }
+}

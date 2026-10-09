@@ -1,0 +1,31 @@
+{
+  "approved_docx_sha256": "af7a0ac2ff470999d39c0d0e48d49deb961b06e0fe0499b2a430fcae66738058",
+  "checks": {
+    "action_coverage": true,
+    "authority_and_dependency_outcomes": true,
+    "current_event_selection": true,
+    "deterministic_order": true,
+    "document_matches_plan": true,
+    "durable_prefix_preserved": true,
+    "internal_boundary": true,
+    "local_evidence": true,
+    "non_document_parts_preserved": true,
+    "one_decision_per_change": true,
+    "output_document_present": true,
+    "single_recovery_transaction": true,
+    "source_document": true,
+    "tracked_revisions_resolved": true,
+    "workflow_identity": true,
+    "workflow_state_reconciled": true
+  },
+  "database_state_sha256": "d7c6623a1b3942b314083b2d8b64a7e53cc235f69fc4804ae5d5d3fa7c427b28",
+  "external_published": false,
+  "handoff_sha256": "0b06fa2a1872d5608049923bd4fa1f83836e2ea537b8715c5d7f90fce64e0f5a",
+  "journal_prefix_sha256": "1bb5d9fbbd1f80450ee97e869d990169ab132b6572ad3b44234653866fa06934",
+  "normalized_plan_sha256": "1edb05e0222fb0969d5685da0a375b57103012dceae9bb85df23b2a628f0bf09",
+  "phase": "staged_for_internal_approval",
+  "source_bundle_sha256": "870c9bfb00eddba5abe58aea9518a5368085e1f77d52541e0df9b6cd7dea40cf",
+  "status": "pass",
+  "tool": "bulletinctl/1",
+  "workflow_id": "NORTHSTAR-BULLETIN-REV5"
+}

@@ -1,0 +1,10 @@
+From: operations@example.test
+To: dock-c@example.test
+Message-ID: <shipment-c@ops.local>
+X-Thread-ID: thread-shipment-c
+Subject: Shipment update C
+Date: Tue, 18 Aug 2026 09:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+This is an offline fixture message.

@@ -1,0 +1,16 @@
+{
+  "bank_information_collected": false,
+  "correction_signatures_verified": true,
+  "decision_count": 4,
+  "external_actions_executed": false,
+  "held_count": 1,
+  "pending_registry_count": 1,
+  "primary_export_rejected_as_truncated": true,
+  "ready_count": 2,
+  "registry_signature_verified": true,
+  "renewal_id": "VRR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "eda2698413b4e7b78ef45359ef976e47c618b0be5b051f5475cf403c1cd77012",
+  "source_checkpoint": "4b8c420eed11ac954df5b93936866e82460dbcdef90a640d36f24f5c9aa7fb9b",
+  "status": "valid"
+}

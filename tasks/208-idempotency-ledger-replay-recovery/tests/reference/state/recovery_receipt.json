@@ -1,0 +1,101 @@
+{
+  "queue_id": "replay-2026-03-14",
+  "recovery_clock_epoch": 1773478800,
+  "reclaimed": {
+    "dropped_expired": [
+      "pay-1004"
+    ],
+    "released_leases": [
+      "pay-1002"
+    ]
+  },
+  "decisions": [
+    {
+      "request_id": "req-01",
+      "idempotency_key": "pay-1001",
+      "decision": "replayed",
+      "reason": "stored_response_replayed",
+      "response": {
+        "invoice": "INV-1001",
+        "status": "settled",
+        "amount_cents": 125000,
+        "receipt_id": "RCP-pay-1001"
+      }
+    },
+    {
+      "request_id": "req-02",
+      "idempotency_key": "pay-1005",
+      "decision": "conflict",
+      "reason": "fingerprint_mismatch_for_reused_key"
+    },
+    {
+      "request_id": "req-03",
+      "idempotency_key": "pay-1002",
+      "decision": "executed",
+      "reason": "no_usable_prior_record",
+      "response": {
+        "invoice": "INV-1002",
+        "status": "settled",
+        "amount_cents": 48000,
+        "receipt_id": "RCP-pay-1002"
+      }
+    },
+    {
+      "request_id": "req-04",
+      "idempotency_key": "pay-1004",
+      "decision": "executed",
+      "reason": "no_usable_prior_record",
+      "response": {
+        "invoice": "INV-1004",
+        "status": "settled",
+        "amount_cents": 22000,
+        "receipt_id": "RCP-pay-1004"
+      }
+    },
+    {
+      "request_id": "req-05",
+      "idempotency_key": "pay-1006",
+      "decision": "executed",
+      "reason": "no_usable_prior_record",
+      "response": {
+        "invoice": "INV-1006",
+        "status": "settled",
+        "amount_cents": 9900,
+        "receipt_id": "RCP-pay-1006"
+      }
+    },
+    {
+      "request_id": "req-06",
+      "idempotency_key": "pay-1007",
+      "decision": "executed",
+      "reason": "no_usable_prior_record",
+      "response": {
+        "invoice": "INV-1007",
+        "status": "settled",
+        "amount_cents": 15600,
+        "receipt_id": "RCP-pay-1007"
+      }
+    },
+    {
+      "request_id": "req-07",
+      "idempotency_key": "pay 1008!",
+      "decision": "rejected",
+      "reason": "malformed_idempotency_key"
+    },
+    {
+      "request_id": "req-08",
+      "idempotency_key": "pay-1003",
+      "decision": "deferred",
+      "reason": "live_lease_held_by_another_worker"
+    }
+  ],
+  "counts": {
+    "replayed": 1,
+    "conflict": 1,
+    "executed": 4,
+    "deferred": 1,
+    "rejected": 1
+  },
+  "settled_total_cents": 95500,
+  "state": "recovered"
+}

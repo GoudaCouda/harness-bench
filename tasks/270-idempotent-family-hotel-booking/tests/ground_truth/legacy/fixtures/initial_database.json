@@ -1,0 +1,26 @@
+{
+  "schema_version": "nami_work_case16_database_seed_v1",
+  "fixed_time": "2026-07-20T09:00:00+08:00",
+  "meta": [
+    {"key": "case_id", "value": "case_16"},
+    {"key": "fixed_time", "value": "2026-07-20T09:00:00+08:00"},
+    {"key": "schema_version", "value": "1"}
+  ],
+  "users": [
+    {"user_id": "CUS-042", "display_name": "合成客户甲", "status": "active"},
+    {"user_id": "CUS-099", "display_name": "合成客户乙", "status": "active"}
+  ],
+  "hotels": [
+    {"hotel_id": "H-CJ-001", "name": "澄江青岚酒店", "city": "澄江市", "district": "中心区", "breakfast_included": 0, "non_smoking_family_room": 1, "nightly_rate_cny": 560},
+    {"hotel_id": "H-CJ-002", "name": "澄江云栖酒店", "city": "澄江市", "district": "中心区", "breakfast_included": 1, "non_smoking_family_room": 1, "nightly_rate_cny": 598},
+    {"hotel_id": "H-CJ-003", "name": "澄江湖畔酒店", "city": "澄江市", "district": "湖滨区", "breakfast_included": 1, "non_smoking_family_room": 1, "nightly_rate_cny": 618},
+    {"hotel_id": "H-CJ-004", "name": "澄江中心大酒店", "city": "澄江市", "district": "中心区", "breakfast_included": 1, "non_smoking_family_room": 0, "nightly_rate_cny": 590},
+    {"hotel_id": "H-CJ-005", "name": "澄江臻选酒店", "city": "澄江市", "district": "中心区", "breakfast_included": 1, "non_smoking_family_room": 1, "nightly_rate_cny": 688}
+  ],
+  "inventory_dates": ["2026-11-18", "2026-11-19", "2026-11-20"],
+  "room_type": "family_standard",
+  "initial_rooms_per_hotel_date": 4,
+  "bookings": [],
+  "booking_nights": [],
+  "audit_events": []
+}

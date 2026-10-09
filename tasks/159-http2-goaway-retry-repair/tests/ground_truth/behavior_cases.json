@@ -1,0 +1,18 @@
+{
+  "goaway_evidence_and_retry": [
+    {"requests":[{"request_id":"a","method":"POST","stream_id":7,"response_state":"none","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"POST","stream_id":3,"response_state":"reset","reset_code":"REFUSED_STREAM","body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"GET","stream_id":3,"response_state":"headers","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}}
+  ],
+  "side_effect_and_connection_safety": [
+    {"requests":[{"request_id":"a","method":"POST","stream_id":3,"response_state":"headers","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"POST","stream_id":3,"response_state":"headers","reset_code":null,"body_replayable":true,"idempotency_key":"payment-1","attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"GET","stream_id":7,"response_state":"none","reset_code":null,"body_replayable":false,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"GET","stream_id":3,"response_state":"none","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":2}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"PROTOCOL_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}}
+  ],
+  "invalid": [
+    {"requests":[{"request_id":"a","method":"GET","stream_id":2,"response_state":"none","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[{"request_id":"a","method":"GET","stream_id":7,"response_state":"complete","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0}],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":2,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}},
+    {"requests":[],"goaway":{"connection_id":"c","last_stream_id":5,"error_code":"NO_ERROR"},"policy":{"max_retries":0,"idempotent_methods":["GET"],"require_idempotency_key_for_unsafe":true,"retryable_errors":["NO_ERROR"]}}
+  ]
+}

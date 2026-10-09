@@ -1,0 +1,71 @@
+task_id: 039-task-cancellation-cleanup
+title: Cancel a privacy export and purge staged data
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+hooks_module: environment/hooks.py
+timeout_sec: 3600
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- code_execution
+- incident_response
+- structured_data
+harness_demands:
+- tool_selection
+- multi_step_execution
+- state_management
+- verification_behavior
+stressors:
+- partial_failure
+- high_stakes_rules
+- cross_record_dependency
+required_artifacts:
+- control/job_state.json
+- control/queue.json
+- control/worker_leases.json
+- control/fanout_state.json
+- audit/events.jsonl
+- cancellation_ledger.csv
+- cleanup_plan.csv
+- privacy_handoff.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-039
+task_family: 039-task-cancellation-cleanup
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - cancellation_ledger.csv
+  - cleanup_plan.csv
+  - privacy_handoff.md
+  allowed_modified:
+  - control/job_state.json
+  - control/queue.json
+  - control/worker_leases.json
+  - control/fanout_state.json
+  - audit/events.jsonl
+  allowed_deleted:
+  - staging/part-000.csv
+  - staging/job77-part-000.csv
+  - staging/job78-part-000.jsonl
+  - staging/job79-part-000.jsonl
+  - staging/upload-key-79.txt
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

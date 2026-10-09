@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 090-async-backpressure-cancellation-repair
+pass_threshold: 0.8
+cases:
+- id: bounded_ordered_failure_isolation
+  title: Bounded workers preserve input order and isolate ordinary failures
+  description: Hidden coroutines observe concurrency, backpressure structure, opaque values, stable order,
+    and sibling completion.
+  weight: 0.3
+  core: true
+- id: timeout_and_caller_cancellation_cleanup
+  title: Internal shutdown and caller cancellation leave no pool task behind
+  description: Running and queued work terminate, completed values survive, incomplete items are marked,
+    and caller cancellation propagates.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_batch_execution
+  title: Protected visible execution is current and exactly reconciled
+  description: Results and audit reflect the repaired pool, bounded peak, source order, and isolated failure.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The handoff explains queue and cancellation invariants with verification evidence
+  description: Another engineer can review backpressure, task accounting, failure behavior, cleanup, and
+    commands.
+  weight: 0.2
+  core: false
+- id: source_input_and_execution_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

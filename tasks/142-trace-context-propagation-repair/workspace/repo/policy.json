@@ -1,0 +1,1 @@
+{"vendor_key":"acme","sensitive_baggage_keys":["auth","user.id"],"max_tracestate_entries":8,"max_baggage_entries":8}

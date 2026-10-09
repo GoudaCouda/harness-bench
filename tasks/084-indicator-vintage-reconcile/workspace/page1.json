@@ -1,0 +1,11 @@
+{
+  "page": 1,
+  "pages": 3,
+  "vintage": "2026-07",
+  "rows": [
+    {"country": "Aster", "year": 2023, "code": "GDPCON15", "value": 502},
+    {"country": "Aster", "year": 2024, "code": "GDPCON15", "value": 510},
+    {"country": "Aster", "year": 2025, "code": "GDPCON15", "value": 525},
+    {"country": "Aster", "year": 2025, "code": "GDPCUR", "value": 812}
+  ]
+}

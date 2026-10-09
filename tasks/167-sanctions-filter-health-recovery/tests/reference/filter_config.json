@@ -1,0 +1,9 @@
+{
+  "alias_normalization": "nfkc_casefold",
+  "authorized_clearance_roles": [
+    "compliance_officer"
+  ],
+  "config_version": "FILTER-8",
+  "fail_closed_on_probe_error": true,
+  "list_version": "LIST-2026-07-15"
+}

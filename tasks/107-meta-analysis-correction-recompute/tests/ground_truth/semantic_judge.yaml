@@ -1,0 +1,23 @@
+schema_version: 1
+task_id: 107-meta-analysis-correction-recompute
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Corrected quantitative-review handoff is professionally complete
+  question: Does the handoff accurately explain protocol and correction authority,
+    inclusion and exclusion scope, the old-to-new pooled estimate and heterogeneity,
+    correction-specific leave-one-out sensitivity, all three bounded claim actions,
+    forest-plot regeneration, local byte-bound verification, and the no-publication,
+    no-contact, no-approval boundary?
+  pass_anchors:
+  - Equivalent terminology, prose organization, rounding, and local citation style
+    are acceptable when the quantitative direction and every decision are accurate.
+  fail_anchors:
+  - Retaining the superseded arm assignment, double-counting reports, changing the
+    safety claim, fabricating sensitivity, or claiming an external action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

@@ -1,0 +1,39 @@
+{
+  "attachment_count": 1,
+  "messages": [
+    {
+      "attachments": [
+        {
+          "body": "hi",
+          "content_id": "a1",
+          "content_type": "text/plain",
+          "filename": "note.txt",
+          "path": [
+            1
+          ]
+        }
+      ],
+      "id": "mail",
+      "parts": [
+        {
+          "body": "hello",
+          "content_id": null,
+          "content_type": "text/plain",
+          "filename": null,
+          "path": [
+            0
+          ]
+        },
+        {
+          "body": "hi",
+          "content_id": "a1",
+          "content_type": "text/plain",
+          "filename": "note.txt",
+          "path": [
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

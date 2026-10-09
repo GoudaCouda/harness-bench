@@ -1,0 +1,17 @@
+{
+  "account_id": "acct_1008",
+  "account_holder": "Leila Hassan",
+  "primary_email": "leila.hassan@example.com",
+  "phone": "+1-312-555-0162",
+  "status": "active",
+  "current_holds": [],
+  "linked_people": [
+    {
+      "relationship": "emergency_contact",
+      "name": "Ahmed Farouk",
+      "email": "ahmed.farouk@example.org",
+      "phone": "+1-312-555-0191"
+    }
+  ],
+  "internal_case_note": "complaint escalation tag CS-77 is internal only"
+}

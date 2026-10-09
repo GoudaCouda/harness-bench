@@ -1,0 +1,76 @@
+task_id: 116-mailbox-dsn-draft-recovery
+title: Recover an interrupted mailbox DSN and local-draft reconciliation
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Office Productivity
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- mime_email
+- maildir
+- sqlite
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- copied_messages
+- duplicate_dsn
+- unsafe_dsn_linkage
+- signed_approval_authority
+- interrupted_transaction
+- semantic_replay
+- irreversible_action_boundary
+required_artifacts:
+- recovery_plan.json
+- .mail_preview.json
+- state/mailops.db
+- state/verification.json
+- state/stage_receipt.json
+- state/replay_report.json
+- recovery_handoff.md
+task_family: mailbox-dsn-draft-recovery
+variant: mime-identity-approval-and-interrupted-sqlite-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - RFC-3464-DSN
+  - PYTHON-EMAIL-PARSER
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recovery_plan.json
+  - .mail_preview.json
+  - state/verification.json
+  - state/stage_receipt.json
+  - state/replay_report.json
+  - recovery_handoff.md
+  - __pycache__/
+  allowed_modified:
+  - state/mailops.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

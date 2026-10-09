@@ -1,0 +1,8 @@
+{
+  "rejected": [
+    {"reasons": ["product_version_mismatch", "fixed_version_mismatch"], "statement_id": "VEX-7101"},
+    {"reasons": ["not_affected_justification_required", "not_affected_impact_statement_required"], "statement_id": "VEX-7104"},
+    {"reasons": ["untrusted_signer", "payload_digest_mismatch"], "statement_id": "VEX-7105"}
+  ],
+  "release_id": "REL-2026-08-17-A"
+}

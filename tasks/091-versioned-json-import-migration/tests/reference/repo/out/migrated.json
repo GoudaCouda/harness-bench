@@ -1,0 +1,60 @@
+[
+  {
+    "document": {
+      "connection": {
+        "endpoint": "https://billing.internal",
+        "region": null,
+        "retry_limit": 0
+      },
+      "enabled_features": [],
+      "extensions": {
+        "x-owner": "payments"
+      },
+      "identity": {
+        "name": "billing"
+      },
+      "schema_version": 3
+    },
+    "source_id": "legacy-null"
+  },
+  {
+    "document": {
+      "connection": {
+        "endpoint": "https://catalog.internal",
+        "region": "us-central",
+        "retry_limit": 5
+      },
+      "enabled_features": [
+        "audit",
+        "streaming"
+      ],
+      "extensions": {
+        "x-ticket": "PLAT-204"
+      },
+      "identity": {
+        "name": "catalog"
+      },
+      "schema_version": 3
+    },
+    "source_id": "v2-flags"
+  },
+  {
+    "document": {
+      "connection": {
+        "endpoint": "https://search.internal",
+        "region": "eu-west",
+        "retry_limit": 2
+      },
+      "enabled_features": [
+        "cache",
+        "zonal"
+      ],
+      "extensions": {},
+      "identity": {
+        "name": "search"
+      },
+      "schema_version": 3
+    },
+    "source_id": "v3-reorder"
+  }
+]

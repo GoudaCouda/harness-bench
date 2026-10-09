@@ -1,0 +1,1344 @@
+schema_version: 1
+suite: main
+suite_size: 274
+task_ids:
+- 001-meeting-summary
+- 002-monorepo-affected-build
+- 003-git-pr-merge
+- 004-office-docs
+- 005-repository-regression-bisect-repair
+- 006-digital-record-transfer-staging
+- 007-database-point-in-time-recovery-drill
+- 008-db-doc-consistency
+- 009-safe-archive-extraction
+- 010-layered-config-resolution
+- 011-calendar-scheduling-conflict
+- 012-feature-flag-retirement
+- 013-batch-quote-contract
+- 014-contract-summary-risk
+- 015-email-thread-merge
+- 016-expense-packet-review
+- 017-http-cache-revalidation
+- 018-cross-doc-citation-check
+- 019-wheel-install-transaction-recovery
+- 020-conflicting-source-resolution
+- 021-clinical-trial-registry-result-reconcile
+- 022-policy-clause-retrieval
+- 023-oauth-refresh-race-recovery
+- 024-repo-architecture-map
+- 025-dependency-upgrade-compat
+- 026-code-review-risk-report
+- 027-release-note-changelog
+- 028-excel-like-cleaning
+- 029-multitable-join-analysis
+- 030-sql-query-report
+- 031-accessibility-conformance-sample-repair
+- 032-anomalous-transaction-detect
+- 033-rate-limit-lease-reconciliation
+- 034-funnel-dropoff-analysis
+- 035-workspace-dependency-resolution
+- 036-consumer-api-compatibility
+- 037-multiday-project-state
+- 038-public-assistance-validation-repair
+- 039-task-cancellation-cleanup
+- 040-service-dependency-triage
+- 041-capacity-planning
+- 042-integration-test-isolation
+- 043-localization-fallback-repair
+- 044-legal-compliance-review
+- 045-hr-resume-screening
+- 046-ecommerce-support-routing
+- 047-logistics-delay-response
+- 048-research-repro-package
+- 049-platform-appeal-review
+- 050-http-range-download-resume-repair
+- 051-smallfile-batch-reject-ledger
+- 052-local-html-dom-form-extract
+- 053-event-time-window-reconciliation
+- 054-timeseries-anomaly-attribution
+- 055-financial-close-reconciliation
+- 056-jsonl-sessionization-analysis
+- 057-metric-definition-migration-diff
+- 058-policy-version-conflict-resolution
+- 059-offline-knowledge-qa-insufficient-evidence
+- 060-research-claims-batch-evidence-audit
+- 061-three-source-decision-record-synthesis
+- 062-privacy-dsar-intake-review
+- 063-cli-stdin-tty-safety-repair
+- 064-internal-doc-retrieval-injection-defense
+- 065-policy-update-replan-diff
+- 066-async-ops-window-rollup
+- 067-reproducible-archive-manifest-repair
+- 068-release-approval-gate-plan
+- 069-git-submodule-state-recovery
+- 070-ci-attempt-diagnosis
+- 071-sbom-vex-consumption-gate
+- 072-migration-graph-repair
+- 073-cross-ecosystem-version-sync-repair
+- 074-codeowner-review-reconcile
+- 075-git-case-rename-recovery
+- 076-transitive-security-upgrade
+- 077-sqlite-migration-transaction-recovery
+- 078-artifact-provenance-gate
+- 079-merge-queue-reapproval
+- 080-multipart-artifact-resume-recovery
+- 081-python-wheel-tag-selection-repair
+- 082-http-request-retry-safety-repair
+- 083-census-geography-align
+- 084-indicator-vintage-reconcile
+- 085-station-qc-coverage
+- 086-revision-vintage-ledger
+- 087-structured-log-redaction-repair
+- 088-cardinality-guarded-join
+- 089-file-watcher-atomic-save-repair
+- 090-async-backpressure-cancellation-repair
+- 091-versioned-json-import-migration
+- 092-bounded-cache-eviction-repair
+- 093-incremental-jsonl-stream-recovery
+- 094-alert-routing-repair
+- 095-incident-evidence-handoff
+- 096-pod-config-secret-diagnosis
+- 097-kubernetes-ca-trust-rotation-recovery
+- 098-webhook-signing-key-rotation-repair
+- 099-incident-checkpoint-recovery
+- 100-prisma-screening-reconcile
+- 101-pki-truststore-rotation-recovery
+- 102-openalex-evidence-graph
+- 103-plugin-lifecycle-transaction-repair
+- 104-datacite-version-graph
+- 105-nih-dms-package-staging
+- 106-waf-policy-replay-repair
+- 107-meta-analysis-correction-recompute
+- 108-dst-recurrence-schedule-repair
+- 109-unicode-identifier-migration-repair
+- 110-ooxml-revision-adjudication-recovery
+- 111-leave-payroll-retro-recovery
+- 112-container-sbom-remediation
+- 113-subscription-entitlement-webhook-recovery
+- 114-csv-dialect-encoding-intake-repair
+- 115-cdc-scd2-recovery
+- 116-mailbox-dsn-draft-recovery
+- 117-calendar-delta-fallback-recovery
+- 118-warehouse-reservation-recovery
+- 119-selective-restore-manifest-repair
+- 120-http-cookie-jar-policy-repair
+- 121-three-way-invoice-match
+- 122-pcard-month-close-reconciliation
+- 123-entity-renewal-fallback-verification
+- 124-contract-closeout-gates
+- 125-product-recall-scope-plan
+- 126-grade-passback-recovery
+- 127-environmental-lims-accession-recovery
+- 128-json-schema-reference-scope-repair
+- 129-royalty-usage-allocation-recovery
+- 130-multi-carrier-shipment-claim-recovery
+- 131-journal-cursor-resume-repair
+- 132-itinerary-replan-after-second-disruption
+- 133-dockerignore-build-context-repair
+- 134-python-namespace-import-resolution-repair
+- 135-log-rotation-checkpoint-recovery
+- 136-escrow-disbursement-recovery
+- 137-calibration-certificate-control-recovery
+- 138-prior-authorization-packet-recovery
+- 139-oci-layer-whiteout-merge-repair
+- 140-pharmacovigilance-case-intake-recovery
+- 141-dicom-deidentification-recovery
+- 142-trace-context-propagation-repair
+- 143-mime-multipart-decoding-repair
+- 144-formulary-substitution-review-recovery
+- 145-permit-routing-constraint-repair
+- 146-transactional-outbox-replay-repair
+- 147-iac-lifecycle-plan-repair
+- 148-kubernetes-field-ownership-repair
+- 149-graphql-optimistic-cache-repair
+- 150-webauthn-counter-risk-repair
+- 151-crm-account-merge-recovery
+- 152-postgres-replication-slot-recovery
+- 153-github-actions-matrix-rerun
+- 154-postgres-expand-contract-migration-repair
+- 155-payee-screening-service-recovery
+- 156-subtitle-timing-format-repair
+- 157-github-oidc-trust-policy-repair
+- 158-kafka-transactional-offset-recovery
+- 159-http2-goaway-retry-repair
+- 160-xbrl-prefiling-semantic-repair
+- 161-prometheus-histogram-migration-repair
+- 162-degree-prerequisite-audit
+- 163-grpc-deadline-cancellation-repair
+- 164-s3-event-sequencer-reconciliation
+- 165-kubernetes-admission-convergence-repair
+- 166-sigstore-bundle-policy-repair
+- 167-sanctions-filter-health-recovery
+- 168-http-early-data-replay-repair
+- 169-redis-cluster-redirection-repair
+- 170-cs-priority-routing-base
+- 171-openapi-compatibility-repair
+- 172-oauth-dpop-replay-policy-repair
+- 173-kubernetes-watch-recovery
+- 174-dns-stale-negative-cache-repair
+- 175-service-health-budget-repair
+- 176-jwks-cache-rotation-repair
+- 177-connection-pool-reset-repair
+- 178-make-incremental-rebuild-repair
+- 179-git-worktree-prune-planner
+- 180-oci-platform-manifest-selection
+- 181-systemd-restart-budget-repair
+- 182-message-inbox-dedup-recovery
+- 183-certificate-path-selection-repair
+- 184-rolling-deployment-capacity-repair
+- 185-unix-permission-transition-repair
+- 186-dmarc-alignment-repair
+- 187-content-negotiation-vary-repair
+- 188-dns-zone-serial-repair
+- 189-database-deadlock-retry-repair
+- 190-api-pagination-cursor-recovery
+- 191-backup-chunk-gc-repair
+- 192-retention-hold-compaction-repair
+- 193-kubernetes-finalizer-recovery
+- 194-shell-pipeline-status-repair
+- 195-hr-injury-evidence-stress
+- 196-proxy-no-proxy-matching-repair
+- 197-hr-coverage-delivery-stress
+- 198-postgres-vacuum-wraparound-planner
+- 199-git-lfs-pointer-repair
+- 200-hr-transfer-least-privilege
+- 201-secret-lineage-containment-recovery
+- 202-smart-meter-billing-correction-recovery
+- 203-cold-chain-excursion-recovery
+- 204-purchase-order-edi-recovery
+- 205-serialized-equipment-maintenance-recovery
+- 206-bom-engineering-change-propagation
+- 207-water-main-isolation-recovery
+- 208-idempotency-ledger-replay-recovery
+- 209-jsonrpc-admission-gate
+- 210-attestation-evidence-chain
+- 211-sliding-window-quota-ledger
+- 212-bounded-archive-ingest
+- 213-out-of-order-job-journal
+- 214-circuit-breaker-probe-budget
+- 215-placement-inventory-union
+- 216-sso-audit-token-quarantine
+- 217-offline-patchset-merge-gate
+- 218-content-addressed-case-log
+- 219-dataset-manifest-pin
+- 220-ferpa-directory-disclosure-gate
+- 221-loto-energize-tag-gate
+- 222-medication-refill-window-gate
+- 223-isrc-territory-rights-gate
+- 224-sla-refund-chargeback-gate
+- 225-i9-document-completeness-gate
+- 226-shared-mailbox-sent-identity
+- 227-contractor-1099-threshold-gate
+- 228-event-time-watermark-late-drop
+- 229-purchase-order-ack-qty-gate
+- 230-sample-custody-holding-gate
+- 231-embargo-preprint-release-gate
+- 232-gpc-cookie-purpose-gate
+- 233-dns-cache-zone-admission
+- 234-flake-quarantine-fail-window
+- 235-section-waitlist-seat-gate
+- 236-demand-response-dispatch-gate
+- 237-rma-serial-warranty-gate
+- 238-gtfs-realtime-vs-static-reconcile
+- 239-dag-priority-scheduler-repair
+- 240-cidr-pool-allocation
+- 241-git-excise-bad-commit
+- 242-cron-next-fire-repair
+- 243-json-pointer-resolve-repair
+- 244-aircraft-weight-balance-loadsheet
+- 245-sqlite-unordered-migrations
+- 246-interval-capacity-packing
+- 247-stv-ranked-choice-tabulation
+- 248-hosts-alias-flatten
+- 249-airflow-sensor-deadlock-repair
+- 250-boolean-term-retrieval
+- 251-jsonl-wal-replay
+- 252-gettext-catalog-leverage
+- 253-haversine-cpa-alert
+- 254-bibtex-key-collision-repair
+- 255-construction-implementation-plan
+- 256-incident-evidence-postmortem
+- 257-equipment-inspection-word-form
+- 258-policy-document-contradiction-review
+- 259-editable-management-review-deck
+- 260-batch-presentation-standardization
+- 261-sales-analysis-formula-workbook
+- 262-user-service-registration-repair
+- 263-stateful-python-rpc-service
+- 264-node-record-processing-contract
+- 265-weekly-operations-brief-generator
+- 266-evidence-grounded-travel-plan
+- 267-eldercare-research-evidence-report
+- 268-sla-credit-evidence-assessment
+- 269-constrained-shopping-cart-update
+- 270-idempotent-family-hotel-booking
+- 271-itemized-shared-expense-requests
+- 272-video-compression-fidelity-delivery
+- 273-safe-skill-archive-packaging
+- 274-collaboration-materials-reminder-close
+statistics:
+  domain:
+    Business Operations: 24
+    Compliance: 25
+    Customer Service: 5
+    Data Analytics: 18
+    Education Administration: 3
+    Energy and Utilities: 3
+    Finance: 10
+    Human Resources: 6
+    IT Operations: 51
+    Media and Entertainment: 4
+    Office Productivity: 12
+    Personal Assistance: 6
+    Research: 13
+    Science and Laboratory Operations: 6
+    Software Engineering: 88
+  difficulty:
+    easy: 1
+    hard: 245
+    medium: 28
+  task_family:
+    001-dnssec-rollover-recovery: 1
+    003-git-pr-merge: 1
+    004-office-docs: 1
+    008-db-doc-consistency: 1
+    011-calendar-scheduling-conflict: 1
+    014-contract-summary-risk: 1
+    015-email-thread-merge: 1
+    016-expense-packet-review: 1
+    018-cross-doc-citation-check: 1
+    020-conflicting-source-resolution: 1
+    022-policy-clause-retrieval: 1
+    024-repo-architecture-map: 1
+    025-dependency-upgrade-compat: 1
+    026-code-review-risk-report: 1
+    027-release-note-changelog: 1
+    028-excel-like-cleaning: 1
+    029-multitable-join-analysis: 1
+    030-sql-query-report: 1
+    034-funnel-dropoff-analysis: 1
+    037-multiday-project-state: 1
+    039-task-cancellation-cleanup: 1
+    040-service-dependency-triage: 1
+    041-capacity-planning: 1
+    044-legal-compliance-review: 1
+    045-hr-resume-screening: 1
+    046-ecommerce-support-routing: 1
+    047-logistics-delay-response: 1
+    048-research-repro-package: 1
+    049-platform-appeal-review: 1
+    051-smallfile-batch-reject-ledger: 1
+    052-local-html-dom-form-extract: 1
+    054-timeseries-anomaly-attribution: 1
+    055-financial-close-reconciliation: 1
+    056-jsonl-sessionization-analysis: 1
+    057-metric-definition-migration-diff: 1
+    058-policy-version-conflict-resolution: 1
+    059-offline-knowledge-qa-insufficient-evidence: 1
+    060-research-claims-batch-evidence-audit: 1
+    061-three-source-decision-record-synthesis: 1
+    062-privacy-dsar-intake-review: 1
+    064-internal-doc-retrieval-injection-defense: 1
+    065-policy-update-replan-diff: 1
+    066-async-ops-window-rollup: 1
+    068-release-approval-gate-plan: 1
+    070-ci-attempt-diagnosis: 1
+    072-migration-graph-repair: 1
+    074-codeowner-review-reconcile: 1
+    076-transitive-security-upgrade: 1
+    078-artifact-provenance-gate: 1
+    079-merge-queue-reapproval: 1
+    083-census-geography-align: 1
+    084-indicator-vintage-reconcile: 1
+    085-station-qc-coverage: 1
+    086-revision-vintage-ledger: 1
+    087-structured-log-redaction-repair: 1
+    088-cardinality-guarded-join: 1
+    089-file-watcher-atomic-save-repair: 1
+    090-async-backpressure-cancellation-repair: 1
+    091-versioned-json-import-migration: 1
+    092-bounded-cache-eviction-repair: 1
+    093-incremental-jsonl-stream-recovery: 1
+    094-alert-routing-repair: 1
+    096-pod-config-secret-diagnosis: 1
+    098-webhook-signing-key-rotation-repair: 1
+    099-incident-checkpoint-recovery: 1
+    100-prisma-screening-reconcile: 1
+    102-openalex-evidence-graph: 1
+    103-plugin-lifecycle-transaction-repair: 1
+    104-datacite-version-graph: 1
+    108-dst-recurrence-schedule-repair: 1
+    109-unicode-identifier-migration-repair: 1
+    114-csv-dialect-encoding-intake-repair: 1
+    119-selective-restore-manifest-repair: 1
+    120-http-cookie-jar-policy-repair: 1
+    139-oci-layer-whiteout-merge-repair: 1
+    142-trace-context-propagation-repair: 1
+    143-mime-multipart-decoding-repair: 1
+    146-transactional-outbox-replay-repair: 1
+    147-iac-lifecycle-plan-repair: 1
+    148-kubernetes-field-ownership-repair: 1
+    149-graphql-optimistic-cache-repair: 1
+    150-webauthn-counter-risk-repair: 1
+    152-postgres-replication-slot-recovery: 1
+    153-github-actions-matrix-rerun: 1
+    154-postgres-expand-contract-migration-repair: 1
+    157-github-oidc-trust-policy-repair: 1
+    158-kafka-transactional-offset-recovery: 1
+    159-http2-goaway-retry-repair: 1
+    161-prometheus-histogram-migration-repair: 1
+    163-grpc-deadline-cancellation-repair: 1
+    164-s3-event-sequencer-reconciliation: 1
+    165-kubernetes-admission-convergence-repair: 1
+    166-sigstore-bundle-policy-repair: 1
+    168-http-early-data-replay-repair: 1
+    169-redis-cluster-redirection-repair: 1
+    171-openapi-compatibility-repair: 1
+    172-oauth-dpop-replay-policy-repair: 1
+    173-kubernetes-watch-recovery: 1
+    174-dns-stale-negative-cache-repair: 1
+    175-service-health-budget-repair: 1
+    176-jwks-cache-rotation-repair: 1
+    177-connection-pool-reset-repair: 1
+    178-make-incremental-rebuild-repair: 1
+    179-git-worktree-prune-planner: 1
+    180-oci-platform-manifest-selection: 1
+    181-systemd-restart-budget-repair: 1
+    182-message-inbox-dedup-recovery: 1
+    183-certificate-path-selection-repair: 1
+    184-rolling-deployment-capacity-repair: 1
+    185-unix-permission-transition-repair: 1
+    186-dmarc-alignment-repair: 1
+    187-content-negotiation-vary-repair: 1
+    188-dns-zone-serial-repair: 1
+    189-database-deadlock-retry-repair: 1
+    190-api-pagination-cursor-recovery: 1
+    191-backup-chunk-gc-repair: 1
+    192-retention-hold-compaction-repair: 1
+    193-kubernetes-finalizer-recovery: 1
+    194-shell-pipeline-status-repair: 1
+    196-proxy-no-proxy-matching-repair: 1
+    198-postgres-vacuum-wraparound-planner: 1
+    199-git-lfs-pointer-repair: 1
+    208-idempotency-ledger-replay-recovery: 1
+    209-jsonrpc-admission-gate: 1
+    210-attestation-evidence-chain: 1
+    211-sliding-window-quota-ledger: 1
+    212-bounded-archive-ingest: 1
+    213-out-of-order-job-journal: 1
+    214-circuit-breaker-probe-budget: 1
+    215-placement-inventory-union: 1
+    216-sso-audit-token-quarantine: 1
+    217-offline-patchset-merge-gate: 1
+    218-content-addressed-case-log: 1
+    219-dataset-manifest-pin: 1
+    220-ferpa-directory-disclosure-gate: 1
+    221-loto-energize-tag-gate: 1
+    222-medication-refill-window-gate: 1
+    223-isrc-territory-rights-gate: 1
+    224-sla-refund-chargeback-gate: 1
+    225-i9-document-completeness-gate: 1
+    226-shared-mailbox-sent-identity: 1
+    227-contractor-1099-threshold-gate: 1
+    228-event-time-watermark-late-drop: 1
+    229-purchase-order-ack-qty-gate: 1
+    230-sample-custody-holding-gate: 1
+    231-embargo-preprint-release-gate: 1
+    232-gpc-cookie-purpose-gate: 1
+    233-dns-cache-zone-admission: 1
+    234-flake-quarantine-fail-window: 1
+    235-section-waitlist-seat-gate: 1
+    236-demand-response-dispatch-gate: 1
+    237-rma-serial-warranty-gate: 1
+    238-gtfs-realtime-vs-static-reconcile: 1
+    244-aircraft-weight-balance-loadsheet: 1
+    247-stv-ranked-choice-tabulation: 1
+    249-airflow-sensor-deadlock-repair: 1
+    255-construction-implementation-plan: 1
+    256-incident-evidence-postmortem: 1
+    257-equipment-inspection-word-form: 1
+    258-policy-document-contradiction-review: 1
+    259-editable-management-review-deck: 1
+    260-batch-presentation-standardization: 1
+    261-sales-analysis-formula-workbook: 1
+    262-user-service-registration-repair: 1
+    263-stateful-python-rpc-service: 1
+    264-node-record-processing-contract: 1
+    265-weekly-operations-brief-generator: 1
+    266-evidence-grounded-travel-plan: 1
+    267-eldercare-research-evidence-report: 1
+    268-sla-credit-evidence-assessment: 1
+    269-constrained-shopping-cart-update: 1
+    270-idempotent-family-hotel-booking: 1
+    271-itemized-shared-expense-requests: 1
+    272-video-compression-fidelity-delivery: 1
+    273-safe-skill-archive-packaging: 1
+    274-collaboration-materials-reminder-close: 1
+    accessibility-conformance-sample-repair: 1
+    archive-extraction-preflight-repair: 1
+    batch-api-feature-implementation: 1
+    bibtex-key-collision-repair: 1
+    boolean-term-retrieval: 1
+    business-contract-closeout-recovery: 1
+    calibration-certificate-control: 1
+    cidr-pool-allocation: 1
+    cli-interactivity-safety: 1
+    clinical-trial-registry-result-reconcile: 1
+    cold-chain-excursion-recovery: 1
+    compliance-sanctions-filter-repair: 1
+    consumer-driven-api-compatibility: 1
+    container-build-context-containment: 1
+    container-sbom-remediation: 1
+    cron-next-fire-repair: 1
+    cs-persistent-routing-control: 1
+    cybersecurity-pki-rotation: 1
+    cybersecurity-secret-lineage-containment: 1
+    dag-priority-scheduler-repair: 1
+    data-cdc-scd2-recovery: 1
+    database-migration-recovery: 1
+    database-point-in-time-recovery-drill: 1
+    dicom-deidentification-recovery: 1
+    digital-record-transfer-staging: 1
+    distributed-capacity-lease-repair: 1
+    education-degree-prerequisite-audit: 1
+    environmental-lims-accession-recovery: 1
+    escrow-disbursement-recovery: 1
+    feature-flag-retirement: 1
+    finance-payee-risk-screening: 1
+    finance-pcard-close-recovery: 1
+    finance-supplier-bank-release-recovery: 1
+    finance-three-way-match: 1
+    finance-xbrl-prefiling-validation: 1
+    formulary-substitution-control-recovery: 1
+    gettext-catalog-leverage: 1
+    git-excise-bad-commit: 1
+    git-index-rename-recovery: 1
+    git-submodule-recovery: 1
+    haversine-cpa-alert: 1
+    healthcare-prior-auth-recovery: 1
+    hosts-alias-flatten: 1
+    hr-access-transfer: 1
+    hr-continuation-notice-delivery-recovery: 1
+    hr-injury-reporting-recovery: 1
+    hr-leave-payroll-retro-recovery: 1
+    http-cache-revalidation-repair: 1
+    http-client-request-recovery: 1
+    incident-evidence-acquisition-recovery: 1
+    integration-test-isolation-repair: 1
+    interval-capacity-packing: 1
+    itinerary-disruption-recovery: 1
+    journal-projection-crash-recovery: 1
+    json-pointer-resolve-repair: 1
+    jsonl-wal-replay: 1
+    kubernetes-ca-trust-rotation-recovery: 1
+    lms-sis-grade-passback-recovery: 1
+    localization-message-resolution-repair: 1
+    mailbox-dsn-draft-recovery: 1
+    manufacturing-ecn-configuration-recovery: 1
+    media-subtitle-timing-repair: 1
+    monorepo-affected-build-repair: 1
+    municipal-water-isolation-recovery: 1
+    oauth-refresh-race-recovery: 1
+    object-storage-artifact-recovery: 1
+    office-ooxml-revision-recovery: 1
+    package-install-transaction-recovery: 1
+    pharmacovigilance-case-intake-recovery: 1
+    product-recall-transaction-recovery: 1
+    public-assistance-validation-repair: 1
+    public-permit-routing-repair: 1
+    purchase-order-edi-recovery: 1
+    python-namespace-package-recovery: 1
+    python-release-asset-selection: 1
+    recurring-calendar-incremental-sync-recovery: 1
+    release-version-synchronization: 1
+    repository-regression-bisect-repair: 1
+    reproducible-build-repair: 1
+    research-dms-package-staging: 1
+    research-meta-analysis-correction-recompute: 1
+    resumable-http-transfer-repair: 1
+    rotated-file-tailer-recovery: 1
+    royalty-usage-allocation-recovery: 1
+    sales-crm-account-merge-recovery: 1
+    sbom-vex-consumption-gate: 1
+    schema-bundle-migration-recovery: 1
+    serialized-equipment-maintenance-recovery: 1
+    shipment-claim-recovery: 1
+    smart-meter-billing-recovery: 1
+    sqlite-unordered-migrations: 1
+    streaming-window-state-repair: 1
+    subscription-entitlement-webhook-recovery: 1
+    supply-warehouse-reservation-recovery: 1
+    typed-layered-config-repair: 1
+    vendor-master-renewal-recovery: 1
+    waf-policy-replay-repair: 1
+    workspace-dependency-resolution-repair: 1
+  variant:
+    850-855-856-810-interrupted-three-way-match: 1
+    all-terms-then-tf-sum: 1
+    bom-calibration-parts-and-interrupted-journal: 1
+    busy-rollback-commit-unknown-idempotency: 1
+    canonical-archive-member-manifest: 1
+    casefold-collisions-and-cyclic-renames: 1
+    conditional-precedence-and-vary-selection: 1
+    consent-preserving-partial-merge: 1
+    crash-and-duplicate-hold: 1
+    cycle-fail-and-lex-stable-ties: 1
+    destructive-confirmation-precedence: 1
+    directional-request-response-schema-change: 1
+    divergent-timeline-named-restore-point: 1
+    drop-middle-secret-keep-later-docs: 1
+    dst-rollover-solar-signed-fallback-and-journal-recovery: 1
+    dual-path-transitive-fix-with-abi-decoys: 1
+    e2b-version-journal-and-submission-boundaries: 1
+    earliest-deadline-then-lex-machine: 1
+    effective-rule-daw-allergy-step-pa-channel-and-interrupted-journal: 1
+    event-time-replay-and-registry-cleanup: 1
+    exact-msgid-skip-empty: 1
+    executable-control-recovery: 1
+    executable-crash-recovery: 1
+    executable-policy-repair: 1
+    executable-recovery: 3
+    expiry-replay-fairness-and-fencing: 1
+    first-key-wins-rename-later: 1
+    first-op-wins-and-drop-torn-tail: 1
+    fixture-copy-stable-seed-and-expiring-quarantine: 1
+    follow-until-ipv4-or-loop: 1
+    frozen-payroll-late-authority-interrupted-journal: 1
+    gap-and-duplicate-stop: 1
+    generated-input-and-global-invalidation: 1
+    history-sensitive-clean-integration: 1
+    if-range-response-and-digest-reconciliation: 1
+    interrupted-audit-with-late-cures: 1
+    interrupted-close-with-receipt-lineage: 1
+    interrupted-dual-trust-to-new-only: 1
+    interrupted-journal-late-signed-correction: 1
+    interrupted-multistudy-uid-reference-and-pixel-risk: 1
+    interrupted-prepare-with-late-correction: 1
+    interrupted-review-gate: 1
+    interrupted-wheel-rollback-and-drift-detection: 1
+    invoice-eligibility-status-refactor: 1
+    largest-prefix-then-lowest-address: 1
+    ledger-ahead-stale-inode-offset: 1
+    mime-identity-approval-and-interrupted-sqlite-journal: 1
+    mixed-applicability-and-assertion-integrity: 1
+    mixed-cost-evidence-and-duplicate-benefit: 1
+    multi-carrier-events-evidence-and-interrupted-journal: 1
+    multi-closing-events-journal-and-holdback: 1
+    native-v2: 8
+    negation-reincludes-local-config: 1
+    null-invalid-highest-and-redaction: 1
+    ordered-interpreter-abi-platform-tag-resolution: 1
+    paginated-part-reconciliation-and-completion-probe: 1
+    parent-fallback-empty-plural-interpolation: 1
+    partial-rotation-recovery: 1
+    partial-success-contract: 1
+    path-link-collision-budget: 1
+    peer-optional-platform-lock-determinism: 1
+    post-completion-outcome-and-population-qc: 1
+    preservation-master-and-checksum-quarantine: 1
+    python-npm-cargo-prerelease-translation: 1
+    recorded-gitlink-versus-working-tree-state: 1
+    recurrence-etag-checksum-sqlite-checkpoint: 1
+    regular-package-shadows-second-root: 1
+    rekey-version-scale-and-interrupted-sqlite-replay: 1
+    retrieval-uri-effective-base-anchor-repair: 1
+    revised-overlay-and-replay: 1
+    rotation-race-and-replay-signal: 1
+    same-time-min-distance: 1
+    shared-nav-and-checkout-error-state: 1
+    signed-custody-rekey-and-interrupted-journal: 1
+    signed-inventory-second-disruption-and-interrupted-journal: 1
+    signed-registry-fallback-and-interrupted-journal: 1
+    signed-secondary-gap-and-interrupted-hold: 1
+    signed-standard-recall-and-interrupted-register: 1
+    snapshot-gap-and-interrupted-sqlite-replay: 1
+    sqlite-content-addressed-containment-handoff: 1
+    sqlite-journal-event-evidence-recovery: 1
+    sqlite-osha-workers-comp-crash-recovery: 1
+    stale-cursor-ledger-ahead: 1
+    standalone: 172
+    superseding-scope-with-interrupted-stop-sale-stage: 1
+    telemetry-collision-boundary-selection-and-interrupted-journal: 1
+    tilde-unescape-then-lookup: 1
+    transcript-and-shot-qc: 1
+    transfer-equivalency-and-substitution: 1
+    transport-ambiguity-idempotency-and-retry-after: 1
+    versioned-rights-and-interrupted-journal: 1
+    vixie-or-when-both-fields-restricted: 1
+    watermark-lateness-dedup-and-revision: 1
+    where-used-effectivity-and-interrupted-journal: 1
+  harness_demands:
+    context_management: 12
+    error_recovery: 71
+    evidence_grounding: 198
+    multi_step_execution: 274
+    output_contract: 87
+    safety_boundary: 166
+    state_management: 126
+    tool_selection: 114
+    verification_behavior: 236
+  capability_tags:
+    accessibility: 1
+    analysis: 12
+    api_client: 1
+    api_design: 1
+    api_gateway: 1
+    artifact_lineage: 1
+    audit_redaction: 1
+    authentication: 1
+    backup_recovery: 1
+    benefits_operations: 1
+    billing_operations: 1
+    binary_artifacts: 1
+    browser: 1
+    build_context: 1
+    business_communication: 1
+    calendar_sync: 1
+    capacity_planning: 3
+    case_recording: 1
+    chain_of_custody: 1
+    change_management: 1
+    checkpointing: 1
+    checksum: 1
+    checksums: 1
+    ci_cd: 2
+    circuit_breaker: 1
+    clinical_trial_registry: 1
+    cloud_storage: 2
+    code_execution: 50
+    code_review: 2
+    codeowners: 1
+    coding: 61
+    cold_chain: 1
+    command_execution: 1
+    compatibility: 1
+    compliance: 1
+    concurrency: 1
+    configuration: 5
+    configuration_repair: 1
+    containers: 2
+    content_addressed_storage: 1
+    content_addressing: 1
+    contract_operations: 1
+    css: 1
+    customer_communication: 1
+    data_engineering: 1
+    data_governance: 1
+    data_integrity: 1
+    data_migration: 2
+    data_recovery: 15
+    database: 3
+    database_migration: 1
+    database_operations: 1
+    database_recovery: 2
+    dataset_pinning: 1
+    debugging: 1
+    decimal_reasoning: 1
+    deliverable_completion: 12
+    dependency_graph: 4
+    dependency_management: 2
+    dependency_resolution: 1
+    distributed_systems: 5
+    dns: 1
+    dnssec: 1
+    document_editing: 10
+    document_generation: 1
+    document_parsing: 1
+    document_workflow: 1
+    edi: 1
+    entity_resolution: 1
+    error_recovery: 1
+    event_driven: 1
+    event_reconciliation: 3
+    event_replay: 7
+    evidence_authority: 2
+    evidence_chain: 2
+    evidence_correlation: 1
+    evidence_integrity: 6
+    evidence_reconciliation: 3
+    filesystem: 226
+    financial_calculation: 1
+    financial_reconciliation: 1
+    frontend_state: 1
+    geospatial_attributes: 1
+    git: 5
+    goal_understanding: 12
+    gradebook_reconciliation: 1
+    graph_constraints: 1
+    graph_reasoning: 1
+    handshake_verification: 1
+    healthcare_administration: 1
+    html: 1
+    http: 1
+    idempotency: 4
+    identity: 1
+    identity_resolution: 1
+    identity_security: 2
+    imports: 1
+    incident_recovery: 4
+    incident_response: 4
+    infrastructure_as_code: 1
+    inventory_union: 1
+    job_orchestration: 1
+    json_schema: 1
+    kubernetes: 4
+    lims: 1
+    local_execution: 1
+    local_service: 5
+    local_state_machine: 72
+    local_validation: 1
+    log_rotation: 1
+    long_horizon_state: 2
+    maildir: 1
+    manifest: 1
+    manufacturing_configuration: 1
+    medical_imaging: 1
+    merge_gate: 1
+    metrology: 1
+    mime_email: 1
+    music_rights: 1
+    networking: 4
+    observability: 2
+    ooxml: 1
+    package_staging: 1
+    packaging: 2
+    payment_integrity: 1
+    payroll_operations: 1
+    pharmacovigilance: 1
+    pki: 1
+    planning: 12
+    policy_adjudication: 19
+    policy_application: 3
+    policy_engine: 1
+    postgresql_pitr: 1
+    privacy: 2
+    privacy_gate: 3
+    product_safety: 1
+    project_management: 2
+    protocol_semantics: 25
+    provenance_audit: 1
+    public_assistance: 1
+    python: 1
+    quantitative_analysis: 1
+    quantitative_synthesis: 1
+    query_semantics: 1
+    quota_enforcement: 2
+    reconciliation: 2
+    records_management: 1
+    recovery: 2
+    recovery_planning: 1
+    release_engineering: 2
+    reliability: 5
+    replay_testing: 1
+    repository: 29
+    repository_history: 1
+    research_integrity: 1
+    results_reconciliation: 1
+    retry_budget: 1
+    rfc5545: 1
+    rollout_state: 1
+    royalty_accounting: 1
+    rpc: 1
+    rule_engine: 1
+    rule_reconciliation: 1
+    safety_cost_awareness: 11
+    safety_critical_workflow: 2
+    sbom: 1
+    scheduler: 1
+    scheduling: 2
+    scientific_computing: 1
+    secret_quarantine: 1
+    security: 9
+    security_controls: 1
+    security_state: 1
+    self_correction: 9
+    signature_verification: 2
+    signed_events: 1
+    smart_metering: 1
+    software_supply_chain: 3
+    sqlite: 38
+    state_machine: 6
+    state_management: 6
+    state_reconciliation: 3
+    state_recovery: 2
+    stream_processing: 1
+    structured_data: 164
+    subscription_billing: 1
+    subtitle_parsing: 1
+    supply_chain: 1
+    supply_chain_security: 1
+    technical_writing: 1
+    temporal_constraints: 1
+    temporal_reasoning: 4
+    terminal: 129
+    territory_and_rights_windows: 1
+    text_alignment: 1
+    time_normalization: 1
+    time_window: 3
+    tool_use: 12
+    transaction_recovery: 4
+    transactional_recovery: 2
+    transactional_state: 2
+    travel_operations: 1
+    trust_migration: 1
+    unicode: 1
+    uri_resolution: 1
+    vendor_master: 1
+    verification: 30
+    version_history: 1
+    version_reconciliation: 1
+    vex: 1
+    wal_analysis: 1
+    workspace_operation: 12
+  stressors:
+    abi_fallback: 1
+    absent_component_kev: 1
+    accepted_and_pending_submission_boundaries: 1
+    acknowledged_suppression: 1
+    active_transaction: 1
+    adversarial_content: 1
+    adversarial_paths: 2
+    advisory_automation_conflict: 1
+    alias_chains: 1
+    allowed_lateness: 1
+    ambiguous_commit: 1
+    ambiguous_dual_use_evidence: 1
+    ambiguous_rebuilds: 1
+    ambiguous_side_effects: 3
+    ambiguous_state: 1
+    ambiguous_timestamp: 1
+    amount_conservation: 1
+    append_only_history: 2
+    approval_timing: 1
+    approved_substitute_scope: 1
+    approved_substitution: 1
+    assignment_version_drift: 1
+    asynchronous_receipt: 1
+    at_least_once_delivery: 1
+    at_least_once_out_of_order_events: 1
+    atomic_manifest_set: 1
+    atomic_worker_claim: 1
+    atomicity: 1
+    attachment_checksum: 1
+    authorization_boundary: 26
+    backward_compatibility: 1
+    bank_change_lineage: 1
+    bidirectional_solar_metering: 1
+    blocker_precedence: 1
+    bom_effectivity: 1
+    boundary_conditions: 4
+    build_path_stripping: 1
+    burned_in_annotation: 1
+    cache_boundary: 1
+    cache_inconsistency: 1
+    cache_invalidation: 1
+    calibration_validity: 1
+    cancellation_propagation: 1
+    capacity_limit: 1
+    case_insensitive_filesystem: 1
+    case_only_rename: 1
+    chargeback_grace_period: 1
+    checkpoint_integrity: 1
+    checksum_fallback: 1
+    checksum_quarantine: 1
+    claim_consistency: 1
+    closed_record_set: 1
+    collision_risk: 1
+    complete_unknown: 1
+    compressed_tags: 1
+    concurrent_responses: 1
+    config_cleanup: 1
+    conflicting_availability: 1
+    conflicting_evidence: 64
+    conflicting_replay: 1
+    conflicting_requests: 1
+    conformance_boundary: 1
+    conjunction: 1
+    consent_conflict: 1
+    consequential_action: 1
+    control_number_collision: 1
+    copied_messages: 1
+    corrected_measurement: 1
+    corrupt_backup: 1
+    coupled_false_positive_false_negative: 1
+    coupled_regressions: 1
+    crash_recovery: 1
+    credential_commit: 1
+    critical_error_state: 1
+    cross_file_contracts: 1
+    cross_midnight_timezones: 1
+    cross_platform_semantics: 1
+    cross_record_dependency: 9
+    cross_source_consistency: 20
+    cross_system_state: 1
+    cyclic_names: 1
+    damaged_primary_signed_fallback: 1
+    data_loss_boundaries: 1
+    data_minimization: 1
+    daylight_saving_fold: 1
+    deadline_budget: 1
+    deadline_recovery: 1
+    delete_after_put: 1
+    denominator_drift: 1
+    dependency_cycles: 1
+    dependency_graph: 2
+    dependency_ordering: 1
+    destructive_change_safety: 1
+    destructive_transaction: 1
+    deterministic_seed: 1
+    directional_semantics: 1
+    dirty_input: 35
+    dirty_submodule: 1
+    divergent_timeline: 1
+    drift_detection: 1
+    dst_fall_back_offsets: 1
+    duplicate_and_uid_collision: 1
+    duplicate_and_unknown_delivery: 1
+    duplicate_case_survivorship: 1
+    duplicate_conflict: 1
+    duplicate_delivery: 4
+    duplicate_dsn: 1
+    duplicate_events: 2
+    duplicate_federal_benefit: 1
+    duplicate_keys: 1
+    duplicate_members: 1
+    duplicate_op_id: 1
+    duplicate_operation: 1
+    duplicate_out_of_order_events: 3
+    duplicate_state: 1
+    duplicate_suppression: 1
+    duplicate_versions: 1
+    edge_case_precedence: 25
+    effective_dated_identifier_mapping: 1
+    eligibility_gate: 1
+    empty_msgstr: 1
+    empty_pointer: 1
+    empty_vs_missing: 1
+    enum_evolution: 1
+    equivalency_validity: 1
+    event_time_boundary: 1
+    evidence_hash_and_identity_authority: 1
+    exact_once_projection: 1
+    exact_only: 1
+    exclusive_after: 1
+    exit_codes: 1
+    explicit_null: 1
+    external_containment_boundary: 1
+    fail_closed_confirmation: 1
+    fail_closed_state: 1
+    falsy_configuration_value: 1
+    fencing_tokens: 1
+    fifo_fairness: 1
+    final_digest: 1
+    final_tree_plausibility: 1
+    first_wins: 1
+    flag_precedence: 1
+    foreign_keys: 1
+    funds_conservation: 1
+    gitlink_authority: 1
+    graph_selection: 1
+    hash_and_custody_failures: 1
+    haversine_nm: 1
+    hidden_variation: 62
+    high_stakes_rules: 34
+    historical_replay: 2
+    historical_trust: 1
+    history_vs_final_tree: 2
+    host_account_session_scope: 1
+    idempotency_contract: 1
+    idempotent_recovery: 2
+    idempotent_replay: 7
+    identifier_scope: 1
+    identity_and_terminology_collision: 1
+    identity_authority: 1
+    identity_binding: 1
+    identity_collision: 1
+    identity_mismatch: 1
+    immutable_evidence: 1
+    immutable_submission_and_denial: 1
+    inclusive_guard_band: 1
+    index_identity: 1
+    inode_identity: 1
+    insufficient_evidence_hold: 1
+    insurance_reduction: 1
+    interpolation_validation: 1
+    interrupted_apply: 1
+    interrupted_before_image_journal: 5
+    interrupted_close: 1
+    interrupted_commit: 3
+    interrupted_sqlite_journal: 12
+    interrupted_sqlite_queue: 1
+    interrupted_state: 1
+    interrupted_transaction: 4
+    interval_overlap: 1
+    invalid_assertion_provenance: 1
+    invalid_bundle_role: 1
+    invalid_score_scale: 1
+    ipv4_terminals: 1
+    irreversible_action_boundary: 8
+    irreversible_payment_boundary: 1
+    irreversible_posting_boundary: 1
+    irreversible_shipment: 1
+    irreversible_state_boundary: 1
+    issued_material_and_as_built_boundaries: 1
+    key_rotation: 1
+    label_alias_rekey: 1
+    largest_first: 1
+    late_cure: 1
+    late_signed_revision: 2
+    late_window_boundary: 1
+    later_legitimate_commit: 1
+    later_rename: 1
+    lease_expiry_boundary: 1
+    ledger_ahead: 1
+    ledger_idempotency: 1
+    leftover_capacity: 1
+    line_level_three_way_match: 1
+    locale_parent_override: 1
+    lock_safety: 1
+    long_horizon: 14
+    malformed_headers: 1
+    malformed_input: 1
+    malformed_manifest: 1
+    map_version_drift: 1
+    matrix_fan_in: 1
+    member_order: 1
+    message_revision_resolution: 1
+    minimal_lock_change: 1
+    minimal_patch: 1
+    minimum_change_then_cost_optimization: 1
+    minimum_necessary: 1
+    misleading_latest_commit: 1
+    missing_approval: 1
+    missing_event_bridge: 1
+    missing_evidence: 1
+    missing_msgid: 1
+    missing_object: 1
+    missing_paths: 1
+    missing_terms: 1
+    missing_versions: 1
+    mixed_lot: 1
+    mixed_rollout: 1
+    mode_normalization: 1
+    module_provenance: 1
+    multi_root_repository: 1
+    multilevel_where_used_revision_cascade: 1
+    multiple_artifacts: 1
+    namespace_reuse: 1
+    namespace_shadowing: 1
+    near_match: 1
+    near_miss_options: 1
+    negation_reinclusion: 1
+    nested_group_expansion: 1
+    nested_status: 1
+    no_auto_approval: 1
+    no_double_count: 1
+    non_idempotent_method: 1
+    nonreimbursable_tax: 1
+    numbering_error: 1
+    numerical_validation: 1
+    observed_irreversible_submission: 1
+    optional_dependencies: 1
+    order_independence: 1
+    ordered_pattern_precedence: 1
+    ordering_constraints: 1
+    ordering_dependency: 3
+    out_of_order_and_duplicate_events: 1
+    out_of_order_and_duplicate_usage: 1
+    out_of_order_delivery: 1
+    out_of_order_duplicate_edi: 1
+    out_of_order_duplicate_events: 4
+    out_of_order_duplicate_intervals: 1
+    out_of_order_duplicate_readings: 1
+    out_of_order_events: 10
+    out_of_order_version_chain: 1
+    overlap: 1
+    overlapping_constraints: 1
+    overlapping_leave: 1
+    overlapping_trust_roots: 1
+    overwrite_boundary: 1
+    overwrite_risk: 1
+    ownership_conflicts: 1
+    ownership_split_revision: 1
+    paginated_parts: 1
+    pagination: 1
+    part_checksum_mismatch: 1
+    partial_commit: 2
+    partial_failure: 28
+    partial_merge: 1
+    partial_redaction: 1
+    partial_refund: 1
+    partial_rotation: 2
+    partial_write: 1
+    path_order: 1
+    payee_and_authorization_authority: 1
+    peer_constraints: 1
+    permission_boundary: 1
+    piped_stdin: 1
+    placement_order: 1
+    platform_markers: 1
+    platform_priority: 1
+    plural_categories: 1
+    policy_effective_date_boundary: 1
+    positive_and_negative_examples: 1
+    post_completion_outcome_change: 1
+    precedence: 1
+    prefix_alignment: 1
+    prerelease_precedence: 1
+    prerequisite_order: 1
+    preservation_temperature_and_holding_time_rules: 1
+    prior_period_refund: 1
+    priority_ties: 1
+    privacy_boundary: 1
+    privacy_constraints: 1
+    private_tag_policy: 1
+    producer_fencing: 1
+    propagated_secret: 1
+    protected_boundaries: 2
+    protected_executed_boundary: 1
+    protected_export_boundary: 1
+    protocol_boundary: 3
+    protocol_precedence: 1
+    publish_boundary: 1
+    qc_cycle: 1
+    qualification_and_calibration_expiry: 1
+    quarantine_expiry: 1
+    range_response_branching: 1
+    receipt_precedence: 1
+    record_ownership: 1
+    recording_and_disbursement_boundaries: 1
+    recording_reporting_distinction: 1
+    recovery_boundary: 1
+    recovery_precedence: 1
+    recurrence_override: 1
+    referential_uid_mapping: 1
+    register_rollover: 1
+    regression_boundary: 1
+    reinvocation: 1
+    rejected_retirement: 1
+    remote_tip_temptation: 1
+    rename_cycle: 1
+    replay_deduplication: 1
+    replay_requirement: 1
+    replay_safety: 1
+    replay_signal: 1
+    replay_state: 1
+    representative_sampling: 1
+    reproducible_manifest: 1
+    request_response_variance: 1
+    required_vs_nullable: 1
+    resource_limit: 2
+    resource_limits: 1
+    response_loss: 1
+    restricted_dom_and_dow: 1
+    retroactive_standard_recall: 1
+    retry_after_budget: 1
+    reverse_rollback: 1
+    revision_stability: 1
+    rollback_rebase: 1
+    rollout_skew: 1
+    safety_boundary: 7
+    same_timestamp_only: 1
+    schema_evolution: 1
+    schema_mismatch: 21
+    schema_prefix: 1
+    schema_version_divergence: 1
+    secret_handling: 1
+    secret_leakage: 1
+    section_and_student_rekey: 1
+    security_policy: 1
+    security_precedence: 2
+    segregation_of_duties: 1
+    semantic_cutover: 1
+    semantic_idempotency: 1
+    semantic_regression: 1
+    semantic_repair: 1
+    semantic_replay: 7
+    semantic_replay_identity: 17
+    sensitive_data: 1
+    serial_and_lot_effectivity: 1
+    shared_component: 1
+    shared_files: 1
+    shared_fixture_leakage: 1
+    shot_boundary: 1
+    side_effect_boundary: 1
+    signed_approval_authority: 1
+    signed_authority_precedence: 1
+    signed_correction: 1
+    signed_fallback: 1
+    signed_inventory_snapshot: 1
+    signed_late_custody_evidence: 1
+    signed_negative_adjustment: 1
+    signed_revision_precedence: 1
+    signed_secondary_fallback: 1
+    silent_tool_failure: 1
+    source_checkpoint: 1
+    source_date_epoch: 1
+    split_purchase_graph: 1
+    sqlite_busy_phase: 1
+    stable_recovery_identity: 1
+    stale_certificate_chain: 1
+    stale_check_status: 1
+    stale_checkpoint: 4
+    stale_client_trust: 1
+    stale_generations: 1
+    stale_migration_state: 1
+    stale_offset: 1
+    stale_reservation: 1
+    stale_state: 39
+    state_consistency: 25
+    state_management: 1
+    state_reconstruction: 1
+    stateful_replay: 1
+    status_justification: 1
+    streaming_state: 1
+    strict_delivery_contract: 20
+    strict_types: 1
+    strong_validator: 1
+    submitted_vs_posted: 1
+    superseded_invoice: 1
+    superseded_scan: 1
+    swapped_arm_labels: 1
+    synthetic_months: 1
+    temporal_boundary: 1
+    temporal_date_shift: 1
+    temporal_policy: 1
+    tenant_scoped_idempotency: 1
+    territory_and_rights_windows: 1
+    threshold_alert: 1
+    threshold_duration: 1
+    tilde_escapes: 1
+    time_pressure: 1
+    time_zone_boundary: 1
+    timezone_and_connection_constraints: 1
+    timezone_conversion: 2
+    token_counts: 1
+    token_rotation: 1
+    torn_tail: 1
+    transcript_mismatch: 1
+    true_regression_preservation: 1
+    truncated_page: 1
+    truncated_primary_export: 1
+    tty_detection: 1
+    tuple_pagination: 1
+    type_coercion: 1
+    unapplied_credit: 1
+    unknown_commit: 1
+    unknown_edges: 1
+    unresolved_genealogy: 1
+    unsafe_dsn_linkage: 1
+    upload_id_authority: 1
+    validator_precedence: 1
+    vary_keys: 1
+    version_and_effective_date_precedence: 1
+    version_conflict: 1
+    version_constraints: 1
+    version_gap: 1
+    version_precedence: 2
+    version_scheme_translation: 1
+    versioned_consumers: 1
+    wal_continuity: 1
+    weak_etags: 1
+    window_expiry: 4
+    wrapper_codec_mismatch: 1
+    yanked_assets: 1

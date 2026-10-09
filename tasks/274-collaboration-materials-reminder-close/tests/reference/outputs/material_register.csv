@@ -1,0 +1,7 @@
+person_id,name,project_resume_status,project_resume_file,project_resume_source_attachment_id,compliance_declaration_status,compliance_declaration_file,compliance_declaration_source_attachment_id,overall_status,reminder_status
+u001,林妍,submitted,archive/u001/project_resume/packet_001.pdf,a001,submitted,archive/u001/compliance_declaration/packet_002.pdf,a002,complete,not_required
+u002,周航,submitted,archive/u002/project_resume/packet_003.pdf,a003,missing,,,incomplete,sent
+u003,赵宁,submitted,archive/u003/project_resume/packet_006.pdf,a006,submitted,archive/u003/compliance_declaration/packet_005.pdf,a005,complete,not_required
+u004,陈澈,missing,,,submitted,archive/u004/compliance_declaration/packet_007.pdf,a007,incomplete,sent
+u005,罗嘉,submitted,archive/u005/project_resume/packet_008.pdf,a008,submitted,archive/u005/compliance_declaration/packet_009.pdf,a009,complete,not_required
+u006,孙恺,missing,,,missing,,,incomplete,sent

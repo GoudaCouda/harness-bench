@@ -1,0 +1,97 @@
+{
+  "analysis_id": "SR-NIMBUS-2026-U1",
+  "correction_chain": [
+    {
+      "correction_id": "CORR-BOREALIS-2026-02",
+      "evidence": [
+        "correction_notices.json#CORR-BOREALIS-2026-02",
+        "extraction_catalog.json#EXT-BOREALIS-P12-V1",
+        "extraction_catalog.json#EXT-BOREALIS-P12-V2"
+      ],
+      "replacement_record_id": "EXT-BOREALIS-P12-V2",
+      "superseded_record_id": "EXT-BOREALIS-P12-V1"
+    }
+  ],
+  "excluded_records": [
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-BOREALIS-P12-V1"
+      ],
+      "reason": "superseded by the accepted scoped correction",
+      "record_id": "EXT-BOREALIS-P12-V1"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-BOREALIS-P6"
+      ],
+      "reason": "wrong protocol timepoint",
+      "record_id": "EXT-BOREALIS-P6"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-BOREALIS-QOL12"
+      ],
+      "reason": "wrong protocol outcome",
+      "record_id": "EXT-BOREALIS-QOL12"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-FLINT-P12-SECONDARY"
+      ],
+      "reason": "duplicate report for an included study",
+      "record_id": "EXT-FLINT-P12-SECONDARY"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-GARNET-P12"
+      ],
+      "reason": "wrong protocol population",
+      "record_id": "EXT-GARNET-P12"
+    }
+  ],
+  "included_records": [
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-ASTER-P12"
+      ],
+      "record_id": "EXT-ASTER-P12",
+      "study_id": "ASTER"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-BOREALIS-P12-V2"
+      ],
+      "record_id": "EXT-BOREALIS-P12-V2",
+      "study_id": "BOREALIS"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-CEDAR-P12"
+      ],
+      "record_id": "EXT-CEDAR-P12",
+      "study_id": "CEDAR"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-DELTA-P12"
+      ],
+      "record_id": "EXT-DELTA-P12",
+      "study_id": "DELTA"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-ELM-P12"
+      ],
+      "record_id": "EXT-ELM-P12",
+      "study_id": "ELM"
+    },
+    {
+      "evidence": [
+        "extraction_catalog.json#EXT-FLINT-P12"
+      ],
+      "record_id": "EXT-FLINT-P12",
+      "study_id": "FLINT"
+    }
+  ],
+  "protocol_version": "3.2"
+}

@@ -1,0 +1,138 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:npm/archive-stack@4.9.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d4fc1358fe1fba09adcd09fb5d1aebc7ca51f0e4404e9eaefa5328bb5ff7913f"
+        }
+      ],
+      "name": "archive-stack",
+      "type": "library",
+      "version": "4.9.0"
+    },
+    {
+      "bom-ref": "pkg:npm/document-loader@2.3.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c9ae6d659f8b8be148b2646c8309f307f50c665015dbd96a1a2a1b229a1f1db6"
+        }
+      ],
+      "name": "document-loader",
+      "type": "library",
+      "version": "2.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/log-helper@1.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "43521a7385bc6955a48c0a6e75a3c0ab6f203fc47660d320e5c63a6e3b8e402b"
+        }
+      ],
+      "name": "log-helper",
+      "type": "library",
+      "version": "1.1.0"
+    },
+    {
+      "bom-ref": "pkg:npm/pixel-abi@2.6.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5d71c4ab7fcbe0ec4bed4092e92c20bb7cfbdf7a78626f6bf73c27c4b599bb48"
+        }
+      ],
+      "name": "pixel-abi",
+      "type": "library",
+      "version": "2.6.0"
+    },
+    {
+      "bom-ref": "pkg:npm/render-native@3.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a5fba8d71c68c94ad950576e8005fd88f2a5e1bd0ae8967b7a79e6286d79f548"
+        }
+      ],
+      "name": "render-native",
+      "type": "library",
+      "version": "3.1.0"
+    },
+    {
+      "bom-ref": "pkg:npm/telemetry-core@2.5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b155f2842c71f09022c3dde625df66c55e94be9dda8f153b649787939ec55b9d"
+        }
+      ],
+      "name": "telemetry-core",
+      "type": "library",
+      "version": "2.5.0"
+    },
+    {
+      "bom-ref": "pkg:npm/zip-stream@1.5.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c3daf8470c469ad217ed4f405fe29335dc4c56360e40e1681e3418cd9f1e69aa"
+        }
+      ],
+      "name": "zip-stream",
+      "type": "library",
+      "version": "1.5.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:npm/zip-stream@1.5.1"
+      ],
+      "ref": "pkg:npm/archive-stack@4.9.0"
+    },
+    {
+      "dependsOn": [
+        "pkg:npm/zip-stream@1.5.1"
+      ],
+      "ref": "pkg:npm/document-loader@2.3.0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/log-helper@1.1.0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/pixel-abi@2.6.0"
+    },
+    {
+      "dependsOn": [
+        "pkg:npm/pixel-abi@2.6.0"
+      ],
+      "ref": "pkg:npm/render-native@3.1.0"
+    },
+    {
+      "dependsOn": [
+        "pkg:npm/log-helper@1.1.0"
+      ],
+      "ref": "pkg:npm/telemetry-core@2.5.0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/zip-stream@1.5.1"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "sha256:0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d",
+      "name": "report-worker",
+      "type": "container",
+      "version": "report-worker:2026.08-rc2"
+    }
+  },
+  "serialNumber": "urn:uuid:0ce5915e229653a3dec2ca1ab0168310",
+  "specVersion": "1.6",
+  "version": 1
+}

@@ -1,0 +1,69 @@
+{
+  "as_of": "2026-08-14T16:00:00Z",
+  "decision_precedence": [
+    "identity_conflict",
+    "delivered_or_post_notice",
+    "deadline_expired_unsent",
+    "returned_with_new_verified_address",
+    "returned_without_new_verified_address",
+    "accepted_without_terminal_receipt",
+    "beneficiary_snapshot_newer_than_draft",
+    "unsent_complete_case"
+  ],
+  "delivery_precedence": [
+    "delivered_receipt",
+    "returned_receipt",
+    "provider_accepted",
+    "callback_timeout",
+    "checkpoint"
+  ],
+  "disposition_vocabulary": [
+    "hold_identity_conflict",
+    "preserve_delivered",
+    "preserve_post_notice_state",
+    "escalate_deadline_review",
+    "reissue_to_verified_address",
+    "hold_address_resolution",
+    "hold_delivery_investigation",
+    "rebuild_beneficiary_notice",
+    "prepare_initial_notice"
+  ],
+  "event_replay_order": [
+    "source_sequence",
+    "event_id"
+  ],
+  "evidence_locator_aliases": {
+    "evidence/eligibility_events.jsonl#event_id:": "evidence/eligibility_events.jsonl#event:",
+    "state/continuance.db#cases:": "state/continuance.db#case:"
+  },
+  "external_boundary": {
+    "coverage_changed": false,
+    "notices_sent": false,
+    "permitted_output": "local_reviewer_staging_only"
+  },
+  "next_action_vocabulary": [
+    "resolve_identity",
+    "none",
+    "stage_compliance_review",
+    "stage_reissue_package",
+    "resolve_address",
+    "investigate_provider_receipt",
+    "stage_corrected_notice",
+    "stage_initial_notice"
+  ],
+  "notice_deadline_days": 44,
+  "queue_buckets": [
+    "corrected_notice",
+    "reissue",
+    "delivery_investigation",
+    "compliance_review"
+  ],
+  "recovery_id": "CONT-REC-2026-08-14",
+  "schema_version": 1,
+  "terminal_delivery_states": [
+    "delivered"
+  ],
+  "verified_address_states": [
+    "hr_verified"
+  ]
+}

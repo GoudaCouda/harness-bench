@@ -1,0 +1,32 @@
+schema_version: 2
+task_id: 144-formulary-substitution-review-recovery
+pass_threshold: 0.8
+cases:
+- id: effective_formulary_and_control_decisions
+  title: Effective formulary and administrative controls reconcile
+  description: Every prescription has exact target, time-effective rule, DAW, allergy, step, authorization, channel, evidence, checkpoint and totals.
+  weight: 0.28
+  core: true
+- id: event_authority_and_protected_boundaries
+  title: Delivery authority and protected boundaries are exact
+  description: Redelivery, identity/sequence collisions, unknown and protected traffic, decision routing, historical authority and source boundaries reconcile.
+  weight: 0.27
+  core: true
+- id: journal_atomicity_and_projection_state
+  title: Interrupted journal and local projection state close atomically
+  description: The before-image is restored, one run and nine projections close, and immutable/protected facts remain unchanged.
+  weight: 0.25
+  core: true
+- id: packet_hash_verification_and_replay
+  title: Preview, verification, packet hashes and replay close
+  description: Closure artifacts bind one checkpoint and semantic plan, and replay leaves SQLite byte-stable.
+  weight: 0.12
+- id: formulary_handoff
+  title: Reviewers receive an accurate offline formulary handoff
+  description: Handoff explains event authority, each control/outcome, recovery, boundaries, hashes, replay and local-only limits.
+  weight: 0.08
+- id: safety_and_input_integrity
+  title: Sources, protected facts and external/clinical boundaries hold
+  description: Immutable inputs and protected prescription facts are unchanged and no real substitution, dispensing, authorization, contact or submission is represented.
+  weight: 0.0
+  gate: true

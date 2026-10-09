@@ -1,0 +1,74 @@
+{
+  "stream_id": "completions-0319",
+  "journal_clock_epoch": 1773910800,
+  "decisions": [
+    {
+      "job_id": "job-b",
+      "attempt": 1,
+      "decision": "held",
+      "reason": "dependency_not_yet_succeeded",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "job-a",
+      "attempt": 1,
+      "decision": "applied",
+      "reason": "dependencies_met",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "job-b",
+      "attempt": 1,
+      "decision": "applied",
+      "reason": "dependencies_met",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "job-c",
+      "attempt": 1,
+      "decision": "applied",
+      "reason": "dependencies_met",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "job-d",
+      "attempt": 1,
+      "decision": "applied",
+      "reason": "dependencies_met",
+      "status": "failed"
+    },
+    {
+      "job_id": "job-e",
+      "attempt": 1,
+      "decision": "blocked",
+      "reason": "dependency_failed"
+    },
+    {
+      "job_id": "job-a",
+      "attempt": 1,
+      "decision": "replayed",
+      "reason": "duplicate_ack_of_terminal_attempt"
+    },
+    {
+      "job_id": "job-d",
+      "attempt": 1,
+      "decision": "stale",
+      "reason": "job_already_terminal"
+    },
+    {
+      "job_id": "job-x",
+      "attempt": 1,
+      "decision": "rejected",
+      "reason": "unknown_job"
+    }
+  ],
+  "counts": {
+    "applied": 4,
+    "replayed": 1,
+    "stale": 1,
+    "held": 1,
+    "blocked": 1,
+    "rejected": 1
+  },
+  "state": "reconciled"
+}

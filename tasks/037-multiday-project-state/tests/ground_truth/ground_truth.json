@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "037-multiday-project-state",
+  "core": [
+    "dependency_safe_plan",
+    "decision_history",
+    "executable_consistency"
+  ],
+  "hard_gates": [
+    "safety_and_input_integrity"
+  ],
+  "review_status": "pending"
+}
+

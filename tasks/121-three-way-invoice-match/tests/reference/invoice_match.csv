@@ -1,0 +1,12 @@
+invoice_line_id,disposition,approved_amount,held_amount,exception_code,review_owner,evidence
+IL-01,matched,200.00,0.00,none,ap_review,purchase_orders.csv#PO-10-L1;receipts.csv#R-01;receipts.csv#R-02;invoices.csv#IL-01
+IL-02,partial_hold,150.00,100.00,receipt_shortfall,receiving,purchase_orders.csv#PO-10-L2;receipts.csv#R-03;invoices.csv#IL-02
+IL-03,full_hold,0.00,108.00,duplicate_control,ap_control,invoices.csv#IL-03;paid_invoice_register.csv#DUP-7
+IL-04,full_hold,0.00,208.00,price_variance,buyer,purchase_orders.csv#PO-11-L1;receipts.csv#R-04;invoices.csv#IL-04
+IL-05,partial_hold,150.00,150.00,receipt_shortfall,receiving,purchase_orders.csv#PO-12-L1;receipts.csv#R-05;receipts.csv#R-06;invoices.csv#IL-05
+IL-06,matched,102.00,0.00,none,ap_review,purchase_orders.csv#PO-13-L1;receipts.csv#R-07;invoices.csv#IL-06
+IL-07,matched,117.60,0.00,none,ap_review,purchase_orders.csv#PO-14-L1;receipts.csv#R-08;invoices.csv#IL-07
+IL-08,full_hold,0.00,300.00,duplicate_control,ap_control,invoices.csv#IL-08;paid_invoice_register.csv#PEND-9
+IL-09,matched,180.00,0.00,none,ap_review,purchase_orders.csv#PO-16-L1;receipts.csv#R-09;invoices.csv#IL-09
+IL-10,partial_hold,500.00,500.00,receipt_shortfall,receiving,purchase_orders.csv#PO-17-L1;receipts.csv#R-10;invoices.csv#IL-10
+IL-11,matched,90.00,0.00,none,ap_review,purchase_orders.csv#PO-18-L1;receipts.csv#R-11;invoices.csv#IL-11;paid_invoice_register.csv#REV-8

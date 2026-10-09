@@ -1,0 +1,18 @@
+{
+  "sequencer_order_and_transitions": [
+    {"objects":[{"bucket":"b","key":"x","sequencer":"ff","state":"present","version_id":null,"etag":"old","size":1}],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"100","version_id":null,"etag":"new","size":2,"event_time":"latez"}],"policy":{"allow_delete_markers":true,"require_version_id":false,"max_key_bytes":20}},
+    {"objects":[{"bucket":"b","key":"x","sequencer":"10","state":"deleted","version_id":"v2","etag":null,"size":0}],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"f","version_id":"v1","etag":"old","size":1,"event_time":"newerz"}],"policy":{"allow_delete_markers":true,"require_version_id":true,"max_key_bytes":20}},
+    {"objects":[],"events":[{"arrival_index":0,"event_id":"e1","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"1","version_id":"v1","etag":"a","size":1,"event_time":"z"},{"arrival_index":1,"event_id":"e2","bucket":"b","key":"x","event_name":"ObjectRemoved:Delete","sequencer":"2","version_id":"v2","etag":null,"size":0,"event_time":"olderz"}],"policy":{"allow_delete_markers":true,"require_version_id":true,"max_key_bytes":20}}
+  ],
+  "duplicate_version_and_conflict_safety": [
+    {"objects":[],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"1","version_id":null,"etag":"a","size":1,"event_time":"z"}],"policy":{"allow_delete_markers":true,"require_version_id":true,"max_key_bytes":20}},
+    {"objects":[{"bucket":"b","key":"x","sequencer":"2","state":"present","version_id":"v2","etag":"a","size":1}],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectRemoved:DeleteMarkerCreated","sequencer":"3","version_id":"v3","etag":null,"size":0,"event_time":"z"}],"policy":{"allow_delete_markers":false,"require_version_id":true,"max_key_bytes":20}},
+    {"objects":[],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"1","version_id":null,"etag":"a","size":1,"event_time":"z"},{"arrival_index":1,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"2","version_id":null,"etag":"b","size":2,"event_time":"z"}],"policy":{"allow_delete_markers":true,"require_version_id":false,"max_key_bytes":20}},
+    {"objects":[{"bucket":"b","key":"x","sequencer":"a","state":"present","version_id":"v1","etag":"a","size":1}],"events":[{"arrival_index":0,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"0a","version_id":"v2","etag":"b","size":2,"event_time":"z"}],"policy":{"allow_delete_markers":true,"require_version_id":true,"max_key_bytes":20}}
+  ],
+  "invalid": [
+    {"objects":[],"events":[{"arrival_index":1,"event_id":"e","bucket":"b","key":"x","event_name":"ObjectCreated:Put","sequencer":"1","version_id":null,"etag":"a","size":1,"event_time":"z"}],"policy":{"allow_delete_markers":true,"require_version_id":false,"max_key_bytes":20}},
+    {"objects":[{"bucket":"b","key":"x","sequencer":"gg","state":"present","version_id":null,"etag":"a","size":1}],"events":[],"policy":{"allow_delete_markers":true,"require_version_id":false,"max_key_bytes":20}},
+    {"objects":[],"events":[],"policy":{"allow_delete_markers":true,"require_version_id":false,"max_key_bytes":0}}
+  ]
+}

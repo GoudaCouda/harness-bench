@@ -1,0 +1,24 @@
+{
+  "expenses": {
+    "E-001": {"employee": "Mina Patel", "claimed_usd": "420.00", "allowed_usd": "420.00", "status": "approved", "reason_terms": ["airfare", "actual"]},
+    "E-002": {"employee": "Mina Patel", "claimed_usd": "748.00", "allowed_usd": "668.00", "status": "adjusted", "reason_terms": ["lodging", "cap", "tax"]},
+    "E-003": {"employee": "Mina Patel", "claimed_usd": "92.00", "allowed_usd": "0.00", "status": "rejected", "reason_terms": ["provided"]},
+    "E-004": {"employee": "Mina Patel", "claimed_usd": "45.00", "allowed_usd": "0.00", "status": "pending", "reason_terms": ["missing", "receipt"]},
+    "E-005": {"employee": "Mina Patel", "claimed_usd": "748.00", "allowed_usd": "0.00", "status": "rejected", "reason_terms": ["duplicate", "C-1002"]},
+    "E-006": {"employee": "Mina Patel", "claimed_usd": "38.00", "allowed_usd": "0.00", "status": "rejected", "reason_terms": ["personal", "minibar"]},
+    "E-007": {"employee": "Mina Patel", "claimed_usd": "88.00", "allowed_usd": "88.00", "status": "approved", "reason_terms": ["EUR", "1.10", "rail"]},
+    "E-008": {"employee": "Mina Patel", "claimed_usd": "250.00", "allowed_usd": "0.00", "status": "pending", "reason_terms": ["approval", "requested"]},
+    "E-009": {"employee": "Mina Patel", "claimed_usd": "20.00", "allowed_usd": "20.00", "status": "approved", "reason_terms": ["breakfast", "per diem"]},
+    "E-010": {"employee": "Mina Patel", "claimed_usd": "330.00", "allowed_usd": "320.00", "status": "adjusted", "reason_terms": ["lodging", "cap", "tax"]},
+    "E-011": {"employee": "Luis Chen", "claimed_usd": "18.00", "allowed_usd": "18.00", "status": "approved", "reason_terms": ["taxi", "25"]},
+    "E-012": {"employee": "Zoe King", "claimed_usd": "120.00", "allowed_usd": "0.00", "status": "rejected", "reason_terms": ["authorization", "T-999"]}
+  },
+  "total_claimed_usd": "2917.00",
+  "total_allowed_usd": "1534.00",
+  "status_counts": {"approved": 4, "adjusted": 2, "pending": 2, "rejected": 4},
+  "documentation_items": {
+    "E-004": ["receipt"],
+    "E-008": ["approval", "Travel Director"],
+    "E-012": ["authorization", "rejected"]
+  }
+}

@@ -1,0 +1,7 @@
+[
+  {"delivery_id":"dlv-old","matched_key_ids":["orders-old"],"reason":"ok","status":"accepted"},
+  {"delivery_id":"dlv-overlap","matched_key_ids":["orders-new","orders-old"],"reason":"ok","status":"accepted"},
+  {"delivery_id":"dlv-seen","matched_key_ids":["orders-new"],"reason":"already_seen","status":"duplicate"},
+  {"delivery_id":"dlv-stale","matched_key_ids":[],"reason":"outside_tolerance","status":"rejected"},
+  {"delivery_id":"dlv-mutated","matched_key_ids":[],"reason":"bad_signature","status":"rejected"}
+]

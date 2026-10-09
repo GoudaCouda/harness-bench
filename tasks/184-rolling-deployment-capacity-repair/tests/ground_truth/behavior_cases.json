@@ -1,0 +1,164 @@
+{
+  "edges": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 0,
+          "id": "zero",
+          "max_surge": 0,
+          "max_unavailable": 0,
+          "new_ready": 0,
+          "new_total": 0,
+          "old_ready": 0,
+          "old_total": 0,
+          "terminating": 0
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 3,
+          "id": "wait",
+          "max_surge": 1,
+          "max_unavailable": 0,
+          "new_ready": 0,
+          "new_total": 1,
+          "old_ready": 2,
+          "old_total": 3,
+          "terminating": 0
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 5,
+          "id": "api",
+          "max_surge": 2,
+          "max_unavailable": 1,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 4,
+          "old_total": 5,
+          "terminating": 1
+        },
+        {
+          "desired": 3,
+          "id": "worker",
+          "max_surge": 1,
+          "max_unavailable": 0,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 2,
+          "old_total": 2,
+          "terminating": 0
+        },
+        {
+          "desired": 5,
+          "id": "api",
+          "max_surge": 2,
+          "max_unavailable": 1,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 4,
+          "old_total": 5,
+          "terminating": 1
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 5,
+          "id": "api",
+          "max_surge": 2,
+          "max_unavailable": 1,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 99,
+          "old_total": 5,
+          "terminating": 1
+        },
+        {
+          "desired": 3,
+          "id": "worker",
+          "max_surge": 1,
+          "max_unavailable": 0,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 2,
+          "old_total": 2,
+          "terminating": 0
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 5,
+          "id": "api",
+          "max_surge": 2,
+          "max_unavailable": 1,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 4,
+          "old_total": 5,
+          "terminating": 1
+        },
+        {
+          "desired": 3,
+          "id": "worker",
+          "max_surge": 1,
+          "max_unavailable": 0,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 2,
+          "old_total": 2,
+          "terminating": 0
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 5,
+          "id": "term",
+          "max_surge": 2,
+          "max_unavailable": 1,
+          "new_ready": 0,
+          "new_total": 1,
+          "old_ready": 5,
+          "old_total": 5,
+          "terminating": 2
+        }
+      ]
+    },
+    {
+      "policy": {},
+      "requests": [
+        {
+          "desired": 4,
+          "id": "delete",
+          "max_surge": 1,
+          "max_unavailable": 1,
+          "new_ready": 1,
+          "new_total": 1,
+          "old_ready": 3,
+          "old_total": 3,
+          "terminating": 0
+        }
+      ]
+    }
+  ]
+}

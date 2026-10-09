@@ -1,0 +1,19 @@
+{
+  "authority": [
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false},
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false},
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":null,"remote_sha":null,"initialized":false,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false}
+  ],
+  "safety_and_recursion": [
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":true,"dirty":true,"untracked":false,"conflict":false}],"recursive":false},
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":true,"dirty":false,"untracked":true,"conflict":true}],"recursive":false},
+    {"submodules":[{"path":"v/a/n","depth":1,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":false,"dirty":false,"untracked":false,"conflict":false}],"recursive":true},
+    {"submodules":[{"path":"v/a/n","depth":1,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":"cccccccccccccccccccccccccccccccccccccccc","initialized":true,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false}
+  ],
+  "invalid": [
+    {"submodules":[],"recursive":1},
+    {"submodules":[{"path":"../v","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":null,"remote_sha":null,"initialized":false,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false},
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","checked_out_sha":null,"remote_sha":null,"initialized":false,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false},
+    {"submodules":[{"path":"v/a","depth":0,"recorded_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","checked_out_sha":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","remote_sha":null,"initialized":false,"commit_present":true,"dirty":false,"untracked":false,"conflict":false}],"recursive":false}
+  ]
+}

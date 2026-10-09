@@ -1,0 +1,54 @@
+{
+  "stream_id": "pebbleward-247",
+  "gate_clock_epoch": 1776468800,
+  "events": [
+    {
+      "ballot_id": "b1",
+      "ranking": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "ballot_id": "b2",
+      "ranking": [
+        "A",
+        "A",
+        "B"
+      ]
+    },
+    {
+      "ballot_id": "b3",
+      "ranking": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "ballot_id": "b1",
+      "ranking": [
+        "C"
+      ]
+    },
+    {
+      "ballot_id": "b5",
+      "ranking": []
+    },
+    {
+      "ballot_id": "b6",
+      "ranking": [
+        "C",
+        "A"
+      ]
+    },
+    {
+      "ballot_id": "b7",
+      "ranking": [
+        "B",
+        "C",
+        "A"
+      ]
+    }
+  ]
+}

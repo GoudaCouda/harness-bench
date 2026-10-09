@@ -1,0 +1,29 @@
+{
+  "schema_version": "case07_workspace_manifest_v1",
+  "initial_state_sha256": "9dd413e2738435b577af1b1d67d48c511f44bdf12326036b9c019be3d60cbaff",
+  "entries": [
+    {
+      "logical_path": "task.md",
+      "kind": "file",
+      "sha256": "21f37810cc349847da5472bcddb14e588ffcac04b9c4efd81b369a2d5a34ba97"
+    },
+    {
+      "logical_path": "input",
+      "kind": "directory"
+    },
+    {
+      "logical_path": "input/sales_records.csv",
+      "kind": "file",
+      "sha256": "fb7be77a1676639103e54126a89135147ebb3bab7158935d46abeacc944dae33"
+    },
+    {
+      "logical_path": "input/metric_rules.md",
+      "kind": "file",
+      "sha256": "83e2572b82b42b85096a5926662bc5a7fc9261f09ee6013d5e5e7a715e434e8c"
+    },
+    {
+      "logical_path": "output",
+      "kind": "directory"
+    }
+  ]
+}

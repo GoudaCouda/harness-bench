@@ -1,0 +1,33 @@
+{
+  "decisions": [
+    {
+      "disposition": "none",
+      "dkim_aligned": true,
+      "id": "dkim",
+      "pass": true,
+      "reason": "dmarc_pass",
+      "spf_aligned": false
+    },
+    {
+      "disposition": "reject",
+      "dkim_aligned": false,
+      "id": "fail",
+      "pass": false,
+      "reason": "policy_applied",
+      "spf_aligned": false
+    },
+    {
+      "disposition": "none",
+      "dkim_aligned": false,
+      "id": "spf",
+      "pass": true,
+      "reason": "dmarc_pass",
+      "spf_aligned": true
+    }
+  ],
+  "summary": {
+    "pass": 2,
+    "quarantine": 0,
+    "reject": 1
+  }
+}

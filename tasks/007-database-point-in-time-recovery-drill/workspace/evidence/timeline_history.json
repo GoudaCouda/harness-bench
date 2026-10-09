@@ -1,0 +1,9 @@
+{
+  "production_timeline": 2,
+  "timelines": [
+    {"timeline": 1, "parent": null, "fork_lsn": null, "purpose": "original_cluster_history"},
+    {"timeline": 2, "parent": 1, "fork_lsn": "0/7000000", "forked_at": "2026-08-16T22:00:00Z", "purpose": "current_production_history"},
+    {"timeline": 3, "parent": 2, "fork_lsn": "0/B000000", "forked_at": "2026-08-17T09:50:00Z", "purpose": "abandoned_recovery_drill", "production": false}
+  ],
+  "warning": "latest timeline resolves to 3, which is not the production incident history"
+}

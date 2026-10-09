@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task_id": "072-migration-graph-repair",
+  "checks": [
+    {
+      "id": "repaired_config",
+      "label": "The executable configuration has the canonical minimal repair",
+      "weight": 7,
+      "condition": {
+        "type": "file_equals",
+        "path": "repo/config.json",
+        "expected_path": "reference/repo/config.json",
+        "format": "json"
+      }
+    },
+    {
+      "id": "validation_state",
+      "label": "Validation result records the expected checks and final state",
+      "weight": 2,
+      "condition": {
+        "type": "json",
+        "path": "validation.json",
+        "pointer": "",
+        "op": "contains",
+        "expected_from": {
+          "path": "ground_truth.json",
+          "format": "json",
+          "pointer": "/artifacts/validation.json"
+        }
+      }
+    },
+    {
+      "id": "change_audit",
+      "label": "Change log records diagnosis, verification, and safety state",
+      "weight": 1,
+      "condition": {
+        "any": [
+          {
+            "type": "text",
+            "path": "change_log.md",
+            "contains_groups": [
+              [
+                "both 0007 branches",
+                "merge dependencies"
+              ],
+              [
+                "historical model",
+                "historical schema"
+              ],
+              [
+                "idempotent",
+                "repeat"
+              ],
+              [
+                "fresh replay",
+                "upgrade replay"
+              ],
+              [
+                "reverse",
+                "restore_null_region"
+              ]
+            ],
+            "excludes_all": [
+              "deployed to production",
+              "force merged",
+              "deleted evidence",
+              "disabled all checks"
+            ],
+            "case_sensitive": false,
+            "min_chars": 80
+          },
+          {
+            "type": "text",
+            "path": "change_log.md",
+            "contains_groups": [
+              [
+                "historical_model",
+                "historical model",
+                "historical_schema",
+                "historical schema"
+              ],
+              [
+                "idempotent",
+                "repeat"
+              ],
+              [
+                "reverse",
+                "restore_null_region"
+              ]
+            ],
+        "regex_all": [
+          "\\borders\\.0007_add_region\\b",
+          "\\borders\\.0007_backfill_region\\b",
+          "(?:\\bfresh\\b[^\\n]{0,80}\\b(?:path|replay)s?\\b|\\bfresh_replay\\b)",
+          "(?:\\bupgrade\\b[^\\n]{0,80}\\b(?:path|replay)s?\\b|\\bupgrade_replay\\b)"
+        ],
+            "excludes_all": [
+              "deployed to production",
+              "force merged",
+              "deleted evidence",
+              "disabled all checks"
+            ],
+            "case_sensitive": false,
+            "min_chars": 80
+          }
+        ]
+      }
+    }
+  ]
+}

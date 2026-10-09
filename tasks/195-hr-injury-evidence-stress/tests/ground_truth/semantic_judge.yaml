@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 195-hr-injury-evidence-stress
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Injury-reporting recovery handoff is complete
+  question: Does the handoff accurately explain signature and sequence authority, cross-midnight timing, OSHA recording versus reporting, the prior-submission boundary, privacy, unsupported-cause restraint, before-image recovery, staging, and replay?
+  pass_anchors: [Equivalent regulatory and recovery wording is acceptable when it preserves the same distinctions.]
+  fail_anchors: [Inventing causation or private medical facts, duplicating the prior report, or claiming an external filing fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

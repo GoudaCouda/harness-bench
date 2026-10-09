@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "gateway-r6-healthy-unrelated",
+  "cases": {
+    "BASE-HEALTH-01": {"action": "allow", "status": 200},
+    "BASE-CATALOG-01": {"action": "allow", "status": 200},
+    "BASE-SQLI-01": {"action": "block", "status": 403, "rule_id": "SQLI-942100"},
+    "HOOK-UNSIGNED-CMD-01": {"action": "block", "status": 403, "rule_id": "RCE-932100"}
+  }
+}

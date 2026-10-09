@@ -1,0 +1,13 @@
+order_id,join_status,segment,usd_amount,reason
+o1,matched,A,100.0,
+o10,matched,A,80.0,
+o11,matched,C,59.0,
+o12,matched,D,-10.0,
+o2,matched,C,120.0,
+o3,rejected,,,null_customer_key
+o4,rejected,,,unmatched_customer
+o5,rejected,,,ambiguous_customer
+o6,rejected,D,,ambiguous_rate
+o7,rejected,D,,unmatched_rate
+o8,matched,D,236.0,
+o9,rejected,,,ambiguous_customer

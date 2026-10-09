@@ -1,0 +1,33 @@
+{
+  "pages_consumed": [1, 2, 4],
+  "pages_declared_not_found": [3],
+  "page_row_count_mismatches": ["page:4:expected:7:observed:6"],
+  "prior_checkpoint_id": "checkpoint-p2-102",
+  "prior_processed_pages": [1, 2],
+  "new_pages_consumed": [4],
+  "observed_work_rows": 14,
+  "canonical_works": 10,
+  "duplicate_works": ["W1-DUP", "W4-ALIAS"],
+  "non_duplicate_version_aliases": ["W9"],
+  "authors": 9,
+  "authors_named_alex_kim": ["A1", "A2", "A4"],
+  "unknown_affiliations": ["A3", "A4", "A9"],
+  "orphan_authors": ["A4"],
+  "quarantined_works": ["W3", "W5", "W5-CONFLICT"],
+  "conflicting_canonical_works": ["W5"],
+  "resolved_correction_works": ["W8->W8-CORR"],
+  "review_required_works": ["W7", "W10"],
+  "review_required_edges": ["W5->W7", "W7->W10"],
+  "dangling_references": ["W6->W-MISSING"],
+  "state_changes": {
+    "released_from_review": ["W8"],
+    "added_review_required": ["W7", "W10"],
+    "newly_quarantined": ["W5", "W5-CONFLICT"],
+    "unchanged_quarantined": ["W3"],
+    "new_duplicates": ["W4-ALIAS"],
+    "unchanged_duplicates": ["W1-DUP"],
+    "changed_statuses": ["W5:canonical->quarantined_conflict", "W8:review_required->superseded_by_correction"]
+  },
+  "supporting_works": 4,
+  "contradicting_works": 2
+}

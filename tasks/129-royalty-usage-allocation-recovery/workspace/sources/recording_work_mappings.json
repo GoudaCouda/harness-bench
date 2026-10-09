@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "effective_from": "2025-01-01",
+      "effective_through": "2026-04-30",
+      "isrc": "QZAAA2600001",
+      "iswc": "T-100.000.001-0",
+      "mapping_id": "MAP-A1",
+      "recording_id": "REC-A",
+      "version": 1
+    },
+    {
+      "effective_from": "2026-05-01",
+      "effective_through": null,
+      "isrc": "QZAAA2600001",
+      "iswc": "T-100.000.002-0",
+      "mapping_id": "MAP-A2",
+      "recording_id": "REC-A",
+      "version": 2
+    },
+    {
+      "effective_from": "2025-01-01",
+      "effective_through": null,
+      "isrc": "QZBBB2600002",
+      "iswc": "T-200.000.001-0",
+      "mapping_id": "MAP-B1",
+      "recording_id": "REC-B",
+      "version": 1
+    },
+    {
+      "effective_from": "2025-01-01",
+      "effective_through": null,
+      "isrc": "QZCCC2600003",
+      "iswc": "T-300.000.001-0",
+      "mapping_id": "MAP-C1",
+      "recording_id": "REC-C",
+      "version": 1
+    },
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": null,
+      "isrc": "QZAMBIG260004",
+      "iswc": "T-400.000.001-0",
+      "mapping_id": "MAP-X1",
+      "recording_id": "REC-X",
+      "version": 3
+    },
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": null,
+      "isrc": "QZAMBIG260004",
+      "iswc": "T-400.000.099-0",
+      "mapping_id": "MAP-X2",
+      "recording_id": "REC-X",
+      "version": 3
+    }
+  ],
+  "schema_version": 1
+}

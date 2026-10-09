@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "unsent-post",
+    "result": {
+      "decision": "retry",
+      "next_attempt": 2,
+      "delay_ms": 100,
+      "safety_basis": "not_sent",
+      "reason": "retry_safe"
+    }
+  },
+  {
+    "case_id": "lost-post-with-enforced-key",
+    "result": {
+      "decision": "retry",
+      "next_attempt": 4,
+      "delay_ms": 400,
+      "safety_basis": "idempotency_key",
+      "reason": "retry_safe"
+    }
+  },
+  {
+    "case_id": "unknown-post-without-key",
+    "result": {
+      "decision": "probe",
+      "next_attempt": null,
+      "delay_ms": null,
+      "safety_basis": null,
+      "reason": "outcome_unknown"
+    }
+  },
+  {
+    "case_id": "get-rate-limited",
+    "result": {
+      "decision": "retry",
+      "next_attempt": 3,
+      "delay_ms": 5000,
+      "safety_basis": "not_applied",
+      "reason": "retry_safe"
+    }
+  }
+]

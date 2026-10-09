@@ -1,0 +1,18 @@
+{
+  "after_sha256": {
+    "bundle": "2b045ad2867688c66f43ccc1c823978ec91273db0647e92d52dd598fd65c09e5",
+    "database": "6dd50281e387d9da4f3a0bf2f5ddf82695c7a1a83632e3f37cca769ba6a3b2cb",
+    "manifest": "7e10eaf3c636cd8948355843ba8308374a31a0123ab028410a71a4a2b907785c",
+    "receipt": "469d6700dc37db1d3c8788b6f01bfa8d655ef78d4c3e00b6dd494b021ff1c858"
+  },
+  "before_sha256": {
+    "bundle": "2b045ad2867688c66f43ccc1c823978ec91273db0647e92d52dd598fd65c09e5",
+    "database": "6dd50281e387d9da4f3a0bf2f5ddf82695c7a1a83632e3f37cca769ba6a3b2cb",
+    "manifest": "7e10eaf3c636cd8948355843ba8308374a31a0123ab028410a71a4a2b907785c",
+    "receipt": "469d6700dc37db1d3c8788b6f01bfa8d655ef78d4c3e00b6dd494b021ff1c858"
+  },
+  "changed_field": "case_decisions[COV-7204].next_local_action",
+  "command": "python3 continuancectl.py apply conflict_probe_plan.json",
+  "exit_code": 2,
+  "schema_version": 1
+}

@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 242-cron-next-fire-repair
+pass_threshold: 0.8
+cases:
+- id: function_behavior
+  title: Next-fire follows the mill clock and DOM/DOW OR
+  description: Hidden cron cases match the independent kernel; bad expr raise ValueError.
+  weight: 0.5
+  core: true
+- id: visible_snapshot
+  title: The mill job snapshot is exact
+  description: repo/next_fire.json matches the kernel on job.json.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain the clock and the unittest
+  description: IMPLEMENTATION_NOTES.md covers fields, DOM/DOW, tests, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected inputs remain unchanged
+  description: Job JSON and tests stay byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

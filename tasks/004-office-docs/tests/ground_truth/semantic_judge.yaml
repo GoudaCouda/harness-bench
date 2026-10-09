@@ -1,0 +1,70 @@
+schema_version: 1
+task_id: 004-office-docs
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: north_open_refund
+  title: North open refund is explained
+  question: >-
+    Does the memo explain that ADJ-N2 for order N-1004 is approved but not
+    settled and therefore remains outside Q3 deductions?
+  pass_anchors:
+  - Equivalent wording for approved, unsettled, and no Q3 effect is acceptable.
+  fail_anchors:
+  - Approval, unsettled state, or the no-deduction consequence is omitted or contradicted.
+- id: west_open_refund
+  title: West open refund is explained
+  question: >-
+    Does the memo explain that ADJ-W2 for order W-4002 is approved but not
+    settled and therefore remains outside Q3 deductions?
+  pass_anchors:
+  - Equivalent wording for approved, unsettled, and no Q3 effect is acceptable.
+  fail_anchors:
+  - Approval, unsettled state, or the no-deduction consequence is omitted or contradicted.
+- id: south_post_cutoff_refund
+  title: South post-cutoff refund is explained
+  question: >-
+    Does the memo explain that ADJ-S2 for order S-2002 settled after the
+    October 5 cutoff and therefore remains outside Q3 deductions?
+  pass_anchors:
+  - The date 2026-10-06 can establish that the settlement was after cutoff.
+  fail_anchors:
+  - The timing or no-Q3-deduction consequence is omitted or contradicted.
+- id: east_ineligible_order
+  title: East ineligible-order refund is explained
+  question: >-
+    Does the memo explain that ADJ-E2 for order E-3004 remains outside Q3
+    deductions because the underlying order is not recognized?
+  pass_anchors:
+  - Pending or ineligible order wording is acceptable when it clearly means the order is not recognized.
+  fail_anchors:
+  - The order-recognition reason or no-Q3-deduction consequence is omitted or contradicted.
+- id: north_replacement_chain
+  title: North replacement chain is explained
+  question: >-
+    Does the memo explain that ADJ-N4 replaces ADJ-N3 for order N-1006 and
+    contributes one USD 80 deduction rather than two?
+  pass_anchors:
+  - Equivalent no-double-counting language is acceptable.
+  fail_anchors:
+  - Either event, replacement relationship, amount, or single-deduction consequence is omitted or contradicted.
+- id: south_reversal_chain
+  title: South reversal chain is explained
+  question: >-
+    Does the memo explain that ADJ-S4 reverses ADJ-S3 for order S-2003, so the
+    USD 50 event does not reduce Q3 sales?
+  pass_anchors:
+  - Reversed, voided, cancelled, or equivalent no-effect wording is acceptable.
+  fail_anchors:
+  - Either event, reversal relationship, amount, or no-deduction consequence is omitted or contradicted.
+output_schema:
+  verdict_values:
+  - pass
+  - fail
+  required_per_criterion:
+  - id
+  - verdict
+  - evidence
+  - reason
+  evidence_max_items: 2

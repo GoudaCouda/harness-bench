@@ -1,0 +1,5 @@
+[
+  {"name":"session","value":"old","domain":"app.example.com","path":"/","host_only":true,"secure":true,"http_only":true,"expires_at":null,"creation_index":0},
+  {"name":"prefs","value":"blue","domain":"example.com","path":"/app","host_only":false,"secure":false,"http_only":false,"expires_at":2000,"creation_index":1},
+  {"name":"old","value":"x","domain":"example.com","path":"/","host_only":false,"secure":false,"http_only":false,"expires_at":900,"creation_index":2}
+]

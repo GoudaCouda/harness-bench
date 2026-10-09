@@ -1,0 +1,10 @@
+{
+  "task_id": "070-ci-attempt-diagnosis",
+  "head_sha": "91ac2e",
+  "jobs": ["unit", "lint", "windows", "macos", "integration", "docs", "package", "e2e"],
+  "retry_budget_used": {"windows": 1, "macos": 1},
+  "preserved_jobs": ["unit", "lint"],
+  "pending_jobs": ["macos", "docs", "e2e"],
+  "artifact_digest": "sha256:new91",
+  "status": "blocked_pending_recovery"
+}

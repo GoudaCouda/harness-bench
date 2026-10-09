@@ -1,0 +1,8 @@
+{
+  "seq": 43,
+  "watched": {
+    "config/app.json": {"digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "inode": 221},
+    "config/limits.yaml": {"digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "inode": 302},
+    "rules/new.json": {"digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "inode": 303}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "synthetic_equipment_registry_v1",
+  "devices": [
+    {
+      "asset_id": "XQH-CAM-001",
+      "device_name": "急诊大厅高清摄像机",
+      "device_type": "网络摄像机",
+      "model": "SYN-CAM-4M-A1",
+      "location": "一号楼一层·演示区 A",
+      "responsible_team": "演示运维甲组",
+      "inspection_cycle": "每周一次"
+    },
+    {
+      "asset_id": "XQH-NVR-002",
+      "device_name": "门诊录像存储主机",
+      "device_type": "网络视频录像机",
+      "model": "SYN-NVR-32CH-B2",
+      "location": "二号楼负一层·演示机房 B",
+      "responsible_team": "演示运维乙组",
+      "inspection_cycle": "每周一次"
+    },
+    {
+      "asset_id": "XQH-DIS-003",
+      "device_name": "监控中心拼接显示单元",
+      "device_type": "显示终端",
+      "model": "SYN-DIS-55-C3",
+      "location": "综合楼三层·演示值守区 C",
+      "responsible_team": "演示运维甲组",
+      "inspection_cycle": "每两周一次"
+    },
+    {
+      "asset_id": "XQH-UPS-004",
+      "device_name": "监控系统后备电源",
+      "device_type": "不间断电源",
+      "model": "SYN-UPS-6K-D4",
+      "location": "二号楼负一层·演示电源区 D",
+      "responsible_team": "演示运维丙组",
+      "inspection_cycle": "每月一次"
+    }
+  ]
+}

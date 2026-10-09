@@ -1,0 +1,67 @@
+{
+  "layer_commit_rollback_and_rebase": [
+    {
+      "base":{"Item:1":{"note":"base","value":0}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"older","mode":"apply","writes":[{"id":"Item:1","fields":{"note":"older","value":1}}],"aliases":{}},
+        {"kind":"optimistic","mutation_id":"newer","mode":"apply","writes":[{"id":"Item:1","fields":{"value":2}}],"aliases":{}},
+        {"kind":"success","mutation_id":"older","mode":"resolve","writes":[{"id":"Item:1","fields":{"note":"server-old","value":1}}],"aliases":{}},
+        {"kind":"error","mutation_id":"newer","mode":"resolve","writes":[],"aliases":{}}
+      ],
+      "policy":{"allowed_typenames":["Item"],"max_active_layers":4}
+    },
+    {
+      "base":{"Item:1":{"value":0}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"skip","mode":"ignore","writes":[],"aliases":{}},
+        {"kind":"success","mutation_id":"skip","mode":"resolve","writes":[{"id":"Item:1","fields":{"value":4}}],"aliases":{}}
+      ],
+      "policy":{"allowed_typenames":["Item"],"max_active_layers":2}
+    },
+    {
+      "base":{"Item:1":{"note":"old","value":0}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"first","mode":"apply","writes":[{"id":"Item:1","fields":{"note":null}}],"aliases":{}},
+        {"kind":"optimistic","mutation_id":"second","mode":"apply","writes":[{"id":"Item:1","fields":{"value":8}}],"aliases":{}},
+        {"kind":"success","mutation_id":"second","mode":"resolve","writes":[{"id":"Item:1","fields":{"value":7}}],"aliases":{}}
+      ],
+      "policy":{"allowed_typenames":["Item"],"max_active_layers":3}
+    }
+  ],
+  "normalized_merge_alias_and_reference_safety": [
+    {
+      "base":{"ROOT_QUERY:root":{"items":[]},"User:1":{"name":"A"}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"create","mode":"apply","writes":[{"id":"Item:temp","fields":{"owner":{"$ref":"User:1"},"value":"draft"}},{"id":"ROOT_QUERY:root","fields":{"items":[{"$ref":"Item:temp"}]}}],"aliases":{}},
+        {"kind":"optimistic","mutation_id":"edit","mode":"apply","writes":[{"id":"Item:temp","fields":{"note":"later"}}],"aliases":{}},
+        {"kind":"success","mutation_id":"create","mode":"resolve","writes":[{"id":"Item:2","fields":{"owner":{"$ref":"User:1"},"value":"server"}},{"id":"ROOT_QUERY:root","fields":{"items":[{"$ref":"Item:2"}]}}],"aliases":{"Item:temp":"Item:2"}}
+      ],
+      "policy":{"allowed_typenames":["Item","ROOT_QUERY","User"],"max_active_layers":3}
+    },
+    {
+      "base":{"Item:1":{"keep":"target","value":"target"},"Item:temp":{"keep":"source","source":true},"ROOT_QUERY:root":{"item":{"$ref":"Item:temp"}}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"merge","mode":"apply","writes":[{"id":"Item:temp","fields":{"draft":true}}],"aliases":{}},
+        {"kind":"success","mutation_id":"merge","mode":"resolve","writes":[{"id":"Item:1","fields":{"value":"server"}},{"id":"ROOT_QUERY:root","fields":{"item":{"$ref":"Item:1"}}}],"aliases":{"Item:temp":"Item:1"}}
+      ],
+      "policy":{"allowed_typenames":["Item","ROOT_QUERY"],"max_active_layers":2}
+    },
+    {
+      "base":{"Item:1":{"note":"old","untouched":"yes"}},
+      "events":[
+        {"kind":"optimistic","mutation_id":"pending","mode":"apply","writes":[{"id":"Item:1","fields":{"note":"draft"}}],"aliases":{}},
+        {"kind":"success","mutation_id":"pending","mode":"resolve","writes":[{"id":"Item:1","fields":{"note":null}}],"aliases":{}}
+      ],
+      "policy":{"allowed_typenames":["Item"],"max_active_layers":2}
+    }
+  ],
+  "invalid": [
+    {"base":{"Item:1":{"next":{"$ref":"Item:2"}}},"events":[],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}},
+    {"base":{"Item:1":{}},"events":[{"kind":"optimistic","mutation_id":"same","mode":"apply","writes":[],"aliases":{}},{"kind":"optimistic","mutation_id":"same","mode":"apply","writes":[],"aliases":{}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}},
+    {"base":{"Item:1":{}},"events":[{"kind":"error","mutation_id":"missing","mode":"resolve","writes":[],"aliases":{}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}},
+    {"base":{"Item:1":{}},"events":[{"kind":"optimistic","mutation_id":"one","mode":"apply","writes":[],"aliases":{}},{"kind":"optimistic","mutation_id":"two","mode":"apply","writes":[],"aliases":{}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":1}},
+    {"base":{"Item:1":{},"Item:2":{},"Item:3":{}},"events":[{"kind":"optimistic","mutation_id":"x","mode":"apply","writes":[],"aliases":{}},{"kind":"success","mutation_id":"x","mode":"resolve","writes":[],"aliases":{"Item:1":"Item:2","Item:2":"Item:3"}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}},
+    {"base":{"Item:1":{},"Item:2":{},"Item:3":{}},"events":[{"kind":"optimistic","mutation_id":"x","mode":"apply","writes":[],"aliases":{}},{"kind":"success","mutation_id":"x","mode":"resolve","writes":[],"aliases":{"Item:1":"Item:3","Item:2":"Item:3"}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}},
+    {"base":{"Item:1":{}},"events":[{"kind":"optimistic","mutation_id":"x","mode":"apply","writes":[{"id":"Item:2","fields":{}},{"id":"Item:1","fields":{}}],"aliases":{}}],"policy":{"allowed_typenames":["Item"],"max_active_layers":2}}
+  ]
+}

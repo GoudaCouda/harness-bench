@@ -1,0 +1,37 @@
+{
+  "schema_version": "case14_tool_contract_v2",
+  "tools": [
+    {
+      "tool_id": "workspace_shell",
+      "version": "1.0.0",
+      "runtime": "ubuntu:24.04 coreutils",
+      "entrypoint": "/bin/sh",
+      "permissions": [
+        "read_workspace_files",
+        "integer_arithmetic",
+        "create_outputs_directory",
+        "write_required_deliverable"
+      ],
+      "runtime_surface": "ubuntu:24.04 镜像中可由 /bin/sh 调用的本地命令；不声明不存在的专用工具服务或有限命令白名单。",
+      "smoke_verified_commands": ["sh", "cat", "sed", "awk", "base64", "mkdir", "printf", "test", "timeout"],
+      "enforcement": {
+        "network_access": "Docker network=none",
+        "persistent_write_outside_workspace": "只读根文件系统且唯一持久化读写挂载为 /workspace",
+        "initial_asset_mutation": "可信 verifier 在候选进程退出后按字节、大小和权限拒绝",
+        "unrequested_workspace_paths": "可信 verifier 对递归目录树做精确集合拒绝"
+      },
+      "smoke_test_id": "positive_candidate_tool_smoke"
+    }
+  ],
+  "candidate_environment": {
+    "NAMI_FIXED_TIME": "2025-10-15T10:00:00+08:00",
+    "NAMI_TIMEZONE": "Asia/Shanghai",
+    "NAMI_LOCALE": "zh-CN",
+    "NAMI_RANDOM_SEED": "1402"
+  },
+  "resource_wrapper": {
+    "wall_timeout_seconds": 60,
+    "single_file_limit_bytes": 16777216,
+    "workspace_total_limit_bytes": 16777216
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "incident_id": "DB-INC-2026-0817-04",
+  "system_identifier": "7419026813374501127",
+  "affected_timeline": 2,
+  "first_destructive_event_id": "TX-881",
+  "first_destructive_lsn": "0/C130000",
+  "reported_timestamp": "2026-08-17T10:15:42Z",
+  "last_known_safe_restore_point": "before_batch_cleanup",
+  "ambiguity": "RP-880 and TX-881 share the reported timestamp; a timestamp target is not an exact transaction boundary",
+  "production_status": "isolated_by_incident_commander",
+  "authorized_scope": "offline_restore_drill_and_manual_promotion_review_only"
+}

@@ -1,0 +1,17 @@
+{
+  "controller": "manifestctl.py",
+  "command": "python3 manifestctl.py validate",
+  "runs": [
+    {
+      "attempt": 1,
+      "status": "pass",
+      "checks_failed": []
+    },
+    {
+      "attempt": 2,
+      "status": "pass",
+      "checks_failed": []
+    }
+  ],
+  "idempotent": true
+}

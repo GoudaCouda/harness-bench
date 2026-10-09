@@ -1,0 +1,1 @@
+{"idempotent_methods":["DELETE","GET","HEAD","OPTIONS","PUT"],"max_retries":3,"require_idempotency_key_for_unsafe":true,"retryable_errors":["ENHANCE_YOUR_CALM","NO_ERROR"]}

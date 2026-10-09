@@ -1,0 +1,5 @@
+{
+  "sensitive_keys": ["password", "access_token", "refresh_token", "authorization", "cookie", "connection_string", "private_key"],
+  "replacement": "[REDACTED]",
+  "text_assignments": ["password", "access_token", "refresh_token", "api_key"]
+}

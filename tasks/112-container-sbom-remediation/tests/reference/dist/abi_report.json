@@ -1,0 +1,41 @@
+{
+  "native_components": [
+    {
+      "checks": {
+        "glibc": true,
+        "node_api": true,
+        "platform": true
+      },
+      "package": "pixel-abi",
+      "requirements": {
+        "glibc_min": "2.28.0",
+        "node_api": 8,
+        "platform": "linux/amd64"
+      },
+      "status": "pass",
+      "version": "2.6.0"
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "archive-import-and-stream",
+      "status": "pass"
+    },
+    {
+      "profile_id": "native-report-render",
+      "status": "pass"
+    },
+    {
+      "profile_id": "telemetry-regression",
+      "status": "pass"
+    }
+  ],
+  "runtime": {
+    "glibc": "2.36.0",
+    "node_api": 9,
+    "node_version": "20.16.0",
+    "platform": "linux/amd64"
+  },
+  "status": "pass",
+  "subject_digest": "sha256:0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d"
+}

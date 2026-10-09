@@ -1,0 +1,52 @@
+task_id: 083-census-geography-align
+title: Align cross-year Census geography and variable definitions
+prompt_file: instruction.md
+timeout_sec: 1800
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: medium
+capability_tags:
+- filesystem
+- structured_data
+- analysis
+harness_demands:
+- evidence_grounding
+- state_management
+- multi_step_execution
+stressors:
+- dirty_input
+- conflicting_evidence
+required_artifacts:
+- panel.csv
+- analysis.json
+- method.md
+task_family: 083-census-geography-align
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - DA-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - analysis.json
+  - method.md
+  - panel.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

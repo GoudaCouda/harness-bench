@@ -1,0 +1,12 @@
+{
+  "scope_id": "PORTAL-2026-Q3",
+  "base_uri": "https://portal.example.invalid/",
+  "standard": "WCAG 2.2 AA",
+  "boundary": "offline synthetic portal snapshot",
+  "required_sample_rules": [
+    "include every common page or component owner",
+    "include every critical process and its distinct state",
+    "include at least one representative structured-content page",
+    "exclude duplicate templates unless they add a distinct state"
+  ]
+}

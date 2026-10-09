@@ -1,0 +1,10 @@
+{
+  "blocked": [],
+  "remove_finalizers": [
+    "child",
+    "parent"
+  ],
+  "untouched": [
+    "live"
+  ]
+}

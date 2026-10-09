@@ -1,0 +1,15 @@
+{
+  "files": {
+    "evidence/deliveries.jsonl": "6acd50b3735a672c7e0358582a535b5666ab00e2e316446e6f531fcedb19a64f",
+    "evidence/incoming/CT-141-A.dcm": "40132703341755fd94caeca44b3827d36b8581e08202eee1f9060df3c613199c",
+    "evidence/incoming/DOC-141-B.dcm": "f31f7d2d8145a84ad36eb8c6e7f6f5e3a3af5089167d91d7b687e3805e0c6360",
+    "evidence/incoming/LATE-141-C.dcm": "fa8c26fd43fcb92f82e26fef3b1cb10bcd1fb020e00605e2c63158913f52c3b4",
+    "evidence/incoming/MR-141-B-COLLISION.dcm": "c20f2821803292b9d6a294b6f6bcb3999cb5fa8f6ee137aca5d3cd387cff28be",
+    "evidence/incoming/MR-141-B.dcm": "71cc3fb8738340734a4b8b828b21b8f89098cdc142537c18bbad9fb73892c468",
+    "evidence/incoming/MR-BURNED-141.dcm": "61654714e67f31eb572335b15a3e9a0044574b561e43c21e0650b7ce507d6064",
+    "evidence/incoming/SEG-141-A.dcm": "85e65cc723288033d8337f0e3f954fbfbb71e807cea034387664ca4776771e23",
+    "evidence/incoming/UNKNOWN-141.dcm": "2f1245a1df79edafa8867857cb7fa75ec714e188a5e35d1b6708861c505d7d7d",
+    "policy/deid_policy.json": "b90a073472ebe5203c8da17f2b106bf75355710141892132603970bf697a8788"
+  },
+  "schema_version": 1
+}

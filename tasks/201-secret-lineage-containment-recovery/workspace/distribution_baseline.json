@@ -1,0 +1,12 @@
+{
+  "revision": 12,
+  "channels": [
+    {"channel_id": "release-production", "artifact_id": "ART-417", "status": "active", "region": "global"},
+    {"channel_id": "rollback-west", "artifact_id": "MIR-417-A", "status": "active", "region": "us-west"},
+    {"channel_id": "nightly-candidate", "artifact_id": "ART-419", "status": "held", "region": "internal"},
+    {"channel_id": "qa-clean", "artifact_id": "ART-420", "status": "qa_only", "region": "internal"},
+    {"channel_id": "training-demo", "artifact_id": "ART-DEMO", "status": "isolated", "region": "training"}
+  ],
+  "quarantined_nodes": [],
+  "external_distribution_changed": false
+}

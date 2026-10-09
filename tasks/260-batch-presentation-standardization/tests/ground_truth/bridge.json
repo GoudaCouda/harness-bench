@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "case_number": 6,
+  "verify": [
+    "verifier/verify.py",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "slide_and_content_preservation"
+    ],
+    [
+      "uniform_typography_and_color",
+      "uniform_footer",
+      "canvas_alignment_and_geometry"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_exact_tree",
+    "protected_input_integrity",
+    "pptx_package_integrity",
+    "slide_and_content_preservation",
+    "uniform_typography_and_color",
+    "uniform_footer",
+    "canvas_alignment_and_geometry"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "outputs/standardized/market_brief.pptx",
+    "outputs/standardized/project_update.pptx",
+    "outputs/standardized/service_review.pptx"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "018c291df7c77146589aed2cc28e0defac717d75b42e9ced517333ed7d86fdfe",
+    "hb_tools/tool_contract.json": "541b9c39fd0c019fa7e20a6ebaee3113fe4ae0bfda671ee79688fad3f148faf2",
+    "inputs/brand_template.pptx": "c3cf928383d8b85d120fdbb2ab1734db8cc8a5a255f8aa2e7563e9a1a07277d2",
+    "inputs/decks/market_brief.pptx": "f238fa1d25cd789cce9f52a3479ffd53f50080b430e840c9ee4498fa0d6115d9",
+    "inputs/decks/project_update.pptx": "3b7fafed85711edfc0f0cf265d4cc2271fe73ef24c75905a88cc74bd30fa23b1",
+    "inputs/decks/service_review.pptx": "d3c723be5f9ccb9cfe874fde2a34570a580e0f0f6ad0fb586b1411c437170ef8",
+    "inputs/style_map.json": "913733952b4e370376ce02c6d1a792eff974cb2941319ba162dedf4b6bc527d3",
+    "task.md": "7025e1de838d690410a1ac5cc07abe26ac3dbde81deaaef6aa25ba606da07c07",
+    "tools/pptx_core.py": "6c35c5a2f73b18210cd14d004ad035bf60dab4ccda1a32ec63014f07591e99ac",
+    "tools/pptx_inspect.py": "af592f750feb7e631e1163113ad1ac5f4d3ea634f46f15094322d2fecb88780e",
+    "tools/pptx_standardize.py": "39698ddf25b965dd30f7b90b2d6e78364db28fbf98644cd34c6456c650e283c6"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "inputs",
+    "inputs/decks",
+    "outputs",
+    "outputs/standardized",
+    "tools"
+  ],
+  "original_directories": [
+    "inputs",
+    "inputs/decks",
+    "outputs",
+    "outputs/standardized",
+    "tools"
+  ],
+  "original_modes": {
+    "inputs": 509,
+    "inputs/brand_template.pptx": 292,
+    "inputs/decks": 509,
+    "inputs/decks/market_brief.pptx": 292,
+    "inputs/decks/project_update.pptx": 292,
+    "inputs/decks/service_review.pptx": 292,
+    "inputs/style_map.json": 292,
+    "outputs": 509,
+    "outputs/standardized": 509,
+    "task.md": 292,
+    "tools": 509,
+    "tools/pptx_core.py": 292,
+    "tools/pptx_inspect.py": 292,
+    "tools/pptx_standardize.py": 292
+  }
+}

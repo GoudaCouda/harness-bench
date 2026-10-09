@@ -1,0 +1,63 @@
+task_id: 236-demand-response-dispatch-gate
+title: Admit demand-response curtailment only for dispatched sites that did not opt out
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Energy and Utilities
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- local_state_machine
+- policy_adjudication
+harness_demands:
+- state_management
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+- output_contract
+stressors:
+- conflicting_evidence
+- stale_state
+- authorization_boundary
+- high_stakes_rules
+required_artifacts:
+- state/dr_log.json
+- state/dr_receipt.json
+- state/verification.json
+- demand_response_handoff.md
+task_family: 236-demand-response-dispatch-gate
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - GREEN-BUTTON-ESPI
+  - NIST-SMART-GRID
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - state/dr_log.json
+  - state/dr_receipt.json
+  - state/verification.json
+  - demand_response_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

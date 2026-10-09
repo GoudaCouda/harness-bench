@@ -1,0 +1,2 @@
+# Release evidence handoff
+B-401 is stale against the final tag. B-404 has correct components but BASE-CVE-77 invalidates its base; APR-804 was later revoked by APR-805. B-406 has the wrong component chain. B-405 binds SDK-204 and CLI-310 through ATT-405, SIG-B405, SBOM-405 and SCAN-405. APR-806 is for another request. `provenancectl.py inspect/select/request-approval/verify` returned pass locally. B-405 remains pending human reapproval by the release-board; no artifact was rebuilt, approved, signed, published, or promoted here.

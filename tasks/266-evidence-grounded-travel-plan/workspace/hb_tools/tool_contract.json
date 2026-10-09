@@ -1,0 +1,22 @@
+{
+  "schema_version": "case12_tool_contract_v1",
+  "tools": [
+    {
+      "tool_id": "snapshot_browser",
+      "entrypoint": "python3 -B /tools/travel_tool.py --workspace /workspace list|get",
+      "side_effect": "read_only",
+      "allowed_inputs": ["input/preferences.json", "input/travel_snapshot.json", "input/citation_index.json"]
+    },
+    {
+      "tool_id": "report_writer",
+      "entrypoint": "python3 -B /tools/travel_tool.py --workspace /workspace submit",
+      "side_effect": "workspace_write",
+      "allowed_outputs": ["output/recommendation.json", "output/comparison.csv", "output/report.md"]
+    }
+  ],
+  "network": {
+    "mode": "offline",
+    "docker_network": "none",
+    "published_ports": []
+  }
+}

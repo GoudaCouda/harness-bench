@@ -1,0 +1,198 @@
+{
+  "valid": [
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "",
+      "expected": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      }
+    },
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "/plant/mills/1/gate/code",
+      "expected": "G-2"
+    },
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "/plant/a~1b/~0t",
+      "expected": "tilde"
+    },
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "/plant/mills/0/mill_id",
+      "expected": "m-east"
+    }
+  ],
+  "invalid": [
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "plant"
+    },
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "/plant/mills/9/gate"
+    },
+    {
+      "document": {
+        "plant": {
+          "mills": [
+            {
+              "mill_id": "m-east",
+              "gate": {
+                "code": "G-1"
+              }
+            },
+            {
+              "mill_id": "m-west",
+              "gate": {
+                "code": "G-2"
+              }
+            }
+          ],
+          "a/b": {
+            "~t": "tilde"
+          }
+        }
+      },
+      "pointer": "/plant/missing"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "policy": {
+    "expire_after": 30,
+    "main_path": "/repo",
+    "now": 100,
+    "protected_branches": [
+      "release"
+    ]
+  },
+  "records": [
+    {
+      "admin_exists": true,
+      "branch": "main",
+      "dirty": false,
+      "exists": true,
+      "id": "main",
+      "last_seen": 100,
+      "locked": false,
+      "path": "/repo"
+    },
+    {
+      "admin_exists": true,
+      "branch": "old",
+      "dirty": false,
+      "exists": false,
+      "id": "gone",
+      "last_seen": 10,
+      "locked": false,
+      "path": "/wt/gone"
+    },
+    {
+      "admin_exists": false,
+      "branch": "feature",
+      "dirty": false,
+      "exists": true,
+      "id": "repair",
+      "last_seen": 90,
+      "locked": false,
+      "path": "/wt/repair"
+    },
+    {
+      "admin_exists": true,
+      "branch": "feature2",
+      "dirty": true,
+      "exists": true,
+      "id": "dirty",
+      "last_seen": 20,
+      "locked": false,
+      "path": "/wt/dirty"
+    }
+  ]
+}

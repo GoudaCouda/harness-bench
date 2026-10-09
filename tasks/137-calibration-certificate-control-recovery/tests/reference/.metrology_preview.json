@@ -1,0 +1,16 @@
+{
+  "conflicting_sequences": [],
+  "decision_count": 6,
+  "duplicate_event_ids_ignored": [
+    "EV-M505-C"
+  ],
+  "external_actions_executed": false,
+  "interrupted_recoveries_pending": [
+    "MCR-INTERRUPTED-00"
+  ],
+  "recovery_id": "MCR-20260815-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "2f724c521caecad2ae1c8059ba23f6d5ed52ed09512ae313267bd2f3fe8a0987",
+  "source_checkpoint": "818bf2e4779c56843a475f0305e5761f2cf24a824a797e8c9a610d92a50485ea",
+  "status": "valid"
+}

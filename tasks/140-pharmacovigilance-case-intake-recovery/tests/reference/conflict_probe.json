@@ -1,0 +1,18 @@
+{
+  "after_sha256": {
+    "database": "55def240c476746a46cccaf9de0e314741250bd833dd5a6ef52c24864cf64056",
+    "manifest": "37ed99adf45426f2f55d48e169c0f16173a052295be8ea28756c02559246d81d",
+    "packet": "14ba10ec4429a34701788924553b4d334e4cac3c24edcc57b88fd5d0243e72ec",
+    "receipt": "dce8de88f1af43f44501449d977cd28d6a137bcf4287bd0477aa487674b0844a"
+  },
+  "before_sha256": {
+    "database": "55def240c476746a46cccaf9de0e314741250bd833dd5a6ef52c24864cf64056",
+    "manifest": "37ed99adf45426f2f55d48e169c0f16173a052295be8ea28756c02559246d81d",
+    "packet": "14ba10ec4429a34701788924553b4d334e4cac3c24edcc57b88fd5d0243e72ec",
+    "receipt": "dce8de88f1af43f44501449d977cd28d6a137bcf4287bd0477aa487674b0844a"
+  },
+  "changed_field": "case_decisions[ICSR-2405].next_local_action",
+  "command": "python3 pvctl.py apply conflict_probe_plan.json",
+  "exit_code": 2,
+  "schema_version": 1
+}

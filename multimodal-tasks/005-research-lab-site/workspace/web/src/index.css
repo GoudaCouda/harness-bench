@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18212f;
+  background: #f6f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: 3px solid rgba(29, 78, 216, 0.34); outline-offset: 3px; }
+.starter-shell { min-height: 100vh; display: grid; place-items: center; padding: 32px; }
+.starter-card { max-width: 680px; padding: 28px; border: 1px solid #d8e0ea; border-radius: 8px; background: white; box-shadow: 0 18px 44px rgba(24, 33, 47, 0.12); }
+.eyebrow { color: #14532d; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: 0; }
+p { line-height: 1.6; }
+@media (max-width: 640px) { .starter-shell { padding: 18px; } .starter-card { padding: 22px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

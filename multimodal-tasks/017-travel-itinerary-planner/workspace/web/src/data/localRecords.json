@@ -1,0 +1,47 @@
+[
+  {
+    "id": "TRV-HOTEL",
+    "name": "Harbor hotel",
+    "kind": "stay",
+    "x": 16,
+    "y": 22,
+    "minutes": 0,
+    "cost": 0
+  },
+  {
+    "id": "TRV-MUS",
+    "name": "Modern art museum",
+    "kind": "museum",
+    "x": 38,
+    "y": 30,
+    "minutes": 90,
+    "cost": 24
+  },
+  {
+    "id": "TRV-PARK",
+    "name": "Riverside park",
+    "kind": "outdoor",
+    "x": 66,
+    "y": 26,
+    "minutes": 60,
+    "cost": 0
+  },
+  {
+    "id": "TRV-FOOD",
+    "name": "Neighborhood food tour",
+    "kind": "food",
+    "x": 73,
+    "y": 62,
+    "minutes": 80,
+    "cost": 36
+  },
+  {
+    "id": "TRV-FRY",
+    "name": "Ferry sunset loop",
+    "kind": "transit",
+    "x": 28,
+    "y": 70,
+    "minutes": 55,
+    "cost": 18
+  }
+]

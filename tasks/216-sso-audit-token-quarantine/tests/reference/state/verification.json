@@ -1,0 +1,17 @@
+{
+  "controller": "auditctl.py",
+  "command": "python3 auditctl.py validate",
+  "runs": [
+    {
+      "attempt": 1,
+      "status": "pass",
+      "checks_failed": []
+    },
+    {
+      "attempt": 2,
+      "status": "pass",
+      "checks_failed": []
+    }
+  ],
+  "idempotent": true
+}

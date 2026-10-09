@@ -1,0 +1,48 @@
+{
+  "stream_id": "harborwatch-226",
+  "gate_clock_epoch": 1775518400,
+  "events": [
+    {
+      "message_id": "m1",
+      "mailbox": "desk@harbor",
+      "sender": "desk@harbor",
+      "kind": "sent_as"
+    },
+    {
+      "message_id": "m2",
+      "mailbox": "desk@harbor",
+      "sender": "ada@harbor",
+      "kind": "sent_on_behalf"
+    },
+    {
+      "message_id": "m3",
+      "mailbox": "desk@harbor",
+      "sender": "desk@harbor",
+      "kind": "draft"
+    },
+    {
+      "message_id": "m1",
+      "mailbox": "desk@harbor",
+      "sender": "desk@harbor",
+      "kind": "sent_as"
+    },
+    {
+      "message_id": "m5",
+      "mailbox": "",
+      "sender": "desk@harbor",
+      "kind": "sent_as"
+    },
+    {
+      "message_id": "m6",
+      "mailbox": "desk@harbor",
+      "sender": "desk@harbor",
+      "kind": "sent_as"
+    },
+    {
+      "message_id": "m7",
+      "mailbox": "desk@harbor",
+      "sender": "ada@harbor",
+      "kind": "sent_as"
+    }
+  ]
+}

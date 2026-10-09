@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "signers": [
+    {
+      "key_id": "vendor-prod",
+      "algorithm": "hmac-sha256",
+      "secret": "synthetic-vendor-prod-key-2026",
+      "state": "active"
+    },
+    {
+      "key_id": "vendor-retired",
+      "algorithm": "hmac-sha256",
+      "secret": "synthetic-retired-key-2025",
+      "state": "retired"
+    }
+  ]
+}

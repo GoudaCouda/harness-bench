@@ -1,0 +1,48 @@
+{
+  "applied_deltas": [
+    {
+      "from": "4.8.0",
+      "package": "archive-stack",
+      "reason": "moves its archive path to zip-stream 1.5.1",
+      "to": "4.9.0"
+    },
+    {
+      "from": "2.2.0",
+      "package": "document-loader",
+      "reason": "moves the second archive path and satisfies reciprocal peers",
+      "to": "2.3.0"
+    }
+  ],
+  "external_push_executed": false,
+  "rejected_alternatives": [
+    {
+      "reason": "requires Node 22 on the pinned Node 20 base",
+      "reason_code": "node_engine_incompatible",
+      "selection": {
+        "archive-stack": "5.0.0"
+      }
+    },
+    {
+      "reason": "introduces fast-crc-native requiring glibc 2.38 on glibc 2.36",
+      "reason_code": "glibc_runtime_incompatible",
+      "selection": {
+        "document-loader": "2.4.0"
+      }
+    }
+  ],
+  "release_id": "REL-REPORT-2026-08",
+  "schema_version": 1,
+  "strategy": "least_change_coherent",
+  "vulnerable_paths": [
+    [
+      "report-worker",
+      "archive-stack",
+      "zip-stream"
+    ],
+    [
+      "report-worker",
+      "document-loader",
+      "zip-stream"
+    ]
+  ]
+}

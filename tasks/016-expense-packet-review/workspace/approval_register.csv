@@ -1,0 +1,4 @@
+approval_id,trip_id,expense_id,approval_type,status,approved_limit,approver
+AP-777,T-884,E-008,airline_change_fee,requested,250.00,Travel Director
+AP-701,T-884,E-002,hotel_exception,rejected,80.00,Travel Director
+AP-655,T-811,E-099,airline_change_fee,approved,300.00,Travel Director

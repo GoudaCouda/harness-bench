@@ -1,0 +1,14 @@
+{
+  "task_id": "088-cardinality-guarded-join",
+  "input_orders": 12,
+  "matched_orders": 6,
+  "rejected_orders": 6,
+  "matched_revenue_usd": 585.0,
+  "rejection_counts": {
+    "null_customer_key": 1,
+    "unmatched_customer": 1,
+    "ambiguous_customer": 2,
+    "unmatched_rate": 1,
+    "ambiguous_rate": 1
+  }
+}

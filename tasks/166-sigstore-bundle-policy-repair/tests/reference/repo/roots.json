@@ -1,0 +1,4 @@
+[
+  {"root_id":"root-2025","valid_from":1000,"valid_until":3000,"ca_operator":"fulcio.example","tlog_operators":["rekor-a.example","rekor-b.example"],"timestamp_operators":["tsa.example"]},
+  {"root_id":"root-2026","valid_from":2500,"valid_until":5000,"ca_operator":"fulcio.example","tlog_operators":["rekor-b.example","rekor-c.example"],"timestamp_operators":["tsa.example"]}
+]

@@ -1,0 +1,3 @@
+{"auth": {"Access_Token": "[REDACTED]", "token_count": 3, "user_id": "usr-4"}, "event_id": "evt-101", "message": "upstream rejected Bearer [REDACTED]", "request_id": "req-tokenizer-7"}
+{"cookie": "[REDACTED]", "event_id": "evt-102", "exception": {"message": "dial postgres://[REDACTED]@db.internal/app; api_key = [REDACTED]", "type": "ConnectError"}, "passwordless": true}
+{"event_id": "evt-103", "items": [{"authorization": "[REDACTED]"}, {"refresh_token": "[REDACTED]"}], "message": "tokenizer ready; passwordless login enabled", "trace_id": "trace-9"}

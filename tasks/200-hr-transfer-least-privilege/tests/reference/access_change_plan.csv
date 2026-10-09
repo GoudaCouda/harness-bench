@@ -1,0 +1,5 @@
+change_id,system,action,target_principal,target_value,idempotency_key,approval_owner,execution_state,evidence_refs
+TR200-01,source_control,remove_membership,E-200,GROUP-ENG-PLATFORM,TR-200:source_control:GROUP-ENG-PLATFORM:remove_membership:v1,scm_owner,proposed_only,group_memberships.csv#GM-17;group_graph.csv#GE-17;group_entitlements.csv#GA-17;target_role_matrix.csv#source_control
+TR200-02,analytics,add_entitlement,E-200,dashboard_view,TR-200:analytics:dashboard_view:add_entitlement:v1,analytics_owner,proposed_only,target_role_matrix.csv#analytics;direct_entitlements.csv
+TR200-03,crm,remove_entitlement,E-200,refund_approve,TR-200:crm:refund_approve:remove_entitlement:v1,identity_control,proposed_only,direct_entitlements.csv#DX-602;sod_policy.csv#SOD-SUPPORT-REFUND;target_role_matrix.csv#crm
+TR200-04,legacy_hr,remove_membership,E-200,GROUP-LEGACY-PAY,TR-200:legacy_hr:GROUP-LEGACY-PAY:remove_membership:v1,hris_owner,proposed_only,group_memberships.csv#GM-07;group_entitlements.csv#GA-07;target_role_matrix.csv#legacy_hr

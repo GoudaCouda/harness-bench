@@ -1,0 +1,7 @@
+{
+  "precedence": ["critical", "acknowledged", "duplicate", "broad_urgent", "limited"],
+  "broad_account_threshold": 20,
+  "urgent_deadline_hours": 4,
+  "threshold_comparator": "greater_or_equal",
+  "deadline_comparator": "less_or_equal"
+}

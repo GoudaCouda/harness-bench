@@ -1,0 +1,121 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "max_parts": 1
+      },
+      "requests": [
+        {
+          "boundary": "b",
+          "id": "limit",
+          "raw": "--b\nContent-Type: text/plain\n\na\n--b\nContent-Type: text/plain\n\nb\n--b--\n"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 3
+      },
+      "requests": [
+        {
+          "boundary": "b",
+          "id": "ids",
+          "raw": "--b\nContent-ID: <x>\n\na\n--b\nContent-ID: <x>\n\nb\n--b--\n"
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "max_parts": 5
+      },
+      "requests": [
+        {
+          "boundary": "outer",
+          "id": "mail",
+          "raw": "--outer\r\nContent-Type: text/plain\r\n\r\nhello\r\n--outer\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-ID: <a1>\r\nContent-Disposition: attachment; filename=note.txt\r\n\r\naGk=\r\n--outer--\r\n"
+        },
+        {
+          "boundary": "outer",
+          "id": "mail",
+          "raw": "--outer\r\nContent-Type: text/plain\r\n\r\nhello\r\n--outer\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-ID: <a1>\r\nContent-Disposition: attachment; filename=note.txt\r\n\r\naGk=\r\n--outer--\r\n"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 2
+      },
+      "requests": [
+        {
+          "boundary": "x",
+          "id": "bad",
+          "raw": "no boundary"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 2
+      },
+      "requests": [
+        {
+          "boundary": "x",
+          "id": "bad-qp",
+          "raw": "--x\nContent-Transfer-Encoding: quoted-printable\n\nbad=Z0\n--x--\n"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 2
+      },
+      "requests": [
+        {
+          "boundary": "x",
+          "id": "bad-b64",
+          "raw": "--x\nContent-Transfer-Encoding: base64\n\na===\n--x--\n"
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "max_parts": 5
+      },
+      "requests": [
+        {
+          "boundary": "outer",
+          "id": "mail",
+          "raw": "--outer\r\nContent-Type: text/plain\r\n\r\nhello\r\n--outer\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-ID: <a1>\r\nContent-Disposition: attachment; filename=note.txt\r\n\r\naGk=\r\n--outer--\r\n"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 3
+      },
+      "requests": [
+        {
+          "boundary": "o",
+          "id": "nested",
+          "raw": "--o\nContent-Type: multipart/mixed; boundary=i\n\n--i\nContent-Type: text/plain\nContent-Transfer-Encoding: quoted-printable\n\na=3Db\n--i--\n\n--o--\n"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "max_parts": 1
+      },
+      "requests": [
+        {
+          "boundary": "b",
+          "id": "plain",
+          "raw": "--b\nContent-Type: text/plain\n\ntext\n--b--\n"
+        }
+      ]
+    }
+  ]
+}

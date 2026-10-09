@@ -1,0 +1,26 @@
+{
+  "decisions": [
+    {
+      "changed": true,
+      "id": "new-file",
+      "mode": "0644",
+      "operation": "create"
+    },
+    {
+      "changed": true,
+      "id": "shared-dir",
+      "mode": "0755",
+      "operation": "create"
+    },
+    {
+      "changed": true,
+      "id": "tighten",
+      "mode": "4750",
+      "operation": "chmod"
+    }
+  ],
+  "summary": {
+    "chmod": 1,
+    "created": 2
+  }
+}

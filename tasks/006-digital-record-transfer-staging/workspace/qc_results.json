@@ -1,0 +1,10 @@
+{
+  "results": [
+    {"path":"source/text/council_minutes_2025-01.pdf","status":"pass","inspection":"profile and page completeness"},
+    {"path":"source/image/map_scan_v1.tif","status":"fail","inspection":"cropped legend"},
+    {"path":"source/image/map_scan_rescan.tif","status":"pass","inspection":"rescan includes legend; LZW verified"},
+    {"path":"source/audio/hearing_access.wav","status":"pass","inspection":"access derivative only"},
+    {"path":"source/audio/hearing_preservation.wav","status":"pass","inspection":"PCM 24-bit master"},
+    {"path":"source/data/budget_ledger.csv","status":"pass","inspection":"UTF-8 and row count"}
+  ]
+}

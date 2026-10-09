@@ -1,0 +1,11 @@
+{
+  "document_id": "VEX-DOC-MERIDIAN-2026-08-15",
+  "author": "Acme Dependency Assurance",
+  "statements": [
+    {"statement_id": "VEX-7101", "component_purl": "pkg:pypi/requests@2.32.1", "vulnerability_id": "CVE-SYN-2026-7101", "status": "fixed", "issued_at": "2026-08-10T09:00:00Z", "signer_fingerprint": "SHA256:ACME-RELEASE-KEY-01", "justification": null, "impact_statement": "Fixed in requests 2.32.1.", "fixed_version": "2.32.1", "payload_sha256": "78576c73f26c790b69eea2429ce75a714fb07ff6317cea3ee1b9dd2fb1d792af"},
+    {"statement_id": "VEX-7102", "component_purl": "pkg:pypi/jinja2@3.1.2", "vulnerability_id": "CVE-SYN-2026-7102", "status": "not_affected", "issued_at": "2026-08-11T09:00:00Z", "signer_fingerprint": "SHA256:ACME-RELEASE-KEY-01", "justification": "vulnerable_code_not_in_execute_path", "impact_statement": "The application uses only precompiled templates; the vulnerable dynamic loader is not imported.", "fixed_version": null, "payload_sha256": "760d8ad3008af1c27a3c1fd29260b7ba6fd10c78a58f7ed5fffa4cf9a48a8b45"},
+    {"statement_id": "VEX-7103", "component_purl": "pkg:pypi/urllib3@2.0.4", "vulnerability_id": "CVE-SYN-2026-7103", "status": "under_investigation", "issued_at": "2026-08-12T09:00:00Z", "signer_fingerprint": "SHA256:ACME-RELEASE-KEY-01", "justification": null, "impact_statement": "Reachability analysis is still in progress.", "fixed_version": null, "payload_sha256": "f97061c3bafe39908380337998c3d977100ea530291cfd494f9bb8b148e24085"},
+    {"statement_id": "VEX-7104", "component_purl": "pkg:pypi/pyyaml@6.0.1", "vulnerability_id": "CVE-SYN-2026-7104", "status": "not_affected", "issued_at": "2026-08-12T10:00:00Z", "signer_fingerprint": "SHA256:ACME-RELEASE-KEY-01", "justification": null, "impact_statement": "No action planned.", "fixed_version": null, "payload_sha256": "67668655c852e66f68c678e44d103476e8cdf4ba8f0f0d7764ed4d6921e0effe"},
+    {"statement_id": "VEX-7105", "component_purl": "pkg:pypi/idna@3.6", "vulnerability_id": "CVE-SYN-2026-7105", "status": "not_affected", "issued_at": "2026-08-13T09:00:00Z", "signer_fingerprint": "SHA256:UNREGISTERED-KEY-77", "justification": "vulnerable_code_not_present", "impact_statement": "Supplier states the affected parser was removed.", "fixed_version": null, "payload_sha256": "0000000000000000000000000000000000000000000000000000000000000000"}
+  ]
+}

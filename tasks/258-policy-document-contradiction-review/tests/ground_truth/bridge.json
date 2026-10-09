@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "case_number": 4,
+  "verify": [
+    "verifier/verify.py",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "contradiction_recall",
+      "false_positive_control"
+    ],
+    [
+      "evidence_localization",
+      "severity_accuracy",
+      "actionable_recommendations",
+      "summary_consistency"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_no_symlinks",
+    "workspace_exact_files",
+    "workspace_exact_directories",
+    "input_integrity",
+    "report_size",
+    "report_structure",
+    "contradiction_recall",
+    "evidence_localization",
+    "false_positive_control",
+    "severity_accuracy",
+    "actionable_recommendations",
+    "summary_consistency"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/review_report.json"
+  ],
+  "protected_files": {
+    "TASK.md": "90270d044332df67cec0b67631080e8106c245dcf6b6987ae1bbfa6f15b336a1",
+    "hb_tools/README.md": "2854db9a26e65f20878ff17d893bc671adfcf23dd9f35b8069be5c9534f6afc9",
+    "hb_tools/document_parser.py": "605785230550fedc72b4e0f135ac9143e41477b90f5e6076a10337a287e7d19e",
+    "hb_tools/tool_contract.json": "62a4550797ebbc7aea878d8405fef2c06663d8ceabac169751eab937a776506e",
+    "input/A01_采购管理办法_v3.2.md": "be502108ba7d0e874fac098959b8490d6c7bad23d67eba1fcf383b2f8f5a0572",
+    "input/A02_费用报销细则_v2.0.md": "6532bda0653efacd994b185d6ef3ec94d8bff454f2d50920bf36c8fcf957a1f8",
+    "input/A03_信息安全控制标准_v4.0.md": "a3bfe5795a37559b808de8a5052376c5ccb484bcf218767caa8b11b21e079aeb",
+    "input/A04_远程办公实施细则_v1.3.md": "7dbe53c6a749ba79d44b48228245e031afd32488c1af63c1671bb191b658e4fc",
+    "input/A05_制度版本与引用目录_2026Q2.md": "128ce5f6db7e8ac6f1b2ca79a2f1ae6e0e32e8de1499f31603e0c3dfb82b365a"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "output"
+  ],
+  "original_directories": [
+    "input",
+    "output"
+  ],
+  "original_modes": {
+    "TASK.md": 436,
+    "input": 509,
+    "input/A01_采购管理办法_v3.2.md": 436,
+    "input/A02_费用报销细则_v2.0.md": 436,
+    "input/A03_信息安全控制标准_v4.0.md": 436,
+    "input/A04_远程办公实施细则_v1.3.md": 436,
+    "input/A05_制度版本与引用目录_2026Q2.md": 436,
+    "output": 509
+  }
+}

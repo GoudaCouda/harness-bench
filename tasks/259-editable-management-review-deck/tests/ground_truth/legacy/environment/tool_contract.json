@@ -1,0 +1,36 @@
+{
+  "schema_version": "nami_work_case05_tool_contract_v1",
+  "agent_visible_mount": "/workspace",
+  "hidden_case_mounts": [
+    "oracle",
+    "verifier",
+    "tests",
+    "validation"
+  ],
+  "tools": [
+    {
+      "tool_id": "filesystem",
+      "actions": ["read", "list", "write"],
+      "read_scope": ["TASK.md", "input/**"],
+      "write_scope": ["output/management_review.pptx"]
+    },
+    {
+      "tool_id": "document_parser",
+      "actions": ["parse_markdown", "parse_csv", "parse_json"],
+      "read_scope": ["input/**"]
+    },
+    {
+      "tool_id": "pptx_writer",
+      "actions": ["create_editable_presentation"],
+      "write_scope": ["output/management_review.pptx"]
+    }
+  ],
+  "network": {
+    "mode": "offline",
+    "allowed_hosts": []
+  },
+  "fixed_time": "2026-07-01T09:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "locale": "zh-CN"
+}
+

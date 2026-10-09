@@ -1,0 +1,41 @@
+task_id: 033-rate-limit-lease-reconciliation
+title: Reconcile distributed rate-limit leases without oversubscribing capacity
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [lease_expiry_boundary, idempotent_replay, fifo_fairness, fencing_tokens]
+required_artifacts:
+- repo/src/lease_reconciler.py
+- repo/reconciliation_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [KUBERNETES-LEASE-V1, KUBERNETES-API-CONCURRENCY]
+task_family: distributed-capacity-lease-repair
+variant: expiry-replay-fairness-and-fencing
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/reconciliation_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/lease_reconciler.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 141-dicom-deidentification-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: DICOM de-identification recovery handoff is operationally complete
+  question: Does the handoff accurately explain each eligible, duplicate, collision, pixel-risk, unsupported, protected, and unknown delivery; tag/private-tag removal, per-study date shifting, UID and SEG reference consistency; interrupted journal recovery; verification and packet hashes; equivalent replay and rejected conflict; and the no-external-export boundary?
+  pass_anchors:
+  - Equivalent professional wording is accepted when delivery-specific evidence, transformation facts, recovery state, and external boundaries agree with the structured artifacts.
+  fail_anchors:
+  - Omitting a material delivery, privacy risk, graph mapping, recovery/replay fact, or claiming transmission/export fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

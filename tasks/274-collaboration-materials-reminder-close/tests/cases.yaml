@@ -1,0 +1,28 @@
+schema_version: 2
+task_id: 274-collaboration-materials-reminder-close
+pass_threshold: 0.8
+cases:
+- id: materials_archive
+  title: 材料归档保真且登记表一致
+  description: 'All of the coupled business checks must pass: archive_exact_set archive_byte_fidelity
+    archive_pdf_structure register_schema register_exact_rows download_audit_exact'
+  weight: 0.4
+  core: true
+- id: recipient_reminders
+  title: 对正确对象发送对应提醒
+  description: 'All of the coupled business checks must pass: reminder_recipients_exact
+    reminder_content_exact'
+  weight: 0.4
+  core: true
+- id: complete_delivery
+  title: 完整交付与运行验证
+  description: All original acceptance checks pass, including final-state and replay
+    checks.
+  weight: 0.2
+  core: false
+- id: protected_boundary
+  title: 受保护输入、状态与执行证据完整性
+  description: No tampering, forged execution evidence, unsafe paths or prohibited
+    protected-state changes.
+  weight: 0.0
+  gate: true

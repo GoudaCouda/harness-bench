@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 091-versioned-json-import-migration
+pass_threshold: 0.8
+cases:
+- id: versioned_migration_semantics
+  title: All known versions migrate without collapsing explicit state
+  description: Version dispatch, missing/null semantics, features, extensions, canonicalization, and immutability
+    are correct.
+  weight: 0.3
+  core: true
+- id: rejection_and_idempotency
+  title: Malformed and future documents are isolated with deterministic output
+  description: Per-document rejects are value-free, valid siblings survive, and canonical v3 is idempotent.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_import_execution
+  title: Protected fixture outputs exactly match the repaired importer
+  description: Both generated JSON artifacts are current, parseable, and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The migration handoff explains boundaries and verified behavior
+  description: Another engineer can understand dispatch, state preservation, rejection, immutability,
+    and exact checks.
+  weight: 0.2
+  core: false
+- id: source_and_application_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

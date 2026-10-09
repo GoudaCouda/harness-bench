@@ -1,0 +1,195 @@
+{
+  "acquisitions": [
+    {
+      "action": "quarantine_hash_mismatch",
+      "blob_id": "BLOB-BAD-9",
+      "custody_state": "hash_mismatch",
+      "depends_on": null,
+      "evidence_refs": [
+        "evidence/store/BLOB-BAD-9.bin",
+        "sha256:2bc8dfe6ec017c1afe73881b7d7c0c427f894a6dadd4b1ff34c6dd2cee278b84"
+      ],
+      "order": 1,
+      "phase": "volatile",
+      "request_id": "ACQ-BAD-9",
+      "target_id": "ws-lab-09",
+      "target_type": "host"
+    },
+    {
+      "action": "preserve_offline",
+      "blob_id": "BLOB-MEM-17",
+      "custody_state": "valid",
+      "depends_on": null,
+      "evidence_refs": [
+        "evidence/store/BLOB-MEM-17.bin",
+        "sha256:d56c88009b4048b11c2bceb0d503216690b8b015fb231955900dfdb4b3665237"
+      ],
+      "order": 2,
+      "phase": "volatile",
+      "request_id": "ACQ-MEM-17",
+      "target_id": "ws-fin-17",
+      "target_type": "host"
+    },
+    {
+      "action": "preserve_offline",
+      "blob_id": "BLOB-ID-7",
+      "custody_state": "valid",
+      "depends_on": null,
+      "evidence_refs": [
+        "evidence/store/BLOB-ID-7.bin",
+        "sha256:6d41c265b5d6e094060b197ca86b850f8406dc83fa213e854bba1fd67a0dbb75"
+      ],
+      "order": 3,
+      "phase": "identity",
+      "request_id": "ACQ-ID-7",
+      "target_id": "sess-7x",
+      "target_type": "session"
+    },
+    {
+      "action": "preserve_offline",
+      "blob_id": "BLOB-DUAL-8",
+      "custody_state": "valid",
+      "depends_on": null,
+      "evidence_refs": [
+        "evidence/store/BLOB-DUAL-8.bin",
+        "sha256:502d6fcd74043f1ca463633ca00eb4329a77d7d60edede5006f83bea5d000840"
+      ],
+      "order": 4,
+      "phase": "dual_use_context",
+      "request_id": "ACQ-DUAL-8",
+      "target_id": "ws-ops-08",
+      "target_type": "host"
+    },
+    {
+      "action": "quarantine_chain_break",
+      "blob_id": "BLOB-CHAIN-8",
+      "custody_state": "chain_break",
+      "depends_on": "ACQ-DUAL-8",
+      "evidence_refs": [
+        "evidence/store/BLOB-CHAIN-8.bin",
+        "sha256:e3b18f732f8aef911127f4e73ded6fada3a972d550e4e77441efe01bc138d05c"
+      ],
+      "order": 5,
+      "phase": "disk",
+      "request_id": "ACQ-CHAIN-8",
+      "target_id": "ws-ops-08",
+      "target_type": "host"
+    },
+    {
+      "action": "preserve_offline",
+      "blob_id": "BLOB-DISK-17",
+      "custody_state": "valid",
+      "depends_on": "ACQ-MEM-17",
+      "evidence_refs": [
+        "evidence/store/BLOB-DISK-17.bin",
+        "sha256:a8993eba60179540a546fb9eeca138865fee5e7e18d9ee823410466929e038ad"
+      ],
+      "order": 6,
+      "phase": "disk",
+      "request_id": "ACQ-DISK-17",
+      "target_id": "ws-fin-17",
+      "target_type": "host"
+    }
+  ],
+  "event_dispositions": [
+    {
+      "delivery_id": "DEL-001",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-PROC-17-1",
+      "sequence": 1,
+      "stream": "host:ws-fin-17"
+    },
+    {
+      "delivery_id": "DEL-002",
+      "disposition": "applied_current",
+      "event_id": "EV-DUAL-8-3",
+      "sequence": 3,
+      "stream": "host:ws-ops-08"
+    },
+    {
+      "delivery_id": "DEL-003",
+      "disposition": "applied_current",
+      "event_id": "EV-PROC-17-2",
+      "sequence": 2,
+      "stream": "host:ws-fin-17"
+    },
+    {
+      "delivery_id": "DEL-004",
+      "disposition": "applied_current",
+      "event_id": "EV-ID-7-4",
+      "sequence": 4,
+      "stream": "session:sess-7x"
+    },
+    {
+      "delivery_id": "DEL-005",
+      "disposition": "duplicate_delivery_ignored",
+      "event_id": "EV-PROC-17-2",
+      "sequence": 2,
+      "stream": "host:ws-fin-17"
+    },
+    {
+      "delivery_id": "DEL-006",
+      "disposition": "superseded_by_newer_sequence",
+      "event_id": "EV-DUAL-8-2",
+      "sequence": 2,
+      "stream": "host:ws-ops-08"
+    },
+    {
+      "delivery_id": "DEL-007",
+      "disposition": "identity_mismatch_ignored",
+      "event_id": "EV-FOREIGN-99",
+      "sequence": 99,
+      "stream": "session:sess-7x"
+    },
+    {
+      "delivery_id": "DEL-008",
+      "disposition": "hash_mismatch_quarantined",
+      "event_id": "EV-BAD-9",
+      "sequence": 1,
+      "stream": "host:ws-lab-09"
+    }
+  ],
+  "external_actions_executed": false,
+  "incident_id": "INC-8842",
+  "recovery_id": "IER-20260819-01",
+  "schema_version": 1,
+  "scope_actions": [
+    {
+      "action": "stage_session_disable",
+      "boundary": "pending_external_irreversible",
+      "entity_id": "sess-7x",
+      "entity_type": "session"
+    },
+    {
+      "action": "observe_no_containment",
+      "boundary": "clean_no_action",
+      "entity_id": "sess-safe-2",
+      "entity_type": "session"
+    },
+    {
+      "action": "preserve_account_scope",
+      "boundary": "no_account_expansion",
+      "entity_id": "user-7",
+      "entity_type": "account"
+    },
+    {
+      "action": "observe_no_containment",
+      "boundary": "clean_no_action",
+      "entity_id": "ws-clean-03",
+      "entity_type": "host"
+    },
+    {
+      "action": "preserve_observed_isolation",
+      "boundary": "observed_external_complete",
+      "entity_id": "ws-fin-17",
+      "entity_type": "host"
+    },
+    {
+      "action": "analyst_review_no_containment",
+      "boundary": "ambiguity_preserved",
+      "entity_id": "ws-ops-08",
+      "entity_type": "host"
+    }
+  ],
+  "source_checkpoint": "57cf32b1c9bd3272e8c091656ac7abd5df789474f77e645cc459f5d6f579baf7"
+}

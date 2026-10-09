@@ -1,0 +1,5 @@
+{"id":"EV-550","at":"2026-08-12T09:02:00Z","generation":55,"object":"pod/invoice-api-old","reason":"Ready","message":"GET /ready returned 200 on legacy image"}
+{"id":"EV-557","at":"2026-08-12T09:10:00Z","generation":57,"object":"externalsecret/invoice-runtime","reason":"SecretSyncedError","message":"remote version 2 property url is retired"}
+{"id":"EV-558","at":"2026-08-12T09:11:00Z","generation":57,"object":"pod/invoice-api-new","reason":"ConfigDrift","message":"HTTP_PORT resolved to 8080 but approved image contract supports 9000"}
+{"id":"EV-559","at":"2026-08-12T09:12:00Z","generation":57,"object":"pod/invoice-api-new","reason":"Unhealthy","message":"readiness request /ready returned 404 after process debug override"}
+{"id":"EV-560","at":"2026-08-12T09:13:00Z","generation":57,"object":"service/invoice-api","reason":"NoReadyEndpoints","message":"targetPort name http does not resolve in pod ports"}

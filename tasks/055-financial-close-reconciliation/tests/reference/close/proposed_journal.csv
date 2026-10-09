@@ -1,0 +1,7 @@
+line_no,account,debit_usd,credit_usd,description,evidence,batch_status
+1,Cash,578.85,0.00,Net movement in the March bank statement,bank_statement.csv;fx_rates.csv,proposed
+2,Bank Fee Expense,8.65,0.00,Bank-confirmed processor fees,processor_settlements.csv;bank_statement.csv;fx_rates.csv,proposed
+3,Customer Refunds,85.00,0.00,Bank-confirmed refunds for known invoices,processor_refunds.csv;bank_statement.csv;fx_rates.csv,proposed
+4,Cash Suspense,10.00,0.00,Orphan refund pending identification,processor_refunds.csv#R404;bank_statement.csv#B010;ar_ledger.csv,proposed
+5,AR Clearing,0.00,527.50,Gross bank-confirmed receipts for valid invoices,processor_settlements.csv;ar_ledger.csv;bank_statement.csv;fx_rates.csv,proposed
+6,Cash Suspense,0.00,155.00,Void cash plus missing-invoice and orphan-bank receipts,bank_statement.csv#B003;bank_statement.csv#B004;bank_statement.csv#B009;ar_ledger.csv;processor_settlements.csv,proposed

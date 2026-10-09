@@ -1,0 +1,278 @@
+{
+  "edges": [
+    {
+      "nodes": [
+        {
+          "chunks": [
+            "missing"
+          ],
+          "id": "s",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "id": "orphan",
+          "type": "chunk"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "s"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "c",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c"
+          ],
+          "id": "a",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c"
+          ],
+          "id": "b",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "a"
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "nodes": [
+        {
+          "id": "c1",
+          "type": "chunk"
+        },
+        {
+          "id": "c2",
+          "type": "chunk"
+        },
+        {
+          "id": "c3",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c1"
+          ],
+          "id": "s0",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c2"
+          ],
+          "id": "s1",
+          "parent": "s0",
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c3"
+          ],
+          "id": "old",
+          "parent": null,
+          "state": "tombstoned",
+          "type": "snapshot"
+        },
+        {
+          "id": "c1",
+          "type": "chunk"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "s1"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "c1",
+          "type": "chunk"
+        },
+        {
+          "id": "c2",
+          "type": "chunk"
+        },
+        {
+          "id": "c3",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c1"
+          ],
+          "id": "s0",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c2"
+          ],
+          "id": "s1",
+          "parent": "s0",
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c3"
+          ],
+          "id": "old",
+          "parent": null,
+          "state": "tombstoned",
+          "type": "snapshot"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "unknown"
+        ]
+      }
+    }
+  ],
+  "primary": [
+    {
+      "nodes": [
+        {
+          "id": "c1",
+          "type": "chunk"
+        },
+        {
+          "id": "c2",
+          "type": "chunk"
+        },
+        {
+          "id": "c3",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c1"
+          ],
+          "id": "s0",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c2"
+          ],
+          "id": "s1",
+          "parent": "s0",
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c3"
+          ],
+          "id": "old",
+          "parent": null,
+          "state": "tombstoned",
+          "type": "snapshot"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "s1"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "c1",
+          "type": "chunk"
+        },
+        {
+          "id": "c2",
+          "type": "chunk"
+        },
+        {
+          "id": "c3",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c1"
+          ],
+          "id": "s0",
+          "parent": null,
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c2"
+          ],
+          "id": "s1",
+          "parent": "s0",
+          "state": "complete",
+          "type": "snapshot"
+        },
+        {
+          "chunks": [
+            "c3"
+          ],
+          "hold": true,
+          "id": "old",
+          "parent": null,
+          "state": "tombstoned",
+          "type": "snapshot"
+        }
+      ],
+      "policy": {
+        "retain": [
+          "s1"
+        ]
+      }
+    },
+    {
+      "nodes": [
+        {
+          "id": "c",
+          "type": "chunk"
+        },
+        {
+          "chunks": [
+            "c"
+          ],
+          "id": "partial",
+          "parent": null,
+          "state": "partial",
+          "type": "snapshot"
+        }
+      ],
+      "policy": {
+        "retain": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+work_id,canonical_work_id,canonical_key,author_ids,institution_ids,referenced_work_ids,concept_ids,claim_relation,status,issue,evidence_refs
+W1,W1,10.oa/alpha,A1|A5,I1|I3,W2,C1|C3,supports,canonical,,works_page1.json#W1;authors.json#A1;authors.json#A5;concepts.json#C1;concepts.json#C3
+W2,W2,10.oa/beta,A2,I2,,C2,contradicts,canonical,,works_page1.json#W2;authors.json#A2;concepts.json#C2
+W3,W3,,A3,unknown,W1,C1,supports,quarantined_suspected_match,suspected_doi:10.oa/gamma,works_page1.json#W3;authors.json#A3;concepts.json#C1
+W1-DUP,W1,10.oa/alpha,A1|A5,I1|I3,W2,C1|C3,supports,duplicate,duplicate_doi,works_page2.json#W1-DUP;works_page1.json#W1;authors.json#A1;authors.json#A5;concepts.json#C1;concepts.json#C3
+W4,W4,10.oa/delta,A6,I4,W1,C1,supports,canonical,,works_page2.json#W4;authors.json#A6;concepts.json#C1
+W5,W5,10.oa/epsilon,A2|A7,I2|I5,W4,C2,conflict,quarantined_conflict,relation_conflict,works_page2.json#W5;works_page4.json#W5-CONFLICT;prior_graph_state.json#checkpoint-p2-102;authors.json#A2;authors.json#A7;concepts.json#C2
+W6,W6,10.oa/zeta,A8,I6,W-MISSING,C3,supports,canonical,dangling_reference:W-MISSING,works_page2.json#W6;authors.json#A8;concepts.json#C3
+W8,W8-CORR,10.oa/iota,A9,unknown,W2,C2,contradicts,superseded_by_correction,relation_corrected_by:CE-1,works_page2.json#W8;works_page4.json#W8-CORR;correction_events.json#CE-1;prior_graph_state.json#checkpoint-p2-102;authors.json#A9;concepts.json#C2
+W4-ALIAS,W4,10.oa/delta,A6,I4,W1,C1,supports,duplicate,duplicate_version_alias,works_page4.json#W4-ALIAS;works_page2.json#W4;authors.json#A6;concepts.json#C1
+W5-CONFLICT,W5,10.oa/epsilon,A2|A7,I2|I5,W4,C2,conflict,quarantined_conflict,relation_conflict,works_page4.json#W5-CONFLICT;works_page2.json#W5;authors.json#A2;authors.json#A7;concepts.json#C2
+W7,W7,10.oa/theta,A1|A2,I1|I2,W5,C1|C2,supports,review_required,dependency_review_required:W5,works_page4.json#W7;works_page2.json#W5;works_page4.json#W5-CONFLICT;authors.json#A1;authors.json#A2;concepts.json#C1;concepts.json#C2
+W8-CORR,W8-CORR,10.oa/iota,A9,unknown,W2,C2,contradicts,canonical,correction_event:CE-1,works_page4.json#W8-CORR;correction_events.json#CE-1;authors.json#A9;concepts.json#C2
+W9,W9,10.oa/delta-v2,A6,I4,W4,C1|C3,supports,canonical,non_duplicate_version_alias,works_page4.json#W9;authors.json#A6;concepts.json#C1;concepts.json#C3
+W10,W10,10.oa/kappa,A5,I3,W7,C3,supports,review_required,dependency_review_required:W7,works_page4.json#W10;works_page4.json#W7;authors.json#A5;concepts.json#C3

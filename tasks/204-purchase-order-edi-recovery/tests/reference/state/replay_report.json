@@ -1,0 +1,8 @@
+{
+  "database_byte_stable": true,
+  "recovery_id": "EDI-RCV-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_sha256": "f31b5753dcd8fa96730ddf5d1f7e31f91fdad856eafc8a710ae1d4b75c92d60d",
+  "stage_manifest_sha256": "9374971403dd0eedc17f66891cf3d6a9e8ef05bda6c4f2a1a0296d9e2c39484a",
+  "status": "idempotent"
+}

@@ -1,0 +1,54 @@
+task_id: 028-excel-like-cleaning
+title: Excel-like sales table cleaning
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: easy
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+capability_tags:
+- code_execution
+- filesystem
+- structured_data
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- dirty_input
+- high_stakes_rules
+required_artifacts:
+- cleaned_sales.csv
+- cleaning_report.md
+- reject_ledger.csv
+- reject_summary.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-028
+task_family: 028-excel-like-cleaning
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - cleaned_sales.csv
+  - cleaning_report.md
+  - reject_ledger.csv
+  - reject_summary.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+schema_version: 2

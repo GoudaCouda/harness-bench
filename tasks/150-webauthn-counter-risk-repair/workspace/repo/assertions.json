@@ -1,0 +1,8 @@
+[
+  {"assertion_id":"auth-001","credential_id":"cred-alpha","user_id":"user-ada","sign_count":42,"backup_eligible":false,"backup_state":false,"signature_valid":true,"user_verified":true,"origin":"https://login.example.test","rp_id":"example.test"},
+  {"assertion_id":"auth-101","credential_id":"cred-sync","user_id":"user-lin","sign_count":7,"backup_eligible":true,"backup_state":true,"signature_valid":true,"user_verified":true,"origin":"https://login.example.test","rp_id":"example.test"},
+  {"assertion_id":"auth-002","credential_id":"cred-alpha","user_id":"user-ada","sign_count":41,"backup_eligible":false,"backup_state":false,"signature_valid":true,"user_verified":true,"origin":"https://login.example.test","rp_id":"example.test"},
+  {"assertion_id":"auth-102","credential_id":"cred-sync","user_id":"user-lin","sign_count":8,"backup_eligible":true,"backup_state":false,"signature_valid":true,"user_verified":true,"origin":"https://login.example.test","rp_id":"example.test"},
+  {"assertion_id":"auth-003","credential_id":"cred-revoked","user_id":"user-ada","sign_count":10,"backup_eligible":false,"backup_state":false,"signature_valid":true,"user_verified":true,"origin":"https://login.example.test","rp_id":"example.test"},
+  {"assertion_id":"auth-004","credential_id":"cred-alpha","user_id":"user-ada","sign_count":43,"backup_eligible":false,"backup_state":false,"signature_valid":true,"user_verified":true,"origin":"https://evil.example.test","rp_id":"example.test"}
+]

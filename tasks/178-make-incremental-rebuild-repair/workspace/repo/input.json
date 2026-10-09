@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": "src.c",
+      "mtime": 20,
+      "recipe": false
+    },
+    {
+      "id": "config",
+      "mtime": 30,
+      "recipe": false
+    },
+    {
+      "id": "obj.o",
+      "mtime": 10,
+      "prereqs": [
+        "src.c"
+      ],
+      "recipe": true
+    },
+    {
+      "id": "app",
+      "mtime": 25,
+      "order_only": [
+        "config"
+      ],
+      "prereqs": [
+        "obj.o"
+      ],
+      "recipe": true
+    }
+  ],
+  "policy": {
+    "targets": [
+      "app"
+    ]
+  }
+}

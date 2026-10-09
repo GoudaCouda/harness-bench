@@ -1,0 +1,2 @@
+rule_id,left_system,left_entitlement,right_system,right_entitlement,remediation_rule,approval_owner
+SOD-SUPPORT-REFUND,support,ticket_agent,crm,refund_approve,preserve target-required access and remove the non-target entitlement,identity_control

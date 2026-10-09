@@ -1,0 +1,6 @@
+[
+  {"job_id":"build","needs":[],"shards":["py310","py311"],"consumes":[],"side_effect":false},
+  {"job_id":"deploy","needs":["package"],"shards":["prod"],"consumes":["package"],"side_effect":true},
+  {"job_id":"package","needs":["test"],"shards":["main"],"consumes":["test"],"side_effect":false},
+  {"job_id":"test","needs":["build"],"shards":["integration","unit"],"consumes":["build"],"side_effect":false}
+]

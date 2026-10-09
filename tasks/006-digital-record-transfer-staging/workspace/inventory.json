@@ -1,0 +1,10 @@
+{
+  "candidates": [
+    {"record_id":"REC-001","path":"source/text/council_minutes_2025-01.pdf","category":"textual","profile":"PDF/A-2b","master":true},
+    {"record_id":"REC-002","path":"source/image/map_scan_v1.tif","category":"image","compression":"LZW","master":true},
+    {"record_id":"REC-002","path":"source/image/map_scan_rescan.tif","category":"image","compression":"LZW","master":true,"supersedes":"source/image/map_scan_v1.tif"},
+    {"record_id":"REC-003","path":"source/audio/hearing_access.wav","category":"audio","codec":"AAC","bit_depth":16,"master":false},
+    {"record_id":"REC-003","path":"source/audio/hearing_preservation.wav","category":"audio","codec":"PCM","bit_depth":24,"master":true},
+    {"record_id":"REC-004","path":"source/data/budget_ledger.csv","category":"data","encoding":"UTF-8","master":true}
+  ]
+}

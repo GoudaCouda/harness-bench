@@ -1,0 +1,21 @@
+{
+  "cardinality": {
+    "orders_to_customers": "many_to_one",
+    "orders_to_rates": "many_to_one"
+  },
+  "errors": [],
+  "input_orders": 12,
+  "matched_orders": 6,
+  "matched_revenue_usd": 585.0,
+  "output_rows": 12,
+  "output_unique_orders": 12,
+  "rejected_orders": 6,
+  "rejection_counts": {
+    "ambiguous_customer": 2,
+    "ambiguous_rate": 1,
+    "null_customer_key": 1,
+    "unmatched_customer": 1,
+    "unmatched_rate": 1
+  },
+  "status": "pass"
+}

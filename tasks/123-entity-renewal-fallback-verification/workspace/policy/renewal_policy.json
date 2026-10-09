@@ -1,0 +1,48 @@
+{
+  "activation_boundary": "preserve_existing_inactive_state",
+  "as_of": "2026-08-19",
+  "beneficial_owner_rule": {
+    "minimum_fields": [
+      "effective_date",
+      "expires_on",
+      "owner_count",
+      "source_ref",
+      "status"
+    ],
+    "prohibited_fields": [
+      "owner_name",
+      "date_of_birth",
+      "residential_address",
+      "tax_identifier",
+      "bank_account",
+      "routing_number"
+    ],
+    "required_entity_types": [
+      "limited_liability_company",
+      "private_corporation"
+    ],
+    "required_risk_tiers": [
+      "medium",
+      "high"
+    ]
+  },
+  "compliance_states": [
+    "compliant_for_review",
+    "owner_attestation_required",
+    "registration_expired"
+  ],
+  "external_action": "none",
+  "registration_statuses": [
+    "active",
+    "expired",
+    "suspended"
+  ],
+  "renewal_id": "VRR-20260819-01",
+  "renewal_states": [
+    "ready_for_internal_approval",
+    "hold_owner_attestation",
+    "pending_external_registry_renewal"
+  ],
+  "renewal_window_days": 90,
+  "schema_version": 1
+}

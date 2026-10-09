@@ -1,0 +1,87 @@
+task_id: 202-smart-meter-billing-correction-recovery
+title: Recover a smart-meter billing correction after an interrupted rebill
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Energy and Utilities
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- data_recovery
+- smart_metering
+- billing_operations
+- local_state_machine
+harness_demands:
+- context_management
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- out_of_order_duplicate_intervals
+- dst_fall_back_offsets
+- register_rollover
+- bidirectional_solar_metering
+- damaged_primary_signed_fallback
+- insufficient_evidence_hold
+- interrupted_sqlite_journal
+- semantic_replay_identity
+required_artifacts:
+- correction_plan.json
+- .meter_preview.json
+- state/billing.db
+- state/verification.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- meter_recovery_handoff.md
+task_family: smart-meter-billing-recovery
+variant: dst-rollover-solar-signed-fallback-and-journal-recovery
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - GREEN-BUTTON-ESPI
+  - NIST-SMART-GRID
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - correction_plan.json
+  - .meter_preview.json
+  - state/verification.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - meter_recovery_handoff.md
+  allowed_modified:
+  - state/billing.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: meter_recovery_handoff
+  max_fallback_weight: 0.08
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

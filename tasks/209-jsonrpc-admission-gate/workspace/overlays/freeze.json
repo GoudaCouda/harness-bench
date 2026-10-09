@@ -1,0 +1,6 @@
+{
+  "frozen_methods": [
+    "payouts.create"
+  ],
+  "lifted_methods": []
+}

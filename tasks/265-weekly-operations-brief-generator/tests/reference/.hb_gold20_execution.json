@@ -1,0 +1,35 @@
+{
+  "case_number": 11,
+  "checks": {
+    "byte_idempotency": true,
+    "fresh_primary_run_1": true,
+    "fresh_primary_run_2": true,
+    "hidden_generalization": true,
+    "invalid_date": true,
+    "invalid_duplicate": true,
+    "invalid_existing_output_atomicity": true,
+    "invalid_extra_cell": true,
+    "invalid_input_atomicity": true,
+    "invalid_logic": true,
+    "invalid_missing_column": true,
+    "invalid_numeric": true,
+    "invalid_zero_denominator": true,
+    "minimal_valid_generalization": true,
+    "sandbox_contract": true,
+    "submission_terminal_state": true
+  },
+  "config_sha256": "ca7d980325f039c616da528e93343be156cbb687bb756b95a8bbbd9a46ff53ac",
+  "forged_snapshot": false,
+  "legacy_accepted": true,
+  "schema_version": 1,
+  "status": "finished",
+  "unsafe_workspace": false,
+  "workspace_files": {
+    "input/brief_template.md": "f64ed5386fc9541eb314af91df6aa8af86737940461beb1da5fa8111ab821649",
+    "input/metric_definitions.json": "d25a3195060afa8e8947f96801814586d23d63e0d8680ac948be0521f8aef1cd",
+    "input/weekly_operations.csv": "8b9585a6c0e328f7a86cdde303d0ce19cf7a9738aa6d16f0cdd9c9ba8320861e",
+    "output/summary.json": "dd1a5296ad0193fa8ee8d758ce7a20a5c304fcbddd6060a06395106c5f35dfab",
+    "output/weekly_brief.md": "5e52b8995b9582681f5fac05a1fc895462f8340371d7fe8214a92354f9002697",
+    "submission/generate_brief.py": "ae9ae6d79f37bfbfd323c8a3376d2a7bd93bf4d999e44f2ef0e68aee49347be8"
+  }
+}

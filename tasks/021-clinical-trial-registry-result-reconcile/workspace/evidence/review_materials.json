@@ -1,0 +1,4 @@
+{
+  "qc": {"source_id": "QC-CYCLE-4", "state": "major_issues_pending", "comments": ["Outcome designation conflicts with prior posted record", "Arm titles conflict with submitted values", "Participant and serious-event denominators do not reconcile"]},
+  "manuscript": {"source_id": "MS-PROOF-7", "state": "proof_not_published", "claims": ["The prespecified primary endpoint was symptom score change at Day 56.", "Results were posted to ClinicalTrials.gov on 2026-08-10."], "results": {"LX-21_day28": -12.4, "Placebo_day28": -5.1}}
+}

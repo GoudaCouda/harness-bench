@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 162-degree-prerequisite-audit
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Degree-audit handoff is complete
+  question: Does the handoff accurately explain five-of-six completion, valid STAT-210 equivalency, approved HUM-110 substitution, missing capstone, CS-301 eligibility, expired unused CALC-A, no-double-count behavior, verification, and offline scope?
+  pass_anchors: [Equivalent advising and transfer-credit terminology is acceptable.]
+  fail_anchors: [Reviving the expired equivalency, claiming registration/conferral, or omitting a missing requirement fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

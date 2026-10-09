@@ -1,0 +1,22 @@
+{
+  "anomaly_ids": [
+    "A001",
+    "A002",
+    "A003",
+    "A004",
+    "A005",
+    "A006"
+  ],
+  "cause_counts": {
+    "deployment": 2,
+    "third_party": 1,
+    "marketing": 1,
+    "unattributed": 2
+  },
+  "high_severity_count": 3,
+  "total_revenue_impact_usd": 2445.75,
+  "unattributed_anomaly_ids": [
+    "A005",
+    "A006"
+  ]
+}

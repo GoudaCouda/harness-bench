@@ -1,0 +1,4 @@
+evidence_id,subject,status,recorded_at,authority,notes
+SEC-204,security_review,approved,2026-08-05T14:00:00Z,CISO delegate,Approval applies to build 8f29
+PROC-118,connector_procurement,pending,2026-08-06T09:00:00Z,Procurement,PO review earliest Day 12
+PRIV-77,privacy_launch,not_approved,2026-08-06T10:00:00Z,Privacy counsel,Needs completed connector validation

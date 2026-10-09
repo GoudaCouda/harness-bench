@@ -1,0 +1,23 @@
+{
+  "k-root-1": {
+    "generation": 1,
+    "not_before": 1771923600,
+    "not_after": 1773648000,
+    "revoked_at": null,
+    "material_hex": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "k-root-2": {
+    "generation": 2,
+    "not_before": 1773644400,
+    "not_after": 1773738000,
+    "revoked_at": null,
+    "material_hex": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "k-old": {
+    "generation": 1,
+    "not_before": 1770195600,
+    "not_after": 1773738000,
+    "revoked_at": 1773644400,
+    "material_hex": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  }
+}

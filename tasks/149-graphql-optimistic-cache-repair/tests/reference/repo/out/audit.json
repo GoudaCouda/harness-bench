@@ -1,0 +1,9 @@
+[
+  {"active_layers":["m1"],"kind":"optimistic","mutation_id":"m1","status":"layer_started"},
+  {"active_layers":["m1","m2"],"kind":"optimistic","mutation_id":"m2","status":"layer_started"},
+  {"active_layers":["m1","m2","m3"],"kind":"optimistic","mutation_id":"m3","status":"ignored"},
+  {"active_layers":["m2","m3"],"kind":"success","mutation_id":"m1","status":"committed"},
+  {"active_layers":["m3"],"kind":"error","mutation_id":"m2","status":"rolled_back"},
+  {"active_layers":[],"kind":"success","mutation_id":"m3","status":"committed"},
+  {"active_layers":["m4"],"kind":"optimistic","mutation_id":"m4","status":"layer_started"}
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "cache_expires_at": 1300,
+    "reason": "bound",
+    "request_id": "accepted",
+    "status": "accepted"
+  },
+  {
+    "cache_expires_at": null,
+    "reason": "token_hash",
+    "request_id": "bad-token",
+    "status": "rejected"
+  },
+  {
+    "cache_expires_at": null,
+    "reason": "replay",
+    "request_id": "replayed",
+    "status": "rejected"
+  },
+  {
+    "cache_expires_at": null,
+    "reason": "replay",
+    "request_id": "same-batch",
+    "status": "rejected"
+  }
+]

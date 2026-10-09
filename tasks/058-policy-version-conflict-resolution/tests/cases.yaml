@@ -1,0 +1,37 @@
+schema_version: 2
+task_id: 058-policy-version-conflict-resolution
+pass_threshold: 0.8
+cases:
+- id: policy_decisions
+  title: Every governed item receives the correct version-aware decision
+  description: Every governed item receives the correct version-aware decision; all
+    related facts, relationships, and closed-set constraints must agree before this
+    outcome earns credit.
+  weight: 0.34
+  core: true
+- id: source_and_evidence
+  title: Decisions cite the winning sources and evidence
+  description: Decisions cite the winning sources and evidence; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns
+    credit.
+  weight: 0.25
+  core: true
+- id: conflict_handling
+  title: Conflicts and insufficient evidence remain explicit
+  description: Conflicts and insufficient evidence remain explicit; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns
+    credit.
+  weight: 0.21
+  core: true
+- id: decision_record
+  title: The result and conflict audit are parseable
+  description: The result and conflict audit are parseable; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.2
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary
+    business mistakes lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

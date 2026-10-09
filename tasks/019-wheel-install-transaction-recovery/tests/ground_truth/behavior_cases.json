@@ -1,0 +1,67 @@
+{
+  "transaction": [
+    {
+      "site_state":{"files":[{"path":"p/new.py","digest":"sha256=bmV3","owners":["pkg"]}]},
+      "journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/new.py","before":null,"after_digest":"sha256=bmV3","applied":true}]},
+      "wheel_record":[{"path":"p/new.py","digest":"sha256=bmV3","size":3}],
+      "expected":{"decision":"rollback_required","actions":[{"kind":"remove","path":"p/new.py"}],"conflicts":[]}
+    },
+    {
+      "site_state":{"files":[{"path":"p/a.py","digest":"sha256=bmV3YQ","owners":["pkg"]},{"path":"p/b.py","digest":"sha256=bmV3Yg","owners":["base","pkg"]}]},
+      "journal":{"package":"pkg","phase":"recovering","entries":[{"path":"p/a.py","before":null,"after_digest":"sha256=bmV3YQ","applied":true},{"path":"p/b.py","before":{"digest":"sha256=b2xkYg","owners":["base"]},"after_digest":"sha256=bmV3Yg","applied":true}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=bmV3YQ","size":4},{"path":"p/b.py","digest":"sha256=bmV3Yg","size":4}],
+      "expected":{"decision":"rollback_required","actions":[{"kind":"restore","path":"p/b.py","digest":"sha256=b2xkYg","owners":["base"]},{"kind":"remove","path":"p/a.py"}],"conflicts":[]}
+    },
+    {
+      "site_state":{"files":[]},
+      "journal":{"package":"pkg","phase":"committed","entries":[{"path":"p/a.py","before":null,"after_digest":"sha256=YQ","applied":true}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=YQ","size":1}],
+      "expected":{"decision":"committed","actions":[],"conflicts":[]}
+    },
+    {
+      "site_state":{"files":[]},
+      "journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/a.py","before":null,"after_digest":"sha256=YQ","applied":false}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=YQ","size":1}],
+      "expected":{"decision":"already_rolled_back","actions":[],"conflicts":[]}
+    }
+  ],
+  "edges": [
+    {
+      "site_state":{"files":[{"path":"shared/x.py","digest":"sha256=c2FtZQ","owners":["other","pkg"]}]},
+      "journal":{"package":"pkg","phase":"applying","entries":[{"path":"shared/x.py","before":{"digest":"sha256=c2FtZQ","owners":["other"]},"after_digest":"sha256=c2FtZQ","applied":true}]},
+      "wheel_record":[{"path":"shared/x.py","digest":"sha256=c2FtZQ","size":4}],
+      "expected":{"decision":"rollback_required","actions":[{"kind":"detach_owner","path":"shared/x.py","owner":"pkg"}],"conflicts":[]}
+    },
+    {
+      "site_state":{"files":[{"path":"p/a.py","digest":"sha256=bmV3YQ","owners":["pkg"]},{"path":"p/b.py","digest":"sha256=bGF0ZXI","owners":["pkg"]}]},
+      "journal":{"package":"pkg","phase":"recovering","entries":[{"path":"p/a.py","before":null,"after_digest":"sha256=bmV3YQ","applied":true},{"path":"p/b.py","before":null,"after_digest":"sha256=bmV3Yg","applied":true}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=bmV3YQ","size":4},{"path":"p/b.py","digest":"sha256=bmV3Yg","size":4}],
+      "expected":{"decision":"manual_intervention","actions":[],"conflicts":[{"path":"p/b.py","reason":"post_write_drift"}]}
+    },
+    {
+      "site_state":{"files":[{"path":"p/old.py","digest":"sha256=b2xk","owners":["pkg"]}]},
+      "journal":{"package":"pkg","phase":"recovering","entries":[{"path":"p/old.py","before":{"digest":"sha256=b2xk","owners":["pkg"]},"after_digest":"sha256=bmV3","applied":true},{"path":"p/later.py","before":null,"after_digest":"sha256=bGF0ZXI","applied":false}]},
+      "wheel_record":[{"path":"p/old.py","digest":"sha256=bmV3","size":3},{"path":"p/later.py","digest":"sha256=bGF0ZXI","size":5}],
+      "expected":{"decision":"already_rolled_back","actions":[],"conflicts":[]}
+    },
+    {
+      "site_state":{"files":[{"path":"p/a.py","digest":"sha256=dW5leHBlY3RlZA","owners":["other"]}]},
+      "journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/a.py","before":null,"after_digest":"sha256=YQ","applied":false}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=YQ","size":1}],
+      "expected":{"decision":"manual_intervention","actions":[],"conflicts":[{"path":"p/a.py","reason":"unexpected_unapplied_state"}]}
+    },
+    {
+      "site_state":{"files":[{"path":"p/a.py","digest":"sha256=c2FtZQ","owners":["pkg"]}]},
+      "journal":{"package":"pkg","phase":"recovering","entries":[{"path":"p/a.py","before":{"digest":"sha256=c2FtZQ","owners":["pkg"]},"after_digest":"sha256=c2FtZQ","applied":true}]},
+      "wheel_record":[{"path":"p/a.py","digest":"sha256=c2FtZQ","size":4}],
+      "expected":{"decision":"already_rolled_back","actions":[],"conflicts":[]}
+    }
+  ],
+  "invalid": [
+    {"site_state":{"files":[]},"journal":{"package":"pkg","phase":"applying","entries":[{"path":"../x","before":null,"after_digest":"sha256=eA","applied":true}]},"wheel_record":[{"path":"../x","digest":"sha256=eA","size":1}]},
+    {"site_state":{"files":[]},"journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/x","before":null,"after_digest":"sha256=YQ","applied":true}]},"wheel_record":[{"path":"p/x","digest":"sha256=Yg","size":1}]},
+    {"site_state":{"files":[]},"journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/x","before":null,"after_digest":"sha256=YQ","applied":true}]},"wheel_record":[{"path":"p/x","digest":"sha256=YQ","size":true}]},
+    {"site_state":{"files":[{"path":"p/x","digest":"sha256=YQ","owners":["z","a"]}]},"journal":{"package":"pkg","phase":"committed","entries":[{"path":"p/x","before":null,"after_digest":"sha256=YQ","applied":true}]},"wheel_record":[{"path":"p/x","digest":"sha256=YQ","size":1}]},
+    {"site_state":{"files":[],"extra":true},"journal":{"package":"pkg","phase":"applying","entries":[{"path":"p/x","before":null,"after_digest":"sha256=YQ","applied":true}]},"wheel_record":[{"path":"p/x","digest":"sha256=YQ","size":1}]}
+  ]
+}

@@ -1,0 +1,10 @@
+supplier_id,status,master_bank_token,prior_successful_payments,beneficiary_verified_at
+SUP-A,active,TOK-A1,18,2025-09-03T14:00:00Z
+SUP-B,active,TOK-B0,12,2025-11-18T17:00:00Z
+SUP-C,active,TOK-C2,7,2025-10-04T16:00:00Z
+SUP-D,active,TOK-D2,4,2026-01-12T10:00:00Z
+SUP-E,active,TOK-E1,21,2025-07-19T09:00:00Z
+SUP-F,active,TOK-F1,0,
+SUP-G,inactive,TOK-G1,9,2025-12-11T11:00:00Z
+SUP-H,active,TOK-H2,6,2026-02-08T08:00:00Z
+SUP-I,active,TOK-I1,14,2025-08-21T12:00:00Z

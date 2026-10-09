@@ -1,0 +1,7 @@
+{
+  "/metadata/labels/app":"shop",
+  "/metadata/labels/security":"restricted",
+  "/spec/containers[name=api]/image":"api:v2",
+  "/spec/replicas":5,
+  "/spec/strategy":"RollingUpdate"
+}

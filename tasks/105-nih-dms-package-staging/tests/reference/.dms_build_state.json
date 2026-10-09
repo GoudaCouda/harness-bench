@@ -1,0 +1,22 @@
+{
+  "checkpoint_id": "DMS-NEURO-042-build-reconciled",
+  "excluded_external_assets": [
+    "audio_raw",
+    "audio_transcript_deid"
+  ],
+  "external_deposit_executed": false,
+  "manifest_sha256": "07d221a25fb105d47c3014be342bb7e54188e1cfb6489bd23ca5488887de9bd9",
+  "phase": "package_built_pending_review",
+  "plan_revision": 2,
+  "plan_sha256": "a55a29e4a9aa4ccf688aaba6beec2b00e5b3e68528eb0def0b08c3a64da5723b",
+  "schema_version": 1,
+  "source_bundle_sha256": "2843f40d35aa3c18074afe136f41c96df5763ed755d95e8cc8fd2d2b49441607",
+  "staged_assets": [
+    "survey_raw",
+    "survey_dictionary",
+    "audio_metadata",
+    "analysis_code",
+    "analysis_environment",
+    "model_outputs"
+  ]
+}

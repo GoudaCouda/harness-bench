@@ -1,0 +1,5 @@
+approval_id,deal,clause,approved_value,status,valid_from,valid_through,approver
+EX-104,Baxter Retail,O-02,net 45,approved,2026-06-01,2026-12-31,CFO
+EX-088,Baxter Retail,C-01,30-day renewal notice,expired,2025-01-01,2025-12-31,Legal Operations
+EX-109,Baxter Retail,O-03,USD 1000000 cyber insurance,rejected,2026-06-10,2026-12-31,Risk Committee
+EX-111,Northstar Foods,O-04,standing logo permission,approved,2026-06-01,2026-12-31,Brand Director

@@ -1,0 +1,127 @@
+{
+  "answers": [
+    {
+      "question_id": "Q01",
+      "status": "answered",
+      "answer": "Vault Sync encrypts stored workspace snapshots with AES-256-GCM.",
+      "sources": [
+        {"source_file": "kb/product_manual.md", "evidence_id": "PM-1", "quote_or_signal": "AES-256-GCM encryption at rest"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q02",
+      "status": "answered",
+      "answer": "After release 3.4, Vault Export accepts attachments up to 200 MB per item.",
+      "sources": [
+        {"source_file": "kb/release_notes.md", "evidence_id": "RN-3.4-Export", "quote_or_signal": "attachments up to 200 MB per item"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q03",
+      "status": "answered",
+      "answer": "No. The current security bulletin says legacy API tokens are blocked for admin accounts.",
+      "sources": [
+        {"source_file": "kb/security_bulletin.md", "evidence_id": "SB-2025-04-Tokens", "quote_or_signal": "legacy API tokens are blocked for admin accounts"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q04",
+      "status": "answered",
+      "answer": "The two recovery channels are administrator self-service restore and support-assisted restore.",
+      "sources": [
+        {"source_file": "kb/product_manual.md", "evidence_id": "PM-2", "quote_or_signal": "administrator self-service restore and support-assisted restore"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q05",
+      "status": "answered",
+      "answer": "Delta Indexing now skips unchanged binary attachments and records a checksum marker for each skipped file.",
+      "sources": [
+        {"source_file": "kb/release_notes.md", "evidence_id": "RN-3.5-Delta", "quote_or_signal": "skips unchanged binary attachments and records a checksum marker"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q06",
+      "status": "answered",
+      "answer": "No. Basic plan customers do not have SSO access; SSO is an Enterprise feature.",
+      "sources": [
+        {"source_file": "kb/product_manual.md", "evidence_id": "PM-3", "quote_or_signal": "Basic plan customers do not have SSO access"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q07",
+      "status": "partial",
+      "answer": "Enterprise audit logs are retained for 180 days. The local evidence does not state retention for Basic or Pro.",
+      "sources": [
+        {"source_file": "kb/support_faq.md", "evidence_id": "FAQ-1", "quote_or_signal": "retained for 180 days for Enterprise workspaces"}
+      ],
+      "missing_evidence": ["Basic retention period", "Pro retention period"]
+    },
+    {
+      "question_id": "Q08",
+      "status": "insufficient_evidence",
+      "answer": "insufficient_evidence",
+      "sources": [],
+      "missing_evidence": ["The exact monthly Pro plan price is not stated in the local knowledge base."]
+    },
+    {
+      "question_id": "Q09",
+      "status": "answered",
+      "answer": "The Vault Sync private beta is listed for us-east-1 and eu-central-1.",
+      "sources": [
+        {"source_file": "kb/release_notes.md", "evidence_id": "RN-3.5-Regions", "quote_or_signal": "available in us-east-1 and eu-central-1"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q10",
+      "status": "partial",
+      "answer": "The FAQ supports availability to Enterprise administrators. It does not provide an uptime target or service-level agreement.",
+      "sources": [
+        {"source_file": "kb/support_faq.md", "evidence_id": "FAQ-2", "quote_or_signal": "available to Enterprise administrators"}
+      ],
+      "missing_evidence": ["Vault Export uptime target", "Vault Export service level agreement"]
+    },
+    {
+      "question_id": "Q11",
+      "status": "answered",
+      "answer": "The Security Platform team owns customer-managed keys, and the security bulletin sets a 90-day rotation interval when CMK is enabled.",
+      "sources": [
+        {"source_file": "kb/product_manual.md", "evidence_id": "PM-4", "quote_or_signal": "owned by the Security Platform team"},
+        {"source_file": "kb/security_bulletin.md", "evidence_id": "SB-2025-04-CMK", "quote_or_signal": "rotation interval is every 90 days"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q12",
+      "status": "insufficient_evidence",
+      "answer": "insufficient_evidence",
+      "sources": [],
+      "missing_evidence": ["The local knowledge base gives no after-hours telephone number."]
+    },
+    {
+      "question_id": "Q13",
+      "status": "answered",
+      "answer": "No. The current security bulletin supersedes the archived transition note; legacy API tokens are blocked for admin accounts.",
+      "sources": [
+        {"source_file": "kb/security_bulletin.md", "evidence_id": "SB-2025-04-Tokens", "quote_or_signal": "legacy API tokens are blocked for admin accounts"}
+      ],
+      "missing_evidence": []
+    },
+    {
+      "question_id": "Q14",
+      "status": "insufficient_evidence",
+      "answer": "insufficient_evidence",
+      "sources": [
+        {"source_file": "kb/support_faq.md", "evidence_id": "FAQ-3", "quote_or_signal": "intentionally omits a telephone number"}
+      ],
+      "missing_evidence": ["An approved after-hours phone number is missing; the archived placeholder is not approved."]
+    }
+  ]
+}

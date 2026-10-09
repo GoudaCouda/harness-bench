@@ -1,0 +1,5 @@
+[
+  {"claim_id":"CLAIM-PRIMARY","prior_status":"no_conclusive_benefit","text":"The primary analysis does not show a statistically conclusive reduction in 12-month relapse.","depends_on":["pooled_random_effects.ci_low","pooled_random_effects.ci_high"],"evidence_ref":"publication_claims.json#CLAIM-PRIMARY"},
+  {"claim_id":"CLAIM-HETEROGENEITY","prior_status":"moderate_or_higher","text":"The primary analysis has material between-study heterogeneity.","depends_on":["pooled_random_effects.i_squared_percent"],"evidence_ref":"publication_claims.json#CLAIM-HETEROGENEITY"},
+  {"claim_id":"CLAIM-SAFETY","prior_status":"not_assessed","text":"Safety outcomes are outside this update and remain not assessed.","depends_on":["safety_outcome"],"evidence_ref":"publication_claims.json#CLAIM-SAFETY"}
+]

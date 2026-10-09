@@ -1,0 +1,468 @@
+{
+  "transport": [
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 12
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 2,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 12
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": "idem-1",
+        "key_replay_safe": true,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 2,
+      "observation": {
+        "outcome": "response_lost",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 50
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": "decorative",
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 2,
+      "observation": {
+        "outcome": "response_lost",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 50
+      }
+    }
+  ],
+  "response": [
+    {
+      "request": {
+        "method": "GET",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 200,
+        "retry_after_ms": null,
+        "application_state": "applied",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 503,
+        "retry_after_ms": null,
+        "application_state": "not_applied",
+        "bytes_sent": 100
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 2,
+      "observation": {
+        "outcome": "http",
+        "status": 503,
+        "retry_after_ms": null,
+        "application_state": "unknown",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": "idem-1",
+        "key_replay_safe": true,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 503,
+        "retry_after_ms": null,
+        "application_state": "applied",
+        "bytes_sent": 100
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 400,
+        "retry_after_ms": null,
+        "application_state": "not_applied",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 250,
+        "max_delay_ms": 5000
+      },
+      "attempt_number": 2,
+      "observation": {
+        "outcome": "http",
+        "status": 429,
+        "retry_after_ms": 12000,
+        "application_state": "not_applied",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 3,
+        "base_delay_ms": 100,
+        "max_delay_ms": 5000
+      },
+      "attempt_number": 3,
+      "observation": {
+        "outcome": "http",
+        "status": 504,
+        "retry_after_ms": null,
+        "application_state": "unknown",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": "patch-1",
+        "key_replay_safe": true,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 425,
+        "retry_after_ms": 0,
+        "application_state": "unknown",
+        "bytes_sent": 10
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "request": {
+        "method": "post",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": true,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": true,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 200,
+        "max_delay_ms": 100
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": true,
+        "retry_after_ms": null,
+        "application_state": "unknown",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "connect_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 1
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "response_lost",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 201,
+        "retry_after_ms": null,
+        "application_state": "unknown",
+        "bytes_sent": 10
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 1,
+      "observation": {
+        "outcome": "http",
+        "status": 429,
+        "retry_after_ms": -1,
+        "application_state": "not_applied",
+        "bytes_sent": 0
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "operation_id": "op-1",
+        "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "idempotency_key": null,
+        "key_replay_safe": false,
+        "max_attempts": 4,
+        "base_delay_ms": 100,
+        "max_delay_ms": 10000
+      },
+      "attempt_number": 0,
+      "observation": {
+        "outcome": "write_failure",
+        "status": null,
+        "retry_after_ms": null,
+        "application_state": null,
+        "bytes_sent": 0
+      }
+    }
+  ]
+}

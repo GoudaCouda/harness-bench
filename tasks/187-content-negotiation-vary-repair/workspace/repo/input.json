@@ -1,0 +1,24 @@
+{
+  "policy": {},
+  "requests": [
+    {
+      "accept": "text/*;q=0.7, application/json;q=1",
+      "accept_language": "fr;q=0.8, en-US;q=1",
+      "id": "r",
+      "variants": [
+        {
+          "id": "json-en",
+          "language": "en-US",
+          "media_type": "application/json",
+          "size": 100
+        },
+        {
+          "id": "text-fr",
+          "language": "fr",
+          "media_type": "text/plain",
+          "size": 50
+        }
+      ]
+    }
+  ]
+}

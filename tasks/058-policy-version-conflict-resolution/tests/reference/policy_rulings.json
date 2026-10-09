@@ -1,0 +1,165 @@
+[
+    {
+      "case_id": "C-001",
+      "decision": "denied",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "65 | dinner",
+      "quote_or_signal": "65 | dinner",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2024-09.md"
+        ],
+        "reason": "global | meal"
+      },
+      "coverage_scope": "global | meal",
+      "caveat": "global | meal"
+    },
+    {
+      "case_id": "C-002",
+      "decision": "approved",
+      "applicable_policy": "policy_versions/emergency_addendum_2025-03.md",
+      "evidence_id": "storm | 300",
+      "quote_or_signal": "storm | 300",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2025-02.md"
+        ],
+        "reason": "storm | 2025-04-30"
+      },
+      "coverage_scope": "storm | 2025-04-30",
+      "caveat": "storm | 2025-04-30"
+    },
+    {
+      "case_id": "C-003",
+      "decision": "denied",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "240 | hotel",
+      "quote_or_signal": "240 | hotel",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/emergency_addendum_2025-03.md"
+        ],
+        "reason": "expired | window"
+      },
+      "coverage_scope": "expired | window",
+      "caveat": "expired | window"
+    },
+    {
+      "case_id": "C-004",
+      "decision": "approved",
+      "applicable_policy": "policy_versions/hr_exception_memo_2025-01.md",
+      "evidence_id": "remote engineering | 450",
+      "quote_or_signal": "remote engineering | 450",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2025-02.md"
+        ],
+        "reason": "remote engineering | chair"
+      },
+      "coverage_scope": "remote engineering | chair",
+      "caveat": "remote engineering | chair"
+    },
+    {
+      "case_id": "C-005",
+      "decision": "denied",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "not generally reimbursable | furniture",
+      "quote_or_signal": "not generally reimbursable | furniture",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/hr_exception_memo_2025-01.md"
+        ],
+        "reason": "sales | not apply"
+      },
+      "coverage_scope": "sales | not apply",
+      "caveat": "sales | not apply"
+    },
+    {
+      "case_id": "C-006",
+      "decision": "needs_review",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "above | 1000 | pre-approval",
+      "quote_or_signal": "above | 1000 | pre-approval",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2024-09.md"
+        ],
+        "reason": "finance | pre-approval"
+      },
+      "coverage_scope": "finance | pre-approval",
+      "caveat": "finance | pre-approval"
+    },
+    {
+      "case_id": "C-007",
+      "decision": "approved",
+      "applicable_policy": "policy_versions/expense_policy_2024-09.md",
+      "evidence_id": "70 | dinner",
+      "quote_or_signal": "70 | dinner",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2024-01.md"
+        ],
+        "reason": "2024-09 | then"
+      },
+      "coverage_scope": "2024-09 | then",
+      "caveat": "2024-09 | then"
+    },
+    {
+      "case_id": "C-008",
+      "decision": "insufficient_evidence",
+      "applicable_policy": "",
+      "evidence_id": "gift | schedule",
+      "quote_or_signal": "gift | schedule",
+      "conflict_resolution": {
+        "superseded_sources": [],
+        "reason": "missing | threshold"
+      },
+      "coverage_scope": "missing | threshold",
+      "caveat": "missing | threshold"
+    },
+    {
+      "case_id": "C-009",
+      "decision": "approved",
+      "applicable_policy": "policy_versions/regional_addendum_france_2025-02.md",
+      "evidence_id": "90 | client-facing",
+      "quote_or_signal": "90 | client-facing",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/expense_policy_2025-02.md"
+        ],
+        "reason": "France | 2025-03-31"
+      },
+      "coverage_scope": "France | 2025-03-31",
+      "caveat": "France | 2025-03-31"
+    },
+    {
+      "case_id": "C-010",
+      "decision": "denied",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "65 | dinner",
+      "quote_or_signal": "65 | dinner",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/regional_addendum_france_2025-02.md"
+        ],
+        "reason": "internal | not change"
+      },
+      "coverage_scope": "internal | not change",
+      "caveat": "internal | not change"
+    },
+    {
+      "case_id": "C-011",
+      "decision": "denied",
+      "applicable_policy": "policy_versions/expense_policy_2025-02.md",
+      "evidence_id": "65 | dinner",
+      "quote_or_signal": "65 | dinner",
+      "conflict_resolution": {
+        "superseded_sources": [
+          "policy_versions/regional_addendum_france_2025-02.md"
+        ],
+        "reason": "expired | 2025-03-31"
+      },
+      "coverage_scope": "expired | 2025-03-31",
+      "caveat": "expired | 2025-03-31"
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "request_id": "net-gamma",
+    "prefix_len": 24
+  },
+  {
+    "request_id": "net-alpha",
+    "prefix_len": 25
+  },
+  {
+    "request_id": "net-eps",
+    "prefix_len": 22
+  },
+  {
+    "request_id": "net-beta",
+    "prefix_len": 25
+  }
+]

@@ -1,0 +1,2 @@
+metric_name,bad_field,policy_clause,severity
+retention_rate,old_cohort_users,retention must use new_cohort_users after migration,high

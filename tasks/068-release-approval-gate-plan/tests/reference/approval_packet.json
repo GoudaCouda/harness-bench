@@ -1,0 +1,42 @@
+{
+  "release_id": "REL-2026-05-CHECKOUT-88",
+  "decision": "blocked",
+  "blocker_ids": [
+    "RR-DB-REV",
+    "RR-CANARY",
+    "RR-SEC",
+    "RR-FREEZE",
+    "RR-INCIDENT"
+  ],
+  "required_approvals": [
+    "database_owner",
+    "sre_lead",
+    "security_reviewer",
+    "incident_commander"
+  ],
+  "evidence_refs": [
+    "approval_policy.md#hard-blockers",
+    "risk_register.csv#RR-DB-REV",
+    "risk_register.csv#RR-CANARY",
+    "risk_register.csv#RR-SEC",
+    "risk_register.csv#RR-FREEZE",
+    "risk_register.csv#RR-INCIDENT",
+    "release_manifest.json#CH-DB-1",
+    "release_manifest.json#CH-API-1",
+    "release_manifest.json#2026-05-07T03:00:00Z",
+    "preflight_checks.json#PF-DB-REV",
+    "preflight_checks.json#PF-CANARY-ERR",
+    "preflight_checks.json#PF-SEC",
+    "change_calendar.csv#FRZ-2026-05-07",
+    "incident_history.json#INC-2026-04-29-17",
+    "rollback_runbook.md#CH-DB-1"
+  ],
+  "pending_actions": [
+    "RR-DB-REV: Test the CH-DB-1 reversal step or obtain a signed database_owner waiver.",
+    "RR-CANARY: Reduce checkout-api canary error rate to 1.5 percent or below and rerun PF-CANARY-ERR.",
+    "RR-SEC: Obtain security_reviewer approval for the customer-facing reason code.",
+    "RR-FREEZE: Obtain a written incident_commander exception or reschedule outside the freeze window.",
+    "RR-INCIDENT: Obtain sre_lead approval for the related severity 2 incident."
+  ],
+  "not_executed_statement": "No production action has been executed; all listed actions remain pending."
+}

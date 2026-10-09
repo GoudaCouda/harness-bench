@@ -1,0 +1,6 @@
+[
+  {"id": "job-a", "status": "ok", "value": "alpha"},
+  {"id": "job-b", "status": "ok", "value": "beta"},
+  {"error": "worker_failed", "id": "job-c", "status": "error"},
+  {"id": "job-d", "status": "ok", "value": {"rows": 7}}
+]

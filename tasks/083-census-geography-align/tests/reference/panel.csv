@@ -1,0 +1,9 @@
+state,county,year,variable,estimate,moe,status
+06,001,2024,P001,1000,30,observed
+06,001,2025,P101,1080,35,observed
+06,003,2024,P001,120,11,observed
+06,003,2025,P101,126,12,observed
+06,005,2024,P001,800,25,observed
+06,005,2025,P101,760,24,observed
+06,007,2024,P001,450,20,observed
+06,007,2025,P101,,,suppressed

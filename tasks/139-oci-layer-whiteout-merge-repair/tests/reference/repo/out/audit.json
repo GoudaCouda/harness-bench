@@ -1,0 +1,12 @@
+{
+  "entry_count": 12,
+  "implicit_directory_count": 9,
+  "layer_count": 2,
+  "opaque_whiteout_count": 1,
+  "removed_paths": [
+    "etc/app/keep.conf",
+    "etc/app/old.conf",
+    "opt/tool"
+  ],
+  "whiteout_count": 2
+}

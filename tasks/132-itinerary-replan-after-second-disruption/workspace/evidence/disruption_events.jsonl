@@ -1,0 +1,4 @@
+{"delivery_id": "DLV-04", "event_id": "EVT-503", "kind": "hotel_late_checkin_confirmed", "object_id": "HOTEL", "sequence": 503, "value": "2026-10-15T22:00:00-07:00"}
+{"delivery_id": "DLV-01", "event_id": "EVT-501", "kind": "segment_cancelled", "object_id": "AIR-2", "sequence": 501, "value": "LEG-2"}
+{"delivery_id": "DLV-03", "event_id": "EVT-502", "kind": "shuttle_slot_withdrawn", "object_id": "SHUTTLE", "sequence": 502, "value": "SH-OLD"}
+{"delivery_id": "DLV-02", "event_id": "EVT-501", "kind": "segment_cancelled", "object_id": "AIR-2", "sequence": 501, "value": "LEG-2"}

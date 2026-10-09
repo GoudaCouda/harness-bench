@@ -1,0 +1,68 @@
+{
+  "batch_id": "quota-pending-0317",
+  "quota_clock_epoch": 1773738000,
+  "decisions": [
+    {
+      "request_id": "q1",
+      "tenant_id": "tn-west",
+      "decision": "executed",
+      "reason": "within_windows",
+      "amount_cents": 40000
+    },
+    {
+      "request_id": "q2",
+      "tenant_id": "tn-west",
+      "decision": "executed",
+      "reason": "within_windows",
+      "amount_cents": 10000
+    },
+    {
+      "request_id": "q3",
+      "tenant_id": "tn-east",
+      "decision": "executed",
+      "reason": "within_windows",
+      "amount_cents": 30000
+    },
+    {
+      "request_id": "q4",
+      "decision": "rejected",
+      "reason": "missing_tenant"
+    },
+    {
+      "request_id": "q5",
+      "tenant_id": "tn-west",
+      "decision": "burst_exceeded",
+      "reason": "burst_window_full",
+      "burst_count": 3
+    },
+    {
+      "request_id": "q6",
+      "tenant_id": "tn-west",
+      "decision": "refund_expired",
+      "reason": "original_debit_left_daily_window"
+    },
+    {
+      "request_id": "q7",
+      "tenant_id": "tn-east",
+      "decision": "daily_exceeded",
+      "reason": "daily_cap_exceeded",
+      "daily_net_cents": 38000
+    },
+    {
+      "request_id": "q8",
+      "tenant_id": "tn-west",
+      "decision": "burst_exceeded",
+      "reason": "burst_window_full",
+      "burst_count": 3
+    }
+  ],
+  "counts": {
+    "executed": 3,
+    "burst_exceeded": 2,
+    "daily_exceeded": 1,
+    "refund_expired": 1,
+    "rejected": 1
+  },
+  "executed_debit_cents": 80000,
+  "state": "applied"
+}

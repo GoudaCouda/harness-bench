@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "case_number": 12,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}",
+    "--output",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "optimal_selection",
+      "cost_recalculation",
+      "feasible_comparison"
+    ],
+    [
+      "recommendation_citations",
+      "comparison_consistency",
+      "report_evidence_alignment"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_scope",
+    "input_integrity",
+    "no_network",
+    "output_scope",
+    "citation_index",
+    "unique_optimum",
+    "result_structure",
+    "optimal_selection",
+    "cost_recalculation",
+    "recommendation_citations",
+    "feasible_comparison",
+    "comparison_consistency",
+    "report_evidence_alignment"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/recommendation.json",
+    "output/comparison.csv",
+    "output/report.md"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "56dd3a6bf264993d58b4a46b39756264f977bcdcdadc19770e2375615d883b96",
+    "hb_tools/tool_contract.json": "1f4c1fff415cfbfcf4b5f493970bf5b2ec4af67776e81baf43f1054ac0064513",
+    "hb_tools/travel_tool.py": "7f8c7380ec92df19b6977d107fd55df67c985838a34d4f28775dfeec95dc5cb0",
+    "input/citation_index.json": "5e06c3b82c4f4f890dca6a69eef2f36c215799d1899b307254b0ea1e18dcea29",
+    "input/preferences.json": "49ad86055cc11e584a46a584762b6de2710e35d3ed8c6729d1c933e3c03990af",
+    "input/travel_snapshot.json": "f447aff603893a04306d47237c7b817c35bc9051d32d08e6755874b3e423914e",
+    "runtime/network_events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "output",
+    "runtime"
+  ],
+  "original_directories": [
+    "input",
+    "output",
+    "runtime"
+  ],
+  "original_modes": {
+    "input": 509,
+    "input/citation_index.json": 436,
+    "input/preferences.json": 436,
+    "input/travel_snapshot.json": 436,
+    "output": 509,
+    "runtime": 509,
+    "runtime/network_events.jsonl": 436
+  }
+}

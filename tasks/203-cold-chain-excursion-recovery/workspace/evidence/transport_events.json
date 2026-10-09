@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "container_id": "CT-01",
+      "event_id": "DOOR-17",
+      "kind": "door_open",
+      "note": "scheduled transfer inspection",
+      "occurred_at_utc": "2026-11-01T05:37:00Z"
+    },
+    {
+      "container_id": "CT-02",
+      "event_id": "MOVE-22",
+      "kind": "dock_transfer",
+      "note": "sealed tote moved to backup power",
+      "occurred_at_utc": "2026-11-01T05:25:00Z"
+    }
+  ]
+}

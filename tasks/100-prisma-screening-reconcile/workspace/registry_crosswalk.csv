@@ -1,0 +1,9 @@
+canonical_trial_id,alias,study_note
+NCT1001,ALPHA-WORK-01,Alpha ergonomics trial
+NCT1002,BETA-STEP-02,Beta stepped-wedge trial
+NCT1003,GAMMA-WORK-03,Gamma scheduling trial
+NCT1004,DELTA-TEAM-04,Delta team-support trial
+NCT1007,THETA-HYBRID-07,Theta hybrid-work trial
+NCT1008,IOTA-HOSPITAL-08,Iota hospital scheduling trial
+NCT1009,KAPPA-STUDENT-09,Kappa student scheduling trial
+NCT1010,SHIFT-DIGITAL-10,Lambda digital-coaching trial

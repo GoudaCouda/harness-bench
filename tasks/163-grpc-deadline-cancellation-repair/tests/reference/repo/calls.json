@@ -1,0 +1,8 @@
+[
+  {"call_id":"c1","method":"/Catalog/Get","status":"OK","attempt":1,"incoming_timeout_ms":2000,"elapsed_ms":300,"response_headers_received":true,"caller_cancelled":false,"operation_scope":"single_call","idempotent":true,"active_child_rpcs":0},
+  {"call_id":"c2","method":"/Search/Fanout","status":"CANCELLED","attempt":1,"incoming_timeout_ms":2500,"elapsed_ms":450,"response_headers_received":false,"caller_cancelled":true,"operation_scope":"single_call","idempotent":true,"active_child_rpcs":2},
+  {"call_id":"c3","method":"/Catalog/Get","status":"UNAVAILABLE","attempt":1,"incoming_timeout_ms":2000,"elapsed_ms":200,"response_headers_received":false,"caller_cancelled":false,"operation_scope":"single_call","idempotent":true,"active_child_rpcs":0},
+  {"call_id":"c4","method":"/Catalog/Get","status":"UNAVAILABLE","attempt":1,"incoming_timeout_ms":2000,"elapsed_ms":200,"response_headers_received":true,"caller_cancelled":false,"operation_scope":"single_call","idempotent":true,"active_child_rpcs":0},
+  {"call_id":"c5","method":"/Inventory/Reserve","status":"ABORTED","attempt":1,"incoming_timeout_ms":3000,"elapsed_ms":500,"response_headers_received":false,"caller_cancelled":false,"operation_scope":"parent_operation","idempotent":true,"active_child_rpcs":0},
+  {"call_id":"c6","method":"/Quota/Check","status":"RESOURCE_EXHAUSTED","attempt":3,"incoming_timeout_ms":4000,"elapsed_ms":700,"response_headers_received":false,"caller_cancelled":false,"operation_scope":"single_call","idempotent":true,"active_child_rpcs":0}
+]

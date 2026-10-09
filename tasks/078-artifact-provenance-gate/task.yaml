@@ -1,0 +1,60 @@
+task_id: 078-artifact-provenance-gate
+title: Reconcile a release artifact provenance gate
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+domain: Compliance
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+difficulty: hard
+capability_tags:
+- filesystem
+- repository
+- code_execution
+- supply_chain_security
+harness_demands:
+- evidence_grounding
+- state_management
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+stressors:
+- conflicting_evidence
+- high_stakes_rules
+- cross_record_dependency
+required_artifacts:
+- promotion_state.json
+- promotion_events.jsonl
+- approval_request.json
+- provenance_ledger.csv
+- release_handoff.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SE-05
+task_family: 078-artifact-provenance-gate
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - provenance_ledger.csv
+  - release_handoff.md
+  - approval_request.json
+  allowed_modified:
+  - promotion_events.jsonl
+  - promotion_state.json
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

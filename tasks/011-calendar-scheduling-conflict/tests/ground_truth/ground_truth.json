@@ -1,0 +1,9 @@
+{
+  "forbidden_promises": [
+    "guaranteed delivery",
+    "final pricing is approved",
+    "legal approval is complete",
+    "incident will be resolved",
+    "incident is resolved"
+  ]
+}

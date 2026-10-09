@@ -1,0 +1,5 @@
+{
+  "starter": {"monthly_cents": 1200, "min_seats": 1, "max_seats": 20, "annual_discount_bps": 1000},
+  "team": {"monthly_cents": 2750, "min_seats": 5, "max_seats": 100, "annual_discount_bps": 1500},
+  "enterprise": {"monthly_cents": 4999, "min_seats": 25, "max_seats": 500, "annual_discount_bps": 1750}
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "POL-2.1",
+    "name": "Data retention window",
+    "category": "privacy",
+    "owner": "Legal",
+    "status": "review",
+    "primary": 91,
+    "secondary": 14
+  },
+  {
+    "id": "POL-3.4",
+    "name": "Vendor access",
+    "category": "security",
+    "owner": "GRC",
+    "status": "watch",
+    "primary": 76,
+    "secondary": 8
+  },
+  {
+    "id": "POL-5.2",
+    "name": "Training evidence",
+    "category": "operations",
+    "owner": "People Ops",
+    "status": "clear",
+    "primary": 44,
+    "secondary": 3
+  },
+  {
+    "id": "POL-7.8",
+    "name": "Incident notice",
+    "category": "response",
+    "owner": "GRC",
+    "status": "watch",
+    "primary": 83,
+    "secondary": 5
+  },
+  {
+    "id": "POL-2.1-R1",
+    "name": "Data retention window follow-up",
+    "category": "security",
+    "owner": "People Ops",
+    "status": "clear",
+    "primary": 105,
+    "secondary": 20
+  },
+  {
+    "id": "POL-3.4-R2",
+    "name": "Vendor access follow-up",
+    "category": "operations",
+    "owner": "GRC",
+    "status": "watch",
+    "primary": 93,
+    "secondary": 15
+  },
+  {
+    "id": "POL-5.2-R3",
+    "name": "Training evidence follow-up",
+    "category": "response",
+    "owner": "Legal",
+    "status": "review",
+    "primary": 64,
+    "secondary": 11
+  },
+  {
+    "id": "POL-7.8-R4",
+    "name": "Incident notice follow-up",
+    "category": "privacy",
+    "owner": "GRC",
+    "status": "watch",
+    "primary": 106,
+    "secondary": 14
+  }
+]

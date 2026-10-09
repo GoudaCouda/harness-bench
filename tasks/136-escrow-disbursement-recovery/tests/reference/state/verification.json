@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "closing_projection_exact": true,
+    "event_receipts_exact": true,
+    "funds_conserve": true,
+    "interrupted_journal_recovered": true,
+    "irreversible_boundaries_preserved": true,
+    "local_only": true,
+    "semantic_plan_matches": true,
+    "source_checkpoint_matches": true
+  },
+  "external_actions_executed": false,
+  "final_revision": 13,
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "556a5842fd21315de702de1087e223b271f198bd31d9f51a7ce567bb457454c1",
+  "semantic_state_digest": "e420cd9dacedd880b50996387ebe8673d776995cb3326ba5b4eb6df3c3d4ef8a",
+  "source_checkpoint": "d2e2c87366e50cde1a854b53d267a0e89b2d9359e321f0839a3a3c3e0756dae0",
+  "status": "pass"
+}

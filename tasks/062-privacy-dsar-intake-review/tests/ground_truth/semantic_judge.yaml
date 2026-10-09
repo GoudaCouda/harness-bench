@@ -1,0 +1,89 @@
+schema_version: 1
+task_id: 062-privacy-dsar-intake-review
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: dsar_201_draft
+  title: DSAR-201 draft preserves the verified in-scope state
+  question: >-
+    Does the DSAR-201 section say the requester is verified and in scope while
+    limiting the next step to administrative deletion review rather than
+    promising deletion?
+  pass_anchors:
+  - Equivalent requester-facing wording is acceptable.
+  fail_anchors:
+  - Verification, scope, review-only boundary, or next step is omitted or contradicted.
+- id: dsar_202_draft
+  title: DSAR-202 draft communicates the verification blocker
+  question: >-
+    Does the DSAR-202 section say that login verification or a valid account
+    token is still required before review can proceed?
+  pass_anchors:
+  - Equivalent identity-verification wording is acceptable.
+  fail_anchors:
+  - The blocker or the pre-review sequence is omitted or contradicted.
+- id: dsar_203_draft
+  title: DSAR-203 draft communicates both retention categories
+  question: >-
+    Does the DSAR-203 section say the request may proceed while billing-dispute
+    and chargeback records remain subject to retention review?
+  pass_anchors:
+  - Both billing-dispute and chargeback retention meaning must be present.
+  fail_anchors:
+  - Either retention category is omitted, or the draft promises complete deletion.
+- id: dsar_204_draft
+  title: DSAR-204 draft preserves agent authority and tax retention
+  question: >-
+    Does the DSAR-204 section say the agent has valid authority for this request
+    and that tax-retained records need separate review?
+  pass_anchors:
+  - Equivalent authorization and statutory-retention wording is acceptable.
+  fail_anchors:
+  - Valid authority or tax-record retention review is omitted or contradicted.
+- id: dsar_205_draft
+  title: DSAR-205 draft communicates the other-person scope boundary
+  question: >-
+    Does the DSAR-205 section explain that the request is outside scope because
+    it seeks another person's records?
+  pass_anchors:
+  - Equivalent third-party or someone-else's-data wording is acceptable.
+  fail_anchors:
+  - The other-person boundary or outside-scope disposition is omitted or contradicted.
+- id: dsar_206_draft
+  title: DSAR-206 draft communicates the authorization correction
+  question: >-
+    Does the DSAR-206 section request corrected authorization that covers the
+    requested deletion action before proceeding?
+  pass_anchors:
+  - Equivalent wording for authority that specifically covers deletion is acceptable.
+  fail_anchors:
+  - The correction, deletion scope, or blocker sequence is omitted or contradicted.
+- id: dsar_207_draft
+  title: DSAR-207 draft communicates the legal-hold boundary
+  question: >-
+    Does the DSAR-207 section say the request proceeds while legal-hold records
+    remain retained for review?
+  pass_anchors:
+  - Equivalent preservation or hold wording is acceptable.
+  fail_anchors:
+  - Proceeding state, legal hold, or retained-record boundary is omitted or contradicted.
+- id: dsar_208_draft
+  title: DSAR-208 draft limits processing to the requester's own data
+  question: >-
+    Does the DSAR-208 section say processing may proceed only for the
+    requester's own data while excluding other-person data?
+  pass_anchors:
+  - Equivalent first-party versus third-party scope wording is acceptable.
+  fail_anchors:
+  - The own-data scope, other-person exclusion, or conditional next step is omitted or contradicted.
+output_schema:
+  verdict_values:
+  - pass
+  - fail
+  required_per_criterion:
+  - id
+  - verdict
+  - evidence
+  - reason
+  evidence_max_items: 2

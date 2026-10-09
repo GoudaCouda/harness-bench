@@ -1,0 +1,59 @@
+[
+  {
+    "case_id": "partial-upgrade",
+    "site_state": {"files": [
+      {"path": "nova/core.py", "digest": "sha256=bmV3Y29yZQ", "owners": ["base", "nova"]},
+      {"path": "nova/new.py", "digest": "sha256=bmV3", "owners": ["nova"]},
+      {"path": "other/keep.py", "digest": "sha256=a2VlcA", "owners": ["other"]}
+    ]},
+    "journal": {"package": "nova", "phase": "applying", "entries": [
+      {"path": "nova/core.py", "before": {"digest": "sha256=b2xkY29yZQ", "owners": ["base"]}, "after_digest": "sha256=bmV3Y29yZQ", "applied": true},
+      {"path": "nova/new.py", "before": null, "after_digest": "sha256=bmV3", "applied": true}
+    ]},
+    "wheel_record": [
+      {"path": "nova/core.py", "digest": "sha256=bmV3Y29yZQ", "size": 7},
+      {"path": "nova/new.py", "digest": "sha256=bmV3", "size": 3}
+    ]
+  },
+  {
+    "case_id": "shared-identical-content",
+    "site_state": {"files": [
+      {"path": "shared/hooks.py", "digest": "sha256=c2FtZQ", "owners": ["nova", "sharedlib"]}
+    ]},
+    "journal": {"package": "nova", "phase": "recovering", "entries": [
+      {"path": "shared/hooks.py", "before": {"digest": "sha256=c2FtZQ", "owners": ["sharedlib"]}, "after_digest": "sha256=c2FtZQ", "applied": true}
+    ]},
+    "wheel_record": [
+      {"path": "shared/hooks.py", "digest": "sha256=c2FtZQ", "size": 4}
+    ]
+  },
+  {
+    "case_id": "post-crash-drift",
+    "site_state": {"files": [
+      {"path": "nova/a.py", "digest": "sha256=bmV3YQ", "owners": ["nova"]},
+      {"path": "nova/b.py", "digest": "sha256=bGF0ZXI", "owners": ["nova"]}
+    ]},
+    "journal": {"package": "nova", "phase": "recovering", "entries": [
+      {"path": "nova/a.py", "before": null, "after_digest": "sha256=bmV3YQ", "applied": true},
+      {"path": "nova/b.py", "before": null, "after_digest": "sha256=bmV3Yg", "applied": true}
+    ]},
+    "wheel_record": [
+      {"path": "nova/a.py", "digest": "sha256=bmV3YQ", "size": 4},
+      {"path": "nova/b.py", "digest": "sha256=bmV3Yg", "size": 4}
+    ]
+  },
+  {
+    "case_id": "idempotent-retry",
+    "site_state": {"files": [
+      {"path": "nova/old.py", "digest": "sha256=b2xk", "owners": ["nova"]}
+    ]},
+    "journal": {"package": "nova", "phase": "recovering", "entries": [
+      {"path": "nova/old.py", "before": {"digest": "sha256=b2xk", "owners": ["nova"]}, "after_digest": "sha256=bmV3", "applied": true},
+      {"path": "nova/pending.py", "before": null, "after_digest": "sha256=cGVuZGluZw", "applied": false}
+    ]},
+    "wheel_record": [
+      {"path": "nova/old.py", "digest": "sha256=bmV3", "size": 3},
+      {"path": "nova/pending.py", "digest": "sha256=cGVuZGluZw", "size": 7}
+    ]
+  }
+]

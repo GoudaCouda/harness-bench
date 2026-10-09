@@ -1,0 +1,137 @@
+{
+  "task_id": "015-responsive-redesign",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "responsive_redesign_protected_visual_inputs",
+    "responsive_redesign_visual_inspector_interaction_model",
+    "responsive_redesign_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/responsive-target.svg",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "RESP-NAV",
+      "label": "Nav wraps into logo",
+      "area": "header",
+      "x": 58,
+      "y": 8,
+      "w": 30,
+      "h": 12,
+      "severity": "review"
+    },
+    {
+      "id": "RESP-CTA",
+      "label": "CTA overflows card",
+      "area": "pricing",
+      "x": 60,
+      "y": 61,
+      "w": 28,
+      "h": 12,
+      "severity": "review"
+    },
+    {
+      "id": "RESP-HERO",
+      "label": "Hero copy crowding",
+      "area": "hero",
+      "x": 8,
+      "y": 24,
+      "w": 42,
+      "h": 20,
+      "severity": "watch"
+    },
+    {
+      "id": "RESP-FAQ",
+      "label": "FAQ accordion cramped",
+      "area": "support",
+      "x": 10,
+      "y": 78,
+      "w": 78,
+      "h": 12,
+      "severity": "watch"
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "responsive"
+    ],
+    [
+      "viewport"
+    ],
+    [
+      "Device preset"
+    ],
+    [
+      "overflow"
+    ],
+    [
+      "marker"
+    ],
+    [
+      "breakpoint"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "responsive-frame"
+    ],
+    [
+      "data-issue-id"
+    ],
+    [
+      "Device preset"
+    ],
+    [
+      "Viewport width"
+    ],
+    [
+      "Show overflow markers"
+    ],
+    [
+      "selectedId",
+      "Issue detail"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Viewport width"
+    ],
+    [
+      "Overflow markers"
+    ],
+    [
+      "Review breakpoints"
+    ],
+    [
+      "Marked area"
+    ],
+    [
+      "Issue detail"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    }
+  }
+}

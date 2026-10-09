@@ -1,0 +1,58 @@
+task_id: 089-file-watcher-atomic-save-repair
+title: Repair a file watcher across atomic saves, duplicate events, and inode replacement
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+difficulty: hard
+capability_tags:
+- filesystem
+- coding
+- structured_data
+- state_machine
+harness_demands:
+- tool_selection
+- multi_step_execution
+- verification_behavior
+stressors:
+- partial_failure
+- hidden_variation
+- safety_boundary
+required_artifacts:
+- repo/src/watch_reconciler.py
+- repo/out/actions.json
+- repo/out/checkpoint.json
+- repo/WATCHER_NOTES.md
+task_family: 089-file-watcher-atomic-save-repair
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - NODE-FS-WATCH
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - repo/out/
+  - repo/out/actions.json
+  - repo/out/checkpoint.json
+  - repo/WATCHER_NOTES.md
+  allowed_modified:
+  - repo/src/watch_reconciler.py
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

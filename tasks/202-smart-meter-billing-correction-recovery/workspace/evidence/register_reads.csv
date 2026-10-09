@@ -1,0 +1,2 @@
+read_id,meter_id,cycle,start_register,end_register,modulus,quality
+REG-ROL-START-END,MTR-ROL-42,2026-11,9998,4,10000,actual

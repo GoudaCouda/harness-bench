@@ -1,0 +1,8 @@
+{
+  "database_byte_stable": true,
+  "ecn_id": "ECN-442",
+  "external_actions_executed": false,
+  "semantic_plan_sha256": "5c496a3da9597a2b108cce8dd296d07dbf04993a8c4b4c4258b479db07416edd",
+  "stage_receipt_byte_stable": true,
+  "status": "idempotent_replay"
+}

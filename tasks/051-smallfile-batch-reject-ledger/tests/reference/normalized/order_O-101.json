@@ -1,0 +1,8 @@
+{
+  "amount": 88.0,
+  "currency": "EUR",
+  "customer_id": "C-002",
+  "record_id": "O-101",
+  "record_type": "order",
+  "status": "active"
+}

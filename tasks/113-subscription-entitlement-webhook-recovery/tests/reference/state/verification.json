@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "event_journal_exact": true,
+    "interrupted_run_recovered": true,
+    "local_only": true,
+    "plan_hash_matches": true,
+    "quarantine_exact": true,
+    "semantic_db_matches": true,
+    "source_bundle_matches": true
+  },
+  "external_actions_executed": false,
+  "plan_hash": "1aedd6736ff6604cc6a0d7b694e8b70b059c0c11d60bc9ee0d2e9c42588a68da",
+  "projection_revision": 18,
+  "run_id": "ER-20260818-01",
+  "schema_version": 1,
+  "semantic_db_hash": "e05864027562092bf077db010ed237274d2bc2b4bb4a95463dd26a3b4ee92737",
+  "source_bundle_hash": "bf4ad07c9dea4e6c7054dd1295ff8c751101c5d6d4be80d7f16f460fb954ab7f",
+  "status": "pass"
+}

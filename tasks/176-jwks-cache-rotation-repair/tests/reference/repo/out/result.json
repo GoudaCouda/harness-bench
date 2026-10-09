@@ -1,0 +1,31 @@
+{
+  "decisions": [
+    {
+      "action": "verify",
+      "cache_age": 20,
+      "id": "active",
+      "kid": "k2",
+      "reason": "active_key"
+    },
+    {
+      "action": "verify_stale",
+      "cache_age": 30,
+      "id": "stale",
+      "kid": "k1",
+      "reason": "bounded_stale_fallback"
+    },
+    {
+      "action": "refresh",
+      "cache_age": 20,
+      "id": "unknown",
+      "kid": "k3",
+      "reason": "key_missing_or_inactive"
+    }
+  ],
+  "summary": {
+    "refresh": 1,
+    "reject": 0,
+    "verify": 1,
+    "verify_stale": 1
+  }
+}

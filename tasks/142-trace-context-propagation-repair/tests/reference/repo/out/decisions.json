@@ -1,0 +1,23 @@
+[
+  {
+    "baggage": "tenant=blue,user.id=alice",
+    "disposition": "participated",
+    "request_id": "q1",
+    "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-1111111111111111-01",
+    "tracestate": "acme=v2,rojo=00f067aa0ba902b7"
+  },
+  {
+    "baggage": "tenant=green",
+    "disposition": "restarted",
+    "request_id": "q2",
+    "traceparent": "00-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb-2222222222222222-00",
+    "tracestate": null
+  },
+  {
+    "baggage": "region=eu%20west",
+    "disposition": "forwarded",
+    "request_id": "q3",
+    "traceparent": "00-cccccccccccccccccccccccccccccccc-3333333333333333-01",
+    "tracestate": null
+  }
+]

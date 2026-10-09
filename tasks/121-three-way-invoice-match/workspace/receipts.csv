@@ -1,0 +1,12 @@
+receipt_id,po_line,received_at,quantity,status
+R-01,PO-10-L1,2026-07-03,8,accepted
+R-02,PO-10-L1,2026-07-06,2,accepted
+R-03,PO-10-L2,2026-07-08,3,accepted
+R-04,PO-11-L1,2026-07-09,2,accepted
+R-05,PO-12-L1,2026-07-11,2,accepted
+R-06,PO-12-L1,2026-07-12,2,rejected
+R-07,PO-13-L1,2026-07-13,8,accepted
+R-08,PO-14-L1,2026-07-15,3,accepted
+R-09,PO-16-L1,2026-07-18,7,accepted
+R-10,PO-17-L1,2026-07-20,1,accepted
+R-11,PO-18-L1,2026-07-22,1,accepted

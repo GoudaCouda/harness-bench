@@ -1,0 +1,57 @@
+{
+  "batch_id": "aerowake-0324",
+  "gate_clock_epoch": 1774342800,
+  "cases": [
+    {
+      "case_id": "c1",
+      "name": "wing",
+      "payload": {
+        "cl": 0.5,
+        "alpha": 4.0
+      }
+    },
+    {
+      "case_id": "c2",
+      "name": "wing",
+      "payload": {
+        "cl": 0.5,
+        "alpha": 4.0
+      }
+    },
+    {
+      "case_id": "c3",
+      "name": "wing",
+      "payload": {
+        "cl": 0.6,
+        "alpha": 4.0
+      }
+    },
+    {
+      "case_id": "c4",
+      "name": "fuse",
+      "payload": {
+        "cd": 0.02
+      }
+    },
+    {
+      "case_id": "c5",
+      "name": "empty",
+      "payload": null
+    },
+    {
+      "case_id": "c1",
+      "name": "wing",
+      "payload": {
+        "cl": 0.5,
+        "alpha": 4.0
+      }
+    },
+    {
+      "case_id": "c7",
+      "name": "tail",
+      "payload": {
+        "cm": 0.01
+      }
+    }
+  ]
+}

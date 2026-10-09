@@ -1,0 +1,10 @@
+[
+  "src/payments/core.py",
+  "src/payments/generated/client.py",
+  "infra/payment-job.json",
+  "docs/payments/runbook.md",
+  "config/secrets/payment.yaml",
+  "scripts/release-payments.sh",
+  "src/shared/logging.py",
+  ".github/workflows/payment.yml"
+]

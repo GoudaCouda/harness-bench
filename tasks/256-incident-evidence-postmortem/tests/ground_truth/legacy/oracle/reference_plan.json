@@ -1,0 +1,90 @@
+{
+  "title": "结算服务 SEV-1 事故复盘",
+  "blocks": [
+    {
+      "type": "table",
+      "headers": ["字段", "内容"],
+      "rows": [
+        ["事故编号", "INC-2026-0712-SETTLE-01"],
+        ["等级", "SEV-1"],
+        ["服务", "settlement-api"],
+        ["区域", "east-1"],
+        ["影响时段", "2026-07-12 10:03–10:24（21分钟）"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "1. 事故摘要"},
+    {"type": "paragraph", "text": "2026年7月12日，east-1 的 settlement-api 在 CHG-2026-0712-041 发布后发生连接池耗尽。变更把 db.pool.max 从120错误写为12，导致21分钟内1,260个请求失败；10:24服务恢复，934笔延迟订单于10:42处理完毕，经核对无订单丢失和重复结算。"},
+    {"type": "heading", "level": 1, "text": "2. 影响范围"},
+    {
+      "type": "table",
+      "headers": ["指标", "结果", "证据"],
+      "rows": [
+        ["受影响时段", "10:03–10:24，共21分钟", "METRIC-EV-IMPACT-01"],
+        ["请求失败", "1,260 / 4,200，失败率30.0%", "METRIC-EV-IMPACT-01"],
+        ["受影响商户", "east-1 共87家", "METRIC-EV-IMPACT-01"],
+        ["延迟订单", "934笔进入重试队列，10:42清空", "METRIC-EV-IMPACT-01；LOG-SVC-060"],
+        ["数据完整性", "丢失0笔；重复结算0笔", "METRIC-EV-IMPACT-01；LOG-SVC-061"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "3. 事件时间线"},
+    {
+      "type": "table",
+      "headers": ["时间", "事件", "证据"],
+      "rows": [
+        ["09:58", "CHG-2026-0712-041 部署完成，实际值写为12", "CHANGE-EV-041"],
+        ["10:02", "v42 配置重载，db.pool.max=12", "LOG-SVC-013"],
+        ["10:03", "连接池耗尽：active=12、pending=286", "LOG-SVC-020"],
+        ["10:04", "ALT-DB-701 数据库连接等待告警触发", "ALERT-EV-DB-701"],
+        ["10:17", "值班负责人批准回滚", "LOG-SVC-038"],
+        ["10:18", "回滚启动", "LOG-SVC-040"],
+        ["10:22", "v41 重载完成，db.pool.max=120 恢复", "LOG-SVC-044"],
+        ["10:24", "pending=0、错误率0.3%，服务恢复", "LOG-SVC-047"],
+        ["10:28", "ALT-DB-701 告警解除", "LOG-SVC-051"],
+        ["10:42", "934笔延迟订单处理完成，重试队列清空", "LOG-SVC-060"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "4. 根因分析与证据链"},
+    {
+      "type": "table",
+      "headers": ["链路环节", "事实", "证据"],
+      "rows": [
+        ["变更引入", "CHG-2026-0712-041 计划把 db.pool.max 从120调到160，但实际发布为12", "CHANGE-EV-041"],
+        ["故障机制", "v42 以 db.pool.max=12 生效后，连接池 active=12、idle=0、pending=286", "LOG-SVC-013；LOG-SVC-020"],
+        ["因果闭环", "回滚到 v41、db.pool.max=120 后，pending=0、错误率0.3%", "LOG-SVC-044；LOG-SVC-047"],
+        ["直接根因", "settlement-prod-v42.yaml 配置误写，且发布门禁缺少生产下限校验和灰度连接池检查", "CHANGE-EV-041"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "5. 恢复过程"},
+    {
+      "type": "table",
+      "headers": ["时间", "处置", "证据"],
+      "rows": [
+        ["10:17", "批准回滚到 v41", "LOG-SVC-038"],
+        ["10:18", "启动从 v42 到 v41 的回滚", "LOG-SVC-040"],
+        ["10:22", "完成配置重载，db.pool.max=120", "LOG-SVC-044"],
+        ["10:24", "连接池 pending=0、错误率0.3%", "LOG-SVC-047"],
+        ["10:42", "934笔延迟订单重放完成，队列清空", "LOG-SVC-060"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "6. 干扰告警排除"},
+    {
+      "type": "table",
+      "headers": ["告警", "判断与理由", "证据"],
+      "rows": [
+        ["ALT-CPU-112", "排除：告警来自 checkout-canary 和 west-2；事故服务 settlement-api 的 CPU 37%", "ALERT-EV-CPU-112；LOG-SVC-032"],
+        ["ALT-SSL-209", "排除：告警属于 report-exporter；settlement-api 的 TLS错误为0且证书剩余173天", "ALERT-EV-SSL-209；LOG-SVC-032"]
+      ]
+    },
+    {"type": "heading", "level": 1, "text": "7. 改进行动项"},
+    {
+      "type": "table",
+      "headers": ["行动项", "负责人", "完成期限", "验收标准"],
+      "rows": [
+        ["ACT-01 配置数值门禁", "周岚", "2026-07-15", "CI 对 db.pool.max<80 的生产配置必须拒绝并留存测试证据"],
+        ["ACT-02 灰度观察门禁", "陈恺", "2026-07-17", "灰度观察10分钟，满足 pending=0 且错误率<1% 后才能全量"],
+        ["ACT-03 连接池饱和告警", "王晟", "2026-07-14", "连接池使用率达到90%并持续2分钟时通知值班人员"],
+        ["ACT-04 回滚演练", "李然", "2026-07-22", "8分钟内完成回滚且无数据丢失，归档演练记录"]
+      ]
+    }
+  ]
+}

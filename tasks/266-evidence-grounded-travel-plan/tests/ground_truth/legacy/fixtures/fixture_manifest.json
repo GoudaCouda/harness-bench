@@ -1,0 +1,28 @@
+{
+  "schema_version": "case12_fixture_manifest_v1",
+  "fixture_policy": "fully_synthetic_fixed_snapshot",
+  "source_intent_ref": "tasks/20260719_nami_work_gold20_v1/source_packets/case_12.json",
+  "agent_seed_files": [
+    {
+      "path": "agent_seed/input/citation_index.json",
+      "sha256": "5e06c3b82c4f4f890dca6a69eef2f36c215799d1899b307254b0ea1e18dcea29",
+      "license": "LicenseRef-AgentSFT-Synthetic-Authorized"
+    },
+    {
+      "path": "agent_seed/input/preferences.json",
+      "sha256": "49ad86055cc11e584a46a584762b6de2710e35d3ed8c6729d1c933e3c03990af",
+      "license": "LicenseRef-AgentSFT-Synthetic-Authorized"
+    },
+    {
+      "path": "agent_seed/input/travel_snapshot.json",
+      "sha256": "f447aff603893a04306d47237c7b817c35bc9051d32d08e6755874b3e423914e",
+      "license": "LicenseRef-AgentSFT-Synthetic-Authorized"
+    }
+  ],
+  "privacy": {
+    "contains_original_openclaw_text": false,
+    "contains_real_entities": false,
+    "contains_credentials": false,
+    "contains_live_urls": false
+  }
+}

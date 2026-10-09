@@ -1,0 +1,13 @@
+{
+  "files": [
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "skill_manifest.schema.json", "sha256": "1c78b36ebcc308cd81b4c6a29646f14470e1113a77ed7f350a73915db55a03df", "size_bytes": 902},
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "source_skill/calendar_briefing_skill/.private/deployment_note.txt", "sha256": "6afd48d90b8f78bc952a52bdde1e561da3027f0e2cd0054dc20366be5d405f17", "size_bytes": 126},
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "source_skill/calendar_briefing_skill/SKILL.md", "sha256": "cec9631d2ce2990a409b9f475cb353b61a3908a90b1af4c410ee34b366f8cfae", "size_bytes": 423},
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "source_skill/calendar_briefing_skill/assets/template.txt", "sha256": "4404e1bf6d37027e69f6eb375b0b95f8c810463fe562e44ce9b3cf3d8b37be73", "size_bytes": 75},
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "source_skill/calendar_briefing_skill/manifest.template.json", "sha256": "745243f1645ff0042700c1d58ae0f6a1d3a0f444336eff4d860e3784560c6ad0", "size_bytes": 169},
+    {"license": "LicenseRef-360-Internal-Project-Generated", "path": "source_skill/calendar_briefing_skill/scripts/main.py", "sha256": "53f25a88e11c38766b939d28a5d4fdab558e8d1ed91f00aa7f998292383ef921", "size_bytes": 623}
+  ],
+  "generator": "case19_project_fixture_authoring_v1",
+  "license_terms": "仅由本项目合成，用于内部训练、验证和商业模型开发。",
+  "schema_version": "case19_fixture_source_manifest_v1"
+}

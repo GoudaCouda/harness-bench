@@ -1,0 +1,11 @@
+link,subject,expected,observed,status,evidence
+tag_commit,v4.1.0,aa47f00 signed,aa47f00 signed,pass,release_request.json;repo_history.json
+component_lock,B-405,SDK f00ba47 and CLI c11aa20,SDK-204 and CLI-310,pass,release_request.json;artifact_registry.json
+component_signatures,parents,verified required identity,both verified and bound,pass,artifact_registry.json
+bundle_parents,B-405,parent digests match,sha256:sdk47;sha256:cli20,pass,artifact_registry.json
+builder_attestation,ATT-405,builder source and parents bound,bound,pass,artifact_registry.json
+bundle_signature,SIG-B405,digest and identity bound,bound,pass,artifact_registry.json
+sbom_binding,SBOM-405,commit and parent digests bound,bound,pass,sbom_records.json
+base_scan,SCAN-405,allowed base and pass,sha256:base-safe pass,pass,base_image_policy.json
+approval_chronology,B-404 then B-405,APR-805 revokes prior and APR-806 other request,no active B-405 approval,pending,approval_ledger.csv
+reapproval_request,B-405,digest-bound release-board request,sha256:bundle-405,pending,approval_request.json

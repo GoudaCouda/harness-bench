@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "076-transitive-security-upgrade",
+  "core": [
+    "coupled_secure_graph",
+    "coherent_lock_graph",
+    "executable_compatibility"
+  ],
+  "hard_gates": [
+    "safety_and_integrity"
+  ],
+  "review_status": "not_required"
+}
+

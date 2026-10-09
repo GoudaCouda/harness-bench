@@ -1,0 +1,76 @@
+{
+  "ledger_id": "quota-2026-03-17",
+  "quota_clock_epoch": 1773738000,
+  "events": [
+    {
+      "event_id": "e1",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 50000,
+      "at": 1773648000
+    },
+    {
+      "event_id": "e2",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 20000,
+      "at": 1773737900
+    },
+    {
+      "event_id": "e3",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 25000,
+      "at": 1773737950
+    },
+    {
+      "event_id": "e4",
+      "tenant_id": "tn-west",
+      "kind": "refund",
+      "amount_cents": 10000,
+      "at": 1773737960,
+      "refund_of": "e2"
+    },
+    {
+      "event_id": "e5",
+      "tenant_id": "tn-east",
+      "kind": "debit",
+      "amount_cents": 8000,
+      "at": 1773737990
+    },
+    {
+      "event_id": "evt-q1",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 40000,
+      "at": 1773738000,
+      "source_request_id": "q1"
+    },
+    {
+      "event_id": "evt-q2",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 10000,
+      "at": 1773738000,
+      "source_request_id": "q2"
+    },
+    {
+      "event_id": "evt-q3",
+      "tenant_id": "tn-east",
+      "kind": "debit",
+      "amount_cents": 30000,
+      "at": 1773738000,
+      "source_request_id": "q3"
+    }
+  ],
+  "snapshots": {
+    "tn-east": {
+      "burst_count": 2,
+      "daily_net_cents": 38000
+    },
+    "tn-west": {
+      "burst_count": 3,
+      "daily_net_cents": 85000
+    }
+  }
+}

@@ -1,0 +1,45 @@
+schema_version: 2
+task_id: 040-service-dependency-triage
+pass_threshold: 0.8
+cases:
+- id: runtime_recovery
+  title: The repaired auth configuration passes the isolated checkout verifier
+  description: Partner-v2 checkout and payment sessions recover, unaffected employee sessions remain valid,
+    and retired, wrong-audience, and unknown-key tokens remain denied under fail-closed validation.
+  weight: 0.35
+  core: true
+- id: causal_diagnosis
+  title: The root service, triggering change, and impact boundary are correct
+  description: The structured diagnosis identifies the source-grounded root service and change and covers
+    the customer-impacting services without adding unrelated services. The diagnosed root service may
+    also be listed as affected.
+  weight: 0.2
+  core: true
+  score_group: validation_and_replay
+- id: evidence_exclusion
+  title: The diagnosis is supported and plausible alternatives are ruled out
+  description: At least three concrete file-bound observations support the diagnosis, and both red herrings
+    are explained. Recovery and verification are owned by the operator-triage case instead of being scored
+    twice here.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: operator_triage
+  title: The triage notes provide a safe recovery sequence
+  description: The triage notes provide a safe recovery sequence; all related facts, relationships, and
+    closed-set constraints must agree before this outcome earns credit.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: diagnosis_handoff
+  title: Structured diagnosis and operator notes agree
+  description: Structured diagnosis and operator notes agree; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.2
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,32 @@
+[
+  {
+    "action": "revise",
+    "claim_id": "CLAIM-PRIMARY",
+    "evidence": [
+      "publication_claims.json#CLAIM-PRIMARY",
+      "meta_analysis.json#pooled_random_effects",
+      "sensitivity.csv#BOREALIS"
+    ],
+    "new_status": "benefit_supported",
+    "prior_status": "no_conclusive_benefit"
+  },
+  {
+    "action": "revise",
+    "claim_id": "CLAIM-HETEROGENEITY",
+    "evidence": [
+      "publication_claims.json#CLAIM-HETEROGENEITY",
+      "meta_analysis.json#heterogeneity"
+    ],
+    "new_status": "low",
+    "prior_status": "moderate_or_higher"
+  },
+  {
+    "action": "unchanged",
+    "claim_id": "CLAIM-SAFETY",
+    "evidence": [
+      "publication_claims.json#CLAIM-SAFETY"
+    ],
+    "new_status": "not_assessed",
+    "prior_status": "not_assessed"
+  }
+]

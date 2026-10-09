@@ -1,0 +1,1 @@
+{"plan_hash":"sha256:e1bd18f388af093c226ae8531c355dbd04c6fe29d4154ef13f33c5058de6ac3f","projection_count":7,"recovery_id":"WIR-20260819-01","restored_journal_ids":["J-INT-V04"],"source_checkpoint":"sha256:c229d34c25324d27acb0d03ccfd1b71009158bf5e3bd06ac7c6701d807f4aced","status":"applied_local_projection"}

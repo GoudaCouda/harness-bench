@@ -1,0 +1,64 @@
+task_id: 114-csv-dialect-encoding-intake-repair
+title: Repair CSV dialect and encoding intake
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Data Analytics
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+difficulty: hard
+capability_tags:
+- filesystem
+- coding
+- protocol_semantics
+- verification
+harness_demands:
+- tool_selection
+- multi_step_execution
+- verification_behavior
+stressors:
+- hidden_variation
+- edge_case_precedence
+- state_consistency
+required_artifacts:
+- repo/src/solution.py
+- repo/out/result.json
+- repo/REPAIR_NOTES.md
+task_family: 114-csv-dialect-encoding-intake-repair
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - HB-S200-POLICY-PRECEDENCE
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - repo/out/
+  - repo/out/result.json
+  - repo/REPAIR_NOTES.md
+  allowed_modified:
+  - repo/src/solution.py
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_equivalence: engineering_handoff
+  max_fallback_weight: 0.2

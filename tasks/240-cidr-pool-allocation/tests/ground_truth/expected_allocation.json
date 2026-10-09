@@ -1,0 +1,10 @@
+{
+  "allocations": {
+    "net-eps": "10.8.0.0/22"
+  },
+  "unplaced": [
+    "net-gamma",
+    "net-alpha",
+    "net-beta"
+  ]
+}

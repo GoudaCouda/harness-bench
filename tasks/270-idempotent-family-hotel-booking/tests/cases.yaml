@@ -1,0 +1,28 @@
+schema_version: 2
+task_id: 270-idempotent-family-hotel-booking
+pass_threshold: 0.8
+cases:
+- id: correct_booking
+  title: 匹配家庭需求的唯一预订
+  description: 'All of the coupled business checks must pass: unique_booking correct_hotel
+    correct_dates correct_party correct_booking_fields'
+  weight: 0.4
+  core: true
+- id: inventory_and_audit
+  title: 库存扣减与预订审计一致
+  description: 'All of the coupled business checks must pass: unique_booking exact_inventory_change
+    exact_audit_event'
+  weight: 0.4
+  core: true
+- id: complete_delivery
+  title: 完整交付与运行验证
+  description: All original acceptance checks pass, including final-state and replay
+    checks.
+  weight: 0.2
+  core: false
+- id: protected_boundary
+  title: 受保护输入、状态与执行证据完整性
+  description: No tampering, forged execution evidence, unsafe paths or prohibited
+    protected-state changes.
+  weight: 0.0
+  gate: true

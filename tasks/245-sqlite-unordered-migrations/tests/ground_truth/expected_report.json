@@ -1,0 +1,17 @@
+{
+  "applied": [
+    "001_init.sql"
+  ],
+  "duplicate_files": [
+    "003_add_note.sql",
+    "003_add_qty.sql"
+  ],
+  "missing_versions": [
+    2
+  ],
+  "skipped_files": [
+    "003_add_note.sql",
+    "003_add_qty.sql",
+    "004_seed.sql"
+  ]
+}

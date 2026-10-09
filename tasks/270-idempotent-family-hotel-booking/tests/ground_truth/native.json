@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "case_number": 16,
+  "blocks": [
+    [
+      "correct_booking",
+      "匹配家庭需求的唯一预订",
+      "unique_booking correct_hotel correct_dates correct_party correct_booking_fields"
+    ],
+    [
+      "inventory_and_audit",
+      "库存扣减与预订审计一致",
+      "unique_booking exact_inventory_change exact_audit_event"
+    ]
+  ],
+  "gates": [
+    "no_symbolic_links",
+    "no_special_files",
+    "no_hard_links",
+    "agent_inputs_unchanged",
+    "protected_users_unchanged",
+    "protected_hotel_catalog_unchanged"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "f93f1258e10faf4b522066244f5dbb018b216b02e5ccfe69ded8f02292c7d902",
+    "hb_tools/agent_task.md": "05984b1cd9f713c0a1a128305838d2bc7973c79f6d788a0fd4439d167ecdce58",
+    "hb_tools/tool_client.py": "a45ef1363f14448212e5e2a7cda3f0fe81aaee8cec2aefdac8380e158f5fa6ce",
+    "hb_tools/tool_contract.json": "b4df0931f91e85a95abbd553143447545f6bee2a523f6ddf82d3ffab2db632d9"
+  },
+  "required_artifacts": [],
+  "provisional_id": 253,
+  "reset": [
+    "--work-root",
+    "{w}",
+    "--allowed-parent",
+    "{a}"
+  ],
+  "verify": [
+    "verifier/verify.py",
+    "--work-root",
+    "{w}",
+    "--output",
+    "{r}"
+  ]
+}

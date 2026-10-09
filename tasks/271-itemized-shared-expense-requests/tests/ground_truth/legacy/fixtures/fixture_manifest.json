@@ -1,0 +1,19 @@
+{
+  "schema_version": "case17_fixture_manifest_v1",
+  "source_policy": "project_generated_synthetic_only",
+  "files": [
+    {
+      "path": "fixtures/expense_ledger.json",
+      "sha256": "3560c7d3095c16af4eeb20152e6adb408d360280e8ade02daf680d072f7b3bee",
+      "agent_visible": true,
+      "license": "LicenseRef-AgentSFT-Synthetic-1.0"
+    },
+    {
+      "path": "fixtures/seed_state.json",
+      "sha256": "e286224f87e8bb6082b9d0bee1486ee98077311c544ecd2b80e9b997056fc484",
+      "agent_visible": false,
+      "license": "LicenseRef-AgentSFT-Synthetic-1.0"
+    }
+  ],
+  "protected_upstream_content_included": false
+}

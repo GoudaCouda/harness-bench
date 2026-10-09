@@ -1,0 +1,50 @@
+{
+  "stream_id": "harborwatch-0322",
+  "gate_clock_epoch": 1774170000,
+  "events": [
+    {
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "kind": "login",
+      "message": "password login succeeded"
+    },
+    {
+      "event_id": "ev2",
+      "correlation_id": "corr-a",
+      "kind": "token_refresh",
+      "access_token": "secret-aaa-not-for-handoff",
+      "message": "issued a bearer"
+    },
+    {
+      "event_id": "ev3",
+      "correlation_id": "corr-b",
+      "kind": "login",
+      "message": "webauthn login succeeded"
+    },
+    {
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "kind": "login",
+      "message": "duplicate event id"
+    },
+    {
+      "event_id": "ev5",
+      "correlation_id": "",
+      "kind": "orphan",
+      "message": "missing correlation"
+    },
+    {
+      "event_id": "ev6",
+      "correlation_id": "corr-b",
+      "kind": "logout",
+      "message": "session closed"
+    },
+    {
+      "event_id": "ev7",
+      "correlation_id": "corr-c",
+      "kind": "proxy",
+      "authorization": "Bearer leaked-xyz",
+      "message": "forwarded with authorization"
+    }
+  ]
+}

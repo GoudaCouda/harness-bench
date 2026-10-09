@@ -1,0 +1,7 @@
+{
+  "listen_port": {"type": "int", "min": 1024, "max": 65535, "nullable": false, "sensitive": false, "env": "EDGE_LISTEN_PORT"},
+  "log_level": {"type": "enum", "choices": ["debug", "info", "warning", "error"], "nullable": false, "sensitive": false, "env": "EDGE_LOG_LEVEL"},
+  "cache_url": {"type": "string", "allow_empty": false, "nullable": true, "sensitive": false, "env": "EDGE_CACHE_URL"},
+  "api_token": {"type": "string", "allow_empty": false, "nullable": false, "sensitive": true, "env": "EDGE_API_TOKEN"},
+  "telemetry": {"type": "bool", "nullable": false, "sensitive": false, "env": "EDGE_TELEMETRY"}
+}

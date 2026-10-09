@@ -1,0 +1,19 @@
+{
+  "stream_id": "harborwatch-233",
+  "gate_clock_epoch": 1776123200,
+  "counts": {
+    "admitted": 2,
+    "held": 3,
+    "malformed": 2
+  },
+  "admitted_ids": [
+    "www.harbor.test",
+    "mail.harbor.test"
+  ],
+  "held_ids": [
+    "gone.harbor.test",
+    "ns1.other.test",
+    "api.harbor.test"
+  ],
+  "state": "gated"
+}

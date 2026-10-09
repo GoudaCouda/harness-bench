@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example/orders/order.json",
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "ship_to": {"$ref": "../common/address.json#address"}
+  },
+  "required": ["id", "ship_to"]
+}

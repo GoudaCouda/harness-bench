@@ -1,0 +1,40 @@
+schema_version: 2
+task_id: 147-iac-lifecycle-plan-repair
+pass_threshold: 0.8
+cases:
+- id: move_diff_and_replacement
+  title: State moves drift and replacement semantics are exact
+  description: Ignore rules immutable fields unknown values missing objects and transitive triggers produce
+    correct redacted actions.
+  weight: 0.3
+  core: true
+- id: dependency_order_and_destroy_safety
+  title: Dependency scheduling and destructive-change safety are exact
+  description: Prevent-destroy delete policy create-before-destroy propagation and forward/reverse phases
+    are deterministic.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_lifecycle_replay
+  title: Protected plan outputs match the repaired planner
+  description: Plan and summary are current parseable redacted and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: lifecycle_handoff
+  title: Lifecycle decisions and offline boundary are handed off clearly
+  description: Another engineer can audit identity diff triggers ordering safety redaction and verification.
+  weight: 0.2
+  core: false
+- id: source_and_apply_boundary
+  title: Pure implementation and strict validation are respected
+  description: The implementation stays in the restricted compute boundary and malformed inputs fail predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence and live infrastructure boundaries are preserved
+  description: Protected inputs and filesystem redlines are intact and no real Terraform or provider action is claimed.
+  weight: 0.0
+  gate: true
+  core: false

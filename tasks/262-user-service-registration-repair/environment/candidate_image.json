@@ -1,0 +1,9 @@
+{
+  "build": {
+    "dockerfile": "tests/ground_truth/legacy/environment/Sandbox.Dockerfile",
+    "context": "tests/ground_truth/legacy/environment",
+    "args": {
+      "SANDBOX_CONTRACT_SHA256": "7d6a15d44f13a1a42087dad7f6b0d0ce0db8a9f060873402ee3ed416b14757b6"
+    }
+  }
+}

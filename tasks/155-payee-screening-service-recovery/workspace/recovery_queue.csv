@@ -1,0 +1,9 @@
+item_id,identity_verified,match_result,list_version,required_version,bank_change,service_state,recovery_note
+R-201,yes,see_context,see_context,DNP-2026-08,verified,recovered,verified retry supersedes service_error
+R-202,yes,unknown,,DNP-2026-08,verified,service_error,no retry result
+R-203,yes,possible,DNP-2026-08,DNP-2026-08,verified,ok,current possible match
+R-204,yes,no_match,DNP-2026-08,DNP-2026-08,unverified,ok,bank change not verified
+R-205,yes,no_match,DNP-2026-07,DNP-2026-08,verified,ok,stale list version
+R-206,yes,exact,DNP-2026-08,DNP-2026-08,verified,ok,current exact restricted match
+R-207,yes,see_context,see_context,DNP-2026-08,verified,recovered,retry exists but wrong list version
+R-208,yes,duplicate,DNP-2026-08,DNP-2026-08,verified,duplicate,duplicate correlation of R-203

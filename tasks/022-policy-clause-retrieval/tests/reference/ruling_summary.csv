@@ -1,0 +1,12 @@
+case_id,case_decision,denied_lines,review_lines,approved_lines,controlling_clause,summary_reason
+T100,approve,0,0,0,TR-1,domestic_with_receipt
+T101,needs_review,0,0,0,TR-2,international_over_cap
+T102,deny,0,0,0,ME-1,alcohol_not_reimbursable
+T103,approve,0,0,0,EQ-1,equipment_under_500_with_receipt
+T104,needs_review,0,0,0,TR-1,missing_itemized_receipt
+T105,needs_review,0,0,0,ME-2,client_meal_over_cap_review
+T106,approve,0,0,0,AM-3,equipment_over_500_department_approved
+T107,needs_review,0,0,0,AM-1,domestic_over_cap_approval_missing
+T108,deny,0,0,0,ME-2,client_meal_over_cap_no_attendee_list
+T109,needs_review,0,0,0,EX-1,equipment_over_cap_unclear_purpose
+T110,deny,1,2,0,AM-2,mixed_packet_has_denied_line

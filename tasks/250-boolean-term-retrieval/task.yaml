@@ -1,0 +1,40 @@
+task_id: 250-boolean-term-retrieval
+title: Rank mill documents by conjunctive term presence
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Research and Analysis
+task_subcategory: Evidence-Based Research
+capability_tags: [filesystem, structured_data, terminal, code_execution]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [conjunction, token_counts, missing_terms]
+required_artifacts:
+- ranking.json
+- RETRIEVAL_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [STAC-SPEC, EARTHKIT-DATA]
+task_family: boolean-term-retrieval
+variant: all-terms-then-tf-sum
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [ranking.json, RETRIEVAL_NOTES.md]
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

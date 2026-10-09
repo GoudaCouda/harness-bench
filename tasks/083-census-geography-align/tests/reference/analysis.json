@@ -1,0 +1,42 @@
+{
+  "geography_key": [
+    "state",
+    "county"
+  ],
+  "requested_rows": 8,
+  "observed_rows": 7,
+  "comparable_counties": 3,
+  "incomplete_counties": [
+    "007"
+  ],
+  "changes": [
+    {
+      "state": "06",
+      "county": "001",
+      "2024_estimate": 1000,
+      "2025_estimate": 1080,
+      "change": 80,
+      "percent_change": 8.0,
+      "status": "comparable"
+    },
+    {
+      "state": "06",
+      "county": "003",
+      "2024_estimate": 120,
+      "2025_estimate": 126,
+      "change": 6,
+      "percent_change": 5.0,
+      "status": "comparable"
+    },
+    {
+      "state": "06",
+      "county": "005",
+      "2024_estimate": 800,
+      "2025_estimate": 760,
+      "change": -40,
+      "percent_change": -5.0,
+      "status": "comparable"
+    }
+  ],
+  "moe_not_aggregated_as_estimate": true
+}

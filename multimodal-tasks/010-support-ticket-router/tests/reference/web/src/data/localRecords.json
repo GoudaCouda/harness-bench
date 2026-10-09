@@ -1,0 +1,56 @@
+[
+  {
+    "id": "TCK-7004",
+    "name": "Chargeback threat",
+    "category": "billing",
+    "owner": "Gold customer",
+    "status": "review",
+    "primary": 96,
+    "secondary": 9
+  },
+  {
+    "id": "TCK-7011",
+    "name": "Late replacement",
+    "category": "fulfillment",
+    "owner": "Standard customer",
+    "status": "watch",
+    "primary": 74,
+    "secondary": 28
+  },
+  {
+    "id": "TCK-7020",
+    "name": "Sizing confusion",
+    "category": "returns",
+    "owner": "Silver customer",
+    "status": "clear",
+    "primary": 45,
+    "secondary": 6
+  },
+  {
+    "id": "TCK-7033",
+    "name": "Damaged bundle",
+    "category": "warehouse",
+    "owner": "Gold customer",
+    "status": "watch",
+    "primary": 82,
+    "secondary": 17
+  },
+  {
+    "id": "TCK-7004-R1",
+    "name": "Chargeback threat follow-up",
+    "category": "fulfillment",
+    "owner": "Silver customer",
+    "status": "clear",
+    "primary": 110,
+    "secondary": 15
+  },
+  {
+    "id": "TCK-7011-R2",
+    "name": "Late replacement follow-up",
+    "category": "returns",
+    "owner": "Gold customer",
+    "status": "watch",
+    "primary": 91,
+    "secondary": 35
+  }
+]

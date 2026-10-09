@@ -1,0 +1,8 @@
+[
+  {"evicted":["a"],"expired":[],"key":"c","op":"put","status":"stored"},
+  {"expired":[],"key":"pinned","op":"get","status":"hit","value":"P"},
+  {"expired":["c"],"op":"advance","status":"ok","to":120},
+  {"evicted":[],"expired":[],"key":"d","op":"put","status":"rejected_capacity"},
+  {"expired":[],"key":"pinned","op":"unpin","status":"updated"},
+  {"evicted":["pinned"],"expired":[],"key":"d","op":"put","status":"stored"}
+]

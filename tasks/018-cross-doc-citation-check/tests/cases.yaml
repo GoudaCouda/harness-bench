@@ -1,0 +1,37 @@
+schema_version: 2
+task_id: 018-cross-doc-citation-check
+pass_threshold: 0.8
+cases:
+- id: citation_issue_set
+  title: The audit identifies the exact citation defects
+  description: The audit identifies the exact citation defects; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns
+    credit.
+  weight: 0.34
+  core: true
+- id: corrected_references
+  title: The fixed reference list is complete and excludes retired sources
+  description: The fixed reference list is complete and excludes retired sources;
+    all related facts, relationships, and closed-set constraints must agree before
+    this outcome earns credit.
+  weight: 0.25
+  core: true
+- id: evidence_traceability
+  title: Every citation defect is tied to the right location and repair
+  description: Each closed-set issue row must carry the correct citation, location,
+    semantic issue, source, and affirmative repair rather than merely naming the right IDs.
+  weight: 0.21
+  core: true
+- id: audit_integrity
+  title: The citation audit is parseable with the published columns
+  description: The citation audit is parseable with the published columns; all related
+    facts, relationships, and closed-set constraints must agree before this outcome
+    earns credit.
+  weight: 0.2
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary
+    business mistakes lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

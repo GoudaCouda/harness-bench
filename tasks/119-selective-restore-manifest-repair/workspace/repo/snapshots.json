@@ -1,0 +1,17 @@
+[
+  {"snapshot_id":"s0-full","parent_id":null,"complete":true,"entries":[
+    {"path":"/app","operation":"upsert","kind":"directory","checksum":null,"size":0},
+    {"path":"/app/config.yml","operation":"upsert","kind":"file","checksum":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","size":10},
+    {"path":"/app/data","operation":"upsert","kind":"directory","checksum":null,"size":0},
+    {"path":"/app/data/a.db","operation":"upsert","kind":"file","checksum":"1111111111111111111111111111111111111111111111111111111111111111","size":100},
+    {"path":"/app/data/tmp/cache","operation":"upsert","kind":"file","checksum":"9999999999999999999999999999999999999999999999999999999999999999","size":5},
+    {"path":"/app/old.txt","operation":"upsert","kind":"file","checksum":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","size":4}
+  ]},
+  {"snapshot_id":"s1-selected","parent_id":"s0-full","complete":true,"entries":[
+    {"path":"/app/config.yml","operation":"upsert","kind":"file","checksum":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","size":12},
+    {"path":"/app/data/b.db","operation":"upsert","kind":"file","checksum":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","size":80},
+    {"path":"/app/old.txt","operation":"delete","kind":null,"checksum":null,"size":null}
+  ]},
+  {"snapshot_id":"s9-newer-branch","parent_id":"s0-full","complete":true,"entries":[{"path":"/app/config.yml","operation":"upsert","kind":"file","checksum":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","size":99}]},
+  {"snapshot_id":"s2-incomplete","parent_id":"s1-selected","complete":false,"entries":[]}
+]

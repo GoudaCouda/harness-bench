@@ -1,0 +1,21 @@
+{
+  "schema_version": "nami_work_case02_fixture_sources_v1",
+  "task_id": "case_02",
+  "generated_on": "2026-07-20",
+  "license_terms": "fixtures/LICENSES.md",
+  "intent_source": {
+    "source_ref": "tasks/20260719_nami_work_gold20_v1/source_packets/case_02.json",
+    "source_lock_sha256": "d137ec310ad1079b02181fb03ca4d107b677c5fe64f81d6969b82bb60b669c3e",
+    "use": "Sanitized task intent and environment outline only; no original user content copied."
+  },
+  "files": [
+    {"path": "fixtures/agent_visible/USER_TASK.md", "sha256": "7adbe4b00c1efabb435bebf75a3d40f37594ac3306c7018be399a95b4b1564f0", "source_kind": "synthetic", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/agent_visible/input/alerts.json", "sha256": "56764ed55f5007e68b77d1d48d7d5a1abe2f21898ec4fce2b375f9418cbf732d", "source_kind": "synthetic", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/agent_visible/input/change_ticket.json", "sha256": "10436d8f4c94e9a7b363f809641da4ea7fc087a91262db6bd4d4aea14645caee", "source_kind": "synthetic", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/agent_visible/input/impact_summary.json", "sha256": "f258830fa5feb47878c8d50f0a1ee6291436165903bb454be8727873c1d94ad5", "source_kind": "synthetic", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/agent_visible/input/postmortem_template.docx", "sha256": "7925ecb0f6edc653c47c1f26d18083407f49268e35828f27798676a07069dde6", "source_kind": "synthetic_generated", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/agent_visible/input/service_events.jsonl", "sha256": "85797f277b40498193c0e87ac7436868bf5ad1d6fc083e4742f0b6258f081970", "source_kind": "synthetic", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/postmortem_template_plan.json", "sha256": "3dbf0fee735f37eb2c8b1ef7c8b8324d9b00ab41fdc666fb9b54352a2df2d4e4", "source_kind": "synthetic_build_recipe", "license_id": "case02_synthetic_internal"},
+    {"path": "fixtures/LICENSES.md", "sha256": "269a67f5566de319711467405ec2f5e465455afc5c4ef7b38830a3155717711b", "source_kind": "human_authored_terms", "license_id": "case02_terms"}
+  ]
+}

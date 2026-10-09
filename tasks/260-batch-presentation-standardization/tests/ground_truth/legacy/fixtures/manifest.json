@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "path": "fixtures/brand_template.pptx",
+      "sha256": "c3cf928383d8b85d120fdbb2ab1734db8cc8a5a255f8aa2e7563e9a1a07277d2",
+      "size_bytes": 6455,
+      "source": "synthetic_case06_builder"
+    },
+    {
+      "path": "fixtures/decks/market_brief.pptx",
+      "sha256": "f238fa1d25cd789cce9f52a3479ffd53f50080b430e840c9ee4498fa0d6115d9",
+      "size_bytes": 9291,
+      "source": "synthetic_case06_builder"
+    },
+    {
+      "path": "fixtures/decks/project_update.pptx",
+      "sha256": "3b7fafed85711edfc0f0cf265d4cc2271fe73ef24c75905a88cc74bd30fa23b1",
+      "size_bytes": 9254,
+      "source": "synthetic_case06_builder"
+    },
+    {
+      "path": "fixtures/decks/service_review.pptx",
+      "sha256": "d3c723be5f9ccb9cfe874fde2a34570a580e0f0f6ad0fb586b1411c437170ef8",
+      "size_bytes": 9243,
+      "source": "synthetic_case06_builder"
+    },
+    {
+      "path": "fixtures/style_map.json",
+      "sha256": "913733952b4e370376ce02c6d1a792eff974cb2941319ba162dedf4b6bc527d3",
+      "size_bytes": 1803,
+      "source": "synthetic_case06_builder"
+    }
+  ],
+  "generated_at": "2026-07-20T00:00:00Z",
+  "license": "CC0-1.0",
+  "schema_version": "case06_fixture_manifest_v1",
+  "source": "fully_synthetic"
+}

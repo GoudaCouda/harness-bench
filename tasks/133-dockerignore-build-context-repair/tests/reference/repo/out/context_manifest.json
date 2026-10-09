@@ -1,0 +1,26 @@
+{
+  "included": [
+    ".dockerignore",
+    "Dockerfile",
+    "app/server.js",
+    "app/templates/welcome.txt",
+    "config/default.json",
+    "package.json",
+    "vendor/licenses/runtime.txt"
+  ],
+  "missing_required": [],
+  "prefix_leaks": [],
+  "protected_leaks": [],
+  "schema_version": 1,
+  "sha256": {
+    ".dockerignore": "fb260e69893692aeb6fc2a7dc48d4df91e2ffd7f8c03e6a37e240a49a84373dd",
+    "Dockerfile": "0c53d94e1873cd20380a3f589cc8adc307d5d0f06183f5c3a0b39f1cb5b0135e",
+    "app/server.js": "94c1120fd6cbc67a0c36ed35549d7729692b67df04b9558bea4f22299cf21d76",
+    "app/templates/welcome.txt": "6de53742fa891d10a33f42fa3dece782701eb2fec6b30ea4832aff062ce83f14",
+    "config/default.json": "6f8a6507ef495ace775c6a08c6966a1057f54fe2bc42c5d6755bcc6636e8b2ac",
+    "package.json": "58bf87b920395d43fbc88fcb56e6cb35ed1f2d1e892c492f1e9737c9c5053cae",
+    "vendor/licenses/runtime.txt": "866d16db0a836ba3538aa5861d68dd4829894597e12c1489b957906141c53ad5"
+  },
+  "total_bytes": 682,
+  "valid": true
+}

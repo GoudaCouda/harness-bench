@@ -1,0 +1,47 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1774083600,
+    "limit": 4
+  },
+  "artifacts": {
+    "placement_receipt": {
+      "cluster_id": "ridgepeak-0321",
+      "gate_clock_epoch": 1774083600,
+      "selected_ids": [
+        "r1",
+        "r2",
+        "r3",
+        "r5"
+      ],
+      "dropped_ids": [
+        "r6"
+      ],
+      "tombstoned_ids": [
+        "r4"
+      ],
+      "item_count": 4,
+      "union_count": 5,
+      "state": "placed"
+    },
+    "verification": {
+      "controller": "placectl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "selected",
+      "1": "selected",
+      "2": "selected",
+      "3": "tombstoned",
+      "4": "selected",
+      "5": "dropped"
+    },
+    "selected_ids": [
+      "r1",
+      "r2",
+      "r3",
+      "r5"
+    ]
+  }
+}

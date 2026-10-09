@@ -1,0 +1,43 @@
+{
+  "schema_version": "synthetic_alerts_v1",
+  "alerts": [
+    {
+      "alert_id": "ALT-DB-701",
+      "severity": "critical",
+      "service": "settlement-api",
+      "region": "east-1",
+      "opened_at": "2026-07-12T10:04:00+08:00",
+      "resolved_at": "2026-07-12T10:28:00+08:00",
+      "signal": "db_pool_wait_p95_ms",
+      "observed": 2410,
+      "threshold": 800,
+      "evidence_id": "ALERT-EV-DB-701"
+    },
+    {
+      "alert_id": "ALT-CPU-112",
+      "severity": "warning",
+      "service": "checkout-canary",
+      "region": "west-2",
+      "opened_at": "2026-07-12T10:05:00+08:00",
+      "resolved_at": "2026-07-12T10:09:00+08:00",
+      "signal": "cpu_pct",
+      "observed": 91,
+      "threshold": 85,
+      "note": "A five-minute load test on a different service and region; no settlement traffic was routed to this canary.",
+      "evidence_id": "ALERT-EV-CPU-112"
+    },
+    {
+      "alert_id": "ALT-SSL-209",
+      "severity": "info",
+      "service": "report-exporter",
+      "region": "east-1",
+      "opened_at": "2026-07-12T10:11:00+08:00",
+      "resolved_at": "2026-07-12T10:11:00+08:00",
+      "signal": "certificate_days_remaining",
+      "observed": 21,
+      "threshold": 30,
+      "note": "Expiry reminder for reports.example.invalid; this endpoint is not called by settlement-api.",
+      "evidence_id": "ALERT-EV-SSL-209"
+    }
+  ]
+}

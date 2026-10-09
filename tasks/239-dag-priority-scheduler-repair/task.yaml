@@ -1,0 +1,41 @@
+task_id: 239-dag-priority-scheduler-repair
+title: Repair mill DAG scheduling with priority-stable ties
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 2400
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [dependency_cycles, priority_ties, unknown_edges]
+required_artifacts:
+- repo/src/schedule.py
+- repo/schedule.json
+- repo/IMPLEMENTATION_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [K8S-POD-PRIORITY, TIKV-PD-SCHEDULER]
+task_family: dag-priority-scheduler-repair
+variant: cycle-fail-and-lex-stable-ties
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/schedule.json, repo/IMPLEMENTATION_NOTES.md]
+  allowed_modified: [repo/src/schedule.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

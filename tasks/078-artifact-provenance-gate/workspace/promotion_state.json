@@ -1,0 +1,1 @@
+{"request_id":"REL-411-PROD","selected_artifact_id":"B-404","artifact_digest":"sha256:bundle-404","component_artifact_ids":["SDK-204","CLI-310"],"sbom_id":"SBOM-404","signature_id":"SIG-B404","attestation_id":"ATT-404","scan_id":"SCAN-404","approval_id":"APR-804","state":"blocked_revoked_base"}

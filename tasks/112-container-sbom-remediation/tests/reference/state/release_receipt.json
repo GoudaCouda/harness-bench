@@ -1,0 +1,12 @@
+{
+  "build_state_sha256": "a394e7c7c4fa2b66352c32e241f8277827942cebdd062849366e7956792ef11e",
+  "external_push_executed": false,
+  "image_digest": "sha256:0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d",
+  "phase": "staged_pending_release_approval",
+  "provenance_sha256": "3ae93e8f37bd67dfd770d0e7e5fe55e6770b9ce40047b6dbb5d6aab6bceae7ff",
+  "receipt_type": "local_container_remediation_stage",
+  "release_id": "REL-REPORT-2026-08",
+  "revision": 2,
+  "sbom_sha256": "c75230606890d2bcf2c95e376bcac77a7d52c927559f253c78f0bc33c2d5f03b",
+  "stage_token": "7e02912134206f62917dae94874190b1b39309caf629518953cc3c726a249629"
+}

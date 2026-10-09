@@ -1,0 +1,28 @@
+{
+  "schema_version": "case06_tool_contract_v1",
+  "candidate_visible_root": [
+    "task.md",
+    "inputs",
+    "tools",
+    "outputs"
+  ],
+  "hidden_roots": [
+    "oracle",
+    "verifier",
+    "tests",
+    "validation"
+  ],
+  "network": "none",
+  "tools": [
+    {
+      "id": "pptx_inspect",
+      "entrypoint": "tools/pptx_inspect.py",
+      "side_effect": "read_only"
+    },
+    {
+      "id": "pptx_standardize",
+      "entrypoint": "tools/pptx_standardize.py",
+      "side_effect": "workspace_write_outputs_only"
+    }
+  ]
+}

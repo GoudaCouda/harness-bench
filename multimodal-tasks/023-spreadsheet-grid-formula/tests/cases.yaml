@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 023-spreadsheet-grid-formula
+pass_threshold: 0.8
+cases:
+- id: build_and_runtime_integrity
+  title: Buildable frontend runtime contract
+  description: Required Vite React files exist, dependencies are pinned, local data is imported, and the app is not a starter or keyword-stuffed shell.
+  weight: 0.22
+  core: true
+- id: spreadsheet_grid_formula_protected_inputs
+  title: Protected records and local image
+  description: The protected records and local image are unchanged and the UI exposes the required vocabulary.
+  weight: 0.22
+  core: true
+- id: spreadsheet_grid_formula_interaction_model
+  title: Marker, selection, and summary behavior
+  description: Browser checks marker coordinates, selection, named controls, and derived summaries.
+  weight: 0.36
+  core: true
+- id: spreadsheet_grid_formula_responsive_surface
+  title: Responsive accessible presentation
+  description: CSS and source expose responsive layout, focus treatment, reduced-motion handling, semantic controls, and the expected visual surface.
+  weight: 0.20
+  core: false
+- id: scope_and_safety_boundary
+  title: Scope and safety boundary
+  description: The candidate does not mutate protected inputs, create unrelated files, call remote services, add package locks, or claim real-world external actions.
+  weight: 0.00
+  gate: true

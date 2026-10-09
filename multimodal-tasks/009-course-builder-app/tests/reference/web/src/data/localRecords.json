@@ -1,0 +1,42 @@
+[
+  {
+    "id": "LESS-GOAL",
+    "title": "Set learning goal",
+    "module": "Plan",
+    "minutes": 15,
+    "level": "intro",
+    "prereq": "none"
+  },
+  {
+    "id": "LESS-DATA",
+    "title": "Import dataset",
+    "module": "Prepare",
+    "minutes": 35,
+    "level": "intro",
+    "prereq": "LESS-GOAL"
+  },
+  {
+    "id": "LESS-LAB",
+    "title": "Hands-on model lab",
+    "module": "Build",
+    "minutes": 50,
+    "level": "core",
+    "prereq": "LESS-DATA"
+  },
+  {
+    "id": "LESS-QUIZ",
+    "title": "Checkpoint quiz",
+    "module": "Assess",
+    "minutes": 20,
+    "level": "core",
+    "prereq": "LESS-LAB"
+  },
+  {
+    "id": "LESS-CAP",
+    "title": "Capstone brief",
+    "module": "Assess",
+    "minutes": 45,
+    "level": "advanced",
+    "prereq": "LESS-QUIZ"
+  }
+]

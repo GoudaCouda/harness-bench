@@ -1,0 +1,50 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1776468800
+  },
+  "artifacts": {
+    "receipt": {
+      "stream_id": "gullspire-244",
+      "gate_clock_epoch": 1776468800,
+      "counts": {
+        "recorded": 4,
+        "conflict": 1,
+        "malformed": 2
+      },
+      "recorded_ids": [
+        "l1",
+        "l2",
+        "l3",
+        "l7"
+      ],
+      "conflict_ids": [
+        "l6"
+      ],
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "loadctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "recorded",
+      "1": "recorded",
+      "2": "recorded",
+      "3": "malformed",
+      "4": "malformed",
+      "5": "conflict",
+      "6": "recorded"
+    },
+    "recorded_ids": [
+      "l1",
+      "l2",
+      "l3",
+      "l7"
+    ],
+    "conflict_ids": [
+      "l6"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "bridge_events": [
+    {
+      "data": {
+        "total_cents": 12000
+      },
+      "event_id": "evt_O102",
+      "invoice_id": "inv_orchid",
+      "occurred_at": "2026-08-10T11:55:00Z",
+      "provider_sequence": 2,
+      "subscription_id": "sub_orchid",
+      "type": "invoice_finalized"
+    },
+    {
+      "data": {
+        "attempt": 2
+      },
+      "event_id": "evt_C302",
+      "invoice_id": "inv_cobalt",
+      "occurred_at": "2026-08-15T09:00:00Z",
+      "provider_sequence": 2,
+      "subscription_id": "sub_cobalt",
+      "type": "payment_retry_scheduled"
+    }
+  ],
+  "generated_at": "2026-08-18T09:00:00Z",
+  "key_id": "synthetic-provider-snapshot-2026",
+  "known_subscription_high_watermarks": {
+    "sub_amber": 2,
+    "sub_cobalt": 3,
+    "sub_dahlia": 1,
+    "sub_orchid": 4
+  },
+  "schema_version": 1,
+  "signature": "89efb615516f3e05bc65d4558c5a05c939b6c82a0cd3279eb738705c18ab1c48",
+  "snapshot_id": "psnap_20260818_0900"
+}

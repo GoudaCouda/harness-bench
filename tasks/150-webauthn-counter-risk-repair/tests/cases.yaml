@@ -1,0 +1,40 @@
+schema_version: 2
+task_id: 150-webauthn-counter-risk-repair
+pass_threshold: 0.8
+cases:
+- id: trust_precedence_and_atomic_updates
+  title: Trust failures reject without corrupting credential state
+  description: Unknown revoked mismatched unverified or wrong-origin assertions obey precedence and update
+    boundaries.
+  weight: 0.25
+  core: true
+- id: counter_backup_and_risk_policy
+  title: Counters backup signals and risk policies reconcile correctly
+  description: Zero monotonic regressed device and synchronized counters follow distinct policy while
+    risk only escalates.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: assertion_replay
+  title: Protected credential and decision artifacts match the repaired reducer
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: auth_handoff
+  title: Authentication state semantics and offline boundaries are handed off clearly
+  description: Another engineer can audit trust counter passkey risk and verification behavior.
+  weight: 0.2
+  core: false
+- id: source_and_identity_boundary
+  title: Pure implementation and strict validation are respected
+  description: The implementation stays in the restricted compute boundary and malformed inputs fail predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence and production identity boundaries are preserved
+  description: Protected inputs and filesystem redlines are intact and no IdP, assertion, revocation, cryptography, or production-auth action is claimed.
+  weight: 0.0
+  gate: true
+  core: false

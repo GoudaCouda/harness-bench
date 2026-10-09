@@ -1,0 +1,4 @@
+[
+  {"case_id":"case-only","result":{"operations":[{"op":"git_mv","from":"README.md","to":".README.md.hb-rename-tmp-1"},{"op":"git_mv","from":".README.md.hb-rename-tmp-1","to":"Readme.md"}],"final_entries":[{"path":"Readme.md","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"src/app.py","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}]}},
+  {"case_id":"two-file-swap","result":{"operations":[{"op":"git_mv","from":"A.txt","to":".A.txt.hb-rename-tmp-1"},{"op":"git_mv","from":"B.txt","to":"A.txt"},{"op":"git_mv","from":".A.txt.hb-rename-tmp-1","to":"B.txt"}],"final_entries":[{"path":"A.txt","oid":"2222222222222222222222222222222222222222","stage":0},{"path":"B.txt","oid":"1111111111111111111111111111111111111111","stage":0}]}}
+]

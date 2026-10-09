@@ -1,0 +1,7 @@
+{
+  "counts": {"cancelled": 0, "error": 1, "ok": 3},
+  "items": 4,
+  "ordered_ids": ["job-a", "job-b", "job-c", "job-d"],
+  "peak_concurrency": 2,
+  "status": "complete"
+}

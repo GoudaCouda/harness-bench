@@ -1,0 +1,66 @@
+task_id: 094-alert-routing-repair
+title: Restore paging in an isolated Alertmanager control-plane rehearsal
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+difficulty: hard
+hooks_module: environment/hooks.py
+capability_tags:
+- code_execution
+- configuration
+- filesystem
+- local_service
+- terminal
+harness_demands:
+- error_recovery
+- multi_step_execution
+- safety_boundary
+- state_management
+- tool_selection
+- verification_behavior
+stressors:
+- dirty_input
+- partial_failure
+- high_stakes_rules
+required_artifacts:
+- repo/alertmanager.yml
+task_family: 094-alert-routing-repair
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - IT-04
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - change_record.md
+  allowed_modified:
+  - repo/alertmanager.yml
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    PyYAML: 6.0.2
+    python3: "3.12"
+  inputs:
+  - environment/hooks.py
+  - environment/alertmanager_validator.py
+  - environment/alertmanager_validator.sha256
+  grader: {}
+  services:
+  - name: alertmanager
+    script: environment/service.py
+    port: 8080
+    health_path: /healthz
+    state_file: alertmanager-rehearsal-state.json
+    health_timeout_sec: 30
+schema_version: 2

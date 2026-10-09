@@ -1,0 +1,13 @@
+metric,scope,period,plan,actual,unit,source_note
+revenue,total,2026Q2,1200,1146,万元,季度财务汇总
+revenue,华东,2026Q2,330,348,万元,区域财务汇总
+revenue,华南,2026Q2,290,272,万元,区域财务汇总
+revenue,华北,2026Q2,310,286,万元,区域财务汇总
+revenue,西部,2026Q2,270,240,万元,区域财务汇总
+gross_margin,total,2026Q2,38.0,36.4,%,季度财务汇总
+on_time_delivery,total,2026Q2,96.0,92.8,%,订单履约汇总
+return_rate,total,2026Q2,4.0,5.2,%,售后汇总
+on_time_delivery,西部,2026Q2,94.0,89.2,%,西部订单履约汇总
+return_rate,华北,2026Q2,4.5,6.1,%,华北售后汇总
+promotion_margin,total,2026-06,34.0,31.8,%,六月促销订单汇总
+

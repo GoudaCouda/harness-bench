@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-228",
+  "gate_clock_epoch": 1775691200,
+  "events": [
+    {
+      "record_id": "d1",
+      "stream_id": "clicks",
+      "event_time": 1775691000,
+      "processing_time": 1775691200,
+      "watermark": 1775691200,
+      "allowed_lateness": 300
+    },
+    {
+      "record_id": "d2",
+      "stream_id": "clicks",
+      "event_time": 1775690000,
+      "processing_time": 1775691200,
+      "watermark": 1775691200,
+      "allowed_lateness": 300
+    },
+    {
+      "record_id": "d3",
+      "stream_id": "clicks",
+      "event_time": 1775690900,
+      "processing_time": 1775680000,
+      "watermark": 1775691200,
+      "allowed_lateness": 300
+    },
+    {
+      "record_id": "d1",
+      "stream_id": "clicks",
+      "event_time": 1775691000,
+      "processing_time": 1775691200,
+      "watermark": 1775691200,
+      "allowed_lateness": 300
+    },
+    {
+      "record_id": "d5",
+      "stream_id": "",
+      "event_time": 1775691100,
+      "processing_time": 1775691200,
+      "watermark": 1775691200,
+      "allowed_lateness": 300
+    },
+    {
+      "record_id": "d6",
+      "stream_id": "clicks",
+      "event_time": 1775690800,
+      "processing_time": 1775691200,
+      "watermark": 1775691200,
+      "allowed_lateness": 100
+    },
+    {
+      "record_id": "d7",
+      "stream_id": "clicks",
+      "event_time": 1775691199,
+      "processing_time": 1775691300,
+      "watermark": 0,
+      "allowed_lateness": 300
+    }
+  ]
+}

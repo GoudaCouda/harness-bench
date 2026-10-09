@@ -1,0 +1,7 @@
+{
+  "external_actions_executed": false,
+  "recovery_id": "REC-OSHA-2026-0716-A",
+  "semantic_digest": "497dd261cb1bfad349af3d2bf82bf002eb5ca31d748ac9564f9847c87892f70e",
+  "source_checkpoint": "37f2a0728a62e4f950ce3ac2255c5eca135b41d3c6726d55d7004174cc59b8d3",
+  "status": "applied_local"
+}

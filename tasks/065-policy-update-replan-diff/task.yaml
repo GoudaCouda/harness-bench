@@ -1,0 +1,55 @@
+task_id: 065-policy-update-replan-diff
+title: Apply a late regional policy update to an active rollout plan
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Coordination
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- project_management
+- code_execution
+harness_demands:
+- evidence_grounding
+- state_management
+- multi_step_execution
+- verification_behavior
+stressors:
+- high_stakes_rules
+- partial_failure
+- cross_record_dependency
+required_artifacts:
+- current_plan.json
+- plan_diff.md
+- rollout_state.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-065
+task_family: 065-policy-update-replan-diff
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - plan_diff.md
+  - rollout_state.json
+  allowed_modified:
+  - current_plan.json
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

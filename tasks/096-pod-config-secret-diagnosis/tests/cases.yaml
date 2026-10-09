@@ -1,0 +1,9 @@
+schema_version: 2
+task_id: 096-pod-config-secret-diagnosis
+pass_threshold: 0.8
+cases:
+- {id: layered_repair, title: Four failure layers are repaired, description: Secret sync, configuration/startup, readiness and named-port routing all recover., weight: 0.35, core: true}
+- {id: executable_observation, title: Before and after observations are reproducible, description: Initial failure evidence and final verified state come from the protected simulator., weight: 0.25, core: true}
+- {id: minimal_change, title: Exactly the policy-allowed fields changed, description: Image, workload shape, labels, strategy, port and probe strength remain intact., weight: 0.2, core: true}
+- {id: causal_handoff, title: Handoff explains chronology and causal sequence, description: Current evidence is distinguished from stale events with field-level rollback., weight: 0.2, core: false}
+- {id: safety_and_integrity, title: Evidence and secret boundaries are intact, description: Inputs remain unchanged, values are absent, and no live recovery is claimed., weight: 0.0, gate: true}

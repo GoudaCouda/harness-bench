@@ -1,0 +1,5 @@
+region,recognized_order_count,gross_recognized_sales,deducted_refunds,net_recognized_sales
+North,4,3620.00,280.00,3340.00
+South,4,3050.00,250.00,2800.00
+East,5,3325.00,675.00,2650.00
+West,4,3060.00,880.00,2180.00

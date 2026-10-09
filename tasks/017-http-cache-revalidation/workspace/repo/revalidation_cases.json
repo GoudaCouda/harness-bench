@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "weak-etag-hit",
+    "request": {"method":"GET","uri":"/catalog","headers":{"accept-language":"en","if-none-match":"W/\"rev-7\""}},
+    "stored": {"uri":"/catalog","request_headers":{"accept-language":"en"},"response_headers":{"etag":"\"rev-7\"","last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":"Accept-Language"}}
+  },
+  {
+    "case_id": "variant-miss",
+    "request": {"method":"GET","uri":"/catalog","headers":{"accept-language":"fr","if-none-match":"\"rev-7\""}},
+    "stored": {"uri":"/catalog","request_headers":{"accept-language":"en"},"response_headers":{"etag":"\"rev-7\"","last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":"accept-language"}}
+  },
+  {
+    "case_id": "etag-precedence",
+    "request": {"method":"HEAD","uri":"/status","headers":{"if-none-match":"\"other\"","if-modified-since":"Wed, 26 Aug 2026 10:00:00 GMT"}},
+    "stored": {"uri":"/status","request_headers":{},"response_headers":{"etag":"\"current\"","last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":null}}
+  },
+  {
+    "case_id": "date-hit",
+    "request": {"method":"GET","uri":"/news","headers":{"if-modified-since":"Wed, 26 Aug 2026 10:00:00 GMT"}},
+    "stored": {"uri":"/news","request_headers":{},"response_headers":{"etag":null,"last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":""}}
+  }
+]

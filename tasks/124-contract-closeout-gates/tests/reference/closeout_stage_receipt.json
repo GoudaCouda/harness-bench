@@ -1,0 +1,11 @@
+{
+  "external_actions_executed": false,
+  "logical_state_sha256": "0ee4d12e836e08c5bfe5638eb495fe766c361ceb4e3426d4151833eff7d96b5a",
+  "phase": "staged_pending_controller_approval",
+  "receipt_type": "local_contract_closeout_stage",
+  "review_id": "CLOSEOUT-2026-08-15-R1",
+  "semantic_plan_sha256": "f83b6057dce9afed7fa5e0d63e261d5be27c27e9f0307b8df4b42bf136710906",
+  "source_checkpoint_sha256": "177bcdc5b7df571fd258339fec49a91fbf504ee998f986fec0d760b75367e7e2",
+  "stage_token": "14adb00ee8cf0fb9d947a20fb34f1509f8d4f193ba0cf07eee4de8751e4f4848",
+  "verification_sha256": "7584ef9a57e40b08c68d5459471c2b0fb6188981b39c8b7452f99f9afc3c19e5"
+}

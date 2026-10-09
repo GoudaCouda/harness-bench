@@ -1,0 +1,4 @@
+sku,available_units,replacement_eta,warehouse
+SKU-HUB,1,2026-06-06,WH-EAST
+SKU-MONITOR,1,2026-06-08,WH-EAST
+SKU-ROUTER,0,2026-06-08,WH-WEST

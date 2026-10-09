@@ -1,0 +1,6 @@
+[
+  {"case_id":"partial-upgrade","plan":{"decision":"rollback_required","actions":[{"kind":"remove","path":"nova/new.py"},{"kind":"restore","path":"nova/core.py","digest":"sha256=b2xkY29yZQ","owners":["base"]}],"conflicts":[]}},
+  {"case_id":"shared-identical-content","plan":{"decision":"rollback_required","actions":[{"kind":"detach_owner","path":"shared/hooks.py","owner":"nova"}],"conflicts":[]}},
+  {"case_id":"post-crash-drift","plan":{"decision":"manual_intervention","actions":[],"conflicts":[{"path":"nova/b.py","reason":"post_write_drift"}]}},
+  {"case_id":"idempotent-retry","plan":{"decision":"already_rolled_back","actions":[],"conflicts":[]}}
+]

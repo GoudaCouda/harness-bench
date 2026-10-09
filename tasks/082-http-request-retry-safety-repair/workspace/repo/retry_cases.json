@@ -1,0 +1,86 @@
+[
+  {
+    "case_id": "unsent-post",
+    "request": {
+      "method": "POST",
+      "operation_id": "job-17",
+      "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "idempotency_key": null,
+      "key_replay_safe": false,
+      "max_attempts": 4,
+      "base_delay_ms": 100,
+      "max_delay_ms": 10000
+    },
+    "attempt_number": 1,
+    "observation": {
+      "outcome": "connect_failure",
+      "status": null,
+      "retry_after_ms": null,
+      "application_state": null,
+      "bytes_sent": 0
+    }
+  },
+  {
+    "case_id": "lost-post-with-enforced-key",
+    "request": {
+      "method": "POST",
+      "operation_id": "charge-9",
+      "body_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "idempotency_key": "charge-9-v1",
+      "key_replay_safe": true,
+      "max_attempts": 5,
+      "base_delay_ms": 100,
+      "max_delay_ms": 10000
+    },
+    "attempt_number": 3,
+    "observation": {
+      "outcome": "response_lost",
+      "status": null,
+      "retry_after_ms": null,
+      "application_state": null,
+      "bytes_sent": 512
+    }
+  },
+  {
+    "case_id": "unknown-post-without-key",
+    "request": {
+      "method": "POST",
+      "operation_id": "job-23",
+      "body_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "idempotency_key": null,
+      "key_replay_safe": false,
+      "max_attempts": 4,
+      "base_delay_ms": 200,
+      "max_delay_ms": 10000
+    },
+    "attempt_number": 2,
+    "observation": {
+      "outcome": "http",
+      "status": 503,
+      "retry_after_ms": null,
+      "application_state": "unknown",
+      "bytes_sent": 300
+    }
+  },
+  {
+    "case_id": "get-rate-limited",
+    "request": {
+      "method": "GET",
+      "operation_id": "read-7",
+      "body_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "idempotency_key": null,
+      "key_replay_safe": false,
+      "max_attempts": 4,
+      "base_delay_ms": 250,
+      "max_delay_ms": 10000
+    },
+    "attempt_number": 2,
+    "observation": {
+      "outcome": "http",
+      "status": 429,
+      "retry_after_ms": 5000,
+      "application_state": "not_applied",
+      "bytes_sent": 0
+    }
+  }
+]

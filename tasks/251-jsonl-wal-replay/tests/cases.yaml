@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 251-jsonl-wal-replay
+pass_threshold: 0.8
+cases:
+- id: store_state
+  title: The rebuilt store matches first-op-wins replay
+  description: store.json equals the independent WAL kernel.
+  weight: 0.5
+  core: true
+- id: replay_report
+  title: The report records applied ops, duplicates, and a torn tail
+  description: replay_report.json matches the independent kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain torn tails, idempotency, and residual risk
+  description: REPLAY_NOTES.md covers torn tails, duplicate op_id, deletes, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: The protected WAL remains unchanged
+  description: wal.jsonl stays byte-identical and the workspace has no linked or special artifacts.
+  weight: 0.0
+  core: false
+  gate: true

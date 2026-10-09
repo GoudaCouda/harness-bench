@@ -1,0 +1,134 @@
+{
+  "bundle_id": "att-2026-03-16",
+  "verified_at": 1773651600,
+  "records": {
+    "art-bad-digest": {
+      "decision": "digest_mismatch",
+      "digest": "f74b211310a0fb571127d62d0b2cbbc40e676b703a9f74054378ff451c887921",
+      "key_id": "k-root-2",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-bad-sig": {
+      "decision": "bad_signature",
+      "digest": "4afd3b725f86da385b76d39c99268a3db4d881ef697b149aabea89040613c3f3",
+      "key_id": "k-root-2",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-cached-ok": {
+      "decision": "accepted",
+      "digest": "6cdda425ef5e156652d6d52b0f47dd1bd4bf0366b4a74b2daed0ce2af98258e0",
+      "key_id": "k-root-2",
+      "used_cache": true,
+      "verified_at": 1773651600
+    },
+    "art-expired": {
+      "decision": "key_not_valid",
+      "digest": "ecbfd3245960546d1ccfdd40aec5203b516327ecc74e7e86d2f671dca200a7bd",
+      "key_id": "k-root-1",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-ok": {
+      "decision": "accepted",
+      "digest": "522ee0c3c2232e3874308962f41e54453b12ecf3891677c9f88ee8eb1a7833b0",
+      "key_id": "k-root-2",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-revoked": {
+      "decision": "key_revoked",
+      "digest": "04e3745484ea4b20e94b9f1f9a963251469805c70f76e7585d1eee611b206f78",
+      "key_id": "k-old",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-stale-cache": {
+      "decision": "stale_cache_reverified",
+      "digest": "66777cdf0568b64d18fb40a9bcf3009f632d349c45433dce9bece66c22af6e87",
+      "key_id": "k-root-2",
+      "used_cache": false,
+      "verified_at": 1773651600
+    },
+    "art-unknown": {
+      "decision": "unknown_key",
+      "digest": "b5d995890cc03815f8c52b5d6b7319c790c2e51831d65dfa9cbce8bcac0715d9",
+      "key_id": "k-missing",
+      "used_cache": false,
+      "verified_at": 1773651600
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "art-ok",
+      "decision": "accepted",
+      "reason": "fresh_verify",
+      "used_cache": false,
+      "digest": "522ee0c3c2232e3874308962f41e54453b12ecf3891677c9f88ee8eb1a7833b0",
+      "key_generation": 2
+    },
+    {
+      "artifact_id": "art-bad-digest",
+      "decision": "digest_mismatch",
+      "reason": "payload_digest_does_not_match_claimed_digest",
+      "used_cache": false
+    },
+    {
+      "artifact_id": "art-bad-sig",
+      "decision": "bad_signature",
+      "reason": "hmac_does_not_match_current_key",
+      "used_cache": false,
+      "ignored_stale_cache": true
+    },
+    {
+      "artifact_id": "art-revoked",
+      "decision": "key_revoked",
+      "reason": "key_not_usable_at_signed_at",
+      "used_cache": false,
+      "ignored_stale_cache": false
+    },
+    {
+      "artifact_id": "art-expired",
+      "decision": "key_not_valid",
+      "reason": "key_not_usable_at_signed_at",
+      "used_cache": false,
+      "ignored_stale_cache": false
+    },
+    {
+      "artifact_id": "art-unknown",
+      "decision": "unknown_key",
+      "reason": "key_id_not_in_keyring",
+      "used_cache": false
+    },
+    {
+      "artifact_id": "art-cached-ok",
+      "decision": "accepted",
+      "reason": "cache_hit",
+      "used_cache": true,
+      "digest": "6cdda425ef5e156652d6d52b0f47dd1bd4bf0366b4a74b2daed0ce2af98258e0",
+      "key_generation": 2
+    },
+    {
+      "artifact_id": "art-stale-cache",
+      "decision": "stale_cache_reverified",
+      "reason": "hmac_does_not_match_current_key",
+      "used_cache": false,
+      "ignored_stale_cache": true
+    }
+  ],
+  "counts": {
+    "accepted": 2,
+    "digest_mismatch": 1,
+    "bad_signature": 1,
+    "key_revoked": 1,
+    "key_not_valid": 1,
+    "unknown_key": 1,
+    "stale_cache_reverified": 1
+  },
+  "accepted_ids": [
+    "art-ok",
+    "art-cached-ok"
+  ],
+  "accepted_count": 2
+}

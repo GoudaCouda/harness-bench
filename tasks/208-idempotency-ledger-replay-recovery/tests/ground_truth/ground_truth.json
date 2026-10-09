@@ -1,0 +1,53 @@
+{
+  "policy": {
+    "recovery_clock_epoch": 1773478800,
+    "record_ttl_seconds": 86400
+  },
+  "artifacts": {
+    "recovery_receipt": {
+      "queue_id": "replay-2026-03-14",
+      "recovery_clock_epoch": 1773478800,
+      "counts": {
+        "replayed": 1,
+        "conflict": 1,
+        "executed": 4,
+        "deferred": 1,
+        "rejected": 1
+      },
+      "settled_total_cents": 95500,
+      "state": "recovered"
+    },
+    "verification": {
+      "controller": "ledgerctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "dropped_expired": [
+      "pay-1004"
+    ],
+    "released_leases": [
+      "pay-1002"
+    ],
+    "decision_by_request": {
+      "req-01": "replayed",
+      "req-02": "conflict",
+      "req-03": "executed",
+      "req-04": "executed",
+      "req-05": "executed",
+      "req-06": "executed",
+      "req-07": "rejected",
+      "req-08": "deferred"
+    },
+    "settled_total_cents": 95500,
+    "final_ledger_keys": [
+      "pay-1001",
+      "pay-1002",
+      "pay-1003",
+      "pay-1004",
+      "pay-1005",
+      "pay-1006",
+      "pay-1007"
+    ]
+  }
+}

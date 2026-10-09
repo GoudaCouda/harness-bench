@@ -1,0 +1,10 @@
+[
+  {"job": "unit", "sha": "91ac2e", "status": "pass", "attempt": 1},
+  {"job": "lint", "sha": "91ac2e", "status": "pass", "attempt": 1},
+  {"job": "windows", "sha": "91ac2e", "status": "runner_lost", "attempt": 1},
+  {"job": "macos", "sha": "91ac2e", "status": "runner_lost", "attempt": 1},
+  {"job": "integration", "sha": "91ac2e", "status": "assertion_failed", "attempt": 1},
+  {"job": "docs", "sha": "91ac2e", "status": "broken_link", "attempt": 1},
+  {"job": "package", "sha": "old777", "status": "pass", "attempt": 1, "digest": "sha256:old"},
+  {"job": "e2e", "sha": "91ac2e", "status": "cancelled_fail_fast", "attempt": 1, "blocked_by": ["integration", "docs"]}
+]

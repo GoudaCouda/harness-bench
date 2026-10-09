@@ -1,0 +1,29 @@
+{
+  "ranges": [
+    {
+      "container_id": "CT-01",
+      "coverage_end_utc": "2026-11-01T06:00:00Z",
+      "coverage_start_utc": "2026-11-01T05:30:00Z",
+      "device_id": "S-A1",
+      "key_id": "DEPOT-LOGGER-QA-2026",
+      "range_id": "RANGE-A-50-53",
+      "readings_sha256": "125408a8cece156330add7539168824d0c2a2b139cdc720d75eb5d39b4af04b2",
+      "sequence_end": 53,
+      "sequence_start": 50,
+      "signature": "abe4373560d0e3a68e732dd400042b2f99faae2367e36d34f1de822484ea8d6b"
+    },
+    {
+      "container_id": "CT-02",
+      "coverage_end_utc": "2026-11-01T05:50:00Z",
+      "coverage_start_utc": "2026-11-01T05:30:00Z",
+      "device_id": "S-B1",
+      "key_id": "DEPOT-LOGGER-QA-2026",
+      "range_id": "RANGE-B-50-52",
+      "readings_sha256": "94e9d8b4ae21311d860ae014214337e842eaa7dedc6e7669d846fc3d48126176",
+      "sequence_end": 52,
+      "sequence_start": 50,
+      "signature": "734521d008f6e5f243f2e7b3531dbd1630527456dc70a9cf3788045855236e6f"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,13 @@
+schema_version: 1
+task_set: archive0
+status: empty_current_release_partition
+source_suite: archive
+source_suite_size: 0
+task_count: 0
+selection_policy:
+  selected_at: '2026-09-01'
+  model_outcomes_used: false
+  changes_main_membership: true
+  relocates_task_directories: true
+  purpose: Standard274 has one active package for every prefix 001 through 274; older packages remain in Git history.
+task_ids: []

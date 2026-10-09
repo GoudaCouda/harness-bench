@@ -1,0 +1,56 @@
+[
+  {
+    "id": "CLIP-INTRO",
+    "title": "Opening bumper",
+    "track": "Video",
+    "start": 0,
+    "duration": 12,
+    "owner": "Mara",
+    "status": "locked"
+  },
+  {
+    "id": "CLIP-BROLL",
+    "title": "Kitchen b-roll",
+    "track": "Video",
+    "start": 18,
+    "duration": 28,
+    "owner": "Noel",
+    "status": "review"
+  },
+  {
+    "id": "CLIP-VO",
+    "title": "Narration take",
+    "track": "Audio",
+    "start": 8,
+    "duration": 42,
+    "owner": "Priya",
+    "status": "review"
+  },
+  {
+    "id": "CLIP-MUSIC",
+    "title": "Ambient loop",
+    "track": "Audio",
+    "start": 52,
+    "duration": 30,
+    "owner": "Priya",
+    "status": "clear"
+  },
+  {
+    "id": "CLIP-CTA",
+    "title": "End card",
+    "track": "Graphics",
+    "start": 78,
+    "duration": 14,
+    "owner": "Mara",
+    "status": "clear"
+  },
+  {
+    "id": "CLIP-LOWER",
+    "title": "Speaker lower third",
+    "track": "Graphics",
+    "start": 24,
+    "duration": 18,
+    "owner": "Noel",
+    "status": "watch"
+  }
+]

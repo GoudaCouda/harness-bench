@@ -1,0 +1,8 @@
+{
+  "recall_checkpoint.json": "79074c92d5b20850f4da92654ef1a3a42ba5f496ea64b05ca58edcf397592c36",
+  "recall_policy.md": "f69ea8e9208c33c41b22ed8dee3281b72c1ceb3a74e2ec47ea4771b19e8efdee",
+  "recall_seed.sql": "756e9623f4fa1d875676af24d45eb62d2aab2e8a6b858869b4afa22029e703a1",
+  "recallctl.py": "9f9781d17f172d0947a555eb0200f9619d02a068510246067698e5d16b8b4bdc",
+  "shipment_events.jsonl": "bad48c28dc8d02a87c88fd9c8270bfd0cef3d2a94120a19d48ef6b8a56e9c2d4",
+  "signed_scope_revisions.json": "f68328721131377a3cb6a97614d88fb19a58147eea0bf914f5e57e24e5e15a2a"
+}

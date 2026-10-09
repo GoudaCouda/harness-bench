@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_001.pdf",
+      "sha256": "06ff1333f75fda4853fee4d10b399daebf0a015753ac3593882ffeaa4b76995f",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-001"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_002.pdf",
+      "sha256": "e7d9a9225353a23ab230a41e591d1948c6a009b48a57dca195c7eac32826762f",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-002"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_003.pdf",
+      "sha256": "3d44e7c80280f4d09c60c91e5e8c7ef56b2b21bda26ce5834efa43b8f984e381",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-003"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_004.pdf",
+      "sha256": "7882d6215aaca021c8070a56a455f9e33dcfadfb7995455c378c8868df9a1249",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-004"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_005.pdf",
+      "sha256": "7b5b61c3d26bc11f4b6988c25ba2ec8628d8a90c25a568873072ce5daf304f17",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-005"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_006.pdf",
+      "sha256": "ce4d39bcbb44cd60ac2ebffd82ab1f3066582ade00c42f2fede611d5fb72fb74",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-006"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_007.pdf",
+      "sha256": "7ec62d23f6dc5042fc5e69e6acee946e118cb41c342a3c317c8e6af0462997b9",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-007"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_008.pdf",
+      "sha256": "e865efe53ed85932e77706db36cdf108f083b391c1701359d1a3ed8d45c8cef9",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-008"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_009.pdf",
+      "sha256": "cf8588fc8211828e20b64a6081c53d7eaa3fe3b6cf48f90949cfbd8ee6f5fa5f",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-009"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_010.pdf",
+      "sha256": "e9f55241140b2171331aeb18dae808489c5a6f1c595e505c7bbca1f5f0a21129",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-010"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "attachments/packet_011.pdf",
+      "sha256": "82632f25180413986cd27f2e85ed124855cb1c54a7cb758a1c247b3e315fef61",
+      "size_bytes": 612,
+      "synthetic_label": "CASE20-DOCUMENT-011"
+    }
+  ],
+  "schema_version": "case20_attachment_manifest_v1"
+}

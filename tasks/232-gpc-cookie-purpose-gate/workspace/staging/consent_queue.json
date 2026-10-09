@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-232",
+  "gate_clock_epoch": 1776036800,
+  "events": [
+    {
+      "purpose_id": "p1",
+      "visitor_id": "v-a",
+      "purpose": "necessary",
+      "gpc": true,
+      "banner_accept": false
+    },
+    {
+      "purpose_id": "p2",
+      "visitor_id": "v-a",
+      "purpose": "marketing",
+      "gpc": true,
+      "banner_accept": true
+    },
+    {
+      "purpose_id": "p3",
+      "visitor_id": "v-b",
+      "purpose": "marketing",
+      "gpc": false,
+      "banner_accept": true
+    },
+    {
+      "purpose_id": "p1",
+      "visitor_id": "v-a",
+      "purpose": "necessary",
+      "gpc": true,
+      "banner_accept": false
+    },
+    {
+      "purpose_id": "p5",
+      "visitor_id": "",
+      "purpose": "necessary",
+      "gpc": false,
+      "banner_accept": true
+    },
+    {
+      "purpose_id": "p6",
+      "visitor_id": "v-c",
+      "purpose": "marketing",
+      "gpc": false,
+      "banner_accept": false
+    },
+    {
+      "purpose_id": "p7",
+      "visitor_id": "v-c",
+      "purpose": "necessary",
+      "gpc": false,
+      "banner_accept": false
+    }
+  ]
+}

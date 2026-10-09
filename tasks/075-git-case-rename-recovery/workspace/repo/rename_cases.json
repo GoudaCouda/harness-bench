@@ -1,0 +1,4 @@
+[
+  {"case_id":"case-only","entries":[{"path":"README.md","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"src/app.py","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}],"requests":[{"from":"README.md","to":"Readme.md"}],"ignore_case":true},
+  {"case_id":"two-file-swap","entries":[{"path":"A.txt","oid":"1111111111111111111111111111111111111111","stage":0},{"path":"B.txt","oid":"2222222222222222222222222222222222222222","stage":0}],"requests":[{"from":"A.txt","to":"B.txt"},{"from":"B.txt","to":"A.txt"}],"ignore_case":false}
+]

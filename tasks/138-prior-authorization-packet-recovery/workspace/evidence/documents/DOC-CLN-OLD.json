@@ -1,0 +1,13 @@
+{
+  "current": false,
+  "document_id": "DOC-CLN-OLD",
+  "document_type": "clinical_note",
+  "effective_at": "2025-02-01",
+  "member_id": "MEM-8731",
+  "patient_id": "PAT-4102",
+  "sensitive_category": null,
+  "service_code": "72148",
+  "signed": true,
+  "synthetic": true,
+  "valid_through": "2025-04-01"
+}

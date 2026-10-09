@@ -1,0 +1,18 @@
+{
+  "audit_sha256": "3cfe431e31282cae29ba0789c5d2dcb2d315f3b1aa686fb9a7cc51774223094b",
+  "coverage_sha256": "c81bf4b913372d8d7fd16045d4ba8be2973bdb0facd3b7dcee39ae99a7ad5fe8",
+  "export_id": "openalex-synthetic-graph-102",
+  "external_actions_executed": false,
+  "graph_sha256": "adfe58abe5b305be014ab91c173e65861623f9ff4bbed6203e35cd0fc8b9b9ff",
+  "input_bundle_sha256": "d3491fdc589442744dab659b67e24e71367b05c8343831c513737b5131c87b42",
+  "page_observations": {
+    "1": {"expected_rows": 3, "file": "works_page1.json", "observed_rows": 3, "page": 1, "row_count_mismatch": null, "status": "consumed"},
+    "2": {"expected_rows": 5, "file": "works_page2.json", "observed_rows": 5, "page": 2, "row_count_mismatch": null, "status": "consumed"},
+    "3": {"expected_rows": 2, "file": "works_page3.json", "observed_rows": null, "page": 3, "row_count_mismatch": null, "status": "declared_not_found"},
+    "4": {"expected_rows": 7, "file": "works_page4.json", "observed_rows": 6, "page": 4, "row_count_mismatch": "page:4:expected:7:observed:6", "status": "consumed"}
+  },
+  "phase": "staged_for_handoff",
+  "revision": 3,
+  "schema_version": 1,
+  "stage_token": "09c47a302104988a774d3fecaf37caa5611ee2e986bb0c0e7d90e4b56aa0241d"
+}

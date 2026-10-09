@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: If you use Harness-Bench, please cite the associated paper.
+title: Harness-Bench
+type: software
+url: https://www.harness-bench.ai/
+repository-code: https://github.com/Qihoo360/harness-bench
+authors:
+  - family-names: Yao
+    given-names: Yilun
+  - family-names: Tan
+    given-names: Xinyu
+  - family-names: Liu
+    given-names: Chao-Hsuan
+  - family-names: Li
+    given-names: Yaoming
+  - family-names: Wang
+    given-names: Zhengyang
+  - family-names: Yu
+    given-names: Wenhan
+  - family-names: Tan
+    given-names: Zhewen
+  - family-names: Tian
+    given-names: Yuxuan
+  - family-names: Zhao
+    given-names: Guangxiang
+  - family-names: Sun
+    given-names: Lin
+  - family-names: Zhang
+    given-names: Xiangzheng
+  - family-names: Yang
+    given-names: Tong
+preferred-citation:
+  type: article
+  title: "Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows"
+  authors:
+    - family-names: Yao
+      given-names: Yilun
+    - family-names: Tan
+      given-names: Xinyu
+    - family-names: Liu
+      given-names: Chao-Hsuan
+    - family-names: Li
+      given-names: Yaoming
+    - family-names: Wang
+      given-names: Zhengyang
+    - family-names: Yu
+      given-names: Wenhan
+    - family-names: Tan
+      given-names: Zhewen
+    - family-names: Tian
+      given-names: Yuxuan
+    - family-names: Zhao
+      given-names: Guangxiang
+    - family-names: Sun
+      given-names: Lin
+    - family-names: Zhang
+      given-names: Xiangzheng
+    - family-names: Yang
+      given-names: Tong
+  year: 2026
+  doi: 10.48550/arXiv.2605.27922
+  url: https://arxiv.org/abs/2605.27922

@@ -1,0 +1,73 @@
+{
+  "background_color": "F7F9FC",
+  "batch_files": {
+    "market_brief.pptx": "market_brief.pptx",
+    "project_update.pptx": "project_update.pptx",
+    "service_review.pptx": "service_review.pptx"
+  },
+  "canvas": {
+    "cx": 12192000,
+    "cy": 6858000,
+    "ratio": "16:9"
+  },
+  "footer_text_format": "纳米 Work｜内部演示｜{slide:02d}",
+  "input_sha256": {
+    "market_brief.pptx": "f238fa1d25cd789cce9f52a3479ffd53f50080b430e840c9ee4498fa0d6115d9",
+    "project_update.pptx": "3b7fafed85711edfc0f0cf265d4cc2271fe73ef24c75905a88cc74bd30fa23b1",
+    "service_review.pptx": "d3c723be5f9ccb9cfe874fde2a34570a580e0f0f6ad0fb586b1411c437170ef8"
+  },
+  "roles": {
+    "ACCENT": {
+      "fill_color": "2F6BFF",
+      "geometry": {
+        "cx": 180000,
+        "cy": 6858000,
+        "x": 0,
+        "y": 0
+      }
+    },
+    "BODY": {
+      "alignment": "l",
+      "bold": false,
+      "font_color": "333333",
+      "font_family": "Noto Sans SC",
+      "font_size_pt": 18,
+      "geometry": {
+        "cx": 10500000,
+        "cy": 3900000,
+        "x": 720000,
+        "y": 1650000
+      },
+      "vertical_anchor": "t"
+    },
+    "FOOTER": {
+      "alignment": "r",
+      "bold": false,
+      "font_color": "6B7280",
+      "font_family": "Noto Sans SC",
+      "font_size_pt": 9,
+      "geometry": {
+        "cx": 10500000,
+        "cy": 300000,
+        "x": 720000,
+        "y": 6220000
+      },
+      "vertical_anchor": "ctr"
+    },
+    "TITLE": {
+      "alignment": "l",
+      "bold": true,
+      "font_color": "17365D",
+      "font_family": "Noto Sans SC",
+      "font_size_pt": 28,
+      "geometry": {
+        "cx": 10500000,
+        "cy": 900000,
+        "x": 720000,
+        "y": 430000
+      },
+      "vertical_anchor": "ctr"
+    }
+  },
+  "schema_version": "case06_presentation_style_v1"
+}

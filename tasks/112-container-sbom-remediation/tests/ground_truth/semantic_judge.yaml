@@ -1,0 +1,23 @@
+schema_version: 1
+task_id: 112-container-sbom-remediation
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Container remediation handoff is professionally complete
+  question: Does the handoff accurately explain both vulnerable dependency paths,
+    the least-change pair, the Node-engine and native-glibc rejected alternatives,
+    clean SBOM/scan closure, runtime and native ABI compatibility, preserved
+    builder/source/base provenance bound to the new lock and image, and the local
+    pending-approval no-push/no-deployment boundary?
+  pass_anchors:
+  - Equivalent professional wording and section organization are acceptable when
+    every dependency, verification, provenance, and boundary relationship is accurate.
+  fail_anchors:
+  - Omitting one vulnerable path or decoy, contradicting structured state, or
+    claiming a push, deployment, approval, publication, or notification fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

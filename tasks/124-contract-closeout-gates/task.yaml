@@ -1,0 +1,75 @@
+task_id: 124-contract-closeout-gates
+title: Recover an Interrupted Contract Closeout Review
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- structured_data
+- contract_operations
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- out_of_order_events
+- interrupted_commit
+- late_cure
+- blocker_precedence
+- source_checkpoint
+- semantic_replay
+required_artifacts:
+- closeout.db
+- closeout_plan.json
+- closeout_verification.json
+- closeout_stage_receipt.json
+- closeout_handoff.md
+task_family: business-contract-closeout-recovery
+variant: interrupted-audit-with-late-cures
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - BO-04
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - closeout_plan.json
+  - closeout_verification.json
+  - closeout_stage_receipt.json
+  - closeout_handoff.md
+  allowed_modified:
+  - closeout.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: controller_handoff
+  max_fallback_weight: 0.08
+schema_version: 2

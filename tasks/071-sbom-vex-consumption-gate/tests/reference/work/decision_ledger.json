@@ -1,0 +1,14 @@
+{
+  "decisions": [
+    {"component_purl": "pkg:pypi/requests@2.31.0", "disposition": "block_release", "effective_status": "affected", "kev": true, "priority": "emergency", "rejection_reasons": ["product_version_mismatch", "fixed_version_mismatch"], "scope": "in_release", "vex_accepted": false, "vex_statement_id": "VEX-7101", "vulnerability_id": "CVE-SYN-2026-7101"},
+    {"component_purl": "pkg:pypi/jinja2@3.1.2", "disposition": "accept_with_evidence", "effective_status": "not_affected", "kev": false, "priority": "documented", "rejection_reasons": [], "scope": "in_release", "vex_accepted": true, "vex_statement_id": "VEX-7102", "vulnerability_id": "CVE-SYN-2026-7102"},
+    {"component_purl": "pkg:pypi/urllib3@2.0.4", "disposition": "quarantine_review", "effective_status": "under_investigation", "kev": false, "priority": "high", "rejection_reasons": [], "scope": "in_release", "vex_accepted": true, "vex_statement_id": "VEX-7103", "vulnerability_id": "CVE-SYN-2026-7103"},
+    {"component_purl": "pkg:pypi/pyyaml@6.0.1", "disposition": "block_release", "effective_status": "affected", "kev": false, "priority": "high", "rejection_reasons": ["not_affected_justification_required", "not_affected_impact_statement_required"], "scope": "in_release", "vex_accepted": false, "vex_statement_id": "VEX-7104", "vulnerability_id": "CVE-SYN-2026-7104"},
+    {"component_purl": "pkg:pypi/idna@3.6", "disposition": "block_release", "effective_status": "affected", "kev": false, "priority": "high", "rejection_reasons": ["untrusted_signer", "payload_digest_mismatch"], "scope": "in_release", "vex_accepted": false, "vex_statement_id": "VEX-7105", "vulnerability_id": "CVE-SYN-2026-7105"}
+  ],
+  "out_of_scope": [
+    {"component_purl": "pkg:npm/left-pad", "kev": true, "reason": "component_not_present", "vulnerability_id": "CVE-SYN-2026-7199"}
+  ],
+  "policy_version": "2026.08",
+  "release_id": "REL-2026-08-17-A"
+}

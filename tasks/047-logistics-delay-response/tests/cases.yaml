@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 047-logistics-delay-response
+pass_threshold: 0.8
+cases:
+- {id: delayed_recovery_paths, title: Each delayed shipment receives the best feasible recovery path, description: Standard VIP and premium decisions respect inventory carrier options tiers and cutoff precedence., weight: 0.40, core: true}
+- {id: non_delay_evidence_handling, title: On-track and missing-evidence shipments are not misrepresented, description: The clean shipment is monitored and the missing ETA is traced before any customer delay claim., weight: 0.20, core: true}
+- {id: safe_customer_communications, title: Drafts accurately bound every confirmed delay, description: Four messages state estimates and proposed actions without internal notes guarantees or unsupported execution., weight: 0.20, core: true}
+- {id: actionable_shift_handoff, title: Owners deadlines and reasons make the queue executable, description: Every row routes a concrete next step before the relevant operational cutoff., weight: 0.10, core: false}
+- {id: complete_exception_ledger, title: The six-shipment ledger is complete and unique, description: Public schema unique IDs and traceable state provide an auditable handoff., weight: 0.10, core: false}
+- {id: source_and_execution_boundary, title: Sources and execution authority are preserved, description: Inputs remain unchanged and no external recovery or communication is claimed as completed., weight: 0.0, gate: true}

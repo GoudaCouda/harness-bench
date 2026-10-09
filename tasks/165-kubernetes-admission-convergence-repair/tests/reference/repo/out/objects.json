@@ -1,0 +1,7 @@
+[
+  {"fields":{"metadata/labels/team":"platform","metadata/name":"api","spec/security/run_as_non_root":true},"request_id":"r1"},
+  {"fields":{"metadata/name":"worker","spec/security/run_as_non_root":true},"request_id":"r2"},
+  {"fields":{"metadata/name":"dns","spec/security/run_as_non_root":true},"request_id":"r3"},
+  {"fields":{"metadata/name":"web"},"request_id":"r4"},
+  {"fields":{"metadata/name":"edge"},"request_id":"r5"}
+]

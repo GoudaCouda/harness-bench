@@ -1,0 +1,80 @@
+{
+  "schema_version": "nami_work_case02_oracle_facts_v1",
+  "title": "结算服务 SEV-1 事故复盘",
+  "headings": [
+    "1. 事故摘要",
+    "2. 影响范围",
+    "3. 事件时间线",
+    "4. 根因分析与证据链",
+    "5. 恢复过程",
+    "6. 干扰告警排除",
+    "7. 改进行动项"
+  ],
+  "metadata": {
+    "事故编号": "INC-2026-0712-SETTLE-01",
+    "等级": "SEV-1",
+    "服务": "settlement-api",
+    "区域": "east-1",
+    "影响时段": "2026-07-12 10:03–10:24（21分钟）"
+  },
+  "timeline": [
+    {"time": "09:58", "required_terms": ["CHG-2026-0712-041", "部署", "12"], "evidence": ["CHANGE-EV-041"]},
+    {"time": "10:02", "required_terms": ["v42", "db.pool.max=12", "重载"], "evidence": ["LOG-SVC-013"]},
+    {"time": "10:03", "required_terms": ["连接池耗尽", "active=12", "pending=286"], "evidence": ["LOG-SVC-020"]},
+    {"time": "10:04", "required_terms": ["ALT-DB-701", "告警"], "evidence": ["ALERT-EV-DB-701"]},
+    {"time": "10:17", "required_terms": ["回滚", "批准"], "evidence": ["LOG-SVC-038"]},
+    {"time": "10:18", "required_terms": ["回滚", "启动"], "evidence": ["LOG-SVC-040"]},
+    {"time": "10:22", "required_terms": ["v41", "db.pool.max=120", "恢复"], "evidence": ["LOG-SVC-044"]},
+    {"time": "10:24", "required_terms": ["pending=0", "错误率0.3%", "恢复"], "evidence": ["LOG-SVC-047"]},
+    {"time": "10:28", "required_terms": ["ALT-DB-701", "解除"], "evidence": ["LOG-SVC-051"]},
+    {"time": "10:42", "required_terms": ["934", "重试队列", "清空"], "evidence": ["LOG-SVC-060"]}
+  ],
+  "impact": [
+    {"metric": "受影响时段", "required_terms": ["10:03", "10:24", "21分钟"], "evidence": ["METRIC-EV-IMPACT-01"]},
+    {"metric": "请求失败", "required_terms": ["1,260", "4,200", "30.0%"], "evidence": ["METRIC-EV-IMPACT-01"]},
+    {"metric": "受影响商户", "required_terms": ["87", "家"], "evidence": ["METRIC-EV-IMPACT-01"]},
+    {"metric": "延迟订单", "required_terms": ["934", "10:42", "清空"], "evidence": ["METRIC-EV-IMPACT-01", "LOG-SVC-060"]},
+    {"metric": "数据完整性", "required_terms": ["丢失0", "重复结算0"], "evidence": ["METRIC-EV-IMPACT-01", "LOG-SVC-061"]}
+  ],
+  "root_cause": [
+    {"step": "变更引入", "required_terms": ["CHG-2026-0712-041", "120", "160", "12"], "evidence": ["CHANGE-EV-041"]},
+    {"step": "故障机制", "required_terms": ["v42", "db.pool.max=12", "active=12", "idle=0", "pending=286"], "evidence": ["LOG-SVC-013", "LOG-SVC-020"]},
+    {"step": "因果闭环", "required_terms": ["v41", "db.pool.max=120", "pending=0", "错误率0.3%"], "evidence": ["LOG-SVC-044", "LOG-SVC-047"]},
+    {"step": "直接根因", "required_terms": ["settlement-prod-v42.yaml", "配置误写", "生产下限", "灰度"], "evidence": ["CHANGE-EV-041"]}
+  ],
+  "recovery": [
+    {"time": "10:17", "required_terms": ["批准", "回滚", "v41"], "evidence": ["LOG-SVC-038"]},
+    {"time": "10:18", "required_terms": ["启动", "v42", "v41"], "evidence": ["LOG-SVC-040"]},
+    {"time": "10:22", "required_terms": ["重载", "db.pool.max=120"], "evidence": ["LOG-SVC-044"]},
+    {"time": "10:24", "required_terms": ["pending=0", "错误率0.3%"], "evidence": ["LOG-SVC-047"]},
+    {"time": "10:42", "required_terms": ["934", "清空"], "evidence": ["LOG-SVC-060"]}
+  ],
+  "distractors": [
+    {"alert": "ALT-CPU-112", "required_terms": ["排除", "checkout-canary", "west-2", "CPU 37%"], "evidence": ["ALERT-EV-CPU-112", "LOG-SVC-032"]},
+    {"alert": "ALT-SSL-209", "required_terms": ["排除", "report-exporter", "TLS错误为0", "173天"], "evidence": ["ALERT-EV-SSL-209", "LOG-SVC-032"]}
+  ],
+  "actions": [
+    {"action": "ACT-01 配置数值门禁", "owner": "周岚", "deadline": "2026-07-15", "required_terms": ["db.pool.max", "80", "CI", "拒绝"]},
+    {"action": "ACT-02 灰度观察门禁", "owner": "陈恺", "deadline": "2026-07-17", "required_terms": ["10分钟", "pending=0", "错误率<1%"]},
+    {"action": "ACT-03 连接池饱和告警", "owner": "王晟", "deadline": "2026-07-14", "required_terms": ["90%", "2分钟", "值班"]},
+    {"action": "ACT-04 回滚演练", "owner": "李然", "deadline": "2026-07-22", "required_terms": ["8分钟", "无数据丢失", "演练记录"]}
+  ],
+  "known_evidence_ids": [
+    "CHANGE-EV-041",
+    "LOG-SVC-013",
+    "LOG-SVC-020",
+    "ALERT-EV-DB-701",
+    "LOG-SVC-038",
+    "LOG-SVC-040",
+    "LOG-SVC-044",
+    "LOG-SVC-047",
+    "LOG-SVC-051",
+    "LOG-SVC-060",
+    "METRIC-EV-IMPACT-01",
+    "LOG-SVC-061",
+    "ALERT-EV-CPU-112",
+    "ALERT-EV-SSL-209",
+    "LOG-SVC-032"
+  ],
+  "distractor_ids": ["ALT-CPU-112", "ALT-SSL-209"]
+}

@@ -1,0 +1,10 @@
+{
+  "account_last4": "5566",
+  "amount_cents": 500000,
+  "closing_id": "ESC-101",
+  "document_id": "DOC-INS-101-TAX",
+  "instruction_id": "INS-101-TAX",
+  "payee_id": "P-TAX",
+  "schema_version": 1,
+  "signed": true
+}

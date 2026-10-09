@@ -1,0 +1,5 @@
+service,tradeoff,risk,mitigation
+all,budget,Traffic growth could exhaust the 0.780 hourly budget,Alert before combined hourly cost reaches the budget
+pricing-worker,spot availability,Spot interruption would remove discounted capacity,The selected m7i.large plan is fully on-demand
+checkout-api,incompatible instance,Burstable t3.large is not approved for launch traffic,Exclude every instance with compatible=false
+checkout-api,SLO headroom,Actual launch traffic could exceed the forecast,Retain 551.44 RPS of capacity above the required headroom target

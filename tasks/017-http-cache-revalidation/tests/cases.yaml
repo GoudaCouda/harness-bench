@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 017-http-cache-revalidation
+pass_threshold: 0.8
+cases:
+- id: validator_and_variant_behavior
+  title: Validators and representation variants follow HTTP semantics
+  description: URI/method/Vary selection, weak ETags, If-None-Match precedence, dates, output shape, and
+    immutability are correct.
+  weight: 0.45
+  core: true
+- id: malformed_and_boundary_edges
+  title: Malformed headers and calendar boundaries bypass safely
+  description: Invalid ETags, Vary values, schemas, and HTTP dates never manufacture a 304.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_revalidation_report
+  title: Visible decisions are reproducible and exact
+  description: The report preserves case order and contains decisions computed by the submitted implementation.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Repair notes explain and verify the protocol fix
+  description: Notes cover Vary and validator precedence, record the exact test command/result, and name
+    an integration risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Protocol/code defects and unsupported action claims reduce their scored
+    cases.
+  weight: 0.0
+  gate: true

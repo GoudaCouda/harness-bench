@@ -1,0 +1,17 @@
+[
+  {
+    "batch_id": "expiry-and-fifo",
+    "now_ms": 1000,
+    "state": {"capacity": 5, "next_fence": 8, "leases": [{"request_id": "old", "owner": "edge-a", "units": 4, "acquired_ms": 100, "expires_ms": 1000, "fence": 7}]},
+    "requests": [
+      {"request_id": "r-late", "owner": "edge-c", "units": 3, "requested_ms": 950, "ttl_ms": 200},
+      {"request_id": "r-first", "owner": "edge-b", "units": 3, "requested_ms": 900, "ttl_ms": 300}
+    ]
+  },
+  {
+    "batch_id": "idempotent-replay",
+    "now_ms": 500,
+    "state": {"capacity": 4, "next_fence": 12, "leases": [{"request_id": "same", "owner": "worker-1", "units": 2, "acquired_ms": 400, "expires_ms": 700, "fence": 11}]},
+    "requests": [{"request_id": "same", "owner": "worker-1", "units": 2, "requested_ms": 450, "ttl_ms": 999}]
+  }
+]

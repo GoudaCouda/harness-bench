@@ -1,0 +1,40 @@
+{
+  "services": [
+    {
+      "service": "checkout-api",
+      "region": "us-east",
+      "min_zones": 2,
+      "zone_counts": {"zone-a": 2, "zone-b": 1},
+      "forecast_peak_rps": 2391.2,
+      "required_capacity_rps": 3108.56,
+      "required_headroom_pct": 0.3,
+      "selected_instance_type": "c7g.xlarge",
+      "on_demand_count": 3,
+      "spot_count": 0,
+      "provided_capacity_rps": 3660,
+      "hourly_cost_usd": 0.456,
+      "slo_headroom_rps": 551.44
+    },
+    {
+      "service": "pricing-worker",
+      "region": "us-east",
+      "min_zones": 1,
+      "zone_counts": {"zone-a": 1},
+      "forecast_peak_rps": 575,
+      "required_capacity_rps": 690,
+      "required_headroom_pct": 0.2,
+      "selected_instance_type": "m7i.large",
+      "on_demand_count": 1,
+      "spot_count": 0,
+      "provided_capacity_rps": 700,
+      "hourly_cost_usd": 0.096,
+      "slo_headroom_rps": 10
+    }
+  ],
+  "total_hourly_cost_usd": 0.552,
+  "assumptions": [
+    "The latest seven rows are selected separately for each service by date.",
+    "A missing spot price means spot is unavailable.",
+    "Abstract zones are equivalent for this offline exercise."
+  ]
+}

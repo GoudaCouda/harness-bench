@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "case_number": 18,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}"
+  ],
+  "groups": [
+    [
+      "video_spec",
+      "audio_spec",
+      "size_spec"
+    ],
+    [
+      "content_fidelity",
+      "duration_spec",
+      "stream_layout"
+    ]
+  ],
+  "expected_checks": [
+    "audio_spec",
+    "container_spec",
+    "content_fidelity",
+    "decodable",
+    "duration_spec",
+    "media_parse",
+    "output_exists",
+    "protected_files",
+    "size_spec",
+    "stream_layout",
+    "verifier_non_mutation",
+    "video_spec",
+    "workspace_scope"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/compressed.mp4"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "c6ad3e92e3fde4010263cc9e22bfec4279c229d5e19302b9330245116ad2df3a",
+    "hb_tools/tool_contract.json": "c589eb1bc0d7c2b99fce3c47cc584ae6c80d339c8fb5172b6294286cf92be026",
+    "input/source.mp4": "c48c141e27ea4d3fdfa88cbd8cbdeebb3cadd1bbd7d459c0345cb3cef6b24813",
+    "task/instruction.md": "9efd57bd218cbfa66b611cefe5e7af83583f483c65e20943a7d0a4414634125b",
+    "task/target_spec.json": "b95d035bfb78b4cc60c522931683d51a5f45b148102427da055651a390ff324d",
+    "task/tool_contract.json": "c589eb1bc0d7c2b99fce3c47cc584ae6c80d339c8fb5172b6294286cf92be026"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "output",
+    "task"
+  ],
+  "original_directories": [
+    "input",
+    "output",
+    "task"
+  ],
+  "original_modes": {
+    "input": 509,
+    "input/source.mp4": 436,
+    "output": 509,
+    "task": 509,
+    "task/instruction.md": 436,
+    "task/target_spec.json": 436,
+    "task/tool_contract.json": 436
+  }
+}

@@ -1,0 +1,1 @@
+{"after_state_sha256": "aab83dcdaf2257de7799c58d592c4b8a4d2b1a21ef6d136db1b9d66cc296b4c0", "before_state_sha256": "d16e0c91991ac20ec1eae390fc24792ad12ef92f684afad6a96007019a938bd9", "changed_services": ["billing-api"], "plan_sha256": "e3058d8d401b6f379219fa369c982f952429d96dbd9718dfa616c6e64d59f66d", "revision": 4, "tool": "pki_ctl/1"}

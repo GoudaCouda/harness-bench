@@ -1,0 +1,15 @@
+schema_version: 1
+task_id: 203-cold-chain-excursion-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Cold-chain recovery handoff is professionally complete
+  question: Does the handoff accurately explain DST normalization, duplicate handling, primary gaps, signed and calibrated secondary authority, threshold duration, quarantine evidence-hold and unaffected dispositions, interrupted journal recovery, verification and replay, and all no-external-action boundaries?
+  pass_anchors: [Equivalent professional wording passes when evidence relationships dispositions recovery closure and safety boundaries agree with structured state.]
+  fail_anchors: [Omitting a disposition authority condition recovery fact replay result or claiming an irreversible external action fails.]
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

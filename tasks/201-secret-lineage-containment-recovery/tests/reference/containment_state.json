@@ -1,0 +1,26 @@
+{
+  "detached_channels": [
+    "release-production",
+    "rollback-west"
+  ],
+  "distribution_revision": 13,
+  "external_actions_executed": false,
+  "incident_id": "INC-114-2026-08",
+  "quarantine_sequence": 4,
+  "quarantined_nodes": [
+    "ART-417",
+    "LOG-418",
+    "MIR-417-A"
+  ],
+  "replacement_activated": false,
+  "replacement_secret_ref": "vault://synthetic/nimbus/release-publisher@v3",
+  "revocation_sequence": 3,
+  "rewritten_refs": [
+    "refs/heads/main",
+    "refs/heads/release/2.7",
+    "refs/tags/build-2026.08.12"
+  ],
+  "sanitized_repository_sha256": "0a122984ae0f61fe70cd555be4088dcae73da71e11599c66df8bfb64b9b6ba42",
+  "schema_version": 1,
+  "status": "contained_pending_external_coordination"
+}

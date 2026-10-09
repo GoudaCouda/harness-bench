@@ -1,0 +1,1 @@
+{"allowed_algs":["ES256","RS256"],"max_age_sec":300,"future_skew_sec":30,"max_jti_chars":64,"require_nonce":true}

@@ -1,0 +1,10 @@
+{
+  "account_id": "acct_1002",
+  "account_holder": "Jules Park",
+  "primary_email": "jules.park@example.net",
+  "phone": "+1-206-555-0102",
+  "status": "active",
+  "current_holds": [],
+  "linked_people": [],
+  "internal_case_note": "submitted address mismatch opened identity review ticket IR-882"
+}

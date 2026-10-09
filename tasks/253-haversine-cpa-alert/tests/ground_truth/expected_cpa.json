@@ -1,0 +1,9 @@
+{
+  "t": 10,
+  "pair": [
+    "v-north",
+    "v-south"
+  ],
+  "distance_nm": 0.246,
+  "alert": true
+}

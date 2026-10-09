@@ -1,0 +1,11 @@
+{
+  "db_after_sha256": "3c18dbb8498f1868c8980fe2996e0065b90e5cb4be390f8ad89c4b221203d6af",
+  "external_actions_executed": false,
+  "handoff_sha256": "c6615feeac6182c8ae9090d362f22e6ecf22dcecfe65a54c98273fe78ca51ab1",
+  "recovery_id": "CCR-20261101-01",
+  "schema_version": 1,
+  "semantic_plan_sha256": "77a133fe87c1ee4b26e558434c70bd67d92e167247acbc42b8990d8fc890b4dd",
+  "source_checkpoint": "4f53d0dd201920729ce538c12809ae4bf0c7c6312a440ea8a4d3c5966095cf8e",
+  "stage_token": "1d25e0d9db91159593ce3a347b1562bc4e3c30376882ce6762dd2f5c5fc7c47e",
+  "verification_sha256": "b49f3f270d531fedfb7a0ddac7674b054b4e827ffbefe55bafcb8bf0849855ee"
+}

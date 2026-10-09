@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {
+      "id": "c1",
+      "type": "chunk"
+    },
+    {
+      "id": "c2",
+      "type": "chunk"
+    },
+    {
+      "id": "c3",
+      "type": "chunk"
+    },
+    {
+      "chunks": [
+        "c1"
+      ],
+      "id": "s0",
+      "parent": null,
+      "state": "complete",
+      "type": "snapshot"
+    },
+    {
+      "chunks": [
+        "c2"
+      ],
+      "id": "s1",
+      "parent": "s0",
+      "state": "complete",
+      "type": "snapshot"
+    },
+    {
+      "chunks": [
+        "c3"
+      ],
+      "id": "old",
+      "parent": null,
+      "state": "tombstoned",
+      "type": "snapshot"
+    }
+  ],
+  "policy": {
+    "retain": [
+      "s1"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "FLAG-CART",
+    "name": "Cart drawer v2",
+    "category": "production",
+    "owner": "Checkout",
+    "status": "watch",
+    "primary": 35,
+    "secondary": 62
+  },
+  {
+    "id": "FLAG-SEARCH",
+    "name": "Search facets",
+    "category": "staging",
+    "owner": "Discovery",
+    "status": "clear",
+    "primary": 80,
+    "secondary": 21
+  },
+  {
+    "id": "FLAG-LOYAL",
+    "name": "Loyalty wallet",
+    "category": "canary",
+    "owner": "Growth",
+    "status": "review",
+    "primary": 12,
+    "secondary": 86
+  },
+  {
+    "id": "FLAG-RET",
+    "name": "Returns portal",
+    "category": "production",
+    "owner": "CX",
+    "status": "watch",
+    "primary": 54,
+    "secondary": 49
+  },
+  {
+    "id": "FLAG-CART-R1",
+    "name": "Cart drawer v2 follow-up",
+    "category": "staging",
+    "owner": "Growth",
+    "status": "clear",
+    "primary": 49,
+    "secondary": 68
+  },
+  {
+    "id": "FLAG-SEARCH-R2",
+    "name": "Search facets follow-up",
+    "category": "canary",
+    "owner": "CX",
+    "status": "watch",
+    "primary": 97,
+    "secondary": 28
+  },
+  {
+    "id": "FLAG-LOYAL-R3",
+    "name": "Loyalty wallet follow-up",
+    "category": "production",
+    "owner": "Checkout",
+    "status": "review",
+    "primary": 32,
+    "secondary": 94
+  },
+  {
+    "id": "FLAG-RET-R4",
+    "name": "Returns portal follow-up",
+    "category": "production",
+    "owner": "Discovery",
+    "status": "watch",
+    "primary": 77,
+    "secondary": 58
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "workflow_id": "170-cs-priority-routing-base",
+  "total_items": 6,
+  "decision_counts": {"hold": 2, "p1": 2, "p2": 1, "p3": 1},
+  "blocked_or_escalated_ids": ["S-201", "S-202", "S-210", "S-211", "S-212"],
+  "pending_ids": [],
+  "status": "complete_with_exceptions",
+  "external_actions_executed": false
+}

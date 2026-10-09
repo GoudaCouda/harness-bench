@@ -1,0 +1,19 @@
+{
+  "translation": [
+    {"release_tag":"v1.5.0","previous_tag":"1.4.9","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.5.0","publish":true},{"path":"pyproject.toml","ecosystem":"python","current":"1.4.9","publish":true}]},
+    {"release_tag":"2.0.0-beta.4","previous_tag":"2.0.0-alpha.9","manifests":[{"path":"crates/a/Cargo.toml","ecosystem":"cargo","current":"2.0.0-beta.3","publish":false},{"path":"python/pyproject.toml","ecosystem":"python","current":"2.0.0b4","publish":true}]}
+  ],
+  "atomicity": [
+    {"release_tag":"1.0.0","previous_tag":"1.0.0-rc.9","manifests":[{"path":"Cargo.toml","ecosystem":"cargo","current":"1.0.0-rc.9","publish":true}]},
+    {"release_tag":"1.0.0-rc.1","previous_tag":"1.0.0-beta.8","manifests":[{"path":"a/package.json","ecosystem":"npm","current":"0.9.0","publish":true},{"path":"b/pyproject.toml","ecosystem":"python","current":"1.0.0rc1","publish":false}]}
+  ],
+  "invalid": [
+    {"release_tag":"1.2.0","previous_tag":"1.2.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":true}]},
+    {"release_tag":"v01.2.0","previous_tag":"1.1.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":true}]},
+    {"release_tag":"1.2.0+build.1","previous_tag":"1.1.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":true}]},
+    {"release_tag":"1.2.0","previous_tag":"1.1.0","manifests":[{"path":"../package.json","ecosystem":"npm","current":"1.1.0","publish":true}]},
+    {"release_tag":"1.2.0","previous_tag":"1.1.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":true},{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":true}]},
+    {"release_tag":"1.2.0","previous_tag":"1.1.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"v1.1.0","publish":true}]},
+    {"release_tag":"1.2.0","previous_tag":"1.1.0","manifests":[{"path":"package.json","ecosystem":"npm","current":"1.1.0","publish":1}]}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "synthetic_travel_preferences_v1",
+  "citation_id": "PREF-001",
+  "trip": {
+    "origin": "澄江市",
+    "destination": "海岚市",
+    "outbound_date": "2026-10-03",
+    "return_date": "2026-10-05",
+    "activity_date": "2026-10-04",
+    "traveler_count": 2,
+    "hotel_nights": 2,
+    "room_count": 1
+  },
+  "budget_cny": 3000,
+  "hard_constraints": {
+    "outbound_departure_not_before": "08:00",
+    "outbound_departure_not_after": "11:00",
+    "return_arrival_not_after": "20:00",
+    "transport_min_operator_rating": 4.7,
+    "checked_baggage_per_person_min": 1,
+    "hotel_guest_rating_min": 4.7,
+    "hotel_station_distance_km_max": 1.2,
+    "hotel_breakfast_included": true,
+    "hotel_free_cancellation": true,
+    "activity_start_not_before": "09:00",
+    "activity_start_not_after": "12:00",
+    "activity_duration_hours_min": 2.0,
+    "activity_rating_min": 4.7
+  },
+  "selection_rule": [
+    "仅比较满足全部硬约束且总价不超过预算的组合",
+    "优先选择总价最低的组合",
+    "总价相同时依次选择四项评分之和更高、去程到达更早、组合标识字典序更小的组合"
+  ]
+}

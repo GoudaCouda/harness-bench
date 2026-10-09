@@ -1,0 +1,16 @@
+{
+  "abi_status": "pass",
+  "applicable_vulnerabilities": [
+    "CVE-SYN-2026-1042"
+  ],
+  "approval_status": "pending",
+  "candidate_tag": "report-worker:2026.08-rc1",
+  "external_push_executed": false,
+  "phase": "blocked_vulnerability",
+  "prior_image_digest": "sha256:9e3d8c5a712db6616ea56a6ca7e1ae0879348ed9b71734086a06ed6411d1036b",
+  "provenance_status": "verified",
+  "release_id": "REL-REPORT-2026-08",
+  "revision": 1,
+  "schema_version": 1,
+  "staged_image_digest": null
+}

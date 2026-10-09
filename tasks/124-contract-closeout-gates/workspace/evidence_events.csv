@@ -1,0 +1,31 @@
+event_sequence,event_id,contract_id,evidence_type,status,authority,detail
+20,EV-406-FUNDS-CURE,C-406,funds,complete,finance_signed,deobligation posted after the stale review
+4,EV-402-ACCEPT,C-402,acceptance,complete,acceptance_signed,final delivery accepted
+15,EV-401-LEGAL-CLEAR,C-401,legal,clear,legal_signed,counsel released preservation hold LH-41
+1,EV-401-LEGAL-HOLD,C-401,legal,hold,legal_signed,preservation hold LH-41 opened
+25,EV-407-FUNDS,C-407,funds,incomplete,finance_signed,residual balance remains obligated
+9,EV-403-LEGAL-HOLD,C-403,legal,hold,legal_signed,preservation hold LH-88 remains active
+17,EV-404-FUNDS,C-404,funds,complete,finance_signed,deobligation complete
+6,EV-402-INVOICE,C-402,invoice,missing,finance_signed,final invoice not received
+23,EV-407-INVOICE,C-407,invoice,complete,finance_signed,final invoice reconciled
+2,EV-401-ACCEPT,C-401,acceptance,complete,acceptance_signed,final delivery accepted
+12,EV-404-ACCEPT,C-404,acceptance,complete,acceptance_signed,final delivery accepted
+7,EV-402-FUNDS,C-402,funds,complete,finance_signed,residual balance zero
+19,EV-406-FUNDS-DRAFT,C-406,funds,incomplete,finance_draft,stale draft prepared before deobligation posting
+11,EV-403-FUNDS,C-403,funds,complete,finance_signed,deobligation complete
+21,EV-406-LEGAL,C-406,legal,clear,legal_signed,no active claim or hold
+3,EV-401-INVOICE,C-401,invoice,complete,finance_signed,final invoice reconciled
+14,EV-404-LEGAL,C-404,legal,clear,legal_signed,no active claim or hold
+16,EV-404-INVOICE,C-404,invoice,complete,finance_signed,final invoice reconciled
+18,EV-406-ACCEPT,C-406,acceptance,complete,acceptance_signed,final delivery accepted
+22,EV-406-INVOICE,C-406,invoice,complete,finance_signed,final invoice reconciled
+5,EV-402-LEGAL,C-402,legal,clear,legal_signed,no active claim or hold
+24,EV-407-LEGAL,C-407,legal,clear,legal_signed,no active claim or hold
+10,EV-403-INVOICE,C-403,invoice,complete,finance_signed,final invoice reconciled
+13,EV-405-ACCEPT,C-405,acceptance,incomplete,acceptance_signed,remaining field work is open
+8,EV-403-ACCEPT,C-403,acceptance,complete,acceptance_signed,final delivery accepted
+26,EV-407-ACCEPT,C-407,acceptance,complete,acceptance_signed,final delivery accepted
+28,EV-405-INVOICE,C-405,invoice,complete,finance_signed,final invoice reconciled
+27,EV-405-LEGAL,C-405,legal,clear,legal_signed,no active claim or hold
+29,EV-405-FUNDS,C-405,funds,complete,finance_signed,deobligation complete
+30,EV-401-FUNDS,C-401,funds,complete,finance_signed,deobligation complete

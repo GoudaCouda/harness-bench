@@ -1,0 +1,94 @@
+task_id: 204-purchase-order-edi-recovery
+title: Recover an interrupted purchase-order EDI match batch
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- edi
+- data_recovery
+- evidence_integrity
+- local_state_machine
+harness_demands:
+- context_management
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- long_horizon
+- interrupted_sqlite_journal
+- out_of_order_duplicate_edi
+- control_number_collision
+- message_revision_resolution
+- line_level_three_way_match
+- semantic_replay_identity
+- irreversible_posting_boundary
+required_artifacts:
+- edi_recovery_plan.json
+- .edi_preview.json
+- state/procurement.db
+- state/verification.json
+- staging/payable_batch.json
+- staging/hold_queue.json
+- staging/stage_manifest.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- procurement_handoff.md
+task_family: purchase-order-edi-recovery
+variant: 850-855-856-810-interrupted-three-way-match
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - X12-850
+  - X12-855
+  - X12-856
+  - X12-810
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - edi_recovery_plan.json
+  - .edi_preview.json
+  - state/verification.json
+  - staging/payable_batch.json
+  - staging/hold_queue.json
+  - staging/stage_manifest.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - procurement_handoff.md
+  allowed_modified:
+  - state/procurement.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: procurement_handoff
+  max_fallback_weight: 0.08
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

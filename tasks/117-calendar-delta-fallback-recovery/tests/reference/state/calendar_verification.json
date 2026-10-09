@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "checkpoint_advanced": true,
+    "component_ledger_complete": true,
+    "journal_recovered": true,
+    "tombstones_present": true,
+    "transaction_digest_matches": true,
+    "transaction_present": true
+  },
+  "external_calendar_write_executed": false,
+  "plan_sha256": "476bbab3c94c991f134a06a901ebc17e630747e8f3cc1fffd390f7c1c4fa9838",
+  "recovery_id": "CALSYNC-FINANCE-20260819-42",
+  "semantic_database_sha256": "8fd66fb8b366a117f6d7621a24d66782bde3cc5d994ef37062cd98afee835ae3",
+  "source_checkpoint": "62db0a06d68abb552e70b31b490a149a4ef84b608da6baf629690e64efd0bfbf",
+  "status": "pass",
+  "tool": "syncctl/1"
+}

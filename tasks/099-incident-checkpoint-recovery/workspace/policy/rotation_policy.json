@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "incident_id": "INC-CR-204",
+  "recovery_id": "REC-INC-CR-204-02",
+  "source_revision": 41,
+  "authority": [
+    "Restore interrupted rows from recovery_journal before classifying accounts.",
+    "An incident-scoped durable marker at the expected target version proves completion.",
+    "Checkpoint completion without that marker is stale and does not prove execution.",
+    "A compromised account without that marker is queued once at its recovered current version.",
+    "A clean account is preserved and never queued."
+  ],
+  "decision_vocabulary": {
+    "classification": [
+      "completed_durable",
+      "pending_rotation",
+      "preserved_clean"
+    ],
+    "action": [
+      "preserve_committed",
+      "queue_single_future_rotation",
+      "preserve_unchanged"
+    ],
+    "checkpoint_relation": [
+      "checkpoint_agrees_completed",
+      "checkpoint_omits_durable_completion",
+      "checkpoint_falsely_completed",
+      "checkpoint_agrees_pending",
+      "checkpoint_missing_pending",
+      "checkpoint_misclassifies_clean",
+      "checkpoint_clean_absent"
+    ],
+    "journal_action": [
+      "restore_before_image",
+      "remove_partial_insert"
+    ]
+  },
+  "locator_grammar": {
+    "scope": "evidence/incident_scope.json#accounts/<account_id>",
+    "account": "state/credentials.db#accounts/<account_id>",
+    "marker": "state/credentials.db#durable_markers/<account_id>",
+    "checkpoint": "state/stale_checkpoint.json#accounts/<account_id>",
+    "validation": "evidence/validation.jsonl#<validation_id>",
+    "journal": "state/credentials.db#recovery_journal/<journal_id>"
+  },
+  "safety": {
+    "network": false,
+    "rotate_credentials": false,
+    "revoke_credentials": false,
+    "notify_accounts": false,
+    "close_incident": false
+  }
+}

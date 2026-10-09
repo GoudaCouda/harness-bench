@@ -1,0 +1,20 @@
+[
+  {
+    "id": "employment_increased",
+    "series": "EMP_SA",
+    "comparison": "2026-06 vs 2026-05",
+    "claim": "Seasonally adjusted employment increased in June."
+  },
+  {
+    "id": "average_hours_decreased",
+    "series": "HOURS_SA",
+    "comparison": "2026-06 vs 2026-05",
+    "claim": "Seasonally adjusted average weekly hours decreased in June."
+  },
+  {
+    "id": "employment_above_january",
+    "series": "EMP_SA",
+    "comparison": "2026-06 vs 2026-01",
+    "claim": "June employment remained above its January level."
+  }
+]

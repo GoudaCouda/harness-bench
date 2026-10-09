@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "bills_exact": true,
+    "interrupted_journal_recovered": true,
+    "invoices_not_issued": true,
+    "local_only": true,
+    "single_committed_recovery": true,
+    "source_revision_advanced_once": true
+  },
+  "customer_contacted": false,
+  "external_actions_executed": false,
+  "final_revision": 74,
+  "recovery_id": "MBR-202611-FALLBACK-01",
+  "schema_version": 1,
+  "semantic_db_digest": "770938cced4b9fff77dbd7dfb490b796323a319ae257170de8215f3506ee81e0",
+  "semantic_plan_digest": "970ba363c2ad2e8bc68f815779e107cc027d5904ebcecece144f88c71351b6a5",
+  "source_checkpoint": "fb47226dd5faacd6fe27fab9d10e722222544ed26ebc163563d8785293c739cb",
+  "status": "pass"
+}

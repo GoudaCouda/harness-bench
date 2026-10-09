@@ -1,0 +1,11 @@
+{
+  "SOURCE_HASHES.json": "0bc1c4b538441c27f4cd8b5ff5dcbea73f512b8baa82c945fa80c95690ea736c",
+  "approval_events.csv": "955ebc8fe97ddf1a53903262fc5323b415634df28c334ce2a7af257e73c98a2b",
+  "bank_change_requests.csv": "8c024d4d1e805e6610f75568c1cb3c8897b5726adab9c4016cff6df72a121db6",
+  "batch_context.json": "f404584ae379d0752fc116fa0292210356ffbdfec7547d8c78529ba573d63e67",
+  "callback_events.csv": "cd379ad828ef69d3cd91be5214d68fad7c30e20b1e718963339f72c68a39622e",
+  "payment_queue.csv": "07a54d3369bf9e1497e866ec471fd7d9e68a948dff37fa238db1ae00fb3d3a72",
+  "release_gate_policy.md": "469c90600c70db3568b43fbf713cf32ae70f91689043df3d748654590d73245b",
+  "suppliers.csv": "77874952abd7e252b8d5ac663c2346ad03ab82fd8a605a6a4f418ca0dd60d25c",
+  "treasuryctl.py": "8b884a503b3454861e87f7f28fc9fa0ded0ee71089b5d212ffe7649a849e4054"
+}

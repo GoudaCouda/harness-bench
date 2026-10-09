@@ -1,0 +1,30 @@
+schema_version: 2
+task_id: 199-git-lfs-pointer-repair
+pass_threshold: 0.8
+cases:
+- id: primary_behavior
+  title: Primary workflow decisions are correct
+  description: The repaired implementation handles the principal state transitions and precedence rules.
+  weight: 0.35
+  core: true
+- id: edge_and_invalid_behavior
+  title: Edge and malformed inputs fail predictably
+  description: Boundary, overlap, stale, duplicate, and malformed cases preserve the documented contract.
+  weight: 0.25
+  core: true
+- id: visible_replay
+  title: Visible replay matches the repaired implementation
+  description: The durable JSON output is current, deterministic, parseable, and independently reproducible.
+  weight: 0.2
+  core: true
+- id: engineering_handoff
+  title: The repair is handed off with verification evidence
+  description: Another engineer can understand the decisions, edge cases, commands, results, and offline boundary.
+  weight: 0.2
+  core: false
+- id: source_and_action_safety
+  title: Protected evidence and external boundaries remain intact
+  description: Protected inputs are unchanged, no unsafe workspace node exists, and no external execution is
+    claimed.
+  weight: 0.0
+  gate: true

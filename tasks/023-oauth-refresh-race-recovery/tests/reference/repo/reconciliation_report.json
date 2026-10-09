@@ -1,0 +1,6 @@
+[
+  {"case_id":"rotated-winner","reconciliation":{"decision":"adopt_success","next_session":{"generation":5,"access_token":"a5","refresh_token":"r5","scope":["read"],"rotation_required":true,"status":"active"},"winner_request_id":"w1","ignored_request_ids":["w2"],"conflicts":[]}},
+  {"case_id":"replay-before-success","reconciliation":{"decision":"reauth_required","next_session":{"generation":3,"access_token":null,"refresh_token":null,"scope":["read","write"],"rotation_required":true,"status":"reauth_required"},"winner_request_id":null,"ignored_request_ids":["x2"],"conflicts":[]}},
+  {"case_id":"stale-and-transient","reconciliation":{"decision":"retry_refresh","next_session":{"generation":7,"access_token":"a7","refresh_token":"r7","scope":["read"],"rotation_required":true,"status":"active"},"winner_request_id":null,"ignored_request_ids":["old"],"conflicts":[]}},
+  {"case_id":"scope-escalation","reconciliation":{"decision":"manual_intervention","next_session":{"generation":1,"access_token":"a1","refresh_token":"r1","scope":["read"],"rotation_required":true,"status":"active"},"winner_request_id":null,"ignored_request_ids":[],"conflicts":[{"request_id":"s1","reason":"scope_escalation"}]}}
+]

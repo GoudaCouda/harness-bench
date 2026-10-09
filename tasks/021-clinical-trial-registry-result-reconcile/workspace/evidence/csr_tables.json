@@ -1,0 +1,10 @@
+{
+  "source_id": "CSR-T14",
+  "trial_id": "NCT-SYN-21021",
+  "participant_flow": {"randomized": {"A": 60, "B": 60}, "started": {"A": 58, "B": 58}, "completed_day28": {"A": 56, "B": 56}},
+  "outcome_tables": [
+    {"table_id": "CSR-14.2.1", "outcome_id": "OUT-28", "population": "modified_itt_with_observed_day28", "groups": [{"arm_id": "A", "label": "LX-21", "n": 55, "value": -12.4}, {"arm_id": "B", "label": "Placebo", "n": 55, "value": -5.1}]},
+    {"table_id": "CSR-14.2.2", "outcome_id": "OUT-56", "population": "observed_day56_post_hoc", "groups": [{"arm_id": "A", "label": "LX-21", "n": 52, "value": -10.8}, {"arm_id": "B", "label": "Placebo", "n": 51, "value": -4.8}]}
+  ],
+  "safety_table": {"table_id": "CSR-14.3.1", "population": "treated_safety", "denominator": {"A": 58, "B": 58}, "participants_with_serious_event": {"A": 3, "B": 1}}
+}

@@ -1,0 +1,44 @@
+schema_version: 2
+task_id: 115-cdc-scd2-recovery
+pass_threshold: 0.8
+cases:
+- id: event_adjudication_and_plan
+  title: Every unique CDC event is adjudicated from published evidence
+  description: The source-bound plan covers the exact event set with correct dispositions and local evidence.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: scd2_history_and_current_projection
+  title: History intervals and current projections close coherently
+  description: Complete version chains field inheritance and the signed correction produce the exact SCD2
+    state.
+  weight: 0.27
+  core: true
+  score_group: decision_and_state
+- id: quarantine_and_safety_boundaries
+  title: Retention consent and schema boundaries are preserved
+  description: Invalid events are quarantined with stable reasons and protected dimension rows are not
+    changed.
+  weight: 0.18
+  core: true
+  score_group: validation_and_replay
+- id: transaction_checkpoint_and_replay
+  title: The interrupted prepare becomes one replay-safe commit
+  description: Journal transaction and event ledger agree and no event is applied twice.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: verification_and_stage_binding
+  title: Verification and stage receipts bind the final local state
+  description: Controller receipts bind plan source logical warehouse and staged offline boundary.
+  weight: 0.12
+- id: recovery_handoff
+  title: The recovery is reviewable by the downstream data owner
+  description: The handoff explains decisions recovery verification replay and external-action boundary.
+  weight: 0.08
+- id: safety_and_input_integrity
+  title: Protected sources and offline boundaries remain intact
+  description: Evidence and controller are unchanged and no external publish deploy or notification is
+    claimed.
+  weight: 0.0
+  gate: true

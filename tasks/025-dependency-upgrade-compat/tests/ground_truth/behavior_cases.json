@@ -1,0 +1,68 @@
+{
+  "core": [
+    {
+      "args": ["Quarterly Revenue: Café & Crème"],
+      "kwargs": {},
+      "expected": "quarterly-revenue-cafe-creme"
+    },
+    {
+      "args": ["Café Décor"],
+      "kwargs": {"preserve_unicode": true},
+      "expected": "café-décor"
+    },
+    {
+      "args": ["Quarterly Catalog"],
+      "kwargs": {"separator": "_"},
+      "expected": "quarterly_catalog"
+    },
+    {
+      "args": [""],
+      "kwargs": {},
+      "expected": ""
+    }
+  ],
+  "validation_errors": [
+    {"args": [null], "kwargs": {}, "exception": "ValueError"},
+    {"args": [42], "kwargs": {}, "exception": "ValueError"},
+    {"args": [true], "kwargs": {}, "exception": "ValueError"},
+    {"args": ["Bad separator"], "kwargs": {"separator": ""}, "exception": "ValueError"},
+    {"args": ["Bad separator"], "kwargs": {"separator": "--"}, "exception": "ValueError"},
+    {"args": ["Bad separator"], "kwargs": {"separator": "/"}, "exception": "ValueError"},
+    {"args": ["Bad separator"], "kwargs": {"separator": null}, "exception": "ValueError"},
+    {"args": ["Bad separator"], "kwargs": {"separator": ["-"]}, "exception": "ValueError"}
+  ],
+  "downstream": [
+    {
+      "args": ["Alpha___Beta...   Gamma"],
+      "kwargs": {},
+      "expected": "alpha-beta-gamma"
+    },
+    {
+      "args": ["Café... Retail___Feed"],
+      "kwargs": {"preserve_unicode": true, "separator": "_"},
+      "expected": "café_retail_feed"
+    }
+  ],
+  "corner": [
+    {
+      "args": ["élan vital"],
+      "kwargs": {"preserve_unicode": true},
+      "expected": "élan-vital"
+    },
+    {
+      "args": ["東京 商品 カタログ"],
+      "kwargs": {"preserve_unicode": true, "separator": "_"},
+      "expected": "東京_商品_カタログ"
+    },
+    {
+      "args": ["---Release___Candidate...Notes---"],
+      "kwargs": {},
+      "expected": "release-candidate-notes"
+    },
+    {
+      "args": ["  Café—pricing / Q3  "],
+      "kwargs": {"separator": "_"},
+      "expected": "cafe_pricing_q3"
+    }
+  ]
+}

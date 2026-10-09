@@ -1,0 +1,14 @@
+order_id,order_date,customer_id,customer_name,sku,quantity,amount_usd,status
+S1001,2025-01-05,C001,Ada Chen,A-10,2,39.98,complete
+S1002,2025-01-07,C002,Ben Ortiz,B-20,1,21.45,complete
+S1004,2025-01-09,C003,Cleo Singh,C-30,3,49.50,complete
+S1005,2025-01-10,C004,Dara Moore,A-10,1,-19.99,refunded
+S1006,2025-01-11,C002,Ben Ortiz,D-40,2,120.00,complete
+S1009,2025-01-12,C007,Gio Rossi,F-60,1,27.50,complete
+S1017,2025-01-17,C006,Faye Lin,H-85,1,15.00,complete
+S1018,2025-01-18,C006,Faye Lin,H-86,1,1234.50,complete
+S1019,2025-01-19,C007,Gio Rossi,H-87,2,-11.00,returned
+S1020,2025-01-20,C003,Cleo Singh,I-10,1,1358.02,complete
+S1021,2025-01-21,C001,Ada Chen,I-11,1,1234.56,complete
+S1022,2025-01-22,C007,Gio Rossi,I-12,1,-11.00,refunded
+S1023,2025-01-23,C004,Dara Moore,I-13,1,-11.00,returned

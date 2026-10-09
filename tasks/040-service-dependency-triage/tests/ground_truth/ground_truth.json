@@ -1,0 +1,21 @@
+{
+  "expected": {
+    "root_cause_service": "auth-gateway",
+    "root_cause_change_id": "AUTH-2026-0318",
+    "allowed_issuers": ["https://issuer.internal/v1", "https://issuer.partner/v2"],
+    "affected_services": ["checkout-web", "payment-api"],
+    "red_herrings": ["orders-db", "cdn-edge"],
+    "evidence_sources": ["logs/auth-gateway.log", "logs/checkout-web.log", "logs/payment-api.log", "metrics/service_metrics.csv", "topology.json"]
+  },
+  "notes_concepts": [
+    ["dependency path", "checkout-web -> payment-api -> auth-gateway", "checkout to payment to auth", "upstream"],
+    ["401", "auth_failed", "invalid issuer", "issuer_not_allowed"],
+    ["jwks", "issuer", "AUTH-2026-0318"],
+    ["rollback", "revert", "restore allowed_issuers", "restore issuer"],
+    ["verify", "validate", "confirm recovery", "recheck", "monitor recovery"]
+  ],
+  "scoring": {
+    "weights": {"root_cause_json": 0.74, "triage_notes": 0.20, "source_unchanged": 0.06},
+    "thresholds": {"pass": 0.70, "good": 0.84, "excellent": 0.94}
+  }
+}

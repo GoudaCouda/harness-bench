@@ -1,0 +1,17 @@
+{
+  "claim_ids": ["CLAIM-1", "CLAIM-2", "CLAIM-3", "CLAIM-4"],
+  "claim_groups": {
+    "CLAIM-1": [["12.4", "0.124"], ["results.csv"], ["0.200", "20 percentage", "20.0"], ["rerun", "observed", "command exited", "produced"], ["not reproduced", "cannot be reproduced", "does not reproduce", "do not reproduce", "disagree", "mismatch"]],
+    "CLAIM-2": [["3.8", "0.038"], ["0.031", "3.1"], ["0.100", "10 percentage", "10.0"], ["results.csv"], ["not reproduced", "cannot be reproduced", "disagree", "mismatch", "contradict"]],
+    "CLAIM-3": [["data/raw_trials.csv", "raw_trials.csv"], ["analyze_main.py"], ["command ran", "command executes", "script ran", "ran successfully", "executed", "exit 0", "runnable"], ["snapshot", "20 rows", "1681"], ["not reproducible", "not reproduced", "does not reproduce", "provenance mismatch"]],
+    "CLAIM-4": [["6.1", "0.061"], ["subgroup_ablation.csv"], ["--subgroups", "subgroups flag"], ["unsupported", "unrecognized", "not implemented"], ["missing", "absent"], ["not reproduced", "cannot be reproduced", "cannot be checked", "unsupported"]]
+  },
+  "execution_groups": [["python3", "analyze_main.py"], ["0.200", "20 percentage", "20.0"], ["0.100", "10 percentage", "10.0"], ["20 rows", "20 trial"], ["freeze-2026-04-18"], ["freeze-2026-05-02"], ["1681"]],
+  "blockers": [
+    {"item_groups": [["raw_trials.csv", "raw data"]], "type_groups": [["snapshot", "provenance", "version"]], "impact_groups": [["CLAIM-1", "CLAIM-2", "CLAIM-3", "headline"]]},
+    {"item_groups": [["retention", "results.csv", "CLAIM-2"]], "type_groups": [["mismatch", "disagreement", "discrepancy", "provenance"]], "impact_groups": [["CLAIM-2", "retention", "disagreement"]]},
+    {"item_groups": [["--subgroups", "analyze_main.py"]], "type_groups": [["unsupported", "unimplemented", "functionality", "interface", "flag"]], "impact_groups": [["CLAIM-4", "CLAIM 4"]]},
+    {"item_groups": [["subgroup_ablation.csv"]], "type_groups": [["missing", "absent", "artifact"]], "impact_groups": [["CLAIM-4", "CLAIM 4", "verify"]]}
+  ],
+  "forbidden_success_phrases": ["successfully reproduced", "fully reproducible", "all claims reproduced", "no issues found"]
+}

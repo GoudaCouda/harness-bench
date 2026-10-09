@@ -1,0 +1,21 @@
+{
+  "plant": {
+    "mills": [
+      {
+        "mill_id": "m-east",
+        "gate": {
+          "code": "G-1"
+        }
+      },
+      {
+        "mill_id": "m-west",
+        "gate": {
+          "code": "G-2"
+        }
+      }
+    ],
+    "a/b": {
+      "~t": "tilde"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "cluster_id": "northstar-ha",
+  "event_count": 13,
+  "event_log_sha256": "2b273e70ecad63a3ff9864992d8eb87e6d7d91b740260a29184165bcc9011dba",
+  "final_state_sha256": "e85e09eac56e54d1f6b6fccff26848c7040e03fd0593ca93a9a5b6eb1aa0aa08",
+  "input_sha256": {
+    "evidence/ca_inventory.json": "63d7fa9e7898d2e45163c2e4fede6587528a0e4c377b98b0184032d4777d1adf",
+    "evidence/component_inventory.json": "2b8762e4fd46a8b0856c570d375b891cdaf1b8595d684d059653c712aba02577",
+    "evidence/handshake_matrix.json": "49bf26f1b2c4fb915d2f0da0ef65380d2b2b6fbac1d9e09fc784fb8a405d71af",
+    "policy/rotation_policy.json": "d9c9f7c32a9b683cbe4b631d5a05f8d8177de75ffa97c6ca07cb974263d7c16a"
+  },
+  "mode": "new_only",
+  "pairs": [
+    {
+      "client": "coredns",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-1",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-apiserver/aggregation-client",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "aggregated-api/custom-metrics",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-apiserver/webhook-client",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "admission-webhook/policy",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-controller-manager",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-1",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-controller-manager",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-3",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-proxy",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-2",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-scheduler",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-2",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kube-scheduler",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-3",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kubelet/node-a",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-1",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "kubelet/node-b",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-2",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "metrics-adapter",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-1",
+      "server_signer": "NEW-CA"
+    },
+    {
+      "client": "metrics-adapter",
+      "client_trust": "new_only",
+      "result": "pass",
+      "server": "kube-apiserver/cp-3",
+      "server_signer": "NEW-CA"
+    }
+  ],
+  "policy_version": "NORTHSTAR-CA-ROTATION-3",
+  "required_pair_count": 12,
+  "status": "pass",
+  "tool": "cactl/1",
+  "verification_fingerprint": "808a686f0434431af0342c5537392900b3f73dd7798c9597b396c57352824f8e"
+}

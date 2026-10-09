@@ -1,0 +1,7 @@
+[
+  {"case_id":"explicit-yes","config":{"mode":"apply","target_count":4,"yes":true,"no_input":true,"stdin_is_tty":false},"stdin_text":"","expected":{"action":"execute","exit_code":0,"confirmation":"flag","stdin_consumed":false}},
+  {"case_id":"tty-prompt","config":{"mode":"apply","target_count":2,"yes":false,"no_input":false,"stdin_is_tty":true},"stdin_text":"yes","expected":{"action":"prompt","exit_code":null,"confirmation":"tty","stdin_consumed":false}},
+  {"case_id":"pipe-no","config":{"mode":"apply","target_count":1,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":" No\n","expected":{"action":"abort","exit_code":1,"confirmation":"pipe","stdin_consumed":true}},
+  {"case_id":"empty-pipe","config":{"mode":"apply","target_count":3,"yes":false,"no_input":false,"stdin_is_tty":false},"stdin_text":"  ","expected":{"action":"blocked","exit_code":2,"confirmation":"empty_stdin","stdin_consumed":true}},
+  {"case_id":"plan-mode","config":{"mode":"plan","target_count":8,"yes":false,"no_input":true,"stdin_is_tty":false},"stdin_text":"yes","expected":{"action":"preview","exit_code":0,"confirmation":"not_required","stdin_consumed":false}}
+]

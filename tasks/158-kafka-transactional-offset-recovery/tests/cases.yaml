@@ -1,0 +1,40 @@
+schema_version: 2
+task_id: 158-kafka-transactional-offset-recovery
+pass_threshold: 0.8
+cases:
+- id: transaction_evidence_and_replay
+  title: Atomic evidence distinguishes settled and safely replayable batches
+  description: Read-committed outputs and the next group offset jointly resolve known and ambiguous transaction
+    outcomes.
+  weight: 0.3
+  core: true
+- id: fencing_and_configuration_safety
+  title: Producer fencing retry budgets and non-atomic configuration fail closed
+  description: Recovery never reuses stale ownership or trusts isolation and offset modes that break exactly-once
+    evidence.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: recovery_replay
+  title: Protected decisions and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: recovery_handoff
+  title: Transaction recovery semantics and offline boundaries are handed off clearly
+  description: Another engineer can audit evidence precedence fencing replay and verification.
+  weight: 0.2
+  core: false
+- id: source_and_cluster_boundary
+  title: Recovery planner validation and malformed-input behavior are correct
+  description: The implementation stays in the auditable pure subset and malformed transaction state fails predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence filesystem and live Kafka boundaries are respected
+  description: Inputs remain unchanged dangerous workspace nodes are absent and no concrete cluster operation or production recovery is claimed.
+  weight: 0.0
+  core: false
+  gate: true

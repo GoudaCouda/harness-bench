@@ -1,0 +1,10 @@
+[
+  {"record_id":"r1","identifier":"Café","references":["r3","r5"]},
+  {"record_id":"r2","identifier":"Café","references":["r1"]},
+  {"record_id":"r3","identifier":"Straße","references":["r4"]},
+  {"record_id":"r4","identifier":"STRASSE","references":[]},
+  {"record_id":"r5","identifier":"Αlpha","references":["r6"]},
+  {"record_id":"r6","identifier":"Alpha","references":["r5"]},
+  {"record_id":"r7","identifier":"Ａｄｍｉｎ","references":[]},
+  {"record_id":"r8","identifier":"bad-name","references":["r6"]}
+]

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "evidence/advisories.json": "a88e40f27134c0f13760d80b5088777475ebd20e2e44192ce308ce545f7fe01b",
+    "evidence/base_image.json": "cf5446f17bbc5469b48a22eb0c3d5d04eef0c1d1dff4ce34277e78eb7ffd7430",
+    "evidence/compatibility_matrix.json": "f1ecbcabeb9283d68af3894809bc31f2135c0831ea16076fb2f9c04e3985eb27",
+    "evidence/prior_provenance.json": "d868220b5aa762b3cce94e845cba65836b6399f0a549267a5d17eefcd5d8c600",
+    "evidence/registry_snapshot.json": "11058e8186a75570e9d46e35af7272dd6370189826528a9d0b6183f6fab7e589",
+    "imagectl.py": "34b977adaaee956b7e801ba4e052ed723ed8ed061d4a5329250793e7525f25e2",
+    "policy/release_policy.json": "979f7dcd065e81b2fe6ae91218231cec1bd7d165b07fe265bdeb458ce826f170",
+    "repo/Containerfile": "3d3560004b84cc8606e695afe66531f88bf0d47220318fdac65d54ec23086b36"
+  },
+  "schema_version": 1
+}

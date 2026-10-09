@@ -1,0 +1,12 @@
+record_id,customer_id,recognized_invoice_usd,gross_receipt_usd,refund_usd,fee_usd,net_cash_usd,close_status
+INV001,C001,100.00,100.00,0.00,2.00,98.00,matched
+INV002,C002,220.00,220.00,55.00,3.00,162.00,matched_with_refund
+INV003,C003,125.00,0.00,0.00,0.00,0.00,outstanding
+INV004,C004,0.00,80.00,0.00,1.00,79.00,void_cash_suspense
+INV005,C005,0.00,0.00,0.00,0.00,0.00,missing_fx
+INV006,C006,150.00,150.00,30.00,1.00,119.00,matched_with_refund
+INV007,C007,60.00,57.50,0.00,1.15,56.35,fx_timing_difference
+INV008,C008,75.00,0.00,0.00,0.00,0.00,outstanding
+INV009,C009,0.00,0.00,0.00,0.00,0.00,cancelled
+INV010,C010,200.00,0.00,0.00,0.00,0.00,bank_unconfirmed
+MISSING_INVOICE:P999,,0.00,50.00,0.00,0.50,49.50,missing_invoice_cash

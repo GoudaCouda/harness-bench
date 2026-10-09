@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 134-python-namespace-import-resolution-repair
+pass_threshold: 0.8
+cases:
+- id: import_matrix
+  title: Both plugins import under both supported root orders
+  description: Fresh interpreters discover orders and metrics regardless of source-root precedence.
+  weight: 0.4
+  core: true
+- id: ownership_and_provenance
+  title: Modules remain in their owned roots within a shared namespace
+  description: Origins, plugin identities, and namespace locations preserve the ownership contract.
+  weight: 0.2
+  core: true
+- id: reproducible_probe
+  title: The durable probe report reproduces independent import checks
+  description: The final JSON matrix is current, complete, and semantically identical.
+  weight: 0.2
+  core: true
+- id: engineering_handoff
+  title: The namespace repair is handed off with evidence
+  description: Another engineer can understand the path-order cause, ownership, edit, and verification.
+  weight: 0.2
+  core: false
+- id: source_and_action_safety
+  title: Owned implementations and execution boundaries remain intact
+  description: Only the obsolete marker and declared outputs change.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,4 @@
+risk_id,status,owner,trigger,mitigation,evidence_ids
+R-1,open,Omar,standard procurement not cleared,hold M3 behind explicit gate,PROC-119
+R-2,open,Mei,privacy approval withheld,complete validation and return for human approval,PRIV-77
+R-3,open,Lee,launch reaches blackout,retain Day 25 placeholder or move after Day 31,CS-90

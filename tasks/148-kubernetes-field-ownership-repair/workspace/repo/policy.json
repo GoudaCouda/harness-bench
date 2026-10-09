@@ -1,0 +1,4 @@
+{
+  "allowed_paths":["/metadata/labels/app","/metadata/labels/security","/spec/containers[name=api]/image","/spec/containers[name=api]/port","/spec/replicas","/spec/strategy"],
+  "protected_prefixes":["/metadata/labels/security"]
+}

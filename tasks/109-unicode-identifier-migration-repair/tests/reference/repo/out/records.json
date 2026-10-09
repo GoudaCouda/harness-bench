@@ -1,0 +1,10 @@
+[
+  {"canonical_identifier":null,"canonical_references":["\u03b1lpha"],"display_identifier":"Caf\u00e9","record_id":"r1","status":"collision","unresolved_reference_ids":["r3"]},
+  {"canonical_identifier":null,"canonical_references":[],"display_identifier":"Cafe\u0301","record_id":"r2","status":"collision","unresolved_reference_ids":["r1"]},
+  {"canonical_identifier":null,"canonical_references":[],"display_identifier":"Stra\u00dfe","record_id":"r3","status":"collision","unresolved_reference_ids":["r4"]},
+  {"canonical_identifier":null,"canonical_references":[],"display_identifier":"STRASSE","record_id":"r4","status":"collision","unresolved_reference_ids":[]},
+  {"canonical_identifier":"\u03b1lpha","canonical_references":["alpha"],"display_identifier":"\u0391lpha","record_id":"r5","status":"accepted","unresolved_reference_ids":[]},
+  {"canonical_identifier":"alpha","canonical_references":["\u03b1lpha"],"display_identifier":"Alpha","record_id":"r6","status":"accepted","unresolved_reference_ids":[]},
+  {"canonical_identifier":null,"canonical_references":[],"display_identifier":"\uff21\uff44\uff4d\uff49\uff4e","record_id":"r7","status":"reserved","unresolved_reference_ids":[]},
+  {"canonical_identifier":null,"canonical_references":["alpha"],"display_identifier":"bad-name","record_id":"r8","status":"invalid","unresolved_reference_ids":[]}
+]

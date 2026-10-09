@@ -1,0 +1,51 @@
+task_id: 040-service-dependency-triage
+title: Repair checkout authentication after an issuer migration
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: hard
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+capability_tags:
+- filesystem
+- local_service
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- tool_selection
+stressors:
+- high_stakes_rules
+required_artifacts:
+- root_cause.json
+- triage_notes.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-040
+task_family: 040-service-dependency-triage
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - root_cause.json
+  - triage_notes.md
+  allowed_modified:
+  - service_repo/auth_gateway_config.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

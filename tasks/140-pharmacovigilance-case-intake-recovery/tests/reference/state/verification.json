@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "accepted_and_pending_boundaries_preserved": true,
+    "case_projection_exact": true,
+    "delivery_receipts_exact": true,
+    "interrupted_journal_recovered": true,
+    "local_only": true,
+    "semantic_plan_matches": true,
+    "source_checkpoint_matches": true,
+    "version_chain_contiguous": true
+  },
+  "external_transmissions_executed": false,
+  "final_revision": 42,
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "schema_version": 1,
+  "semantic_plan_digest": "f30185a577832814eda0610dc810e81a2a3cb1ff6744ae5ea5a7f3922ca884b7",
+  "semantic_state_digest": "66867661994821da9c528cafb9dec6dd7d7f0ed81576c8071b6b04ca8ca59ca4",
+  "source_checkpoint": "86c4d6a2485037b57155cceebea70e4c03dfbc4afe35c156001531b95cd3b862",
+  "status": "pass"
+}

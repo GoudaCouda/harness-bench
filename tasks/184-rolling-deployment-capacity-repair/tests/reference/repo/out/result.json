@@ -1,0 +1,20 @@
+{
+  "decisions": [
+    {
+      "create_new": 0,
+      "delete_old": 1,
+      "id": "api",
+      "max_total": 7,
+      "min_available": 4,
+      "reason": "safe_old_delete"
+    },
+    {
+      "create_new": 1,
+      "delete_old": 0,
+      "id": "worker",
+      "max_total": 4,
+      "min_available": 3,
+      "reason": "surge_create"
+    }
+  ]
+}

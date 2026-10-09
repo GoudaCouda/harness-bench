@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "assessments": true,
+    "committed_run": true,
+    "duplicate_readings_consistent": true,
+    "holds": true,
+    "inventory_revision": true,
+    "lot_LOT-AURORA_authority": true,
+    "lot_LOT-AURORA_evidence": true,
+    "lot_LOT-AURORA_threshold_and_action": true,
+    "lot_LOT-BIRCH_authority": true,
+    "lot_LOT-BIRCH_evidence": true,
+    "lot_LOT-BIRCH_threshold_and_action": true,
+    "lot_LOT-CEDAR_authority": true,
+    "lot_LOT-CEDAR_evidence": true,
+    "lot_LOT-CEDAR_threshold_and_action": true,
+    "lot_coverage": true,
+    "lot_state": true,
+    "mismatched_fields": {},
+    "offline_boundary": true,
+    "prior_journal_recovered": true,
+    "recovery_identity": true,
+    "schema": true,
+    "source_checkpoint": true,
+    "source_integrity": true
+  },
+  "recovery_id": "CCR-20261101-01",
+  "semantic_plan_sha256": "77a133fe87c1ee4b26e558434c70bd67d92e167247acbc42b8990d8fc890b4dd",
+  "status": "verified"
+}

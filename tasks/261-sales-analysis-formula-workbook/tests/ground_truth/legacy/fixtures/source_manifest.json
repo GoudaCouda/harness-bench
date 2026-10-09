@@ -1,0 +1,34 @@
+{
+  "schema_version": "case07_source_manifest_v1",
+  "case_id": "case_07",
+  "checked_at": "2026-07-20",
+  "source_packet": {
+    "path": "tasks/20260719_nami_work_gold20_v1/source_packets/case_07.json",
+    "sha256": "42e1af9724da3e96597c3b9aae1d589d2a9270b368ccc62d2c786fb23e75ec71",
+    "use": "仅使用脱敏后的销售分析工作簿意图、任务类别和可验证性判断"
+  },
+  "synthetic_assets": [
+    {
+      "path": "fixtures/workspace_seed/task.md",
+      "sha256": "21f37810cc349847da5472bcddb14e588ffcac04b9c4efd81b369a2d5a34ba97",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "fixtures/workspace_seed/input/sales_records.csv",
+      "sha256": "fb7be77a1676639103e54126a89135147ebb3bab7158935d46abeacc944dae33",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "fixtures/workspace_seed/input/metric_rules.md",
+      "sha256": "83e2572b82b42b85096a5926662bc5a7fc9261f09ee6013d5e5e7a715e434e8c",
+      "license": "CC0-1.0"
+    }
+  ],
+  "privacy": {
+    "contains_raw_user_content": false,
+    "contains_personal_data": false,
+    "contains_credentials": false,
+    "contains_hidden_reasoning": false
+  },
+  "authorization": "approved_internal_training_and_evaluation"
+}

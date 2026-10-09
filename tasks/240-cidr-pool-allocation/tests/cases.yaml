@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 240-cidr-pool-allocation
+pass_threshold: 0.8
+cases:
+- id: allocated_prefixes
+  title: Placed CIDRs match largest-first first-fit
+  description: allocation.json allocations equal the independent IPAM kernel.
+  weight: 0.5
+  core: true
+- id: unplaced_requests
+  title: Requests that never fit remain unplaced
+  description: The unplaced list matches the kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain prefix order and residual risk
+  description: ALLOC_NOTES.md covers prefix, overlap, unplaced, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected pool and request inputs remain unchanged
+  description: JSON inputs stay byte-identical and the workspace has no linked or special artifacts.
+  weight: 0.0
+  core: false
+  gate: true

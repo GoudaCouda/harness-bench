@@ -1,0 +1,13 @@
+{
+  "decisions": [
+    {
+      "id": "r",
+      "selected": "json-en",
+      "status": "selected",
+      "vary": [
+        "Accept",
+        "Accept-Language"
+      ]
+    }
+  ]
+}

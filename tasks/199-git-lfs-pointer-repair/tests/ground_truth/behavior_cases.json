@@ -1,0 +1,301 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "intent": "stage_worktree"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "stage",
+          "object_present": false,
+          "path": "x",
+          "pointer": {
+            "oid": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "size": 3,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "content",
+          "worktree_oid": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "worktree_size": 4
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": false,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:bad",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "stage_worktree"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "stage",
+          "object_present": false,
+          "path": "x",
+          "pointer": {
+            "oid": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "size": 3,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "content",
+          "worktree_oid": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "worktree_size": -1
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 10,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "hydrate",
+          "object_oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "object_present": true,
+          "object_size": 11,
+          "path": "data.bin",
+          "pointer": {
+            "oid": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "size": 10,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "pointer"
+        },
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "missing",
+          "object_present": false,
+          "path": "model.bin",
+          "pointer": {
+            "oid": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "size": 20,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "missing"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "intent": "checkout"
+      },
+      "records": [
+        {
+          "attr_lfs": true,
+          "conflicted": false,
+          "id": "kept",
+          "object_oid": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "object_present": true,
+          "object_size": 3,
+          "path": "x",
+          "pointer": {
+            "oid": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "size": 3,
+            "version": "https://git-lfs.github.com/spec/v1"
+          },
+          "worktree_kind": "content",
+          "worktree_oid": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "worktree_size": 3
+        }
+      ]
+    }
+  ]
+}

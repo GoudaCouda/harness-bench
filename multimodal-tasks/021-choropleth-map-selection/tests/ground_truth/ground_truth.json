@@ -1,0 +1,202 @@
+{
+  "task_id": "021-choropleth-map-selection",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "choropleth_map_selection_protected_inputs",
+    "choropleth_map_selection_interaction_model",
+    "choropleth_map_selection_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/districts.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "REG-NORTH",
+      "name": "North quay"
+    },
+    {
+      "id": "REG-EAST",
+      "name": "East marsh"
+    },
+    {
+      "id": "REG-WEST",
+      "name": "West mill"
+    },
+    {
+      "id": "REG-SOUTH",
+      "name": "South harbor"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "REG-NORTH",
+      "name": "North quay",
+      "rate": 18.4,
+      "band": "high",
+      "x": 28,
+      "y": 24
+    },
+    {
+      "id": "REG-EAST",
+      "name": "East marsh",
+      "rate": 9.1,
+      "band": "mid",
+      "x": 68,
+      "y": 30
+    },
+    {
+      "id": "REG-WEST",
+      "name": "West mill",
+      "rate": 6.2,
+      "band": "low",
+      "x": 22,
+      "y": 64
+    },
+    {
+      "id": "REG-SOUTH",
+      "name": "South harbor",
+      "rate": 14.7,
+      "band": "high",
+      "x": 62,
+      "y": 70
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "choropleth",
+      "map"
+    ],
+    [
+      "district"
+    ],
+    [
+      "legend"
+    ],
+    [
+      "Rate band"
+    ],
+    [
+      "Pinned count"
+    ],
+    [
+      "Mean rate"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "map-board"
+    ],
+    [
+      "data-region-id"
+    ],
+    [
+      "Pin district"
+    ],
+    [
+      "Clear pins"
+    ],
+    [
+      "Rate band"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Pinned districts"
+    ],
+    [
+      "Mean rate"
+    ],
+    [
+      "Selected district"
+    ],
+    [
+      "legend"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"map-board\"]",
+    "marker": {
+      "attr": "data-region-id",
+      "id": "REG-NORTH",
+      "x": 28,
+      "y": 24,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-region-id",
+        "id": "REG-NORTH",
+        "x": 28,
+        "y": 24,
+        "tol": 10
+      },
+      {
+        "attr": "data-region-id",
+        "id": "REG-EAST",
+        "x": 68,
+        "y": 30,
+        "tol": 10
+      },
+      {
+        "attr": "data-region-id",
+        "id": "REG-WEST",
+        "x": 22,
+        "y": 64,
+        "tol": 10
+      },
+      {
+        "attr": "data-region-id",
+        "id": "REG-SOUTH",
+        "x": 62,
+        "y": 70,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "pin district"
+      ]
+    ],
+    "body_has": [
+      "REG-NORTH",
+      "North quay",
+      "18.4",
+      "high",
+      "Pinned",
+      "1"
+    ],
+    "selects": [
+      [
+        "Rate band",
+        "high"
+      ]
+    ],
+    "toggles": [],
+    "after_toggle": [],
+    "name": "choropleth_map_selection"
+  }
+}

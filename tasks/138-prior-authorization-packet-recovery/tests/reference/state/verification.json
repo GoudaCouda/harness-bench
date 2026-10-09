@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "attempt_boundaries_exact": true,
+    "attempt_projection_exact": true,
+    "event_dispositions_exact": true,
+    "event_receipts_exact": true,
+    "identity_service_windows_exact": true,
+    "irreversible_attempts_preserved": true,
+    "journal_restored": true,
+    "local_only": true,
+    "local_queue_exact": true,
+    "manifest_identity_closes": true,
+    "minimum_necessary_evidence": true,
+    "packet_hash_closes": true,
+    "packet_local_only": true,
+    "packet_matches_plan": true,
+    "receipt_closes": true,
+    "schema_exact": true,
+    "semantic_identity_bound": true,
+    "source_checkpoint_current": true,
+    "source_revision_preserved": true,
+    "stable_identity": true
+  },
+  "external_actions_executed": false,
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "617e1e5fed5b00a50d8c0f45842f4a532bae38b3b704b333cdacf013e17d62ab",
+  "semantic_state_digest": "e150c604e2a65196aca42283f54c49a0473a5ce2ece703cf65480ea852bfb651",
+  "source_checkpoint": "ef9c34a3268e60e29e1eeb973dc9168cb4447de155a829889a578038b7b99ecb",
+  "status": "pass"
+}

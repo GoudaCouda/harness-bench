@@ -1,0 +1,32 @@
+{
+  "application_routes": {
+    "APP-10": [
+      "floodplain",
+      "zoning"
+    ],
+    "APP-11": [
+      "historic",
+      "zoning"
+    ],
+    "APP-12": [
+      "zoning"
+    ]
+  },
+  "checks": {
+    "base_revision": true,
+    "constraint_precedence": true,
+    "current_applications": true,
+    "current_map_version": true,
+    "historical_controls": true,
+    "reviewer_routes": true
+  },
+  "config_core_sha256": "6bcf8bab1b52bddca7d7d4773c2b2cc919a67eee84b73dbe50c18e90cc24a92e",
+  "historical_routes": {
+    "HIST-1": [
+      "floodplain",
+      "historic",
+      "zoning"
+    ]
+  },
+  "status": "pass"
+}

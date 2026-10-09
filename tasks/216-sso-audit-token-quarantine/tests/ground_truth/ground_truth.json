@@ -1,0 +1,45 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1774170000
+  },
+  "artifacts": {
+    "audit_receipt": {
+      "stream_id": "harborwatch-0322",
+      "gate_clock_epoch": 1774170000,
+      "counts": {
+        "accepted": 3,
+        "quarantined": 2,
+        "malformed": 2
+      },
+      "accepted_ids": [
+        "ev1",
+        "ev3",
+        "ev6"
+      ],
+      "quarantined_ids": [
+        "ev2",
+        "ev7"
+      ],
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "auditctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "accepted",
+      "1": "quarantined",
+      "2": "accepted",
+      "3": "malformed",
+      "4": "malformed",
+      "5": "accepted",
+      "6": "quarantined"
+    },
+    "quarantined_ids": [
+      "ev2",
+      "ev7"
+    ]
+  }
+}

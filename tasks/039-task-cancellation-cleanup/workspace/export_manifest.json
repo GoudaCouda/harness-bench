@@ -1,0 +1,12 @@
+{
+  "request_id":"DSAR-8821","snapshot":"warehouse-snapshot-20260730T1013Z",
+  "artifacts":[
+    {"path":"staging/job77-part-000.csv","job_id":"export-job-77","class":"row_data","legal_hold":false,"rows":3,"evidence_id":"MAN-77-A"},
+    {"path":"staging/job78-part-000.jsonl","job_id":"export-job-78","class":"row_data","legal_hold":false,"rows":2,"evidence_id":"MAN-78-A"},
+    {"path":"staging/delivery-receipt-901.json","job_id":"export-job-77","class":"audit_receipt","legal_hold":false,"evidence_id":"REC-901"},
+    {"path":"staging/hold-slice-78.csv","job_id":"export-job-78","class":"row_data","legal_hold":true,"hold_id":"HOLD-44","evidence_id":"MAN-78-H"},
+    {"path":"staging/job79-part-000.jsonl","job_id":"export-job-79","class":"row_data","legal_hold":false,"rows":2,"evidence_id":"MAN-79-A"},
+    {"path":"staging/delivery-receipt-903.json","job_id":"export-job-79","class":"audit_receipt","legal_hold":false,"evidence_id":"REC-903"},
+    {"path":"staging/upload-key-79.txt","job_id":"export-job-79","class":"transient_credential","legal_hold":false,"evidence_id":"KEY-79"}
+  ]
+}

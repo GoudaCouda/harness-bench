@@ -1,0 +1,14 @@
+{
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "applicant": "Pine County Public Works",
+  "disaster": "DR-4917",
+  "project_id": "PW-0042",
+  "sample_method": "five-line targeted payment-integrity sample",
+  "lines": [
+    {"line_id": "FA-LAB-001", "cost_type": "force_account_labor", "claimed_amount": 32000, "ledger_entry_id": "GL-8801"},
+    {"line_id": "FA-LAB-002", "cost_type": "force_account_labor", "claimed_amount": 8000, "ledger_entry_id": "GL-8802"},
+    {"line_id": "CON-DEB-003", "cost_type": "contracted_debris", "claimed_amount": 120000, "ledger_entry_id": "GL-8803"},
+    {"line_id": "EQUIP-004", "cost_type": "equipment_rental", "claimed_amount": 25000, "ledger_entry_id": "GL-8804"},
+    {"line_id": "SUP-005", "cost_type": "emergency_supplies", "claimed_amount": 18000, "ledger_entry_id": "GL-8805"}
+  ]
+}

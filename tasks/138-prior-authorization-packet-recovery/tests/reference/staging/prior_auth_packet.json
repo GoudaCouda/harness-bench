@@ -1,0 +1,38 @@
+{
+  "case_id": "PA-502",
+  "clinical_decision_made": false,
+  "packet": {
+    "authorization_window": {
+      "from": "2026-09-15",
+      "to": "2026-10-14"
+    },
+    "diagnosis_code": "M54.16",
+    "documents": [
+      "DOC-CLN-22",
+      "DOC-ORD-77",
+      "DOC-PT-09"
+    ],
+    "evidence_refs": [
+      "evidence/documents.json#DOC-CLN-22",
+      "evidence/documents.json#DOC-ORD-77",
+      "evidence/documents.json#DOC-PT-09",
+      "evidence/events.jsonl#EV-ELIG-12",
+      "evidence/events.jsonl#EV-ORD-05",
+      "policy/prior_auth_policy.json#minimum_necessary",
+      "state/portal.db#cases:PA-502"
+    ],
+    "member_id": "MEM-8731",
+    "patient_id": "PAT-4102",
+    "payer_id": "SYN-PAYER-A",
+    "service_code": "72148",
+    "service_window": {
+      "from": "2026-09-15",
+      "to": "2026-09-30"
+    }
+  },
+  "queue_id": "Q-PA-502",
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "status": "staged_offline",
+  "transmitted": false
+}

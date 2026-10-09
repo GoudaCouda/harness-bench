@@ -1,0 +1,62 @@
+{
+  "arrival_curfew": "2026-10-15T20:00:00-07:00",
+  "destination_timezone": "America/Vancouver",
+  "event_arrival_deadline": "2026-10-16T08:30:00-07:00",
+  "hotel_checkin_deadline": "2026-10-15T22:00:00-07:00",
+  "inventory_as_of": "2026-10-14T18:10:00-04:00",
+  "minimum_connection_minutes": {
+    "airport_change": 180,
+    "same_airport": 75
+  },
+  "objective_order": [
+    "fewest_reviewed_air_legs_changed",
+    "lowest_incremental_cost_cad",
+    "option_id"
+  ],
+  "plan_schema": {
+    "assessment_fields": [
+      "option_id",
+      "feasible",
+      "reviewed_air_legs_changed",
+      "incremental_cost_cad",
+      "violations",
+      "evidence_refs"
+    ],
+    "decision_fields": [
+      "object_id",
+      "prior_state",
+      "final_state",
+      "action",
+      "selected_inventory_object",
+      "local_stage_kind",
+      "evidence_refs",
+      "external_action"
+    ],
+    "top_level_fields": [
+      "schema_version",
+      "recovery_id",
+      "source_checkpoint",
+      "inventory_snapshot_id",
+      "selected_option_id",
+      "option_assessments",
+      "applied_event_ids",
+      "ignored_duplicate_delivery_ids",
+      "object_decisions",
+      "external_actions_executed"
+    ]
+  },
+  "recovery_id": "TRIP-20261015-SECOND-01",
+  "required_rest_minutes_before_event": 540,
+  "schema_version": 1,
+  "stage_boundary": "local_proposal_holds_and_requests_only",
+  "traveler_constraints": {
+    "accessibility_code": "WCHR",
+    "airport_change_allowed": false,
+    "authorized_transit_countries": [
+      "CA",
+      "US"
+    ],
+    "checked_bags": 1
+  },
+  "trip_id": "TRIP-4187"
+}

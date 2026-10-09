@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verdict", "score", "checks", "final_state_sha256"],
+  "properties": {
+    "schema_version": {"const": "nami_work_case15_verifier_result_v1"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "required", "evidence"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "required": {"type": "boolean"},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "final_state_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

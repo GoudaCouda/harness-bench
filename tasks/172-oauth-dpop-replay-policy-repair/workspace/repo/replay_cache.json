@@ -1,0 +1,4 @@
+[
+  {"jkt":"key-a","jti":"expired","expires_at":900},
+  {"jkt":"key-a","jti":"used","expires_at":1200}
+]

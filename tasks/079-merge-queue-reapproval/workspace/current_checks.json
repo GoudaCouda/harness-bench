@@ -1,0 +1,7 @@
+[
+  {"gate": "build_linux", "sha": "bbb222", "status": "pass", "run_id": "run-201"},
+  {"gate": "build_windows", "sha": "bbb222", "status": "pass", "run_id": "run-202"},
+  {"gate": "security", "sha": "aaa111", "status": "pass", "run_id": "run-old-77"},
+  {"gate": "security", "sha": "bbb222", "status": "pending", "run_id": "run-203"},
+  {"gate": "license", "sha": "bbb222", "status": "fail", "run_id": "run-204", "finding": "GPL-only transitive parser package"}
+]

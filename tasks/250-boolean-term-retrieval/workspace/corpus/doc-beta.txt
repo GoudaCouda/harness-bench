@@ -1,0 +1,1 @@
+Gate sensors and mill pumps share a cabinet.

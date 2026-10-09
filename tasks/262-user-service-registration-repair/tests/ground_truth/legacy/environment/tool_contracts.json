@@ -1,0 +1,17 @@
+{
+  "schema_version": "case08_tool_contracts_v2",
+  "tools": {
+    "filesystem": {
+      "version": "2.0.0",
+      "root": "/workspace",
+      "allowed": ["read", "write_allowed_source"],
+      "denied": ["symlink", "write_outside_workspace", "delete_protected"]
+    },
+    "terminal": {
+      "version": "2.0.0",
+      "working_directory": "/workspace",
+      "network": "disabled",
+      "allowed_commands": ["python3", "find", "sed", "sha256sum"]
+    }
+  }
+}

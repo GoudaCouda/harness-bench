@@ -1,0 +1,1 @@
+{"ledger":"state/processed.jsonl","logs":["logs/service.log.1","logs/service.log"],"checkpoint":"state/checkpoint.json","dedup_key":"record_id","require_ledger_ahead_ack":true}

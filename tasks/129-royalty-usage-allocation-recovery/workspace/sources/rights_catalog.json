@@ -1,0 +1,83 @@
+{
+  "ownership_splits": [
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": "2026-05-31",
+      "iswc": "T-100.000.002-0",
+      "shares_bps": {
+        "RIGHTHOLDER-A": 6000,
+        "RIGHTHOLDER-B": 4000
+      },
+      "split_id": "SPLIT-A1",
+      "territory": "US",
+      "version": 1
+    },
+    {
+      "effective_from": "2026-06-01",
+      "effective_through": "2026-12-31",
+      "iswc": "T-100.000.002-0",
+      "shares_bps": {
+        "RIGHTHOLDER-A": 5000,
+        "RIGHTHOLDER-B": 5000
+      },
+      "split_id": "SPLIT-A2",
+      "territory": "US",
+      "version": 2
+    },
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": "2026-12-31",
+      "iswc": "T-200.000.001-0",
+      "shares_bps": {
+        "RIGHTHOLDER-C": 7000,
+        "RIGHTHOLDER-D": 3000
+      },
+      "split_id": "SPLIT-B1",
+      "territory": "GB",
+      "version": 1
+    }
+  ],
+  "rights": [
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": "2026-12-31",
+      "iswc": "T-100.000.002-0",
+      "right_id": "RIGHT-A-US",
+      "territory": "US",
+      "usage_types": [
+        "on_demand_stream"
+      ]
+    },
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": "2026-12-31",
+      "iswc": "T-100.000.002-0",
+      "right_id": "RIGHT-A-CA",
+      "territory": "CA",
+      "usage_types": [
+        "on_demand_stream"
+      ]
+    },
+    {
+      "effective_from": "2026-01-01",
+      "effective_through": "2026-12-31",
+      "iswc": "T-200.000.001-0",
+      "right_id": "RIGHT-B-GB",
+      "territory": "GB",
+      "usage_types": [
+        "download"
+      ]
+    },
+    {
+      "effective_from": "2025-01-01",
+      "effective_through": "2026-04-30",
+      "iswc": "T-300.000.001-0",
+      "right_id": "RIGHT-C-US",
+      "territory": "US",
+      "usage_types": [
+        "on_demand_stream"
+      ]
+    }
+  ],
+  "schema_version": 1
+}

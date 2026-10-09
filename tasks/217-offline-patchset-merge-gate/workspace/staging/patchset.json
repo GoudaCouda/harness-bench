@@ -1,0 +1,83 @@
+{
+  "batch_id": "westline-0323",
+  "gate_clock_epoch": 1774256400,
+  "patches": [
+    {
+      "patch_id": "p1",
+      "path": "src/foo.py",
+      "checks": {
+        "lint": "pass",
+        "unit": "pass",
+        "type": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "aaa111"
+    },
+    {
+      "patch_id": "p2",
+      "path": "src/bar.py",
+      "checks": {
+        "lint": "fail",
+        "unit": "pass",
+        "type": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "aaa111"
+    },
+    {
+      "patch_id": "p3",
+      "path": "docs/readme.md",
+      "checks": {
+        "lint": "pass",
+        "unit": "pass",
+        "type": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "aaa111"
+    },
+    {
+      "patch_id": "p4",
+      "path": "src/baz.py",
+      "checks": {
+        "lint": "pass",
+        "unit": "pass",
+        "type": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "bbb222"
+    },
+    {
+      "patch_id": "p5",
+      "path": "src/util.py",
+      "checks": {
+        "lint": "pass",
+        "unit": "pass",
+        "type": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "aaa111"
+    },
+    {
+      "patch_id": "p6",
+      "path": "src/skip.py",
+      "checks": {
+        "lint": "pass",
+        "unit": "pass"
+      },
+      "approvals": [
+        "team-core"
+      ],
+      "parent_sha": "aaa111"
+    }
+  ]
+}

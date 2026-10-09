@@ -1,0 +1,8 @@
+{
+  "consumer": "account-projection",
+  "segment_glob": "journal/segment-*.jsonl",
+  "currency": "USD",
+  "authoritative_dedup_record": "applied_events",
+  "cursor_semantics": "last physically observed journal record",
+  "require_stale_cursor_acknowledgement": true
+}

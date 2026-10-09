@@ -1,0 +1,197 @@
+{
+  "edges": [
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "equal",
+          "observed_at": 1,
+          "serial": 7,
+          "zone": "z"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "z": {
+            "epoch": 1,
+            "serial": 7
+          }
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "older",
+          "observed_at": 1,
+          "serial": 9,
+          "zone": "z"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "z": {
+            "epoch": 1,
+            "serial": 10
+          }
+        }
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "wrap",
+          "observed_at": 1,
+          "serial": 3,
+          "zone": "example"
+        },
+        {
+          "epoch": 1,
+          "id": "old",
+          "observed_at": 2,
+          "serial": 4294967290,
+          "zone": "example"
+        },
+        {
+          "epoch": 2,
+          "id": "epoch",
+          "observed_at": 3,
+          "serial": 1,
+          "zone": "example"
+        },
+        {
+          "epoch": 1,
+          "id": "wrap",
+          "observed_at": 1,
+          "serial": 3,
+          "zone": "example"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "example": {
+            "epoch": 1,
+            "serial": 4294967290
+          }
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "wrap",
+          "observed_at": 1,
+          "serial": 4294967296,
+          "zone": "example"
+        },
+        {
+          "epoch": 1,
+          "id": "old",
+          "observed_at": 2,
+          "serial": 4294967290,
+          "zone": "example"
+        },
+        {
+          "epoch": 2,
+          "id": "epoch",
+          "observed_at": 3,
+          "serial": 1,
+          "zone": "example"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "example": {
+            "epoch": 1,
+            "serial": 4294967290
+          }
+        }
+      }
+    }
+  ],
+  "primary": [
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "wrap",
+          "observed_at": 1,
+          "serial": 3,
+          "zone": "example"
+        },
+        {
+          "epoch": 1,
+          "id": "old",
+          "observed_at": 2,
+          "serial": 4294967290,
+          "zone": "example"
+        },
+        {
+          "epoch": 2,
+          "id": "epoch",
+          "observed_at": 3,
+          "serial": 1,
+          "zone": "example"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "example": {
+            "epoch": 1,
+            "serial": 4294967290
+          }
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "epoch": 1,
+          "id": "half",
+          "observed_at": 1,
+          "serial": 2147483648,
+          "zone": "z"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "z": {
+            "epoch": 1,
+            "serial": 0
+          }
+        }
+      }
+    },
+    {
+      "events": [
+        {
+          "epoch": 2,
+          "id": "new",
+          "observed_at": 1,
+          "serial": 5,
+          "zone": "z"
+        },
+        {
+          "epoch": 1,
+          "id": "low",
+          "observed_at": 2,
+          "serial": 100,
+          "zone": "z"
+        }
+      ],
+      "policy": {
+        "zones": {
+          "z": {
+            "epoch": 1,
+            "serial": 99
+          }
+        }
+      }
+    }
+  ]
+}

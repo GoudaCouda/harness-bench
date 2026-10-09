@@ -1,0 +1,16 @@
+{
+  "abi_status": "pass",
+  "applicable_vulnerabilities": [],
+  "approval_status": "pending",
+  "build_state_sha256": "a394e7c7c4fa2b66352c32e241f8277827942cebdd062849366e7956792ef11e",
+  "candidate_tag": "report-worker:2026.08-rc2",
+  "external_push_executed": false,
+  "phase": "staged_pending_release_approval",
+  "prior_image_digest": "sha256:9e3d8c5a712db6616ea56a6ca7e1ae0879348ed9b71734086a06ed6411d1036b",
+  "provenance_status": "verified",
+  "release_id": "REL-REPORT-2026-08",
+  "revision": 2,
+  "schema_version": 1,
+  "stage_token": "7e02912134206f62917dae94874190b1b39309caf629518953cc3c726a249629",
+  "staged_image_digest": "sha256:0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d"
+}

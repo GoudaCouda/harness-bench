@@ -1,0 +1,12 @@
+{
+  "page": 3,
+  "pages": 3,
+  "vintage": "2026-07",
+  "rows": [
+    {"country": "Cygnus", "year": 2023, "code": "GDPCON15", "value": 518},
+    {"country": "Cygnus", "year": 2024, "code": "GDPCON15", "value": 538},
+    {"country": "Cygnus", "year": 2025, "code": "GDPCON15", "value": 540},
+    {"country": "Cygnus", "year": 2025, "code": "GDPCUR", "value": 901},
+    {"country": "Dione", "year": 2025, "code": "GDPCON15", "value": 610}
+  ]
+}

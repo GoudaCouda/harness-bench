@@ -1,0 +1,194 @@
+{
+  "corpus_id": "incident-public-replay-v1",
+  "corpus_sha256": "5ceb644d94295a42219603fbb6f008f274a786934323942dd86565c5345e83ac",
+  "external_actions_executed": false,
+  "failed": 0,
+  "failed_request_ids": [],
+  "passed": 14,
+  "policy_id": "gateway-waf-2026-08",
+  "policy_passed": true,
+  "policy_revision": 8,
+  "policy_sha256": "bcf95bf56446fe8c0e37113b47abfa3577feff3c74637c8a51f5f7a5c8c9b62d",
+  "results": [
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "BASE-HEALTH-01"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "BASE-CATALOG-01"
+    },
+    {
+      "expected": {
+        "action": "block",
+        "rule_id": "SQLI-942100",
+        "status": 403
+      },
+      "observed": {
+        "action": "block",
+        "rule_id": "SQLI-942100",
+        "status": 403
+      },
+      "pass": true,
+      "request_id": "BASE-SQLI-01"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "HOOK-LEGIT-01"
+    },
+    {
+      "expected": {
+        "action": "block",
+        "rule_id": "RCE-932100",
+        "status": 403
+      },
+      "observed": {
+        "action": "block",
+        "rule_id": "RCE-932100",
+        "status": 403
+      },
+      "pass": true,
+      "request_id": "HOOK-UNSIGNED-CMD-01"
+    },
+    {
+      "expected": {
+        "action": "block",
+        "rule_id": "RCE-932100",
+        "status": 403
+      },
+      "observed": {
+        "action": "block",
+        "rule_id": "RCE-932100",
+        "status": 403
+      },
+      "pass": true,
+      "request_id": "HOOK-WRONG-ROUTE-01"
+    },
+    {
+      "expected": {
+        "action": "block",
+        "rule_id": "TRAVERSAL-930100",
+        "status": 403
+      },
+      "observed": {
+        "action": "block",
+        "rule_id": "TRAVERSAL-930100",
+        "status": 403
+      },
+      "pass": true,
+      "request_id": "TRAV-DOUBLE-01"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "TRAV-SAFE-01"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "LOGIN-A-1"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "LOGIN-A-2"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "LOGIN-A-3"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "LOGIN-B-1"
+    },
+    {
+      "expected": {
+        "action": "block",
+        "rule_id": "RATE-LOGIN-100",
+        "status": 429
+      },
+      "observed": {
+        "action": "block",
+        "rule_id": "RATE-LOGIN-100",
+        "status": 429
+      },
+      "pass": true,
+      "request_id": "LOGIN-A-4"
+    },
+    {
+      "expected": {
+        "action": "allow",
+        "status": 200
+      },
+      "observed": {
+        "action": "allow",
+        "status": 200
+      },
+      "pass": true,
+      "request_id": "LOGIN-A-5"
+    }
+  ],
+  "schema_version": 1,
+  "total": 14
+}

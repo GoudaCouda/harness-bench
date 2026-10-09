@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Accessibility Annotation</title><style>* { box-sizing: border-box; }
+:root { color: #172026; background: #f5f7f8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { margin: 0; }
+button, select { font: inherit; }
+.app-shell { width: min(1240px, calc(100vw - 32px)); margin: 0 auto; padding: 24px 0 42px; }
+.topbar { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 2rem; line-height: 1.1; }
+.lead { margin-top: 8px; color: #53626c; max-width: 780px; }
+.eyebrow { color: #63717a; font-size: .78rem; font-weight: 800; text-transform: uppercase; }
+.controls, .metrics, .workspace, .detail-grid { display: grid; gap: 12px; }
+.controls { grid-template-columns: repeat(3, minmax(0, 1fr)); background: #fff; border: 1px solid #d8e0e5; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+.controls label { display: grid; gap: 6px; color: #42525d; font-size: .88rem; font-weight: 800; }
+select, button { min-height: 40px; border: 1px solid #9cadb6; border-radius: 6px; background: #fff; color: #172026; padding: 8px 10px; }
+button { cursor: pointer; font-weight: 800; }
+button[aria-pressed="true"] { background: #e7f1f2; border-color: #225b6d; }
+button:focus-visible, select:focus-visible, .marker:focus-visible { outline: 3px solid #2f6f83; outline-offset: 2px; }
+.metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 16px; }
+.metric, .panel, .inspector { background: #fff; border: 1px solid #d8e0e5; border-radius: 8px; padding: 14px; }
+.metric strong { display: block; font-size: 1.5rem; margin-top: 4px; }
+.metric span, .fact span { color: #63717a; font-size: .78rem; font-weight: 800; }
+.workspace { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; }
+.annotation-board { position: relative; width: 100%; margin: 0; background: #e9eef1; border: 1px solid #c6d0d6; border-radius: 8px; overflow: hidden; }
+.annotation-board img { display: block; width: 100%; height: auto; }
+.marker { position: absolute; border: 3px solid #c43f2f; background: rgba(196, 63, 47, .12); color: #172026; min-width: 34px; min-height: 26px; padding: 3px 5px; text-align: left; display: grid; align-content: start; }
+.marker strong { font-size: .72rem; background: #fff; border: 1px solid #c43f2f; border-radius: 4px; padding: 1px 3px; width: fit-content; }
+.marker.active { border-color: #185b70; background: rgba(24, 91, 112, .16); }
+.marker.contrast { border-color: #7d4e00; }
+.marker.focus { border-color: #185b70; }
+.marker.keyboard { border-color: #5c4d9a; }
+.inspector { position: sticky; top: 14px; }
+.detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; }
+.fact { border: 1px solid #e1e8ec; border-radius: 6px; padding: 10px; }
+.finding-list { display: grid; gap: 8px; margin-top: 12px; }
+.finding-list button { text-align: left; display: grid; gap: 4px; }
+.remediation { margin-top: 12px; border-left: 4px solid #185b70; padding: 10px 12px; background: #eef6f7; }
+@media (max-width: 860px) { .controls, .metrics, .workspace { grid-template-columns: 1fr; } .inspector { position: static; } h1 { font-size: 1.45rem; } .marker strong { font-size: .64rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+</style></head><body><div id="root"></div><script>
+const findings = [{"id": "A11Y-NAV", "label": "Keyboard focus gap", "category": "focus", "owner": "Design Systems", "severity": "watch", "x": 18, "y": 18, "w": 30, "h": 12, "fix": "Add visible focus state to primary navigation links"}, {"id": "A11Y-FORM", "label": "Missing input label", "category": "label", "owner": "Growth", "severity": "review", "x": 59, "y": 44, "w": 24, "h": 14, "fix": "Bind visible label text to the email field"}, {"id": "A11Y-CARD", "label": "Low contrast price text", "category": "contrast", "owner": "Catalog", "severity": "review", "x": 18, "y": 67, "w": 26, "h": 16, "fix": "Raise price text contrast and keep the sale badge readable"}, {"id": "A11Y-MODAL", "label": "Modal close target", "category": "keyboard", "owner": "Marketing", "severity": "watch", "x": 70, "y": 16, "w": 17, "h": 12, "fix": "Expose close button name and tab stop"}]; let category='all'; let severity='all'; let showRemediations=false; let selectedId='A11Y-FORM'; const root=document.getElementById('root');
+function visible() { return findings.filter(f=>(category==='all'||f.category===category)&&(severity==='all'||f.severity===severity)); }
+function render() { const vf=visible(); const selected=vf.find(f=>f.id===selectedId)||vf[0]||findings[0]; const cats=['all',...Array.from(new Set(findings.map(f=>f.category)))]; const keyboardBlockers=vf.filter(f=>f.category==='keyboard'||f.category==='focus'||f.severity==='review').length; const annotatedArea=Math.round(vf.reduce((s,f)=>s+f.w*f.h,0)); const reviewSeverity=vf.filter(f=>f.severity==='review').length; root.innerHTML=`<main class="app-shell" aria-label="Accessibility screenshot annotation workspace"><header class="topbar"><div><p class="eyebrow">Accessibility annotation</p><h1>Product page issue map</h1><p class="lead">Overlay protected accessibility findings on the local target image, then filter by category or severity without moving the image.</p></div></header><section class="controls" aria-label="Annotation controls"><label>Issue category<select id="category" aria-label="Issue category">${cats.map(c=>`<option value="${c}" ${category===c?'selected':''}>${c==='all'?'All categories':c}</option>`).join('')}</select></label><label>Severity filter<select id="severity" aria-label="Severity filter"><option value="all" ${severity==='all'?'selected':''}>All severities</option><option value="watch" ${severity==='watch'?'selected':''}>watch</option><option value="review" ${severity==='review'?'selected':''}>review</option></select></label><button type="button" id="remed" aria-pressed="${showRemediations}">Show remediations</button></section><section class="metrics" aria-label="Annotation metrics"><article class="metric"><span>Visible findings</span><strong>${vf.length}</strong><small>${category} / ${severity}</small></article><article class="metric"><span>Review severity</span><strong>${reviewSeverity}</strong><small>Review markers visible</small></article><article class="metric"><span>Keyboard blockers</span><strong>${keyboardBlockers}</strong><small>Focus and keyboard risks</small></article><article class="metric"><span>Annotated area</span><strong>${annotatedArea}</strong><small>${showRemediations?'Remediations shown':'Markers only'}</small></article></section><section class="workspace"><section class="panel" aria-label="Annotated target image"><p class="eyebrow">Target image</p><figure class="annotation-board" data-testid="annotation-board"><img src="/audit-target.svg" alt="Synthetic product checkout page accessibility target"/>${vf.map(f=>`<button type="button" class="marker ${f.category} ${f.id===selectedId?'active':''}" data-issue-id="${f.id}" style="left:${f.x}%;top:${f.y}%;width:${f.w}%;height:${f.h}%;" aria-label="${f.id} ${f.label}"><strong>${f.id}</strong></button>`).join('')}</figure></section><aside class="inspector" aria-live="polite" aria-label="Selected finding detail"><p class="eyebrow">Selected finding</p><h2>${selected.id} - ${selected.label}</h2><div class="detail-grid"><div class="fact"><span>Owner</span><strong>${selected.owner}</strong></div><div class="fact"><span>Severity</span><strong>${selected.severity}</strong></div><div class="fact"><span>Category</span><strong>${selected.category}</strong></div><div class="fact"><span>Coordinates</span><strong>${selected.x}, ${selected.y}</strong></div></div>${showRemediations?`<p class="remediation">Remediation: ${selected.fix}</p>`:''}<div class="finding-list" aria-label="Visible finding list">${vf.map(f=>`<button type="button" data-list-id="${f.id}">${f.id} - ${f.label}<small>${f.category} / ${f.severity}</small></button>`).join('')}</div></aside></section></main>`; document.getElementById('category').onchange=e=>{category=e.target.value; render();}; document.getElementById('severity').onchange=e=>{severity=e.target.value; render();}; document.getElementById('remed').onclick=()=>{showRemediations=!showRemediations; render();}; document.querySelectorAll('[data-issue-id],[data-list-id]').forEach(btn=>btn.onclick=()=>{selectedId=btn.getAttribute('data-issue-id')||btn.getAttribute('data-list-id'); render();}); }
+render();
+</script></body></html>

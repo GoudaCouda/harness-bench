@@ -1,0 +1,42 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1773565200
+  },
+  "artifacts": {
+    "gate_receipt": {
+      "batch_id": "batch-2026-03-15",
+      "gate_clock_epoch": 1773565200,
+      "counts": {
+        "admitted": 2,
+        "frozen": 1,
+        "method_not_found": 1,
+        "tenant_denied": 1,
+        "invalid_params": 1,
+        "malformed": 2
+      },
+      "response_count": 7,
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "gatectl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "admitted",
+      "1": "tenant_denied",
+      "2": "frozen",
+      "3": "method_not_found",
+      "4": "invalid_params",
+      "5": "malformed",
+      "6": "admitted",
+      "7": "malformed"
+    },
+    "forwarded_methods": [
+      "payments.get",
+      "payments.get"
+    ],
+    "response_count": 7
+  }
+}

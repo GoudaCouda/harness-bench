@@ -1,0 +1,44 @@
+schema_version: 2
+task_id: 057-metric-definition-migration-diff
+pass_threshold: 0.8
+cases:
+- id: metric_diff
+  title: Every metric has the correct old/new values, direction, and classification
+  description: Every metric has the correct old/new values, direction, and classification;
+    all related facts, relationships, and closed-set constraints must agree before
+    this outcome earns credit.
+  weight: 0.34
+  core: true
+- id: regression_register
+  title: Unexpected regressions are isolated without extras
+  description: Unexpected regressions are isolated without extras; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns
+    credit.
+  weight: 0.25
+  core: true
+- id: migration_summary
+  title: Aggregate counts and largest change reconcile to the diff
+  description: Aggregate counts and largest change reconcile to the diff; all related
+    facts, relationships, and closed-set constraints must agree before this outcome
+    earns credit.
+  weight: 0.21
+  core: true
+- id: summary_reconciliation
+  title: The migration summary recomputes from the submitted diff
+  description: The diff uses the published header, and summary counts plus the largest
+    relative change agree dynamically with the submitted metric rows.
+  weight: 0.1
+  core: false
+- id: decision_caveats
+  title: The handoff records the required interpretation caveats
+  description: The handoff records the required interpretation caveats; all related
+    facts, relationships, and closed-set constraints must agree before this outcome
+    earns credit.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary
+    business mistakes lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

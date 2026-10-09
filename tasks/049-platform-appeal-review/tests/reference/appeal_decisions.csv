@@ -1,0 +1,8 @@
+case_id,decision,final_action,policy_basis,confidence
+A-01,uphold,7-day suspension,HATE-1,high
+A-02,overturn,restore,SAFE-1,high
+A-03,downgrade,warning,SPAM-1,medium
+A-04,downgrade,warning,EDGE-1,medium
+A-05,uphold,3-day suspension,PRECVIO-1;EDGE-1,medium
+A-06,overturn,restore,SAFE-1;MISLABEL-1,medium
+A-07,downgrade,warning,META-2;EDGE-1,medium

@@ -1,0 +1,36 @@
+{
+  "cluster_id": "northstar-ha",
+  "control_plane_nodes": ["cp-1", "cp-2", "cp-3"],
+  "required_clients": [
+    "kube-controller-manager",
+    "kube-scheduler",
+    "kubelet/node-a",
+    "kubelet/node-b",
+    "coredns",
+    "kube-proxy",
+    "metrics-adapter",
+    "kube-apiserver/aggregation-client",
+    "kube-apiserver/webhook-client"
+  ],
+  "required_servers": [
+    "kube-apiserver/cp-1",
+    "kube-apiserver/cp-2",
+    "kube-apiserver/cp-3",
+    "aggregated-api/custom-metrics",
+    "admission-webhook/policy"
+  ],
+  "required_handshakes": [
+    {"client": "kube-controller-manager", "server": "kube-apiserver/cp-1"},
+    {"client": "kube-controller-manager", "server": "kube-apiserver/cp-3"},
+    {"client": "kube-scheduler", "server": "kube-apiserver/cp-2"},
+    {"client": "kube-scheduler", "server": "kube-apiserver/cp-3"},
+    {"client": "kubelet/node-a", "server": "kube-apiserver/cp-1"},
+    {"client": "kubelet/node-b", "server": "kube-apiserver/cp-2"},
+    {"client": "coredns", "server": "kube-apiserver/cp-1"},
+    {"client": "kube-proxy", "server": "kube-apiserver/cp-2"},
+    {"client": "metrics-adapter", "server": "kube-apiserver/cp-1"},
+    {"client": "metrics-adapter", "server": "kube-apiserver/cp-3"},
+    {"client": "kube-apiserver/aggregation-client", "server": "aggregated-api/custom-metrics"},
+    {"client": "kube-apiserver/webhook-client", "server": "admission-webhook/policy"}
+  ]
+}

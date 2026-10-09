@@ -1,0 +1,25 @@
+{
+  "schema_version": "nami_work_case16_reference_state_v1",
+  "booking": {
+    "booking_id": "BKG-NW16-001",
+    "request_id": "REQ-NW16-001",
+    "user_id": "CUS-042",
+    "hotel_id": "H-CJ-002",
+    "check_in": "2026-11-18",
+    "check_out": "2026-11-21",
+    "adults": 2,
+    "children": 1,
+    "room_type": "family_standard",
+    "status": "confirmed",
+    "total_cny": 1794,
+    "created_at": "2026-07-20T09:00:00+08:00"
+  },
+  "booking_nights": ["2026-11-18", "2026-11-19", "2026-11-20"],
+  "inventory_change": {
+    "hotel_id": "H-CJ-002",
+    "stay_dates": ["2026-11-18", "2026-11-19", "2026-11-20"],
+    "available_rooms_before": 4,
+    "available_rooms_after": 3
+  },
+  "unchanged_scopes": ["all_other_hotels", "all_other_dates", "all_users"]
+}

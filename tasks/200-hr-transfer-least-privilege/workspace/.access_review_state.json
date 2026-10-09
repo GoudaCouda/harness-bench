@@ -1,0 +1,12 @@
+{
+  "execution_state": "proposed_only",
+  "external_actions_executed": false,
+  "input_bundle_sha256": "0fb8860dc3b7b1fb891aae40da72e66c2e40d52508ab9941ff472d60bbdb534a",
+  "phase": "draft",
+  "plan_sha256": null,
+  "review_sha256": null,
+  "revision": 0,
+  "schema_version": 1,
+  "stage_token": null,
+  "transfer_id": "TR-200"
+}

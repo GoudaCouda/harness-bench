@@ -1,0 +1,8 @@
+{
+  "required_profiles": {"webstack": "session-v1", "auth-ui": "claims-v1", "upload-agent": "stream-v1", "storage-sdk": "storage-v1"},
+  "cli_parse": {"input": "customer=acme;retry=2", "expected": {"customer": "acme", "retry": 2}},
+  "http_session": {"same_site": "Lax", "signed": true, "round_trip": "pass"},
+  "auth_claims": {"shape": "flat-v1", "round_trip": "pass"},
+  "worker_resume": {"checkpoint_shape": "offset-v1", "multipart_round_trip": "pass"},
+  "storage_retry": {"backoff_contract": "bounded-v1", "idempotency": "pass"}
+}

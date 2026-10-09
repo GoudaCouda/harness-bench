@@ -1,0 +1,45 @@
+schema_version: 2
+task_id: 265-weekly-operations-brief-generator
+title: weekly operations brief generator
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+hooks_module: environment/hooks.py
+design_file: design.md
+timeout_sec: 7200
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- code_execution
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+- safety_boundary
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts:
+- submission/generate_brief.py
+- output/summary.json
+- output/weekly_brief.md
+task_family: 265-weekly-operations-brief-generator
+variant: native-v2
+mutation_contract:
+  allowed_created:
+  - submission/generate_brief.py
+  - output/summary.json
+  - output/weekly_brief.md
+  allowed_modified: []
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_11

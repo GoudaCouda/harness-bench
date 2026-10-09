@@ -1,0 +1,38 @@
+schema_version: 2
+task_id: 163-grpc-deadline-cancellation-repair
+pass_threshold: 0.8
+cases:
+- id: deadline_and_retry_budget
+  title: Propagated deadline backoff and per-try caps choose exact retries
+  description: Elapsed work reserve and backoff all consume one incoming budget without renewal.
+  weight: 0.3
+  core: true
+- id: commitment_and_cancellation_safety
+  title: Committed calls parent operations and caller cancellation fail safe
+  description: Headers prevent transparent retry ABORTED escalates and child RPCs stop with the caller.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: rpc_replay
+  title: Protected decisions and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: rpc_handoff
+  title: Deadline retry and cancellation semantics are handed off clearly
+  description: Another engineer can audit budget arithmetic lifecycle precedence and verification.
+  weight: 0.2
+  core: false
+- id: source_and_rpc_boundary
+  title: RPC planner validation and malformed-input behavior are correct
+  description: The implementation stays in the auditable pure subset and malformed call or policy state fails predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence filesystem and live RPC boundaries are respected
+  description: Inputs remain unchanged dangerous workspace nodes are absent and no concrete live RPC cancellation restart or retry action is claimed.
+  weight: 0.0
+  core: false
+  gate: true

@@ -1,0 +1,8 @@
+[
+  {"path":"/metadata/labels/app","managers":["deployer","policy-bot"]},
+  {"path":"/metadata/labels/security","managers":["security"]},
+  {"path":"/spec/containers[name=api]/image","managers":["deployer"]},
+  {"path":"/spec/containers[name=api]/port","managers":["deployer"]},
+  {"path":"/spec/replicas","managers":["hpa"]},
+  {"path":"/spec/strategy","managers":["deployer"]}
+]

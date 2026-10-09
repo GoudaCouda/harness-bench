@@ -1,0 +1,17 @@
+{
+  "decision_count": 7,
+  "delivery_count": 18,
+  "discrepancies": [],
+  "external_actions_executed": false,
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "556a5842fd21315de702de1087e223b271f198bd31d9f51a7ce567bb457454c1",
+  "source_checkpoint": "d2e2c87366e50cde1a854b53d267a0e89b2d9359e321f0839a3a3c3e0756dae0",
+  "status": "valid",
+  "totals": {
+    "locally_stageable_cents": 17280000,
+    "preserved_disbursed_cents": 11420000,
+    "received_wire_cents": 38600000,
+    "retained_holdback_cents": 180000
+  }
+}

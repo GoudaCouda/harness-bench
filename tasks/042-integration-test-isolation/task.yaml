@@ -1,0 +1,38 @@
+task_id: 042-integration-test-isolation
+title: Repair an order-independent integration-test runner with bounded quarantine
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [shared_fixture_leakage, deterministic_seed, quarantine_expiry, true_regression_preservation]
+required_artifacts: [repo/src/isolation_runner.py, repo/isolation_report.json, repo/REPAIR_NOTES.md]
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [PYTEST-FIXTURE-SCOPE, PYTEST-FLAKY-TESTS]
+task_family: integration-test-isolation-repair
+variant: fixture-copy-stable-seed-and-expiring-quarantine
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/isolation_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/isolation_runner.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

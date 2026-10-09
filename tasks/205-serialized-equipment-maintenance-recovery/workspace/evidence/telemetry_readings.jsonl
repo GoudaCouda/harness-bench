@@ -1,0 +1,5 @@
+{"asset_serial": "PKG-PX8-00041", "kind": "vibration", "observed_at": "2026-08-19T10:05:00Z", "reading_id": "TLM-200-A", "unit": "mm/s", "value": 12.7}
+{"asset_serial": "PKG-PX8-00041", "kind": "bearing_temperature", "observed_at": "2026-08-19T10:07:00Z", "reading_id": "TLM-200-B", "unit": "C", "value": 91.4}
+{"asset_serial": "PKG-PX8-00041", "kind": "vibration", "observed_at": "2026-08-19T10:09:00Z", "reading_id": "TLM-201-A", "unit": "mm/s", "value": 12.8}
+{"asset_serial": "PKG-PX9-00007", "kind": "insulation_resistance", "observed_at": "2026-08-19T10:13:00Z", "reading_id": "TLM-202-A", "unit": "Mohm", "value": 0.4}
+{"asset_serial": "PKG-PX8-00055", "kind": "belt_speed_delta", "observed_at": "2026-08-19T10:15:00Z", "reading_id": "TLM-203-A", "unit": "percent", "value": 18.0}

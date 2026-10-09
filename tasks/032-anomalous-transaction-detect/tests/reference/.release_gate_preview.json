@@ -1,0 +1,11 @@
+{
+  "batch_id": "AP-RG-2026-08-19-15",
+  "candidate_digest": "c1a11304babd6ffff4e3d924838d442efa0a87ebf7c8ab412d8f2fd12894138d",
+  "decision_count": 9,
+  "execution_mode": "review_only",
+  "external_actions_executed": false,
+  "issue_count": 0,
+  "schema_version": 1,
+  "source_checkpoint": "fde46d41f3708150666b36247204eceff6497e1ee903d214e0a8898d6cfe777d",
+  "status": "pass"
+}

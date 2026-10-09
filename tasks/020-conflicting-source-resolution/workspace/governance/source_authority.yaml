@@ -1,0 +1,17 @@
+schema_version: 1
+rules:
+  - claim_scope: regulatory_authorization
+    authority: signed_regulator_determination
+  - claim_scope: capital_allocation
+    authority: audited_finance_close
+  - claim_scope: operational_readiness_and_cohort
+    authority: readiness_board_log
+  - claim_scope: contracted_scope_and_roles
+    authority: executed_contract
+  - claim_scope: customer_communication_release
+    authority: legal_approval_record
+principles:
+  - Authority is scoped to a claim; a regulator notice is not a finance record.
+  - A later low-authority document does not supersede a scoped primary record.
+  - Contracted future scope is not the same as launch-day authorized scope.
+  - An absent approval is open, not implicitly granted.

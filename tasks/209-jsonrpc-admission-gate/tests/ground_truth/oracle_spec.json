@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "task_id": "209-jsonrpc-admission-gate",
+  "checks": [
+    {
+      "id": "admission_log_state",
+      "label": "The admission log matches the canonical post-gate decisions",
+      "weight": 6,
+      "condition": {
+        "type": "file_equals",
+        "path": "state/admission_log.json",
+        "expected_path": "reference/state/admission_log.json",
+        "format": "json"
+      }
+    },
+    {
+      "id": "receipt_summary",
+      "label": "The gate receipt reports the canonical clock, counts, and response count",
+      "weight": 2,
+      "condition": {
+        "type": "json",
+        "path": "state/gate_receipt.json",
+        "pointer": "",
+        "op": "contains",
+        "expected_from": {
+          "path": "ground_truth.json",
+          "format": "json",
+          "pointer": "/artifacts/gate_receipt"
+        }
+      }
+    },
+    {
+      "id": "verification_record",
+      "label": "The verification record names the controller and claims repeat stability",
+      "weight": 1,
+      "condition": {
+        "type": "json",
+        "path": "state/verification.json",
+        "pointer": "",
+        "op": "contains",
+        "expected_from": {
+          "path": "ground_truth.json",
+          "format": "json",
+          "pointer": "/artifacts/verification"
+        }
+      }
+    },
+    {
+      "id": "admission_narrative",
+      "label": "The handoff explains the overlay conflict, decision classes, and boundary",
+      "weight": 1,
+      "condition": {
+        "type": "text",
+        "path": "jsonrpc_admission_handoff.md",
+        "contains_groups": [
+          ["payouts.create"],
+          ["frozen", "freeze"],
+          ["tn-beta", "tenant_denied", "capability"],
+          ["ledger.export", "method_not_found"],
+          ["notification", "no id", "without an id"],
+          ["c1", "duplicate"],
+          ["jsonrpc", "1.0", "malformed"],
+          ["verif", "validate", "gatectl"],
+          ["boundary", "not contacted", "offline", "authorization"]
+        ],
+        "excludes_all": [
+          "released the funds",
+          "contacted the processor",
+          "notified the partner",
+          "deleted the audit evidence"
+        ],
+        "case_sensitive": false,
+        "min_chars": 400
+      }
+    }
+  ]
+}

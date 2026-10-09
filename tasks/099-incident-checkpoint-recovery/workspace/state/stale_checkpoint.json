@@ -1,0 +1,12 @@
+{
+  "incident_id": "INC-CR-204",
+  "checkpoint_revision": 17,
+  "written_at": "2026-08-19T02:18:04Z",
+  "accounts": [
+    {"account_id": "svc-api", "completed": true, "version": 8},
+    {"account_id": "svc-billing", "completed": true, "version": 13},
+    {"account_id": "svc-catalog", "completed": true, "version": 7},
+    {"account_id": "svc-search", "completed": false, "version": 11},
+    {"account_id": "svc-worker", "completed": false, "version": 4}
+  ]
+}

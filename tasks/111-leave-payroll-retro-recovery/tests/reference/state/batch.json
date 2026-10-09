@@ -1,0 +1,12 @@
+{
+  "adjustment_count": 4,
+  "batch_id": "RB-2026-08-A",
+  "external_payment_executed": false,
+  "phase": "staged_pending_payroll_approval",
+  "plan_sha256": "637aa2437020f228f4ddf8d84726ce1961a7d31706924424f17a64526cb25a4c",
+  "revision": 3,
+  "schema_version": 1,
+  "source_payment_export_id": "PAYEXP-2026-07-A",
+  "source_period_id": "PP-2026-07-A",
+  "target_period_id": "PP-2026-08-A"
+}

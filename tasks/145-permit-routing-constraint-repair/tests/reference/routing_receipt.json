@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "commit_digest": true,
+    "configuration": true,
+    "replay": true,
+    "single_revision": true
+  },
+  "config_sha256": "0b687b1378dcd7fc48567e7fe4466ef8163c0740220ac1cdafba97c6c4b8dd43",
+  "replay_sha256": "3d3a0c835c9b41d697843694e75c56bab793596e374cdec7224566fdd60c4f5e",
+  "status": "pass",
+  "tool": "permitctl/1"
+}

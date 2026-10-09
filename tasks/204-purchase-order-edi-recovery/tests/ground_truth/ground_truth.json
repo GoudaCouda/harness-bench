@@ -1,0 +1,1131 @@
+{
+  "database": {
+    "edi_receipts": [
+      {
+        "delivery_id": "D-001",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "850-PO-1001"
+      },
+      {
+        "delivery_id": "D-002",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "850-PO-1002"
+      },
+      {
+        "delivery_id": "D-005",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "850-PO-1005"
+      },
+      {
+        "delivery_id": "D-011",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1001"
+      },
+      {
+        "delivery_id": "D-012",
+        "disposition": "stale_revision_ignored",
+        "message_type": "855",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1002-A"
+      },
+      {
+        "delivery_id": "D-013",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 2,
+        "transaction_control": "855-1002-B"
+      },
+      {
+        "delivery_id": "D-014",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1003",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1003"
+      },
+      {
+        "delivery_id": "D-015",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1004"
+      },
+      {
+        "delivery_id": "D-016",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1005"
+      },
+      {
+        "delivery_id": "D-017",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1006",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "855-1006"
+      },
+      {
+        "delivery_id": "D-021",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1001"
+      },
+      {
+        "delivery_id": "D-022",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1002"
+      },
+      {
+        "delivery_id": "D-023",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1003",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1003"
+      },
+      {
+        "delivery_id": "D-024",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1004"
+      },
+      {
+        "delivery_id": "D-025",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1005"
+      },
+      {
+        "delivery_id": "D-026",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1006",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-1006"
+      },
+      {
+        "delivery_id": "D-027",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-NOACK",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "856-NOACK"
+      },
+      {
+        "delivery_id": "D-030",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1003",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1003"
+      },
+      {
+        "delivery_id": "D-031",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1001"
+      },
+      {
+        "delivery_id": "D-032",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1002"
+      },
+      {
+        "delivery_id": "D-034",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1004"
+      },
+      {
+        "delivery_id": "D-035",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-035-COLLISION",
+        "disposition": "control_number_collision_quarantined",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-035-REDRIVE",
+        "disposition": "duplicate_delivery_ignored",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-036",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1006",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-1006"
+      },
+      {
+        "delivery_id": "D-037",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-NOACK",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-NOACK"
+      },
+      {
+        "delivery_id": "D-038",
+        "disposition": "posted_po_ignored",
+        "message_type": "810",
+        "po_id": "PO-POSTED",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 2,
+        "transaction_control": "810-POSTED-REDRIVE"
+      },
+      {
+        "delivery_id": "D-039",
+        "disposition": "unknown_po_ignored",
+        "message_type": "810",
+        "po_id": "PO-UNKNOWN",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "revision": 1,
+        "transaction_control": "810-UNKNOWN"
+      }
+    ],
+    "match_results": [
+      {
+        "acknowledged_qty": 10,
+        "acknowledged_unit_price_cents": 1000,
+        "invoiced_qty": 10,
+        "invoiced_unit_price_cents": 1000,
+        "line_id": "PO-1001:001",
+        "match_status": "matched",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 10
+      },
+      {
+        "acknowledged_qty": 5,
+        "acknowledged_unit_price_cents": 2000,
+        "invoiced_qty": 5,
+        "invoiced_unit_price_cents": 2000,
+        "line_id": "PO-1001:002",
+        "match_status": "matched",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 5
+      },
+      {
+        "acknowledged_qty": 8,
+        "acknowledged_unit_price_cents": 1015,
+        "invoiced_qty": 8,
+        "invoiced_unit_price_cents": 1015,
+        "line_id": "PO-1002:001",
+        "match_status": "matched",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 8
+      },
+      {
+        "acknowledged_qty": 5,
+        "acknowledged_unit_price_cents": 3000,
+        "invoiced_qty": 5,
+        "invoiced_unit_price_cents": 3000,
+        "line_id": "PO-1003:001",
+        "match_status": "hold_quantity_variance",
+        "po_id": "PO-1003",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 4
+      },
+      {
+        "acknowledged_qty": 5,
+        "acknowledged_unit_price_cents": 4000,
+        "invoiced_qty": 5,
+        "invoiced_unit_price_cents": 4125,
+        "line_id": "PO-1004:001",
+        "match_status": "hold_invoice_price_mismatch",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 5
+      },
+      {
+        "acknowledged_qty": 3,
+        "acknowledged_unit_price_cents": 5000,
+        "invoiced_qty": 3,
+        "invoiced_unit_price_cents": 5000,
+        "line_id": "PO-1005:001",
+        "match_status": "matched",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 3
+      },
+      {
+        "acknowledged_qty": 2,
+        "acknowledged_unit_price_cents": 6000,
+        "invoiced_qty": 2,
+        "invoiced_unit_price_cents": 6000,
+        "line_id": "PO-1006:001",
+        "match_status": "hold_supplier_rejected",
+        "po_id": "PO-1006",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 2
+      },
+      {
+        "acknowledged_qty": 0,
+        "acknowledged_unit_price_cents": 0,
+        "invoiced_qty": 3,
+        "invoiced_unit_price_cents": 3000,
+        "line_id": "PO-NOACK:001",
+        "match_status": "hold_missing_ack",
+        "po_id": "PO-NOACK",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "shipped_qty": 3
+      }
+    ],
+    "po_lines": [
+      {
+        "line_id": "PO-1001:001",
+        "ordered_qty": 10,
+        "po_id": "PO-1001",
+        "sku": "SKU-1001-001",
+        "unit_price_cents": 1000
+      },
+      {
+        "line_id": "PO-1001:002",
+        "ordered_qty": 5,
+        "po_id": "PO-1001",
+        "sku": "SKU-1001-002",
+        "unit_price_cents": 2000
+      },
+      {
+        "line_id": "PO-1002:001",
+        "ordered_qty": 10,
+        "po_id": "PO-1002",
+        "sku": "SKU-1002-001",
+        "unit_price_cents": 1000
+      },
+      {
+        "line_id": "PO-1003:001",
+        "ordered_qty": 5,
+        "po_id": "PO-1003",
+        "sku": "SKU-1003-001",
+        "unit_price_cents": 3000
+      },
+      {
+        "line_id": "PO-1004:001",
+        "ordered_qty": 5,
+        "po_id": "PO-1004",
+        "sku": "SKU-1004-001",
+        "unit_price_cents": 4000
+      },
+      {
+        "line_id": "PO-1005:001",
+        "ordered_qty": 3,
+        "po_id": "PO-1005",
+        "sku": "SKU-1005-001",
+        "unit_price_cents": 5000
+      },
+      {
+        "line_id": "PO-1006:001",
+        "ordered_qty": 2,
+        "po_id": "PO-1006",
+        "sku": "SKU-1006-001",
+        "unit_price_cents": 6000
+      },
+      {
+        "line_id": "PO-NOACK:001",
+        "ordered_qty": 3,
+        "po_id": "PO-NOACK",
+        "sku": "SKU-OACK-001",
+        "unit_price_cents": 3000
+      },
+      {
+        "line_id": "PO-POSTED:001",
+        "ordered_qty": 1,
+        "po_id": "PO-POSTED",
+        "sku": "SKU-STED-001",
+        "unit_price_cents": 7000
+      }
+    ],
+    "purchase_orders": [
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 0,
+        "hold_reason": null,
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 20000,
+        "po_id": "PO-1001",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "ready_to_post_local",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 0,
+        "hold_reason": null,
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 8120,
+        "po_id": "PO-1002",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "ready_to_post_local",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 15000,
+        "hold_reason": "hold_quantity_variance",
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 0,
+        "po_id": "PO-1003",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "hold_quantity_variance",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 20625,
+        "hold_reason": "hold_invoice_price_mismatch",
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 0,
+        "po_id": "PO-1004",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "hold_invoice_price_mismatch",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 0,
+        "hold_reason": null,
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 15000,
+        "po_id": "PO-1005",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "ready_to_post_local",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 12000,
+        "hold_reason": "hold_supplier_rejected",
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 0,
+        "po_id": "PO-1006",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "hold_supplier_rejected",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 9000,
+        "hold_reason": "hold_missing_ack",
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 0,
+        "po_id": "PO-NOACK",
+        "posted_at": null,
+        "posted_invoice_id": null,
+        "state": "hold_missing_ack",
+        "supplier_id": "SUPPLIER-A",
+        "version": 2
+      },
+      {
+        "buyer_id": "BUYER-HQ",
+        "currency": "USD",
+        "held_amount_cents": 0,
+        "hold_reason": null,
+        "issued_at": "2026-08-15T12:00:00Z",
+        "matched_amount_cents": 7000,
+        "po_id": "PO-POSTED",
+        "posted_at": "2026-08-18T09:30:00Z",
+        "posted_invoice_id": "INV-POSTED",
+        "state": "posted",
+        "supplier_id": "SUPPLIER-A",
+        "version": 1
+      }
+    ],
+    "recovery_journal": [
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1001\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1001",
+        "po_id": "PO-1001",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1002\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1002",
+        "po_id": "PO-1002",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1003\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1003",
+        "po_id": "PO-1003",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1004\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1004",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1005\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1005",
+        "po_id": "PO-1005",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1006\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-1006",
+        "po_id": "PO-1006",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-NOACK\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-EDI-RCV-20260819-01-PO-NOACK",
+        "po_id": "PO-NOACK",
+        "recovery_id": "EDI-RCV-20260819-01",
+        "restored": 1
+      },
+      {
+        "before_json": "{\"buyer_id\": \"BUYER-HQ\", \"currency\": \"USD\", \"held_amount_cents\": 0, \"hold_reason\": null, \"issued_at\": \"2026-08-15T12:00:00Z\", \"matched_amount_cents\": 0, \"po_id\": \"PO-1004\", \"posted_at\": null, \"posted_invoice_id\": null, \"state\": \"open\", \"supplier_id\": \"SUPPLIER-A\", \"version\": 1}",
+        "journal_id": "J-INT-001",
+        "po_id": "PO-1004",
+        "recovery_id": "EDI-INTERRUPTED-00",
+        "restored": 1
+      }
+    ],
+    "recovery_runs": [
+      {
+        "recovery_id": "EDI-INTERRUPTED-00",
+        "semantic_plan_sha256": "partial",
+        "source_checkpoint": "partial",
+        "stage_token": null,
+        "status": "interrupted"
+      },
+      {
+        "recovery_id": "EDI-RCV-20260819-01",
+        "semantic_plan_sha256": "f31b5753dcd8fa96730ddf5d1f7e31f91fdad856eafc8a710ae1d4b75c92d60d",
+        "source_checkpoint": "b286b9059cb694cd632bd054c6e58203fd068eb5730784ab180d13c53fc3619e",
+        "stage_token": "2012ae06a3df6b03787059ca0ef8da73f674f84fdc6042bc6713e93fbb48eb6b",
+        "status": "staged_local"
+      }
+    ],
+    "system_state": [
+      {
+        "key": "last_successful_batch",
+        "value": "2026-08-18T08:00:00Z"
+      },
+      {
+        "key": "source_revision",
+        "value": "12"
+      }
+    ]
+  },
+  "plan": {
+    "event_dispositions": [
+      {
+        "delivery_id": "D-001",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1001",
+        "revision": 1,
+        "transaction_control": "850-PO-1001"
+      },
+      {
+        "delivery_id": "D-002",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1002",
+        "revision": 1,
+        "transaction_control": "850-PO-1002"
+      },
+      {
+        "delivery_id": "D-005",
+        "disposition": "applied_latest_revision",
+        "message_type": "850",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "850-PO-1005"
+      },
+      {
+        "delivery_id": "D-011",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1001",
+        "revision": 1,
+        "transaction_control": "855-1001"
+      },
+      {
+        "delivery_id": "D-012",
+        "disposition": "stale_revision_ignored",
+        "message_type": "855",
+        "po_id": "PO-1002",
+        "revision": 1,
+        "transaction_control": "855-1002-A"
+      },
+      {
+        "delivery_id": "D-013",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1002",
+        "revision": 2,
+        "transaction_control": "855-1002-B"
+      },
+      {
+        "delivery_id": "D-014",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1003",
+        "revision": 1,
+        "transaction_control": "855-1003"
+      },
+      {
+        "delivery_id": "D-015",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1004",
+        "revision": 1,
+        "transaction_control": "855-1004"
+      },
+      {
+        "delivery_id": "D-016",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "855-1005"
+      },
+      {
+        "delivery_id": "D-017",
+        "disposition": "applied_latest_revision",
+        "message_type": "855",
+        "po_id": "PO-1006",
+        "revision": 1,
+        "transaction_control": "855-1006"
+      },
+      {
+        "delivery_id": "D-021",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1001",
+        "revision": 1,
+        "transaction_control": "856-1001"
+      },
+      {
+        "delivery_id": "D-022",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1002",
+        "revision": 1,
+        "transaction_control": "856-1002"
+      },
+      {
+        "delivery_id": "D-023",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1003",
+        "revision": 1,
+        "transaction_control": "856-1003"
+      },
+      {
+        "delivery_id": "D-024",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1004",
+        "revision": 1,
+        "transaction_control": "856-1004"
+      },
+      {
+        "delivery_id": "D-025",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "856-1005"
+      },
+      {
+        "delivery_id": "D-026",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-1006",
+        "revision": 1,
+        "transaction_control": "856-1006"
+      },
+      {
+        "delivery_id": "D-027",
+        "disposition": "applied_latest_revision",
+        "message_type": "856",
+        "po_id": "PO-NOACK",
+        "revision": 1,
+        "transaction_control": "856-NOACK"
+      },
+      {
+        "delivery_id": "D-030",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1003",
+        "revision": 1,
+        "transaction_control": "810-1003"
+      },
+      {
+        "delivery_id": "D-031",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1001",
+        "revision": 1,
+        "transaction_control": "810-1001"
+      },
+      {
+        "delivery_id": "D-032",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1002",
+        "revision": 1,
+        "transaction_control": "810-1002"
+      },
+      {
+        "delivery_id": "D-034",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1004",
+        "revision": 1,
+        "transaction_control": "810-1004"
+      },
+      {
+        "delivery_id": "D-035",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-035-COLLISION",
+        "disposition": "control_number_collision_quarantined",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-035-REDRIVE",
+        "disposition": "duplicate_delivery_ignored",
+        "message_type": "810",
+        "po_id": "PO-1005",
+        "revision": 1,
+        "transaction_control": "810-1005"
+      },
+      {
+        "delivery_id": "D-036",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-1006",
+        "revision": 1,
+        "transaction_control": "810-1006"
+      },
+      {
+        "delivery_id": "D-037",
+        "disposition": "applied_latest_revision",
+        "message_type": "810",
+        "po_id": "PO-NOACK",
+        "revision": 1,
+        "transaction_control": "810-NOACK"
+      },
+      {
+        "delivery_id": "D-038",
+        "disposition": "posted_po_ignored",
+        "message_type": "810",
+        "po_id": "PO-POSTED",
+        "revision": 2,
+        "transaction_control": "810-POSTED-REDRIVE"
+      },
+      {
+        "delivery_id": "D-039",
+        "disposition": "unknown_po_ignored",
+        "message_type": "810",
+        "po_id": "PO-UNKNOWN",
+        "revision": 1,
+        "transaction_control": "810-UNKNOWN"
+      }
+    ],
+    "external_actions_executed": false,
+    "po_decisions": [
+      {
+        "ack_revision": 1,
+        "disposition": "ready_to_post_local",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-001",
+          "evidence/edi_deliveries.jsonl#D-011",
+          "evidence/edi_deliveries.jsonl#D-021",
+          "evidence/edi_deliveries.jsonl#D-031",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1001:001",
+          "state/procurement.db#po_lines:PO-1001:002",
+          "state/procurement.db#purchase_orders:PO-1001"
+        ],
+        "final_state": "ready_to_post_local",
+        "held_amount_cents": 0,
+        "invoice_amount_cents": 20000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 10,
+            "acknowledged_unit_price_cents": 1000,
+            "invoiced_qty": 10,
+            "invoiced_unit_price_cents": 1000,
+            "line_id": "PO-1001:001",
+            "match_status": "matched",
+            "ordered_qty": 10,
+            "ordered_unit_price_cents": 1000,
+            "shipped_qty": 10
+          },
+          {
+            "acknowledged_qty": 5,
+            "acknowledged_unit_price_cents": 2000,
+            "invoiced_qty": 5,
+            "invoiced_unit_price_cents": 2000,
+            "line_id": "PO-1001:002",
+            "match_status": "matched",
+            "ordered_qty": 5,
+            "ordered_unit_price_cents": 2000,
+            "shipped_qty": 5
+          }
+        ],
+        "matched_amount_cents": 20000,
+        "next_local_action": "review_local_payable_batch",
+        "ordered_amount_cents": 20000,
+        "po_id": "PO-1001",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": 2,
+        "disposition": "ready_to_post_local",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-002",
+          "evidence/edi_deliveries.jsonl#D-012",
+          "evidence/edi_deliveries.jsonl#D-013",
+          "evidence/edi_deliveries.jsonl#D-022",
+          "evidence/edi_deliveries.jsonl#D-032",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1002:001",
+          "state/procurement.db#purchase_orders:PO-1002"
+        ],
+        "final_state": "ready_to_post_local",
+        "held_amount_cents": 0,
+        "invoice_amount_cents": 8120,
+        "line_matches": [
+          {
+            "acknowledged_qty": 8,
+            "acknowledged_unit_price_cents": 1015,
+            "invoiced_qty": 8,
+            "invoiced_unit_price_cents": 1015,
+            "line_id": "PO-1002:001",
+            "match_status": "matched",
+            "ordered_qty": 10,
+            "ordered_unit_price_cents": 1000,
+            "shipped_qty": 8
+          }
+        ],
+        "matched_amount_cents": 8120,
+        "next_local_action": "review_local_payable_batch",
+        "ordered_amount_cents": 10000,
+        "po_id": "PO-1002",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": 1,
+        "disposition": "hold_quantity_variance",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-014",
+          "evidence/edi_deliveries.jsonl#D-023",
+          "evidence/edi_deliveries.jsonl#D-030",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1003:001",
+          "state/procurement.db#purchase_orders:PO-1003"
+        ],
+        "final_state": "hold_quantity_variance",
+        "held_amount_cents": 15000,
+        "invoice_amount_cents": 15000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 5,
+            "acknowledged_unit_price_cents": 3000,
+            "invoiced_qty": 5,
+            "invoiced_unit_price_cents": 3000,
+            "line_id": "PO-1003:001",
+            "match_status": "hold_quantity_variance",
+            "ordered_qty": 5,
+            "ordered_unit_price_cents": 3000,
+            "shipped_qty": 4
+          }
+        ],
+        "matched_amount_cents": 0,
+        "next_local_action": "await_receipt_or_corrected_invoice",
+        "ordered_amount_cents": 15000,
+        "po_id": "PO-1003",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": 1,
+        "disposition": "hold_invoice_price_mismatch",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-015",
+          "evidence/edi_deliveries.jsonl#D-024",
+          "evidence/edi_deliveries.jsonl#D-034",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1004:001",
+          "state/procurement.db#purchase_orders:PO-1004"
+        ],
+        "final_state": "hold_invoice_price_mismatch",
+        "held_amount_cents": 20625,
+        "invoice_amount_cents": 20625,
+        "line_matches": [
+          {
+            "acknowledged_qty": 5,
+            "acknowledged_unit_price_cents": 4000,
+            "invoiced_qty": 5,
+            "invoiced_unit_price_cents": 4125,
+            "line_id": "PO-1004:001",
+            "match_status": "hold_invoice_price_mismatch",
+            "ordered_qty": 5,
+            "ordered_unit_price_cents": 4000,
+            "shipped_qty": 5
+          }
+        ],
+        "matched_amount_cents": 0,
+        "next_local_action": "request_corrected_invoice_locally",
+        "ordered_amount_cents": 20000,
+        "po_id": "PO-1004",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": 1,
+        "disposition": "ready_to_post_local",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-005",
+          "evidence/edi_deliveries.jsonl#D-016",
+          "evidence/edi_deliveries.jsonl#D-025",
+          "evidence/edi_deliveries.jsonl#D-035",
+          "evidence/edi_deliveries.jsonl#D-035-COLLISION",
+          "evidence/edi_deliveries.jsonl#D-035-REDRIVE",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1005:001",
+          "state/procurement.db#purchase_orders:PO-1005"
+        ],
+        "final_state": "ready_to_post_local",
+        "held_amount_cents": 0,
+        "invoice_amount_cents": 15000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 3,
+            "acknowledged_unit_price_cents": 5000,
+            "invoiced_qty": 3,
+            "invoiced_unit_price_cents": 5000,
+            "line_id": "PO-1005:001",
+            "match_status": "matched",
+            "ordered_qty": 3,
+            "ordered_unit_price_cents": 5000,
+            "shipped_qty": 3
+          }
+        ],
+        "matched_amount_cents": 15000,
+        "next_local_action": "review_local_payable_batch",
+        "ordered_amount_cents": 15000,
+        "po_id": "PO-1005",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": 1,
+        "disposition": "hold_supplier_rejected",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-017",
+          "evidence/edi_deliveries.jsonl#D-026",
+          "evidence/edi_deliveries.jsonl#D-036",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-1006:001",
+          "state/procurement.db#purchase_orders:PO-1006"
+        ],
+        "final_state": "hold_supplier_rejected",
+        "held_amount_cents": 12000,
+        "invoice_amount_cents": 12000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 2,
+            "acknowledged_unit_price_cents": 6000,
+            "invoiced_qty": 2,
+            "invoiced_unit_price_cents": 6000,
+            "line_id": "PO-1006:001",
+            "match_status": "hold_supplier_rejected",
+            "ordered_qty": 2,
+            "ordered_unit_price_cents": 6000,
+            "shipped_qty": 2
+          }
+        ],
+        "matched_amount_cents": 0,
+        "next_local_action": "route_to_buyer_for_supplier_rejection",
+        "ordered_amount_cents": 12000,
+        "po_id": "PO-1006",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": null,
+        "disposition": "hold_missing_ack",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-027",
+          "evidence/edi_deliveries.jsonl#D-037",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-NOACK:001",
+          "state/procurement.db#purchase_orders:PO-NOACK"
+        ],
+        "final_state": "hold_missing_ack",
+        "held_amount_cents": 9000,
+        "invoice_amount_cents": 9000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 0,
+            "acknowledged_unit_price_cents": 0,
+            "invoiced_qty": 3,
+            "invoiced_unit_price_cents": 3000,
+            "line_id": "PO-NOACK:001",
+            "match_status": "hold_missing_ack",
+            "ordered_qty": 3,
+            "ordered_unit_price_cents": 3000,
+            "shipped_qty": 3
+          }
+        ],
+        "matched_amount_cents": 0,
+        "next_local_action": "obtain_authoritative_855",
+        "ordered_amount_cents": 9000,
+        "po_id": "PO-NOACK",
+        "supplier_id": "SUPPLIER-A"
+      },
+      {
+        "ack_revision": null,
+        "disposition": "posted_preserved",
+        "evidence_refs": [
+          "evidence/edi_deliveries.jsonl#D-038",
+          "policy/match_policy.json#three_way_match",
+          "state/procurement.db#po_lines:PO-POSTED:001",
+          "state/procurement.db#purchase_orders:PO-POSTED"
+        ],
+        "final_state": "posted_preserved",
+        "held_amount_cents": 0,
+        "invoice_amount_cents": 7000,
+        "line_matches": [
+          {
+            "acknowledged_qty": 1,
+            "acknowledged_unit_price_cents": 7000,
+            "invoiced_qty": 1,
+            "invoiced_unit_price_cents": 7000,
+            "line_id": "PO-POSTED:001",
+            "match_status": "posted_preserved",
+            "ordered_qty": 1,
+            "ordered_unit_price_cents": 7000,
+            "shipped_qty": 1
+          }
+        ],
+        "matched_amount_cents": 7000,
+        "next_local_action": "none",
+        "ordered_amount_cents": 7000,
+        "po_id": "PO-POSTED",
+        "supplier_id": "SUPPLIER-A"
+      }
+    ],
+    "recovery_id": "EDI-RCV-20260819-01",
+    "schema_version": 1,
+    "source_checkpoint": "b286b9059cb694cd632bd054c6e58203fd068eb5730784ab180d13c53fc3619e",
+    "totals": {
+      "active_ordered_amount_cents": 101000,
+      "held_invoice_amount_cents": 56625,
+      "preserved_posted_amount_cents": 7000,
+      "ready_payable_amount_cents": 43120
+    }
+  },
+  "schema_version": 1
+}

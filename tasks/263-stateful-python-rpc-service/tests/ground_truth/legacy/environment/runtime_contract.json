@@ -1,0 +1,28 @@
+{
+  "schema_version": "case09_runtime_contract_v1",
+  "image": "python:3.12-slim",
+  "image_digest": "sha256:6c4dd321d176d61ea848dc8c73a4f7dbae8f70e0ee48bb411ea2f045b599fa8e",
+  "python_version": "3.12",
+  "network": "none",
+  "published_ports": [],
+  "rootfs_readonly": true,
+  "user": "2050:4007",
+  "limits": {"cpus": 2, "memory_mib": 2048, "pids": 128},
+  "authoring_workspace": [
+    {"container_path": "/workspace/task.md", "mode": "ro"},
+    {"container_path": "/workspace/protocol_contract.json", "mode": "ro"},
+    {"container_path": "/workspace/seed.db", "mode": "ro"},
+    {"container_path": "/workspace/submission", "mode": "rw"}
+  ],
+  "validation_sandbox": {
+    "visible_mounts": [
+      {"container_path": "/protocol_contract.json", "mode": "ro"},
+      {"container_path": "/seed.db", "mode": "ro"},
+      {"container_path": "/submission", "mode": "rw_tmpfs", "size_mib": 8}
+    ],
+    "candidate_transfer": "stdin_stream_only",
+    "evidence_transfer": "bounded_stdout_stream_only",
+    "docker_socket_visible": false
+  },
+  "forbidden_agent_paths": ["/case", "/oracle", "/reference", "/verifier", "/tests", "/validation"]
+}

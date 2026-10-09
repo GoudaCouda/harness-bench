@@ -1,0 +1,1 @@
+{"snapshot_id":"s1-selected","target_root":"/restore","include":["/app"],"exclude":["/app/data/tmp"],"overwrite":"if_changed","dry_run":true,"delete_extraneous":false}

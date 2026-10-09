@@ -1,0 +1,29 @@
+{
+  "schema_version": "case11_tool_contract_v2",
+  "command": [
+    "/usr/local/bin/python3",
+    "/workspace/submission/generate_brief.py",
+    "--input-csv",
+    "/workspace/input/weekly_operations.csv",
+    "--definitions",
+    "/workspace/input/metric_definitions.json",
+    "--template",
+    "/workspace/input/brief_template.md",
+    "--output-dir",
+    "/workspace/output"
+  ],
+  "inputs": [
+    "input/weekly_operations.csv",
+    "input/metric_definitions.json",
+    "input/brief_template.md"
+  ],
+  "submission": "submission/generate_brief.py",
+  "outputs": [
+    "output/summary.json",
+    "output/weekly_brief.md"
+  ],
+  "authoring_write_policy": "Agent 只可创建 submission/generate_brief.py，并可在自己的主 workspace 中生成两份声明输出；不得改写 input/ 或创建其他对象。",
+  "candidate_runtime_write_policy": "验收时整个 workspace 只读挂载，仅将 output/ 作为独立可写挂载；候选脚本不能改写输入、脚本或 workspace 其他位置。",
+  "ephemeral_runtime_exception": "容器仅保留 4096 字节 /dev/shm 供 Python 运行时临时使用；其中内容不得作为交付物或缓存依赖，并随容器销毁，不进入判分状态。",
+  "invalid_input_policy": "CSV 列、日期、数值、重复键、业务逻辑或分母异常时必须非零退出；全新 output/ 不得残留任何文件，已有的一组完整正确产物必须逐字节保持不变。"
+}

@@ -1,0 +1,8 @@
+{
+  "release_id": "REL-2026-08-17-A",
+  "state": "pending_security_review",
+  "policy_version": "2026.08",
+  "blockers": [],
+  "decision_ledger_sha256": null,
+  "updated_by": null
+}

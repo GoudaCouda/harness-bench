@@ -1,0 +1,311 @@
+{
+  "task_id": "018-scientific-simulation-controls",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "scientific_simulation_controls_protected_local_data",
+    "scientific_simulation_controls_simulation_interaction_model",
+    "scientific_simulation_controls_simulation_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "SIM-TEMP",
+    "SIM-FLOW",
+    "SIM-SOIL",
+    "SIM-WIND",
+    "SIM-TEMP-R1",
+    "SIM-FLOW-R2"
+  ],
+  "records": {
+    "SIM-TEMP": {
+      "id": "SIM-TEMP",
+      "name": "Temperature delta",
+      "category": "climate",
+      "owner": "Model Core",
+      "status": "watch",
+      "primary": 3,
+      "secondary": 71
+    },
+    "SIM-FLOW": {
+      "id": "SIM-FLOW",
+      "name": "River flow rate",
+      "category": "hydrology",
+      "owner": "Model Core",
+      "status": "clear",
+      "primary": 42,
+      "secondary": 28
+    },
+    "SIM-SOIL": {
+      "id": "SIM-SOIL",
+      "name": "Soil absorption",
+      "category": "land",
+      "owner": "Model Core",
+      "status": "review",
+      "primary": 58,
+      "secondary": 83
+    },
+    "SIM-WIND": {
+      "id": "SIM-WIND",
+      "name": "Wind shear",
+      "category": "atmosphere",
+      "owner": "Model Core",
+      "status": "watch",
+      "primary": 26,
+      "secondary": 64
+    },
+    "SIM-TEMP-R1": {
+      "id": "SIM-TEMP-R1",
+      "name": "Temperature delta follow-up",
+      "category": "hydrology",
+      "owner": "Model Core",
+      "status": "clear",
+      "primary": 17,
+      "secondary": 77
+    },
+    "SIM-FLOW-R2": {
+      "id": "SIM-FLOW-R2",
+      "name": "River flow rate follow-up",
+      "category": "land",
+      "owner": "Model Core",
+      "status": "watch",
+      "primary": 59,
+      "secondary": 35
+    }
+  },
+  "domain_groups": [
+    [
+      "simulation",
+      "model",
+      "experiment"
+    ],
+    [
+      "parameter",
+      "control",
+      "setting",
+      "slider"
+    ],
+    [
+      "simulation",
+      "simulation controls",
+      "run"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Model family",
+      "model family",
+      "filter"
+    ],
+    [
+      "Run mode",
+      "run mode",
+      "simulation-review"
+    ],
+    [
+      "Run search",
+      "run search",
+      "search"
+    ],
+    [
+      "Parameter value",
+      "parameter value",
+      "Unstable only",
+      "unstable only"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Signal strength",
+      "Signal",
+      "Baseline value"
+    ],
+    [
+      "Noise level",
+      "Noise"
+    ],
+    [
+      "Parameter drift",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Sensitivity output",
+      "simulation controls"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "modelFamily",
+      "setModelFamily",
+      "model family"
+    ],
+    [
+      "selected run",
+      "selected simulation",
+      "run selection"
+    ],
+    [
+      "runMode",
+      "setRunMode",
+      "run mode"
+    ],
+    [
+      "unstableOnly",
+      "setUnstableOnly",
+      "unstable only"
+    ],
+    [
+      "parameterValue",
+      "setParameterValue",
+      "parameter value"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "signalStrength",
+      "Signal strength",
+      "signal strength"
+    ],
+    [
+      "noiseLevel",
+      "Noise level",
+      "noise level"
+    ],
+    [
+      "parameterDrift",
+      "Parameter drift",
+      "drift"
+    ],
+    [
+      "sensitivityOutput",
+      "Sensitivity output",
+      "sensitivity"
+    ],
+    [
+      "parameter drift",
+      "sensitivity output",
+      "simulation-review"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "simulation output",
+      "parameter slider",
+      "result curve"
+    ],
+    [
+      "control panel",
+      "sensitivity chart",
+      "model readout"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Model family",
+    "mode_label": "Run mode",
+    "search_label": "Run search",
+    "range_label": "Parameter value",
+    "toggle_label": "Unstable only",
+    "toggle_regex": "Unstable\\ only|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Model family",
+        "value": "hydrology"
+      },
+      {
+        "kind": "fill",
+        "label": "Run search",
+        "value": "River"
+      },
+      {
+        "kind": "click",
+        "text": "SIM-FLOW"
+      },
+      {
+        "kind": "select",
+        "label": "Run mode",
+        "value": "simulation-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Parameter value",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "simulation-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "SIM-FLOW",
+      "category": "hydrology",
+      "mode": "simulation-review",
+      "search_value": "River",
+      "range_value": 64,
+      "visible_id_subset": [
+        "SIM-FLOW"
+      ],
+      "selected_detail_tokens": [
+        "Model Core",
+        "hydrology",
+        "clear",
+        "42",
+        "28"
+      ],
+      "after_clearing_search_subset": [
+        "SIM-TEMP",
+        "SIM-FLOW",
+        "SIM-FLOW-R2"
+      ],
+      "focus_subset": [
+        "SIM-SOIL"
+      ],
+      "focus_forbidden": [
+        "SIM-FLOW"
+      ],
+      "detail_switch_id": "SIM-FLOW-R2",
+      "detail_switch_tokens": [
+        "SIM-FLOW-R2",
+        "River flow rate follow-up",
+        "Model Core",
+        "land",
+        "watch",
+        "59",
+        "35"
+      ],
+      "summary_change_labels": [
+        "Signal strength",
+        "Noise level",
+        "Parameter drift",
+        "Sensitivity output"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 6
+    },
+    "action_count": 6
+  }
+}

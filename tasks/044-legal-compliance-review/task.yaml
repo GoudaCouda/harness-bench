@@ -1,0 +1,45 @@
+task_id: 044-legal-compliance-review
+title: Revise a Campaign for Internal Compliance Clearance
+prompt_file: instruction.md
+timeout_sec: 3600
+difficulty: hard
+domain: Compliance
+task_category: Content Production
+task_subcategory: Documents and Presentations
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- high_stakes_rules
+required_artifacts:
+- marketing_copy.md
+- launch_review.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-044
+task_family: 044-legal-compliance-review
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - launch_review.md
+  allowed_modified:
+  - marketing_copy.md
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

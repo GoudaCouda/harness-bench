@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "asset_id": "source_video",
+      "generator": "environment/build_fixture.py",
+      "license_ref": "lic_project_generated_assets",
+      "path": "fixtures/source/source.mp4",
+      "provenance_ref": "prov_fixture_synthetic",
+      "sha256": "c48c141e27ea4d3fdfa88cbd8cbdeebb3cadd1bbd7d459c0345cb3cef6b24813",
+      "source_kind": "project_generated"
+    },
+    {
+      "asset_id": "task_instruction",
+      "license_ref": "lic_internal_reconstructed_intent",
+      "path": "fixtures/task/instruction.md",
+      "provenance_ref": "prov_instruction_openclaw",
+      "sha256": "9efd57bd218cbfa66b611cefe5e7af83583f483c65e20943a7d0a4414634125b",
+      "source_kind": "reconstructed_from_restricted_summary"
+    },
+    {
+      "asset_id": "target_spec",
+      "license_ref": "lic_project_generated_assets",
+      "path": "fixtures/task/target_spec.json",
+      "provenance_ref": "prov_environment_human",
+      "sha256": "b95d035bfb78b4cc60c522931683d51a5f45b148102427da055651a390ff324d",
+      "source_kind": "project_authored"
+    }
+  ],
+  "license_terms": "fixtures/LICENSES.md",
+  "schema_version": "nami_work_case18_source_manifest_v1"
+}

@@ -1,0 +1,7 @@
+schema_version: 1
+criteria:
+- id: recovery_handoff
+  question: Does the handoff accurately explain backup and timeline selection, rejected alternatives, exact named target and WAL coverage, every repeated probe, replay, rollback/monitoring, and the manual-review-only boundary?
+  title: Evidence-grounded PostgreSQL recovery handoff
+  description: Equivalent wording is acceptable only when it preserves every causal recovery and no-production fact.
+  weight: 1.0

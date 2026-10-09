@@ -1,0 +1,8 @@
+[
+  {"address":"db.main","exists":true,"attributes":{"engine":"v1","password":"remote-secret"},"unknown":[]},
+  {"address":"service.api","exists":true,"attributes":{"image":"api:v1","replicas":3},"unknown":[]},
+  {"address":"cache.main","exists":true,"attributes":{"tier":"standard","ttl":90},"unknown":[]},
+  {"address":"queue.main","exists":true,"attributes":{},"unknown":["encrypted"]},
+  {"address":"worker.main","exists":true,"attributes":{"image":"worker:v1"},"unknown":[]},
+  {"address":"orphan.old","exists":true,"attributes":{"size":1},"unknown":[]}
+]

@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-08-19",
+  "damage_missing_packaging_percent": 60,
+  "duplicate_survivor_rule": "oldest_opened_at_then_case_id",
+  "event_order_rule": "first_delivery_per_event_id_then_carrier_sequence",
+  "external_boundary": "local_stage_only",
+  "packet_order": "denial_response_deadline_then_ready_case_id",
+  "recovery_id": "CRR-20260819-01",
+  "schema_version": 1,
+  "settlement_rules": {
+    "damage": [
+      "matching_invoice",
+      "damage_photos",
+      "packaging_or_partial_rate"
+    ],
+    "invoice_identity": "line_shipment_id_must_match",
+    "shortage": [
+      "matching_invoice",
+      "signed_bol"
+    ]
+  }
+}

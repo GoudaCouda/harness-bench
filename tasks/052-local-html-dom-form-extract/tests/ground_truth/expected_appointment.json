@@ -1,0 +1,85 @@
+{
+  "fixture_sha256": "b5e3dbe891991a4eae15bfce22a350589b9a26a3e02405403025b2f443c53855",
+  "slot_id": "PAS-204",
+  "service_code": "passport_renewal",
+  "service_name": "Adult passport renewal",
+  "office_id": "downtown",
+  "office_name": "Downtown Service Center",
+  "address": "125 Market Street, Bayview, CA 94105",
+  "start_local": "2026-08-18T16:00:00",
+  "end_local": "2026-08-18T16:30:00",
+  "timezone": "America/Los_Angeles",
+  "wheelchair_accessible": true,
+  "documents": [
+    "Current or expired passport",
+    "Completed DS-82 application",
+    "One passport photo"
+  ],
+  "preparation": [
+    "Arrive 10 minutes early",
+    "Bring originals; digital copies are not accepted"
+  ],
+  "preparation_semantics": [
+    {
+      "id": "passport_document",
+      "all_of": [
+        ["passport"],
+        ["current", "expired", "existing", "old", "valid", "prior", "previous"]
+      ]
+    },
+    {
+      "id": "completed_ds82",
+      "all_of": [
+        ["ds 82"],
+        ["completed", "complete", "filled out", "fill out", "filled in", "fill in", "signed", "prepared"]
+      ]
+    },
+    {
+      "id": "one_passport_photo",
+      "all_of": [
+        ["photo", "photograph", "headshot"],
+        ["passport", "2x2", "2 x 2", "2 by 2"],
+        ["one", "1", "single", "a passport", "a 2 by 2", "a 2x2", "a 2 x 2"]
+      ]
+    },
+    {
+      "id": "early_arrival",
+      "all_of": [
+        ["10 minute", "10 min", "ten minute"],
+        ["early", "before", "ahead", "in advance", "prior"]
+      ]
+    },
+    {
+      "id": "originals_not_digital",
+      "all_of": [
+        ["original", "physical", "hard copy", "paper"],
+        ["no digital", "digital copies not", "digital copies are not", "digital versions not", "digital versions won t", "not accept digital", "no electronic", "electronic copies not", "electronic versions cannot", "electronic versions can t", "no scanned", "scanned copies not", "physical only", "hard copy only", "originals only", "original documents only", "paper only"]
+      ]
+    }
+  ],
+  "temporal_policy": {
+    "clock_mode": "fixed_epoch_plus_monotonic_elapsed",
+    "clock_epoch": "2026-08-10T16:00:00Z",
+    "trusted_capture_field": "trusted_snapshot_at",
+    "hold_duration_seconds": 2700,
+    "duration_tolerance_seconds": 2,
+    "max_clock_start_delay_seconds": 45,
+    "max_future_skew_seconds": 5,
+    "max_run_age_seconds": 2400
+  },
+  "selection_policy": {
+    "window_start": "2026-08-17",
+    "window_end": "2026-08-20",
+    "not_before": "15:30:00",
+    "allowed_offices": [
+      "downtown",
+      "westside"
+    ],
+    "office_tie_break": [
+      "downtown",
+      "westside"
+    ],
+    "requires_wheelchair_accessible": true,
+    "requires_available": true
+  }
+}

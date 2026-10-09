@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "case_06 verifier result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "verdict", "score", "checks"],
+  "properties": {
+    "schema_version": {"const": "case06_verifier_result_v1"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "evidence"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "object"}
+        }
+      }
+    }
+  }
+}

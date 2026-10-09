@@ -1,0 +1,7 @@
+[
+  {"snapshot_id":"s1","status":"ready","action":"expand_target_nullable","reason":"next_safe_phase"},
+  {"snapshot_id":"s2","status":"ready","action":"deploy_dual_write","reason":"next_safe_phase"},
+  {"snapshot_id":"s3","status":"blocked","action":"wait","reason":"database_load"},
+  {"snapshot_id":"s4","status":"ready","action":"validate_constraint","reason":"next_safe_phase"},
+  {"snapshot_id":"s5","status":"blocked","action":"wait","reason":"observation_incomplete"}
+]

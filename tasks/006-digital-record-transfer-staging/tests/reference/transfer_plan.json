@@ -1,0 +1,11 @@
+{
+  "transfer_id": "TR-2026-017",
+  "selections": [
+    {"record_id": "REC-001", "source_path": "source/text/council_minutes_2025-01.pdf"},
+    {"record_id": "REC-002", "source_path": "source/image/map_scan_rescan.tif"},
+    {"record_id": "REC-003", "source_path": "source/audio/hearing_preservation.wav"}
+  ],
+  "quarantine": [
+    {"record_id": "REC-004", "source_path": "source/data/budget_ledger.csv", "reason": "checksum_mismatch"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "case12_agent_mount_contract_v1",
+  "image_digest": "sha256:ba7e2064c4e1ab67d2af2cd761183b4af961cbc21f47020ef785b738472b01ac",
+  "user": "2050:4007",
+  "network_mode": "none",
+  "published_ports": [],
+  "read_only_rootfs": true,
+  "resource_limits": {"cpu_cores": 2, "memory_mib": 2048, "pids": 128},
+  "mounts": [
+    {"destination": "/workspace", "source_kind": "reset_workspace", "read_only": false},
+    {"destination": "/tools/travel_tool.py", "source": "environment/travel_tool.py", "read_only": true},
+    {"destination": "/tools/tool_contract.json", "source": "environment/tool_contract.json", "read_only": true}
+  ],
+  "forbidden_mount_destinations": ["/case", "/oracle", "/verifier", "/tests", "/validation"],
+  "required_labels": [
+    "agent_sft.run_id",
+    "agent_sft.case_id",
+    "agent_sft.host_alias",
+    "agent_sft.task_id",
+    "agent_sft.purpose"
+  ]
+}

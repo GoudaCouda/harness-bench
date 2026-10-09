@@ -1,0 +1,12 @@
+{
+  "files": {
+    "evidence/fallback_batch.json": "cd39da1ba17ec29f654cb3f1421135831954e57f7e4c94ef219ac3ba01372854",
+    "evidence/fallback_trust.json": "6c01ddea8efacd0f711bd6b88b84a282c846bd1a93492eb30b7c2fda147714ea",
+    "evidence/interval_feed.jsonl": "b402cbca82cafa66888de488f2e119481dccff001ea3c028abd5bf583beb0d4b",
+    "evidence/primary_batch.json.part": "443f4a21865dc79ed79909bdf3c6512d8e8bb28eec437cc599a61059ece65349",
+    "evidence/register_reads.csv": "3d10aa945ef23c5ede203ee4556a9633520ed6b0eba8346027b2ca4dc552214e",
+    "meterctl.py": "8fe5d15ae41d55e43f2dc7cfec6f7a1db18e7abae2c56ac562479f7780b209a9",
+    "policy/billing_policy.json": "18adde3acf1ea7a2c2008c79efc6da4a84764da1b55dfc506af182a02dbb4923"
+  },
+  "schema_version": 1
+}

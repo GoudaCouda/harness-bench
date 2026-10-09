@@ -1,0 +1,4 @@
+[
+  {"case_id": "late-update-before-finality", "result": {"windows": [{"key": "cart", "start_ms": 0, "end_ms": 60000, "sum": 8, "event_ids": ["e1", "e2"], "revision": 3, "final": false}], "pending": [], "dropped_late": []}},
+  {"case_id": "replay-after-finality", "result": {"windows": [{"key": "cart", "start_ms": 0, "end_ms": 60000, "sum": 5, "event_ids": ["e1"], "revision": 2, "final": true}], "pending": [], "dropped_late": []}}
+]

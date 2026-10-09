@@ -1,0 +1,97 @@
+{
+  "catalog_id": "aurora-local-catalog-v1",
+  "currency": "CNY",
+  "products": [
+    {
+      "product_id": "p100",
+      "name": "流云轻量夹克",
+      "price_cents": 21900,
+      "rating_x10": 48,
+      "inventory": 17,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true},
+        {"size": "L", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p101",
+      "name": "青岳通勤外套",
+      "price_cents": 25900,
+      "rating_x10": 47,
+      "inventory": 11,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p102",
+      "name": "微风短款风衣",
+      "price_cents": 18900,
+      "rating_x10": 45,
+      "inventory": 23,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p103",
+      "name": "远岚防风夹克",
+      "price_cents": 19900,
+      "rating_x10": 49,
+      "inventory": 8,
+      "variants": [
+        {"size": "L", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p104",
+      "name": "星轨城市外套",
+      "price_cents": 19900,
+      "rating_x10": 49,
+      "inventory": 14,
+      "variants": [
+        {"size": "M", "color": "墨黑", "active": true}
+      ]
+    },
+    {
+      "product_id": "p105",
+      "name": "晨雾机能风衣",
+      "price_cents": 31900,
+      "rating_x10": 49,
+      "inventory": 9,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p106",
+      "name": "澄湖简约夹克",
+      "price_cents": 27900,
+      "rating_x10": 46,
+      "inventory": 6,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true}
+      ]
+    },
+    {
+      "product_id": "p107",
+      "name": "松影日常外套",
+      "price_cents": 16900,
+      "rating_x10": 43,
+      "inventory": 31,
+      "variants": [
+        {"size": "S", "color": "浅灰", "active": true}
+      ]
+    },
+    {
+      "product_id": "p108",
+      "name": "潮汐轻暖夹克",
+      "price_cents": 20900,
+      "rating_x10": 48,
+      "inventory": 0,
+      "variants": [
+        {"size": "M", "color": "海蓝", "active": true}
+      ]
+    }
+  ]
+}

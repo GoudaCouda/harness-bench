@@ -1,0 +1,237 @@
+{
+  "edges": [
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "t",
+          "kind": "tombstone",
+          "payload_hash": "t",
+          "producer": "p",
+          "seq": 3
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "r",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 2
+        }
+      ],
+      "policy": {}
+    },
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 1
+        }
+      ],
+      "policy": {}
+    }
+  ],
+  "invalid": [
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "y",
+          "producer": "p",
+          "seq": 2
+        }
+      ],
+      "policy": {}
+    },
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "e1",
+          "kind": "receive",
+          "payload_hash": "a",
+          "producer": "p",
+          "seq": "1"
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "e2",
+          "kind": "receive",
+          "payload_hash": "a",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 3,
+          "epoch": 1,
+          "id": "t",
+          "kind": "tombstone",
+          "payload_hash": "t",
+          "producer": "p",
+          "seq": 2
+        },
+        {
+          "at": 4,
+          "epoch": 1,
+          "id": "late",
+          "kind": "receive",
+          "payload_hash": "b",
+          "producer": "p",
+          "seq": 2
+        },
+        {
+          "at": 5,
+          "epoch": 2,
+          "id": "new",
+          "kind": "receive",
+          "payload_hash": "c",
+          "producer": "p",
+          "seq": 1
+        }
+      ],
+      "policy": {}
+    },
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "empty-hash",
+          "kind": "receive",
+          "payload_hash": "",
+          "producer": "p",
+          "seq": 1
+        }
+      ],
+      "policy": {}
+    }
+  ],
+  "primary": [
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "e1",
+          "kind": "receive",
+          "payload_hash": "a",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "e2",
+          "kind": "receive",
+          "payload_hash": "a",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 3,
+          "epoch": 1,
+          "id": "t",
+          "kind": "tombstone",
+          "payload_hash": "t",
+          "producer": "p",
+          "seq": 2
+        },
+        {
+          "at": 4,
+          "epoch": 1,
+          "id": "late",
+          "kind": "receive",
+          "payload_hash": "b",
+          "producer": "p",
+          "seq": 2
+        },
+        {
+          "at": 5,
+          "epoch": 2,
+          "id": "new",
+          "kind": "receive",
+          "payload_hash": "c",
+          "producer": "p",
+          "seq": 1
+        }
+      ],
+      "policy": {}
+    },
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 2,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "old",
+          "kind": "receive",
+          "payload_hash": "y",
+          "producer": "p",
+          "seq": 9
+        }
+      ],
+      "policy": {}
+    },
+    {
+      "events": [
+        {
+          "at": 1,
+          "epoch": 1,
+          "id": "a",
+          "kind": "receive",
+          "payload_hash": "x",
+          "producer": "p",
+          "seq": 1
+        },
+        {
+          "at": 2,
+          "epoch": 1,
+          "id": "b",
+          "kind": "receive",
+          "payload_hash": "y",
+          "producer": "p",
+          "seq": 1
+        }
+      ],
+      "policy": {}
+    }
+  ]
+}

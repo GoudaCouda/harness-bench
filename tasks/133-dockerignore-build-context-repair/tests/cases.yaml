@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 133-dockerignore-build-context-repair
+pass_threshold: 0.8
+cases:
+- id: intended_context
+  title: The selected build context is exact and complete
+  description: Every required runtime input is present and unrelated bulk is absent.
+  weight: 0.4
+  core: true
+- id: protected_containment
+  title: Credential-shaped and repository-private files stay outside the context
+  description: Local configuration, environment, secret, and Git metadata paths are excluded.
+  weight: 0.2
+  core: true
+- id: reproducible_manifest
+  title: The durable context manifest matches independent hashing
+  description: Included paths, hashes, byte count, and validity reproduce the final tree.
+  weight: 0.2
+  core: true
+- id: engineering_handoff
+  title: The context repair is handed off with verification evidence
+  description: Another engineer can understand precedence, scope, commands, and results.
+  weight: 0.2
+  core: false
+- id: source_and_action_safety
+  title: Protected source evidence and execution boundaries remain intact
+  description: Only the ignore policy and declared outputs change.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,11 @@
+{
+  "batch_id": "CDC-2026-08-19-42",
+  "external_publish_executed": false,
+  "logical_warehouse_sha256": "7fd8f983e5af5b2f27f7b72cf6203c19a77ef5e2f2ba8a8ef758556c07ee3b9f",
+  "phase": "staged_pending_publish_approval",
+  "plan_sha256": "908318796173a7b3320945dad23145881d8536911420648120823815b2cf7103",
+  "receipt_type": "local_cdc_recovery_stage",
+  "source_sha256": "b9dff8681699fc32c0d970a28c63639fc5b0a98d799e9189e24d3898053afcfb",
+  "stage_token": "9c4763d79b362156d80244bc4d78644fc3e79cd61ae8013110c3a346570b97dc",
+  "verification_sha256": "162154c764c059d18773424ff03e3417f2d10240322fe6013a3c85b989dc3c1d"
+}

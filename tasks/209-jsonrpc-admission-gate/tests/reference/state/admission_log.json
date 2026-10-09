@@ -1,0 +1,94 @@
+{
+  "batch_id": "batch-2026-03-15",
+  "gate_clock_epoch": 1773565200,
+  "decisions": [
+    {
+      "method": "payments.get",
+      "tenant_id": "tn-acme",
+      "id": "c1",
+      "notification": false,
+      "decision": "admitted",
+      "reason": "passed_admission_gate",
+      "index": 0
+    },
+    {
+      "method": "payments.capture",
+      "tenant_id": "tn-beta",
+      "id": "c2",
+      "notification": false,
+      "decision": "tenant_denied",
+      "reason": "tenant_lacks_capability",
+      "index": 1
+    },
+    {
+      "method": "payouts.create",
+      "tenant_id": "tn-acme",
+      "id": "c3",
+      "notification": false,
+      "decision": "frozen",
+      "reason": "method_frozen_by_overlay",
+      "index": 2
+    },
+    {
+      "method": "ledger.export",
+      "tenant_id": "tn-acme",
+      "id": "c4",
+      "notification": false,
+      "decision": "method_not_found",
+      "reason": "method_absent_from_catalog",
+      "index": 3
+    },
+    {
+      "method": "payments.capture",
+      "tenant_id": "tn-acme",
+      "id": "c5",
+      "notification": false,
+      "decision": "invalid_params",
+      "reason": "missing_required_params",
+      "missing": [
+        "amount_cents"
+      ],
+      "index": 4
+    },
+    {
+      "method": "payments.get",
+      "tenant_id": "tn-acme",
+      "id": "c6",
+      "notification": false,
+      "decision": "malformed",
+      "reason": "bad_jsonrpc",
+      "index": 5
+    },
+    {
+      "method": "payments.get",
+      "tenant_id": "tn-acme",
+      "id": null,
+      "notification": true,
+      "decision": "admitted",
+      "reason": "passed_admission_gate",
+      "index": 6
+    },
+    {
+      "method": "payments.refund",
+      "tenant_id": "tn-acme",
+      "id": "c1",
+      "notification": false,
+      "decision": "malformed",
+      "reason": "duplicate_id",
+      "index": 7
+    }
+  ],
+  "counts": {
+    "admitted": 2,
+    "frozen": 1,
+    "method_not_found": 1,
+    "tenant_denied": 1,
+    "invalid_params": 1,
+    "malformed": 2
+  },
+  "forwarded_methods": [
+    "payments.get",
+    "payments.get"
+  ],
+  "admitted_count": 2
+}

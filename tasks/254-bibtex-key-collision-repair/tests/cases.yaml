@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 254-bibtex-key-collision-repair
+pass_threshold: 0.8
+cases:
+- id: rewritten_bib
+  title: Later duplicate keys are renamed
+  description: refs.out.bib equals the independent rewrite.
+  weight: 0.5
+  core: true
+- id: collision_report
+  title: The collision report lists duplicates and renames
+  description: collision_report.json equals the independent kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain first-wins and cites
+  description: BIB_NOTES.md covers duplicate, cite, first, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected bibliography remains unchanged
+  description: refs.bib and paper.tex stay byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

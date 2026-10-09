@@ -1,0 +1,11 @@
+# Meridian API release-security handoff
+
+Release `REL-2026-08-17-A` remains in `blocked_vulnerability_review` after an offline SBOM/VEX adjudication. The gate is bound to policy `2026.08`, the frozen evidence digests, and the normalized decision ledger. `releasectl replay` completed successfully and a second replay left both the gate and evaluation receipt byte-identical.
+
+Two supplier statements were accepted. `VEX-7102` is a fresh, trusted, digest-valid `not_affected` assertion for the exact installed Jinja2 3.1.2 component. Its `vulnerable_code_not_in_execute_path` justification and impact statement meet policy, so `CVE-SYN-2026-7102` is documented and accepted with evidence. `VEX-7103` is valid for urllib3 2.0.4, but its status is `under_investigation`; that item stays in quarantine review and remains a release blocker.
+
+Three statements were rejected. `VEX-7101` claims `fixed` for requests 2.32.1 while the SBOM contains 2.31.0, so both product-version and fixed-version checks fail; the installed component remains affected, is present in the KEV snapshot, and is the emergency remediation item. `VEX-7104` supplies neither an approved `not_affected` justification nor a substantive impact statement for PyYAML 6.0.1, so the feed status remains affected. `VEX-7105` for idna 3.6 has an untrusted signer and a payload-digest mismatch, so its reassuring status cannot influence the gate.
+
+The KEV entry `CVE-SYN-2026-7199` was not promoted into a release blocker because `pkg:npm/left-pad` is absent from the exact release SBOM. It is retained in the out-of-scope ledger as `component_not_present`, rather than discarded or treated as shipped.
+
+Next actions are to update or otherwise remediate requests 2.31.0, complete reachability investigation for urllib3 2.0.4, obtain a policy-complete PyYAML assertion or remediate that component, and request an authenticated digest-correct idna statement or remediate it. Re-run this same gate after new evidence or a rebuilt SBOM is available. This work changed only the local evidence-bound gate; no deployment, exception, source-evidence rewrite, external notification, or other external action occurred. No external communication occurred.

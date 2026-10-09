@@ -1,0 +1,13 @@
+{
+  "checkpoint_id": "datacite-v4-repair",
+  "decision_sha256": "5bffaf3c9c477679f87d3c81f9fe304d027ed16e8e3f7662b39ea4de5dcc9674",
+  "external_actions_executed": false,
+  "input_bundle_sha256": "ae4fd7c14d19b55a9d35444ed1b8334b19fb0fe70705a7c4d1a5b341c5389a47",
+  "migration_sha256": "1cb62d1970828db6566d00cdd81a71725223f4e3f3baa0fd8bfdd71dc36fb083",
+  "phase": "staged_for_metadata_review",
+  "receipt_type": "local_repository_stage",
+  "repository_sha256": "e4cdba4b218590debd49ebfa4862306d65f02da97e4d575ba0b88c31a06e40ff",
+  "stage_token": "24dcf480885fd5a293561102296307ef2535bd3dd59a0f861efebec64e7c20f2",
+  "state_revision": 2,
+  "validation_sha256": "59fdfc00c660dc72f4c26d25692b23d26877aca979f0bd3d5bb85fec612d5a1e"
+}

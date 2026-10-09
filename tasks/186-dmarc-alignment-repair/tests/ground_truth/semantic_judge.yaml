@@ -1,0 +1,6 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material precedence decisions, edge boundaries, verification
+    commands/results, and offline scope for Repair DMARC alignment and disposition decisions, without claiming external
+    execution?

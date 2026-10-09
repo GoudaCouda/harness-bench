@@ -1,0 +1,18 @@
+{
+  "catalog_id": "shorefront-0325",
+  "gate_clock_epoch": 1774429200,
+  "datasets": {
+    "d2": {
+      "dataset_id": "d2",
+      "uri": "https://data.example/d2.nc",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pinned": true
+    },
+    "d3": {
+      "dataset_id": "d3",
+      "uri": "https://data.example/d3.nc",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pinned": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "address.json",
+  "$anchor": "address",
+  "type": "object",
+  "properties": {
+    "line1": {"type": "string"},
+    "city": {"type": "string"},
+    "postal_code": {"type": "string"}
+  },
+  "required": ["line1", "city", "postal_code"]
+}

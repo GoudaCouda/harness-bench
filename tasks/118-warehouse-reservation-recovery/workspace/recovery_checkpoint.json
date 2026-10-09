@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-08-16T12:00:00Z",
+  "database": "warehouse.db",
+  "recovery_id": "WMS-REC-2026-08-16-01",
+  "source_state_sha256": "3f1d7d4a24567dc1a04a16424544647f8d60c6ba4becbfa66391dacd0ab11ba6",
+  "state_scope": [
+    "inventory",
+    "orders",
+    "reservations"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "external_transmissions_executed": false,
+  "manifest_sha256": "38f213e4b979b04bbc68dab2b3dcd4354eaddde11710aa0f3ab0db82d530e205",
+  "packet_sha256": "e5dbf1cf7a6810c0dddc649db4970ee8a65a4a3afe82e0c17d0fcf0141fb5dcb",
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "schema_version": 1,
+  "semantic_plan_digest": "f30185a577832814eda0610dc810e81a2a3cb1ff6744ae5ea5a7f3922ca884b7",
+  "source_checkpoint": "86c4d6a2485037b57155cceebea70e4c03dfbc4afe35c156001531b95cd3b862",
+  "stage_boundary": "local_safety_review_not_transmitted",
+  "stage_token": "96e41461a91c9c3f9da2b6ea117333c3aafa1913befba44764bd8787a42903bb",
+  "status": "staged_local_bundle"
+}

@@ -1,0 +1,23 @@
+schema_version: 1
+task_id: 111-leave-payroll-retro-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: retro_handoff
+  title: Leave/payroll recovery handoff is professionally complete
+  question: Does the handoff accurately explain current signed-revision selection,
+    cross-midnight local-time hour calculation, overlap reclassification, authority
+    and eligibility holds, recovery of the already committed journal prefix,
+    preservation of paid payroll and unrelated lines, hash/receipt verification,
+    idempotent replay, and the pending payroll-approval no-payment boundary?
+  pass_anchors:
+  - Equivalent professional wording and organization are acceptable when all state,
+    evidence, recovery, and irreversible-boundary relationships are accurate.
+  fail_anchors:
+  - Omitting a held case, contradicting structured state, treating UTC dates as local
+    duration, or claiming payroll release, payment, leave approval, or notification fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

@@ -1,0 +1,4 @@
+[
+  {"case_id":"nested-leak-and-expiry","fixture":{"count":0,"events":[],"config":{"mode":"safe"}},"tests":[{"test_id":"mutates","operations":[{"op":"append","key":"events","value":"x"},{"op":"increment","key":"count","amount":1}]},{"test_id":"expects-clean","operations":[{"op":"assert_equal","key":"events","value":[]},{"op":"assert_equal","key":"count","value":0}]}],"seed":41,"quarantines":[{"test_id":"expects-clean","expires_day":9}],"day":10},
+  {"case_id":"stable-random-regression","fixture":{"bucket":-1},"tests":[{"test_id":"sampler-b","operations":[{"op":"random_below","key":"bucket","upper":10},{"op":"assert_not_equal","key":"bucket","value":11}]},{"test_id":"real-failure","operations":[{"op":"set","key":"bucket","value":3},{"op":"assert_equal","key":"bucket","value":4}]}],"seed":7,"quarantines":[{"test_id":"real-failure","expires_day":20}],"day":20}
+]

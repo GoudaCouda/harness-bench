@@ -1,0 +1,15 @@
+{
+  "external_actions_executed": false,
+  "packet_count": 3,
+  "packet_order": [
+    "ESC-101",
+    "ESC-104",
+    "ESC-105"
+  ],
+  "packet_path": "staging/disbursement_packet.json",
+  "packet_sha256": "eece42721ea9839d1fe0759b0ad8ce97166c7a1f4629f13e021464836bdbb321",
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "556a5842fd21315de702de1087e223b271f198bd31d9f51a7ce567bb457454c1",
+  "source_checkpoint": "d2e2c87366e50cde1a854b53d267a0e89b2d9359e321f0839a3a3c3e0756dae0"
+}

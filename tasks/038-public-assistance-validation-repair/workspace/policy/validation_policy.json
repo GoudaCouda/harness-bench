@@ -1,0 +1,24 @@
+{
+  "policy_version": "PA-VAYGO-SYN-2026.08",
+  "amount_tolerance": 0,
+  "document_authority": {
+    "superseded_invoice": "ignore_for_amount_when_a_signed_corrected_invoice_and_change_order_are_present",
+    "proof_of_payment": "must_reconcile_to_financial_ledger",
+    "labor": "hours_times_rate_plus_fringe_requires_supervisor_approval"
+  },
+  "required_evidence": {
+    "force_account_labor": ["timesheet", "work_order", "employee_roster", "supervisor_approval", "ledger_entry"],
+    "contracted_debris": ["signed_contract", "authoritative_invoice", "change_order_if_corrected", "proof_of_payment", "ledger_entry"],
+    "equipment_rental": ["signed_rental_agreement", "invoice", "proof_of_payment", "ledger_entry", "vendor_credit_check"],
+    "emergency_supplies": ["purchase_order", "invoice", "proof_of_payment", "ledger_entry", "other_assistance_check"]
+  },
+  "reductions": {
+    "insurance": "subtract_confirmed_same_purpose_allocation_once",
+    "vendor_credit": "subtract_unapplied_same-scope_credit_once",
+    "other_federal_award": "exclude_the_duplicated_cost_and_record_the_full_amount_once"
+  },
+  "statuses": ["ready", "ready_with_reduction", "hold_documentation", "excluded_duplicate_benefit"],
+  "stage_eligible_statuses": ["ready", "ready_with_reduction"],
+  "controller_boundary": "local_stage_only_no_submission_posting_disbursement_or_notification",
+  "required_control_totals": ["sampled_claimed_total", "validated_gross_total", "reduction_total", "held_total", "excluded_total", "staged_net_total"]
+}

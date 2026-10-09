@@ -1,0 +1,32 @@
+{
+  "task_id": "167-sanctions-filter-health-recovery",
+  "header": ["item_id", "decision", "reason_code", "owner", "next_action", "evidence_refs"],
+  "decisions": [
+    {"item_id": "S-401", "decision": "clear", "reason_code": "AUTHORIZED_NO_MATCH", "owner": "sanctions_compliance", "next_action": "record_authorized_clearance", "evidence_refs": "post_repair_alerts.csv#S-401;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-402", "decision": "review", "reason_code": "POSSIBLE_ALERT_MATCH", "owner": "sanctions_compliance", "next_action": "perform_alert_review", "evidence_refs": "post_repair_alerts.csv#S-402;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-403", "decision": "blocked", "reason_code": "EXACT_ALERT_MATCH", "owner": "sanctions_compliance", "next_action": "open_alert_investigation", "evidence_refs": "post_repair_alerts.csv#S-403;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-404", "decision": "pending_rescreen", "reason_code": "CONTROL_NOT_VERIFIED", "owner": "sanctions_operations", "next_action": "resume_post_repair_screening", "evidence_refs": "post_repair_alerts.csv#S-404;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-405", "decision": "review", "reason_code": "UNAUTHORIZED_DISPOSITION", "owner": "sanctions_compliance", "next_action": "route_to_authorized_reviewer", "evidence_refs": "post_repair_alerts.csv#S-405;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-406", "decision": "pending_rescreen", "reason_code": "CONTROL_NOT_VERIFIED", "owner": "sanctions_operations", "next_action": "resume_post_repair_screening", "evidence_refs": "post_repair_alerts.csv#S-406;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-407", "decision": "pending_rescreen", "reason_code": "CONTROL_NOT_VERIFIED", "owner": "sanctions_operations", "next_action": "resume_post_repair_screening", "evidence_refs": "post_repair_alerts.csv#S-407;alert_recovery_policy.md;context.md"},
+    {"item_id": "S-408", "decision": "clear", "reason_code": "AUTHORIZED_NO_MATCH", "owner": "sanctions_compliance", "next_action": "record_authorized_clearance", "evidence_refs": "post_repair_alerts.csv#S-408;alert_recovery_policy.md;context.md"}
+  ],
+  "state": {
+    "workflow_id": "167-sanctions-filter-health-recovery",
+    "total_items": 8,
+    "decision_counts": {"blocked": 1, "clear": 2, "pending_rescreen": 3, "review": 2},
+    "blocked_or_escalated_ids": ["S-403"],
+    "pending_ids": ["S-404", "S-406", "S-407"],
+    "status": "complete_with_exceptions",
+    "external_actions_executed": false
+  },
+  "verification": {
+    "ledger_rows": 8,
+    "pending_ids": ["S-404", "S-406", "S-407"],
+    "blocked_or_escalated_ids": ["S-403"],
+    "inputs_unchanged": true,
+    "external_actions_executed": false
+  },
+  "audit_required": ["SAN-CTRL-9", "FILTER-7", "FILTER-8", "PR-NONLATIN", "LIST-2026-07-15", "exact", "possible", "missing", "stale", "failed probe", "authorized", "no production"],
+  "audit_forbidden": ["production cleared", "released", "paid", "notified"]
+}

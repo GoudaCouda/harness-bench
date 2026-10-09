@@ -1,0 +1,5 @@
+[
+  {"case_id":"busy-mid-transaction","result":{"decision":"retry","retry_scope":"whole_transaction","actions":["rollback","wait_backoff","begin_immediate","statement:0","statement:1","ledger_insert:users-v3:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","set_user_version:3","commit"],"verification":{"migration_id":"users-v3","checksum":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","user_version":3}}},
+  {"case_id":"unknown-commit","result":{"decision":"probe","retry_scope":"after_recheck","actions":["reopen","read_ledger_and_user_version"],"verification":{"migration_id":"orders-v8","checksum":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","user_version":8}}},
+  {"case_id":"busy-commit","result":{"decision":"retry_commit","retry_scope":"commit_only","actions":["wait_backoff","commit"],"verification":{"migration_id":"queue-v5","checksum":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","user_version":5}}}
+]

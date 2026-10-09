@@ -1,0 +1,20 @@
+{
+  "id": "datacite-v3-checkpoint",
+  "accepted_versions": [
+    "10.data/cohort.v1",
+    "10.data/cohort.v2",
+    "10.data/cohort.v3"
+  ],
+  "accepted_edges": [
+    "10.data/cohort|HasVersion|10.data/cohort.v1",
+    "10.data/cohort.v1|IsVersionOf|10.data/cohort",
+    "10.data/cohort|HasVersion|10.data/cohort.v2",
+    "10.data/cohort.v2|IsVersionOf|10.data/cohort",
+    "10.data/cohort|HasVersion|10.data/cohort.v3",
+    "10.data/cohort.v3|IsVersionOf|10.data/cohort",
+    "10.data/cohort.v3|IsNewVersionOf|10.data/cohort.v2",
+    "10.data/cohort.v2|IsPreviousVersionOf|10.data/cohort.v3"
+  ],
+  "known_invalid_edges": [],
+  "known_duplicate_citation_edges": []
+}

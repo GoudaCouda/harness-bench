@@ -1,0 +1,16 @@
+{
+  "isolation": [
+    {"fixture":{"items":[],"count":0,"nested":{"safe":true}},"tests":[{"test_id":"write","operations":[{"op":"append","key":"items","value":{"id":1}},{"op":"increment","key":"count","amount":2}]},{"test_id":"read","operations":[{"op":"assert_equal","key":"items","value":[]},{"op":"assert_equal","key":"count","value":0}]}],"seed":3,"quarantines":[],"day":1},
+    {"fixture":{"x":1},"tests":[{"test_id":"regression","operations":[{"op":"assert_equal","key":"x","value":2},{"op":"assert_not_equal","key":"x","value":1}]}],"seed":4,"quarantines":[],"day":2}
+  ],
+  "random_quarantine": [
+    {"fixture":{"bucket":0},"tests":[{"test_id":"alpha","operations":[{"op":"random_below","key":"bucket","upper":97}]},{"test_id":"beta","operations":[{"op":"random_below","key":"bucket","upper":97}]}],"seed":99,"quarantines":[],"day":5},
+    {"fixture":{"bucket":0},"tests":[{"test_id":"beta","operations":[{"op":"random_below","key":"bucket","upper":97}]},{"test_id":"alpha","operations":[{"op":"random_below","key":"bucket","upper":97}]}],"seed":99,"quarantines":[],"day":5},
+    {"fixture":{"x":1},"tests":[{"test_id":"q","operations":[{"op":"assert_equal","key":"x","value":2}]},{"test_id":"passing","operations":[{"op":"assert_equal","key":"x","value":1}]}],"seed":1,"quarantines":[{"test_id":"q","expires_day":7},{"test_id":"passing","expires_day":7}],"day":7},
+    {"fixture":{"x":1},"tests":[{"test_id":"q","operations":[{"op":"assert_equal","key":"x","value":2}]}],"seed":1,"quarantines":[{"test_id":"q","expires_day":7}],"day":8}
+  ],
+  "invalid": [
+    {"fixture":{"x":1},"tests":[{"test_id":"a","operations":[]},{"test_id":"a","operations":[]}],"seed":1,"quarantines":[],"day":1},
+    {"fixture":{"x":1},"tests":[{"test_id":"a","operations":[{"op":"random_below","key":"x","upper":0}]}],"seed":1,"quarantines":[],"day":1}
+  ]
+}

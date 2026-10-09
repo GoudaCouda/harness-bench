@@ -1,0 +1,41 @@
+{
+  "stream_id": "gullspire-244",
+  "gate_clock_epoch": 1776468800,
+  "events": [
+    {
+      "load_id": "l1",
+      "weight_lb": 1000,
+      "arm_in": 24
+    },
+    {
+      "load_id": "l2",
+      "weight_lb": 500,
+      "arm_in": 80
+    },
+    {
+      "load_id": "l3",
+      "weight_lb": 400,
+      "arm_in": 24
+    },
+    {
+      "load_id": "l1",
+      "weight_lb": 100,
+      "arm_in": 24
+    },
+    {
+      "load_id": "l5",
+      "weight_lb": "na",
+      "arm_in": 24
+    },
+    {
+      "load_id": "l6",
+      "weight_lb": 8000,
+      "arm_in": 24
+    },
+    {
+      "load_id": "l7",
+      "weight_lb": 200,
+      "arm_in": 24
+    }
+  ]
+}

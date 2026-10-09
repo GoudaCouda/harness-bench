@@ -1,0 +1,1 @@
+{"primary_account":"A-100","duplicate_account":"A-101","preserve_accounts":["A-200"],"field_decisions":{"name":"Northwind Logistics","domain":"northwind.example"},"consent_resolution":"most_restrictive_opt_out","move":["contacts","opportunities","activities"]}

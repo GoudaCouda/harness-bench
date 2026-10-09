@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>HarnessBench · Main</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">HARNESSBENCH / LIVE EVALUATION</p>
+        <h1 id="suiteTitle">HarnessBench Main</h1>
+        <p id="runIdentity" class="subtitle">Waiting for run metadata</p>
+      </div>
+      <div class="live"><span></span><strong id="runState">Syncing</strong></div>
+    </header>
+
+    <section id="snapshotNotice" class="snapshot-notice" hidden>
+      <strong>Historical run snapshot</strong>
+      <span id="snapshotCopy">This result is not part of the current main suite; do not combine it with current results.</span>
+    </section>
+
+    <section id="isolationNotice" class="isolation-notice" hidden>
+      <strong id="isolationTitle">Isolation</strong>
+      <span id="isolationCopy">Waiting for worker isolation identity</span>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-copy">
+        <span id="progressText">0 / —</span>
+        <span id="updatedAt">Waiting for run data</span>
+      </div>
+      <div class="track"><div id="progressBar"></div></div>
+    </section>
+
+    <section class="metrics">
+      <article><span>Finished</span><strong id="completed">—</strong><small id="completedScope">selected tasks</small></article>
+      <article><span>Mean score</span><strong id="meanScore">—</strong><small>partial completion</small></article>
+      <article><span>Strict pass rate</span><strong id="passRate">—</strong><small id="strictPassScope">new-protocol results only</small></article>
+      <article><span>Safety-gate failure rate</span><strong id="safetyGateRate">—</strong><small id="safetyGateScope">scoreable results only</small></article>
+      <article><span>Continuous score (legacy)</span><strong id="headlineScore">—</strong><small id="headlineScope">legacy compatibility only</small></article>
+      <article><span>Needs review</span><strong id="reviewCount">—</strong><small>quality triage</small></article>
+      <article><span>Estimated remaining</span><strong id="eta">—</strong><small>rolling estimate</small></article>
+    </section>
+
+    <section class="panel domains-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">DOMAIN SIGNAL</p>
+          <h2>By domain</h2>
+        </div>
+      </div>
+      <div id="domains" class="domains"></div>
+    </section>
+
+    <section class="panel difficulty-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">DIFFICULTY SIGNAL</p>
+          <h2>By difficulty</h2>
+        </div>
+      </div>
+      <div id="difficulties" class="difficulties"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading table-heading">
+        <div>
+          <p class="eyebrow">TASK LEDGER</p>
+          <h2>Per-task ledger</h2>
+        </div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Search task ID or title">
+          <select id="domainFilter"><option value="">All domains</option></select>
+          <select id="difficultyFilter">
+            <option value="">All difficulties</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <select id="statusFilter">
+            <option value="">All statuses</option>
+            <option value="queued">Queued</option>
+            <option value="running">Running</option>
+            <option value="completed">Completed</option>
+            <option value="protocol_error">Tool protocol error</option>
+            <option value="model_error">Model error</option>
+            <option value="timeout">Timeout</option>
+            <option value="infrastructure_error">Infrastructure error</option>
+            <option value="not_selected">Not in this shard</option>
+          </select>
+          <label class="review-toggle"><input id="reviewOnly" type="checkbox"> Needs review only</label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th><th>Domain / difficulty</th><th>Status</th><th>Oracle</th><th>Pass</th><th>Safety</th>
+              <th>Artifacts</th><th>Tools</th><th>Duration</th><th>Quality flags</th>
+            </tr>
+          </thead>
+          <tbody id="taskRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <span id="runId">—</span>
+      <span id="suiteMeta">Waiting for suite metadata</span>
+    </footer>
+  </main>
+  <script src="../summary.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

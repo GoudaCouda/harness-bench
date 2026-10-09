@@ -1,0 +1,2 @@
+transfer_id,employee_id,from_department,to_department,target_role,effective_at,manager_approval,security_review
+TR-200,E-200,Finance Operations,Customer Support,Support Specialist II,2026-07-29T18:00:00Z,approved,required_before_execution

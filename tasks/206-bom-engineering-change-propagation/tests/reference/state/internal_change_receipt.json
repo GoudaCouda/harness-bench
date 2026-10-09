@@ -1,0 +1,14 @@
+{
+  "ecn_id": "ECN-442",
+  "logical_db_sha256": "8329332b267135d2221db390521fbe633456df76a68eb7d475bbb25c5b3c818b",
+  "receipt_type": "internal_configuration_change_stage",
+  "recovery_id": "ECNREC-20260819-442",
+  "release_executed": false,
+  "semantic_plan_sha256": "5c496a3da9597a2b108cce8dd296d07dbf04993a8c4b4c4258b479db07416edd",
+  "shop_floor_change_executed": false,
+  "source_checkpoint": "3e0a3d6ddd957b4f5b117615fb280112ae9f253338be9b468578fae9ce2ac717",
+  "stage_state": "pending_configuration_review",
+  "stage_token": "b3b514c73447e0626af7429c4997651a9ee97ac82f0e4ebec11e57a0b1279317",
+  "supplier_order_placed": false,
+  "verification_sha256": "935761f66ce3fa178decb15d660b8223ca13531fa73145ab535690e0602d6f28"
+}

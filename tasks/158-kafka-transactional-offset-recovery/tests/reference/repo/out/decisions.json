@@ -1,0 +1,7 @@
+[
+  {"action":"acknowledge_committed","batch_id":"b1","next_offset":12,"reason":"atomic_commit_visible","status":"settled"},
+  {"action":"reinitialize_and_replay","batch_id":"b2","next_offset":12,"reason":"safe_replay","status":"ready"},
+  {"action":"abort_and_replay","batch_id":"b3","next_offset":14,"reason":"safe_replay","status":"ready"},
+  {"action":"halt","batch_id":"b4","next_offset":17,"reason":"atomicity_violation","status":"blocked"},
+  {"action":"halt","batch_id":"b5","next_offset":18,"reason":"retry_budget","status":"blocked"}
+]

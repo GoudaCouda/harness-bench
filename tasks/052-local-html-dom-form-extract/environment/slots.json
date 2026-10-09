@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "timezone": "America/Los_Angeles",
+  "hold_minutes": 45,
+  "offices": {
+    "downtown": {
+      "name": "Downtown Service Center",
+      "address": "125 Market Street, Bayview, CA 94105",
+      "wheelchair_accessible": true
+    },
+    "westside": {
+      "name": "Westside Civic Center",
+      "address": "842 Harbor Avenue, Bayview, CA 94107",
+      "wheelchair_accessible": true
+    },
+    "northgate": {
+      "name": "Northgate Federal Office",
+      "address": "90 Ridge Road, Bayview, CA 94118",
+      "wheelchair_accessible": true
+    },
+    "old_town": {
+      "name": "Old Town Annex",
+      "address": "11 Heritage Lane, Bayview, CA 94109",
+      "wheelchair_accessible": false
+    }
+  },
+  "services": {
+    "passport_renewal": "Adult passport renewal",
+    "first_passport": "First-time adult passport",
+    "notary": "Document notarization"
+  },
+  "slots": [
+    {
+      "id": "PAS-199",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-17T15:00:00",
+      "end_local": "2026-08-17T15:30:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-200",
+      "service_code": "passport_renewal",
+      "office_id": "northgate",
+      "start_local": "2026-08-17T16:00:00",
+      "end_local": "2026-08-17T16:30:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-201",
+      "service_code": "first_passport",
+      "office_id": "downtown",
+      "start_local": "2026-08-17T15:30:00",
+      "end_local": "2026-08-17T16:15:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-202",
+      "service_code": "passport_renewal",
+      "office_id": "westside",
+      "start_local": "2026-08-18T15:30:00",
+      "end_local": "2026-08-18T16:00:00",
+      "availability": "waitlist"
+    },
+    {
+      "id": "PAS-203",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-18T15:45:00",
+      "end_local": "2026-08-18T16:15:00",
+      "availability": "available",
+      "wheelchair_accessible": false,
+      "accessibility_note": "The appointment room is upstairs and the elevator is under maintenance"
+    },
+    {
+      "id": "PAS-204",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-18T16:00:00",
+      "end_local": "2026-08-18T16:30:00",
+      "availability": "available",
+      "documents": [
+        "Current or expired passport",
+        "Completed DS-82 application",
+        "One passport photo"
+      ],
+      "preparation": [
+        "Arrive 10 minutes early",
+        "Bring originals; digital copies are not accepted"
+      ]
+    },
+    {
+      "id": "PAS-209",
+      "service_code": "passport_renewal",
+      "office_id": "westside",
+      "start_local": "2026-08-18T16:00:00",
+      "end_local": "2026-08-18T16:30:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-205",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-18T16:15:00",
+      "end_local": "2026-08-18T16:45:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-206",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-19T15:30:00",
+      "end_local": "2026-08-19T16:00:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-207",
+      "service_code": "passport_renewal",
+      "office_id": "westside",
+      "start_local": "2026-08-20T15:45:00",
+      "end_local": "2026-08-20T16:15:00",
+      "availability": "available"
+    },
+    {
+      "id": "PAS-208",
+      "service_code": "passport_renewal",
+      "office_id": "downtown",
+      "start_local": "2026-08-21T16:00:00",
+      "end_local": "2026-08-21T16:30:00",
+      "availability": "available"
+    },
+    {
+      "id": "NTR-301",
+      "service_code": "notary",
+      "office_id": "downtown",
+      "start_local": "2026-08-17T15:30:00",
+      "end_local": "2026-08-17T15:45:00",
+      "availability": "available"
+    }
+  ],
+  "default_documents": [
+    "Current or expired passport",
+    "Completed DS-82 application",
+    "One passport photo"
+  ],
+  "default_preparation": [
+    "Arrive 10 minutes early",
+    "Bring originals; digital copies are not accepted"
+  ]
+}

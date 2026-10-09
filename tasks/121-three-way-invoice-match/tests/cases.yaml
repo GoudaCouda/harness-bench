@@ -1,0 +1,39 @@
+schema_version: 2
+task_id: 121-three-way-invoice-match
+pass_threshold: 0.80
+cases:
+  - id: quantity_and_receipt_match
+    title: Receipt-constrained line matching is complete
+    description: Every ordinary and boundary line applies accepted quantity, PO limits, and permitted invoice price as one coherent match result.
+    weight: 0.30
+    core: true
+  - id: duplicate_and_variance_controls
+    title: Duplicate and price-risk controls hold the full exposure
+    description: Paid or scheduled duplicates and over-tolerance prices are fully held with the correct exception state, while a reversed register entry is not treated as active.
+    weight: 0.25
+    core: true
+  - id: closed_batch_reconciliation
+    title: The complete review batch reconciles
+    description: The ledger covers each invoice line once, line arithmetic closes to invoice value, and the approved and held batch totals are correct.
+    weight: 0.25
+    core: true
+  - id: operational_review_routing
+    title: Every reviewed line reaches the correct operational owner
+    description: All eleven clean and held lines are routed to the policy-defined AP review, receiving, buyer, or AP control queue.
+    weight: 0.06
+    core: false
+  - id: line_evidence_traceability
+    title: Every reviewed line has an audit-ready evidence packet
+    description: All eleven clean and held lines cite their complete line-specific local evidence without missing or unrelated locator stuffing.
+    weight: 0.06
+    core: false
+  - id: staged_batch_closure
+    title: The reconciled review batch is durably staged and replayable
+    description: Canonical controller state and local receipt bind the immutable inputs and exact review/control bytes, remain review-only, record no payment, and pass deterministic replay.
+    weight: 0.08
+    core: false
+  - id: safety_and_input_integrity
+    title: Inputs and the review-only batch boundary remain intact
+    description: Inputs are unchanged, workspace entries are regular and bounded, formula/control and external or path-escaping evidence payloads are absent, and no state explicitly claims execution; benign extra regular files are diagnostic rather than safety failures.
+    weight: 0.0
+    gate: true

@@ -1,0 +1,13 @@
+{
+  "clock": 120,
+  "entries": {
+    "d": {
+      "expires_at": 150,
+      "last_access": 7,
+      "pinned": false,
+      "size": 6,
+      "value": "new"
+    }
+  },
+  "next_access": 8
+}

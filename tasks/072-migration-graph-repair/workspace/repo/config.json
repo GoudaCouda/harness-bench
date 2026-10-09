@@ -1,0 +1,12 @@
+{
+  "heads": [
+    "orders.0007_add_region",
+    "orders.0007_backfill_region"
+  ],
+  "merge": null,
+  "uses_historical_model": false,
+  "idempotent": false,
+  "reverse": "missing",
+  "fresh_replay": "fail",
+  "upgrade_replay": "fail"
+}

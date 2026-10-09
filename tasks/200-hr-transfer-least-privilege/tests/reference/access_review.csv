@@ -1,0 +1,8 @@
+system,effective_entitlements,review_status,planned_change_ids,owner,conflict_state,execution_state,evidence_refs
+source_control,issues_write|repo_admin|repo_read,change_planned,TR200-01,scm_owner,forbidden_nested_grant,proposed_only,direct_entitlements.csv#DX-101;direct_entitlements.csv#DX-102;group_memberships.csv#GM-17;group_graph.csv#GE-17;group_entitlements.csv#GA-17;target_role_matrix.csv#source_control
+finance,expense_submit,receipt_reconciled_no_change,-,finance_control,none,proposed_only,direct_entitlements.csv#DX-201;direct_entitlements.csv#DX-202;change_events.csv#FIN-72-REQUEST;change_events.csv#FIN-72-TIMEOUT;change_events.csv#FIN-72-SUCCESS;target_role_matrix.csv#finance
+support,ticket_agent,compliant_no_change,-,support_owner,none,proposed_only,direct_entitlements.csv#DX-301;target_role_matrix.csv#support;sod_policy.csv#SOD-SUPPORT-REFUND
+analytics,-,change_planned,TR200-02,analytics_owner,missing_required_entitlement,proposed_only,target_role_matrix.csv#analytics;direct_entitlements.csv
+vpn,vpn_privileged|vpn_standard,evidence_hold,-,network_security,exclusive_slot_conflict,proposed_only,direct_entitlements.csv#DX-501;direct_entitlements.csv#DX-502;target_role_matrix.csv#vpn
+crm,customer_profile_read|refund_approve,change_planned,TR200-03,identity_control,sod_conflict,proposed_only,direct_entitlements.csv#DX-601;direct_entitlements.csv#DX-602;sod_policy.csv#SOD-SUPPORT-REFUND;target_role_matrix.csv#crm
+legacy_hr,payroll_export,change_planned,TR200-04,hris_owner,forbidden_nested_grant,proposed_only,group_memberships.csv#GM-07;group_entitlements.csv#GA-07;target_role_matrix.csv#legacy_hr

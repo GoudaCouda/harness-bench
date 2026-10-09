@@ -1,0 +1,5 @@
+approval_id,request_id,artifact_digest,status,recorded_at,approved_by,reason
+APR-800,REL-411-PROD,sha256:bundle-old,approved,2026-08-09T10:00:00Z,release-board,rc evidence
+APR-804,REL-411-PROD,sha256:bundle-404,approved,2026-08-10T09:00:00Z,release-board,chain reviewed
+APR-805,REL-411-PROD,sha256:bundle-404,revoked,2026-08-10T12:00:00Z,release-board,BASE-CVE-77
+APR-806,REL-410-PROD,sha256:bundle-405,approved,2026-08-10T13:00:00Z,release-board,different request

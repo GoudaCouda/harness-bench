@@ -1,0 +1,82 @@
+task_id: 001-meeting-summary
+title: Recover a crashed DNSSEC rollover staging run
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+difficulty: hard
+capability_tags:
+- filesystem
+- sqlite
+- structured_data
+- dnssec
+- incident_recovery
+- idempotency
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- partial_failure
+- conflicting_evidence
+- stale_checkpoint
+- semantic_replay
+required_artifacts:
+- rollover_recovery.json
+- state/dnssec.db
+- staging/dnssec_change_queue.json
+- staging/queue_manifest.json
+- state/recovery_receipt.json
+- state/verification.json
+- state/replay_report.json
+- dnssec_recovery_handoff.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - RFC-6781
+  - RFC-7583
+  - SQLITE-TRANSACTIONS
+task_family: 001-dnssec-rollover-recovery
+variant: executable-recovery
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - rollover_recovery.json
+  - dnssec_recovery_handoff.md
+  - staging/dnssec_change_queue.json
+  - staging/queue_manifest.json
+  - state/recovery_receipt.json
+  - state/verification.json
+  - state/replay_report.json
+  - .dnssec_preview.json
+  allowed_modified:
+  - state/dnssec.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: dnssec_recovery_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    sqlite3: ">=3.40,<4"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

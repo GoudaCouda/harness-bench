@@ -1,0 +1,14 @@
+[
+  {
+    "case_id": "server-ignored-range",
+    "manifest": {"size": 8, "etag": "\"rel-8\"", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+    "checkpoint": {"temp_exists": true, "offset": 4, "etag": "\"rel-8\"", "prefix_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+    "response": {"status": 200, "etag": "\"rel-8\"", "body_length": 8, "body_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "content_range": null, "assembled_sha256": null}
+  },
+  {
+    "case_id": "valid-final-range",
+    "manifest": {"size": 8, "etag": "\"rel-8\"", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+    "checkpoint": {"temp_exists": true, "offset": 4, "etag": "\"rel-8\"", "prefix_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+    "response": {"status": 206, "etag": "\"rel-8\"", "body_length": 4, "body_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", "content_range": "bytes 4-7/8", "assembled_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
+  }
+]

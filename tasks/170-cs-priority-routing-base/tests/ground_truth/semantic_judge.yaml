@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 170-cs-priority-routing-base
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: audit_semantics
+  title: Priority-routing audit is complete
+  question: Does the audit accurately explain first-match precedence, acknowledged and duplicate suppression, P1/P2/P3 decisions, offline verification, and that no page or assignment was executed?
+  pass_anchors: [A clear statement that nothing was dispatched is equivalent to no page executed.]
+  fail_anchors: [Contradicting priorities or claiming a page, assignment, or notification fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

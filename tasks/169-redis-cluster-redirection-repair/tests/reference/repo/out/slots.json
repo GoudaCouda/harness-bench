@@ -1,0 +1,18 @@
+[
+  {
+    "node": "node-e",
+    "slot": 42
+  },
+  {
+    "node": "node-b",
+    "slot": 900
+  },
+  {
+    "node": "node-c",
+    "slot": 1200
+  },
+  {
+    "node": "node-c",
+    "slot": 1300
+  }
+]

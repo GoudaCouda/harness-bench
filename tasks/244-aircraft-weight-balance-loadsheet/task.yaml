@@ -1,0 +1,63 @@
+task_id: 244-aircraft-weight-balance-loadsheet
+title: Accept load-sheet items only while takeoff weight and CG stay in envelope
+prompt_file: instruction.md
+timeout_sec: 2400
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- capacity_planning
+- local_state_machine
+harness_demands:
+- state_management
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+- output_contract
+stressors:
+- conflicting_evidence
+- stale_state
+- schema_mismatch
+- authorization_boundary
+required_artifacts:
+- state/load_log.json
+- state/load_receipt.json
+- state/verification.json
+- loadsheet_handoff.md
+task_family: 244-aircraft-weight-balance-loadsheet
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - K8S-POD-PRIORITY
+  - MS-CIRCUIT-BREAKER
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - state/load_log.json
+  - state/load_receipt.json
+  - state/verification.json
+  - loadsheet_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

@@ -1,0 +1,41 @@
+schema_version: 2
+task_id: 263-stateful-python-rpc-service
+title: stateful python rpc service
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+hooks_module: environment/hooks.py
+design_file: design.md
+timeout_sec: 7200
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- code_execution
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+- safety_boundary
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts:
+- submission/service.py
+task_family: 263-stateful-python-rpc-service
+variant: native-v2
+mutation_contract:
+  allowed_created: []
+  allowed_modified:
+  - submission/service.py
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_09

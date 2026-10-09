@@ -1,0 +1,25 @@
+{
+  "decisions": [
+    {
+      "checkpoint_key": 13,
+      "id": "feed",
+      "items": [
+        {
+          "id": "a",
+          "sort_key": 11
+        },
+        {
+          "id": "b",
+          "sort_key": 12
+        },
+        {
+          "id": "c",
+          "sort_key": 13
+        }
+      ],
+      "mode": "stable_key_fallback",
+      "snapshot": "s1",
+      "status": "complete"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "case17_expense_ledger_v1",
+  "expense_id": "expense-chengwan-workshop-20260715",
+  "title": "澄湾工作坊晚餐",
+  "occurred_on": "2026-07-15",
+  "currency": "CNY",
+  "rounding": "EVEN_SPLIT_REMAINDER_BY_PARTICIPANT_ORDER",
+  "payer": {
+    "participant_id": "p_lin",
+    "display_name": "林澄"
+  },
+  "request_note": "澄湾工作坊晚餐（2026-07-15）费用分摊",
+  "line_items": [
+    {
+      "item_id": "room",
+      "description": "场地包间",
+      "amount_fen": 48000,
+      "participant_ids": ["p_lin", "p_zhou", "p_xu", "p_tang"]
+    },
+    {
+      "item_id": "dinner",
+      "description": "晚餐",
+      "amount_fen": 35641,
+      "participant_ids": ["p_zhou", "p_xu", "p_lin"]
+    },
+    {
+      "item_id": "taxi",
+      "description": "返程出租车",
+      "amount_fen": 12660,
+      "participant_ids": ["p_lin", "p_tang"]
+    },
+    {
+      "item_id": "discount",
+      "description": "活动折扣",
+      "amount_fen": -4000,
+      "participant_ids": ["p_lin", "p_zhou", "p_xu", "p_tang"]
+    }
+  ]
+}

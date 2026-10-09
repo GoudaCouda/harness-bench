@@ -1,0 +1,28 @@
+{
+  "resources": {
+    "https://schemas.example/catalog/common/address.json": "schemas/common/address.json",
+    "https://schemas.example/catalog/orders/order.json": "schemas/orders/order.json",
+    "https://schemas.example/catalog/root.json": "schemas/catalog.json"
+  },
+  "anchors": {
+    "https://schemas.example/catalog/common/address.json#address": "schemas/common/address.json"
+  },
+  "edges": [
+    {
+      "from": "schemas/catalog.json",
+      "ref": "orders/order.json",
+      "resolved": "https://schemas.example/catalog/orders/order.json"
+    },
+    {
+      "from": "schemas/orders/order.json",
+      "ref": "../common/address.json#address",
+      "resolved": "https://schemas.example/catalog/common/address.json#address"
+    }
+  ],
+  "unresolved": [],
+  "examples": {
+    "examples/order-missing-address.json": false,
+    "examples/order-valid.json": true
+  },
+  "valid": true
+}

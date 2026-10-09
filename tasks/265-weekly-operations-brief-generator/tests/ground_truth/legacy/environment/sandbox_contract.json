@@ -1,0 +1,102 @@
+{
+  "schema_version": "case11_static_sandbox_contract_v2",
+  "image_digest": "sha256:efcdfa6a6b2fd2afb9c7dfa9a5b288a6f68338b5cfdebe6b637d986067d85757",
+  "image_reference": "docker.io/library/python@sha256:efcdfa6a6b2fd2afb9c7dfa9a5b288a6f68338b5cfdebe6b637d986067d85757",
+  "command": [
+    "/usr/local/bin/python3",
+    "/workspace/submission/generate_brief.py",
+    "--input-csv",
+    "/workspace/input/weekly_operations.csv",
+    "--definitions",
+    "/workspace/input/metric_definitions.json",
+    "--template",
+    "/workspace/input/brief_template.md",
+    "--output-dir",
+    "/workspace/output"
+  ],
+  "container_user": "65532:4007",
+  "workdir": "/workspace",
+  "workspace_destination": "/workspace",
+  "network_mode": "none",
+  "readonly_rootfs": true,
+  "cap_drop": [
+    "ALL"
+  ],
+  "security_opt": [
+    "no-new-privileges"
+  ],
+  "restart_policy": "no",
+  "cpu_cores": 1,
+  "memory_bytes": 536870912,
+  "memory_swap_bytes": 536870912,
+  "pids_limit": 64,
+  "shm_bytes": 4096,
+  "ephemeral_runtime_write_exceptions": [
+    {
+      "path": "/dev/shm",
+      "max_bytes": 4096,
+      "persistence": "discarded_with_container",
+      "purpose": "python_runtime_only"
+    }
+  ],
+  "file_size_bytes": 8388608,
+  "max_workspace_bytes": 67108864,
+  "max_workspace_entries": 256,
+  "max_captured_log_bytes": 65536,
+  "nofile": 128,
+  "wall_time_seconds": 12,
+  "stop_timeout_seconds": 2,
+  "allowed_docker_diff": [
+    "A /sbin/docker-init",
+    "A /workspace",
+    "C /sbin"
+  ],
+  "environment": {
+    "CASE_FIXED_TIME": "2026-07-13T09:00:00+08:00",
+    "CASE_LOCALE": "zh-CN",
+    "HOME": "/nonexistent",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONUTF8": "1",
+    "SOURCE_DATE_EPOCH": "1783904400",
+    "TZ": "Asia/Shanghai"
+  },
+  "allowed_inherited_environment": [
+    "GPG_KEY",
+    "PATH",
+    "PYTHON_SHA256",
+    "PYTHON_VERSION"
+  ],
+  "mount_policy": {
+    "count": 2,
+    "type": "bind",
+    "workspace_read_only": true,
+    "output_read_only": false,
+    "source_is_direct_attempt_child": true,
+    "forbid_symlink_source": true
+  },
+  "log_driver": {
+    "name": "local",
+    "max_size": "256k",
+    "max_file": "2"
+  },
+  "forbidden_mounts": [
+    "/case",
+    "/oracle",
+    "/verifier",
+    "/tests",
+    "/var/run/docker.sock",
+    "/run/docker.sock"
+  ],
+  "required_labels": [
+    "agent_sft.run_id",
+    "agent_sft.task_id",
+    "agent_sft.case_id",
+    "agent_sft.host_alias",
+    "agent_sft.purpose",
+    "agent_sft.attempt_id",
+    "cpuq.parent"
+  ]
+}

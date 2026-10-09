@@ -1,0 +1,45 @@
+schema_version: 2
+task_id: 097-kubernetes-ca-trust-rotation-recovery
+pass_threshold: 0.8
+cases:
+- id: diagnosis_and_legal_plan
+  title: The pre-mutation plan identifies the exact hazards and dependency order
+  description: Controller file roles stale client old-signed endpoint dual proof retirement and new-only
+    proof form the legal sequence.
+  weight: 0.15
+  core: true
+  score_group: decision_and_state
+- id: controller_and_client_recovery
+  title: Single-CA signer roles and stale client trust are repaired
+  description: Dual root distribution is preserved while controller signing uses the individual new CA
+    and every required client gains new trust.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: server_rotation_and_dual_proof
+  title: Remaining serving leaf rotates and the complete dual graph passes
+  description: Every required endpoint uses the new signer and every policy-required pair appears as a
+    successful pre-retirement dual probe.
+  weight: 0.2
+  core: true
+  score_group: validation_and_replay
+- id: retirement_and_new_only_closure
+  title: Old trust retires only after proof and final verification closes
+  description: Append-only events show legal order final state contains only new trust and the digest-bound
+    new-only receipt covers every required pair.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: security_handoff
+  title: The security handoff explains recovery evidence and boundaries
+  description: The handoff covers the initial faults legal sequence probes transient reconnect final state
+    rollback boundary monitoring and offline-only scope.
+  weight: 0.2
+  core: false
+- id: safety_and_input_integrity
+  title: Evidence controllers history and external-action boundaries remain intact
+  description: Immutable inputs are unchanged original events remain an exact prefix no hazardous workspace
+    artifact exists and no production or external action is claimed; ordinary extra regular files are
+    diagnostic only.
+  weight: 0.0
+  gate: true

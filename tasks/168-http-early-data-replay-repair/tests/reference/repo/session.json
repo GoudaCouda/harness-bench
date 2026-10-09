@@ -1,0 +1,8 @@
+{
+  "ticket_age_sec": 120,
+  "remembered_alpn": "h3",
+  "current_alpn": "h3",
+  "transport_parameters_match": true,
+  "application_settings_match": true,
+  "anti_replay_consistent": true
+}

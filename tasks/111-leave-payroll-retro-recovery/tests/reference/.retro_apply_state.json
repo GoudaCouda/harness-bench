@@ -1,0 +1,15 @@
+{
+  "adjustment_count": 4,
+  "adjustment_set_sha256": "6ad6045cde898c509b2251b06ab25b2219822303f3f7b217f57b02191fa2cd67",
+  "batch_id": "RB-2026-08-A",
+  "external_payment_executed": false,
+  "frozen_payroll_sha256": "1fb2c481db3fbd28f6a862d3794ccf5b46a7f3a91b08337b6be0b2336a992402",
+  "journal_count": 4,
+  "journal_sha256": "25e5924666cb1b37ebe70aa065e7cc8a0aa9940e7867023499b5aaeaaa1b12d7",
+  "phase": "applied_verified",
+  "plan_sha256": "637aa2437020f228f4ddf8d84726ce1961a7d31706924424f17a64526cb25a4c",
+  "recovered_prefix_count": 1,
+  "recovery_phase": "applied_verified",
+  "recovery_revision": 2,
+  "schema_version": 1
+}

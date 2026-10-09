@@ -1,0 +1,8 @@
+{
+  "target_user_id": "user_alpha",
+  "cart_items": [
+    {"product_id": "p100", "quantity": 1}
+  ],
+  "protected_state": "identical_to_seed",
+  "checkout_started": false
+}

@@ -1,0 +1,13 @@
+{
+  "transfer_id": "TR-2026-017",
+  "record_group": "RG-042",
+  "series_id": "PERM-42-A",
+  "schedule_item": "DAA-0042-2021-0007-0001",
+  "inclusive_dates": "2025-01-01/2025-12-31",
+  "state": "staged_not_submitted",
+  "records": [
+    {"record_id":"REC-001","title":"January council minutes","creator":"Office of the Clerk","record_date":"2025-01-14","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none","package_path":"records/REC-001/january_council_minutes.pdf","sha256":"9b0314eb15925911a8e0a3a9b39e5d4ae3b8c398268a3f98f419f1dfd1bf4f44"},
+    {"record_id":"REC-002","title":"District boundary map","creator":"Planning Division","record_date":"2025-03-02","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none","package_path":"records/REC-002/district_boundary_map.tif","sha256":"ad9d51f2deeed4ef283b3227604bb08ca72dfab67bbaf2ba55faccbad4f3d8ff"},
+    {"record_id":"REC-003","title":"Public budget hearing","creator":"Finance Committee","record_date":"2025-06-18","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none","package_path":"records/REC-003/public_budget_hearing.wav","sha256":"722b21e1a901f19f1c5b387365d39fb3039f4a5f5864cb3c01c99d78e80e8515"}
+  ]
+}

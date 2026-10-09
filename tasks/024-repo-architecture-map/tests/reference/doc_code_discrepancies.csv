@@ -1,0 +1,5 @@
+claim,doc_source,code_evidence,assessment,risk
+storage is readonly,README.md,minisvc/storage/repo.py: OrderRepository.save writes SQLite,contradicted,storage mutation is undocumented
+storage has retry behavior,README.md,minisvc/storage/repo.py: no retry around database calls,contradicted,transient failure handling is unsupported
+audit is console only,README.md,minisvc/audit.py: order_event persists audit data,contradicted,audit persistence affects privacy
+validation is complete,README.md,minisvc/api/handlers.py: create_order validation path,unsupported,validation assumptions may fail

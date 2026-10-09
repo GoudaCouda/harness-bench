@@ -1,0 +1,17 @@
+{
+  "account_id": "acct_1005",
+  "account_holder": "Noah Singh",
+  "primary_email": "noah.singh@example.com",
+  "phone": "+1-646-555-0177",
+  "status": "active",
+  "current_holds": [],
+  "linked_people": [
+    {
+      "relationship": "household_member",
+      "name": "Priya Singh",
+      "email": "priya.singh@example.com",
+      "phone": "+1-646-555-0111"
+    }
+  ],
+  "internal_case_note": "household link does not establish authority for the linked person"
+}

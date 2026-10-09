@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "path": "oracle/reference_outputs/market_brief.pptx",
+      "sha256": "14e0e3572268c5811a8c95fb7b536adc0270794095c8d607118c74fcf3a2b209",
+      "size_bytes": 9253
+    },
+    {
+      "path": "oracle/reference_outputs/project_update.pptx",
+      "sha256": "5660f8a93d365bdef86a0bb585688b5515461c6316eb07aa814bd3b660571140",
+      "size_bytes": 9161
+    },
+    {
+      "path": "oracle/reference_outputs/service_review.pptx",
+      "sha256": "2d97a45f2a4d8ead82ae50298d84739d93aa7da6b6b315f355da6350602900dc",
+      "size_bytes": 9175
+    }
+  ],
+  "generated_at": "2026-07-20T00:00:00Z",
+  "schema_version": "case06_reference_output_manifest_v1",
+  "source": "trusted_oracle_solve"
+}

@@ -1,0 +1,11 @@
+{
+  "apply_event": 1,
+  "apply_initial": 0,
+  "block": 0,
+  "checkpoint": 1,
+  "ignore": 1,
+  "relist": 1,
+  "resume_watch": 2,
+  "state_resets": 1,
+  "watch_count": 6
+}

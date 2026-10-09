@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 167-sanctions-filter-health-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: audit_semantics
+  title: Sanctions-filter recovery audit is complete
+  question: Does the audit accurately explain control-health repair, rescreen and match dispositions, authorized versus held outcomes, state/verification closure, safe repeat behavior, and no external release action?
+  pass_anchors: [Equivalent rescreening and idempotency terminology is acceptable.]
+  fail_anchors: [Fail-open claims, unsupported release, or contradiction of the ledger fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

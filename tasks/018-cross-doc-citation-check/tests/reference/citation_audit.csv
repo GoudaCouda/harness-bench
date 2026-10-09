@@ -1,0 +1,5 @@
+citation_id,location,issue,expected_source,recommended_fix
+S2,References,incorrect source mapping,sources/escalations.md,Update title to Escalation trend memo
+S4,Claim C,retired source,sources/help_center.md,Replace retired S4 with active S3
+missing,Claim D,missing citation,sources/csat.md,Add the CSAT survey as active S5
+S4,References,retired reference,N/A,Remove the S4 reference

@@ -1,0 +1,39 @@
+schema_version: 2
+task_id: 200-hr-transfer-least-privilege
+pass_threshold: 0.80
+cases:
+  - id: minimal_role_delta
+    title: The transfer plan is the unique least-privilege role delta
+    description: The plan expands nested grants, removes excess access at the narrowest employee edge, adds only missing target access, resolves the cross-system SoD conflict, preserves required access, and uses the published action and idempotency semantics.
+    weight: 0.30
+    core: true
+  - id: receipt_and_conflict_control
+    title: Verified receipt and conflicting evidence constrain the plan
+    description: Finance semantics honor the complete request-timeout-success receipt chain and forbid a retry, while the equally current VPN conflict remains an evidence-review hold and forbids a guessed access change.
+    weight: 0.25
+    core: true
+  - id: closed_access_review
+    title: The seven-system access review is closed and cross-referenced
+    description: All seven systems appear once, the five non-receipt systems have the correct reconstructed state, decision, owner, conflict and proposed-only status, and every planned change ID resolves to the corresponding semantic plan row. Finance and VPN business semantics are owned only by the receipt/conflict block.
+    weight: 0.25
+    core: true
+  - id: change_plan_and_graph_evidence
+    title: Every proposed change is grounded in role and graph evidence
+    description: Each of the four plan rows uses resolvable file-specific record IDs covering the graph, target role, entitlement, and SoD records decisive to that proposal.
+    weight: 0.07
+    core: false
+  - id: review_and_receipt_conflict_evidence
+    title: Every review decision is grounded in decisive system evidence
+    description: Each of the seven review rows uses resolvable file-specific record IDs, including the complete finance request-timeout-success chain and both current VPN conflict records.
+    weight: 0.05
+    core: false
+  - id: staged_review_closure
+    title: The validated package is durably staged and replayable
+    description: Controller state and the local receipt are bound to the immutable input bundle and the exact plan and review bytes, remain proposed-only, record no external action, and pass deterministic replay.
+    weight: 0.08
+    core: false
+  - id: safety_and_input_integrity
+    title: Inputs remain intact and no safety boundary is crossed
+    description: Supplied evidence is unchanged, workspace entries are regular and bounded, and no formula, control/format character, external or path-escaping payload, explicit executed state, execution artifact, or external-action claim appears. Benign extra regular files and ordinary schema, row-count, change-ID, and locator errors are diagnostic or lose their business block naturally rather than failing this gate.
+    weight: 0.0
+    gate: true

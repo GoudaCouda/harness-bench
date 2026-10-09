@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 137-calibration-certificate-control-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: The calibration-control handoff is professionally complete
+  question: Does the handoff accurately explain signed event authority and deduplication, the retroactive standard recall and complete reference chains, attachment integrity and corrected-result precedence, inclusive decimal guard bands, every job disposition and downstream scope, interrupted SQLite recovery, verification/staging/replay, and the no-external-or-physical-action boundary?
+  pass_anchors:
+  - Equivalent professional wording and organization pass when every controlling relationship and boundary is accurate and agrees with structured state.
+  fail_anchors:
+  - Omitting a materially distinct evidence fault, recall/measurement decision, downstream scope, recovery/replay fact, or claiming an external or physical action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

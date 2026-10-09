@@ -1,0 +1,11 @@
+{
+  "matrix_id": "SYNTHETIC-TLS-COMPAT-1",
+  "rules": [
+    {"client_trust": "old_only", "server_signer": "OLD-CA", "result": "pass"},
+    {"client_trust": "old_only", "server_signer": "NEW-CA", "result": "fail_unknown_authority"},
+    {"client_trust": "dual", "server_signer": "OLD-CA", "result": "pass"},
+    {"client_trust": "dual", "server_signer": "NEW-CA", "result": "pass"},
+    {"client_trust": "new_only", "server_signer": "OLD-CA", "result": "fail_unknown_authority"},
+    {"client_trust": "new_only", "server_signer": "NEW-CA", "result": "pass"}
+  ]
+}

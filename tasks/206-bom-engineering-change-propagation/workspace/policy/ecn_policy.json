@@ -1,0 +1,57 @@
+{
+  "approval_state_required": "approved",
+  "approved_substitutes": {
+    "CONN-NI-4P": [
+      "CONN-NI-4P-A"
+    ]
+  },
+  "component_change": {
+    "from_part": "CONN-CU-4P",
+    "quantity": 2,
+    "to_part": "CONN-NI-4P"
+  },
+  "ecn_id": "ECN-442",
+  "effectivity": {
+    "FIELD-KIT": {
+      "basis": "lot",
+      "from": "LOT-2026-09"
+    },
+    "SKID-900": {
+      "basis": "serial",
+      "from": "SN-0500"
+    }
+  },
+  "external_boundary": {
+    "release_executed": false,
+    "shop_floor_change_executed": false,
+    "supplier_order_placed": false
+  },
+  "recovery_id": "ECNREC-20260819-442",
+  "revision_map": {
+    "ACTUATOR-MODULE": {
+      "from": "C",
+      "to": "D"
+    },
+    "FIELD-KIT": {
+      "from": "2",
+      "to": "3"
+    },
+    "PUMP-100": {
+      "from": "12",
+      "to": "13"
+    },
+    "SKID-900": {
+      "from": "5",
+      "to": "6"
+    }
+  },
+  "schema_version": 1,
+  "source_revision": 37,
+  "status_vocabulary": [
+    "preserve_as_built",
+    "hold_and_rekit",
+    "adopt_new_baseline",
+    "preserve_pre_effectivity_kit",
+    "accept_approved_substitute_new_baseline"
+  ]
+}

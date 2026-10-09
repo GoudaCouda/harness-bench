@@ -1,0 +1,205 @@
+{
+  "task_id": "024-image-pair-diff-annotation",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "image_pair_diff_annotation_protected_inputs",
+    "image_pair_diff_annotation_interaction_model",
+    "image_pair_diff_annotation_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/before-after.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "DIFF-NAV",
+      "label": "Nav row dropped"
+    },
+    {
+      "id": "DIFF-BTN",
+      "label": "Button moved up"
+    },
+    {
+      "id": "DIFF-PRICE",
+      "label": "Price recolored"
+    },
+    {
+      "id": "DIFF-GAP",
+      "label": "Footer spacing gap"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "DIFF-NAV",
+      "label": "Nav row dropped",
+      "side": "before",
+      "severity": "review",
+      "x": 17,
+      "y": 24
+    },
+    {
+      "id": "DIFF-BTN",
+      "label": "Button moved up",
+      "side": "after",
+      "severity": "review",
+      "x": 69,
+      "y": 30
+    },
+    {
+      "id": "DIFF-PRICE",
+      "label": "Price recolored",
+      "side": "after",
+      "severity": "watch",
+      "x": 73,
+      "y": 62
+    },
+    {
+      "id": "DIFF-GAP",
+      "label": "Footer spacing gap",
+      "side": "after",
+      "severity": "info",
+      "x": 73,
+      "y": 84
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "before"
+    ],
+    [
+      "after"
+    ],
+    [
+      "diff"
+    ],
+    [
+      "Diff side"
+    ],
+    [
+      "Diff count"
+    ],
+    [
+      "After-only"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "diff-board"
+    ],
+    [
+      "data-diff-id"
+    ],
+    [
+      "Mark diff"
+    ],
+    [
+      "Hide marks"
+    ],
+    [
+      "Diff side"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Open diffs"
+    ],
+    [
+      "After-only"
+    ],
+    [
+      "Selected diff"
+    ],
+    [
+      "severity"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"diff-board\"]",
+    "marker": {
+      "attr": "data-diff-id",
+      "id": "DIFF-PRICE",
+      "x": 73,
+      "y": 62,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-diff-id",
+        "id": "DIFF-NAV",
+        "x": 17,
+        "y": 24,
+        "tol": 10
+      },
+      {
+        "attr": "data-diff-id",
+        "id": "DIFF-BTN",
+        "x": 69,
+        "y": 30,
+        "tol": 10
+      },
+      {
+        "attr": "data-diff-id",
+        "id": "DIFF-PRICE",
+        "x": 73,
+        "y": 62,
+        "tol": 10
+      },
+      {
+        "attr": "data-diff-id",
+        "id": "DIFF-GAP",
+        "x": 73,
+        "y": 84,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "mark diff"
+      ]
+    ],
+    "body_has": [
+      "DIFF-PRICE",
+      "Price recolored",
+      "after",
+      "watch",
+      "Open diffs",
+      "1"
+    ],
+    "selects": [
+      [
+        "Diff side",
+        "after"
+      ]
+    ],
+    "toggles": [
+      "Hide marks"
+    ],
+    "after_toggle": [
+      "Hide"
+    ],
+    "name": "image_pair_diff_annotation"
+  }
+}

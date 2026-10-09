@@ -1,0 +1,53 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1773997200,
+    "threshold": 3,
+    "cooldown_sec": 30,
+    "probe_budget": 1
+  },
+  "artifacts": {
+    "breaker_receipt": {
+      "stream_id": "northharbor-0320",
+      "gate_clock_epoch": 1773997200,
+      "counts": {
+        "executed": 5,
+        "short_circuited": 1,
+        "probed": 2
+      },
+      "breaker_mode": {
+        "svc-a": "closed",
+        "svc-b": "closed"
+      },
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "breakerctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "executed",
+      "1": "executed",
+      "2": "executed",
+      "3": "executed",
+      "4": "short_circuited",
+      "5": "executed",
+      "6": "probed",
+      "7": "probed"
+    },
+    "forwarded_event_ids": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e6",
+      "e7",
+      "e8"
+    ],
+    "breaker_mode": {
+      "svc-a": "closed",
+      "svc-b": "closed"
+    }
+  }
+}

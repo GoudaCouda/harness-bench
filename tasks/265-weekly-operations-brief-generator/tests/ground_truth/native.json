@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "case_number": 11,
+  "blocks": [
+    [
+      "primary_delivery",
+      "主数据简报交付与可重复执行",
+      "submission_terminal_state fresh_primary_run_1 fresh_primary_run_2 byte_idempotency"
+    ],
+    [
+      "generalization_and_atomicity",
+      "新数据泛化与非法输入原子拒绝",
+      "hidden_generalization minimal_valid_generalization invalid_missing_column invalid_extra_cell invalid_date invalid_numeric invalid_duplicate invalid_logic invalid_zero_denominator invalid_input_atomicity invalid_existing_output_atomicity"
+    ]
+  ],
+  "gates": [],
+  "protected_files": {
+    "input/brief_template.md": "f64ed5386fc9541eb314af91df6aa8af86737940461beb1da5fa8111ab821649",
+    "input/metric_definitions.json": "d25a3195060afa8e8947f96801814586d23d63e0d8680ac948be0521f8aef1cd",
+    "input/weekly_operations.csv": "8b9585a6c0e328f7a86cdde303d0ce19cf7a9738aa6d16f0cdd9c9ba8320861e"
+  },
+  "required_artifacts": [
+    "submission/generate_brief.py",
+    "output/summary.json",
+    "output/weekly_brief.md"
+  ],
+  "provisional_id": 248,
+  "candidate_image": "sha256:efcdfa6a6b2fd2afb9c7dfa9a5b288a6f68338b5cfdebe6b637d986067d85757",
+  "controller_image": "python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b"
+}

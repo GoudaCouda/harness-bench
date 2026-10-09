@@ -1,0 +1,22 @@
+{
+  "schema_version": "synthetic_travel_citation_index_v1",
+  "snapshot_id": "hailan_trip_snapshot_20260701_v1",
+  "entries": [
+    {"citation_id": "PREF-001", "logical_path": "input/preferences.json", "json_pointer": "/", "record_id": "preferences"},
+    {"citation_id": "CIT-TR-101", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/0", "record_id": "TR-101"},
+    {"citation_id": "CIT-TR-102", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/1", "record_id": "TR-102"},
+    {"citation_id": "CIT-TR-103", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/2", "record_id": "TR-103"},
+    {"citation_id": "CIT-TR-104", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/3", "record_id": "TR-104"},
+    {"citation_id": "CIT-TR-201", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/4", "record_id": "TR-201"},
+    {"citation_id": "CIT-TR-202", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/5", "record_id": "TR-202"},
+    {"citation_id": "CIT-TR-203", "logical_path": "input/travel_snapshot.json", "json_pointer": "/transport/6", "record_id": "TR-203"},
+    {"citation_id": "CIT-HT-301", "logical_path": "input/travel_snapshot.json", "json_pointer": "/hotels/0", "record_id": "HT-301"},
+    {"citation_id": "CIT-HT-302", "logical_path": "input/travel_snapshot.json", "json_pointer": "/hotels/1", "record_id": "HT-302"},
+    {"citation_id": "CIT-HT-303", "logical_path": "input/travel_snapshot.json", "json_pointer": "/hotels/2", "record_id": "HT-303"},
+    {"citation_id": "CIT-HT-304", "logical_path": "input/travel_snapshot.json", "json_pointer": "/hotels/3", "record_id": "HT-304"},
+    {"citation_id": "CIT-AC-401", "logical_path": "input/travel_snapshot.json", "json_pointer": "/activities/0", "record_id": "AC-401"},
+    {"citation_id": "CIT-AC-402", "logical_path": "input/travel_snapshot.json", "json_pointer": "/activities/1", "record_id": "AC-402"},
+    {"citation_id": "CIT-AC-403", "logical_path": "input/travel_snapshot.json", "json_pointer": "/activities/2", "record_id": "AC-403"},
+    {"citation_id": "CIT-AC-404", "logical_path": "input/travel_snapshot.json", "json_pointer": "/activities/3", "record_id": "AC-404"}
+  ]
+}

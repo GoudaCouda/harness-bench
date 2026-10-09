@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CUE-INTRO",
+    "label": "Intro swell"
+  },
+  {
+    "id": "CUE-VOX",
+    "label": "Vocal in"
+  },
+  {
+    "id": "CUE-BRK",
+    "label": "Break"
+  },
+  {
+    "id": "CUE-OUT",
+    "label": "Outro"
+  }
+]

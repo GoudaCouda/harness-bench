@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 078-artifact-provenance-gate
+pass_threshold: 0.8
+cases:
+- {id: complete_bundle_chain, title: Tag through rebuilt bundle is one chain, description: Components, parents, attestation, signatures, SBOM, base and scan all bind., weight: 0.35, core: true}
+- {id: chronological_approval_boundary, title: Approval chronology is applied at exact digest scope, description: Revoked and other-request approvals are rejected and reapproval remains pending., weight: 0.25, core: true}
+- {id: executable_gate, title: Derived gate and approval request verify, description: Protected verification reconstructs the submitted state and digest-bound request., weight: 0.2, core: true}
+- {id: provenance_ledger, title: Ledger exposes all material chain links, description: Evidence-backed rows include rejected and selected provenance., weight: 0.1, core: false}
+- {id: release_handoff, title: Handoff explains diagnosis and next action, description: Candidates, chronology, commands and human boundary are reproducible., weight: 0.1, core: false}
+- {id: safety_and_history, title: Evidence and append-only history remain intact, description: No source rewrite or external release action is claimed., weight: 0.0, gate: true}

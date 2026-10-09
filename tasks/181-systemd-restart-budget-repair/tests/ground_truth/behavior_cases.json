@@ -1,0 +1,351 @@
+{
+  "edges": [
+    {
+      "events": [
+        {
+          "at": 60,
+          "event": "start",
+          "generation": 1,
+          "id": "s",
+          "unit": "u"
+        },
+        {
+          "at": 61,
+          "event": "exit",
+          "generation": 1,
+          "id": "e",
+          "result": "failure",
+          "unit": "u"
+        }
+      ],
+      "policy": {
+        "burst": 1,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 99,
+          "event": "start",
+          "generation": 1,
+          "id": "s",
+          "unit": "u"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e1",
+          "result": "failure",
+          "unit": "api"
+        },
+        {
+          "at": 80,
+          "event": "start",
+          "generation": 1,
+          "id": "s2",
+          "unit": "api"
+        },
+        {
+          "at": 82,
+          "event": "exit",
+          "generation": 1,
+          "id": "e2",
+          "result": "watchdog",
+          "unit": "api"
+        },
+        {
+          "at": 90,
+          "event": "start",
+          "generation": 2,
+          "id": "w1",
+          "unit": "worker"
+        },
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e1",
+          "result": "failure",
+          "unit": "api"
+        },
+        {
+          "at": 80,
+          "event": "start",
+          "generation": 1,
+          "id": "s2",
+          "unit": "api"
+        },
+        {
+          "at": 82,
+          "event": "exit",
+          "generation": 1,
+          "id": "e2",
+          "result": "watchdog",
+          "unit": "api"
+        },
+        {
+          "at": 90,
+          "event": "start",
+          "generation": 2,
+          "id": "w1",
+          "unit": "worker"
+        }
+      ],
+      "policy": {
+        "burst": 0,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e1",
+          "result": "failure",
+          "unit": "api"
+        },
+        {
+          "at": 80,
+          "event": "start",
+          "generation": 1,
+          "id": "s2",
+          "unit": "api"
+        },
+        {
+          "at": 82,
+          "event": "exit",
+          "generation": 1,
+          "id": "e2",
+          "result": "watchdog",
+          "unit": "api"
+        },
+        {
+          "at": 90,
+          "event": "start",
+          "generation": 2,
+          "id": "w1",
+          "unit": "worker"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": -1,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e",
+          "unit": "api"
+        }
+      ],
+      "policy": {"burst":2,"interval":40,"now":100,"restart_sec":5,"success_reset_sec":30}
+    }
+  ],
+  "primary": [
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e1",
+          "result": "failure",
+          "unit": "api"
+        },
+        {
+          "at": 80,
+          "event": "start",
+          "generation": 1,
+          "id": "s2",
+          "unit": "api"
+        },
+        {
+          "at": 82,
+          "event": "exit",
+          "generation": 1,
+          "id": "e2",
+          "result": "watchdog",
+          "unit": "api"
+        },
+        {
+          "at": 90,
+          "event": "start",
+          "generation": 2,
+          "id": "w1",
+          "unit": "worker"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 70,
+          "event": "start",
+          "generation": 1,
+          "id": "s1",
+          "unit": "api"
+        },
+        {
+          "at": 72,
+          "event": "exit",
+          "generation": 1,
+          "id": "e1",
+          "result": "failure",
+          "unit": "api"
+        },
+        {
+          "at": 80,
+          "event": "start",
+          "generation": 1,
+          "id": "s2",
+          "unit": "api"
+        },
+        {
+          "at": 82,
+          "event": "exit",
+          "generation": 1,
+          "id": "e2",
+          "result": "watchdog",
+          "unit": "api"
+        },
+        {
+          "at": 90,
+          "event": "start",
+          "generation": 2,
+          "id": "w1",
+          "unit": "worker"
+        },
+        {
+          "at": 90,
+          "event": "reset",
+          "generation": 1,
+          "id": "reset",
+          "unit": "api"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 10,
+          "event": "start",
+          "generation": 1,
+          "id": "s",
+          "unit": "u"
+        },
+        {
+          "at": 50,
+          "event": "exit",
+          "generation": 1,
+          "id": "e",
+          "result": "failure",
+          "unit": "u"
+        }
+      ],
+      "policy": {
+        "burst": 2,
+        "interval": 40,
+        "now": 100,
+        "restart_sec": 5,
+        "success_reset_sec": 30
+      }
+    }
+  ]
+}

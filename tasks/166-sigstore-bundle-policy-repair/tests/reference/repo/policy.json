@@ -1,0 +1,1 @@
+{"accepted_payload_types":["application/vnd.in-toto+json"],"min_tlog_operators":2,"require_timestamp":true,"require_tlog":true}

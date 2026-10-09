@@ -1,0 +1,67 @@
+{
+  "schema_version": "nami_work_case16_tool_contract_v2",
+  "transport": "unix_socket_jsonl",
+  "transport_command": ["python3", "/workspace/tool_client.py", "--socket", "/tool_gateway/hotel.sock", "--tool", "{tool_name}"],
+  "transport_rules": {
+    "arguments_source": "single JSON object on stdin",
+    "result_sink": "single JSON object on stdout",
+    "max_request_bytes": 65536,
+    "max_response_bytes": 262144,
+    "socket_path": "/tool_gateway/hotel.sock"
+  },
+  "network_required": false,
+  "tools": [
+    {
+      "name": "search_hotel_inventory",
+      "description": "按城市、区域、日期、人数、房型、设施和价格筛选连续可用酒店。",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["city", "district", "check_in", "check_out", "adults", "children", "room_type", "breakfast_required", "non_smoking_required", "max_nightly_rate_cny"],
+        "properties": {
+          "city": {"type": "string"},
+          "district": {"type": "string"},
+          "check_in": {"type": "string", "format": "date"},
+          "check_out": {"type": "string", "format": "date"},
+          "adults": {"type": "integer", "minimum": 1, "maximum": 6},
+          "children": {"type": "integer", "minimum": 0, "maximum": 4},
+          "room_type": {"const": "family_standard"},
+          "breakfast_required": {"type": "boolean"},
+          "non_smoking_required": {"type": "boolean"},
+          "max_nightly_rate_cny": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    {
+      "name": "create_hotel_booking",
+      "description": "在本任务授权范围内为指定客户创建一次原子预订；越权参数返回 permission_denied，相同请求号重复调用只返回原预订，不重复扣减库存。",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["request_id", "user_id", "hotel_id", "check_in", "check_out", "adults", "children", "room_type"],
+        "properties": {
+          "request_id": {"type": "string", "pattern": "^[A-Z0-9-]{6,64}$"},
+          "user_id": {"type": "string"},
+          "hotel_id": {"type": "string"},
+          "check_in": {"type": "string", "format": "date"},
+          "check_out": {"type": "string", "format": "date"},
+          "adults": {"type": "integer", "minimum": 1, "maximum": 6},
+          "children": {"type": "integer", "minimum": 0, "maximum": 4},
+          "room_type": {"const": "family_standard"}
+        }
+      },
+      "errors": ["invalid_request", "invalid_dates", "invalid_party", "permission_denied", "user_unavailable", "hotel_not_found", "duplicate_stay", "inventory_unavailable", "inventory_conflict"]
+    },
+    {
+      "name": "get_hotel_booking",
+      "description": "按预订号读取预订及逐晚明细。",
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["booking_id"],
+        "properties": {"booking_id": {"type": "string"}}
+      },
+      "errors": ["invalid_request", "booking_not_found", "permission_denied", "invalid_state"]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+2026-04-18T22:14:03Z snapshot=freeze-2026-04-18 python=3.11 command="python3 scripts/analyze_main.py --input data/raw_trials.csv --out results.csv" exit=0 rows=1681 conversion_lift=0.124 retention_lift=0.031
+2026-04-18T22:16:41Z snapshot=freeze-2026-04-18 command="python3 scripts/analyze_main.py --input data/raw_trials.csv --out results/subgroup_ablation.csv --subgroups" exit=0 subgroup_lift=0.061

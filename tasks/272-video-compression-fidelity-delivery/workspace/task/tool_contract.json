@@ -1,0 +1,25 @@
+{
+  "schema_version": "nami_work_case18_tool_contract_v1",
+  "network": "none",
+  "working_directory": "/workspace",
+  "tools": [
+    {
+      "id": "ffmpeg_cli",
+      "executable": "/usr/bin/ffmpeg",
+      "purpose": "Decode and transcode the visible source video into the requested output file.",
+      "write_scope": ["/workspace/output/compressed.mp4"]
+    },
+    {
+      "id": "ffprobe_cli",
+      "executable": "/usr/bin/ffprobe",
+      "purpose": "Inspect visible media streams and container metadata without modifying files.",
+      "write_scope": []
+    },
+    {
+      "id": "filesystem_cli",
+      "executable": "/bin/sh",
+      "purpose": "Read task/input files and create only the declared output.",
+      "write_scope": ["/workspace/output/compressed.mp4"]
+    }
+  ]
+}

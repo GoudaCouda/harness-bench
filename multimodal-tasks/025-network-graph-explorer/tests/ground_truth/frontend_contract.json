@@ -1,0 +1,203 @@
+{
+  "task_id": "025-network-graph-explorer",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "network_graph_explorer_protected_inputs",
+    "network_graph_explorer_interaction_model",
+    "network_graph_explorer_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/graph.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "NODE-A",
+      "label": "Intake"
+    },
+    {
+      "id": "NODE-B",
+      "label": "Join"
+    },
+    {
+      "id": "NODE-C",
+      "label": "Store"
+    },
+    {
+      "id": "NODE-D",
+      "label": "Audit"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "NODE-A",
+      "label": "Intake",
+      "kind": "source",
+      "degree": 2,
+      "x": 18,
+      "y": 30
+    },
+    {
+      "id": "NODE-B",
+      "label": "Join",
+      "kind": "bridge",
+      "degree": 3,
+      "x": 50,
+      "y": 48
+    },
+    {
+      "id": "NODE-C",
+      "label": "Store",
+      "kind": "sink",
+      "degree": 2,
+      "x": 82,
+      "y": 28
+    },
+    {
+      "id": "NODE-D",
+      "label": "Audit",
+      "kind": "sink",
+      "degree": 1,
+      "x": 78,
+      "y": 72
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "graph"
+    ],
+    [
+      "node"
+    ],
+    [
+      "edge",
+      "neighbor"
+    ],
+    [
+      "Node kind"
+    ],
+    [
+      "Pinned count"
+    ],
+    [
+      "Neighbor count"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "graph-board"
+    ],
+    [
+      "data-node-id"
+    ],
+    [
+      "Pin node"
+    ],
+    [
+      "Clear pins"
+    ],
+    [
+      "Node kind"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Pinned nodes"
+    ],
+    [
+      "Neighbor count"
+    ],
+    [
+      "Selected node"
+    ],
+    [
+      "bridge"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"graph-board\"]",
+    "marker": {
+      "attr": "data-node-id",
+      "id": "NODE-B",
+      "x": 50,
+      "y": 48,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-node-id",
+        "id": "NODE-A",
+        "x": 18,
+        "y": 30,
+        "tol": 10
+      },
+      {
+        "attr": "data-node-id",
+        "id": "NODE-B",
+        "x": 50,
+        "y": 48,
+        "tol": 10
+      },
+      {
+        "attr": "data-node-id",
+        "id": "NODE-C",
+        "x": 82,
+        "y": 28,
+        "tol": 10
+      },
+      {
+        "attr": "data-node-id",
+        "id": "NODE-D",
+        "x": 78,
+        "y": 72,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "pin node"
+      ]
+    ],
+    "body_has": [
+      "NODE-B",
+      "Join",
+      "bridge",
+      "Neighbor count",
+      "3",
+      "Pinned",
+      "1"
+    ],
+    "selects": [
+      [
+        "Node kind",
+        "bridge"
+      ]
+    ],
+    "toggles": [],
+    "after_toggle": [],
+    "name": "network_graph_explorer"
+  }
+}

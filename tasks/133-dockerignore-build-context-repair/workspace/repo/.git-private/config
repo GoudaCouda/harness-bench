@@ -1,0 +1,2 @@
+[remote "origin"]
+  url = ssh://example.invalid/private/repository

@@ -1,0 +1,20 @@
+{
+  "ranked": {
+    "q-gate": [
+      "doc-alpha",
+      "doc-beta"
+    ],
+    "q-pump": [
+      "doc-beta"
+    ]
+  },
+  "scores": {
+    "q-gate": {
+      "doc-alpha": 4,
+      "doc-beta": 2
+    },
+    "q-pump": {
+      "doc-beta": 1
+    }
+  }
+}

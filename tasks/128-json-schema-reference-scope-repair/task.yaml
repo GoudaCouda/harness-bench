@@ -1,0 +1,60 @@
+task_id: 128-json-schema-reference-scope-repair
+title: Repair a migrated multi-file JSON Schema bundle
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Repository Maintenance
+difficulty: hard
+capability_tags:
+- filesystem
+- json_schema
+- repository
+- uri_resolution
+- verification
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- verification_behavior
+- state_management
+stressors:
+- identifier_scope
+- final_tree_plausibility
+- positive_and_negative_examples
+- stale_migration_state
+required_artifacts:
+- repo/schemas/orders/order.json
+- repo/out/bundle_audit.json
+- repo/SCHEMA_HANDOFF.md
+task_family: schema-bundle-migration-recovery
+variant: retrieval-uri-effective-base-anchor-repair
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - JSON-SCHEMA-2020-12
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - repo/out/
+  - repo/out/bundle_audit.json
+  - repo/SCHEMA_HANDOFF.md
+  allowed_modified:
+  - repo/schemas/orders/order.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

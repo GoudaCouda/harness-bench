@@ -1,0 +1,12 @@
+{
+  "audit_sha256": "3cfe431e31282cae29ba0789c5d2dcb2d315f3b1aa686fb9a7cc51774223094b",
+  "coverage_sha256": "c81bf4b913372d8d7fd16045d4ba8be2973bdb0facd3b7dcee39ae99a7ad5fe8",
+  "export_id": "openalex-synthetic-graph-102",
+  "external_actions_executed": false,
+  "graph_sha256": "adfe58abe5b305be014ab91c173e65861623f9ff4bbed6203e35cd0fc8b9b9ff",
+  "input_bundle_sha256": "d3491fdc589442744dab659b67e24e71367b05c8343831c513737b5131c87b42",
+  "phase": "staged_for_handoff",
+  "receipt_type": "local_graph_stage",
+  "stage_token": "09c47a302104988a774d3fecaf37caa5611ee2e986bb0c0e7d90e4b56aa0241d",
+  "state_revision": 3
+}

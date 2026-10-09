@@ -1,0 +1,52 @@
+{
+  "allowed_final_files": [
+    ".case_id",
+    "inputs/01_招标要求.md",
+    "inputs/02_公司资质.json",
+    "inputs/03_评审标准.csv",
+    "inputs/04_编制约束.md",
+    "inputs/05_实施方案模板.docx",
+    "outputs/新桥市综合管廊监控升级项目_施工实施方案.docx"
+  ],
+  "case_id": "case_01",
+  "expected_initial_files": [
+    {
+      "logical_path": ".case_id",
+      "sha256": "5b4510e62d6691a4bd94012a5e8e2c6006b8d3502a616b3c2ecf0875c1f14d02"
+    },
+    {
+      "logical_path": "inputs/01_招标要求.md",
+      "sha256": "85cbad72374c67529156c559f587e9bc629f61e7f29c6a098d7c81cc30b023bf"
+    },
+    {
+      "logical_path": "inputs/02_公司资质.json",
+      "sha256": "d11c17694e90aec33c2d49ff87c6bf75a47dd145c401dcfee95019a0285e74a5"
+    },
+    {
+      "logical_path": "inputs/03_评审标准.csv",
+      "sha256": "dc9c95b58fdfa989d53e2a7583b7f022241ee1739f551873c1768fa56c4e70aa"
+    },
+    {
+      "logical_path": "inputs/04_编制约束.md",
+      "sha256": "d78a6955447686e7697dac2fd9c43d030d7619923b4ecd1a085404499ef7d1ac"
+    },
+    {
+      "logical_path": "inputs/05_实施方案模板.docx",
+      "sha256": "ed6e4c3a537c0e9ab289f6267af9e83773c1ddd6ea183b4fc84b982baf59357b"
+    }
+  ],
+  "fixed_time": "2026-04-08T09:00:00+08:00",
+  "locale": "zh-CN",
+  "network_policy": "offline",
+  "protected_paths": [
+    "inputs/01_招标要求.md",
+    "inputs/02_公司资质.json",
+    "inputs/03_评审标准.csv",
+    "inputs/04_编制约束.md",
+    "inputs/05_实施方案模板.docx"
+  ],
+  "required_output": "outputs/新桥市综合管廊监控升级项目_施工实施方案.docx",
+  "schema_version": "case01_workspace_manifest_v1",
+  "state_hash_algorithm": "sha256_sorted_directory_and_file_records_v1",
+  "timezone": "Asia/Shanghai"
+}

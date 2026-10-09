@@ -1,0 +1,31 @@
+{
+  "schema_version": "synthetic_docx_writer_contract_v1",
+  "command": "python3 tools/docx_writer.py --spec <spec.json> --output output/monitoring_equipment_inspection_form.docx",
+  "spec_required_fields": [
+    "hospital",
+    "devices"
+  ],
+  "hospital_required_fields": [
+    "document_code",
+    "hospital_name",
+    "department",
+    "form_title",
+    "privacy_notice"
+  ],
+  "device_required_fields": [
+    "asset_id",
+    "device_name",
+    "device_type",
+    "model",
+    "location",
+    "responsible_team",
+    "inspection_cycle",
+    "inspection_items"
+  ],
+  "constraints": {
+    "device_count": 4,
+    "inspection_items_per_device": 5,
+    "page_size": "A4 portrait",
+    "one_device_per_page": true
+  }
+}

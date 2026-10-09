@@ -1,0 +1,9 @@
+exception_id,category,amount_usd,owner,next_action,evidence
+INV003,outstanding_receivable,125.00,collections,confirm collection plan,ar_ledger.csv#INV003;processor_settlements.csv
+INV004,void_cash_suspense,79.00,controller,determine refund or liability treatment,ar_ledger.csv#INV004;processor_settlements.csv#P004;bank_statement.csv#B003
+INV005,missing_fx,,treasury,publish the 2026-03-07 JPY rate,ar_ledger.csv#INV005;fx_rates.csv
+INV008,outstanding_receivable,75.00,collections,confirm collection plan,ar_ledger.csv#INV008;processor_settlements.csv
+P010,bank_unconfirmed,198.00,cash_ops,locate or reject the processor settlement,processor_settlements.csv#P010;bank_statement.csv
+P999,missing_invoice_cash,49.50,ar_ops,identify the source invoice before clearing,processor_settlements.csv#P999;bank_statement.csv#B004;ar_ledger.csv
+B009,orphan_bank,25.00,cash_ops,identify the processor source,bank_statement.csv#B009;processor_settlements.csv
+R404,orphan_refund,10.00,refund_ops,identify the customer and invoice,processor_refunds.csv#R404;bank_statement.csv#B010;ar_ledger.csv

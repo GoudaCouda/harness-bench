@@ -1,0 +1,6 @@
+{"baseline_revision": "5", "end_item": "SKID-900", "issued_component": "CONN-CU-4P", "kit_state": "consumed", "serial_or_lot": "SN-0498", "status": "assembled", "version": 4, "work_order_id": "WO-900"}
+{"baseline_revision": "5", "end_item": "SKID-900", "issued_component": "CONN-CU-4P", "kit_state": "issued", "serial_or_lot": "SN-0501", "status": "kitted", "version": 2, "work_order_id": "WO-901"}
+{"baseline_revision": "5", "end_item": "SKID-900", "issued_component": null, "kit_state": "not_issued", "serial_or_lot": "SN-0502", "status": "released", "version": 1, "work_order_id": "WO-902"}
+{"baseline_revision": "2", "end_item": "FIELD-KIT", "issued_component": "CONN-CU-4P-A", "kit_state": "issued", "serial_or_lot": "LOT-2026-08", "status": "kitted", "version": 3, "work_order_id": "WO-903"}
+{"baseline_revision": "2", "end_item": "FIELD-KIT", "issued_component": "CONN-NI-4P-A", "kit_state": "issued", "serial_or_lot": "LOT-2026-09", "status": "kitted", "version": 3, "work_order_id": "WO-904"}
+{"baseline_revision": "2", "end_item": "FIELD-KIT", "issued_component": null, "kit_state": "not_issued", "serial_or_lot": "LOT-2026-10", "status": "released", "version": 1, "work_order_id": "WO-905"}

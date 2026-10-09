@@ -1,0 +1,68 @@
+task_id: 156-subtitle-timing-format-repair
+title: Repair Subtitle Timing Against Transcript and Shot Boundaries
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Media and Entertainment
+task_category: Content Production
+task_subcategory: Media Processing
+difficulty: hard
+capability_tags:
+- terminal
+- subtitle_parsing
+- temporal_constraints
+- text_alignment
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- overlap
+- shot_boundary
+- transcript_mismatch
+- numbering_error
+required_artifacts:
+- subtitle_edits.json
+- repaired.srt
+- qc_report.json
+- localization_handoff.md
+task_family: media-subtitle-timing-repair
+variant: transcript-and-shot-qc
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - MEDIA-SUB-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - subtitle_edits.json
+  - repaired.srt
+  - qc_report.json
+  - localization_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: localization_handoff
+  max_fallback_weight: 0.2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

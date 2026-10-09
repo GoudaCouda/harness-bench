@@ -1,0 +1,48 @@
+{
+  "stream_id": "harborwatch-220",
+  "gate_clock_epoch": 1775000000,
+  "events": [
+    {
+      "request_id": "r1",
+      "student_id": "s-a",
+      "field": "email",
+      "opt_out": false
+    },
+    {
+      "request_id": "r2",
+      "student_id": "s-a",
+      "field": "email",
+      "opt_out": true
+    },
+    {
+      "request_id": "r3",
+      "student_id": "s-b",
+      "field": "gpa",
+      "opt_out": false
+    },
+    {
+      "request_id": "r1",
+      "student_id": "s-a",
+      "field": "name",
+      "opt_out": false
+    },
+    {
+      "request_id": "r5",
+      "student_id": "",
+      "field": "email",
+      "opt_out": false
+    },
+    {
+      "request_id": "r6",
+      "student_id": "s-c",
+      "field": "major",
+      "opt_out": false
+    },
+    {
+      "request_id": "r7",
+      "student_id": "s-c",
+      "field": "nickname",
+      "opt_out": false
+    }
+  ]
+}

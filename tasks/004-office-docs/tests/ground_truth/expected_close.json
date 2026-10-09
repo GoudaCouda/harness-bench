@@ -1,0 +1,120 @@
+{
+  "policy_id": "REV-CLOSE-2026-Q3",
+  "period": "2026-07-01 through 2026-09-30",
+  "cutoff": "2026-10-05 23:59:59 UTC",
+  "regions": {
+    "North": {
+      "recognized_order_count": 4,
+      "gross_recognized_sales": "3620.00",
+      "deducted_refunds": "280.00",
+      "net_recognized_sales": "3340.00"
+    },
+    "South": {
+      "recognized_order_count": 4,
+      "gross_recognized_sales": "3050.00",
+      "deducted_refunds": "250.00",
+      "net_recognized_sales": "2800.00"
+    },
+    "East": {
+      "recognized_order_count": 5,
+      "gross_recognized_sales": "3325.00",
+      "deducted_refunds": "675.00",
+      "net_recognized_sales": "2650.00"
+    },
+    "West": {
+      "recognized_order_count": 4,
+      "gross_recognized_sales": "3060.00",
+      "deducted_refunds": "880.00",
+      "net_recognized_sales": "2180.00"
+    }
+  },
+  "company": {
+    "recognized_order_count": 17,
+    "gross_recognized_sales": "13055.00",
+    "deducted_refunds": "2085.00",
+    "net_recognized_sales": "10970.00"
+  },
+  "deducted_event_ids": [
+    "ADJ-N1",
+    "ADJ-N4",
+    "ADJ-S1",
+    "ADJ-E1",
+    "ADJ-E3",
+    "ADJ-W1",
+    "ADJ-W3"
+  ],
+  "exception_groups": [
+    {
+      "order_id": "N-1004",
+      "event_id": "ADJ-N2",
+      "amount": "100.00",
+      "reason_term_groups": [
+        ["approved", "approval"],
+        [
+          "unsettled",
+          "not settled",
+          "awaiting settlement",
+          "pending settlement"
+        ]
+      ]
+    },
+    {
+      "order_id": "S-2002",
+      "event_id": "ADJ-S2",
+      "amount": "100.00",
+      "reason_term_groups": [[
+          "after cutoff",
+          "post-cutoff",
+          "outside the cutoff",
+          "late",
+          "2026-10-06"
+      ]]
+    },
+    {
+      "order_id": "S-2003",
+      "event_id": "ADJ-S4",
+      "amount": "50.00",
+      "reason_term_groups": [["reversed", "superseded", "voided", "cancelled"]]
+    },
+    {
+      "order_id": "E-3004",
+      "event_id": "ADJ-E2",
+      "amount": "100.00",
+      "reason_term_groups": [[
+        "pending",
+        "unrecognized",
+        "not recognized",
+        "ineligible",
+        "not eligible"
+      ]]
+    },
+    {
+      "order_id": "W-4002",
+      "event_id": "ADJ-W2",
+      "amount": "120.00",
+      "reason_term_groups": [
+        ["approved", "approval"],
+        [
+          "unsettled",
+          "not settled",
+          "awaiting settlement",
+          "pending settlement"
+        ]
+      ]
+    }
+  ],
+  "supersession_groups": [
+    {
+      "event_ids": ["ADJ-N3", "ADJ-N4"],
+      "order_id": "N-1006",
+      "amount": "80.00",
+      "disposition": "replacement_once"
+    },
+    {
+      "event_ids": ["ADJ-S3", "ADJ-S4"],
+      "order_id": "S-2003",
+      "amount": "50.00",
+      "disposition": "reversal_removed"
+    }
+  ]
+}

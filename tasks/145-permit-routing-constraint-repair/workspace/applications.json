@@ -1,0 +1,1 @@
+{"applications":[{"id":"APP-10","parcel":"P-10","kind":"addition"},{"id":"APP-11","parcel":"P-11","kind":"facade"},{"id":"APP-12","parcel":"P-12","kind":"solar"}],"historical_controls":[{"id":"HIST-1","parcel_attributes":{"zone":"MU-2","floodplain":true,"historic_overlay":true},"expected":["zoning","floodplain","historic"]}]}

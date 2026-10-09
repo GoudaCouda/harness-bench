@@ -1,0 +1,318 @@
+{
+  "task_id": "007-budget-planning-workspace",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "budget_planning_workspace_protected_local_data",
+    "budget_planning_workspace_matrix_interaction_model",
+    "budget_planning_workspace_matrix_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "BUD-HOME",
+    "BUD-FOOD",
+    "BUD-CARE",
+    "BUD-SAVE",
+    "BUD-HOME-R1",
+    "BUD-FOOD-R2",
+    "BUD-CARE-R3"
+  ],
+  "records": {
+    "BUD-HOME": {
+      "id": "BUD-HOME",
+      "name": "Rent and utilities",
+      "category": "fixed",
+      "owner": "Alex",
+      "status": "clear",
+      "primary": 2680,
+      "secondary": 0
+    },
+    "BUD-FOOD": {
+      "id": "BUD-FOOD",
+      "name": "Groceries",
+      "category": "variable",
+      "owner": "Nia",
+      "status": "watch",
+      "primary": 740,
+      "secondary": 85
+    },
+    "BUD-CARE": {
+      "id": "BUD-CARE",
+      "name": "Care expenses",
+      "category": "family",
+      "owner": "Remy",
+      "status": "review",
+      "primary": 620,
+      "secondary": 110
+    },
+    "BUD-SAVE": {
+      "id": "BUD-SAVE",
+      "name": "Emergency savings",
+      "category": "reserve",
+      "owner": "Alex",
+      "status": "clear",
+      "primary": 900,
+      "secondary": -75
+    },
+    "BUD-HOME-R1": {
+      "id": "BUD-HOME-R1",
+      "name": "Rent and utilities follow-up",
+      "category": "variable",
+      "owner": "Remy",
+      "status": "clear",
+      "primary": 2694,
+      "secondary": 6
+    },
+    "BUD-FOOD-R2": {
+      "id": "BUD-FOOD-R2",
+      "name": "Groceries follow-up",
+      "category": "family",
+      "owner": "Alex",
+      "status": "watch",
+      "primary": 757,
+      "secondary": 92
+    },
+    "BUD-CARE-R3": {
+      "id": "BUD-CARE-R3",
+      "name": "Care expenses follow-up",
+      "category": "reserve",
+      "owner": "Alex",
+      "status": "review",
+      "primary": 640,
+      "secondary": 118
+    }
+  },
+  "domain_groups": [
+    [
+      "budget",
+      "spend",
+      "cost"
+    ],
+    [
+      "category",
+      "group",
+      "bucket",
+      "allocation",
+      "plan",
+      "split"
+    ],
+    [
+      "matrix",
+      "budget matrix",
+      "budget item"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Budget bucket",
+      "budget bucket",
+      "filter"
+    ],
+    [
+      "Scenario",
+      "scenario",
+      "matrix-review"
+    ],
+    [
+      "Budget search",
+      "budget search",
+      "search"
+    ],
+    [
+      "Adjustment percent",
+      "adjustment percent",
+      "Reserve view",
+      "reserve view"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Planned spend",
+      "Planned",
+      "Planned spend"
+    ],
+    [
+      "Variance",
+      "Variance"
+    ],
+    [
+      "Reserve gap",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Allocation scenario",
+      "budget matrix"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "budgetBucket",
+      "setBudgetBucket",
+      "budget bucket"
+    ],
+    [
+      "selectedBudgetId",
+      "setSelectedBudgetId",
+      "matrix cell selection"
+    ],
+    [
+      "reserveView",
+      "setReserveView",
+      "reserve view"
+    ],
+    [
+      "adjustmentPercent",
+      "setAdjustmentPercent",
+      "adjustment percent"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "plannedSpend",
+      "Planned spend",
+      "spend total"
+    ],
+    [
+      "varianceTotal",
+      "Variance",
+      "variance total"
+    ],
+    [
+      "reserveGap",
+      "Reserve gap",
+      "reserve shortfall"
+    ],
+    [
+      "scenarioSpend",
+      "Allocation scenario",
+      "scenario spend"
+    ],
+    [
+      "ownerSpread",
+      "owner spread",
+      "owner count"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "matrix",
+      "allocation cells",
+      "variance bars"
+    ],
+    [
+      "reserve panel",
+      "budget grid",
+      "scenario rail"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Budget bucket",
+    "mode_label": "Scenario",
+    "search_label": "Budget search",
+    "range_label": "Adjustment percent",
+    "toggle_label": "Reserve view",
+    "toggle_regex": "Reserve\\ view|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Budget bucket",
+        "value": "fixed"
+      },
+      {
+        "kind": "fill",
+        "label": "Budget search",
+        "value": "Rent"
+      },
+      {
+        "kind": "click",
+        "text": "BUD-HOME"
+      },
+      {
+        "kind": "select",
+        "label": "Scenario",
+        "value": "matrix-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Adjustment percent",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "matrix-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "BUD-HOME",
+      "category": "fixed",
+      "mode": "matrix-review",
+      "search_value": "Rent",
+      "range_value": 64,
+      "visible_id_subset": [
+        "BUD-HOME"
+      ],
+      "selected_detail_tokens": [
+        "Alex",
+        "fixed",
+        "clear",
+        "2680",
+        "0"
+      ],
+      "after_clearing_search_subset": [
+        "BUD-HOME",
+        "BUD-CARE-R3"
+      ],
+      "focus_subset": [
+        "BUD-CARE",
+        "BUD-CARE-R3"
+      ],
+      "focus_forbidden": [
+        "BUD-HOME"
+      ],
+      "detail_switch_id": "BUD-CARE-R3",
+      "detail_switch_tokens": [
+        "BUD-CARE-R3",
+        "Care expenses follow-up",
+        "Alex",
+        "reserve",
+        "review",
+        "640",
+        "118"
+      ],
+      "summary_change_labels": [
+        "Planned spend",
+        "Variance",
+        "Reserve gap",
+        "Allocation scenario"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 7
+    },
+    "action_count": 6
+  }
+}

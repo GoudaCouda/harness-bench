@@ -1,0 +1,1 @@
+{"PATH": "/usr/local/bin:/usr/bin", "EDGE_LISTEN_PORT": "9090", "EDGE_API_TOKEN": "synthetic-env-token", "EDGE_TELEMETRY": "true"}

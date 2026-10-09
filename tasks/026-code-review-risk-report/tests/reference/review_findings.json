@@ -1,0 +1,75 @@
+{
+  "findings": [
+    {
+      "id": "pii-scope",
+      "severity": "critical",
+      "file": "app/export_api.py",
+      "line_hint": "removed include_pii guard",
+      "risk": "A caller with exports:read but without customers:pii can request an unauthorized PII export.",
+      "recommendation": "Call require_scope(actor, customers:pii) before lookup or creation whenever include_pii is true.",
+      "test": "Submit include_pii=true without customers:pii and assert rejection and that no export job exists.",
+      "evidence": "The diff removes the conditional customers:pii scope check."
+    },
+    {
+      "id": "tenant-idempotency",
+      "severity": "high",
+      "file": "app/export_repo.py",
+      "line_hint": "find_by_token",
+      "risk": "The idempotency lookup is global, so two tenants using the same request_token can suppress or reuse one another's jobs.",
+      "recommendation": "Scope find_by_token by the composite tenant_id and request_token key from schema.sql.",
+      "test": "Have two tenants submit the same token and assert that separate jobs are returned for their own tenants.",
+      "evidence": "tenant_id was removed from both the repository signature and query."
+    },
+    {
+      "id": "atomic-claim",
+      "severity": "high",
+      "file": "app/export_repo.py",
+      "line_hint": "next_queued and mark_running",
+      "risk": "The split read and update lets two workers race and claim the same queued export.",
+      "recommendation": "Restore an atomic compare-and-set claim, such as one UPDATE ... RETURNING in a transaction.",
+      "test": "Release two workers against the same queued job and assert exactly one claim and one archive execution.",
+      "evidence": "The atomic claim_next statement became separate next_queued and mark_running calls."
+    },
+    {
+      "id": "false-completion",
+      "severity": "high",
+      "file": "app/export_worker.py",
+      "line_hint": "after TransientUploadError",
+      "risk": "A transient upload failure is queued for retry but the job is then marked complete with a null ETag.",
+      "recommendation": "Requeue and return on upload failure; call mark_complete only after a successful durable upload with ETag and checksum.",
+      "test": "Force a transient upload failure and assert the job remains retryable and not complete, then succeeds once on retry.",
+      "evidence": "mark_complete runs after both try and except and accepts uploaded=None."
+    },
+    {
+      "id": "cursor-tuple",
+      "severity": "medium",
+      "file": "app/customer_snapshot.py",
+      "line_hint": "page_after predicate",
+      "risk": "The independent id predicate is not lexicographic and can duplicate older rows whose IDs exceed the cursor ID.",
+      "recommendation": "Use updated_at > cursor time OR updated_at = cursor time AND id > cursor id.",
+      "test": "Page rows sharing a timestamp plus older rows with larger IDs and assert no duplicate or skipped customer.",
+      "evidence": "The equality guard tying id to updated_at was removed."
+    },
+    {
+      "id": "zero-ttl",
+      "severity": "medium",
+      "file": "app/retention.py",
+      "line_hint": "resolve_ttl_hours",
+      "risk": "Explicit ttl_hours=0 is falsy and silently becomes the 24-hour default.",
+      "recommendation": "Default only when the key is absent and preserve explicit zero.",
+      "test": "Resolve ttl_hours=0 and assert immediate-retention value 0 rather than 24.",
+      "evidence": "raw_policy.get(ttl_hours) or DEFAULT_TTL_HOURS conflates zero with absence."
+    },
+    {
+      "id": "signed-url-log",
+      "severity": "high",
+      "file": "app/downloads.py",
+      "line_hint": "export download issued log",
+      "risk": "The signed download URL is a bearer secret exposed to every application-log reader.",
+      "recommendation": "Remove download_url from logs and retain only safe job_id or expiry metadata.",
+      "test": "Issue a signed URL and assert the URL and signature are absent from captured logs.",
+      "evidence": "The diff adds the complete signed_url as download_url log metadata."
+    }
+  ],
+  "summary": "The export PR weakens authorization, tenant idempotency, worker state, pagination, retention, and secret-handling contracts and should not merge yet."
+}

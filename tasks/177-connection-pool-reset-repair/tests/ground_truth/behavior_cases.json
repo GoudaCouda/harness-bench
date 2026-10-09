@@ -1,0 +1,291 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 0,
+            "id": "c",
+            "owner": null,
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "client": "a",
+          "id": "a",
+          "kind": "checkout"
+        },
+        {
+          "at": 2,
+          "client": "b",
+          "id": "b",
+          "kind": "checkout"
+        },
+        {
+          "at": 3,
+          "clean": true,
+          "client": "a",
+          "connection": "c",
+          "id": "r",
+          "kind": "release"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 0,
+            "id": "c",
+            "owner": null,
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "connection": "c",
+          "id": "r",
+          "kind": "reset",
+          "success": true
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "capacity": 2,
+        "connections": [
+          {
+            "generation": 1,
+            "id": "c1",
+            "owner": null,
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "client": "a",
+          "id": "q1",
+          "kind": "checkout"
+        },
+        {
+          "at": 2,
+          "client": "b",
+          "id": "q2",
+          "kind": "checkout"
+        },
+        {
+          "at": 3,
+          "clean": false,
+          "client": "a",
+          "connection": "c1",
+          "id": "r1",
+          "kind": "release"
+        },
+        {
+          "at": 4,
+          "connection": "c1",
+          "id": "rst",
+          "kind": "reset",
+          "success": true
+        },
+        {
+          "at": 1,
+          "client": "a",
+          "id": "q1",
+          "kind": "checkout"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity": 2,
+        "connections": [
+          {
+            "generation": 1,
+            "id": "c1",
+            "owner": null,
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "client": "a",
+          "id": "q1",
+          "kind": "steal"
+        },
+        {
+          "at": 2,
+          "client": "b",
+          "id": "q2",
+          "kind": "checkout"
+        },
+        {
+          "at": 3,
+          "clean": false,
+          "client": "a",
+          "connection": "c1",
+          "id": "r1",
+          "kind": "release"
+        },
+        {
+          "at": 4,
+          "connection": "c1",
+          "id": "rst",
+          "kind": "reset",
+          "success": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 0,
+            "id": "idle-with-owner",
+            "owner": "ghost",
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": []
+    },
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 0,
+            "id": "c",
+            "owner": "a",
+            "state": "leased"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "clean": "false",
+          "client": "a",
+          "connection": "c",
+          "id": "bad-clean",
+          "kind": "release"
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "capacity": 2,
+        "connections": [
+          {
+            "generation": 1,
+            "id": "c1",
+            "owner": null,
+            "state": "idle"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "client": "a",
+          "id": "q1",
+          "kind": "checkout"
+        },
+        {
+          "at": 2,
+          "client": "b",
+          "id": "q2",
+          "kind": "checkout"
+        },
+        {
+          "at": 3,
+          "clean": false,
+          "client": "a",
+          "connection": "c1",
+          "id": "r1",
+          "kind": "release"
+        },
+        {
+          "at": 4,
+          "connection": "c1",
+          "id": "rst",
+          "kind": "reset",
+          "success": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 0,
+            "id": "c",
+            "owner": "a",
+            "state": "leased"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "client": "b",
+          "id": "q",
+          "kind": "checkout"
+        },
+        {
+          "at": 2,
+          "clean": true,
+          "client": "x",
+          "connection": "c",
+          "id": "bad",
+          "kind": "release"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity": 1,
+        "connections": [
+          {
+            "generation": 2,
+            "id": "c",
+            "owner": null,
+            "state": "quarantine"
+          }
+        ]
+      },
+      "requests": [
+        {
+          "at": 1,
+          "connection": "c",
+          "id": "rst",
+          "kind": "reset",
+          "success": false
+        },
+        {
+          "at": 2,
+          "client": "b",
+          "id": "q",
+          "kind": "checkout"
+        }
+      ]
+    }
+  ]
+}

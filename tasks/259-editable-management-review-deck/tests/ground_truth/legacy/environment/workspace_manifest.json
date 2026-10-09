@@ -1,0 +1,11 @@
+{
+  "schema_version": "nami_work_case05_workspace_manifest_v1",
+  "root": "fixtures/agent_workspace",
+  "files": [
+    {"path": "TASK.md", "sha256": "34c9445abb9baf54bf2a4d4bbbb760c1f32eab36455d9b6717675e6426420ae1", "size_bytes": 898},
+    {"path": "input/brand.json", "sha256": "8a43ba420024fb4190a2c99dbef1d462e99a1b08c0f0db1702daa5741c8d5598", "size_bytes": 368},
+    {"path": "input/metrics.csv", "sha256": "bcc6caf96cb63caf62006ebe8602a0af0a7c89b260b95b00724d1e5a4b0eabea", "size_bytes": 688},
+    {"path": "input/report.md", "sha256": "0f15d54722d16e8d63a44880e8ffeec0556388aa27f6c4b146c628f6f933f7b7", "size_bytes": 2504},
+    {"path": "output/.keep", "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b", "size_bytes": 1}
+  ]
+}

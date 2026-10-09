@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "case_number": 2,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}"
+  ],
+  "groups": [
+    [
+      "root_cause_chain",
+      "recovery_process",
+      "distractor_exclusion"
+    ],
+    [
+      "incident_metadata",
+      "quantified_impact",
+      "evidenced_timeline",
+      "action_ownership"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_integrity",
+    "runtime_contract",
+    "source_evidence_closed",
+    "docx_structure",
+    "title",
+    "heading_order",
+    "paragraph_structure",
+    "table_uniqueness",
+    "incident_metadata",
+    "quantified_impact",
+    "evidenced_timeline",
+    "root_cause_chain",
+    "recovery_process",
+    "distractor_exclusion",
+    "action_ownership",
+    "bounded_summary",
+    "anti_keyword_dump"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/incident_postmortem.docx"
+  ],
+  "protected_files": {
+    "USER_TASK.md": "7adbe4b00c1efabb435bebf75a3d40f37594ac3306c7018be399a95b4b1564f0",
+    "hb_tools/README.md": "36b71a54a93318816d32d44735eda022f9be57867d5cf0cf46835958332e3a34",
+    "hb_tools/public/document_writer.py": "3811b95ad343ee225ee755e384901d280e19345917a101b98dad49a33c1c4a58",
+    "hb_tools/tool_contract.json": "56578eca189362cda0cd06c72dfdc51c316f8181df2f7f4ec63ccc66b12eccc0",
+    "input/alerts.json": "56764ed55f5007e68b77d1d48d7d5a1abe2f21898ec4fce2b375f9418cbf732d",
+    "input/change_ticket.json": "10436d8f4c94e9a7b363f809641da4ea7fc087a91262db6bd4d4aea14645caee",
+    "input/impact_summary.json": "f258830fa5feb47878c8d50f0a1ee6291436165903bb454be8727873c1d94ad5",
+    "input/postmortem_template.docx": "7925ecb0f6edc653c47c1f26d18083407f49268e35828f27798676a07069dde6",
+    "input/service_events.jsonl": "85797f277b40498193c0e87ac7436868bf5ad1d6fc083e4742f0b6258f081970"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "hb_tools/public",
+    "input",
+    "output"
+  ],
+  "original_directories": [
+    "input",
+    "output"
+  ],
+  "original_modes": {
+    "USER_TASK.md": 436,
+    "input": 509,
+    "input/alerts.json": 436,
+    "input/change_ticket.json": 436,
+    "input/impact_summary.json": 436,
+    "input/postmortem_template.docx": 436,
+    "input/service_events.jsonl": 436,
+    "output": 509
+  }
+}

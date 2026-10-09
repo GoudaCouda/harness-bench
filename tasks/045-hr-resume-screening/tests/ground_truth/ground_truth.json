@@ -1,0 +1,15 @@
+{
+  "matrix_path": "candidate_matrix.csv",
+  "notes_path": "screening_notes.md",
+  "candidates": ["candidate_A", "candidate_B", "candidate_C"],
+  "expected_shortlist": {"candidate_A": "yes", "candidate_B": "no", "candidate_C": "yes"},
+  "expected_rank_order": ["candidate_A", "candidate_C", "candidate_B"],
+  "expected_skills_scores": {"candidate_A": 5, "candidate_B": 1, "candidate_C": 3},
+  "expected_evidence_scores": {"candidate_A": 4, "candidate_B": 1, "candidate_C": 3},
+  "required_evidence": {
+    "candidate_A": ["SQL", "spreadsheet", "customer operations", "Python"],
+    "candidate_B": ["social media", "spreadsheet", "SQL"],
+    "candidate_C": ["support metrics", "spreadsheets", "incident summaries", "SQL"]
+  },
+  "forbidden_sensitive_terms": ["age", "gender", "ethnicity", "family", "disability", "nationality", "religion", "male", "female"]
+}

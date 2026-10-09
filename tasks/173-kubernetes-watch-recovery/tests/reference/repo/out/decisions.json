@@ -1,0 +1,50 @@
+[
+  {
+    "action": "apply_event",
+    "next_initial_complete": true,
+    "next_rv": "rv-a1",
+    "reason": "event",
+    "reset_state": false,
+    "watch_id": "advance"
+  },
+  {
+    "action": "resume_watch",
+    "next_initial_complete": true,
+    "next_rv": "cursor-400",
+    "reason": "eof",
+    "reset_state": false,
+    "watch_id": "eof-checkpoint"
+  },
+  {
+    "action": "relist",
+    "next_initial_complete": false,
+    "next_rv": null,
+    "reason": "gone",
+    "reset_state": true,
+    "watch_id": "gone"
+  },
+  {
+    "action": "checkpoint",
+    "next_initial_complete": true,
+    "next_rv": "opaque-805",
+    "reason": "bookmark",
+    "reset_state": false,
+    "watch_id": "initial-bookmark"
+  },
+  {
+    "action": "ignore",
+    "next_initial_complete": true,
+    "next_rv": "same-token",
+    "reason": "duplicate_event",
+    "reset_state": false,
+    "watch_id": "replay-duplicate"
+  },
+  {
+    "action": "resume_watch",
+    "next_initial_complete": true,
+    "next_rv": "rv-920",
+    "reason": "eof",
+    "reset_state": false,
+    "watch_id": "resume"
+  }
+]

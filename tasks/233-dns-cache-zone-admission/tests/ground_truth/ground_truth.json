@@ -1,0 +1,50 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1776123200
+  },
+  "artifacts": {
+    "receipt": {
+      "stream_id": "harborwatch-233",
+      "gate_clock_epoch": 1776123200,
+      "counts": {
+        "admitted": 2,
+        "held": 3,
+        "malformed": 2
+      },
+      "admitted_ids": [
+        "www.harbor.test",
+        "mail.harbor.test"
+      ],
+      "held_ids": [
+        "gone.harbor.test",
+        "ns1.other.test",
+        "api.harbor.test"
+      ],
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "dnsctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "admitted",
+      "1": "held",
+      "2": "held",
+      "3": "malformed",
+      "4": "malformed",
+      "5": "held",
+      "6": "admitted"
+    },
+    "admitted_ids": [
+      "www.harbor.test",
+      "mail.harbor.test"
+    ],
+    "held_ids": [
+      "gone.harbor.test",
+      "ns1.other.test",
+      "api.harbor.test"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 093-incremental-jsonl-stream-recovery
+pass_threshold: 0.8
+cases:
+- id: partial_resume_and_deduplication
+  title: Partial records resume at exact offsets without duplicate emission
+  description: Pending joins newline and CRLF parsing IDs JSON values offsets and immutable state are
+    correct.
+  weight: 0.3
+  core: true
+- id: rotation_eof_and_quarantine
+  title: Rotation EOF and malformed lines produce safe metadata-only quarantine
+  description: Truncation malformed and empty lines are isolated while valid records continue and raw
+    content stays absent.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_stream_replay
+  title: Protected stream outputs match the submitted consumer
+  description: Records quarantine and checkpoint JSON are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Resume invariants and verification are handed off clearly
+  description: Another engineer can understand offsets pending replay rotation quarantine validation and
+    checks.
+  weight: 0.2
+  core: false
+- id: source_and_ingestion_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

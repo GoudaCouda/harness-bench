@@ -1,0 +1,8 @@
+[
+  {"path":"/restore/app","kind":"directory","checksum":null},
+  {"path":"/restore/app/config.yml","kind":"file","checksum":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+  {"path":"/restore/app/data","kind":"directory","checksum":null},
+  {"path":"/restore/app/data/a.db","kind":"file","checksum":"2222222222222222222222222222222222222222222222222222222222222222"},
+  {"path":"/restore/app/data/b.db","kind":"directory","checksum":null},
+  {"path":"/restore/app/unrelated.txt","kind":"file","checksum":"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"}
+]

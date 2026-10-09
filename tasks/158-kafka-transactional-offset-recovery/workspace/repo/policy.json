@@ -1,0 +1,1 @@
+{"max_retries":3,"require_read_committed":true,"require_transactional_offsets":true,"transactional_id_prefix":"orders-"}

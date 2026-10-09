@@ -1,0 +1,37 @@
+schema_version: 2
+task_id: 002-monorepo-affected-build
+pass_threshold: 0.8
+cases:
+- id: ownership_and_propagation
+  title: Source, generated, and global inputs invalidate the complete affected closure
+  description: Hidden graphs verify direct ownership and reverse-dependency propagation without rebuilding
+    non-buildable packages.
+  weight: 0.45
+  core: true
+- id: ordering_and_fail_closed_edges
+  title: Planning is deterministic and invalid graphs fail closed
+  description: Documentation-only paths, duplicate and deleted paths, longest roots, dependency depth,
+    cycles, and missing dependencies follow the contract.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_incident_plan
+  title: The supplied incident has an auditable affected plan
+  description: The exact visible change list, affected order, and direct causes agree with the repaired
+    implementation and protected graph.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The repair has a truthful reviewer handoff
+  description: Notes explain invalidation and ordering, record the exact public test command and observed
+    result, and name a realistic integration risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Immutable evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Source defects and untrue action claims are scored in their ordinary cases
+    rather than zeroing the task.
+  weight: 0.0
+  gate: true

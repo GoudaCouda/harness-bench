@@ -1,0 +1,10 @@
+{
+  "ws-ops-08": {
+    "binary_signed": true,
+    "change_ticket": "CHG-208",
+    "expected_operator": "svc-maint",
+    "observed_operator": "user-7",
+    "operator_match": false,
+    "ticket_valid": true
+  }
+}

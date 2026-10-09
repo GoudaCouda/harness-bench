@@ -1,0 +1,312 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "capacity_bytes": 1,
+        "data_ttl": 50,
+        "tombstone_ttl": 60,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 1,
+          "event_time": 50,
+          "hold": false,
+          "id": "edge",
+          "kind": "data",
+          "tenant": "t"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity_bytes": 10,
+        "data_ttl": 1,
+        "tombstone_ttl": 1,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 11,
+          "event_time": 0,
+          "hold": false,
+          "id": "big",
+          "kind": "data",
+          "tenant": "t"
+        },
+        {
+          "bytes": 5,
+          "event_time": 1,
+          "hold": false,
+          "id": "small",
+          "kind": "data",
+          "tenant": "t"
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "capacity_bytes": 50,
+        "data_ttl": 50,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 40,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 30,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        },
+        {
+          "bytes": 40,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity_bytes": 50,
+        "data_ttl": 50,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": -1,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 30,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity_bytes": 50,
+        "data_ttl": -1,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 40,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 30,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "capacity_bytes": 50,
+        "data_ttl": 50,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 40,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 30,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity_bytes": 100,
+        "data_ttl": 50,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 40,
+          "event_time": 50,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 30,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "capacity_bytes": 50,
+        "data_ttl": 50,
+        "tombstone_ttl": 80,
+        "watermark": 100
+      },
+      "requests": [
+        {
+          "bytes": 40,
+          "event_time": 10,
+          "hold": false,
+          "id": "old",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 10,
+          "event_time": 0,
+          "hold": true,
+          "id": "held",
+          "kind": "data",
+          "tenant": "a"
+        },
+        {
+          "bytes": 20,
+          "event_time": 20,
+          "hold": false,
+          "id": "tomb",
+          "kind": "tombstone",
+          "tenant": "b"
+        },
+        {
+          "bytes": 5,
+          "event_time": 90,
+          "hold": false,
+          "id": "fresh",
+          "kind": "data",
+          "tenant": "b"
+        }
+      ]
+    }
+  ]
+}

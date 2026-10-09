@@ -1,0 +1,18 @@
+schema_version: 1
+task_id: 110-ooxml-revision-adjudication-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: editorial_handoff
+  title: OOXML revision-recovery handoff is professionally complete
+  question: Does the handoff accurately explain the later signed revision, durable-journal recovery, accepted/rejected/dependency-invalidated outcomes, OOXML preservation, idempotent replay, verification, and internal-only approval boundary without claiming publication or another external action?
+  pass_anchors:
+  - Equivalent terminology and prose organization are acceptable when stable revision, change, transaction, package, and boundary facts are accurate.
+  fail_anchors:
+  - Omitting the TX-04 reconciliation, dependency invalidation, OOXML preservation, replay closure, or no-publication boundary fails.
+  - Claiming publication, export, sending, notification, or external approval fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

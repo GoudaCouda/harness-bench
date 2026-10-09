@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harnessbench"
+version = "0.1.0"
+description = "Docker-isolated benchmark for agent harnesses on realistic tasks"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "tomli>=2.0.1; python_version < \"3.11\"",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.12",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+# Task inputs and reference packages may deliberately contain broken source code:
+# repairing or lint-normalizing those files would change the benchmark itself.
+# Recorded model-output fixtures are likewise immutable evidence, not repository
+# source to be reformatted.
+# The benchmark control plane, task oracles, hooks, generators, and tests remain
+# in Ruff's scope.
+extend-exclude = [
+  "tasks/**/reference/**",
+  "tasks/**/workspace/**",
+  "archived_tasks/**/reference/**",
+  "archived_tasks/**/workspace/**",
+]
+
+[tool.ruff.lint]
+# Keep the release gate stable across Ruff versions instead of inheriting a
+# changing upstream default rule set.
+select = ["E4", "E7", "E9", "F"]

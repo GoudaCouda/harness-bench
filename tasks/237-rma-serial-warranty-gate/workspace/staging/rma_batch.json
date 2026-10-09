@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-237",
+  "gate_clock_epoch": 1776468800,
+  "events": [
+    {
+      "rma_id": "rm1",
+      "serial": "SN-100",
+      "sku": "sku-a",
+      "in_warranty": true,
+      "condition": "new"
+    },
+    {
+      "rma_id": "rm2",
+      "serial": "SN-100",
+      "sku": "sku-b",
+      "in_warranty": true,
+      "condition": "new"
+    },
+    {
+      "rma_id": "rm3",
+      "serial": "SN-200",
+      "sku": "sku-a",
+      "in_warranty": true,
+      "condition": "open_box"
+    },
+    {
+      "rma_id": "rm1",
+      "serial": "SN-100",
+      "sku": "sku-a",
+      "in_warranty": true,
+      "condition": "new"
+    },
+    {
+      "rma_id": "rm5",
+      "serial": "",
+      "sku": "sku-a",
+      "in_warranty": true,
+      "condition": "new"
+    },
+    {
+      "rma_id": "rm6",
+      "serial": "SN-300",
+      "sku": "sku-c",
+      "in_warranty": false,
+      "condition": "new"
+    },
+    {
+      "rma_id": "rm7",
+      "serial": "SN-400",
+      "sku": "sku-c",
+      "in_warranty": true,
+      "condition": "new"
+    }
+  ]
+}

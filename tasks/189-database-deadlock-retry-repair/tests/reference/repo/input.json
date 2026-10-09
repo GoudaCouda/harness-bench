@@ -1,0 +1,46 @@
+{
+  "policy": {
+    "backoff_ms": [
+      10,
+      50,
+      100
+    ],
+    "max_attempts": 3,
+    "retryable": [
+      "40P01",
+      "40001"
+    ]
+  },
+  "requests": [
+    {
+      "attempts": [
+        {
+          "outcome": "40P01",
+          "phase": "before_commit"
+        }
+      ],
+      "id": "deadlock",
+      "replayable": true
+    },
+    {
+      "attempts": [
+        {
+          "outcome": "connection_lost",
+          "phase": "commit"
+        }
+      ],
+      "id": "ambiguous",
+      "replayable": false
+    },
+    {
+      "attempts": [
+        {
+          "outcome": "success",
+          "phase": "after_commit"
+        }
+      ],
+      "id": "ok",
+      "replayable": true
+    }
+  ]
+}

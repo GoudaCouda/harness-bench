@@ -1,0 +1,12 @@
+{
+  "change_record_sha256": "f8a89de014fd6e17ade59f65672a00ba6ee8557e86de596a27694244dd5f1159",
+  "external_deployment_executed": false,
+  "phase": "staged_for_security_review",
+  "policy_revision": 8,
+  "policy_sha256": "bcf95bf56446fe8c0e37113b47abfa3577feff3c74637c8a51f5f7a5c8c9b62d",
+  "replay_report_sha256": "9f4f492e6df05ef3d9f91196b845eb8b6e7ba989ea5f6674041b09a52231b4cc",
+  "schema_version": 1,
+  "source_bundle_sha256": "bf9e46c3bba9000a74f125f2ea735fe9f26c19e27da246786fadc6b748688789",
+  "stage_id": "gateway-waf-repair",
+  "stage_token": "55cd16e13911381dfd2566e4cc18d715f5d93724ba8b82555880192166be2f8f"
+}

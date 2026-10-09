@@ -1,0 +1,321 @@
+{
+  "tag_priority": [
+    {
+      "target": {
+        "project": "demo-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "cp312-cp312-linux_x86_64",
+          "cp312-none-manylinux_2_28_x86_64",
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "demo_kit-1.0-py3-none-any.whl",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": 10,
+          "yanked": false
+        },
+        {
+          "filename": "demo_kit-1.0-cp312-cp312-linux_x86_64.whl",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "size": 20,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "cross-kit",
+        "version": "2.0",
+        "supported_tags": [
+          "cp312-none-manylinux_2_28_x86_64",
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "cross_kit-2.0-py3.cp312-abi3.none-any.manylinux_2_28_x86_64.whl",
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "size": 30,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "right-name",
+        "version": "3.1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "wrong_name-3.1-py3-none-any.whl",
+          "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "size": 1,
+          "yanked": false
+        },
+        {
+          "filename": "right_name-3.0-py3-none-any.whl",
+          "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "size": 1,
+          "yanked": false
+        }
+      ]
+    }
+  ],
+  "policy": [
+    {
+      "target": {
+        "project": "build-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "cp312-cp312-win_amd64"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "build_kit-1.0-1-cp312-cp312-win_amd64.whl",
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "size": 4,
+          "yanked": false
+        },
+        {
+          "filename": "build_kit-1.0-2a-cp312-cp312-win_amd64.whl",
+          "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "size": 5,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "yank-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "cp312-cp312-win_amd64",
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "yank_kit-1.0-cp312-cp312-win_amd64.whl",
+          "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "size": 6,
+          "yanked": true
+        },
+        {
+          "filename": "yank_kit-1.0-py3-none-any.whl",
+          "sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "size": 3,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "ambig-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "ambig_kit-1.0-cp312.py3-none-any.whl",
+          "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+          "size": 7,
+          "yanked": false
+        },
+        {
+          "filename": "ambig_kit-1.0-py3-none-any.whl",
+          "sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+          "size": 8,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "none-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "cp312-cp312-win_amd64"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "none_kit-1.0-py3-none-any.whl",
+          "sha256": "7777777777777777777777777777777777777777777777777777777777777777",
+          "size": 2,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "allow-kit",
+        "version": "1.0",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": true
+      },
+      "assets": [
+        {
+          "filename": "allow_kit-1.0-py3-none-any.whl",
+          "sha256": "8888888888888888888888888888888888888888888888888888888888888888",
+          "size": 2,
+          "yanked": true
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "target": {
+        "project": "Bad_Name",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": []
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any",
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": []
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3.py2-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": []
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "../demo-1-py3-none-any.whl",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": 1,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "demo-1-py3-none-any.whl",
+          "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "size": 1,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "demo-1-x-py3-none-any.whl",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": true,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "demo-1-py3.py3-none-any.whl",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": 1,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": [
+        {
+          "filename": "demo-1-build-py3-none-any.whl",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": 1,
+          "yanked": false
+        }
+      ]
+    },
+    {
+      "target": {
+        "project": "demo",
+        "version": "1",
+        "supported_tags": [
+          "py3-none-any"
+        ],
+        "allow_yanked": false
+      },
+      "assets": "not-a-list"
+    }
+  ]
+}

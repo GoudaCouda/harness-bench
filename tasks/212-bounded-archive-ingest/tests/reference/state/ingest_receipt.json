@@ -1,0 +1,75 @@
+{
+  "queue_id": "ingest-0318",
+  "archive_clock_epoch": 1773824400,
+  "decisions": [
+    {
+      "object_id": "obj-d",
+      "decision": "ingested",
+      "reason": "accepted_with_capacity",
+      "evicted": [],
+      "bytes": 2500
+    },
+    {
+      "object_id": "obj-e",
+      "decision": "checksum_mismatch",
+      "reason": "claimed_checksum_does_not_match_content"
+    },
+    {
+      "object_id": "obj-b",
+      "decision": "conflict",
+      "reason": "object_id_reused_with_different_checksum"
+    },
+    {
+      "object_id": "obj-c",
+      "decision": "replayed",
+      "reason": "identical_object_already_present"
+    },
+    {
+      "object_id": "obj-h",
+      "decision": "ingested",
+      "reason": "accepted_after_eviction",
+      "evicted": [
+        "obj-b",
+        "obj-c",
+        "obj-d"
+      ],
+      "bytes": 8000
+    },
+    {
+      "object_id": "obj-i",
+      "decision": "ingested",
+      "reason": "accepted_after_eviction",
+      "evicted": [
+        "obj-h"
+      ],
+      "bytes": 2000
+    },
+    {
+      "object_id": "obj-j",
+      "decision": "ingested",
+      "reason": "accepted_with_capacity",
+      "evicted": [],
+      "bytes": 1000
+    },
+    {
+      "object_id": "obj-k",
+      "decision": "capacity_exceeded",
+      "reason": "cannot_fit_after_evicting_unpinned_objects"
+    }
+  ],
+  "counts": {
+    "ingested": 4,
+    "replayed": 1,
+    "conflict": 1,
+    "checksum_mismatch": 1,
+    "capacity_exceeded": 1,
+    "rejected": 0
+  },
+  "evicted": [
+    "obj-b",
+    "obj-c",
+    "obj-d",
+    "obj-h"
+  ],
+  "state": "ingested"
+}

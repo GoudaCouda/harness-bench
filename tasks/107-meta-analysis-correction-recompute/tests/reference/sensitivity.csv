@@ -1,0 +1,7 @@
+excluded_study_id,included_study_count,risk_ratio,ci_low,ci_high,tau_squared,i_squared_percent,conclusion
+ASTER,5,0.699943,0.541415,0.904888,0.000000,0.000000,benefit_supported
+BOREALIS,5,0.725466,0.553592,0.950701,0.000000,0.000000,benefit_supported
+CEDAR,5,0.663386,0.516877,0.851423,0.000000,0.000000,benefit_supported
+DELTA,5,0.683851,0.536854,0.871097,0.000000,0.000000,benefit_supported
+ELM,5,0.629001,0.487064,0.812301,0.000000,0.000000,benefit_supported
+FLINT,5,0.671740,0.525573,0.858558,0.000000,0.000000,benefit_supported

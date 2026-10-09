@@ -1,0 +1,54 @@
+{
+  "stream_id": "northharbor-0320",
+  "gate_clock_epoch": 1773997200,
+  "events": [
+    {
+      "event_id": "e1",
+      "service": "svc-a",
+      "outcome": "success",
+      "epoch": 1773997200
+    },
+    {
+      "event_id": "e2",
+      "service": "svc-a",
+      "outcome": "failure",
+      "epoch": 1773997201
+    },
+    {
+      "event_id": "e3",
+      "service": "svc-a",
+      "outcome": "failure",
+      "epoch": 1773997202
+    },
+    {
+      "event_id": "e4",
+      "service": "svc-a",
+      "outcome": "failure",
+      "epoch": 1773997203
+    },
+    {
+      "event_id": "e5",
+      "service": "svc-a",
+      "outcome": "success",
+      "epoch": 1773997210
+    },
+    {
+      "event_id": "e6",
+      "service": "svc-b",
+      "outcome": "failure",
+      "epoch": 1773997211
+    },
+    {
+      "event_id": "e7",
+      "service": "svc-a",
+      "outcome": "failure",
+      "epoch": 1773997240
+    },
+    {
+      "event_id": "e8",
+      "service": "svc-a",
+      "outcome": "success",
+      "epoch": 1773997280
+    }
+  ]
+}

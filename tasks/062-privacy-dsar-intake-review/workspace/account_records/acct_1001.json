@@ -1,0 +1,10 @@
+{
+  "account_id": "acct_1001",
+  "account_holder": "Maya Chen",
+  "primary_email": "maya.chen@example.com",
+  "phone": "+1-415-555-0198",
+  "status": "active",
+  "current_holds": [],
+  "linked_people": [],
+  "internal_case_note": "routine request; no escalation signal"
+}

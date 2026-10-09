@@ -1,0 +1,44 @@
+schema_version: 2
+task_id: 122-pcard-month-close-reconciliation
+pass_threshold: 0.8
+cases:
+- id: source_bound_transaction_adjudication
+  title: Every issuer transaction is adjudicated from immutable evidence
+  description: The checkpoint-bound plan has exact coverage policy dispositions and local evidence lineage.
+  weight: 0.22
+  core: true
+  score_group: decision_and_state
+- id: committed_close_ledger
+  title: The interrupted close becomes one committed local ledger
+  description: Dispositions cents totals and the consumed prepared action agree in one local close transaction.
+  weight: 0.25
+  core: true
+  score_group: decision_and_state
+- id: split_tax_and_refund_controls
+  title: Coupled p-card controls remain explicit
+  description: The connected split graph non-reimbursable tax and prior-period refund link are retained
+    independently.
+  weight: 0.18
+  core: true
+  score_group: validation_and_replay
+- id: stable_identity_and_replay
+  title: Stable close identity prevents duplicate or conflicting close
+  description: One source-bound semantic plan is committed and equivalent representations replay without
+    mutation.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: verification_and_local_stage
+  title: Verification and staging bind the final local state
+  description: Deterministic receipts bind the source plan and logical close while staying pending external
+    posting.
+  weight: 0.12
+- id: reviewer_handoff
+  title: The finance reviewer receives a complete exception handoff
+  description: The handoff explains evidence decisions recovery replay and external boundaries.
+  weight: 0.08
+- id: source_and_external_safety
+  title: Posted ledgers and source artifacts remain immutable
+  description: Evidence controller and posted records are unchanged and no external action is claimed.
+  weight: 0.0
+  gate: true

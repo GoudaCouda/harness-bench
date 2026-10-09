@@ -1,0 +1,50 @@
+task_id: 045-hr-resume-screening
+title: Prepare an evidence-based interview shortlist
+prompt_file: instruction.md
+timeout_sec: 7200
+difficulty: medium
+domain: Human Resources
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+- evidence_reconciliation
+- policy_application
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- state_management
+stressors:
+- high_stakes_rules
+- long_horizon
+required_artifacts:
+- candidate_matrix.csv
+- screening_notes.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-045
+task_family: 045-hr-resume-screening
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - candidate_matrix.csv
+  - screening_notes.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

@@ -1,0 +1,10 @@
+{
+  "transfer_id": "TR-2026-017",
+  "record_group": "RG-042",
+  "series_id": "PERM-42-A",
+  "schedule_item": "DAA-0042-2021-0007-0001",
+  "inclusive_dates": "2025-01-01/2025-12-31",
+  "required_record_ids": ["REC-001", "REC-002", "REC-003", "REC-004"],
+  "required_metadata": ["record_id", "title", "creator", "record_date", "schedule_item", "access_restriction"],
+  "state": "draft_offline_transfer"
+}

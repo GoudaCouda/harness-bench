@@ -1,0 +1,51 @@
+{
+  "rotation": [
+    {
+      "deliveries": [
+        {"delivery_id":"old","endpoint":"/e","received_at":1999,"raw_body":"{\"a\":1}","signature_header":"t=1999,v1=0419f49a0abd12c3144daaeed545cf76060046f9518d7062a9504e11d7443af8"},
+        {"delivery_id":"overlap","endpoint":"/e","received_at":2100,"raw_body":"{\"b\":2}","signature_header":"v1=19926864ec48e3e62bb42c5036bad2d45961f1b64697a1707cce9bcac76f77d2,t=2100,v1=088c0229045574131b44a57558ce87a6abb8b9be63740a4db70e6ecd4ba7551b"},
+        {"delivery_id":"expired-old","endpoint":"/e","received_at":2200,"raw_body":"{\"c\":3}","signature_header":"t=2200,v1=6dee15f8838ba33ccf066565a6642b443a700e19fe4700421c6b819a27505d55"}
+      ],
+      "keyring": [{"key_id":"old","endpoint":"/e","secret":"old","not_before":1000,"not_after":2200},{"key_id":"new","endpoint":"/e","secret":"new","not_before":2000,"not_after":4000}],
+      "policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":300},"checkpoint":{"seen_delivery_ids":[]}
+    },
+    {
+      "deliveries": [
+        {"delivery_id":"edge","endpoint":"/e","received_at":2500,"raw_body":"{\"d\":4}","signature_header":"t=2200,v1=31973e1716c3f0c4069a7869a2ade6dc979b932ec818fac02f096172cfeaa1df"},
+        {"delivery_id":"raw","endpoint":"/e","received_at":2300,"raw_body":"{\"e\": 5}","signature_header":"t=2300,v1=e96363e04940d3c71da9307c9945a199f8abdb26c3ee7f3c304f82f1fedf9747"}
+      ],
+      "keyring":[{"key_id":"new","endpoint":"/e","secret":"new","not_before":2000,"not_after":4000}],
+      "policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":300},"checkpoint":{"seen_delivery_ids":[]}
+    }
+  ],
+  "replay": [
+    {
+      "deliveries":[
+        {"delivery_id":"seen","endpoint":"/e","received_at":50,"raw_body":"raw","signature_header":"t=50,v1=25bba26de9c8a062a5a6a97d8f39c47fe67debe2fe15873c945a088e6ec60106"},
+        {"delivery_id":"bad","endpoint":"/e","received_at":50,"raw_body":"raw","signature_header":"t=50,v1=0000000000000000000000000000000000000000000000000000000000000000"}
+      ],
+      "keyring":[{"key_id":"k","endpoint":"/e","secret":"s","not_before":0,"not_after":100}],
+      "policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":0},"checkpoint":{"seen_delivery_ids":["seen"]}
+    },
+    {
+      "deliveries":[
+        {"delivery_id":"wrong-endpoint","endpoint":"/b","received_at":60,"raw_body":"payload","signature_header":"t=60,v1=ef47dfb2fa7493885b339e5f19482a8067555c874a1833508324fdb2ee266b88"},
+        {"delivery_id":"malformed","endpoint":"/a","received_at":60,"raw_body":"payload","signature_header":"t=60,t=60,v1=ef47dfb2fa7493885b339e5f19482a8067555c874a1833508324fdb2ee266b88"}
+      ],
+      "keyring":[{"key_id":"ka","endpoint":"/a","secret":"a","not_before":0,"not_after":100}],
+      "policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":[]}
+    },
+    {
+      "deliveries":[{"delivery_id":"early","endpoint":"/e","received_at":5,"raw_body":"x","signature_header":"t=5,v1=cafd617bbd0591ac75cde12b2538fede4dbb72bf717a8ea4ec78b910b746029a"}],
+      "keyring":[{"key_id":"late","endpoint":"/e","secret":"late","not_before":6,"not_after":10}],
+      "policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":[]}
+    }
+  ],
+  "invalid": [
+    {"deliveries":{},"keyring":[],"policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":[]}},
+    {"deliveries":[],"keyring":[],"policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":true},"checkpoint":{"seen_delivery_ids":[]}},
+    {"deliveries":[],"keyring":[{"key_id":"k","endpoint":"/e","secret":"s","not_before":1,"not_after":1}],"policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":[]}},
+    {"deliveries":[],"keyring":[],"policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":["x","x"]}},
+    {"deliveries":[{"delivery_id":"d","endpoint":"/e","received_at":1,"raw_body":"x","signature_header":"t=1,v1=0000000000000000000000000000000000000000000000000000000000000000","extra":1}],"keyring":[],"policy":{"algorithm":"hmac-sha256","signature_version":"v1","tolerance_seconds":1},"checkpoint":{"seen_delivery_ids":[]}}
+  ]
+}

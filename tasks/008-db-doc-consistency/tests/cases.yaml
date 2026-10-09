@@ -1,0 +1,50 @@
+schema_version: 2
+task_id: 008-db-doc-consistency
+pass_threshold: 0.8
+cases:
+- id: effective_production_configuration
+  title: Runbook contains the effective production configuration
+  description: Every operator-facing production setting is reconciled to the governing baseline and overrides,
+    with stale guide values removed from current instructions.
+  weight: 0.3
+  core: true
+- id: current_cluster_topology
+  title: Runbook represents the commissioned multi-region cluster
+  description: The complete node table uses the authoritative membership, role, region, and latest hardware
+    state and no longer gives false single-region guidance.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: source_precedence_explained
+  title: Material source precedence is operationally explicit
+  description: The guide explains the production override and newer-inventory cases that would otherwise
+    appear to be unresolved drift.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safe_handoff_decision
+  title: Documentation readiness is decided without claiming execution
+  description: The review gives a grounded READY or BLOCKED decision for guide use, remains scoped to
+    documentation, and includes meaningful pre-use checks.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: correction_trace
+  title: Material corrections and evidence are traceable
+  description: The review identifies the key corrected configuration, hardware, and regional assumptions
+    and ties them to the actual local evidence.
+  weight: 0.1
+  core: false
+- id: maintainable_runbook_handoff
+  title: Revised artifacts are maintainable by the next operator
+  description: The guide and review identify the change, revision state, intended use, and residual caveat
+    without requiring a separate answer-shape artifact.
+  weight: 0.1
+  core: false
+- id: source_and_execution_boundary
+  title: Evidence and output integrity are preserved
+  description: Governed source files are unchanged and deliverables are regular files rather than links.
+    Unsupported execution claims reduce the scored handoff case instead of forcing an otherwise correct
+    submission to zero.
+  weight: 0.0
+  gate: true

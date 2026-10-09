@@ -1,0 +1,10 @@
+{
+  "offline_only": true,
+  "schema_version": 1,
+  "synthetic_fixture": true,
+  "verification_materials": {
+    "field-coc-2026-q3": "synthetic-field-custody-material-v3",
+    "qa-authorization-2026-q3": "synthetic-qa-authorization-material-v2",
+    "receiving-2026-q3": "synthetic-receiving-material-v5"
+  }
+}

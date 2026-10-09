@@ -1,0 +1,4 @@
+[
+  {"gate": "owner_approval", "team": "codeowners", "sha": "aaa111", "state": "approved", "reviewer": "owna"},
+  {"gate": "release_approval", "team": "release", "sha": "bbb222", "state": "approved", "reviewer": "rela"}
+]

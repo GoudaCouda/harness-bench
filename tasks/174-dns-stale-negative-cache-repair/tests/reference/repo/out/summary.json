@@ -1,0 +1,8 @@
+{
+  "fail": 1,
+  "query_count": 5,
+  "serve_fresh": 1,
+  "serve_refreshed": 1,
+  "serve_stale": 1,
+  "wait_refresh": 1
+}

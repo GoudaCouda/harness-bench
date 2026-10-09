@@ -1,0 +1,150 @@
+{
+  "stream_id": "harborwatch-0322",
+  "gate_clock_epoch": 1774170000,
+  "decisions": [
+    {
+      "index": 0,
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "decision": "accepted"
+    },
+    {
+      "index": 1,
+      "event_id": "ev2",
+      "correlation_id": "corr-a",
+      "decision": "quarantined"
+    },
+    {
+      "index": 2,
+      "event_id": "ev3",
+      "correlation_id": "corr-b",
+      "decision": "accepted"
+    },
+    {
+      "index": 3,
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "event_id": "ev5",
+      "correlation_id": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "event_id": "ev6",
+      "correlation_id": "corr-b",
+      "decision": "accepted"
+    },
+    {
+      "index": 6,
+      "event_id": "ev7",
+      "correlation_id": "corr-c",
+      "decision": "quarantined"
+    }
+  ],
+  "counts": {
+    "accepted": 3,
+    "quarantined": 2,
+    "malformed": 2
+  },
+  "accepted_ids": [
+    "ev1",
+    "ev3",
+    "ev6"
+  ],
+  "quarantined_ids": [
+    "ev2",
+    "ev7"
+  ],
+  "records": [
+    {
+      "index": 0,
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "decision": "accepted",
+      "record": {
+        "event_id": "ev1",
+        "correlation_id": "corr-a",
+        "kind": "login",
+        "message": "password login succeeded"
+      }
+    },
+    {
+      "index": 1,
+      "event_id": "ev2",
+      "correlation_id": "corr-a",
+      "decision": "quarantined",
+      "record": {
+        "event_id": "ev2",
+        "correlation_id": "corr-a",
+        "kind": "token_refresh",
+        "access_token": "[REDACTED]",
+        "message": "issued a bearer"
+      }
+    },
+    {
+      "index": 2,
+      "event_id": "ev3",
+      "correlation_id": "corr-b",
+      "decision": "accepted",
+      "record": {
+        "event_id": "ev3",
+        "correlation_id": "corr-b",
+        "kind": "login",
+        "message": "webauthn login succeeded"
+      }
+    },
+    {
+      "index": 3,
+      "event_id": "ev1",
+      "correlation_id": "corr-a",
+      "decision": "malformed",
+      "record": {
+        "event_id": "ev1",
+        "correlation_id": "corr-a",
+        "kind": "login",
+        "message": "duplicate event id"
+      }
+    },
+    {
+      "index": 4,
+      "event_id": "ev5",
+      "correlation_id": "",
+      "decision": "malformed",
+      "record": {
+        "event_id": "ev5",
+        "correlation_id": "",
+        "kind": "orphan",
+        "message": "missing correlation"
+      }
+    },
+    {
+      "index": 5,
+      "event_id": "ev6",
+      "correlation_id": "corr-b",
+      "decision": "accepted",
+      "record": {
+        "event_id": "ev6",
+        "correlation_id": "corr-b",
+        "kind": "logout",
+        "message": "session closed"
+      }
+    },
+    {
+      "index": 6,
+      "event_id": "ev7",
+      "correlation_id": "corr-c",
+      "decision": "quarantined",
+      "record": {
+        "event_id": "ev7",
+        "correlation_id": "corr-c",
+        "kind": "proxy",
+        "authorization": "[REDACTED]",
+        "message": "forwarded with authorization"
+      }
+    }
+  ]
+}

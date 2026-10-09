@@ -1,0 +1,33 @@
+{
+  "schema_version": "nami_work_case16_runtime_contract_v2",
+  "fixed_time": "2026-07-20T09:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "locale": "zh-CN",
+  "random_seed": 160016,
+  "network": "none",
+  "published_ports": [],
+  "runtime_user": "2050:4007",
+  "limits": {"cpus": 1, "memory_mib": 512, "pids": 64, "wall_time_seconds": 120},
+  "agent_boundary": {
+    "visible_mounts": ["fixtures/agent_task.md", "fixtures/tool_client.py", "fixtures/tool_contract.json", "tool_gateway_socket_read_only"],
+    "hidden": ["state", "oracle", "verifier", "tests", "validation"],
+    "root_filesystem_read_only": true
+  },
+  "controller_boundary": {
+    "case_mount": "read_only",
+    "run_mount": "read_write",
+    "validation_mount": "read_write",
+    "executes_untrusted_candidate_code": false
+  },
+  "tool_service_boundary": {
+    "transport": "unix_socket_jsonl",
+    "candidate_socket_path": "/tool_gateway/hotel.sock",
+    "state_mount": "read_write_hidden_from_candidate",
+    "case_mount": "read_only",
+    "network": "none",
+    "published_ports": [],
+    "max_requests_per_attempt": 100,
+    "request_bytes": 65536,
+    "response_bytes": 262144
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "archive-stack": "4.8.0",
+    "document-loader": "2.2.0",
+    "render-native": "3.1.0",
+    "telemetry-core": "2.5.0"
+  },
+  "name": "report-worker",
+  "private": true,
+  "version": "2026.8.0"
+}

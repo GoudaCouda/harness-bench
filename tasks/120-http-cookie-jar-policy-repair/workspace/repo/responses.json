@@ -1,0 +1,5 @@
+[
+  {"response_id":"r1","scheme":"https","host":"app.example.com","path":"/app/login","received_at":1000,"set_cookie":["session=new; Path=/; Secure; HttpOnly; Max-Age=600","theme=dark; Domain=.example.com; Path=/app","bad=x; Domain=evil.example; Path=/"]},
+  {"response_id":"r2","scheme":"http","host":"api.example.com","path":"/v1/items","received_at":1010,"set_cookie":["transport=x; Secure; Path=/"]},
+  {"response_id":"r3","scheme":"https","host":"app.example.com","path":"/app","received_at":1020,"set_cookie":["prefs=gone; Domain=example.com; Path=/app; Expires=9999; Max-Age=0"]}
+]

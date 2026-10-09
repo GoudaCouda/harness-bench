@@ -1,0 +1,37 @@
+schema_version: 2
+task_id: 013-batch-quote-contract
+pass_threshold: 0.8
+cases:
+- id: pricing_behavior
+  title: Valid quotes use the published integer pricing rules
+  description: Monthly, annual, coupon, inclusive-expiry, and boundary-cent cohorts preserve order and
+    apply sequential integer discounts correctly.
+  weight: 0.4
+  core: true
+- id: validation_and_partial_success
+  title: Invalid items are classified without losing unrelated work
+  description: Batch bounds, duplicate identities, type guards, plan limits, terms, and coupon failure
+    classes follow the declared precedence and partial-success contract.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: api_contract_compatibility
+  title: The batch API is documented without changing the existing operation
+  description: The inline OpenAPI operation publishes the bounded request and response shapes while preserving
+    the complete single-quote contract.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The implementation has a truthful reviewer handoff
+  description: Notes identify the partial-success and money decisions, record the exact public unittest
+    command and observed result, and name a realistic compatibility risk without claiming deployment.
+  weight: 0.2
+  core: false
+- id: source_and_execution_boundary
+  title: Immutable evidence and workspace integrity are preserved
+  description: Inputs and package exports remain unchanged and the submission creates no undeclared, linked,
+    special, or path-escaping artifacts. Code defects and unsupported production claims are handled by
+    scored cases.
+  weight: 0.0
+  gate: true

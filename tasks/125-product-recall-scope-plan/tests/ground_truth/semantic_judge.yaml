@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 125-product-recall-scope-plan
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Recall recovery handoff is complete
+  question: Does the handoff accurately explain the controlling signed scope, direct/mixed/descendant/out-of-window/unresolved lot decisions, event sequencing and duplicate handling, final offline lot/inventory/shipment/channel state, interrupted transaction recovery, equivalent replay, conservation, and prohibited external actions?
+  pass_anchors: [A local stop request or channel draft is staging and does not claim real execution; idempotent and equivalent replay are equivalent wording.]
+  fail_anchors: [Guessing the unresolved parent, treating the draft revision as controlling, claiming a real stop-sale or notice, or misstating inventory conservation fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

@@ -1,0 +1,9 @@
+{
+  "database_byte_stable": true,
+  "external_actions_executed": false,
+  "passback_id": "GP-20260818-DISTRICT-01",
+  "receipt_byte_stable": true,
+  "schema_version": 1,
+  "semantic_db_hash": "caed5aa0a45ad495714f7915ddd457ecfcb114203c35176cc0f203530f354332",
+  "status": "pass"
+}

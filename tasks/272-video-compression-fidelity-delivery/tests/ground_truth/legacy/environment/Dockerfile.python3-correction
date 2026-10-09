@@ -1,0 +1,11 @@
+FROM agent-sft/nami-work-gold20-case18@sha256:9d714af8e98fccded8688a0c13df5dd10175203effd56c33acc48e624b1c29fc
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get \
+      -o Acquire::Languages=none \
+      -o Acquire::Retries=1 \
+      -o Acquire::http::Timeout=20 \
+      update \
+    && apt-get install -y --no-install-recommends python3 \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*

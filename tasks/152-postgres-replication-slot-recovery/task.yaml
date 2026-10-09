@@ -1,0 +1,35 @@
+task_id: 152-postgres-replication-slot-recovery
+title: Repair PostgreSQL logical replication slot recovery planning
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Infrastructure Implementation
+difficulty: hard
+capability_tags: [filesystem, coding, database_operations, recovery_planning]
+harness_demands: [tool_selection, multi_step_execution, verification_behavior]
+stressors: [hidden_variation, recovery_precedence, data_loss_boundaries]
+required_artifacts: [repo/src/slot_recovery.py, repo/out/plans.json, repo/out/summary.json, repo/RECOVERY_NOTES.md]
+task_family: 152-postgres-replication-slot-recovery
+variant: standalone
+design_file: design.md
+provenance: {origin: public_workflow_adaptation, real_user_log_derived: false, source_ids: [POSTGRES-REPLICATION-SLOTS]}
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/out/, repo/out/plans.json, repo/out/summary.json, repo/RECOVERY_NOTES.md]
+  allowed_modified: [repo/src/slot_recovery.py]
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

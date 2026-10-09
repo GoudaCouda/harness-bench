@@ -1,0 +1,8 @@
+[
+  {"watch_id":"advance","mode":"watch","requested_rv":"rv-start","rv_match":"Exact","send_initial_events":false,"allow_bookmarks":true,"last_applied_rv":"rv-z9","initial_complete":true,"outcome":"EVENT","event_type":"MODIFIED","event_rv":"rv-a1","attempt":1},
+  {"watch_id":"eof-checkpoint","mode":"watch","requested_rv":"cursor-start","rv_match":"Exact","send_initial_events":false,"allow_bookmarks":true,"last_applied_rv":"cursor-400","initial_complete":true,"outcome":"EOF","event_type":null,"event_rv":null,"attempt":1},
+  {"watch_id":"gone","mode":"watch","requested_rv":"compacted-token","rv_match":"Exact","send_initial_events":false,"allow_bookmarks":true,"last_applied_rv":"compacted-token","initial_complete":true,"outcome":"GONE","event_type":null,"event_rv":null,"attempt":1},
+  {"watch_id":"initial-bookmark","mode":"streaming_list","requested_rv":null,"rv_match":"NotOlderThan","send_initial_events":true,"allow_bookmarks":true,"last_applied_rv":"opaque-800","initial_complete":false,"outcome":"BOOKMARK","event_type":null,"event_rv":"opaque-805","attempt":1},
+  {"watch_id":"replay-duplicate","mode":"watch","requested_rv":"same-token","rv_match":"Exact","send_initial_events":false,"allow_bookmarks":true,"last_applied_rv":"same-token","initial_complete":true,"outcome":"EVENT","event_type":"DELETED","event_rv":"same-token","attempt":1},
+  {"watch_id":"resume","mode":"watch","requested_rv":"rv-900","rv_match":"Exact","send_initial_events":false,"allow_bookmarks":false,"last_applied_rv":"rv-920","initial_complete":true,"outcome":"EOF","event_type":null,"event_rv":null,"attempt":2}
+]

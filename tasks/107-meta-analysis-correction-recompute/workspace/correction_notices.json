@@ -1,0 +1,4 @@
+[
+  {"correction_id":"CORR-BOREALIS-2026-02","status":"accepted","accepted_at":"2026-02-14","applies_to":"EXT-BOREALIS-P12-V1","replacement":"EXT-BOREALIS-P12-V2","scope":{"population":"adults","outcome":"relapse","timepoint_months":12},"reason":"The published event counts were assigned to the opposite randomized arms; denominators and all other outcomes are unchanged.","evidence_ref":"correction_notices.json#CORR-BOREALIS-2026-02"},
+  {"correction_id":"CORR-BOREALIS-QOL-2026-01","status":"accepted","accepted_at":"2026-01-19","applies_to":"EXT-BOREALIS-QOL12","replacement":null,"scope":{"population":"adults","outcome":"quality_of_life_response","timepoint_months":12},"reason":"A questionnaire scoring footnote was clarified; no binary response count changed.","evidence_ref":"correction_notices.json#CORR-BOREALIS-QOL-2026-01"}
+]

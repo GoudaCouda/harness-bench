@@ -1,0 +1,13 @@
+{
+  "external_analysis_started": false,
+  "notifications_sent": false,
+  "recovery_id": "LIMS-ACC-20260819-07",
+  "schema_version": 1,
+  "semantic_db_digest": "f4ec0419b36e48f479b8aa47f8b18f03e850dda41812ecfd22176c923a4e8710",
+  "semantic_plan_digest": "0260a4e8ec69f19bbee4e8fb2f8991e0c72cb2d586692624f59cb074e7884a05",
+  "source_checkpoint": "7ad4e011a6c4bb6600c15ac12c634058af74448d9a3e27465a71e9af4fdf04e2",
+  "stage_boundary": "local_only_pending_accession_qa_review",
+  "stage_token": "a5be855400aba63becb5ebe7b5fddbd0a92b2a36d13c0e1ef4db59f368951a8b",
+  "status": "staged_pending_review",
+  "verification_hash": "386d8b030a30b22534c67f12e7f59cd0b46dcd9156d2c822eaa9d758f8b2ecdc"
+}

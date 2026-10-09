@@ -1,0 +1,7 @@
+[
+  {"name":"core","depends":[],"hooks":["load-config"]},
+  {"name":"audit","depends":["core"],"hooks":["record-event"]},
+  {"name":"export","depends":["core"],"hooks":["write-report"]},
+  {"name":"bundle","depends":["audit","export"],"hooks":["publish-bundle"]},
+  {"name":"legacy","depends":["core"],"hooks":["legacy-route"]}
+]

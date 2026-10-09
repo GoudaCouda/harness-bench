@@ -1,0 +1,23 @@
+{
+  "checkpoint_id": "checkpoint-p2-102",
+  "processed_pages": [1, 2],
+  "last_completed_page": 2,
+  "work_statuses": {
+    "W1": "canonical",
+    "W2": "canonical",
+    "W3": "quarantined_suspected_match",
+    "W1-DUP": "duplicate",
+    "W4": "canonical",
+    "W5": "canonical",
+    "W6": "canonical",
+    "W8": "review_required"
+  },
+  "pending_reviews": {
+    "W8": "same-DOI relation disagreement pending a correction event or later authoritative export"
+  },
+  "notes": [
+    "This checkpoint was created after pages 1 and 2 were processed.",
+    "Resume from later declared pages; do not discard still-valid prior decisions.",
+    "If current evidence resolves a prior review or changes a prior status, report the transition in coverage.state_changes."
+  ]
+}

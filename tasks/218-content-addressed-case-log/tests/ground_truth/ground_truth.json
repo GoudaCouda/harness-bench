@@ -1,0 +1,43 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1774342800
+  },
+  "artifacts": {
+    "case_receipt": {
+      "batch_id": "aerowake-0324",
+      "gate_clock_epoch": 1774342800,
+      "counts": {
+        "recorded": 3,
+        "already_recorded": 1,
+        "conflict": 1,
+        "malformed": 2
+      },
+      "recorded_names": [
+        "fuse",
+        "tail",
+        "wing"
+      ],
+      "state": "recorded"
+    },
+    "verification": {
+      "controller": "casectl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "recorded",
+      "1": "already_recorded",
+      "2": "conflict",
+      "3": "recorded",
+      "4": "malformed",
+      "5": "malformed",
+      "6": "recorded"
+    },
+    "recorded_names": [
+      "fuse",
+      "tail",
+      "wing"
+    ]
+  }
+}

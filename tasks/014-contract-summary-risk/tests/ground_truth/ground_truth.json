@@ -1,0 +1,16 @@
+{
+  "expected_risks": [
+    {"source": "contract.md", "clause_id": "C-01", "risk_terms": ["renew"], "action_groups": [["60 day", "60 calendar"]], "owner_groups": [["legal", "commercial", "procurement", "deal team"]]},
+    {"source": "contract.md", "clause_id": "C-05", "risk_terms": ["termination", "notice"], "action_groups": [["30 day", "30 calendar"]], "owner_groups": [["legal", "commercial", "customer", "deal team"]]},
+    {"source": "contract.md", "clause_id": "C-06", "risk_terms": ["subprocessor", "notice"], "action_groups": [["15 day", "15 calendar"]], "owner_groups": [["privacy", "security", "legal", "deal team"]]},
+    {"source": "order_form.md", "clause_id": "O-03", "risk_terms": ["insurance"], "action_groups": [["2000000", "2,000,000", "2 million", "2m"], ["exception", "approval", "increase", "negotiate"]], "owner_groups": [["risk", "finance", "legal", "deal team"]]},
+    {"source": "order_form.md", "clause_id": "O-04", "risk_terms": ["logo", "publicity", "brand"], "action_groups": [["written approval", "publication-specific", "each publication", "prior approval", "standing right"], ["remove", "require", "obtain", "negotiate"]], "owner_groups": [["brand", "marketing", "legal", "deal team"]]}
+  ],
+  "effective_summary_groups": [
+    ["Acme Analytics"], ["Baxter Retail"], ["24 month"], ["auto-renew", "automatically renew"],
+    ["net 45"], ["US", "United States"], ["EU", "European Union"], ["48 hour"],
+    ["prior 12 months", "preceding 12 months"], ["15 day", "15 calendar"]
+  ],
+  "summary_risk_groups": [["renew"], ["termination"], ["subprocessor"], ["insurance"], ["logo", "publicity", "brand"]],
+  "forbidden_terms": ["counsel approved", "legally enforceable", "guaranteed enforceability", "legal advice"]
+}

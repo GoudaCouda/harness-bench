@@ -1,0 +1,14 @@
+{
+  "adjustment_set_sha256": "6ad6045cde898c509b2251b06ab25b2219822303f3f7b217f57b02191fa2cd67",
+  "approval_status": "pending",
+  "batch_id": "RB-2026-08-A",
+  "external_payment_executed": false,
+  "frozen_payroll_sha256": "1fb2c481db3fbd28f6a862d3794ccf5b46a7f3a91b08337b6be0b2336a992402",
+  "journal_sha256": "25e5924666cb1b37ebe70aa065e7cc8a0aa9940e7867023499b5aaeaaa1b12d7",
+  "phase": "staged_pending_payroll_approval",
+  "plan_sha256": "637aa2437020f228f4ddf8d84726ce1961a7d31706924424f17a64526cb25a4c",
+  "revision": 3,
+  "schema_version": 1,
+  "semantic_state_sha256": "5d23bf2c36eed98cc34b0a7605687d18b79455b721fe4c7b254422af993f25ec",
+  "stage_token": "10a3890bc69e4f36f4738e7c2510319f5f90c99f28427a3f7fc85b98fd54275b"
+}

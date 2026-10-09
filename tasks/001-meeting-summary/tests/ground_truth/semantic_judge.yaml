@@ -1,0 +1,19 @@
+schema_version: 1
+task_id: 001-meeting-summary
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: DNSSEC recovery handoff is complete and bounded
+  question: Does the handoff accurately explain the stale checkpoint and partial-write recovery, distinguish KSK parent-DS propagation from ZSK DNSKEY/RRSIG prepublication, account for all seven zone dispositions, describe local hash verification and idempotent replay, and clearly state that no DNS signing, publication, registrar, or parent action occurred and every queue item is unexecuted?
+  pass_anchors:
+  - Equivalent professional wording for zone dispositions and byte-stable no-op replay is acceptable.
+  - The no-action boundary must cover signing, DNS publication, parent/registrar changes, and queue execution.
+  fail_anchors:
+  - Claiming that a zone was signed or published or that parent DS was changed fails.
+  - Omitting the echo.example before-image recovery or confusing KSK and ZSK authority fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

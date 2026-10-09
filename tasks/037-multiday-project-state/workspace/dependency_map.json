@@ -1,0 +1,6 @@
+{
+  "project_id":"NORTHSTAR-VENDOR-24",
+  "recovery_options":{"expedite":{"M3_not_before":12,"incremental_cost_usd":9000,"evidence_id":"PROC-118"},"standard":{"M3_not_before":14,"incremental_cost_usd":0,"evidence_id":"PROC-119"}},
+  "rules":[{"milestone":"M3","eligible_owners":["Omar"],"required_gate":"PROC option"},{"milestone":"M4","eligible_owners":["Omar","Mei"]},{"milestone":"M5","eligible_owners":["Mei"],"required_gate":"PRIV-77"},{"milestone":"M6","eligible_owners":["Lee","Nora"]},{"milestone":"M7","eligible_owners":["Omar"],"required_gate":"SEC-204 and PRIV-77"},{"milestone":"M8","eligible_owners":["Lee","Nora"],"required_gate":"PRIV-77"}],
+  "minimum_gap_days":1,"launch_blackout":{"start_day":28,"end_day":31,"evidence_id":"CS-90"}
+}

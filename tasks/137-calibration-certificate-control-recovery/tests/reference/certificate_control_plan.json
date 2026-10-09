@@ -1,0 +1,204 @@
+{
+  "decisions": [
+    {
+      "asset_action": "quarantine_local_status",
+      "asset_id": "PRESSURE-P17",
+      "authoritative_result_id": "RES-501",
+      "certificate_action": "revoke_reference_recall",
+      "certificate_id": "CERT-501",
+      "downstream_scope": [
+        "USE-501-A",
+        "USE-501-B"
+      ],
+      "error_abs": 0.2,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M501",
+        "evidence/metrology_events.jsonl#EV-RECALL-P9",
+        "evidence/reference_standards.json#STD-P9",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/results/RES-501.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-501"
+      ],
+      "expanded_uncertainty": 0.2,
+      "guard_band_margin": 0.1,
+      "job_id": "JOB-501",
+      "local_mutations": [
+        "asset_status",
+        "certificate_status",
+        "control_assessment",
+        "downstream_recall_review"
+      ],
+      "measurement_decision": "accept",
+      "reference_chain": [
+        "STD-P9",
+        "STD-ROOT-A"
+      ],
+      "traceability_status": "untraceable"
+    },
+    {
+      "asset_action": "release_local_status",
+      "asset_id": "TORQUE-T08",
+      "authoritative_result_id": "RES-502",
+      "certificate_action": "affirm_valid",
+      "certificate_id": "CERT-502",
+      "downstream_scope": [],
+      "error_abs": 0.6,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M502",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/reference_standards.json#STD-T4",
+        "evidence/results/RES-502.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-502"
+      ],
+      "expanded_uncertainty": 0.4,
+      "guard_band_margin": 0.0,
+      "job_id": "JOB-502",
+      "local_mutations": [
+        "certificate_status",
+        "control_assessment"
+      ],
+      "measurement_decision": "accept",
+      "reference_chain": [
+        "STD-ROOT-A",
+        "STD-T4"
+      ],
+      "traceability_status": "traceable"
+    },
+    {
+      "asset_action": "release_local_status",
+      "asset_id": "MASS-M03",
+      "authoritative_result_id": "RES-503",
+      "certificate_action": "affirm_valid",
+      "certificate_id": "CERT-503",
+      "downstream_scope": [],
+      "error_abs": 0.25,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M503",
+        "evidence/reference_standards.json#STD-M2",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/results/RES-503.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-503"
+      ],
+      "expanded_uncertainty": 0.2,
+      "guard_band_margin": 0.05,
+      "job_id": "JOB-503",
+      "local_mutations": [
+        "certificate_status",
+        "control_assessment"
+      ],
+      "measurement_decision": "accept",
+      "reference_chain": [
+        "STD-M2",
+        "STD-ROOT-A"
+      ],
+      "traceability_status": "traceable"
+    },
+    {
+      "asset_action": "hold_local_status",
+      "asset_id": "HUMIDITY-H04",
+      "authoritative_result_id": null,
+      "certificate_action": "hold_evidence_review",
+      "certificate_id": "CERT-504",
+      "downstream_scope": [],
+      "error_abs": null,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M504",
+        "evidence/reference_standards.json#STD-H7",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/results/RES-504.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-504"
+      ],
+      "expanded_uncertainty": null,
+      "guard_band_margin": null,
+      "job_id": "JOB-504",
+      "local_mutations": [
+        "asset_status",
+        "certificate_status",
+        "control_assessment"
+      ],
+      "measurement_decision": "not_evaluable",
+      "reference_chain": [
+        "STD-H7",
+        "STD-ROOT-A"
+      ],
+      "traceability_status": "evidence_unavailable"
+    },
+    {
+      "asset_action": "quarantine_local_status",
+      "asset_id": "CALIPER-C05",
+      "authoritative_result_id": "RES-505-C",
+      "certificate_action": "revoke_out_of_tolerance",
+      "certificate_id": "CERT-505",
+      "downstream_scope": [
+        "USE-505-A"
+      ],
+      "error_abs": 0.45,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M505-C",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/reference_standards.json#STD-T4",
+        "evidence/results/RES-505-C.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-505"
+      ],
+      "expanded_uncertainty": 0.1,
+      "guard_band_margin": -0.05,
+      "job_id": "JOB-505",
+      "local_mutations": [
+        "asset_status",
+        "certificate_status",
+        "control_assessment",
+        "downstream_recall_review"
+      ],
+      "measurement_decision": "reject",
+      "reference_chain": [
+        "STD-ROOT-A",
+        "STD-T4"
+      ],
+      "traceability_status": "traceable"
+    },
+    {
+      "asset_action": "quarantine_local_status",
+      "asset_id": "VOLTAGE-V06",
+      "authoritative_result_id": "RES-506",
+      "certificate_action": "revoke_reference_recall",
+      "certificate_id": "CERT-506",
+      "downstream_scope": [
+        "USE-506-A"
+      ],
+      "error_abs": 0.05,
+      "evidence_refs": [
+        "evidence/metrology_events.jsonl#EV-M506",
+        "evidence/metrology_events.jsonl#EV-RECALL-C3",
+        "evidence/reference_standards.json#STD-C3",
+        "evidence/reference_standards.json#STD-ROOT-A",
+        "evidence/results/RES-506.json",
+        "policy/metrology_policy.json#guard_band_rule",
+        "state/calibration.db#calibration_jobs/JOB-506"
+      ],
+      "expanded_uncertainty": 0.1,
+      "guard_band_margin": 0.15,
+      "job_id": "JOB-506",
+      "local_mutations": [
+        "asset_status",
+        "certificate_status",
+        "control_assessment",
+        "downstream_recall_review"
+      ],
+      "measurement_decision": "accept",
+      "reference_chain": [
+        "STD-C3",
+        "STD-ROOT-A"
+      ],
+      "traceability_status": "untraceable"
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "MCR-20260815-01",
+  "schema_version": 1,
+  "source_checkpoint": "818bf2e4779c56843a475f0305e5761f2cf24a824a797e8c9a610d92a50485ea"
+}

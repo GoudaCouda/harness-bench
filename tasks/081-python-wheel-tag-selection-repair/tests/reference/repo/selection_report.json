@@ -1,0 +1,5 @@
+[
+  {"case_id":"prefer-native-over-universal","result":{"decision":"select","filename":"alpha_tool-2.4.1-cp312-cp312-manylinux_2_28_x86_64.whl","sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","size":1900,"matched_tag":"cp312-cp312-manylinux_2_28_x86_64","build":null}},
+  {"case_id":"skip-yanked-native-use-abi3","result":{"decision":"select","filename":"analytics_core-1.8-cp311-abi3-win_amd64.whl","sha256":"2222222222222222222222222222222222222222222222222222222222222222","size":2000,"matched_tag":"cp311-abi3-win_amd64","build":null}},
+  {"case_id":"expand-compressed-python-tags","result":{"decision":"select","filename":"codec_kit-3.0-py2.py3-none-any.whl","sha256":"9999999999999999999999999999999999999999999999999999999999999999","size":640,"matched_tag":"py3-none-any","build":null}}
+]

@@ -1,0 +1,1 @@
+{"activation_order":["audit","export","bundle"],"deactivation_order":["legacy"],"failed_plugin":null,"reason":"ok","rollback_order":[],"status":"committed"}

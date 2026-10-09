@@ -1,0 +1,41 @@
+task_id: 050-http-range-download-resume-repair
+title: Repair an HTTP range download without corrupting the staged artifact
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [range_response_branching, strong_validator, checkpoint_integrity, final_digest]
+required_artifacts:
+- repo/src/range_resume.py
+- repo/resume_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HTTP-SEMANTICS-RFC9110]
+task_family: resumable-http-transfer-repair
+variant: if-range-response-and-digest-reconciliation
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/resume_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/range_resume.py]
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

@@ -1,0 +1,6 @@
+{"event_id":"e103","account_id":"acct-c","delta_cents":700,"occurred_at":"2026-08-28T09:00:07Z"}
+{"event_id":"e104","account_id":"acct-a","delta_cents":300,"occurred_at":"2026-08-28T09:01:00Z"}
+{"event_id":"e105","account_id":"acct-b","delta_cents":-100,"occurred_at":"2026-08-28T09:01:04Z"}
+{"event_id":"e106","account_id":"acct-a","delta_cents":-50,"occurred_at":"2026-08-28T09:01:08Z"}
+{"event_id":"e107","account_id":"acct-c","delta_cents":-200,"occurred_at":"2026-08-28T09:01:11Z"}
+{"event_id":"e108","account_id":"acct-b","delta_cents":75,"occurred_at":"2026-08-28T09:01:14Z"}

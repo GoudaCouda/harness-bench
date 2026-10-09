@@ -1,0 +1,27 @@
+{
+  "decisions": [
+    {
+      "action": "vacuum",
+      "id": "audit",
+      "priority": "emergency"
+    },
+    {
+      "action": "monitor",
+      "id": "fresh",
+      "priority": "normal"
+    },
+    {
+      "action": "blocked_lock",
+      "id": "locked",
+      "priority": "emergency"
+    },
+    {
+      "action": "defer_io",
+      "id": "orders",
+      "priority": "warning"
+    }
+  ],
+  "emergency_blocked": 1,
+  "io_remaining_mb": 10,
+  "workers_remaining": 1
+}

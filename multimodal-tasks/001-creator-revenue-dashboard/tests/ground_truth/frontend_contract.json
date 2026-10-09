@@ -1,0 +1,312 @@
+{
+  "schema_version": 3,
+  "task_id": "001-creator-revenue-dashboard",
+  "contract_type": "dashboard",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "creator_revenue_dashboard_protected_local_data",
+    "creator_revenue_dashboard_dashboard_interaction_model",
+    "creator_revenue_dashboard_dashboard_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "minimum_records": 9,
+  "minimum_handlers": 4,
+  "data_profile": {
+    "status_values": [
+      "clear",
+      "watch",
+      "review"
+    ],
+    "minimum_categories": 3,
+    "minimum_owners": 3,
+    "primary_key": "primary",
+    "secondary_key": "secondary"
+  },
+  "record_ids": [
+    "CMP-017",
+    "CMP-022",
+    "CMP-031",
+    "CMP-044",
+    "CMP-017-R1",
+    "CMP-022-R2",
+    "CMP-031-R3",
+    "CMP-044-R4",
+    "CMP-022-X9"
+  ],
+  "identity_tokens": [
+    "CMP-017",
+    "Studio Launch",
+    "video",
+    "Mina Park",
+    "watch",
+    "18420",
+    "12",
+    "CMP-022",
+    "Course Bundle",
+    "newsletter",
+    "Jules Hart",
+    "clear",
+    "9650",
+    "7",
+    "CMP-031",
+    "Sponsor Sprint",
+    "shorts",
+    "Tariq West",
+    "review",
+    "12110",
+    "-3",
+    "CMP-044",
+    "Member Drive",
+    "community",
+    "Lena Ortiz",
+    "watch",
+    "14680",
+    "9",
+    "CMP-017-R1",
+    "Studio Launch follow-up",
+    "newsletter",
+    "Tariq West",
+    "clear",
+    "18434",
+    "18",
+    "CMP-022-R2",
+    "Course Bundle follow-up",
+    "shorts",
+    "Lena Ortiz",
+    "watch",
+    "9667",
+    "14",
+    "CMP-031-R3",
+    "Sponsor Sprint follow-up",
+    "community",
+    "Mina Park",
+    "review",
+    "12130",
+    "5",
+    "CMP-044-R4",
+    "Member Drive follow-up",
+    "video",
+    "Jules Hart",
+    "watch",
+    "14703",
+    "18",
+    "CMP-022-X9",
+    "Course Bundle scenario 9",
+    "newsletter",
+    "Tariq West",
+    "watch",
+    "9714",
+    "12"
+  ],
+  "required_label_groups": [
+    [
+      "Net revenue",
+      "Net",
+      "Net revenue"
+    ],
+    [
+      "Audience growth",
+      "Audience"
+    ],
+    [
+      "Review backlog",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Sponsorship risk review",
+      "revenue console"
+    ]
+  ],
+  "domain_groups": [
+    [
+      "creator",
+      "creator economy",
+      "author"
+    ],
+    [
+      "revenue",
+      "earnings",
+      "income"
+    ],
+    [
+      "dashboard",
+      "revenue console",
+      "campaign"
+    ]
+  ],
+  "state_groups": [
+    [
+      "activeCohort",
+      "setActiveCohort",
+      "Channel cohort"
+    ],
+    [
+      "selectedCampaignId",
+      "setSelectedCampaignId",
+      "selected campaign"
+    ],
+    [
+      "forecastMode",
+      "setForecastMode",
+      "Forecast mode"
+    ],
+    [
+      "creatorSearch",
+      "setCreatorSearch",
+      "Creator search"
+    ]
+  ],
+  "logic_groups": [
+    [
+      "localRecords.json",
+      "campaign records"
+    ],
+    [
+      "sort",
+      "ranked campaigns"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "activeCohort",
+      "setActiveCohort",
+      "channel cohort"
+    ],
+    [
+      "selectedCampaignId",
+      "setSelectedCampaignId",
+      "campaign inspector"
+    ],
+    [
+      "forecastMode",
+      "setForecastMode",
+      "forecast mode"
+    ],
+    [
+      "reviewQueueOnly",
+      "setReviewQueueOnly",
+      "risk queue toggle"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "channelRevenue",
+      "Net revenue",
+      "cohort revenue"
+    ],
+    [
+      "growthAverage",
+      "Audience growth",
+      "growth average"
+    ],
+    [
+      "sponsorshipRisk",
+      "Sponsorship risk review",
+      "risk review"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "dashboard",
+      "command desk",
+      "revenue console"
+    ],
+    [
+      "cohort rail",
+      "risk queue",
+      "sponsor panel"
+    ]
+  ],
+  "optional_logic_groups": [
+    [
+      "useMemo"
+    ],
+    [
+      "useReducer"
+    ],
+    [
+      "custom hook"
+    ]
+  ],
+  "derived_tokens": [],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Channel cohort",
+        "value": "video"
+      },
+      {
+        "kind": "fill",
+        "label": "Creator search",
+        "value": "Studio"
+    },
+    {
+      "kind": "click",
+      "text": "CMP-017"
+      },
+      {
+        "kind": "select",
+        "label": "Forecast mode",
+        "value": "dashboard-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Sponsor pressure",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "dashboard-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "CMP-017",
+      "category": "video",
+      "mode": "dashboard-review",
+      "visible_id_subset": [
+        "CMP-017"
+      ],
+      "after_clearing_search_subset": [
+        "CMP-017",
+        "CMP-044-R4"
+      ],
+      "review_queue_subset": [
+        "CMP-031",
+        "CMP-031-R3"
+      ],
+      "review_queue_forbidden": [
+        "CMP-022"
+      ],
+      "detail_switch_id": "CMP-044-R4",
+      "detail_switch_tokens": [
+        "CMP-044-R4",
+        "Member Drive follow-up",
+        "Jules Hart",
+        "video",
+        "watch",
+        "14703",
+        "18"
+      ],
+      "summary_change_labels": [
+        "Net revenue",
+        "Audience growth",
+        "Review backlog",
+        "Sponsorship risk review"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 9
+    },
+    "action_count": 6
+  }
+}

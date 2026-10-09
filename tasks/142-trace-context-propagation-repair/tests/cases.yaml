@@ -1,0 +1,39 @@
+schema_version: 2
+task_id: 142-trace-context-propagation-repair
+pass_threshold: 0.8
+cases:
+- id: traceparent_restart_and_participation
+  title: Trace identity is forwarded participated or restarted correctly
+  description: Versions IDs duplicate headers parent changes and sampled flags are exact.
+  weight: 0.3
+  core: true
+- id: tracestate_baggage_and_privacy
+  title: Optional vendor and baggage state is propagated safely
+  description: Independent validity ordering percent encoding duplicate policy and external filtering
+    are correct.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_trace_replay
+  title: Protected fixture outputs match the repaired adapter
+  description: Decisions and metrics are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: trace_handoff
+  title: Trace propagation and privacy boundaries are handed off clearly
+  description: Another engineer can audit identity optional state baggage and verification.
+  weight: 0.2
+  core: false
+- id: source_and_telemetry_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: source_and_action_integrity
+  title: Protected trace evidence and offline execution remain intact
+  description: Source fixtures are unchanged, unsafe filesystem nodes are absent, and no live telemetry or service mutation is claimed.
+  weight: 0.0
+  gate: true

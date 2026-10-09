@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 030-sql-query-report
+pass_threshold: 0.8
+cases:
+- id: current_snapshot_reporting
+  title: Current-quarter reporting views are correct
+  description: The product, region, and category views jointly reproduce the governed current snapshot with correct grain and amounts.
+  weight: 0.30
+  core: true
+- id: audit_and_reconciliation
+  title: Eligibility audit and financial bridge agree
+  description: Every current order receives the right disposition and the one-row financial bridge fully reconciles the same included population.
+  weight: 0.25
+  core: true
+- id: reusable_counterfactual_query
+  title: SQL remains correct after source corrections
+  description: The script is idempotent and produces all business outcomes on an unseen valid extract rather than reproducing checked-in answers.
+  weight: 0.25
+  core: true
+- id: finance_handoff
+  title: Finance receives a decision-ready brief
+  description: The brief accurately communicates the current result, leaders, population, exclusions, reconciliation, and material policy choices as one coherent handoff.
+  weight: 0.12
+  core: false
+- id: edge_case_resilience
+  title: Boundary and many-to-one edge cases are handled
+  description: A separate stress extract preserves product identity, deterministic ties, refund aggregation, cutoff handling, and exclusion precedence.
+  weight: 0.08
+  core: false
+- id: source_integrity
+  title: Source data and database safety boundary are preserved
+  description: Inputs remain byte-identical, outputs remain workspace-local, and submitted SQL never writes source tables or uses unsafe database/file operations.
+  weight: 0.0
+  gate: true

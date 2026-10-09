@@ -1,0 +1,14 @@
+{
+  "as_of": "2026-08-19",
+  "authorization_window_to": "2026-10-14",
+  "external_boundary": "local_stage_only",
+  "minimum_necessary": "one current signed matching document per required type; never psychotherapy",
+  "recovery_id": "PAR-20260819-01",
+  "required_document_types": [
+    "signed_order",
+    "clinical_note",
+    "conservative_therapy"
+  ],
+  "schema_version": 1,
+  "target_case_id": "PA-502"
+}

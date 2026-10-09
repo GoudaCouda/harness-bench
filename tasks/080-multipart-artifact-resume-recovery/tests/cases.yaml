@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 080-multipart-artifact-resume-recovery
+pass_threshold: 0.8
+cases:
+- id: paginated_part_reconciliation
+  title: Every listed part is reconciled across all pages
+  description: Matching parts are reused while missing or checksum/size-mismatched parts are scheduled
+    for re-upload.
+  weight: 0.35
+  core: true
+- id: completion_and_unknown_outcome_safety
+  title: Completion requires a consecutive verified set and unknown outcomes are probed
+  description: Complete payloads are ordered exactly, while stale sessions and uncertain completion never
+    replay blindly.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_resume_plan
+  title: Visible multipart incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Integrity and executor risks are handed off
+  description: Notes explain session identity, checksums, overwrite risk, verification, and residual risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_storage_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

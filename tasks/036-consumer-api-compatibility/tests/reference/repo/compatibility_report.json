@@ -1,0 +1,13 @@
+[
+  {
+    "case_id": "mobile-v1-directionality",
+    "result": {
+      "compatible": false,
+      "issues": [
+        {"consumer_id": "mobile-v1", "operation_id": "createOrder", "direction": "request", "field": "region", "code": "request_required_added"},
+        {"consumer_id": "mobile-v1", "operation_id": "createOrder", "direction": "response", "field": "status", "code": "response_enum_widened"}
+      ]
+    }
+  },
+  {"case_id": "tolerant-reader-addition", "result": {"compatible": true, "issues": []}}
+]

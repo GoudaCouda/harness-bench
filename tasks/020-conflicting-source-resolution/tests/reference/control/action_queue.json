@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "action_id": "announce-all-customers",
+      "kind": "customer_announcement",
+      "scope": "all",
+      "status": "blocked",
+      "prerequisites": ["gate_ready", "legal_ct9_approved"]
+    },
+    {
+      "action_id": "activate-east-market",
+      "kind": "service_activation",
+      "scope": "east_market",
+      "status": "blocked",
+      "prerequisites": ["gate_ready"]
+    },
+    {
+      "action_id": "reserve-airport-fleet",
+      "kind": "service_activation",
+      "scope": "airport_connectors",
+      "status": "blocked",
+      "prerequisites": ["rf77a_airport_certified", "coi14_approved"]
+    },
+    {
+      "action_id": "east-market-readiness",
+      "kind": "internal_check",
+      "scope": "east_market",
+      "status": "ready",
+      "prerequisites": []
+    }
+  ]
+}

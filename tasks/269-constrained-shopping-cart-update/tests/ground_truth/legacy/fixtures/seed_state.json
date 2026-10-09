@@ -1,0 +1,16 @@
+{
+  "users": [
+    {"user_id": "user_alpha", "display_name": "测试用户甲"},
+    {"user_id": "user_beta", "display_name": "测试用户乙"}
+  ],
+  "cart_items": [
+    {"user_id": "user_beta", "product_id": "p107", "quantity": 2}
+  ],
+  "orders": [],
+  "settings": [
+    {"key": "checkout_enabled", "value": "false"},
+    {"key": "currency", "value": "CNY"},
+    {"key": "fixed_time", "value": "2026-07-20T08:00:00Z"}
+  ],
+  "audit_log": []
+}

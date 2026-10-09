@@ -1,0 +1,55 @@
+task_id: 088-cardinality-guarded-join
+title: Repair a rerunnable revenue close join without multiplying orders
+prompt_file: instruction.md
+timeout_sec: 3600
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- analysis
+- database
+harness_demands:
+- tool_selection
+- evidence_grounding
+- multi_step_execution
+stressors:
+- dirty_input
+- conflicting_evidence
+- hidden_variation
+required_artifacts:
+- close/order_join.csv
+- close/join_audit.json
+- close_handoff.md
+task_family: 088-cardinality-guarded-join
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - DA-06
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - close/order_join.csv
+  - close/join_audit.json
+  - close_handoff.md
+  allowed_modified:
+  - pipeline/revenue_join.sql
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

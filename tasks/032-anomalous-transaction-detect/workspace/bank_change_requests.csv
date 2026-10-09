@@ -1,0 +1,5 @@
+change_id,supplier_id,old_bank_token,new_bank_token,requested_at,status
+CH-B-17,SUP-B,TOK-B0,TOK-B2,2026-08-18T16:20:00Z,pending_callback
+CH-C-22,SUP-C,TOK-C1,TOK-C2,2026-08-14T09:10:00Z,approved
+CH-D-09,SUP-D,TOK-D1,TOK-D2,2026-08-15T10:30:00Z,approved
+CH-H-31,SUP-H,TOK-H1,TOK-H2,2026-08-16T08:40:00Z,approved

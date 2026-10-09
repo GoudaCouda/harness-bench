@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 089-file-watcher-atomic-save-repair
+pass_threshold: 0.8
+cases:
+- id: atomic_save_and_coalescing
+  title: Atomic saves and duplicate hints produce one correct durable transition
+  description: Content changes, inode-only replacements, unchanged files, temp paths, and duplicate events
+    reconcile correctly.
+  weight: 0.3
+  core: true
+- id: deletion_rescan_and_node_safety
+  title: Deletes, null-filename rescans, creation, and unsafe nodes follow snapshot authority
+  description: Full scans close missing and new paths while symlinks and directories block without corrupting
+    prior state.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_sequential_replay
+  title: Protected replay outputs exactly follow sequential checkpoints
+  description: Every batch uses the preceding durable result and final JSON artifacts are current and
+    complete.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: The watcher handoff explains state authority and verified behavior
+  description: Another engineer can understand event caveats, actions, safety, and rerun evidence.
+  weight: 0.2
+  core: false
+- id: evidence_and_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

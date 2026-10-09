@@ -1,0 +1,23 @@
+{
+  "audio": {
+    "channels": 2,
+    "codec_name": "aac",
+    "sample_rate_hz": 48000
+  },
+  "container": "mp4",
+  "duration_tolerance_seconds": 0.15,
+  "max_output_size_bytes": 900000,
+  "minimum_audio_snr_db": 20.0,
+  "minimum_size_reduction_ratio": 0.7,
+  "minimum_video_ssim": 0.95,
+  "output_path": "output/compressed.mp4",
+  "required_audio_streams": 1,
+  "required_video_streams": 1,
+  "video": {
+    "codec_name": "h264",
+    "fps": "24/1",
+    "height": 360,
+    "pixel_format": "yuv420p",
+    "width": 640
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "project_id": "DMS-NEURO-042",
+  "policy_snapshot": "2026-01-25",
+  "draft_policy_snapshot_used": "2025-10-01",
+  "planned_publication_date": "2026-05-15",
+  "draft_plan": {
+    "revision": 1,
+    "access_statement": "Release all participant-level files openly in OpenBox six months after publication.",
+    "repository": "OpenBox",
+    "fallback_repository": "HybridShare",
+    "oversight": null,
+    "approval_status": {
+      "plan_revision": "not_started",
+      "privacy_review": "not_started",
+      "institutional_review": "not_started"
+    }
+  },
+  "assets": [
+    {"asset_id": "survey_raw", "path": "assets/survey_raw.csv", "kind": "participant_data", "participant_level": true, "consent_group": "C1"},
+    {"asset_id": "survey_dictionary", "path": "assets/survey_dictionary.csv", "kind": "documentation", "participant_level": false, "consent_group": "C1"},
+    {"asset_id": "audio_raw", "path": "assets/audio_raw.bin", "kind": "voice_file", "participant_level": true, "consent_group": "C2"},
+    {"asset_id": "audio_transcript_deid", "path": "assets/audio_transcript_deid.txt", "kind": "transcript_file", "participant_level": true, "consent_group": "C2"},
+    {"asset_id": "audio_metadata", "path": "assets/audio_metadata.csv", "kind": "metadata", "participant_level": false, "consent_group": "C2"},
+    {"asset_id": "analysis_code", "path": "assets/analysis_code.py", "kind": "code", "participant_level": false, "consent_group": null},
+    {"asset_id": "analysis_environment", "path": "assets/analysis_environment.txt", "kind": "code_environment", "participant_level": false, "consent_group": null},
+    {"asset_id": "model_outputs", "path": "assets/model_outputs.csv", "kind": "aggregate_output", "participant_level": false, "consent_group": null}
+  ],
+  "consent_terms": {
+    "C1": {
+      "allowed_external_sharing": "controlled_reuse",
+      "requires_data_use_agreement": true,
+      "requires_access_committee": true
+    },
+    "C2": {
+      "allowed_external_sharing": "metadata_only",
+      "prohibits_voice_or_transcript_file_sharing": true
+    }
+  },
+  "prior_review_notes": [
+    {"note_id": "IRB-17", "finding": "participant voice and verbatim transcript files are not approved for external repository deposit"},
+    {"note_id": "DMS-03", "finding": "controlled survey sharing is acceptable only through a repository with DUA workflow and access committee support"}
+  ]
+}

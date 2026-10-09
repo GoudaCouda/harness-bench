@@ -1,0 +1,8 @@
+{
+  "/metadata/labels/app":"shop",
+  "/metadata/labels/security":"restricted",
+  "/spec/containers[name=api]/image":"api:v1",
+  "/spec/containers[name=api]/port":8080,
+  "/spec/replicas":3,
+  "/spec/strategy":"RollingUpdate"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "task_id": "078-artifact-provenance-gate",
+  "core": [
+    "complete_bundle_chain",
+    "chronological_approval_boundary",
+    "executable_gate"
+  ],
+  "hard_gates": [
+    "safety_and_history"
+  ],
+  "review_status": "not_required"
+}

@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 101-pki-truststore-rotation-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Operational PKI handoff is complete
+  question: Does the handoff accurately explain the affected certificate-chain repair, retained overlap trust and unrelated service state, digest-bound verification and repeat safety, and the offline deployment boundary?
+  pass_anchors: [Equivalent PKI and idempotency terminology is acceptable.]
+  fail_anchors: [Contradicting the verified state, omitting preservation, or claiming deployment fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

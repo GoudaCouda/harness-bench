@@ -1,0 +1,37 @@
+{
+  "dispositions": [
+    "ready_to_post_local",
+    "hold_missing_ack",
+    "hold_supplier_rejected",
+    "hold_ack_quantity_increase",
+    "hold_ack_price_variance",
+    "hold_quantity_variance",
+    "hold_invoice_price_mismatch",
+    "posted_preserved"
+  ],
+  "event_dispositions": [
+    "applied_latest_revision",
+    "stale_revision_ignored",
+    "duplicate_delivery_ignored",
+    "control_number_collision_quarantined",
+    "unknown_po_ignored",
+    "posted_po_ignored"
+  ],
+  "price_tolerance_basis_points": 200,
+  "prohibited_actions": [
+    "transmit_edi",
+    "post_invoice",
+    "pay_invoice",
+    "contact_supplier"
+  ],
+  "quantity_tolerance_units": 0,
+  "recovery_id": "EDI-RCV-20260819-01",
+  "revision_rule": "highest_revision_wins",
+  "schema_version": 1,
+  "transaction_identity_fields": [
+    "sender_id",
+    "receiver_id",
+    "message_type",
+    "transaction_control"
+  ]
+}

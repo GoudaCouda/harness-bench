@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 109-unicode-identifier-migration-repair
+pass_threshold: 0.8
+cases:
+- id: unicode_profile_and_canonicalization
+  title: Unicode normalization syntax and reserved policy are exact
+  description: Canonical equivalents case folds width expansion length and non-equivalent confusables
+    are distinguished.
+  weight: 0.3
+  core: true
+- id: collision_and_reference_quarantine
+  title: Collisions and blocked references are quarantined without retargeting
+  description: Two-pass status grouping display preservation canonical references and unresolved IDs are
+    correct.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_identifier_migration
+  title: Protected records and conflicts match the repaired migrator
+  description: Generated artifacts are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: identifier_handoff
+  title: Unicode migration invariants and verification are handed off clearly
+  description: Another engineer can audit canonicalization collision reserved profile display references
+    validation and tests.
+  weight: 0.2
+  core: false
+- id: source_and_identity_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

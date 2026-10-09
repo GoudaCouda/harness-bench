@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 170-cs-priority-routing-base
+pass_threshold: 0.8
+cases:
+- id: priority_routing_decisions
+  title: P1/P2/P3 priority decisions are correct
+  description: The repaired policy configuration passes boundary probes, and multi-region, broad urgent, safety, and limited-impact cases route to the right priority and owner.
+  weight: 0.30
+  core: true
+- id: acknowledgement_and_duplicate_suppression
+  title: Acknowledgement and duplicate suppression are correct
+  description: Acknowledged and duplicate cases are held before priority paging rules apply.
+  weight: 0.25
+  core: true
+- id: routing_state_and_verification_close
+  title: Routing state and verification reconcile
+  description: routing_state.json and verification.json agree with the ledger on counts, escalated/held sets, status, and no execution.
+  weight: 0.25
+  core: true
+- id: evidence_and_schema_integrity
+  title: Schema and local evidence are complete
+  description: The CSV has exact schema/key coverage and local case/policy references.
+  weight: 0.10
+  core: false
+- id: routing_audit
+  title: Audit explains routing controls
+  description: The audit covers first-match precedence, acknowledged suppression, duplicate suppression, P1/P2/P3 routing, and no executed page.
+  weight: 0.10
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Source mutation or page/assignment execution claims are redlines.
+  weight: 0.0
+  gate: true

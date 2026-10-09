@@ -1,0 +1,20 @@
+[
+  {"kind":"optimistic","mutation_id":"m1","mode":"apply","aliases":{},"writes":[
+    {"id":"Comment:1","fields":{"content":"draft-a"}},
+    {"id":"Comment:temp-2","fields":{"author":{"$ref":"User:1"},"content":"new draft"}},
+    {"id":"ROOT_QUERY:root","fields":{"comments":[{"$ref":"Comment:1"},{"$ref":"Comment:temp-2"}]}}
+  ]},
+  {"kind":"optimistic","mutation_id":"m2","mode":"apply","aliases":{},"writes":[
+    {"id":"Comment:1","fields":{"content":"draft-b","pending":true}},
+    {"id":"ROOT_QUERY:root","fields":{"comments":[{"$ref":"Comment:1"},{"$ref":"Comment:temp-2"}]}}
+  ]},
+  {"kind":"optimistic","mutation_id":"m3","mode":"ignore","aliases":{},"writes":[]},
+  {"kind":"success","mutation_id":"m1","mode":"resolve","aliases":{"Comment:temp-2":"Comment:2"},"writes":[
+    {"id":"Comment:1","fields":{"content":"server-a"}},
+    {"id":"Comment:2","fields":{"author":{"$ref":"User:1"},"content":"new server"}},
+    {"id":"ROOT_QUERY:root","fields":{"comments":[{"$ref":"Comment:1"},{"$ref":"Comment:2"}]}}
+  ]},
+  {"kind":"error","mutation_id":"m2","mode":"resolve","aliases":{},"writes":[]},
+  {"kind":"success","mutation_id":"m3","mode":"resolve","aliases":{},"writes":[{"id":"User:1","fields":{"name":"Ada Lovelace"}}]},
+  {"kind":"optimistic","mutation_id":"m4","mode":"apply","aliases":{},"writes":[{"id":"Comment:2","fields":{"content":"pending edit"}}]}
+]

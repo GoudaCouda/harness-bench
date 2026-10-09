@@ -1,0 +1,11 @@
+{
+  "schema_version": "nami_work_case16_image_lock_v1",
+  "repository": "python",
+  "tag_observed": "3.11-slim",
+  "repo_digest": "python@sha256:563c216740fec2091c99b62bea4ba35cd550c31e644510120504d0be3d0eee80",
+  "image_id": "sha256:563c216740fec2091c99b62bea4ba35cd550c31e644510120504d0be3d0eee80",
+  "platform": "linux/amd64",
+  "python_version_family": "3.11",
+  "network_policy": "none",
+  "pull_required": false
+}

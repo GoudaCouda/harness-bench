@@ -1,0 +1,27 @@
+{
+  "schema_version": "case03_container_contract_v1",
+  "image": "python:3.11-slim@sha256:cdbd05fb6f457ca275ff51ce00d93d865ca0b6a25f5ffb08262d94f6835771e5",
+  "image_digest": "sha256:cdbd05fb6f457ca275ff51ce00d93d865ca0b6a25f5ffb08262d94f6835771e5",
+  "network": "none",
+  "publish_ports": [],
+  "user": "2050:4007",
+  "read_only_rootfs": true,
+  "cpu_limit": 1,
+  "memory_mib": 512,
+  "pids_limit": 64,
+  "agent_mounts": [
+    {
+      "source_role": "agent_workspace",
+      "target": "/workspace",
+      "mode": "rw"
+    }
+  ],
+  "forbidden_agent_mounts": [
+    "case_root",
+    "fixtures",
+    "oracle",
+    "verifier",
+    "tests",
+    "validation"
+  ]
+}

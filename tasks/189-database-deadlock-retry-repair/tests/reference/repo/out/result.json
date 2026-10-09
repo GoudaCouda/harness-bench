@@ -1,0 +1,26 @@
+{
+  "complete": 1,
+  "decisions": [
+    {
+      "action": "probe_or_block",
+      "attempts_used": 1,
+      "id": "ambiguous",
+      "next_backoff_ms": null,
+      "reason": "ambiguous_commit"
+    },
+    {
+      "action": "retry",
+      "attempts_used": 1,
+      "id": "deadlock",
+      "next_backoff_ms": 10,
+      "reason": "retryable_abort"
+    },
+    {
+      "action": "complete",
+      "attempts_used": 1,
+      "id": "ok",
+      "next_backoff_ms": null,
+      "reason": "committed"
+    }
+  ]
+}

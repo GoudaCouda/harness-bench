@@ -1,0 +1,21 @@
+{
+  "analysis_id": "SR-NIMBUS-2026-U1",
+  "external_publication": false,
+  "output_sha256": {
+    "analysis_manifest.json": "4a7acaef3c9c00dd7d7e589fd78185a41723cd972f174d024aa4316f725f4037",
+    "forest_plot.svg": "dd1c48ebf9d4876a8b3613f1ea0fb6afec66ad6a9a3edfba9c180d5dfe0ffe33",
+    "meta_analysis.json": "1ec80464aaaf76007e3fbbe5ba2d51680eb1693476335c8ac26a09a283ca91f7",
+    "sensitivity.csv": "d60c59da9b6c304ae79d8c418f23776b3067323a3d51fe8a5cfa154491e102d2"
+  },
+  "revision": 5,
+  "selected_record_ids": [
+    "EXT-ASTER-P12",
+    "EXT-BOREALIS-P12-V2",
+    "EXT-CEDAR-P12",
+    "EXT-DELTA-P12",
+    "EXT-ELM-P12",
+    "EXT-FLINT-P12"
+  ],
+  "source_bundle_sha256": "09260c702f58c88becb79528fe00ddc714a785c5ef3d60196d520957c9aaaf1f",
+  "status": "corrected_build_complete"
+}

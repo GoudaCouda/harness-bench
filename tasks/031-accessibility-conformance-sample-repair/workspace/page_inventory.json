@@ -1,0 +1,13 @@
+{
+  "pages": [
+    {"id":"home","path":"site/home.html","common_owner":true,"critical_process":false,"distinct_state":false,"representative":"landing"},
+    {"id":"catalog","path":"site/catalog.html","common_owner":false,"critical_process":false,"distinct_state":false,"representative":"structured_cards"},
+    {"id":"product","path":"site/product.html","common_owner":false,"critical_process":false,"distinct_state":false,"representative":"duplicate_catalog_template"},
+    {"id":"checkout","path":"site/checkout.html","common_owner":false,"critical_process":true,"process":"purchase","distinct_state":false},
+    {"id":"checkout-error","path":"site/checkout-error.html","common_owner":false,"critical_process":true,"process":"purchase","distinct_state":true},
+    {"id":"account","path":"site/account.html","common_owner":true,"critical_process":false,"distinct_state":false,"representative":"form"},
+    {"id":"about","path":"site/about.html","common_owner":false,"critical_process":false,"distinct_state":false,"representative":"static"},
+    {"id":"legal","path":"site/legal.html","common_owner":false,"critical_process":false,"distinct_state":false,"representative":"static"}
+  ],
+  "shared_components": [{"id":"primary-nav","path":"site/components/nav.html","owners":["home","account"]}]
+}

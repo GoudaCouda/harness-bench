@@ -1,0 +1,10 @@
+{
+  "trial_id": "NCT-SYN-21021",
+  "primary_completion_date": "2025-06-30",
+  "unblinding_date": "2025-07-10",
+  "versions": [
+    {"source_id": "REG-V1", "submitted_date": "2024-01-05", "posted_date": "2024-01-12", "primary_outcome": {"measure": "Symptom score change", "time_frame": "Day 28"}, "secondary_outcomes": [], "arms": [{"arm_id": "A", "label": "LX-21"}, {"arm_id": "B", "label": "Placebo"}]},
+    {"source_id": "REG-V2", "submitted_date": "2025-05-08", "posted_date": "2025-05-15", "primary_outcome": {"measure": "Symptom score change", "time_frame": "Day 28"}, "secondary_outcomes": [{"measure": "Symptom score change", "time_frame": "Day 56"}], "arms": [{"arm_id": "A", "label": "LX-21"}, {"arm_id": "B", "label": "Placebo"}]},
+    {"source_id": "REG-V3", "submitted_date": "2025-08-12", "posted_date": "2025-08-20", "primary_outcome": {"measure": "Symptom score change", "time_frame": "Day 56"}, "secondary_outcomes": [{"measure": "Symptom score change", "time_frame": "Day 28"}], "arms": [{"arm_id": "A", "label": "Placebo"}, {"arm_id": "B", "label": "LX-21"}], "change_reason": "administrative results-layout preparation"}
+  ]
+}

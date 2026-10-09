@@ -1,0 +1,18 @@
+[
+  {
+    "case_id": "late-update-before-finality",
+    "events": [{"event_id": "e2", "key": "cart", "event_ms": 45000, "value": 3}],
+    "prior_windows": [{"key": "cart", "start_ms": 0, "end_ms": 60000, "sum": 5, "event_ids": ["e1"], "revision": 2, "final": false}],
+    "watermark_ms": 70000,
+    "allowed_lateness_ms": 20000,
+    "window_ms": 60000
+  },
+  {
+    "case_id": "replay-after-finality",
+    "events": [{"event_id": "e1", "key": "cart", "event_ms": 45000, "value": 5}],
+    "prior_windows": [{"key": "cart", "start_ms": 0, "end_ms": 60000, "sum": 5, "event_ids": ["e1"], "revision": 2, "final": true}],
+    "watermark_ms": 80000,
+    "allowed_lateness_ms": 20000,
+    "window_ms": 60000
+  }
+]

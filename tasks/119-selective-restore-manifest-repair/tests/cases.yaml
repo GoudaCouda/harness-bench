@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 119-selective-restore-manifest-repair
+pass_threshold: 0.8
+cases:
+- id: selected_ancestry_replay_and_scope
+  title: Selected snapshot ancestry tombstones and scope are exact
+  description: Branch identity missing or incomplete chains descendant deletion and segment prefixes are
+    correct.
+  weight: 0.3
+  core: true
+- id: destination_action_safety
+  title: Destination comparisons produce safe dry-run actions
+  description: Equal content changed files overwrite modes type collisions unsupported links and no deletes
+    are distinguished.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_restore_plan
+  title: Protected plan and summary match the repaired planner
+  description: Generated artifacts are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: restore_handoff
+  title: Restore invariants and verification are handed off clearly
+  description: Another operator can audit ancestry replay tombstones scope mapping overwrite collisions
+    dry-run and tests.
+  weight: 0.2
+  core: false
+- id: source_path_and_execution_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

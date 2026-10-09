@@ -1,0 +1,204 @@
+{
+  "applied_event_ids": [
+    "EVT-501",
+    "EVT-502",
+    "EVT-503"
+  ],
+  "external_actions_executed": false,
+  "ignored_duplicate_delivery_ids": [
+    "DLV-02"
+  ],
+  "inventory_snapshot_id": "INV-20261014T221000Z",
+  "object_decisions": [
+    {
+      "action": "preserve",
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-F",
+        "state/travel.db#AIR-1"
+      ],
+      "external_action": "none",
+      "final_state": "reviewed_confirmed:LEG-1",
+      "local_stage_kind": "none",
+      "object_id": "AIR-1",
+      "prior_state": "reviewed_confirmed:LEG-1",
+      "selected_inventory_object": "LEG-1"
+    },
+    {
+      "action": "replace_disrupted_leg",
+      "evidence_refs": [
+        "evidence/disruption_events.jsonl#EVT-501",
+        "evidence/inventory_snapshot.json#O-F"
+      ],
+      "external_action": "none",
+      "final_state": "local_proposal_hold:OF-2",
+      "local_stage_kind": "hold_request",
+      "object_id": "AIR-2",
+      "prior_state": "reviewed_confirmed:LEG-2",
+      "selected_inventory_object": "OF-2"
+    },
+    {
+      "action": "preserve",
+      "evidence_refs": [
+        "policy/replan_policy.json#stage_boundary",
+        "state/travel.db#CAR"
+      ],
+      "external_action": "none",
+      "final_state": "reviewed_not_needed",
+      "local_stage_kind": "none",
+      "object_id": "CAR",
+      "prior_state": "reviewed_not_needed",
+      "selected_inventory_object": "none"
+    },
+    {
+      "action": "preserve",
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-F",
+        "state/travel.db#EVENT"
+      ],
+      "external_action": "none",
+      "final_state": "reviewed_confirmed:EV-VAN-0915",
+      "local_stage_kind": "none",
+      "object_id": "EVENT",
+      "prior_state": "reviewed_confirmed:EV-VAN-0915",
+      "selected_inventory_object": "EV-VAN-0915"
+    },
+    {
+      "action": "preserve",
+      "evidence_refs": [
+        "evidence/disruption_events.jsonl#EVT-503",
+        "state/travel.db#HOTEL"
+      ],
+      "external_action": "none",
+      "final_state": "reviewed_confirmed:H-VAN-22",
+      "local_stage_kind": "none",
+      "object_id": "HOTEL",
+      "prior_state": "reviewed_confirmed:H-VAN-22",
+      "selected_inventory_object": "H-VAN-22"
+    },
+    {
+      "action": "preserve",
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-F",
+        "state/travel.db#RAIL"
+      ],
+      "external_action": "none",
+      "final_state": "inactive_fallback",
+      "local_stage_kind": "none",
+      "object_id": "RAIL",
+      "prior_state": "inactive_fallback",
+      "selected_inventory_object": "none"
+    },
+    {
+      "action": "stage_refund_request",
+      "evidence_refs": [
+        "evidence/disruption_events.jsonl#EVT-501",
+        "policy/replan_policy.json#stage_boundary"
+      ],
+      "external_action": "none",
+      "final_state": "local_request_staged:LEG-2",
+      "local_stage_kind": "request",
+      "object_id": "REFUND",
+      "prior_state": "not_staged",
+      "selected_inventory_object": "LEG-2"
+    },
+    {
+      "action": "replace_with_accessible_slot",
+      "evidence_refs": [
+        "evidence/disruption_events.jsonl#EVT-502",
+        "evidence/inventory_snapshot.json#SH-1700"
+      ],
+      "external_action": "none",
+      "final_state": "local_proposal_hold:SH-1700",
+      "local_stage_kind": "hold_request",
+      "object_id": "SHUTTLE",
+      "prior_state": "reviewed_hold:SH-OLD",
+      "selected_inventory_object": "SH-1700"
+    }
+  ],
+  "option_assessments": [
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-D",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": false,
+      "incremental_cost_cad": 110,
+      "option_id": "O-D",
+      "reviewed_air_legs_changed": 1,
+      "violations": [
+        "connection_below_75_minutes"
+      ]
+    },
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-E",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": false,
+      "incremental_cost_cad": 135,
+      "option_id": "O-E",
+      "reviewed_air_legs_changed": 1,
+      "violations": [
+        "arrival_after_curfew",
+        "hotel_checkin_deadline_missed"
+      ]
+    },
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-F",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": true,
+      "incremental_cost_cad": 260,
+      "option_id": "O-F",
+      "reviewed_air_legs_changed": 1,
+      "violations": []
+    },
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-G",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": false,
+      "incremental_cost_cad": 90,
+      "option_id": "O-G",
+      "reviewed_air_legs_changed": 1,
+      "violations": [
+        "arrival_after_curfew",
+        "checked_bag_recheck_not_permitted",
+        "event_rest_window_missed",
+        "hotel_checkin_deadline_missed",
+        "no_accessible_shuttle_connection",
+        "transit_authorization_missing:GB"
+      ]
+    },
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-H",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": true,
+      "incremental_cost_cad": 180,
+      "option_id": "O-H",
+      "reviewed_air_legs_changed": 2,
+      "violations": []
+    },
+    {
+      "evidence_refs": [
+        "evidence/inventory_snapshot.json#O-I",
+        "policy/replan_policy.json#constraints"
+      ],
+      "feasible": false,
+      "incremental_cost_cad": 310,
+      "option_id": "O-I",
+      "reviewed_air_legs_changed": 1,
+      "violations": [
+        "no_accessible_shuttle_connection"
+      ]
+    }
+  ],
+  "recovery_id": "TRIP-20261015-SECOND-01",
+  "schema_version": 1,
+  "selected_option_id": "O-F",
+  "source_checkpoint": "feff16b4db3b4bd61394c2f69226e72d4827cec65d2775d16f583ffb9eeef7bf"
+}

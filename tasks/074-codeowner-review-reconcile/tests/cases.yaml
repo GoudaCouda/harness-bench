@@ -1,0 +1,42 @@
+schema_version: 2
+task_id: 074-codeowner-review-reconcile
+pass_threshold: 0.8
+cases:
+- id: path_ownership
+  title: Every changed path receives the correct owner and approval disposition
+  description: Every changed path receives the correct owner and approval disposition; all related facts,
+    relationships, and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.4
+  core: true
+- id: review_state
+  title: Aggregate satisfied, missing, and blocked state reconciles
+  description: Aggregate satisfied, missing, and blocked state reconciles; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: reapproval_handoff
+  title: The request explains precedence, stale approval, and the block
+  description: The request explains precedence, stale approval, and the block; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: coverage_integrity
+  title: Path coverage is exact and uniquely keyed
+  description: Path coverage is exact and uniquely keyed; all related facts, relationships, and closed-set
+    constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: verification_boundary
+  title: The handoff records verification and safe execution state
+  description: The handoff records verification and safe execution state; all related facts, relationships,
+    and closed-set constraints must agree before this outcome earns credit.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

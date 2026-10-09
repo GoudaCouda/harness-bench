@@ -1,0 +1,52 @@
+schema_version: 2
+task_id: 032-anomalous-transaction-detect
+pass_threshold: 0.8
+cases:
+- id: bank_change_and_token_controls
+  title: Bank-token and recent-change controls are correct
+  description: Mismatches, valid independent chains, same-channel callbacks, and pre-callback approvals
+    are distinguished.
+  weight: 0.3
+  core: true
+- id: beneficiary_and_high_value_controls
+  title: Beneficiary and high-value approvals are correct
+  description: First-payment verification and timely dual approval are applied without treating one approval
+    as two.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: supplier_status_and_clean_release
+  title: Supplier status and clean release paths are correct
+  description: Inactive supplier state overrides urgency while a clean established payment remains release-ready.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: interrupted_state_recovered
+  title: Interrupted local apply is atomically recovered
+  description: The complete candidate is committed once and the zero-commit interrupted attempt is preserved
+    in recovery history.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: evidence_lineage
+  title: Every decision has complete, scoped visible lineage
+  description: Locators cover the exact related record graph without unrelated or generated evidence.
+  weight: 0.08
+  core: false
+- id: verification_and_semantic_replay
+  title: Verification and staged replay close consistently
+  description: Preview, verification, state and receipt bind the same semantic plan and current source
+    checkpoint.
+  weight: 0.07
+  core: false
+- id: actionable_controller_handoff
+  title: Controller handoff reconciles the batch and safe next steps
+  description: All exceptions, counts, recovery and non-execution boundaries are usable by the controller.
+  weight: 0.05
+  core: false
+- id: source_and_authority_safety
+  title: Immutable evidence and external-action boundary remain intact
+  description: Protected sources and controller are unchanged, outputs are regular local files, and no
+    external action is claimed.
+  weight: 0.0
+  gate: true

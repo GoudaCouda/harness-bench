@@ -1,0 +1,23 @@
+{
+  "states": [
+    {
+      "consecutive_success": 1,
+      "failures": 2,
+      "generation": 2,
+      "service": "api",
+      "state": "unhealthy"
+    },
+    {
+      "consecutive_success": 0,
+      "failures": 0,
+      "generation": 1,
+      "service": "worker",
+      "state": "maintenance"
+    }
+  ],
+  "summary": {
+    "healthy": 0,
+    "maintenance": 1,
+    "unhealthy": 1
+  }
+}

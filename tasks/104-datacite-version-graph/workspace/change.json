@@ -1,0 +1,9 @@
+{
+  "id": "CH-2026-04",
+  "update_type": "major_new_cohort",
+  "publication_date": "2026-04-30",
+  "candidate_reused_doi": "10.data/cohort.v3",
+  "provider_note": "Provider attempted to reuse v3 for the 2026 pediatric cohort refresh.",
+  "required_new_version": "10.data/cohort.v4",
+  "supersedes": "10.data/cohort.v3"
+}

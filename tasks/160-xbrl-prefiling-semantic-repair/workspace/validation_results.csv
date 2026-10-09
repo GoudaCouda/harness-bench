@@ -1,0 +1,6 @@
+issue_id,severity,target,observed,required,rule_id
+E-CIK,error,entity.cik,0000999999,0000123456,ENTITY-ID
+E-PERIOD,error,period.end,2024-12-31,2025-12-31,PERIOD-END
+W-TAX,warning,taxonomy,us-gaap-2024,us-gaap-2025,TAXONOMY
+W-CONTEXT,warning,contexts,C-YEAR;C-YEAR-DUP,C-YEAR,DUP-CONTEXT
+E-FILE,error,exhibit.filename,exhibit bad.xml,exhibit_101.xml,FILE-NAME

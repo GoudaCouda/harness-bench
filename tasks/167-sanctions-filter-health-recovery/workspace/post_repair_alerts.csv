@@ -1,0 +1,9 @@
+item_id,post_repair_result,config_version,list_version,probe_state,disposition_role
+S-401,no_match,FILTER-8,LIST-2026-07-15,pass,compliance_officer
+S-402,possible,FILTER-8,LIST-2026-07-15,pass,analyst
+S-403,exact,FILTER-8,LIST-2026-07-15,pass,analyst
+S-404,missing,FILTER-8,LIST-2026-07-15,pass,analyst
+S-405,no_match,FILTER-8,LIST-2026-07-15,pass,analyst
+S-406,no_match,FILTER-8,LIST-2026-06-30,pass,compliance_officer
+S-407,no_match,FILTER-8,LIST-2026-07-15,fail,compliance_officer
+S-408,no_match,FILTER-8,LIST-2026-07-15,pass,compliance_officer

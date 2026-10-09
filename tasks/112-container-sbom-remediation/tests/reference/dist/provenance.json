@@ -1,0 +1,57 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "buildDefinition": {
+      "buildType": "https://example.invalid/buildtypes/oci-offline/v1",
+      "externalParameters": {
+        "candidate_tag": "report-worker:2026.08-rc2",
+        "network": "disabled"
+      },
+      "resolvedDependencies": [
+        {
+          "digest": {
+            "sha256": "4a6ae1028f2d632c7c8df2b0eb42530df2d7d7bcf6ecef79e3333cf9426df499"
+          },
+          "uri": "git+https://example.invalid/synthetic/report-worker"
+        },
+        {
+          "digest": {
+            "sha256": "e4fb44a385da07034dbd157ed8788f05e2cba6913ddd0df69dcc8308ae26cde2"
+          },
+          "uri": "synthetic.registry/runtime/node20"
+        },
+        {
+          "digest": {
+            "sha256": "3d3560004b84cc8606e695afe66531f88bf0d47220318fdac65d54ec23086b36"
+          },
+          "uri": "file:repo/Containerfile"
+        },
+        {
+          "digest": {
+            "sha256": "5ce5fdcc794837c20e56014a0d58f68de43a45d34aac3ac95b71daef594d7479"
+          },
+          "uri": "file:repo/package-lock.json"
+        }
+      ]
+    },
+    "runDetails": {
+      "builder": {
+        "id": "urn:synthetic:builder:hermetic-image-v3"
+      }
+    }
+  },
+  "predicateType": "https://slsa.dev/provenance/v1",
+  "signature": {
+    "key_id": "synthetic-release-attestor-2026",
+    "payload_sha256": "a97a3d8e4218e0ef1f15c25c88cd4da309cc14720e5f81f5c4a57f22747ac156",
+    "value": "528356d5a89ec9f8f986fcd4c68fddf19c4c7654600529d1d24c2e82769937c5"
+  },
+  "subject": [
+    {
+      "digest": {
+        "sha256": "0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d"
+      },
+      "name": "report-worker"
+    }
+  ]
+}

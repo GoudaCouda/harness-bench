@@ -1,0 +1,84 @@
+task_id: 127-environmental-lims-accession-recovery
+title: Recover an environmental-laboratory sample accession after a partial commit
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Science and Laboratory Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- data_recovery
+- lims
+- chain_of_custody
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- out_of_order_and_duplicate_events
+- signed_late_custody_evidence
+- label_alias_rekey
+- preservation_temperature_and_holding_time_rules
+- interrupted_sqlite_journal
+- semantic_replay_identity
+- irreversible_action_boundary
+required_artifacts:
+- accession_plan.json
+- .accession_preview.json
+- state/lims.db
+- state/verification.json
+- state/recovery_receipt.json
+- state/replay_report.json
+- accession_handoff.md
+task_family: environmental-lims-accession-recovery
+variant: signed-custody-rekey-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SQLITE-TRANSACTIONS
+  - EPA-SAMPLE-CUSTODY-PRESERVATION
+  - NIST-HB-150-3
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - accession_plan.json
+  - .accession_preview.json
+  - state/verification.json
+  - state/recovery_receipt.json
+  - state/replay_report.json
+  - accession_handoff.md
+  allowed_modified:
+  - state/lims.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: accession_handoff
+  max_fallback_weight: 0.08
+schema_version: 2

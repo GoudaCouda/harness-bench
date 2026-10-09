@@ -1,0 +1,9 @@
+{
+  "task_id": "074-codeowner-review-reconcile",
+  "head_sha": "e4b201",
+  "path_count": 8,
+  "satisfied": 5,
+  "missing": 2,
+  "blocked": 1,
+  "decision": "blocked"
+}

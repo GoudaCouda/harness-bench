@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborline-238",
+  "gate_clock_epoch": 1776468800,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "e1",
+      "trip_id": "T1",
+      "decision": "recorded"
+    },
+    {
+      "index": 1,
+      "item_id": "e2",
+      "trip_id": "T99",
+      "decision": "conflict"
+    },
+    {
+      "index": 2,
+      "item_id": "e3",
+      "trip_id": "T2",
+      "decision": "conflict"
+    },
+    {
+      "index": 3,
+      "item_id": "e4",
+      "trip_id": "T2",
+      "decision": "conflict"
+    },
+    {
+      "index": 4,
+      "item_id": "e1",
+      "trip_id": "T1",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "e6",
+      "trip_id": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 6,
+      "item_id": "e7",
+      "trip_id": "T4",
+      "decision": "recorded"
+    }
+  ],
+  "counts": {
+    "recorded": 2,
+    "conflict": 3,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "e1",
+    "e7"
+  ],
+  "conflict_ids": [
+    "e2",
+    "e3",
+    "e4"
+  ]
+}

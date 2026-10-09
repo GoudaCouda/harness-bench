@@ -1,0 +1,91 @@
+profile: production
+
+runtime:
+  engine: podman
+  rootless_required: true
+  oci_runtime: runsc
+  minimum_isolation_level: L2
+
+image_policy:
+  require_digest: true
+  allow_mutable_tags: false
+  allowed_registries:
+    - ghcr.io/openclaw
+    - registry.example.edu/harnessbench
+
+container_policy:
+  privileged: false
+  host_network: false
+  host_pid: false
+  host_ipc: false
+  docker_socket_mount: false
+  rootfs_read_only: true
+  no_new_privileges: true
+  cap_drop: [ALL]
+  allow_devices: []
+  allow_host_ports: []
+  run_as_non_root: true
+  pids_limit: 256
+  memory_mb: 4096
+  cpu_cores: 2
+  tmpfs_mb: 1024
+
+mount_policy:
+  allow_repo_mount: false
+  allow_home_mount: false
+  allow_absolute_host_bind: false
+  allowed_container_targets:
+    - /workspace
+    - /runtime
+    - /state
+    - /trace
+    - /run/harness
+    - /tmp
+
+network_policy:
+  direct_egress: false
+  internal_network_per_run: true
+  publish_host_ports: false
+  block_private_ranges: true
+  block_cloud_metadata: true
+  gateway_service_name: llm-gateway
+  allowed_task_services_only: true
+
+secret_policy:
+  provider_credentials: gateway_only
+  expose_provider_key_to_harness: false
+  use_ephemeral_run_token: true
+  redact_authorization_headers: true
+  persist_raw_secrets: false
+
+harnesses:
+  openclaw:
+    image: ghcr.io/openclaw/openclaw@${OPENCLAW_IMAGE_DIGEST}
+    entrypoint:
+      - /opt/harness/bin/run
+    user: "1000:1000"
+    workspace: /workspace
+    state: /state
+    prompt: /run/harness/prompt.txt
+    direct_egress: false
+    provider_credentials: false
+
+grader:
+  image: registry.example.edu/harnessbench/grader@${GRADER_IMAGE_DIGEST}
+  network: none
+  workspace_read_only: true
+  hidden_oracle_read_only: true
+  rootfs_read_only: true
+  cap_drop: [ALL]
+  timeout_sec: 300
+  memory_mb: 2048
+  cpu_cores: 1
+  pids_limit: 128
+
+cleanup:
+  always: true
+  remove_containers: true
+  remove_networks: true
+  remove_ephemeral_volumes: true
+  revoke_run_tokens: true
+  verify_no_resources_remain: true

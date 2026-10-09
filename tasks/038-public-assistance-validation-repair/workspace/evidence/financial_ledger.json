@@ -1,0 +1,13 @@
+{
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "entries": [
+    {"ledger_entry_id": "GL-8801", "line_id": "FA-LAB-001", "debit": 32000, "credit": 0, "payment_id": "PAY-201"},
+    {"ledger_entry_id": "GL-8802", "line_id": "FA-LAB-002", "debit": 8000, "credit": 0, "payment_id": "PAY-202"},
+    {"ledger_entry_id": "GL-8803", "line_id": "CON-DEB-003", "debit": 120000, "credit": 0, "payment_id": "PAY-203"},
+    {"ledger_entry_id": "GL-8804", "line_id": "EQUIP-004", "debit": 25000, "credit": 0, "payment_id": "PAY-204"},
+    {"ledger_entry_id": "GL-8805", "line_id": "SUP-005", "debit": 18000, "credit": 0, "payment_id": "PAY-205"}
+  ],
+  "unapplied_vendor_credits": [
+    {"credit_id": "VC-77", "vendor_id": "V-RIVER-9", "line_id": "EQUIP-004", "amount": 5000, "scope": "same rental period and excavator", "status": "unapplied"}
+  ]
+}

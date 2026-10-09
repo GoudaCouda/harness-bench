@@ -1,0 +1,41 @@
+task_id: 081-python-wheel-tag-selection-repair
+title: Repair Python wheel selection across ABI and platform tags
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, packaging, release_engineering, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [compressed_tags, abi_fallback, platform_priority, yanked_assets, ambiguous_rebuilds]
+required_artifacts:
+- repo/src/wheel_selector.py
+- repo/selection_report.json
+- repo/SELECTION_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [PYPA-COMPATIBILITY-TAGS, PYPA-WHEEL-SPEC]
+task_family: python-release-asset-selection
+variant: ordered-interpreter-abi-platform-tag-resolution
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/selection_report.json, repo/SELECTION_NOTES.md]
+  allowed_modified: [repo/src/wheel_selector.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

@@ -1,0 +1,151 @@
+{
+  "checks": {
+    "component_coverage_and_dispositions": true,
+    "fallback_chain": true,
+    "identity": true,
+    "local_evidence": true,
+    "offline_boundary": true,
+    "source_checkpoint": true,
+    "starting_checkpoint_and_journal": true
+  },
+  "database_sha256_before": "eb4f9bee1e0d49fad62c0555633fa41c4b431311bdb4b872286e7ebb7c5d7b7a",
+  "feedback": {
+    "actions": {
+      "accepted_component_count": 8,
+      "coverage_complete": true,
+      "duplicate_submitted_component_ids": [],
+      "extra_submitted_component_ids": [],
+      "missing_component_count": 0,
+      "submitted_count": 8,
+      "submitted_objects": [
+        {
+          "component_id": "ops-rotation@example.test|master",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "ops-rotation@example.test|20260819T090000",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "ops-rotation@example.test|20260820T090000",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "budget-close@example.test|master",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "obsolete-briefing@example.test|master",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "ops-rotation@example.test|20260821T090000",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "london-review@example.test|master",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        },
+        {
+          "component_id": "townhall@example.test|master",
+          "evidence_categories": {
+            "accepted_ics_component": true,
+            "manifest_page_authority": true,
+            "safe_local_locators": true
+          },
+          "fields": {
+            "component_id_known": true,
+            "disposition_valid_for_observed_state": true,
+            "evidence_refs_is_nonempty_list": true
+          }
+        }
+      ]
+    },
+    "fallback_fields": {
+      "damaged_page_is_manifest_damaged_path": true,
+      "expected_etag_is_selected_page_outgoing_etag": true,
+      "reason_cites_truncation_and_checksum": true,
+      "selected_page_is_manifest_fallback_path": true,
+      "selected_sha256_matches_fallback_file": true
+    },
+    "identity_fields": {
+      "collection_id": true,
+      "recovery_id": true,
+      "schema_version": true
+    },
+    "offline_boundary": {
+      "external_calendar_write_executed_is_false": true
+    },
+    "source_checkpoint": {
+      "matches_manifest_immutable_checkpoint": true
+    }
+  },
+  "mutation_executed": false,
+  "plan_sha256": "476bbab3c94c991f134a06a901ebc17e630747e8f3cc1fffd390f7c1c4fa9838",
+  "recovery_id": "CALSYNC-FINANCE-20260819-42",
+  "status": "pass",
+  "tool": "syncctl/1"
+}

@@ -1,0 +1,9 @@
+{
+  "workflow_id": "167-sanctions-filter-health-recovery",
+  "total_items": 8,
+  "decision_counts": {"blocked": 1, "clear": 2, "pending_rescreen": 3, "review": 2},
+  "blocked_or_escalated_ids": ["S-403"],
+  "pending_ids": ["S-404", "S-406", "S-407"],
+  "status": "complete_with_exceptions",
+  "external_actions_executed": false
+}

@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-236",
+  "gate_clock_epoch": 1776382400,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "site-a",
+      "event_id": "dr-88",
+      "decision": "admitted"
+    },
+    {
+      "index": 1,
+      "item_id": "site-b",
+      "event_id": "dr-88",
+      "decision": "held"
+    },
+    {
+      "index": 2,
+      "item_id": "site-c",
+      "event_id": "dr-88",
+      "decision": "held"
+    },
+    {
+      "index": 3,
+      "item_id": "site-a",
+      "event_id": "dr-88",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "site-d",
+      "event_id": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "site-e",
+      "event_id": "dr-88",
+      "decision": "admitted"
+    },
+    {
+      "index": 6,
+      "item_id": "site-f",
+      "event_id": "dr-88",
+      "decision": "held"
+    }
+  ],
+  "counts": {
+    "admitted": 2,
+    "held": 3,
+    "malformed": 2
+  },
+  "admitted_ids": [
+    "site-a",
+    "site-e"
+  ],
+  "held_ids": [
+    "site-b",
+    "site-c",
+    "site-f"
+  ]
+}

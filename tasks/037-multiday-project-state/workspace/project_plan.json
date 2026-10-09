@@ -1,0 +1,14 @@
+{
+  "project_id": "NORTHSTAR-VENDOR-24", "as_of": "2026-08-06T12:00:00Z", "recovery_option": "expedite",
+  "budget_usd": {"ceiling": 92000, "planned": 99000},
+  "milestones": [
+    {"id":"M1","name":"data_mapping","day":3,"duration_days":2,"status":"completed","owner":"Priya","cost_usd":12000,"depends_on":[],"condition":null},
+    {"id":"M2","name":"security_review","day":7,"duration_days":1,"status":"completed","owner":"Rafael","cost_usd":18000,"depends_on":["M1"],"condition":null},
+    {"id":"M3","name":"connector_build","day":9,"duration_days":4,"status":"failed","owner":"Priya","cost_usd":23000,"depends_on":["M2"],"condition":null},
+    {"id":"M4","name":"connector_validation","day":15,"duration_days":2,"status":"planned","owner":"Priya","cost_usd":7000,"depends_on":["M3"],"condition":null},
+    {"id":"M5","name":"privacy_validation","day":18,"duration_days":2,"status":"planned","owner":"Mei","cost_usd":6000,"depends_on":["M4"],"condition":"privacy approval"},
+    {"id":"M6","name":"enablement_rehearsal","day":22,"duration_days":2,"status":"planned","owner":"Lee","cost_usd":5000,"depends_on":["M4"],"condition":null},
+    {"id":"M7","name":"production_export","day":24,"duration_days":1,"status":"planned","owner":"Omar","cost_usd":5000,"depends_on":["M4","M5"],"condition":"security and privacy approval"},
+    {"id":"M8","name":"general_launch","day":28,"duration_days":1,"status":"planned","owner":"Priya","cost_usd":13000,"depends_on":["M6","M7"],"condition":"all approvals"}
+  ], "open_conflicts": []
+}

@@ -1,0 +1,7 @@
+{
+  "discrepancies": [],
+  "recovery_id": "EDI-RCV-20260819-01",
+  "semantic_plan_sha256": "f31b5753dcd8fa96730ddf5d1f7e31f91fdad856eafc8a710ae1d4b75c92d60d",
+  "source_checkpoint": "b286b9059cb694cd632bd054c6e58203fd068eb5730784ab180d13c53fc3619e",
+  "status": "valid"
+}

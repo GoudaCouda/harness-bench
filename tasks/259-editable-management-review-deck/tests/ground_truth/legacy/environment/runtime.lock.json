@@ -1,0 +1,16 @@
+{
+  "schema_version": "nami_work_case05_runtime_lock_v1",
+  "image": "clawbench@sha256:6ac6ff049fd2c15b09dcdb10ed7b4f619df5e9a46ab7ea2e60ab4015eecd2bf9",
+  "image_digest": "sha256:6ac6ff049fd2c15b09dcdb10ed7b4f619df5e9a46ab7ea2e60ab4015eecd2bf9",
+  "python": "3.11.9",
+  "implementation_dependencies": [
+    "python-standard-library"
+  ],
+  "network_mode": "none",
+  "published_ports": [],
+  "cpu_limit": 4,
+  "memory_mib": 8192,
+  "pids_limit": 256,
+  "readonly_rootfs": true
+}
+

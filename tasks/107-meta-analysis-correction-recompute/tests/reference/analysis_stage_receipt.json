@@ -1,0 +1,9 @@
+{
+  "analysis_id": "SR-NIMBUS-2026-U1",
+  "bundle_sha256": "945004dc59567812355ea59158ad5f7b9c0ef0e7b8ac33d2a50dc5e5328e4479",
+  "external_publication": false,
+  "revision": 5,
+  "stage_state_sha256": "945004dc59567812355ea59158ad5f7b9c0ef0e7b8ac33d2a50dc5e5328e4479",
+  "status": "verified_local_stage",
+  "verified_twice_safe": true
+}

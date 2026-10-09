@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 118-warehouse-reservation-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Warehouse recovery handoff is complete
+  question: Does the handoff accurately cover the duplicate, expired, retained, and shipped reservation outcomes, final inventory/order closure, safe identical replay, and offline scope?
+  pass_anchors: [Idempotency and idempotent replay are equivalent wording.]
+  fail_anchors: [Releasing shipped stock, misstating balances, or claiming live shipment action fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

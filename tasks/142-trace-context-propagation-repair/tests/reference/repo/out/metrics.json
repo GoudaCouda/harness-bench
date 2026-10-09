@@ -1,0 +1,8 @@
+{
+  "dropped_baggage": 0,
+  "dropped_tracestate": 2,
+  "filtered_baggage_entries": 2,
+  "forwarded": 1,
+  "participated": 1,
+  "restarted": 1
+}

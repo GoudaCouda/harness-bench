@@ -1,0 +1,46 @@
+{
+  "candidate_mount_contract": {
+    "path": "environment/candidate_mounts.json",
+    "sha256": "64ce4dd26fe66c22cad6c24ee15facce85db7aee560e6a3876cb783dd81a75be"
+  },
+  "empty_directories": [
+    "archive",
+    "outputs"
+  ],
+  "initial_action_counts": {
+    "downloads": 0,
+    "reminders": 0
+  },
+  "runtime_directory_modes": {
+    "archive": "0o700",
+    "inputs": "0o555",
+    "outputs": "0o700",
+    "workspace": "0o700"
+  },
+  "schema_version": "case20_workspace_manifest_v1",
+  "source_projection_sha256": "751951415a2fdd727eecdac64427e6ca4ac1e6a0d911f37a76c6b152ff715548",
+  "tool_contract": {
+    "path": "environment/tool_contract.json",
+    "sha256": "eb065579bca8962e0f08af140b7c6c48e0ff0a891850a9d29dc5e2ea463e4f13"
+  },
+  "visible_seed_files": [
+    {
+      "mode": "0o444",
+      "path": "inputs/material_requirements.md",
+      "sha256": "5790521230ada4c44663ef6265e874594d29f2e34162cf4f76feae336187605f",
+      "size_bytes": 1566
+    },
+    {
+      "mode": "0o444",
+      "path": "inputs/person_roster.csv",
+      "sha256": "a1e5763a1abf2e02473eda7cb51304603d8d338753cd89cf0fd5e13b75f80aa8",
+      "size_bytes": 158
+    },
+    {
+      "mode": "0o444",
+      "path": "inputs/reminder_template.txt",
+      "sha256": "2c02f7ed0fe88a726dbb3b04a29658c057ec97f8ed1e5734dac2f6f1f3d9aaac",
+      "size_bytes": 180
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 033-rate-limit-lease-reconciliation
+pass_threshold: 0.8
+cases:
+- id: capacity_expiry_and_fencing
+  title: Capacity, exact expiry, and fencing remain safe
+  description: Active capacity is conserved and only new grants consume monotonic fencing tokens.
+  weight: 0.4
+  core: true
+- id: replay_conflict_and_fairness
+  title: Retries and FIFO contention reconcile deterministically
+  description: Idempotent replays, conflicts, not-due work, and FIFO ordering have distinct outcomes.
+  weight: 0.2
+  core: true
+  score_group: validation_and_replay
+- id: visible_batch_report
+  title: Visible incident batches are reproduced exactly
+  description: The report preserves batch order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Repair reasoning and verification are handed off
+  description: Notes explain all seams, record the exact successful command, and identify risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

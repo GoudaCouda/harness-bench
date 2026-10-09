@@ -1,0 +1,10 @@
+{
+  "account_last4": "3344",
+  "amount_cents": 3300000,
+  "closing_id": "ESC-106",
+  "document_id": "DOC-INS-106-SELLER",
+  "instruction_id": "INS-106-SELLER",
+  "payee_id": "P-SELLER",
+  "schema_version": 1,
+  "signed": true
+}

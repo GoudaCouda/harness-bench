@@ -1,0 +1,12 @@
+{
+  "files": {
+    "evidence/approval_keys.json": "ba5ca4f7f97721eb96f8c99fb813519b457f2dcc3d111e37cf4ddedb3b28042a",
+    "evidence/employees.json": "2edc4ab06e392ef8ea94aaafaa5f325c08b057a492fa75da9ff5177d68b8862b",
+    "evidence/late_approvals.json": "3cfd034c41bcf968f85b1cc0c03a0547ba3e3b890579d14f382efec8694eda00",
+    "evidence/payroll_calendar.json": "9b33e49efe42a14db50534061d9846d33c935c1b9c1184c2b7de86b1a5d43541",
+    "payrollctl.py": "0dbba17e3d622ad8df0acade07058c84bf2edef60c629057ed7f0e33cd537957",
+    "policy/retro_policy.json": "6bd7dbdc0b818e65445cd6bf547b0101a58e283d3ebda04706b304f5c5abb818"
+  },
+  "hash_algorithm": "sha256",
+  "schema_version": 1
+}

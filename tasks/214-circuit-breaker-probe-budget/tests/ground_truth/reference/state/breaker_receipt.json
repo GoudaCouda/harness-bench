@@ -1,0 +1,23 @@
+{
+  "stream_id": "northharbor-0320",
+  "gate_clock_epoch": 1773997200,
+  "counts": {
+    "executed": 5,
+    "short_circuited": 1,
+    "probed": 2
+  },
+  "forwarded_event_ids": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e6",
+    "e7",
+    "e8"
+  ],
+  "breaker_mode": {
+    "svc-a": "closed",
+    "svc-b": "closed"
+  },
+  "state": "gated"
+}

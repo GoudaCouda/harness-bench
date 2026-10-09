@@ -1,0 +1,6 @@
+[
+  {"name":"defaults","operations":["CREATE"],"resources":["pods"],"excluded_namespaces":["kube-system"],"side_effects":"None","failure_policy":"Fail","reinvocation_policy":"IfNeeded","available":true,"mutations":[{"path":"metadata/labels/team","mode":"set_if_missing","value":"platform"},{"path":"spec/security/run_as_non_root","mode":"set_if_missing","value":true}]},
+  {"name":"security","operations":["CREATE","UPDATE"],"resources":["pods"],"excluded_namespaces":[],"side_effects":"None","failure_policy":"Fail","reinvocation_policy":"IfNeeded","available":true,"mutations":[{"path":"spec/security/run_as_non_root","mode":"ensure_value","value":true}]},
+  {"name":"trace-side-effect","operations":["CREATE"],"resources":["deployments"],"excluded_namespaces":[],"side_effects":"NoneOnDryRun","failure_policy":"Ignore","reinvocation_policy":"Never","available":true,"mutations":[{"path":"metadata/labels/trace","mode":"set_if_missing","value":"enabled"}]},
+  {"name":"unavailable-optional","operations":["CREATE"],"resources":["services"],"excluded_namespaces":[],"side_effects":"None","failure_policy":"Ignore","reinvocation_policy":"Never","available":false,"mutations":[{"path":"metadata/labels/owner","mode":"set_if_missing","value":"network"}]}
+]

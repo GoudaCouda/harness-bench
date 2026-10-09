@@ -1,0 +1,10 @@
+case_id,redacted_field,redaction_reason
+A-01,case_files/case_1.json#/reporter,direct identifier not needed for appeal review
+A-02,case_files/case_2.json#/reporter,direct identifier not needed for appeal review
+A-03,case_files/case_3.json#/reporter,direct identifier not needed for appeal review
+A-04,case_files/case_4.json#/reporter,direct identifier not needed for appeal review
+A-04,case_files/case_4.json#/reporter_email,direct identifier not needed for appeal review
+A-05,case_files/case_5.json#/reporter,direct identifier not needed for appeal review
+A-06,case_files/case_6.json#/reporter,direct identifier not needed for appeal review
+A-06,case_files/case_6.json#/reporter_alias,direct identifier not needed for appeal review
+A-07,case_files/case_7.json#/reporter,direct identifier not needed for appeal review

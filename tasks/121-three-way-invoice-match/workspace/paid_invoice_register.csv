@@ -1,0 +1,4 @@
+invoice_no,status,status_date,amount,reference
+DUP-7,paid,2026-07-10,108,PAY-771
+PEND-9,scheduled,2026-07-28,300,RUN-2026-07-B
+REV-8,reversed,2026-07-21,90,REV-991

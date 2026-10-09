@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 082-http-request-retry-safety-repair
+pass_threshold: 0.8
+cases:
+- id: transport_and_idempotency_safety
+  title: Transport ambiguity is separated from known-not-sent evidence
+  description: Partial writes and lost responses require method or enforced-key authority before automatic
+    replay.
+  weight: 0.35
+  core: true
+- id: response_backoff_and_exhaustion
+  title: HTTP state, Retry-After, backoff, and attempt limits compose safely
+  description: Retryable responses are qualified by application state and server delay without retrying
+    applied or exhausted operations.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_retry_report
+  title: Visible API incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Replay and live-client risks are handed off
+  description: Notes explain evidence, idempotency, delay, verification, and residual risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_http_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

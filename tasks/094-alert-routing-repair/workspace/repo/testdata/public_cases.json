@@ -1,0 +1,44 @@
+{
+  "routing": [
+    {
+      "name": "payments database critical pages platform",
+      "labels": {
+        "cluster": "east",
+        "service": "payments",
+        "alertname": "DatabaseDown",
+        "severity": "critical"
+      },
+      "receivers": ["platform-page"]
+    },
+    {
+      "name": "payments latency warning stays low",
+      "labels": {
+        "cluster": "east",
+        "service": "payments",
+        "alertname": "HighLatency",
+        "severity": "warning"
+      },
+      "receivers": ["payments-low"]
+    },
+    {
+      "name": "inventory critical also pages platform",
+      "labels": {
+        "cluster": "west",
+        "service": "inventory",
+        "alertname": "QueueStalled",
+        "severity": "critical"
+      },
+      "receivers": ["platform-page"]
+    },
+    {
+      "name": "ordinary noncritical alert inherits operations",
+      "labels": {
+        "cluster": "west",
+        "service": "inventory",
+        "alertname": "QueueDepth",
+        "severity": "warning"
+      },
+      "receivers": ["operations-low"]
+    }
+  ]
+}

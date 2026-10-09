@@ -1,0 +1,5 @@
+# Selection notes
+
+Each wheel filename is parsed into distribution, version, optional build, Python, ABI, and platform fields. Dot-compressed fields are expanded as a Cartesian product, then compared as exact triples against the target's ordered supported tags. Compatibility rank wins before build-tag precedence. Yanked assets are excluded unless policy explicitly permits them, and equal-ranked equal-build candidates produce manual review instead of an arbitrary selection.
+
+I ran PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v; all tests pass. Verification covered native priority, ABI fallback, universal and compressed tags, rebuild ordering, yanked policy, malformed evidence, and ambiguity. Residual installer risk includes index metadata changing after this snapshot, artifact replacement, digest verification during download, signature or provenance policy, and environment drift. No package index was queried and no wheel was downloaded, installed, published, or applied to an environment.

@@ -1,0 +1,7 @@
+{
+  "routing_rows": 6,
+  "blocked_or_escalated_ids": ["S-201", "S-202", "S-210", "S-211", "S-212"],
+  "pending_ids": [],
+  "inputs_unchanged": true,
+  "external_actions_executed": false
+}

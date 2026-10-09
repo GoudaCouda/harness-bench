@@ -1,0 +1,6 @@
+FROM synthetic.registry/runtime/node20@sha256:e4fb44a385da07034dbd157ed8788f05e2cba6913ddd0df69dcc8308ae26cde2
+WORKDIR /srv/report-worker
+COPY package.json package-lock.json ./
+RUN synthetic-npm-ci --offline --ignore-scripts=false
+COPY server.js ./server.js
+ENTRYPOINT ["node", "server.js"]

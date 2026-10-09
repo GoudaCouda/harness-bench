@@ -1,0 +1,47 @@
+[
+  {
+    "action": "serve_fresh",
+    "cache_negative_ttl": null,
+    "ede_code": null,
+    "query_id": "fresh",
+    "reason": "fresh",
+    "response_kind": "positive",
+    "ttl": 20
+  },
+  {
+    "action": "serve_refreshed",
+    "cache_negative_ttl": 1800,
+    "ede_code": null,
+    "query_id": "negative-refresh",
+    "reason": "authoritative",
+    "response_kind": "nxdomain",
+    "ttl": 1800
+  },
+  {
+    "action": "serve_stale",
+    "cache_negative_ttl": null,
+    "ede_code": 3,
+    "query_id": "stale-positive",
+    "reason": "refresh_failed",
+    "response_kind": "positive",
+    "ttl": 30
+  },
+  {
+    "action": "fail",
+    "cache_negative_ttl": null,
+    "ede_code": null,
+    "query_id": "stale-refused",
+    "reason": "refused",
+    "response_kind": null,
+    "ttl": 0
+  },
+  {
+    "action": "wait_refresh",
+    "cache_negative_ttl": null,
+    "ede_code": null,
+    "query_id": "wait",
+    "reason": "client_timer",
+    "response_kind": null,
+    "ttl": 0
+  }
+]

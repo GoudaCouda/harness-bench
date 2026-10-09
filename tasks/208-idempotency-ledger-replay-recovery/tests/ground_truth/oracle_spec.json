@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task_id": "208-idempotency-ledger-replay-recovery",
+  "checks": [
+    {
+      "id": "recovered_ledger",
+      "label": "The recovered ledger matches the canonical post-recovery state",
+      "weight": 6,
+      "condition": {
+        "type": "file_equals",
+        "path": "state/ledger.json",
+        "expected_path": "reference/state/ledger.json",
+        "format": "json"
+      }
+    },
+    {
+      "id": "receipt_summary",
+      "label": "The recovery receipt reports the canonical clock, counts, and settled amount",
+      "weight": 2,
+      "condition": {
+        "type": "json",
+        "path": "state/recovery_receipt.json",
+        "pointer": "",
+        "op": "contains",
+        "expected_from": {
+          "path": "ground_truth.json",
+          "format": "json",
+          "pointer": "/artifacts/recovery_receipt"
+        }
+      }
+    },
+    {
+      "id": "verification_record",
+      "label": "The verification record names the controller and claims repeat stability",
+      "weight": 1,
+      "condition": {
+        "type": "json",
+        "path": "state/verification.json",
+        "pointer": "",
+        "op": "contains",
+        "expected_from": {
+          "path": "ground_truth.json",
+          "format": "json",
+          "pointer": "/artifacts/verification"
+        }
+      }
+    },
+    {
+      "id": "recovery_narrative",
+      "label": "The handoff explains the crash state, decision classes, and boundary",
+      "weight": 1,
+      "condition": {
+        "type": "text",
+        "path": "ledger_recovery_handoff.md",
+        "contains_groups": [
+          [
+            "pay-1002"
+          ],
+          [
+            "pay-1004"
+          ],
+          [
+            "pay-1003"
+          ],
+          [
+            "lease"
+          ],
+          [
+            "retention",
+            "expired",
+            "ttl"
+          ],
+          [
+            "conflict",
+            "refused",
+            "mismatch"
+          ],
+          [
+            "replay",
+            "replayed",
+            "stored response"
+          ],
+          [
+            "95500",
+            "settled_total_cents"
+          ],
+          [
+            "verif",
+            "validate",
+            "ledgerctl"
+          ],
+          [
+            "boundary",
+            "not contacted",
+            "offline",
+            "authorization"
+          ]
+        ],
+        "excludes_all": [
+          "released the funds",
+          "contacted the processor",
+          "notified the customer",
+          "deleted the audit evidence"
+        ],
+        "case_sensitive": false,
+        "min_chars": 400
+      }
+    }
+  ]
+}

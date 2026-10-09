@@ -1,0 +1,49 @@
+schema_version: 2
+task_id: 026-code-review-risk-report
+pass_threshold: 0.8
+cases:
+- id: authorization_and_tenant_review
+  title: PII authorization and tenant-scoped idempotency are reviewed together
+  description: The report catches both the removed PII scope check and the global request-token lookup,
+    with fixes grounded in the visible export contract and schema.
+  weight: 0.3
+  core: true
+- id: worker_state_review
+  title: Worker claiming and upload completion preserve exactly-once state
+  description: The report catches the split non-atomic lease claim and the false completion after a transient
+    upload failure.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: data_lifecycle_review
+  title: Pagination, retention, and download-secret handling remain correct
+  description: The report reconciles tuple pagination, explicit zero TTL, and the bearer-secret logging
+    boundary across three separate files.
+  weight: 0.2
+  core: true
+  score_group: validation_and_replay
+- id: actionable_handoff
+  title: Every grounded finding is an actionable engineering handoff
+  description: Grounded findings carry source evidence and a concrete remediation, without padding the
+    report with style-only false positives.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: prioritization_and_verification
+  title: Reported risks are prioritized correctly and have concrete regression tests
+  description: For the risks the review actually identifies, severity follows the stated impact policy
+    and the proposed test names a relevant trigger and outcome.
+  weight: 0.1
+  core: false
+- id: report_integrity
+  title: The review is a usable machine-readable report
+  description: The JSON contains a non-empty summary and well-formed finding objects with the requested
+    keys; no hidden finding count or reference wording is required.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

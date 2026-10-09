@@ -1,0 +1,16 @@
+{
+  "batch_id": "CDC-2026-08-19-42",
+  "checks": {
+    "current_projection": true,
+    "event_ledger": true,
+    "history_chain": true,
+    "journal_committed": true,
+    "quarantine": true,
+    "single_transaction": true
+  },
+  "external_publish_executed": false,
+  "logical_warehouse_sha256": "7fd8f983e5af5b2f27f7b72cf6203c19a77ef5e2f2ba8a8ef758556c07ee3b9f",
+  "source_sha256": "b9dff8681699fc32c0d970a28c63639fc5b0a98d799e9189e24d3898053afcfb",
+  "status": "pass",
+  "tool": "cdcctl/1"
+}

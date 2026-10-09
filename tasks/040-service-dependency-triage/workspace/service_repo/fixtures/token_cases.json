@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "employee_checkout",
+    "issuer": "https://issuer.internal/v1",
+    "audience": "checkout-web",
+    "kid": "internal-2026-a",
+    "expected": "allow"
+  },
+  {
+    "case_id": "partner_checkout_after_cutover",
+    "issuer": "https://issuer.partner/v2",
+    "audience": "checkout-web",
+    "kid": "partner-2026-b",
+    "expected": "allow"
+  },
+  {
+    "case_id": "partner_payment_after_cutover",
+    "issuer": "https://issuer.partner/v2",
+    "audience": "payment-api",
+    "kid": "partner-2026-b",
+    "expected": "allow"
+  },
+  {
+    "case_id": "retired_partner_token",
+    "issuer": "https://issuer.partner/v1",
+    "audience": "checkout-web",
+    "kid": "partner-2025-z",
+    "expected": "deny"
+  },
+  {
+    "case_id": "unrelated_audience",
+    "issuer": "https://issuer.partner/v2",
+    "audience": "admin-console",
+    "kid": "partner-2026-b",
+    "expected": "deny"
+  },
+  {
+    "case_id": "unknown_signing_key",
+    "issuer": "https://issuer.partner/v2",
+    "audience": "checkout-web",
+    "kid": "partner-unknown",
+    "expected": "deny"
+  }
+]

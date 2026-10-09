@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "catalog-slug-adapter"
+version = "1.7.3"
+description = "Stable catalogue slug keys for ingestion jobs"
+requires-python = ">=3.10"
+dependencies = [
+  "python-slugify>=8.0.0,<9.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

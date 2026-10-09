@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-236",
+  "gate_clock_epoch": 1776382400,
+  "events": [
+    {
+      "site_id": "site-a",
+      "event_id": "dr-88",
+      "dispatched": true,
+      "opted_out": false,
+      "telemetry_spike": false
+    },
+    {
+      "site_id": "site-b",
+      "event_id": "dr-88",
+      "dispatched": false,
+      "opted_out": false,
+      "telemetry_spike": true
+    },
+    {
+      "site_id": "site-c",
+      "event_id": "dr-88",
+      "dispatched": true,
+      "opted_out": true,
+      "telemetry_spike": false
+    },
+    {
+      "site_id": "site-a",
+      "event_id": "dr-88",
+      "dispatched": true,
+      "opted_out": false,
+      "telemetry_spike": false
+    },
+    {
+      "site_id": "site-d",
+      "event_id": "",
+      "dispatched": true,
+      "opted_out": false,
+      "telemetry_spike": false
+    },
+    {
+      "site_id": "site-e",
+      "event_id": "dr-88",
+      "dispatched": true,
+      "opted_out": false,
+      "telemetry_spike": true
+    },
+    {
+      "site_id": "site-f",
+      "event_id": "dr-88",
+      "dispatched": false,
+      "opted_out": false,
+      "telemetry_spike": false
+    }
+  ]
+}

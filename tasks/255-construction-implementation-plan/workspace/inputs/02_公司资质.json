@@ -1,0 +1,30 @@
+{
+  "available_resources": {
+    "commissioning_engineers": 4,
+    "installation_teams": 3,
+    "test_instruments": 6
+  },
+  "bidder": "澄岳工程技术有限公司（虚构）",
+  "credit_code": "SYNTHETIC-91310000-XQ017",
+  "synthetic_notice": "全部实体与证书编号均为虚构，仅用于环境测试。",
+  "team": [
+    {
+      "credential": "合成注册证 XQ-JZ-0418",
+      "name": "林致远",
+      "role": "项目经理",
+      "years": 8
+    },
+    {
+      "credential": "合成高级工程师证 XQ-GJ-1120",
+      "name": "何沐言",
+      "role": "技术负责人",
+      "years": 10
+    },
+    {
+      "credential": "合成安全证 XQ-AQ-0731",
+      "name": "周芮",
+      "role": "安全负责人",
+      "years": 7
+    }
+  ]
+}

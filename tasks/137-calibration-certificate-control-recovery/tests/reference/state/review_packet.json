@@ -1,0 +1,13 @@
+{
+  "external_actions_executed": false,
+  "handoff_sha256": "918fca753c1a38e9397332d2febeacb6568456303b716ddb9127ae854f92224d",
+  "recovery_id": "MCR-20260815-01",
+  "review_token": "59e40696762893d9a22abf0e4df4e8bd711c0360ad83239fd7e0f4a217848190",
+  "schema_version": 1,
+  "semantic_db_digest": "b0894e38c67d5c5d65913c75e9d9256383d7bdfdecfd33839d9f4ec3311e360c",
+  "semantic_plan_digest": "2f724c521caecad2ae1c8059ba23f6d5ed52ed09512ae313267bd2f3fe8a0987",
+  "source_checkpoint": "818bf2e4779c56843a475f0305e5761f2cf24a824a797e8c9a610d92a50485ea",
+  "stage_boundary": "offline_quality_review_only",
+  "status": "staged_offline_review",
+  "verification_sha256": "23449a7a029d6e72f681e87f3a7122fdbde5b89da5b8bba2a4c2af0e89492917"
+}

@@ -1,0 +1,61 @@
+task_id: 104-datacite-version-graph
+title: Repair a dataset DOI version graph and its citation relations
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Research
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- analysis
+- database
+- error_recovery
+harness_demands:
+- state_management
+- multi_step_execution
+- evidence_grounding
+stressors:
+- long_horizon
+- conflicting_evidence
+required_artifacts:
+- repository.db
+- migration.sql
+- graph_validation.json
+- version_decision.md
+- .repository_stage_state.json
+- repository_stage_receipt.json
+task_family: 104-datacite-version-graph
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - RE-05
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - migration.sql
+  - graph_validation.json
+  - version_decision.md
+  - repository_stage_receipt.json
+  allowed_modified:
+  - repository.db
+  - .repository_stage_state.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

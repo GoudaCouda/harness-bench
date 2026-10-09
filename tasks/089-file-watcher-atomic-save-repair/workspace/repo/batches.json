@@ -1,0 +1,36 @@
+[
+  {
+    "seq": 41,
+    "events": [
+      {"kind": "change", "path": "config/.app.json.tmp"},
+      {"kind": "rename", "path": "config/app.json"},
+      {"kind": "change", "path": "config/app.json"},
+      {"kind": "change", "path": "config/app.json"}
+    ],
+    "snapshot": {
+      "config/.app.json.tmp": {"type": "file", "inode": 220, "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+      "config/app.json": {"type": "file", "inode": 221, "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+      "config/limits.yaml": {"type": "file", "inode": 102, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+      "rules/legacy.json": {"type": "file", "inode": 103, "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}
+    }
+  },
+  {
+    "seq": 42,
+    "events": [{"kind": "rename", "path": null}],
+    "snapshot": {
+      "config/app.json": {"type": "file", "inode": 221, "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+      "config/limits.yaml": {"type": "file", "inode": 302, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+      "rules/new.json": {"type": "file", "inode": 303, "digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"},
+      "notes/readme.md": {"type": "file", "inode": 400, "digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"}
+    }
+  },
+  {
+    "seq": 43,
+    "events": [{"kind": "rename", "path": "rules/new.json"}],
+    "snapshot": {
+      "config/app.json": {"type": "file", "inode": 221, "digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"},
+      "config/limits.yaml": {"type": "file", "inode": 302, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+      "rules/new.json": {"type": "symlink", "inode": null, "digest": null}
+    }
+  }
+]

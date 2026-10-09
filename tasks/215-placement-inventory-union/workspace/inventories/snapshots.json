@@ -1,0 +1,56 @@
+{
+  "cluster_id": "ridgepeak-0321",
+  "gate_clock_epoch": 1774083600,
+  "limit": 4,
+  "started": [
+    {
+      "region_id": "r1",
+      "status": "started",
+      "source": "started"
+    },
+    {
+      "region_id": "r2",
+      "status": "started",
+      "source": "started"
+    },
+    {
+      "region_id": "r4",
+      "status": "tombstone",
+      "source": "started"
+    },
+    {
+      "region_id": "r5",
+      "status": "started",
+      "source": "started"
+    }
+  ],
+  "waiting": [
+    {
+      "region_id": "r2",
+      "status": "waiting",
+      "source": "waiting"
+    },
+    {
+      "region_id": "r3",
+      "status": "waiting",
+      "source": "waiting"
+    },
+    {
+      "region_id": "r6",
+      "status": "waiting",
+      "source": "waiting"
+    }
+  ],
+  "running": [
+    {
+      "region_id": "r1",
+      "status": "running",
+      "source": "running"
+    },
+    {
+      "region_id": "r3",
+      "status": "running",
+      "source": "running"
+    }
+  ]
+}

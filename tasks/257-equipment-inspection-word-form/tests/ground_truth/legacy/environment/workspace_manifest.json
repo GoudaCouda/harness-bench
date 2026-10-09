@@ -1,0 +1,18 @@
+{
+  "schema_version": "case03_workspace_manifest_v1",
+  "expected_root_directories": [
+    "input",
+    "output",
+    "task",
+    "tools"
+  ],
+  "initial_state_sha256": "b9f447eb819f1cb8e10474cd7273e00ce4fb50da0172d9bf380221fc9c90f17f",
+  "protected_file_sha256": {
+    "input/equipment_registry.json": "ad6e94677c58e4dbc5e861391e444579a3ce61eae8588892c2556ff372943b63",
+    "input/hospital_header.json": "c0e1ea3a253243e54bd701de893cd708a050b17037a345cced2c9ed9389485cf",
+    "input/inspection_standard.json": "8c65eb6cc1b2fd387c777ecd98676f5160725d68f13103a18892670e16953858",
+    "task/instruction.md": "1e725a8a8b33bb5ecdec02df2bc494f915341864abeed2b38df8d6a2f7b7a468",
+    "tools/docx_writer.py": "4d294b46503eb4fd6c739b32fa0918ffbcd184cc0fe16546781ba0f243568029",
+    "tools/tool_contract.json": "319667edf4ae0ba05dccb3e479a664600f26f587161db4553d5afd72213e958f"
+  }
+}

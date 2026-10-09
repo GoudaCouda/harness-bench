@@ -1,0 +1,64 @@
+task_id: 131-journal-cursor-resume-repair
+title: Recover a journal projection after a stale cursor crash
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+difficulty: hard
+capability_tags:
+- filesystem
+- sqlite
+- event_replay
+- incident_recovery
+- verification
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- verification_behavior
+- state_management
+stressors:
+- stale_checkpoint
+- duplicate_delivery
+- exact_once_projection
+- crash_recovery
+required_artifacts:
+- repo/state/projection.db
+- repo/out/recovery_receipt.json
+- repo/RECOVERY_HANDOFF.md
+task_family: journal-projection-crash-recovery
+variant: stale-cursor-ledger-ahead
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+hooks_module: environment/hooks.py
+mutation_contract:
+  allowed_created:
+  - repo/state/
+  - repo/state/projection.db
+  - repo/out/
+  - repo/out/recovery_receipt.json
+  - repo/RECOVERY_HANDOFF.md
+  allowed_modified:
+  - repo/state/projection.db
+  - repo/out/recovery_receipt.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

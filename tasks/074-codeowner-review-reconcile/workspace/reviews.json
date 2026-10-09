@@ -1,0 +1,10 @@
+[
+  {"reviewer": "paya", "teams": ["payments"], "sha": "e4b201", "state": "approved"},
+  {"reviewer": "platb", "teams": ["platform"], "sha": "old100", "state": "approved", "paths": ["src/payments/generated/*"]},
+  {"reviewer": "srec", "teams": ["sre"], "sha": "e4b201", "state": "changes_requested"},
+  {"reviewer": "doca", "teams": ["payments-docs"], "sha": "e4b201", "state": "approved"},
+  {"reviewer": "seca", "teams": ["security"], "sha": "e4b201", "state": "approved"},
+  {"reviewer": "rela", "teams": ["release"], "sha": "e4b201", "state": "dismissed"},
+  {"reviewer": "platd", "teams": ["platform"], "sha": "e4b201", "state": "approved", "paths": ["src/shared/logging.py"]},
+  {"reviewer": "cia", "teams": ["ci"], "sha": "e4b201", "state": "approved"}
+]

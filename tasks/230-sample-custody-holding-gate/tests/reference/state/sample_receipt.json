@@ -1,0 +1,19 @@
+{
+  "stream_id": "harborwatch-230",
+  "gate_clock_epoch": 1775864000,
+  "counts": {
+    "recorded": 2,
+    "conflict": 3,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "sm1",
+    "sm6"
+  ],
+  "conflict_ids": [
+    "sm2",
+    "sm3",
+    "sm7"
+  ],
+  "state": "gated"
+}

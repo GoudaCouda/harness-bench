@@ -1,0 +1,43 @@
+task_id: 059-offline-knowledge-qa-insufficient-evidence
+title: Offline Knowledge QA with Explicit Unanswerable Detection
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: medium
+domain: Research
+task_category: Research and Analysis
+task_subcategory: Evidence-Based Research
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- dirty_input
+required_artifacts:
+- answers.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-059
+task_family: 059-offline-knowledge-qa-insufficient-evidence
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - answers.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []

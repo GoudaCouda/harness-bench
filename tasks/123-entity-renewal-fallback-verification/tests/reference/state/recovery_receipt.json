@@ -1,0 +1,13 @@
+{
+  "bank_information_collected": false,
+  "external_actions_executed": false,
+  "renewal_id": "VRR-20260819-01",
+  "schema_version": 1,
+  "semantic_db_digest": "db3fd0ec99c5e3a608e965973fb4b830c867c40004b9ce34a86a1a9f6a57e0a2",
+  "semantic_plan_digest": "eda2698413b4e7b78ef45359ef976e47c618b0be5b051f5475cf403c1cd77012",
+  "source_checkpoint": "4b8c420eed11ac954df5b93936866e82460dbcdef90a640d36f24f5c9aa7fb9b",
+  "stage_boundary": "local_only_pending_vendor_compliance_review",
+  "stage_token": "6a16c44321fc46de722070330001b07ae6d7dce4636ddd536de6745f28ebe36b",
+  "status": "staged_pending_review",
+  "verification_hash": "610e8fe2a73ee8188a6f9853a1512211e17b8ee33baf28497f09a2d8492e86b9"
+}

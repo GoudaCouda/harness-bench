@@ -1,0 +1,9 @@
+{
+  "cdc_batch.jsonl": "b9dff8681699fc32c0d970a28c63639fc5b0a98d799e9189e24d3898053afcfb",
+  "cdcctl.py": "e4231806408139edc7de5f9b7a3abcd724b64bc86fea72bef2a4d569f830a31d",
+  "initial_warehouse.json": "235906c9965366bb920b40637281b558f2f4e68dd22fd72497245555219f20c5",
+  "recovery_policy.md": "c6ca82c2d4b0426d08c282550d4ac1afed1a6ca296f7ff732ee7cd9349090314",
+  "retention_holds.csv": "ce882d130f97a91fb89a5566761846073b83bc4eade768f4ee4d0aed938bd7db",
+  "schema_registry.json": "39b15c3a377bb67da6075e5c1fb86c69feb247d512b79f06b3fe235348864780",
+  "signed_corrections.json": "f095257c69a9ce4b067fb6236fef60b0bce9e4ebcadb6ed5011476ddd7e08221"
+}

@@ -1,0 +1,53 @@
+{
+  "initial_state_sha256": "e126f5d988b78e79dec10ed7e811ed213daa17a360bf5abe176a89ebb109038a",
+  "input_tree_sha256": "1f739a42b854e1a382845003029dd672d864f776b6493244b41a5ece485ef5e4",
+  "manifest": {
+    "entrypoint": "scripts/main.py",
+    "files": [
+      {
+        "path": "SKILL.md",
+        "sha256": "cec9631d2ce2990a409b9f475cb353b61a3908a90b1af4c410ee34b366f8cfae",
+        "size_bytes": 423
+      },
+      {
+        "path": "assets/template.txt",
+        "sha256": "4404e1bf6d37027e69f6eb375b0b95f8c810463fe562e44ce9b3cf3d8b37be73",
+        "size_bytes": 75
+      },
+      {
+        "path": "scripts/main.py",
+        "sha256": "53f25a88e11c38766b939d28a5d4fdab558e8d1ed91f00aa7f998292383ef921",
+        "size_bytes": 623
+      }
+    ],
+    "package_name": "calendar_briefing_skill",
+    "schema_version": "skill_package_manifest_v1",
+    "version": "1.2.0"
+  },
+  "manifest_sha256": "abe55284dfc9f85c7925d64869d2f0c93f4964c9a1e7c3af9108d722f9e64f19",
+  "payloads": {
+    "SKILL.md": {
+      "sha256": "cec9631d2ce2990a409b9f475cb353b61a3908a90b1af4c410ee34b366f8cfae",
+      "size_bytes": 423
+    },
+    "assets/template.txt": {
+      "sha256": "4404e1bf6d37027e69f6eb375b0b95f8c810463fe562e44ce9b3cf3d8b37be73",
+      "size_bytes": 75
+    },
+    "scripts/main.py": {
+      "sha256": "53f25a88e11c38766b939d28a5d4fdab558e8d1ed91f00aa7f998292383ef921",
+      "size_bytes": 623
+    }
+  },
+  "runtime_output": {
+    "item_count": 3,
+    "items": [
+      "核对今日会议材料",
+      "整理客户回访事项",
+      "发送团队日程简报"
+    ],
+    "schema_version": "calendar_briefing_result_v1"
+  },
+  "schema_version": "case19_expected_contract_v1",
+  "task_sha256": "3d34c7d1371e3eeca7b73045e50bac86763560624bc2f52ee4f7d6d295a232cc"
+}

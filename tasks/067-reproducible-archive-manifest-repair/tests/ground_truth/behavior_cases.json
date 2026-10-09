@@ -1,0 +1,18 @@
+{
+  "canonical": [
+    {"entries":[{"path":"x/out/b","kind":"file","sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","executable":false,"mtime":2},{"path":"x/out/a","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","executable":true,"mtime":1}],"source_date_epoch":1700000001,"build_root":"x/out"},
+    {"entries":[{"path":"one/root/dir","kind":"dir","sha256":null,"executable":false,"mtime":99},{"path":"one/root/dir/f","kind":"file","sha256":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef","executable":false,"mtime":3}],"source_date_epoch":315532799,"build_root":"one/root"}
+  ],
+  "root_and_time": [
+    {"entries":[{"path":"agent-a/build/f","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","executable":false,"mtime":5}],"source_date_epoch":1700000000,"build_root":"agent-a/build"},
+    {"entries":[{"path":"agent-b/build/f","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","executable":false,"mtime":999}],"source_date_epoch":1700000000,"build_root":"agent-b/build"},
+    {"entries":[],"source_date_epoch":4354819198,"build_root":"b"}
+  ],
+  "invalid": [
+    {"entries":[],"source_date_epoch":true,"build_root":"b"},
+    {"entries":[],"source_date_epoch":4354819199,"build_root":"b"},
+    {"entries":[{"path":"b/../x","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","executable":false,"mtime":1}],"source_date_epoch":1700000000,"build_root":"b"},
+    {"entries":[{"path":"b/x","kind":"file","sha256":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","executable":false,"mtime":1}],"source_date_epoch":1700000000,"build_root":"b"},
+    {"entries":[{"path":"b/x","kind":"dir","sha256":null,"executable":false,"mtime":1},{"path":"b/x","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","executable":false,"mtime":1}],"source_date_epoch":1700000000,"build_root":"b"}
+  ]
+}

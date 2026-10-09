@@ -1,0 +1,35 @@
+{
+  "safe": [
+    {
+      "entries": [
+        {"path": "pkg", "type": "dir", "size": 0},
+        {"path": "pkg/a.bin", "type": "file", "size": 100},
+        {"path": "pkg/b.bin", "type": "file", "size": 100}
+      ],
+      "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 100, "max_total_bytes": 200, "allowed_types": ["dir", "file"]}
+    },
+    {
+      "entries": [
+        {"path": "Readme", "type": "file", "size": 1},
+        {"path": "README", "type": "file", "size": 1}
+      ],
+      "policy": {"case_sensitive": true, "max_files": 2, "max_file_bytes": 2, "max_total_bytes": 2, "allowed_types": ["file", "dir"]}
+    },
+    {
+      "entries": [],
+      "policy": {"case_sensitive": false, "max_files": 1, "max_file_bytes": 1, "max_total_bytes": 1, "allowed_types": ["file", "dir"]}
+    }
+  ],
+  "unsafe": [
+    {"entries": [{"path": "../x", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "C:/x", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "pkg\\x", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "pkg/link", "type": "symlink", "size": 0}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "pkg/A", "type": "file", "size": 1}, {"path": "pkg/a", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "pkg", "type": "file", "size": 1}, {"path": "pkg/a", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "a", "type": "file", "size": 11}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "a", "type": "file", "size": true}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "a", "type": "file", "size": 6}, {"path": "b", "type": "file", "size": 6}], "policy": {"case_sensitive": false, "max_files": 2, "max_file_bytes": 10, "max_total_bytes": 10, "allowed_types": ["file", "dir"]}},
+    {"entries": [{"path": "a", "type": "file", "size": 1}], "policy": {"case_sensitive": false, "max_files": true, "max_file_bytes": 10, "max_total_bytes": 20, "allowed_types": ["file", "dir"]}}
+  ]
+}

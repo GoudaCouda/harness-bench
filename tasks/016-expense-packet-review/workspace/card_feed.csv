@@ -1,0 +1,10 @@
+card_txn_id,employee,posted_date,merchant,amount,currency
+C-1001,Mina Patel,2026-07-12,Northwind Air,420.00,USD
+C-1002,Mina Patel,2026-07-15,Spree Hotel,748.00,USD
+C-1003,Mina Patel,2026-07-14,Conference Bistro,92.00,USD
+C-1004,Mina Patel,2026-07-14,Spree Hotel Minibar,38.00,USD
+C-1005,Mina Patel,2026-07-16,Deutsche Bahn,80.00,EUR
+C-1006,Mina Patel,2026-07-16,Northwind Air,250.00,USD
+C-1007,Mina Patel,2026-07-17,Spree Airport Hotel,330.00,USD
+C-1008,Zoe King,2026-07-14,Harbor Grill,120.00,USD
+C-1009,Mina Patel,2026-07-15,Berlin Taxi,45.00,USD

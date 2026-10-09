@@ -1,0 +1,22 @@
+{
+  "external_actions_executed": false,
+  "items": [
+    {
+      "action": "review_for_posting",
+      "amount_cents": 20000,
+      "po_id": "PO-1001"
+    },
+    {
+      "action": "review_for_posting",
+      "amount_cents": 8120,
+      "po_id": "PO-1002"
+    },
+    {
+      "action": "review_for_posting",
+      "amount_cents": 15000,
+      "po_id": "PO-1005"
+    }
+  ],
+  "recovery_id": "EDI-RCV-20260819-01",
+  "schema_version": 1
+}

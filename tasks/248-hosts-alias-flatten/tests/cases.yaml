@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 248-hosts-alias-flatten
+pass_threshold: 0.8
+cases:
+- id: flattened_records
+  title: Alias chains flatten to IPv4
+  description: hosts_flat.json records equal the independent kernel.
+  weight: 0.5
+  core: true
+- id: loop_names
+  title: Cyclic names are listed and not recorded
+  description: The loops list matches the kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain alias, loop, and risk
+  description: FLATTEN_NOTES.md covers alias, loop, flatten, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected hosts remain unchanged
+  description: hosts.json stays byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

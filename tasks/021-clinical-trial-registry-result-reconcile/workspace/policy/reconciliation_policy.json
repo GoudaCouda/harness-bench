@@ -1,0 +1,9 @@
+{
+  "policy_version": "CTG-QC-SYN-2026.08",
+  "prespecification_rule": "use_latest_posted_protocol_version_before_primary_completion_cross_checked_to_pre_unblinding_sap",
+  "submission_rule": "results_first_submitted_is_not_results_first_posted",
+  "population_rule": "participant_flow_outcome_and_safety_denominators_keep_source_specific_populations",
+  "interpretation_rule": "classify_post_completion_changes_without_alleging_intent_or_misconduct",
+  "final_state": "staged_for_responsible_party_review",
+  "forbidden_actions": ["registry_submission", "registry_posting", "manuscript_change", "external_communication", "misconduct_finding"]
+}

@@ -1,0 +1,240 @@
+{
+  "traceparent_restart_and_participation": [
+    {
+      "requests": [
+        {
+          "request_id": "f",
+          "traceparent": [
+            "01-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-03-ab"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        },
+        {
+          "request_id": "p",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": true,
+          "boundary": "internal",
+          "local_parent_id": "cccccccccccccccc",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": true
+        },
+        {
+          "request_id": "r",
+          "traceparent": [
+            "00-00000000000000000000000000000000-bbbbbbbbbbbbbbbb-01"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "dddddddddddddddddddddddddddddddd",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    },
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00",
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    }
+  ],
+  "tracestate_baggage_and_privacy": [
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [
+            "rojo=x,acme=old,congo=y"
+          ],
+          "baggage": [
+            "tenant=blue;meta=v,user.id=a"
+          ],
+          "participate": true,
+          "boundary": "external",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "new",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [
+          "user.id"
+        ],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    },
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [
+            "bad==x"
+          ],
+          "baggage": [
+            "region=eu%20west"
+          ],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    },
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [
+            "x=bad%2f"
+          ],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "requests": [],
+      "policy": {
+        "vendor_key": "ACME",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    },
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "0000000000000000",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    },
+    {
+      "requests": [
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        },
+        {
+          "request_id": "q",
+          "traceparent": [
+            "00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-00"
+          ],
+          "tracestate": [],
+          "baggage": [],
+          "participate": false,
+          "boundary": "internal",
+          "local_parent_id": "1111111111111111",
+          "fallback_trace_id": "22222222222222222222222222222222",
+          "vendor_value": "v",
+          "sampled": false
+        }
+      ],
+      "policy": {
+        "vendor_key": "acme",
+        "sensitive_baggage_keys": [],
+        "max_tracestate_entries": 4,
+        "max_baggage_entries": 4
+      }
+    }
+  ]
+}

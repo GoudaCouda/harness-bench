@@ -1,0 +1,41 @@
+task_id: 023-oauth-refresh-race-recovery
+title: Recover OAuth refresh-token rotation after concurrent requests
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [concurrent_responses, token_rotation, stale_generations, replay_signal, fail_closed_state]
+required_artifacts:
+- repo/src/refresh_recovery.py
+- repo/reconciliation_report.json
+- repo/RECOVERY_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [OAUTH-RFC6749, OAUTH-SECURITY-RFC9700]
+task_family: oauth-refresh-race-recovery
+variant: rotation-race-and-replay-signal
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/reconciliation_report.json, repo/RECOVERY_NOTES.md]
+  allowed_modified: [repo/src/refresh_recovery.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    json: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

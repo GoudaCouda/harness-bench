@@ -1,0 +1,34 @@
+[
+  {
+    "job_id": "load-cache",
+    "deps": [],
+    "priority": 10
+  },
+  {
+    "job_id": "compile-core",
+    "deps": [
+      "load-cache"
+    ],
+    "priority": 5
+  },
+  {
+    "job_id": "compile-ui",
+    "deps": [
+      "load-cache"
+    ],
+    "priority": 5
+  },
+  {
+    "job_id": "link-all",
+    "deps": [
+      "compile-core",
+      "compile-ui"
+    ],
+    "priority": 1
+  },
+  {
+    "job_id": "notify-ops",
+    "deps": [],
+    "priority": 5
+  }
+]

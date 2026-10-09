@@ -1,0 +1,3 @@
+region_id,region_name,contract_id,service_tier,active
+SYN-REGION-QH2,青河二区（合成）,SYN-SLA-7306,mission_critical,true
+SYN-REGION-LN4,岭南四区（合成）,SYN-SLA-7306,standard,true

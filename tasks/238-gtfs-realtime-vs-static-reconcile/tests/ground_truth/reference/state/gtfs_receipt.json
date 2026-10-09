@@ -1,0 +1,19 @@
+{
+  "stream_id": "harborline-238",
+  "gate_clock_epoch": 1776468800,
+  "counts": {
+    "recorded": 2,
+    "conflict": 3,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "e1",
+    "e7"
+  ],
+  "conflict_ids": [
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "state": "gated"
+}

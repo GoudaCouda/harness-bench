@@ -1,0 +1,50 @@
+{
+  "events": [
+    {
+      "at": 1,
+      "epoch": 1,
+      "id": "e1",
+      "kind": "receive",
+      "payload_hash": "a",
+      "producer": "p",
+      "seq": 1
+    },
+    {
+      "at": 2,
+      "epoch": 1,
+      "id": "e2",
+      "kind": "receive",
+      "payload_hash": "a",
+      "producer": "p",
+      "seq": 1
+    },
+    {
+      "at": 3,
+      "epoch": 1,
+      "id": "t",
+      "kind": "tombstone",
+      "payload_hash": "t",
+      "producer": "p",
+      "seq": 2
+    },
+    {
+      "at": 4,
+      "epoch": 1,
+      "id": "late",
+      "kind": "receive",
+      "payload_hash": "b",
+      "producer": "p",
+      "seq": 2
+    },
+    {
+      "at": 5,
+      "epoch": 2,
+      "id": "new",
+      "kind": "receive",
+      "payload_hash": "c",
+      "producer": "p",
+      "seq": 1
+    }
+  ],
+  "policy": {}
+}

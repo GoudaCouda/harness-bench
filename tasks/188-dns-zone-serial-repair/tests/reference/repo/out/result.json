@@ -1,0 +1,35 @@
+{
+  "blocked": 0,
+  "decisions": [
+    {
+      "action": "apply",
+      "epoch": 2,
+      "id": "epoch",
+      "reason": "new_primary_epoch",
+      "serial": 1,
+      "zone": "example"
+    },
+    {
+      "action": "ignore",
+      "epoch": 1,
+      "id": "old",
+      "reason": "older_serial",
+      "serial": 4294967290,
+      "zone": "example"
+    },
+    {
+      "action": "apply",
+      "epoch": 1,
+      "id": "wrap",
+      "reason": "newer_serial",
+      "serial": 3,
+      "zone": "example"
+    }
+  ],
+  "zones": {
+    "example": {
+      "epoch": 2,
+      "serial": 1
+    }
+  }
+}

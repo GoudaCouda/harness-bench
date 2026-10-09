@@ -1,0 +1,9 @@
+{
+  "external_actions_executed": false,
+  "packet_sha256": "b72acb691a2ca9d449bed1369e2dfcdaa421cd6708888c5750dae6da1ca94091",
+  "recovery_id": "PAR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "617e1e5fed5b00a50d8c0f45842f4a532bae38b3b704b333cdacf013e17d62ab",
+  "semantic_state_digest": "e150c604e2a65196aca42283f54c49a0473a5ce2ece703cf65480ea852bfb651",
+  "source_checkpoint": "ef9c34a3268e60e29e1eeb973dc9168cb4447de155a829889a578038b7b99ecb"
+}

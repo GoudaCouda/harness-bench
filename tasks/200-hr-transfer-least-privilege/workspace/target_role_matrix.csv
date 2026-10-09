@@ -1,0 +1,8 @@
+target_role,system,required_entitlements,forbidden_entitlements,approval_owner
+Support Specialist II,source_control,repo_read|issues_write,repo_admin,scm_owner
+Support Specialist II,finance,expense_submit,payment_admin,finance_control
+Support Specialist II,support,ticket_agent,ticket_admin,support_owner
+Support Specialist II,analytics,dashboard_view,dataset_owner,analytics_owner
+Support Specialist II,vpn,vpn_standard,vpn_privileged,network_security
+Support Specialist II,crm,customer_profile_read,,crm_owner
+Support Specialist II,legacy_hr,,payroll_export,hris_owner

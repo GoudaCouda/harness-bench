@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Reference Rebuild</title>
+    <style>
+      :root { color: #172026; background: #f6f7f4; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; } body { margin: 0; }
+      main { width: min(1180px, calc(100vw - 32px)); margin: 0 auto; padding: 24px 0 40px; }
+      header, .controls, .metrics, .workspace, .focus { margin-bottom: 18px; } h1,h2,p { margin: 0; }
+      header { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+      .eyebrow { color: #637071; font-size: .78rem; font-weight: 700; text-transform: uppercase; } h1 { font-size: 2rem; margin-top: 4px; }
+      .controls, .metrics, .workspace, .focus-list { display: grid; gap: 12px; }
+      .controls { grid-template-columns: repeat(5, minmax(130px, 1fr)); align-items: end; background: #fff; border: 1px solid #d8dedb; border-radius: 8px; padding: 14px; }
+      label { display: grid; gap: 6px; color: #435052; font-size: .82rem; font-weight: 700; }
+      select,input,button { min-height: 38px; border: 1px solid #aeb9b6; border-radius: 6px; background: #fff; color: #172026; font: inherit; padding: 8px 10px; }
+      button { cursor: pointer; font-weight: 800; } button.active, button[aria-pressed="true"] { border-color: #255f68; background: #e4f1f0; } :focus-visible { outline: 3px solid #255f68; outline-offset: 2px; }
+      .metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); } .workspace { grid-template-columns: minmax(240px,.9fr) minmax(280px,1.1fr); }
+      .metric,.panel,.record,.focus-card { border: 1px solid #d8dedb; border-radius: 8px; background: #fff; } .metric,.panel,.focus { padding: 14px; }
+      .metric span,.fact span { color: #637071; font-size: .78rem; font-weight: 700; } .metric strong { display:block; margin-top:5px; font-size:1.45rem; }
+      .list,.focus-list { display:grid; gap:8px; } .record { width:100%; text-align:left; display:grid; gap:4px; } .record small,.focus-card small { color:#637071; }
+      .detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; } .fact { border:1px solid #d8dedb; border-radius:6px; padding:10px; }
+      .focus { border:1px solid #d8dedb; border-radius:8px; background:#fff; } .focus-list { grid-template-columns:repeat(2,minmax(0,1fr)); } .focus-card { padding:10px; }
+      @media (max-width:760px) { main { width:min(100vw - 20px,560px); padding-top:12px; } header,.controls,.metrics,.workspace,.focus-list { grid-template-columns:1fr; display:grid; } h1 { font-size:1.45rem; } }
+      @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto !important; } }
+    </style>
+  </head>
+  <body>
+    <main aria-label="portfolio reference rebuild">
+      <header><div><p class="eyebrow">portfolio handoff</p><h1>Portfolio Reference Rebuild</h1><p>portfolio reference rebuild with hero, portfolio grid, case study, project narrative, theme preview, featured work.</p></div><strong>Hero narrative</strong></header>
+      <section class="controls" aria-label="Local portfolio controls">
+        <label>Project type<select id="filter" aria-label="Project type"><option value="all">All projects</option>            <option value="analytics">analytics</option>
+            <option value="systems">systems</option>
+            <option value="research">research</option>
+            <option value="commerce">commerce</option></select></label>
+        <label>Theme mode<select id="mode" aria-label="Theme mode"><option value="baseline">Baseline</option><option value="portfolio-review">portfolio-review</option><option value="focused">Focused</option></select></label>
+        <label>Project search<input id="search" aria-label="Project search" placeholder="ID, owner, or name" /></label>
+        <label>Hero emphasis<input id="range" type="range" min="0" max="100" value="50" aria-label="Hero emphasis" /></label>
+        <button id="toggle" type="button" aria-pressed="false">Featured only</button>
+      </section>
+      <section class="metrics" aria-label="Derived portfolio metrics">
+        <article class="metric"><span>Impact score</span><strong id="metric0"></strong><small id="visibleCount"></small></article>
+        <article class="metric"><span>Delivery weeks</span><strong id="metric1"></strong><small>Average from visible records</small></article>
+        <article class="metric"><span>Case study count</span><strong id="metric2"></strong><small>Focus count</small></article>
+        <article class="metric"><span>Hero narrative</span><strong id="metric3"></strong><small id="modeReadout"></small></article>
+      </section>
+      <section class="workspace" aria-label="portfolio workspace"><section class="panel" aria-label="project list"><p class="eyebrow">Visible projects</p><h2>portfolio reference rebuild</h2><div id="records" class="list"></div></section><aside class="panel" aria-label="Selected project inspector"><p class="eyebrow">Selected project</p><h2 id="detailName"></h2><p id="detailSummary"></p><div class="detail-grid"><div class="fact"><span>Category</span><strong id="detailCategory"></strong></div><div class="fact"><span>Owner</span><strong id="detailOwner"></strong></div><div class="fact"><span>Impact score</span><strong id="detailPrimary"></strong></div><div class="fact"><span>Delivery weeks</span><strong id="detailSecondary"></strong></div></div></aside></section>
+      <section class="focus" aria-label="Featured work"><p class="eyebrow">Featured only</p><h2>Featured work</h2><div id="focus" class="focus-list"></div></section>
+    </main>
+    <script>
+      const records = [{"id": "PORT-HELIOS", "name": "Helios dashboard", "category": "analytics", "owner": "Lio Kane", "status": "clear", "primary": 92, "secondary": 88}, {"id": "PORT-ORBIT", "name": "Orbit service kit", "category": "systems", "owner": "Lio Kane", "status": "watch", "primary": 81, "secondary": 76}, {"id": "PORT-MARSH", "name": "Marshland field log", "category": "research", "owner": "Lio Kane", "status": "review", "primary": 74, "secondary": 69}, {"id": "PORT-VALE", "name": "Vale checkout repair", "category": "commerce", "owner": "Lio Kane", "status": "watch", "primary": 89, "secondary": 73}, {"id": "PORT-HELIOS-R1", "name": "Helios dashboard follow-up", "category": "systems", "owner": "Lio Kane", "status": "clear", "primary": 106, "secondary": 94}, {"id": "PORT-ORBIT-R2", "name": "Orbit service kit follow-up", "category": "research", "owner": "Lio Kane", "status": "watch", "primary": 98, "secondary": 83}, {"id": "PORT-MARSH-R3", "name": "Marshland field log follow-up", "category": "commerce", "owner": "Lio Kane", "status": "review", "primary": 94, "secondary": 77}, {"id": "PORT-VALE-R4", "name": "Vale checkout repair follow-up", "category": "analytics", "owner": "Lio Kane", "status": "watch", "primary": 112, "secondary": 82}, {"id": "PORT-ORBIT-X9", "name": "Orbit service kit scenario 9", "category": "systems", "owner": "Lio Kane", "status": "watch", "primary": 163, "secondary": 81}];
+      const state = { filter: 'all', mode: 'baseline', search: '', range: 50, toggle: false, selectedId: 'PORT-HELIOS' };
+      const $ = (id) => document.getElementById(id); const fmt = (v) => Number(v).toLocaleString('en-US');
+      function visibleRecords() { const query = state.search.trim().toLowerCase(); return records.filter(r => state.filter === 'all' || r.category === state.filter).filter(r => !query || `${r.id} ${r.name} ${r.owner} ${r.category}`.toLowerCase().includes(query)).filter(r => !state.toggle || r.status !== 'clear').sort((a,b) => b.primary - a.primary); }
+      function render() { const visible = visibleRecords(); const selected = records.find(r => r.id === state.selectedId) || visible[0] || records[0]; const multiplier = state.mode === 'portfolio-review' ? 1.18 : state.mode === 'focused' ? .9 : 1; const total = visible.reduce((s,r)=>s+r.primary,0); const avg = Math.round(visible.reduce((s,r)=>s+r.secondary,0)/Math.max(visible.length,1)); const focus = visible.filter(r=>r.status==='review'||r.status==='watch').length; const adjusted = Math.round(selected.primary*multiplier + Number(state.range)); $('metric0').textContent=fmt(total); $('visibleCount').textContent=`${visible.length} visible projects`; $('metric1').textContent=fmt(avg); $('metric2').textContent=fmt(focus); $('metric3').textContent=fmt(adjusted); $('modeReadout').textContent=`${state.mode} at Hero emphasis ${state.range}`; $('records').innerHTML=visible.map(r=>`<button type="button" class="record ${r.id===state.selectedId?'active':''}" data-id="${r.id}"><strong>${r.id} - ${r.name}</strong><small>${r.category} / ${r.owner} / ${r.status}</small></button>`).join(''); const focusRows=(state.toggle?visible:records).filter(r=>r.status==='review'||r.status==='watch'); $('focus').innerHTML=focusRows.map(r=>`<article class="focus-card"><strong>${r.id}</strong><small>${r.name} / ${r.owner} / ${r.status}</small></article>`).join(''); $('detailName').textContent=selected.name; $('detailSummary').textContent=`${selected.id} is ${selected.status} for ${selected.owner}. Workflow note: local review only.`; $('detailCategory').textContent=selected.category; $('detailOwner').textContent=selected.owner; $('detailPrimary').textContent=fmt(selected.primary); $('detailSecondary').textContent=fmt(selected.secondary); document.querySelectorAll('[data-id]').forEach(button=>button.addEventListener('click',()=>{ state.selectedId=button.getAttribute('data-id'); render(); })); }
+      $('filter').addEventListener('change', e=>{ state.filter=e.target.value; render(); }); $('mode').addEventListener('change', e=>{ state.mode=e.target.value; render(); }); $('search').addEventListener('input', e=>{ state.search=e.target.value; render(); }); $('range').addEventListener('input', e=>{ state.range=Number(e.target.value); render(); }); $('toggle').addEventListener('click',()=>{ state.toggle=!state.toggle; $('toggle').setAttribute('aria-pressed', String(state.toggle)); render(); }); render();
+    </script>
+  </body>
+</html>

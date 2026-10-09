@@ -1,0 +1,163 @@
+{
+  "accepted_count": 2,
+  "checks": {
+    "decisions": {
+      "complete_object_set": true,
+      "objects": {
+        "SMP-26-041": {
+          "evidence_categories": {
+            "custody_transfer": true,
+            "highest_authorized_alias": true,
+            "late_custody_signature": true,
+            "receipt_observation": true,
+            "registration": true,
+            "suite_rule": true
+          },
+          "fields": {
+            "accession_state": true,
+            "alias_version": true,
+            "analysis_suite": true,
+            "container_status": true,
+            "custody_status": true,
+            "evidence_refs": true,
+            "exact_schema": true,
+            "external_action": true,
+            "field_label": true,
+            "holding_time_status": true,
+            "local_mutations": true,
+            "matrix": true,
+            "next_local_action": true,
+            "preservation_status": true,
+            "receipt_event_id": true,
+            "receipt_temperature_c": true,
+            "received_at": true,
+            "resolved_lab_label": true,
+            "sample_id": true,
+            "temperature_status": true
+          }
+        },
+        "SMP-26-042": {
+          "evidence_categories": {
+            "custody_transfer": true,
+            "highest_authorized_alias": true,
+            "late_custody_signature": true,
+            "receipt_observation": true,
+            "registration": true,
+            "suite_rule": true
+          },
+          "fields": {
+            "accession_state": true,
+            "alias_version": true,
+            "analysis_suite": true,
+            "container_status": true,
+            "custody_status": true,
+            "evidence_refs": true,
+            "exact_schema": true,
+            "external_action": true,
+            "field_label": true,
+            "holding_time_status": true,
+            "local_mutations": true,
+            "matrix": true,
+            "next_local_action": true,
+            "preservation_status": true,
+            "receipt_event_id": true,
+            "receipt_temperature_c": true,
+            "received_at": true,
+            "resolved_lab_label": true,
+            "sample_id": true,
+            "temperature_status": true
+          }
+        },
+        "SMP-26-043": {
+          "evidence_categories": {
+            "custody_transfer": true,
+            "highest_authorized_alias": true,
+            "late_custody_signature": true,
+            "receipt_observation": true,
+            "registration": true,
+            "suite_rule": true
+          },
+          "fields": {
+            "accession_state": true,
+            "alias_version": true,
+            "analysis_suite": true,
+            "container_status": true,
+            "custody_status": true,
+            "evidence_refs": true,
+            "exact_schema": true,
+            "external_action": true,
+            "field_label": true,
+            "holding_time_status": true,
+            "local_mutations": true,
+            "matrix": true,
+            "next_local_action": true,
+            "preservation_status": true,
+            "receipt_event_id": true,
+            "receipt_temperature_c": true,
+            "received_at": true,
+            "resolved_lab_label": true,
+            "sample_id": true,
+            "temperature_status": true
+          }
+        },
+        "SMP-26-044": {
+          "evidence_categories": {
+            "custody_transfer": true,
+            "highest_authorized_alias": true,
+            "late_custody_signature": true,
+            "receipt_observation": true,
+            "registration": true,
+            "suite_rule": true
+          },
+          "fields": {
+            "accession_state": true,
+            "alias_version": true,
+            "analysis_suite": true,
+            "container_status": true,
+            "custody_status": true,
+            "evidence_refs": true,
+            "exact_schema": true,
+            "external_action": true,
+            "field_label": true,
+            "holding_time_status": true,
+            "local_mutations": true,
+            "matrix": true,
+            "next_local_action": true,
+            "preservation_status": true,
+            "receipt_event_id": true,
+            "receipt_temperature_c": true,
+            "received_at": true,
+            "resolved_lab_label": true,
+            "sample_id": true,
+            "temperature_status": true
+          }
+        }
+      }
+    },
+    "identity": {
+      "evidence_batch_id": true,
+      "external_analysis_started": true,
+      "notifications_sent": true,
+      "recovery_id": true,
+      "schema_version": true,
+      "source_checkpoint": true
+    },
+    "schema": {
+      "decisions_is_list": true,
+      "exact_top_level": true
+    }
+  },
+  "decision_count": 4,
+  "duplicate_events_collapsed": 1,
+  "external_analysis_started": false,
+  "notifications_sent": false,
+  "quarantined_count": 1,
+  "recovery_id": "LIMS-ACC-20260819-07",
+  "rejected_count": 1,
+  "schema_version": 1,
+  "semantic_plan_digest": "0260a4e8ec69f19bbee4e8fb2f8991e0c72cb2d586692624f59cb074e7884a05",
+  "signed_events_verified": true,
+  "source_bundle_valid": true,
+  "source_checkpoint": "7ad4e011a6c4bb6600c15ac12c634058af74448d9a3e27465a71e9af4fdf04e2",
+  "status": "valid"
+}

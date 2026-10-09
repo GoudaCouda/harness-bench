@@ -1,0 +1,1 @@
+{"active":["audit","bundle","core","export"],"generation":8,"registrations":[{"hook":"record-event","plugin":"audit"},{"hook":"publish-bundle","plugin":"bundle"},{"hook":"load-config","plugin":"core"},{"hook":"write-report","plugin":"export"}]}

@@ -1,0 +1,11 @@
+{"delivery_id": "D-001", "event_id": "EV-V02-3", "event_type": "operability_observation", "payload": {"operability": "stuck_open"}, "source_sequence": 3, "valve_id": "V-02"}
+{"delivery_id": "D-003", "event_id": "EV-V03-4", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 4, "valve_id": "V-03"}
+{"delivery_id": "D-002", "event_id": "EV-V02-3", "event_type": "operability_observation", "payload": {"operability": "stuck_open"}, "source_sequence": 3, "valve_id": "V-02"}
+{"delivery_id": "D-004", "event_id": "EV-V03-4", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 4, "valve_id": "V-03"}
+{"delivery_id": "D-051", "event_id": "EV-COLLIDE-04", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 5, "valve_id": "V-04"}
+{"delivery_id": "D-052", "event_id": "EV-COLLIDE-04", "event_type": "operability_observation", "payload": {"operability": "stuck_open"}, "source_sequence": 5, "valve_id": "V-04"}
+{"delivery_id": "D-061", "event_id": "EV-V06-A", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 8, "valve_id": "V-06"}
+{"delivery_id": "D-062", "event_id": "EV-V06-B", "event_type": "operability_observation", "payload": {"operability": "stuck_open"}, "source_sequence": 8, "valve_id": "V-06"}
+{"delivery_id": "D-091", "event_id": "EV-UNKNOWN", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 1, "valve_id": "V-99"}
+{"delivery_id": "D-011", "event_id": "EV-V01-OLD", "event_type": "operability_observation", "payload": {"operability": "stuck_open"}, "source_sequence": 1, "valve_id": "V-01"}
+{"delivery_id": "D-071", "event_id": "EV-V05-LOCKED", "event_type": "operability_observation", "payload": {"operability": "operable"}, "source_sequence": 7, "valve_id": "V-05"}

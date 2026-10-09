@@ -1,0 +1,39 @@
+{
+  "external_delivery": false,
+  "incident_id": "INC-8842",
+  "objects": [
+    {
+      "blob_id": "BLOB-MEM-17",
+      "order": 2,
+      "phase": "volatile",
+      "request_id": "ACQ-MEM-17",
+      "target_id": "ws-fin-17",
+      "target_type": "host"
+    },
+    {
+      "blob_id": "BLOB-ID-7",
+      "order": 3,
+      "phase": "identity",
+      "request_id": "ACQ-ID-7",
+      "target_id": "sess-7x",
+      "target_type": "session"
+    },
+    {
+      "blob_id": "BLOB-DUAL-8",
+      "order": 4,
+      "phase": "dual_use_context",
+      "request_id": "ACQ-DUAL-8",
+      "target_id": "ws-ops-08",
+      "target_type": "host"
+    },
+    {
+      "blob_id": "BLOB-DISK-17",
+      "order": 6,
+      "phase": "disk",
+      "request_id": "ACQ-DISK-17",
+      "target_id": "ws-fin-17",
+      "target_type": "host"
+    }
+  ],
+  "recovery_id": "IER-20260819-01"
+}

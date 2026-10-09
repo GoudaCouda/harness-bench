@@ -1,0 +1,63 @@
+{
+  "as_of_utc": "2026-08-15T18:00:00Z",
+  "asset_action_values": [
+    "release_local_status",
+    "quarantine_local_status",
+    "hold_local_status"
+  ],
+  "certificate_action_values": [
+    "affirm_valid",
+    "revoke_reference_recall",
+    "revoke_out_of_tolerance",
+    "hold_evidence_review"
+  ],
+  "event_rule": "deduplicate_event_id_then_apply_sequence; latest_measurement_correction_wins",
+  "evidence_rule": "signed_event_and_matching_attachment_sha256_required",
+  "guard_band_rule": "accept_when_abs_error_plus_expanded_uncertainty_lte_tolerance",
+  "measurement_decision_values": [
+    "accept",
+    "reject",
+    "not_evaluable"
+  ],
+  "plan_schema": {
+    "decision_fields": [
+      "job_id",
+      "asset_id",
+      "certificate_id",
+      "authoritative_result_id",
+      "reference_chain",
+      "traceability_status",
+      "error_abs",
+      "expanded_uncertainty",
+      "guard_band_margin",
+      "measurement_decision",
+      "certificate_action",
+      "asset_action",
+      "downstream_scope",
+      "local_mutations",
+      "evidence_refs"
+    ],
+    "set_fields": [
+      "reference_chain",
+      "downstream_scope",
+      "local_mutations",
+      "evidence_refs"
+    ],
+    "top_level_fields": [
+      "schema_version",
+      "recovery_id",
+      "source_checkpoint",
+      "decisions",
+      "external_actions_executed"
+    ]
+  },
+  "recovery_id": "MCR-20260815-01",
+  "reference_rule": "all_chain_standards_valid_at_calibration_unless_recall_affected_from_overrides",
+  "schema_version": 1,
+  "stage_boundary": "offline_quality_review_only",
+  "traceability_status_values": [
+    "traceable",
+    "untraceable",
+    "evidence_unavailable"
+  ]
+}

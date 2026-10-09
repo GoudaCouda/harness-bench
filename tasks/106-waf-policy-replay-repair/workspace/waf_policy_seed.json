@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "policy_id": "gateway-waf-2026-08",
+  "revision": 7,
+  "rules": {
+    "TRAVERSAL-930100": {"enabled": true, "path_prefix": "/download/", "decode_passes": 1, "block_status": 403},
+    "RCE-932100": {"enabled": true, "keywords": ["curl ", "wget ", "|", ";"], "fields": ["body.message", "body.command"], "block_status": 403},
+    "SQLI-942100": {"enabled": true, "keywords": [" or ", "union select", "--"], "decode_passes": 1, "block_status": 403},
+    "RATE-LOGIN-100": {"enabled": true, "method": "POST", "path": "/login", "window_seconds": 60, "threshold": 5, "key": "client_ip", "block_status": 429}
+  },
+  "exclusions": []
+}

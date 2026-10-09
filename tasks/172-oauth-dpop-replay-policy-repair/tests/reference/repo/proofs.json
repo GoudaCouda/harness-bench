@@ -1,0 +1,6 @@
+[
+  {"request_id":"accepted","typ":"dpop+jwt","alg":"ES256","public_jwk":true,"signature_verified":true,"htm":"GET","htu":"https://api.example.test/items","iat":990,"jti":"proof-a","jkt":"key-a","ath":"hash-a","nonce":"nonce-1"},
+  {"request_id":"bad-token","typ":"dpop+jwt","alg":"ES256","public_jwk":true,"signature_verified":true,"htm":"POST","htu":"https://api.example.test/items","iat":990,"jti":"proof-b","jkt":"key-b","ath":"wrong","nonce":"nonce-1"},
+  {"request_id":"replayed","typ":"dpop+jwt","alg":"RS256","public_jwk":true,"signature_verified":true,"htm":"GET","htu":"https://api.example.test/profile","iat":990,"jti":"used","jkt":"key-a","ath":"hash-c","nonce":"nonce-2"},
+  {"request_id":"same-batch","typ":"DPoP+JWT","alg":"ES256","public_jwk":true,"signature_verified":true,"htm":"GET","htu":"https://api.example.test/items","iat":1005,"jti":"proof-a","jkt":"key-a","ath":"hash-a","nonce":"nonce-1"}
+]

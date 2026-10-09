@@ -1,0 +1,42 @@
+{
+  "policy": {
+    "capacity": 2,
+    "connections": [
+      {
+        "generation": 1,
+        "id": "c1",
+        "owner": null,
+        "state": "idle"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "at": 1,
+      "client": "a",
+      "id": "q1",
+      "kind": "checkout"
+    },
+    {
+      "at": 2,
+      "client": "b",
+      "id": "q2",
+      "kind": "checkout"
+    },
+    {
+      "at": 3,
+      "clean": false,
+      "client": "a",
+      "connection": "c1",
+      "id": "r1",
+      "kind": "release"
+    },
+    {
+      "at": 4,
+      "connection": "c1",
+      "id": "rst",
+      "kind": "reset",
+      "success": true
+    }
+  ]
+}

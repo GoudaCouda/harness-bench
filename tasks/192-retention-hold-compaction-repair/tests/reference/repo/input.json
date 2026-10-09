@@ -1,0 +1,42 @@
+{
+  "policy": {
+    "capacity_bytes": 50,
+    "data_ttl": 50,
+    "tombstone_ttl": 80,
+    "watermark": 100
+  },
+  "requests": [
+    {
+      "bytes": 40,
+      "event_time": 10,
+      "hold": false,
+      "id": "old",
+      "kind": "data",
+      "tenant": "a"
+    },
+    {
+      "bytes": 10,
+      "event_time": 0,
+      "hold": true,
+      "id": "held",
+      "kind": "data",
+      "tenant": "a"
+    },
+    {
+      "bytes": 20,
+      "event_time": 30,
+      "hold": false,
+      "id": "tomb",
+      "kind": "tombstone",
+      "tenant": "b"
+    },
+    {
+      "bytes": 5,
+      "event_time": 90,
+      "hold": false,
+      "id": "fresh",
+      "kind": "data",
+      "tenant": "b"
+    }
+  ]
+}

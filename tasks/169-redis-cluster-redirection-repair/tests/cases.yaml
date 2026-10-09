@@ -1,0 +1,41 @@
+schema_version: 2
+task_id: 169-redis-cluster-redirection-repair
+pass_threshold: 0.8
+cases:
+- id: redirection_and_topology
+  title: MOVED and ASK drive distinct safe topology behavior
+  description: Cross-slot commands redirects one-shot ASKING contradictions and sequential slot updates
+    are exact.
+  weight: 0.3
+  core: true
+- id: retry_and_ambiguity_safety
+  title: Backoff ambiguity deadline and retry budgets fail safely
+  description: TRYAGAIN refresh paths cluster failure and timeout replay use strict timing and idempotency
+    precedence.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: cluster_replay
+  title: Protected decisions slots and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: redirection_handoff
+  title: Cluster redirection and retry semantics are handed off clearly
+  description: Another engineer can audit topology ASKING ambiguity timing and offline boundaries.
+  weight: 0.2
+  core: false
+- id: source_and_redis_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence and real Redis boundaries remain intact
+  description: Input evidence and workspace red lines are preserved, and the handoff does not claim prohibited live Redis actions.
+  weight: 0.0
+  core: false
+  gate: true

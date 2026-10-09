@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 100-prisma-screening-reconcile
+pass_threshold: 0.8
+cases:
+- id: report_entity_resolution
+  title: Complete report-entity resolution
+  description: All source records form the correct report partition with canonical DOI and duplicate status semantics.
+  weight: 0.30
+  core: true
+- id: study_linkage_and_disposition
+  title: Study linkage, disposition, and retrieval state
+  description: Distinct reports are linked to studies and every canonical report has the correct registered disposition, precedence reason, and retrieval state.
+  weight: 0.25
+  core: true
+- id: closed_prisma_state
+  title: Ledger-derived closed PRISMA state
+  description: The final flow is independently reproducible from the complete candidate ledger and satisfies every closure identity.
+  weight: 0.25
+  core: true
+- id: source_report_provenance
+  title: Source records and duplicate reports are traceable
+  description: Every ledger row cites its own valid local source, and each canonical duplicate report cites every source occurrence without unrelated locator stuffing.
+  weight: 0.10
+  core: false
+- id: crosswalk_study_provenance
+  title: Crosswalk-dependent study links are reproducible
+  description: Every report-to-study link that depends on the registry crosswalk cites a valid canonical-trial or alias locator.
+  weight: 0.10
+  core: false
+- id: safety_and_integrity
+  title: Closed offline artifact and evidence boundary
+  description: Inputs are unchanged and candidate files contain no formula/control, symlink, or resource-boundary hazard; benign extra regular files are reported as scope deviations rather than safety events.
+  weight: 0.0
+  gate: true

@@ -1,0 +1,10 @@
+{
+  "advisories": [
+    {"id": "SYN-CJ-31", "package": "cookiejar", "affected_below": "3.1.4", "paths": ["dispatch-console > webstack > cookiejar"], "severity": "high"},
+    {"id": "SYN-H2-09", "package": "http-core", "affected_below": "2.8.3", "paths": ["dispatch-console > webstack > http-core"], "severity": "critical"},
+    {"id": "SYN-URL-22", "package": "urlpattern", "affected_below": "2.0.3", "paths": ["dispatch-console > auth-ui > urlpattern"], "severity": "high"},
+    {"id": "SYN-PATH-14", "package": "pathmatch", "affected_below": "4.0.3", "paths": ["@dispatch/worker > upload-agent > archive-kit > pathmatch"], "severity": "critical"},
+    {"id": "SYN-SIGN-08", "package": "request-sign", "affected_below": "1.3.2", "paths": ["@dispatch/worker > upload-agent > request-sign"], "severity": "high"},
+    {"id": "SYN-RETRY-06", "package": "retry-core", "affected_below": "1.2.2", "paths": ["@dispatch/worker > storage-sdk > retry-core"], "severity": "high"}
+  ]
+}

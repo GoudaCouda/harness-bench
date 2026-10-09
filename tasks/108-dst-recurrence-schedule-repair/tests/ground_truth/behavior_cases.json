@@ -1,0 +1,40 @@
+{
+  "recurrence": [
+    {
+      "schedules":[{"schedule_id":"month","start_local":"2024-01-31T10:00","frequency":"monthly","interval":1,"count":4,"duration_minutes":30,"timezone_history":[{"effective_date":"2024-01-01","timezone":"UTC"}],"gap_policy":"skip","fold_policy":"earlier"}],
+      "window":{"start":"2024-01-01T00:00:00Z","end":"2024-06-01T00:00:00Z"},"overrides":[]
+    },
+    {
+      "schedules":[{"schedule_id":"weekly","start_local":"2026-03-01T09:15","frequency":"weekly","interval":2,"count":3,"duration_minutes":15,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"},{"effective_date":"2026-03-15","timezone":"America/Chicago"}],"gap_policy":"shift_forward","fold_policy":"later"}],
+      "window":{"start":"2026-03-01T14:15:00Z","end":"2026-03-29T14:15:00Z"},"overrides":[]
+    },
+    {
+      "schedules":[{"schedule_id":"edge","start_local":"2026-03-08T03:00","frequency":"daily","interval":1,"count":2,"duration_minutes":10,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"skip","fold_policy":"earlier"}],
+      "window":{"start":"2026-03-08T07:00:00Z","end":"2026-03-09T07:00:00Z"},"overrides":[]
+    }
+  ],
+  "dst_and_overrides": [
+    {
+      "schedules":[
+        {"schedule_id":"skip-gap","start_local":"2026-03-08T02:30","frequency":"daily","interval":1,"count":1,"duration_minutes":20,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"skip","fold_policy":"earlier"},
+        {"schedule_id":"shift-gap","start_local":"2026-03-08T02:30","frequency":"daily","interval":1,"count":1,"duration_minutes":20,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"shift_forward","fold_policy":"earlier"},
+        {"schedule_id":"fold-a","start_local":"2026-11-01T01:30","frequency":"daily","interval":1,"count":1,"duration_minutes":20,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"skip","fold_policy":"earlier"},
+        {"schedule_id":"fold-b","start_local":"2026-11-01T01:30","frequency":"daily","interval":1,"count":1,"duration_minutes":20,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"}],"gap_policy":"skip","fold_policy":"later"}
+      ],
+      "window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]
+    },
+    {
+      "schedules":[{"schedule_id":"stable","start_local":"2026-03-09T12:00","frequency":"daily","interval":1,"count":3,"duration_minutes":5,"timezone_history":[{"effective_date":"2026-01-01","timezone":"America/New_York"},{"effective_date":"2026-03-10","timezone":"America/Chicago"}],"gap_policy":"skip","fold_policy":"earlier"}],
+      "window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},
+      "overrides":[{"occurrence_id":"stable#0002","action":"reschedule","rescheduled_local":"2026-03-11T08:00"},{"occurrence_id":"stable#0003","action":"skip","rescheduled_local":null}]
+    }
+  ],
+  "invalid": [
+    {"schedules":{},"window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]},
+    {"schedules":[{"schedule_id":"x","start_local":"2026-01-01T00:00","frequency":"daily","interval":true,"count":1,"duration_minutes":1,"timezone_history":[{"effective_date":"2026-01-01","timezone":"UTC"}],"gap_policy":"skip","fold_policy":"earlier"}],"window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]},
+    {"schedules":[{"schedule_id":"x","start_local":"2026-01-01T00:00","frequency":"daily","interval":1,"count":1,"duration_minutes":1,"timezone_history":[{"effective_date":"2026-01-01","timezone":"Not/A_Zone"}],"gap_policy":"skip","fold_policy":"earlier"}],"window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]},
+    {"schedules":[{"schedule_id":"x","start_local":"2026-01-01T00:00","frequency":"daily","interval":1,"count":1,"duration_minutes":1,"timezone_history":[{"effective_date":"2026-01-02","timezone":"UTC"}],"gap_policy":"skip","fold_policy":"earlier"}],"window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]},
+    {"schedules":[],"window":{"start":"2026-01-01T00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[{"occurrence_id":"missing#0001","action":"skip","rescheduled_local":null}]},
+    {"schedules":[],"window":{"start":"2026-01-01 00:00:00Z","end":"2027-01-01T00:00:00Z"},"overrides":[]}
+  ]
+}

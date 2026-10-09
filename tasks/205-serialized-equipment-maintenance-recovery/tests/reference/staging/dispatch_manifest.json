@@ -1,0 +1,10 @@
+{
+  "bundle_sha256": "5648be37692c88f6893f2474f3a0e39c17f7d91b7af1fc8a9514a1fccd15ab59",
+  "dispatch_item_count": 1,
+  "external_actions_executed": false,
+  "hold_item_count": 2,
+  "logical_database_digest": "b25895ec6cb877cb1d52df4e40e3368993bbb4abb01f55fa8668d231512aa2c0",
+  "recovery_id": "FSR-20260819-04",
+  "schema_version": 1,
+  "semantic_plan_digest": "0d220e4f366bae682980696e419831b63d8521a82f855914afb9c6ae97757163"
+}

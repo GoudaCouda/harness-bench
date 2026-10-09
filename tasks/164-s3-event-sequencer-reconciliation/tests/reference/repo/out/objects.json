@@ -1,0 +1,4 @@
+[
+  {"bucket":"logs","etag":null,"key":"daily/b.json","sequencer":"0f","size":0,"state":"deleted","version_id":"v2"},
+  {"bucket":"photos","etag":null,"key":"a.jpg","sequencer":"0d","size":0,"state":"deleted","version_id":"v3"}
+]

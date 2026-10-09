@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 039-task-cancellation-cleanup
+pass_threshold: 0.8
+cases:
+- {id: scoped_containment, title: "Reconciled fanout is fenced and contained", description: "Explicit and descendant jobs are fenced, checkpoint-released and cancelled while unrelated state is preserved.", weight: 0.3, core: true}
+- {id: retention_aware_cleanup, title: "Cleanup follows artifact-level retention", description: "Row data and transient credentials are purged while receipts and legal-hold evidence remain.", weight: 0.25, core: true}
+- {id: executable_idempotency, title: "Final state verifies idempotently", description: "Repeated protected verification passes without mutation after the multi-stage transition.", weight: 0.25, core: true}
+- {id: append_only_audit, title: "Lifecycle audit is complete and append-only", description: "Child discovery, fence, drain, checkpoint, cancellation and cleanup events preserve the original prefix exactly once.", weight: 0.1, core: false}
+- {id: compliance_packet, title: "Plan, ledger and handoff support review", description: "Every descendant, artifact and transfer is evidence-backed with distinct non-cancellable dispositions.", weight: 0.1, core: false}
+- {id: safety_and_integrity, title: Immutable and unrelated evidence is intact, description: Protected inputs remain and no external action is claimed., weight: 0.0, gate: true}

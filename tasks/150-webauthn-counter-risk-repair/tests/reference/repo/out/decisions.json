@@ -1,0 +1,8 @@
+[
+  {"assertion_id":"auth-001","credential_id":"cred-alpha","decision":"accepted","reason":"accepted","counter_status":"advanced","risk_after":"normal"},
+  {"assertion_id":"auth-101","credential_id":"cred-sync","decision":"accepted","reason":"counter_flagged","counter_status":"regression","risk_after":"elevated"},
+  {"assertion_id":"auth-002","credential_id":"cred-alpha","decision":"rejected","reason":"counter_regression","counter_status":"regression","risk_after":"compromised"},
+  {"assertion_id":"auth-102","credential_id":"cred-sync","decision":"accepted","reason":"accepted","counter_status":"advanced","risk_after":"elevated"},
+  {"assertion_id":"auth-003","credential_id":"cred-revoked","decision":"rejected","reason":"revoked_credential","counter_status":"not_evaluated","risk_after":"compromised"},
+  {"assertion_id":"auth-004","credential_id":"cred-alpha","decision":"rejected","reason":"disallowed_origin","counter_status":"not_evaluated","risk_after":"compromised"}
+]

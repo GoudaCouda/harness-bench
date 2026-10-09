@@ -1,0 +1,22 @@
+{
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "policy_version": "PA-VAYGO-SYN-2026.08",
+  "holds": [
+    {
+      "line_id": "FA-LAB-002",
+      "exception_type": "missing_supervisor_approval",
+      "amount": 8000,
+      "missing_evidence": "supervisor_approval",
+      "requested_action": "obtain signed supervisor approval for TS-002"
+    }
+  ],
+  "exclusions": [
+    {
+      "line_id": "SUP-005",
+      "exception_type": "duplicate_federal_benefit",
+      "amount": 18000,
+      "source_id": "HHS-ES-220",
+      "requested_action": "keep SUP-005 outside this payment request"
+    }
+  ]
+}

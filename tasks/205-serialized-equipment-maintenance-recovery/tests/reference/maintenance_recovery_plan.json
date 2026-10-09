@@ -1,0 +1,195 @@
+{
+  "assignments": [
+    {
+      "allocated_part_lot": "LOT-B42A-HIST",
+      "asset_serial": "PKG-PX8-00012",
+      "disposition": "completed_execution_preserved",
+      "evidence_refs": [
+        "policy/maintenance_policy.json#completed_execution_boundary",
+        "state/maintenance.db#work_orders:WO-190"
+      ],
+      "final_state": "completed",
+      "instrument_id": "VIB-A",
+      "next_local_action": "none",
+      "qualification_code": "MECH-ROTATING",
+      "required_part_number": "BRG-42A",
+      "selected_bom_revision": "PX8-R1",
+      "survivor_work_order_id": "WO-190",
+      "symptom_codes": [],
+      "technician_id": "TECH-A",
+      "work_order_id": "WO-190"
+    },
+    {
+      "allocated_part_lot": "LOT-B42-REL",
+      "asset_serial": "PKG-PX8-00041",
+      "disposition": "ready_local_dispatch",
+      "evidence_refs": [
+        "evidence/work_order_events.jsonl#EVT-200-TEMP",
+        "evidence/work_order_events.jsonl#EVT-200-VIB",
+        "evidence/work_order_events.jsonl#EVT-201-VIB",
+        "state/maintenance.db#bom_effectivity:PX-8:drive_bearing:PX8-R2",
+        "state/maintenance.db#instruments:VIB-A",
+        "state/maintenance.db#part_lots:LOT-B42-REL",
+        "state/maintenance.db#technician_qualifications:TECH-A:PX-8:MECH-ROTATING",
+        "state/maintenance.db#work_orders:WO-200"
+      ],
+      "final_state": "ready_local_dispatch",
+      "instrument_id": "VIB-A",
+      "next_local_action": "stage_offline_dispatch_packet",
+      "qualification_code": "MECH-ROTATING",
+      "required_part_number": "BRG-42B",
+      "selected_bom_revision": "PX8-R2",
+      "survivor_work_order_id": "WO-200",
+      "symptom_codes": [
+        "bearing_temperature_high",
+        "bearing_vibration_high"
+      ],
+      "technician_id": "TECH-A",
+      "work_order_id": "WO-200"
+    },
+    {
+      "allocated_part_lot": null,
+      "asset_serial": "PKG-PX8-00041",
+      "disposition": "merged_into_survivor",
+      "evidence_refs": [
+        "policy/maintenance_policy.json#duplicate_survivor_rule",
+        "state/maintenance.db#work_orders:WO-200",
+        "state/maintenance.db#work_orders:WO-201"
+      ],
+      "final_state": "merged",
+      "instrument_id": null,
+      "next_local_action": "none",
+      "qualification_code": null,
+      "required_part_number": null,
+      "selected_bom_revision": null,
+      "survivor_work_order_id": "WO-200",
+      "symptom_codes": [],
+      "technician_id": null,
+      "work_order_id": "WO-201"
+    },
+    {
+      "allocated_part_lot": null,
+      "asset_serial": "PKG-PX9-00007",
+      "disposition": "hold_calibration",
+      "evidence_refs": [
+        "evidence/work_order_events.jsonl#EVT-202-MEG",
+        "state/maintenance.db#bom_effectivity:PX-9:control_fuse:PX9-E4",
+        "state/maintenance.db#technician_qualifications:TECH-E:PX-9:ELEC-LV",
+        "state/maintenance.db#work_orders:WO-202"
+      ],
+      "final_state": "held",
+      "instrument_id": null,
+      "next_local_action": "obtain_calibrated_instrument",
+      "qualification_code": "ELEC-LV",
+      "required_part_number": "FUSE-9E",
+      "selected_bom_revision": "PX9-E4",
+      "survivor_work_order_id": "WO-202",
+      "symptom_codes": [
+        "insulation_resistance_low"
+      ],
+      "technician_id": "TECH-E",
+      "work_order_id": "WO-202"
+    },
+    {
+      "allocated_part_lot": null,
+      "asset_serial": "PKG-PX8-00055",
+      "disposition": "hold_part_availability",
+      "evidence_refs": [
+        "evidence/work_order_events.jsonl#EVT-203-BELT",
+        "state/maintenance.db#bom_effectivity:PX-8:infeed_belt:PX8-R3",
+        "state/maintenance.db#instruments:TACH-A",
+        "state/maintenance.db#technician_qualifications:TECH-C:PX-8:MECH-CONVEYOR",
+        "state/maintenance.db#work_orders:WO-203"
+      ],
+      "final_state": "held",
+      "instrument_id": "TACH-A",
+      "next_local_action": "release_or_replenish_effective_part",
+      "qualification_code": "MECH-CONVEYOR",
+      "required_part_number": "BELT-9C",
+      "selected_bom_revision": "PX8-R3",
+      "survivor_work_order_id": "WO-203",
+      "symptom_codes": [
+        "belt_slip"
+      ],
+      "technician_id": "TECH-C",
+      "work_order_id": "WO-203"
+    }
+  ],
+  "event_dispositions": [
+    {
+      "delivery_id": "DLV-01",
+      "disposition": "accepted",
+      "effective_work_order_id": "WO-200",
+      "event_id": "EVT-200-VIB",
+      "sequence": 10,
+      "source_work_order_id": "WO-200"
+    },
+    {
+      "delivery_id": "DLV-02",
+      "disposition": "accepted",
+      "effective_work_order_id": "WO-202",
+      "event_id": "EVT-202-MEG",
+      "sequence": 10,
+      "source_work_order_id": "WO-202"
+    },
+    {
+      "delivery_id": "DLV-03",
+      "disposition": "accepted",
+      "effective_work_order_id": "WO-200",
+      "event_id": "EVT-200-TEMP",
+      "sequence": 20,
+      "source_work_order_id": "WO-200"
+    },
+    {
+      "delivery_id": "DLV-04",
+      "disposition": "accepted",
+      "effective_work_order_id": "WO-203",
+      "event_id": "EVT-203-BELT",
+      "sequence": 10,
+      "source_work_order_id": "WO-203"
+    },
+    {
+      "delivery_id": "DLV-05",
+      "disposition": "accepted_routed_to_survivor",
+      "effective_work_order_id": "WO-200",
+      "event_id": "EVT-201-VIB",
+      "sequence": 30,
+      "source_work_order_id": "WO-201"
+    },
+    {
+      "delivery_id": "DLV-06",
+      "disposition": "ignored_completed_boundary",
+      "effective_work_order_id": "WO-190",
+      "event_id": "EVT-190-LATE",
+      "sequence": 90,
+      "source_work_order_id": "WO-190"
+    },
+    {
+      "delivery_id": "DLV-07",
+      "disposition": "ignored_unknown_work_order",
+      "effective_work_order_id": null,
+      "event_id": "EVT-UNKNOWN-1",
+      "sequence": 1,
+      "source_work_order_id": "WO-999"
+    },
+    {
+      "delivery_id": "DLV-08",
+      "disposition": "ignored_duplicate_event",
+      "effective_work_order_id": "WO-200",
+      "event_id": "EVT-200-VIB",
+      "sequence": 10,
+      "source_work_order_id": "WO-200"
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "FSR-20260819-04",
+  "schema_version": 1,
+  "source_checkpoint": "948b61c17c28b8c8ac43db9e08f64460098d400a01ba3d84d8dd2777a22a65f8",
+  "totals": {
+    "allocated_part_count": 1,
+    "held_count": 2,
+    "merged_count": 1,
+    "preserved_completed_count": 1,
+    "ready_dispatch_count": 1
+  }
+}

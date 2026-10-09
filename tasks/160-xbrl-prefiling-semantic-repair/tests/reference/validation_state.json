@@ -1,0 +1,15 @@
+{
+  "filing_id": "FILING-160",
+  "rulebook_version": "EFM-SYN-2026.1",
+  "errors_before": 3,
+  "warnings_before": 2,
+  "errors_after": 0,
+  "warnings_after": 0,
+  "semantic_regression_pass": true,
+  "preserved_fact_values": {
+    "Revenue": 1250000,
+    "Assets": 2400000
+  },
+  "status": "test_ready",
+  "live_submission": false
+}

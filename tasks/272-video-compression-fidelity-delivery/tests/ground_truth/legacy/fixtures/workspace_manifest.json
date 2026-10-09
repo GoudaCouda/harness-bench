@@ -1,0 +1,21 @@
+{
+  "expected_directories": [
+    "input",
+    "output",
+    "task"
+  ],
+  "expected_files_after_delivery": [
+    "input/source.mp4",
+    "output/compressed.mp4",
+    "task/instruction.md",
+    "task/target_spec.json",
+    "task/tool_contract.json"
+  ],
+  "protected_file_sha256": {
+    "input/source.mp4": "c48c141e27ea4d3fdfa88cbd8cbdeebb3cadd1bbd7d459c0345cb3cef6b24813",
+    "task/instruction.md": "9efd57bd218cbfa66b611cefe5e7af83583f483c65e20943a7d0a4414634125b",
+    "task/target_spec.json": "b95d035bfb78b4cc60c522931683d51a5f45b148102427da055651a390ff324d",
+    "task/tool_contract.json": "c589eb1bc0d7c2b99fce3c47cc584ae6c80d339c8fb5172b6294286cf92be026"
+  },
+  "schema_version": "nami_work_case18_workspace_manifest_v1"
+}

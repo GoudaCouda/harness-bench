@@ -1,0 +1,48 @@
+{
+  "stream_id": "harborline-238",
+  "gate_clock_epoch": 1776468800,
+  "events": [
+    {
+      "event_id": "e1",
+      "trip_id": "T1",
+      "event_type": "update",
+      "stop_id": "S1"
+    },
+    {
+      "event_id": "e2",
+      "trip_id": "T99",
+      "event_type": "update",
+      "stop_id": "S1"
+    },
+    {
+      "event_id": "e3",
+      "trip_id": "T2",
+      "event_type": "cancelled",
+      "stop_id": "S2"
+    },
+    {
+      "event_id": "e4",
+      "trip_id": "T2",
+      "event_type": "update",
+      "stop_id": "S2"
+    },
+    {
+      "event_id": "e1",
+      "trip_id": "T1",
+      "event_type": "update",
+      "stop_id": "S1"
+    },
+    {
+      "event_id": "e6",
+      "trip_id": "",
+      "event_type": "update",
+      "stop_id": "S1"
+    },
+    {
+      "event_id": "e7",
+      "trip_id": "T4",
+      "event_type": "update",
+      "stop_id": "S4"
+    }
+  ]
+}

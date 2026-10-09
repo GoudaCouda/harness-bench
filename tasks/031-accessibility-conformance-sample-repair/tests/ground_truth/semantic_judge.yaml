@@ -1,0 +1,7 @@
+schema_version: 1
+criteria:
+- id: handoff_semantics
+  question: Does the handoff accurately explain sampling, every repair, repeated verification, and the offline/manual-review boundary?
+  title: Accessibility handoff is substantively correct
+  description: The handoff explains the common critical-state and representative sampling logic; each navigation image label tab-order error-announcement link-description and focus repair; repeated verification; and the offline sample boundary plus remaining manual review.
+  weight: 1.0

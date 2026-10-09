@@ -1,0 +1,12 @@
+{
+  "account_id": "acct_1007",
+  "account_holder": "Sam Ortiz",
+  "primary_email": "sam.ortiz@example.org",
+  "phone": "+1-720-555-0126",
+  "status": "active",
+  "current_holds": [
+    {"type": "legal_hold", "case_id": "LH-119", "status": "current"}
+  ],
+  "linked_people": [],
+  "internal_case_note": "litigation matter Delta; restricted from requester communications"
+}

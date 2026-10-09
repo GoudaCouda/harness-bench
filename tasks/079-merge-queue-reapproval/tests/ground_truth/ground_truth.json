@@ -1,0 +1,9 @@
+{
+  "task_id": "079-merge-queue-reapproval",
+  "previous_sha": "aaa111",
+  "current_sha": "bbb222",
+  "gates": ["build_linux", "build_windows", "security", "license", "owner_approval", "release_approval"],
+  "pending_gates": ["security", "license", "owner_approval"],
+  "queue_state": "blocked_revalidation",
+  "merge_executed": false
+}

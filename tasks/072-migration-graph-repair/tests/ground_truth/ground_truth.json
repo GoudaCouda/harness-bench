@@ -1,0 +1,56 @@
+{
+  "task_id": "072-migration-graph-repair",
+  "artifacts": {
+    "repo/config.json": {
+      "heads": [
+        "orders.0008_merge_region"
+      ],
+      "merge": {
+        "name": "orders.0008_merge_region",
+        "dependencies": [
+          "orders.0007_add_region",
+          "orders.0007_backfill_region"
+        ]
+      },
+      "uses_historical_model": true,
+      "idempotent": true,
+      "reverse": "restore_null_region",
+      "fresh_replay": "pass",
+      "upgrade_replay": "pass"
+    },
+    "validation.json": {
+      "status": "pass",
+      "checked": [
+        "fresh_replay",
+        "heads",
+        "idempotent",
+        "merge",
+        "reverse",
+        "upgrade_replay",
+        "uses_historical_model"
+      ]
+    }
+  },
+  "audit_groups": [
+    [
+      "both 0007 branches",
+      "merge dependencies"
+    ],
+    [
+      "historical model",
+      "historical schema"
+    ],
+    [
+      "idempotent",
+      "repeat"
+    ],
+    [
+      "fresh replay",
+      "upgrade replay"
+    ],
+    [
+      "reverse",
+      "restore_null_region"
+    ]
+  ]
+}

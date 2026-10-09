@@ -1,0 +1,41 @@
+{
+  "policy": {
+    "quota_clock_epoch": 1773738000,
+    "burst_window_seconds": 60,
+    "daily_window_seconds": 86400,
+    "burst_max_debits": 3,
+    "daily_max_cents": 100000
+  },
+  "artifacts": {
+    "quota_receipt": {
+      "batch_id": "quota-pending-0317",
+      "quota_clock_epoch": 1773738000,
+      "counts": {
+        "executed": 3,
+        "burst_exceeded": 2,
+        "daily_exceeded": 1,
+        "refund_expired": 1,
+        "rejected": 1
+      },
+      "executed_debit_cents": 80000,
+      "state": "applied"
+    },
+    "verification": {
+      "controller": "quotactl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_request": {
+      "q1": "executed",
+      "q2": "executed",
+      "q3": "executed",
+      "q4": "rejected",
+      "q5": "burst_exceeded",
+      "q6": "refund_expired",
+      "q7": "daily_exceeded",
+      "q8": "burst_exceeded"
+    },
+    "executed_debit_cents": 80000
+  }
+}

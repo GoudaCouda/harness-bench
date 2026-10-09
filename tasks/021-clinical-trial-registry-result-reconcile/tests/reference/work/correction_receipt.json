@@ -1,0 +1,24 @@
+{
+  "external_action": "none_staged_review_only",
+  "finding_count": 7,
+  "graph_sha256": "21299e8b63a783a10314c622f810a19ee6d264c11eef201ee7b46a4ba2da6673",
+  "input_sha256": {
+    "evidence/csr_tables.json": "9cf0a5a1f5c69eaf0729c2863cf887ff8b45c014630f0ca0e53d7c43a9675560",
+    "evidence/registry_history.json": "2ea97252c74c88f0711850d2e279249ebe1948bfd25c7fc680cee8e72c373c89",
+    "evidence/results_submission.json": "3a14462c8e569ba84561c2ffd51d5beb7d17df180422124efe0e691fbe2a20c0",
+    "evidence/review_materials.json": "59c2fba9325b084f88716d2a434151cdd5d8321adb350f8b9e81602b279a0c24",
+    "evidence/statistical_analysis_plan.json": "1eebf4f1b23446809335971319746935bb771637cdebe6f9dc191992f2426bcc",
+    "policy/reconciliation_policy.json": "a52d4f6c14d3745d9e8445935842200c3639de7fdabc87ebd3a4ac48a860377f"
+  },
+  "ledger_sha256": "e5e30c4697fba8980bf488d5252f07f3812f28377594f2d959b7ee25e3a4e6ce",
+  "payload_sha256": "1557f9b14243e47949db56c21c1fa0134b4778af1656b5b1121495897b0f3d0a",
+  "policy_version": "CTG-QC-SYN-2026.08",
+  "receipt_sha256": "069dd2f32c59172e6a4bc19b3e1951609ae959bb2baf3fca8512272f198f8547",
+  "recovery_id": "trial-results-qc:NCT-SYN-21021:CTG-QC-SYN-2026.08",
+  "replay_verified": true,
+  "semantic_plan_sha256": "d182300154597205e64804678356d0baa7267156cd7123a43f0cc975b0f63997",
+  "source_checkpoint_sha256": "cc0ce0e767e6979ab595214fad7984ac8a3310ebeb356f65354b9cc46a139b83",
+  "status": "staged_for_responsible_party_review",
+  "tool": "trialctl/2",
+  "trial_id": "NCT-SYN-21021"
+}

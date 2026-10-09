@@ -1,0 +1,141 @@
+{
+  "billing_cycle": "2026-11",
+  "customer_contacted": false,
+  "decisions": [
+    {
+      "account_id": "ACCT-DST-17",
+      "authority_method": "interval_utc_deduplicated",
+      "billed_export_kwh": 0.0,
+      "billed_import_kwh": 3.8,
+      "correct_export_kwh": 0.0,
+      "correct_import_kwh": 4.5,
+      "correction_state": "correction_pending_review",
+      "delta_export_kwh": 0.0,
+      "delta_import_kwh": 0.7,
+      "evidence_refs": [
+        "evidence/interval_feed.jsonl#EVT-DST-01",
+        "evidence/interval_feed.jsonl#EVT-DST-02",
+        "evidence/interval_feed.jsonl#EVT-DST-03",
+        "evidence/interval_feed.jsonl#EVT-DST-04",
+        "policy/billing_policy.json#meters/MTR-DST-17"
+      ],
+      "external_action": "none",
+      "local_mutations": [
+        "billing_state",
+        "corrected_export_kwh",
+        "corrected_import_kwh",
+        "prospective_balance_delta_cents"
+      ],
+      "meter_id": "MTR-DST-17",
+      "next_local_action": "route_local_correction_for_billing_review",
+      "prospective_balance_delta_cents": 15
+    },
+    {
+      "account_id": "ACCT-FBK-88",
+      "authority_method": "signed_fallback_snapshot",
+      "billed_export_kwh": 0.0,
+      "billed_import_kwh": 11.0,
+      "correct_export_kwh": 0.0,
+      "correct_import_kwh": 12.4,
+      "correction_state": "correction_pending_review",
+      "delta_export_kwh": 0.0,
+      "delta_import_kwh": 1.4,
+      "evidence_refs": [
+        "evidence/fallback_batch.json#FBK-REC-88",
+        "evidence/fallback_trust.json#meter-batch-key-2026",
+        "evidence/primary_batch.json.part#damaged",
+        "policy/billing_policy.json#meters/MTR-FBK-88"
+      ],
+      "external_action": "none",
+      "local_mutations": [
+        "billing_state",
+        "corrected_export_kwh",
+        "corrected_import_kwh",
+        "prospective_balance_delta_cents"
+      ],
+      "meter_id": "MTR-FBK-88",
+      "next_local_action": "route_local_correction_for_billing_review",
+      "prospective_balance_delta_cents": 27
+    },
+    {
+      "account_id": "ACCT-HLD-55",
+      "authority_method": "insufficient_evidence",
+      "billed_export_kwh": 0.0,
+      "billed_import_kwh": 5.0,
+      "correct_export_kwh": null,
+      "correct_import_kwh": null,
+      "correction_state": "hold_insufficient_evidence",
+      "delta_export_kwh": null,
+      "delta_import_kwh": null,
+      "evidence_refs": [
+        "evidence/interval_feed.jsonl#EVT-HLD-01",
+        "evidence/interval_feed.jsonl#EVT-HLD-02",
+        "policy/billing_policy.json#meters/MTR-HLD-55"
+      ],
+      "external_action": "none",
+      "local_mutations": [
+        "billing_state"
+      ],
+      "meter_id": "MTR-HLD-55",
+      "next_local_action": "obtain_authoritative_meter_evidence",
+      "prospective_balance_delta_cents": 0
+    },
+    {
+      "account_id": "ACCT-ROL-42",
+      "authority_method": "register_rollover",
+      "billed_export_kwh": 0.0,
+      "billed_import_kwh": 10.0,
+      "correct_export_kwh": 0.0,
+      "correct_import_kwh": 6.0,
+      "correction_state": "correction_pending_review",
+      "delta_export_kwh": 0.0,
+      "delta_import_kwh": -4.0,
+      "evidence_refs": [
+        "evidence/register_reads.csv#REG-ROL-START-END",
+        "policy/billing_policy.json#meters/MTR-ROL-42"
+      ],
+      "external_action": "none",
+      "local_mutations": [
+        "billing_state",
+        "corrected_export_kwh",
+        "corrected_import_kwh",
+        "prospective_balance_delta_cents"
+      ],
+      "meter_id": "MTR-ROL-42",
+      "next_local_action": "route_local_correction_for_billing_review",
+      "prospective_balance_delta_cents": -72
+    },
+    {
+      "account_id": "ACCT-SOL-09",
+      "authority_method": "bidirectional_interval",
+      "billed_export_kwh": 0.0,
+      "billed_import_kwh": 8.0,
+      "correct_export_kwh": 3.0,
+      "correct_import_kwh": 7.5,
+      "correction_state": "correction_pending_review",
+      "delta_export_kwh": 3.0,
+      "delta_import_kwh": -0.5,
+      "evidence_refs": [
+        "evidence/interval_feed.jsonl#EVT-SOL-01",
+        "evidence/interval_feed.jsonl#EVT-SOL-02",
+        "evidence/interval_feed.jsonl#EVT-SOL-03",
+        "evidence/interval_feed.jsonl#EVT-SOL-04",
+        "policy/billing_policy.json#meters/MTR-SOL-09"
+      ],
+      "external_action": "none",
+      "local_mutations": [
+        "billing_state",
+        "corrected_export_kwh",
+        "corrected_import_kwh",
+        "prospective_balance_delta_cents"
+      ],
+      "meter_id": "MTR-SOL-09",
+      "next_local_action": "route_local_correction_for_billing_review",
+      "prospective_balance_delta_cents": -84
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "MBR-202611-FALLBACK-01",
+  "schema_version": 1,
+  "source_checkpoint": "fb47226dd5faacd6fe27fab9d10e722222544ed26ebc163563d8785293c739cb"
+}

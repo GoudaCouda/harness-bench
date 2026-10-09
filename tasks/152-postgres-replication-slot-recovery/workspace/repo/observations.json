@@ -1,0 +1,1 @@
+{"primary_wal_lsn":1000,"oldest_available_lsn":300,"standby_synced_slots":["billing-slot","orders-slot"],"maintenance_window":true}

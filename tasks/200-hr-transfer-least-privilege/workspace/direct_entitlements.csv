@@ -1,0 +1,10 @@
+export_id,employee_id,system,entitlement,exclusive_slot,state,observed_at,evidence_source
+DX-101,E-200,source_control,repo_read,,active,2026-07-29T20:40:00Z,scm_api
+DX-102,E-200,source_control,issues_write,,active,2026-07-29T20:40:00Z,scm_api
+DX-201,E-200,finance,expense_submit,,active,2026-07-29T20:36:00Z,finance_directory
+DX-202,E-200,finance,payment_admin,,active,2026-07-29T20:36:00Z,finance_directory
+DX-301,E-200,support,ticket_agent,,active,2026-07-29T20:44:00Z,support_api
+DX-501,E-200,vpn,vpn_standard,vpn_profile,active,2026-07-29T20:48:00Z,directory_api
+DX-502,E-200,vpn,vpn_privileged,vpn_profile,active,2026-07-29T20:48:00Z,endpoint_controller
+DX-601,E-200,crm,customer_profile_read,,active,2026-07-29T20:38:00Z,crm_api
+DX-602,E-200,crm,refund_approve,,active,2026-07-29T20:38:00Z,crm_api

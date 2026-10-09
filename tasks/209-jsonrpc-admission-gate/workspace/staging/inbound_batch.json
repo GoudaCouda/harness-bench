@@ -1,0 +1,78 @@
+{
+  "batch_id": "batch-2026-03-15",
+  "gate_clock_epoch": 1773565200,
+  "items": [
+    {
+      "jsonrpc": "2.0",
+      "method": "payments.get",
+      "params": {
+        "payment_id": "pay-11"
+      },
+      "id": "c1",
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "payments.capture",
+      "params": {
+        "payment_id": "pay-12",
+        "amount_cents": 4400
+      },
+      "id": "c2",
+      "tenant_id": "tn-beta"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "payouts.create",
+      "params": {
+        "payout_id": "po-9",
+        "amount_cents": 88000
+      },
+      "id": "c3",
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "ledger.export",
+      "params": {},
+      "id": "c4",
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "payments.capture",
+      "params": {
+        "payment_id": "pay-13"
+      },
+      "id": "c5",
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "1.0",
+      "method": "payments.get",
+      "params": {
+        "payment_id": "pay-14"
+      },
+      "id": "c6",
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "payments.get",
+      "params": {
+        "payment_id": "pay-15"
+      },
+      "tenant_id": "tn-acme"
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "payments.refund",
+      "params": {
+        "payment_id": "pay-11",
+        "amount_cents": 500
+      },
+      "id": "c1",
+      "tenant_id": "tn-acme"
+    }
+  ]
+}

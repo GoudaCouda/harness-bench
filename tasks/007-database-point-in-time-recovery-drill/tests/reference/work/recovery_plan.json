@@ -1,0 +1,26 @@
+{
+  "incident_id": "DB-INC-2026-0817-04",
+  "system_identifier": "7419026813374501127",
+  "backup_id": "base-t2-0920",
+  "target_timeline": 2,
+  "target_type": "name",
+  "target_name": "before_batch_cleanup",
+  "target_lsn": "0/C120000",
+  "recovery_target_action": "pause",
+  "required_wal_segments": ["00000002000000000000000A", "00000002000000000000000B", "00000002000000000000000C"],
+  "restore_command_template": "cp archive/%f %p",
+  "rationale": "The incident occurred on production timeline 2, so the verified timeline-2 base is required instead of the newer divergent drill history. Its WAL chain is readable through the named restore point. The named point avoids the shared timestamp boundary, and all replay and probing remains isolated from production.",
+  "rejected_alternatives": [
+    {"candidate": "base-t2-0840", "reason": "manifest checksum mismatch prevents backup verification"},
+    {"candidate": "base-t3-1005", "reason": "timeline 3 is a divergent abandoned drill and not the production incident history"},
+    {"candidate": "timestamp:2026-08-17T10:15:42Z", "reason": "ambiguous boundary because the restore point and destructive transaction share the same timestamp"}
+  ],
+  "expected_invariants": [
+    {"check_id": "customers_active_count", "kind": "scalar", "expected": 1250},
+    {"check_id": "open_invoice_amount_sum", "kind": "scalar", "expected": 482190},
+    {"check_id": "invoice_INV-9912_present", "kind": "boolean", "expected": true},
+    {"check_id": "cleanup_audit_marker_absent", "kind": "boolean", "expected": true},
+    {"check_id": "foreign_key_violations", "kind": "scalar", "expected": 0},
+    {"check_id": "database_accepts_writes", "kind": "boolean", "expected": false}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "policy": {
+    "max_parts": 5
+  },
+  "requests": [
+    {
+      "boundary": "outer",
+      "id": "mail",
+      "raw": "--outer\r\nContent-Type: text/plain\r\n\r\nhello\r\n--outer\r\nContent-Type: text/plain\r\nContent-Transfer-Encoding: base64\r\nContent-ID: <a1>\r\nContent-Disposition: attachment; filename=note.txt\r\n\r\naGk=\r\n--outer--\r\n"
+    }
+  ]
+}

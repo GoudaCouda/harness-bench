@@ -1,0 +1,52 @@
+{
+  "structured": [
+    {
+      "event": {"PASSWORD": "one", "nested": {"access_token": "two", "token_count": 4}, "items": [{"cookie": "three"}, {"private_key": "[REDACTED]"}]},
+      "policy": {"sensitive_keys": ["password", "access_token", "cookie", "private_key"], "replacement": "[REDACTED]", "text_assignments": ["password", "api_key"]}
+    },
+    {
+      "event": {"a/b": {"x~y": [{"Refresh_Token": "r1"}]}},
+      "policy": {"sensitive_keys": ["refresh_token"], "replacement": "***", "text_assignments": ["api_key"]}
+    },
+    {
+      "event": {"authorization": {"scheme": "Bearer", "credential": "deep"}, "other": null},
+      "policy": {"sensitive_keys": ["authorization"], "replacement": "MASK", "text_assignments": ["password"]}
+    }
+  ],
+  "text": [
+    {
+      "event": {"message": "BEARER   abc.DEF==, api_key = key-7; postgres://worker:p4ss@db/app", "request_id": "token-17"},
+      "policy": {"sensitive_keys": ["password"], "replacement": "[REDACTED]", "text_assignments": ["api_key", "password"]}
+    },
+    {
+      "event": {"message": "passwordless tokenizer cookiecutter; xpassword=no password = yes, API_KEY=[REDACTED]", "email": "ops@example.test"},
+      "policy": {"sensitive_keys": ["password", "cookie"], "replacement": "[REDACTED]", "text_assignments": ["password", "api_key"]}
+    },
+    {
+      "event": {"list": ["Bearer a+b/c= then https://u:p@host", "nothing to redact"], "trace_id": "trace/passwordless"},
+      "policy": {"sensitive_keys": ["access_token"], "replacement": "REMOVED", "text_assignments": ["password"]}
+    }
+  ],
+  "invalid": [
+    {
+      "event": [],
+      "policy": {"sensitive_keys": ["password"], "replacement": "X", "text_assignments": ["api_key"]}
+    },
+    {
+      "event": {"ok": true},
+      "policy": {"sensitive_keys": ["Password", "password"], "replacement": "X", "text_assignments": ["api_key"]}
+    },
+    {
+      "event": {"ok": true},
+      "policy": {"sensitive_keys": ["password"], "replacement": "PASSWORD", "text_assignments": ["api_key"]}
+    },
+    {
+      "event": {"ok": true},
+      "policy": {"sensitive_keys": ["password"], "replacement": "X", "text_assignments": []}
+    },
+    {
+      "event": {"ok": true},
+      "policy": {"sensitive_keys": ["password"], "replacement": "X", "text_assignments": ["api_key"], "extra": false}
+    }
+  ]
+}

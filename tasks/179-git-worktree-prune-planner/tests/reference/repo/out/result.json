@@ -1,0 +1,34 @@
+{
+  "decisions": [
+    {
+      "action": "keep",
+      "id": "dirty",
+      "path": "/wt/dirty",
+      "reason": "dirty_existing_worktree"
+    },
+    {
+      "action": "prune_admin",
+      "id": "gone",
+      "path": "/wt/gone",
+      "reason": "missing_and_expired"
+    },
+    {
+      "action": "keep",
+      "id": "main",
+      "path": "/repo",
+      "reason": "main_worktree"
+    },
+    {
+      "action": "repair_registration",
+      "id": "repair",
+      "path": "/wt/repair",
+      "reason": "missing_admin_metadata"
+    }
+  ],
+  "prune_paths": [
+    "/wt/gone"
+  ],
+  "repair_paths": [
+    "/wt/repair"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "task_id": "022-waveform-audio-cue-editor",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "waveform_audio_cue_editor_protected_inputs",
+    "waveform_audio_cue_editor_interaction_model",
+    "waveform_audio_cue_editor_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/waveform.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "CUE-INTRO",
+      "label": "Intro swell"
+    },
+    {
+      "id": "CUE-VOX",
+      "label": "Vocal in"
+    },
+    {
+      "id": "CUE-BRK",
+      "label": "Break"
+    },
+    {
+      "id": "CUE-OUT",
+      "label": "Outro"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "CUE-INTRO",
+      "label": "Intro swell",
+      "ms": 0,
+      "amplitude": 0.12,
+      "x": 12,
+      "y": 45
+    },
+    {
+      "id": "CUE-VOX",
+      "label": "Vocal in",
+      "ms": 840,
+      "amplitude": 0.66,
+      "x": 37,
+      "y": 25
+    },
+    {
+      "id": "CUE-BRK",
+      "label": "Break",
+      "ms": 1620,
+      "amplitude": 0.21,
+      "x": 60,
+      "y": 42
+    },
+    {
+      "id": "CUE-OUT",
+      "label": "Outro",
+      "ms": 2410,
+      "amplitude": 0.08,
+      "x": 84,
+      "y": 47
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "waveform"
+    ],
+    [
+      "cue"
+    ],
+    [
+      "playhead"
+    ],
+    [
+      "Cue lane"
+    ],
+    [
+      "Cue count"
+    ],
+    [
+      "Span ms"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "wave-board"
+    ],
+    [
+      "data-cue-id"
+    ],
+    [
+      "Drop cue"
+    ],
+    [
+      "Clear cues"
+    ],
+    [
+      "playhead"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Cue list"
+    ],
+    [
+      "Span ms"
+    ],
+    [
+      "Selected cue"
+    ],
+    [
+      "amplitude"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"wave-board\"]",
+    "marker": {
+      "attr": "data-cue-id",
+      "id": "CUE-VOX",
+      "x": 37,
+      "y": 25,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-cue-id",
+        "id": "CUE-INTRO",
+        "x": 12,
+        "y": 45,
+        "tol": 10
+      },
+      {
+        "attr": "data-cue-id",
+        "id": "CUE-VOX",
+        "x": 37,
+        "y": 25,
+        "tol": 10
+      },
+      {
+        "attr": "data-cue-id",
+        "id": "CUE-BRK",
+        "x": 60,
+        "y": 42,
+        "tol": 10
+      },
+      {
+        "attr": "data-cue-id",
+        "id": "CUE-OUT",
+        "x": 84,
+        "y": 47,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "drop cue"
+      ]
+    ],
+    "body_has": [
+      "CUE-VOX",
+      "Vocal in",
+      "840",
+      "Cue",
+      "1"
+    ],
+    "selects": [
+      [
+        "Cue lane",
+        "vocal"
+      ]
+    ],
+    "toggles": [],
+    "after_toggle": [],
+    "name": "waveform_audio_cue_editor"
+  }
+}

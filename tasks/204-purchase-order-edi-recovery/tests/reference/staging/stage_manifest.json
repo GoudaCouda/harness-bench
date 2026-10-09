@@ -1,0 +1,12 @@
+{
+  "external_actions_executed": false,
+  "handoff_sha256": "165ca1a1662c5a56fcf1f120cfecba36934ffaa51f0c1249336f22d63d9e0bf5",
+  "hold_queue_sha256": "0ae3c090d4ac54194b7b8fb423526b9b17c0ce3737b5b4be6241092428a718d8",
+  "payable_batch_sha256": "ec679f8ce8eb817d28ff500c5e6e2ede5462bf0158d841df1d72617516c92dec",
+  "recovery_id": "EDI-RCV-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_sha256": "f31b5753dcd8fa96730ddf5d1f7e31f91fdad856eafc8a710ae1d4b75c92d60d",
+  "source_checkpoint": "b286b9059cb694cd632bd054c6e58203fd068eb5730784ab180d13c53fc3619e",
+  "stage_token": "2012ae06a3df6b03787059ca0ef8da73f674f84fdc6042bc6713e93fbb48eb6b",
+  "verification_sha256": "e8008b2ae0bb5f783e8582f9a255a8f2cc8fbf57f4c6b17e691f103d318a3412"
+}

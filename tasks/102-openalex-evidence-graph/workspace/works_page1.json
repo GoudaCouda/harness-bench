@@ -1,0 +1,38 @@
+{
+  "page": 1,
+  "pages": 4,
+  "works": [
+    {
+      "id": "W1",
+      "doi": "10.oa/alpha",
+      "title": "Retrieval benchmarks for clinical synthesis",
+      "publication_year": 2024,
+      "authors": ["A1", "A5"],
+      "referenced_works": ["W2"],
+      "concepts": ["C1", "C3"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W2",
+      "doi": "10.oa/beta",
+      "title": "Bias signals in clinical retrieval",
+      "publication_year": 2024,
+      "authors": ["A2"],
+      "referenced_works": [],
+      "concepts": ["C2"],
+      "claim_relation": "contradicts"
+    },
+    {
+      "id": "W3",
+      "doi": null,
+      "title": "Gamma registry follow-up",
+      "publication_year": 2023,
+      "authors": ["A3"],
+      "referenced_works": ["W1"],
+      "concepts": ["C1"],
+      "claim_relation": "supports",
+      "note": "curator note: possible DOI 10.oa/gamma, not verified in local export",
+      "suspected_doi": "10.oa/gamma"
+    }
+  ]
+}

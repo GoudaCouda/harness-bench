@@ -1,0 +1,51 @@
+{
+  "schema_version": "case20_tool_contract_v3",
+  "environment_variables": {
+    "CASE20_WORKSPACE": "/workspace",
+    "HB_RUNTIME": "/runtime"
+  },
+  "tools": [
+    {
+      "tool_id": "local_messaging_api",
+      "entrypoint": "/workspace/hb_tools/collab_cli.py",
+      "argv_prefix": [
+        "python3",
+        "/workspace/hb_tools/collab_cli.py"
+      ],
+      "commands": [
+        "list-messages",
+        "list-attachments",
+        "download-attachment",
+        "send-reminder"
+      ]
+    },
+    {
+      "tool_id": "filesystem",
+      "entrypoint": "/workspace/hb_tools/filesystem_cli.py",
+      "argv_prefix": [
+        "python3",
+        "/workspace/hb_tools/filesystem_cli.py"
+      ],
+      "commands": [
+        "list-tree",
+        "read-text",
+        "sha256"
+      ]
+    },
+    {
+      "tool_id": "spreadsheet_writer",
+      "entrypoint": "/workspace/hb_tools/spreadsheet_cli.py",
+      "argv_prefix": [
+        "python3",
+        "/workspace/hb_tools/spreadsheet_cli.py"
+      ],
+      "commands": [
+        "write-register"
+      ]
+    }
+  ],
+  "network": "runtime service only; no external business network",
+  "published_ports": [],
+  "fixed_time": "2026-07-20T10:00:00+08:00",
+  "runtime_endpoint_file": "/runtime/gold20-service.json"
+}

@@ -1,0 +1,50 @@
+schema_version: 2
+task_id: 125-product-recall-scope-plan
+pass_threshold: 0.8
+cases:
+- id: signed_scope_genealogy_and_plan
+  title: Signed scope and genealogy are resolved exactly
+  description: Direct mixed descendant safe out-of-window and unresolved lots receive source-bound policy
+    dispositions.
+  weight: 0.22
+  core: true
+  score_group: decision_and_state
+- id: event_feed_and_shipment_state
+  title: Out-of-order duplicate and unknown events close shipment state
+  description: Unique events are adjudicated and current shipment states and local stop actions reflect
+    sequence and scope.
+  weight: 0.18
+  core: true
+  score_group: decision_and_state
+- id: inventory_lot_and_channel_closure
+  title: Local inventory lot and channel state closes conservatively
+  description: Affected and unresolved units are quarantined while unaffected state and unit conservation
+    are preserved.
+  weight: 0.22
+  core: true
+  score_group: validation_and_replay
+- id: transaction_journal_and_replay
+  title: Interrupted work becomes one checkpoint-bound transaction
+  description: One semantic plan closes the prepared journal without double mutation and binds the stable
+    recall identity.
+  weight: 0.18
+  core: true
+  score_group: validation_and_replay
+- id: verification_and_local_stage
+  title: Verification and local staging bind the final state
+  description: Controller receipts bind source plan terminal database and external-action boundary.
+  weight: 0.12
+- id: recall_handoff
+  title: Product-safety handoff is complete and reviewable
+  description: Handoff explains scope genealogy feed operational closure recovery replay conservation
+    and offline boundary.
+  weight: 0.08
+  semantic_judge:
+    criterion_id: handoff_semantics
+    mode: bounded_case_fallback
+- id: safety_and_input_integrity
+  title: Sources and external boundaries remain intact
+  description: Protected evidence and controller are unchanged and no real stop-sale notice refund repair
+    or reroute is claimed.
+  weight: 0.0
+  gate: true

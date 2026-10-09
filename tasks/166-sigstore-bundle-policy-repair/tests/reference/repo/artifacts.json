@@ -1,0 +1,6 @@
+[
+  {"artifact_id":"a1","digest":"sha256:aaa111","identity":"https://github.com/acme/repo/.github/workflows/release.yml@refs/heads/main","issuer":"https://token.actions.githubusercontent.com","payload_type":"application/vnd.in-toto+json"},
+  {"artifact_id":"a2","digest":"sha256:bbb222","identity":"https://github.com/acme/repo/.github/workflows/release.yml@refs/heads/main","issuer":"https://token.actions.githubusercontent.com","payload_type":"application/vnd.in-toto+json"},
+  {"artifact_id":"a3","digest":"sha256:ccc333","identity":"https://github.com/acme/repo/.github/workflows/release.yml@refs/heads/main","issuer":"https://token.actions.githubusercontent.com","payload_type":"application/vnd.in-toto+json"},
+  {"artifact_id":"a4","digest":"sha256:ddd444","identity":"https://github.com/acme/repo/.github/workflows/release.yml@refs/heads/main","issuer":"https://token.actions.githubusercontent.com","payload_type":"application/vnd.in-toto+json"}
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "question_id": "Q1",
+    "answer": "3 business days | complete packet",
+    "citations": [
+      "DOC-A#AP-1"
+    ],
+    "confidence": "high",
+    "insufficient_evidence": false
+  },
+  {
+    "question_id": "Q2",
+    "answer": "asset return | active access tokens | pending invoices | sponsor sign-off",
+    "citations": [
+      "DOC-B#OB-1"
+    ],
+    "confidence": "high",
+    "insufficient_evidence": false
+  },
+  {
+    "question_id": "Q3",
+    "answer": "Compliance Operations | manual review | do not approve",
+    "citations": [
+      "DOC-C#EX-1"
+    ],
+    "confidence": "high",
+    "insufficient_evidence": false
+  },
+  {
+    "question_id": "Q4",
+    "answer": "insufficient evidence",
+    "citations": [],
+    "confidence": "low",
+    "insufficient_evidence": true
+  }
+]

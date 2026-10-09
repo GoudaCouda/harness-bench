@@ -1,0 +1,4 @@
+source_id,category,reference_date,qualified_capacity,unit,scope,note
+S03,home_support,2025-03-31,128000,person_visits_per_year,Lanzhou_synthetic_city,3200名备案人员乘以每人每年40人次
+S03,community_day_care,2025-03-31,49000,service_slots,Lanzhou_synthetic_city,仅含通过2025年一季度复核的服务位
+S03,institutional_care,2025-03-31,27800,beds,Lanzhou_synthetic_city,仅含通过2025年一季度复核的床位

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "FORM-NAME",
+    "label": "Applicant name",
+    "type": "text",
+    "group": "identity",
+    "required": true,
+    "pattern": "nonempty"
+  },
+  {
+    "id": "FORM-EMAIL",
+    "label": "Contact email",
+    "type": "email",
+    "group": "contact",
+    "required": true,
+    "pattern": "email"
+  },
+  {
+    "id": "FORM-PHONE",
+    "label": "Phone number",
+    "type": "tel",
+    "group": "contact",
+    "required": false,
+    "pattern": "phone"
+  },
+  {
+    "id": "FORM-BUDGET",
+    "label": "Budget range",
+    "type": "number",
+    "group": "project",
+    "required": false,
+    "pattern": "number"
+  },
+  {
+    "id": "FORM-CONSENT",
+    "label": "Consent checkbox",
+    "type": "checkbox",
+    "group": "legal",
+    "required": true,
+    "pattern": "checked"
+  }
+]

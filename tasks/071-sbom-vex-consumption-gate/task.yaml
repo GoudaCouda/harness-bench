@@ -1,0 +1,77 @@
+task_id: 071-sbom-vex-consumption-gate
+title: Adjudicate SBOM and VEX Evidence for a Release Gate
+prompt_file: instruction.md
+timeout_sec: 3600
+domain: Compliance
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+difficulty: hard
+capability_tags:
+- terminal
+- software_supply_chain
+- sbom
+- vex
+- evidence_correlation
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- tool_selection
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- identity_mismatch
+- invalid_assertion_provenance
+- status_justification
+- absent_component_kev
+- replay_requirement
+required_artifacts:
+- work/decision_ledger.json
+- work/rejected_statements.json
+- work/evaluation_receipt.json
+- state/release_gate.json
+- work/handoff.md
+task_family: sbom-vex-consumption-gate
+variant: mixed-applicability-and-assertion-integrity
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - CISA-SBOM-CONSUMPTION
+  - CISA-VEX-MIN
+  - CISA-KEV
+  - NTIA-SBOM-MIN
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - work/decision_ledger.json
+  - work/rejected_statements.json
+  - work/evaluation_receipt.json
+  - work/handoff.md
+  allowed_modified:
+  - state/release_gate.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: analyst_handoff
+  max_fallback_weight: 0.1
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

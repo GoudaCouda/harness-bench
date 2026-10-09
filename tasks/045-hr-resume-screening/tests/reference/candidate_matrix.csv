@@ -1,0 +1,4 @@
+candidate_id,skills_score,evidence_score,shortlist,rank,reason
+candidate_A,5,4,yes,1,"Four concrete examples support SQL, spreadsheet QA, customer operations and writing, plus Python automation"
+candidate_B,1,1,no,3,"Social media product-writing evidence supports communication, but spreadsheet familiarity has no work example and there is no SQL project"
+candidate_C,3,3,yes,2,"Support metrics, spreadsheets used for reconciliation, and incident summaries support three must-have criteria; the SQL course is not project evidence"

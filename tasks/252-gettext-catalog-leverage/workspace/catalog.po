@@ -1,0 +1,11 @@
+msgid "Open gate"
+msgstr "打开闸门"
+
+msgid "Close gate"
+msgstr "关闭闸门"
+
+msgid "Spare mill"
+msgstr ""
+
+msgid "Night shift"
+msgstr "夜班"

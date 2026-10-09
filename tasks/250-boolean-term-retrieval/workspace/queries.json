@@ -1,0 +1,15 @@
+[
+  {
+    "query_id": "q-gate",
+    "terms": [
+      "mill",
+      "gate"
+    ]
+  },
+  {
+    "query_id": "q-pump",
+    "terms": [
+      "pumps"
+    ]
+  }
+]

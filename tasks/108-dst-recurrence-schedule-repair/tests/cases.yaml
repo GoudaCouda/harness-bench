@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 108-dst-recurrence-schedule-repair
+pass_threshold: 0.8
+cases:
+- id: nominal_recurrence_and_zone_history
+  title: Recurrence dates monthly clamps and timezone history remain stable
+  description: Daily weekly monthly leap short-month effective-date and half-open window behavior are
+    exact.
+  weight: 0.3
+  core: true
+- id: dst_resolution_and_overrides
+  title: DST gaps folds and overrides preserve local intent and identity
+  description: Both fold policies gap shift or skip reschedule skip and ordinal IDs are correct.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_schedule_expansion
+  title: Protected occurrence and skip artifacts match the repaired engine
+  description: Generated artifacts are current parseable and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: schedule_handoff
+  title: Temporal invariants and verification are handed off clearly
+  description: Another engineer can audit recurrence clamp timezone DST override identity window validation
+    and tests.
+  weight: 0.2
+  core: false
+- id: source_clock_and_execution_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

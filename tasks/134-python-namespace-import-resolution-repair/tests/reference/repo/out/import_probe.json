@@ -1,0 +1,54 @@
+{
+  "matrix": {
+    "api-then-metrics": {
+      "acme.plugins.metrics": {
+        "identity": {
+          "name": "metrics",
+          "owner": "metrics",
+          "version": 7
+        },
+        "ok": true,
+        "origin": "vendors/metrics/src/acme/plugins/metrics.py"
+      },
+      "acme.plugins.orders": {
+        "identity": {
+          "name": "orders",
+          "owner": "api",
+          "version": 3
+        },
+        "ok": true,
+        "origin": "services/api/src/acme/plugins/orders.py"
+      },
+      "namespace_locations": [
+        "services/api/src/acme",
+        "vendors/metrics/src/acme"
+      ]
+    },
+    "metrics-then-api": {
+      "acme.plugins.metrics": {
+        "identity": {
+          "name": "metrics",
+          "owner": "metrics",
+          "version": 7
+        },
+        "ok": true,
+        "origin": "vendors/metrics/src/acme/plugins/metrics.py"
+      },
+      "acme.plugins.orders": {
+        "identity": {
+          "name": "orders",
+          "owner": "api",
+          "version": 3
+        },
+        "ok": true,
+        "origin": "services/api/src/acme/plugins/orders.py"
+      },
+      "namespace_locations": [
+        "services/api/src/acme",
+        "vendors/metrics/src/acme"
+      ]
+    }
+  },
+  "schema_version": 1,
+  "valid": true
+}

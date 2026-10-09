@@ -1,0 +1,20 @@
+{
+  "planning": [
+    {"entries":[{"path":"src/API.py","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"docs/index.md","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}],"requests":[{"from":"src/API.py","to":"src/api.py"}],"ignore_case":true},
+    {"entries":[{"path":"one.txt","oid":"1111111111111111111111111111111111111111","stage":0},{"path":"two.txt","oid":"2222222222222222222222222222222222222222","stage":0},{"path":"three.txt","oid":"3333333333333333333333333333333333333333","stage":0}],"requests":[{"from":"one.txt","to":"two.txt"},{"from":"two.txt","to":"three.txt"},{"from":"three.txt","to":"one.txt"}],"ignore_case":false},
+    {"entries":[{"path":"old.txt","oid":"cccccccccccccccccccccccccccccccccccccccc","stage":0}],"requests":[{"from":"old.txt","to":"new.txt"}],"ignore_case":true}
+  ],
+  "identity": [
+    {"entries":[{"path":"A.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"B.txt","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}],"requests":[{"from":"A.txt","to":"B.txt"},{"from":"B.txt","to":"A.txt"}],"ignore_case":false},
+    {"entries":[{"path":"dir/File.txt","oid":"0123456789abcdef0123456789abcdef01234567","stage":0}],"requests":[{"from":"dir/File.txt","to":"dir/file.txt"}],"ignore_case":false}
+  ],
+  "invalid": [
+    {"entries":[{"path":"a.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":1}],"requests":[{"from":"a.txt","to":"b.txt"}],"ignore_case":false},
+    {"entries":[{"path":"a.txt","oid":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","stage":0}],"requests":[{"from":"a.txt","to":"b.txt"}],"ignore_case":false},
+    {"entries":[{"path":"A.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"a.txt","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}],"requests":[{"from":"A.txt","to":"b.txt"}],"ignore_case":true},
+    {"entries":[{"path":"a.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0},{"path":"keep.txt","oid":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","stage":0}],"requests":[{"from":"a.txt","to":"keep.txt"}],"ignore_case":false},
+    {"entries":[{"path":"a.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0}],"requests":[{"from":"a.txt","to":"../b.txt"}],"ignore_case":false},
+    {"entries":[{"path":"a.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0}],"requests":[{"from":"missing.txt","to":"b.txt"}],"ignore_case":false},
+    {"entries":[{"path":"a.txt","oid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","stage":0}],"requests":[{"from":"a.txt","to":"b.txt"}],"ignore_case":1}
+  ]
+}

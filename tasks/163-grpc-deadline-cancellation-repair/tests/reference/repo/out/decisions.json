@@ -1,0 +1,8 @@
+[
+  {"action":"keep_result","call_id":"c1","cancel_child_rpcs":0,"delay_ms":0,"reason":"rpc_ok","status":"settled","timeout_ms":0},
+  {"action":"cancel_children","call_id":"c2","cancel_child_rpcs":2,"delay_ms":0,"reason":"caller_cancelled","status":"stopped","timeout_ms":0},
+  {"action":"retry_call","call_id":"c3","cancel_child_rpcs":0,"delay_ms":100,"reason":"retryable_failure","status":"ready","timeout_ms":1000},
+  {"action":"do_not_retry","call_id":"c4","cancel_child_rpcs":0,"delay_ms":0,"reason":"committed_rpc","status":"blocked","timeout_ms":0},
+  {"action":"restart_parent","call_id":"c5","cancel_child_rpcs":0,"delay_ms":0,"reason":"restart_parent_operation","status":"blocked","timeout_ms":0},
+  {"action":"do_not_retry","call_id":"c6","cancel_child_rpcs":0,"delay_ms":0,"reason":"retry_budget","status":"blocked","timeout_ms":0}
+]

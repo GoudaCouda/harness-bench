@@ -1,0 +1,79 @@
+task_id: 111-leave-payroll-retro-recovery
+title: Recover a Late Leave Revision Across a Frozen Payroll Boundary
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Human Resources
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- structured_data
+- payroll_operations
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- late_signed_revision
+- time_zone_boundary
+- overlapping_leave
+- eligibility_gate
+- irreversible_payment_boundary
+- interrupted_commit
+- idempotent_replay
+required_artifacts:
+- retro_plan.json
+- state/hris_payroll.db
+- state/batch.json
+- .retro_apply_state.json
+- state/stage_receipt.json
+- retro_handoff.md
+task_family: hr-leave-payroll-retro-recovery
+variant: frozen-payroll-late-authority-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - HR-03
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - retro_plan.json
+  - .retro_apply_state.json
+  - state/stage_receipt.json
+  - retro_handoff.md
+  allowed_modified:
+  - state/hris_payroll.db
+  - state/batch.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    retro_handoff: payroll_recovery_handoff
+  max_fallback_weight: 0.08
+schema_version: 2

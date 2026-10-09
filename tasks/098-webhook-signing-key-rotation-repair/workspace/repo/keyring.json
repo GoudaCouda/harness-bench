@@ -1,0 +1,5 @@
+[
+  {"key_id":"orders-old","endpoint":"/hooks/orders","secret":"old-order-secret","not_before":1000,"not_after":2200},
+  {"key_id":"orders-new","endpoint":"/hooks/orders","secret":"new-order-secret","not_before":2000,"not_after":4000},
+  {"key_id":"billing-only","endpoint":"/hooks/billing","secret":"billing-secret","not_before":1000,"not_after":4000}
+]

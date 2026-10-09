@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-225",
+  "gate_clock_epoch": 1775432000,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "c1",
+      "employee_id": "e-a",
+      "decision": "released"
+    },
+    {
+      "index": 1,
+      "item_id": "c2",
+      "employee_id": "e-a",
+      "decision": "suppressed"
+    },
+    {
+      "index": 2,
+      "item_id": "c3",
+      "employee_id": "e-b",
+      "decision": "suppressed"
+    },
+    {
+      "index": 3,
+      "item_id": "c1",
+      "employee_id": "e-a",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "c5",
+      "employee_id": "",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "c6",
+      "employee_id": "e-c",
+      "decision": "released"
+    },
+    {
+      "index": 6,
+      "item_id": "c7",
+      "employee_id": "e-c",
+      "decision": "suppressed"
+    }
+  ],
+  "counts": {
+    "released": 2,
+    "suppressed": 3,
+    "malformed": 2
+  },
+  "released_ids": [
+    "c1",
+    "c6"
+  ],
+  "suppressed_ids": [
+    "c2",
+    "c3",
+    "c7"
+  ]
+}

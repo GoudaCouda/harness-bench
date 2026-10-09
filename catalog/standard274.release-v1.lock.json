@@ -1,0 +1,1109 @@
+{
+  "hash_policy": {
+    "complete_package": "snapshot_v1_includes_hidden_files_excludes_cache_and_llm_rubric",
+    "task_definition": "runner_v1_excludes_reference_cache_and_llm_rubric"
+  },
+  "schema_version": 1,
+  "task_count": 274,
+  "task_ids_sha256": "sha256:8cb63ccd4df67b2c9c829b6e598296635013f1a31c5c9ff05e768508b9fed4e7",
+  "task_set": "standard274",
+  "task_set_manifest_sha256": "sha256:3a667df15143fa223659f05c137eff6df0d2e1cbbbf571390d6425eaece2b956",
+  "tasks": {
+    "001-meeting-summary": {
+      "complete_package_sha256": "547c87e320284251933c5f98d50604ebea8356c165379c26af9b94c067d342fc",
+      "task_definition_sha256": "106699b7b5a879ba30c41c339bda8c066f6a169ac684e3cd1e35a660ba2584f0"
+    },
+    "002-monorepo-affected-build": {
+      "complete_package_sha256": "63ca6220b8d7862467e896389be63932199b9d13b2b3b6399ae07f9c29802752",
+      "task_definition_sha256": "a35859f717f838cbb564cdc93ea2202daadb8fbbae38d16b425d35bf5622c50d"
+    },
+    "003-git-pr-merge": {
+      "complete_package_sha256": "6d7270cf2bbfd0cd61ab76419af9632a47bb6c7b2ad8bb82bbdd061d542a3d15",
+      "task_definition_sha256": "22996f2080e00059ffec5c3b431bbca58ca90296c35d37a6903e4b849eadac3a"
+    },
+    "004-office-docs": {
+      "complete_package_sha256": "bfda8439cb041c409fc64b63a3eb0938260b4491cba8cddffc70404f2fabb39c",
+      "task_definition_sha256": "b8511b9feb419045b7dcaaf18403226d8f34b63b441b93e80bf1c66e9a6de607"
+    },
+    "005-repository-regression-bisect-repair": {
+      "complete_package_sha256": "ef9f227b76587cf2060368b68927d31a7fb51acd9f6129022fa7df0f21337c5d",
+      "task_definition_sha256": "8d10fc463d19a39040dd9d8fbc5a146c93d1951e87a209a2577d9f6764dd916f"
+    },
+    "006-digital-record-transfer-staging": {
+      "complete_package_sha256": "beea58178936af358af9b6919ab5a74e7e39776619f9177a8beccdfe316541bd",
+      "task_definition_sha256": "7155415e6a9edcdd374d192cca6bccf7e75db15fad337fd8a67f7c3ab63899b5"
+    },
+    "007-database-point-in-time-recovery-drill": {
+      "complete_package_sha256": "1d85eb3817f1f80c3dbd50abd30e21f0ec9aeb52b74dd9b59fb3015b20898645",
+      "task_definition_sha256": "dfb0f7b88ba44f1e65299dc92c7cab2892545d6177601100d54bb9064a2a06fe"
+    },
+    "008-db-doc-consistency": {
+      "complete_package_sha256": "14dcbddff3b976e83aafe730fbff20494913ce0d76726bbc1bbf85e2875d110d",
+      "task_definition_sha256": "9f7fc5b5d0414330bcdba26b640070ca713b9d9d9c18b80cf028e01afea61ef1"
+    },
+    "009-safe-archive-extraction": {
+      "complete_package_sha256": "d470f5ffd58d4ca6ff30e49f3ababb1f1a91460b270f39bb34373302bcfc8a83",
+      "task_definition_sha256": "9709ef2888109e7d1e82c0d2390ffc2c307054006ef6e6ab0896b6d9e90ac9c2"
+    },
+    "010-layered-config-resolution": {
+      "complete_package_sha256": "439307a04fe6aa0f0da52dce01f5c40b2d579d6386bb41f67a2284b3b34ff783",
+      "task_definition_sha256": "bfeb9149a0b4573c40be114a54187a63d7e27163a4beb027bcc33c43757f5d68"
+    },
+    "011-calendar-scheduling-conflict": {
+      "complete_package_sha256": "b80e407fafd313bb44f3dd26ca737a9c232532db63116ecb539a51573d221e40",
+      "task_definition_sha256": "a3ff303950f411cfb320f71259e2bb2310f70f8c32797b9a3b4b8c0355e9ceab"
+    },
+    "012-feature-flag-retirement": {
+      "complete_package_sha256": "69a3c994c1bfc6f53f03489d9466c05dee1eb67c97b5f18332b880ad9465c95a",
+      "task_definition_sha256": "49205d4bf45cc737e898561e96c8a475e59457a358f7e108803a758647a6daa0"
+    },
+    "013-batch-quote-contract": {
+      "complete_package_sha256": "b0d898d825a7256561004e8ccad083c987f3f124f02aa86ccd7930975fbe5237",
+      "task_definition_sha256": "3130b7150a1305d3afb372d74c90fefa8c834dc90f9e338a1d782ee5f67df60a"
+    },
+    "014-contract-summary-risk": {
+      "complete_package_sha256": "b518e857f461d66334f8dd5f05ee44ef4048b45501acd61cb4b83a6d7ab12b95",
+      "task_definition_sha256": "acec6f86876444d7c127933ee2e2425f043549e222a349b610fadb8294216e2a"
+    },
+    "015-email-thread-merge": {
+      "complete_package_sha256": "8777bba0ab9389cb1afa80e627a8a7a012ce33f6912067419576eab03f64a66c",
+      "task_definition_sha256": "7ff7bc3d32b9ce8a9980a2fc066dff7d1a61d45194a660e1fe60059b05bf186a"
+    },
+    "016-expense-packet-review": {
+      "complete_package_sha256": "fcd14807f97cb43dc7f614f927f63c2ab88076a3e3722c8e5c18983eadaef9b4",
+      "task_definition_sha256": "801c7d31132e37d5abd05d3788a6fc2ea530a169f2dc5dd35d55bd3bf76733df"
+    },
+    "017-http-cache-revalidation": {
+      "complete_package_sha256": "1173fccfd962d7853425f97b1544f12a0fe1c3193e0f1dfcc45bc25e5f32f3cf",
+      "task_definition_sha256": "594a2fdf116b7c1f20e8d0a8f470afadc5cbf940aef96866c340df8c9f78a778"
+    },
+    "018-cross-doc-citation-check": {
+      "complete_package_sha256": "f2a9a231bcc3a772b61aa4ffd9a40b6ce21e15accdcf7a0852db50fae72d1c96",
+      "task_definition_sha256": "ca1011167462b3379cdf40f569685857032da65372351bd07cc1cbfb5390a074"
+    },
+    "019-wheel-install-transaction-recovery": {
+      "complete_package_sha256": "83f6d982604d460d363992ce29af5b2acaa45ba65ee75b4ac31dd3184f72fd9f",
+      "task_definition_sha256": "c1cdc52b73a0956cf34e66724b1e1152bf1b48bd98c659ebc698494aac9e3b39"
+    },
+    "020-conflicting-source-resolution": {
+      "complete_package_sha256": "0f8643d6f5be354b6b27825a40d01cc5ee84e76a83f6da18ecbf0e4a30eee1a0",
+      "task_definition_sha256": "18769e517a5a5631fdca51e3a4e9198b729dd4c777c4ea79723773447e983151"
+    },
+    "021-clinical-trial-registry-result-reconcile": {
+      "complete_package_sha256": "7debf36067568cc0934ee8c632c97b5cfc641812410d2b9c305f885ebc3cd00d",
+      "task_definition_sha256": "1313ba644922a3c932d6fd046c56a70bf3522d966684045b0837e9ef2c49e738"
+    },
+    "022-policy-clause-retrieval": {
+      "complete_package_sha256": "643bb5ccbc00dde029ff542a57823229f3b365f2ecbd4b60d92b166ed2a4725a",
+      "task_definition_sha256": "87a892ca8b0ae4a29d1eb9ea9940cf2ec2a5d174bd313dfcca9bb369561cd973"
+    },
+    "023-oauth-refresh-race-recovery": {
+      "complete_package_sha256": "1069e2a6dcee401de5caa9a38059064a85d9248367f99c3bd526a38cf06b7307",
+      "task_definition_sha256": "a0353771208776339fa7ce3fe24e819c7a84e794cfb12259642026e50ed4b86b"
+    },
+    "024-repo-architecture-map": {
+      "complete_package_sha256": "8333d40611a66e3a7ef3f13c2a45f3081ef85b1337b37f6cfd4bbb271b028c4a",
+      "task_definition_sha256": "fc4384c4b7d9b90827a935bc2e30b3979a5ce06f0118d3a0d26a01f97e230267"
+    },
+    "025-dependency-upgrade-compat": {
+      "complete_package_sha256": "e098213ecea2e0ad8165a670b6b4cdb91e8ec43be5de752102783bc52b08e954",
+      "task_definition_sha256": "6c3afd01dce8fc707057310956ceb2c3e5b9690b12564c281ca9e9fed58e169d"
+    },
+    "026-code-review-risk-report": {
+      "complete_package_sha256": "a2b2b511763e3b148584cc74aa5d0c5e6c132f60a5e586e23539c0b9a4740ec3",
+      "task_definition_sha256": "dcd743f7c8254a970556fe2cf2826629be0fef24618e9ee40590c96732653518"
+    },
+    "027-release-note-changelog": {
+      "complete_package_sha256": "62b5d38505c323ef018052be360d141861a2ae6b395e0e53218ef89b979fad6d",
+      "task_definition_sha256": "55856d7259c7f17a9f130a4550f43bc6c67a483480fe4c1f8d0fb51ff23f7c10"
+    },
+    "028-excel-like-cleaning": {
+      "complete_package_sha256": "cfe9d111d10e032e7e0f962b65bfdcef94734a77001c72ddf5c0454ac6f90592",
+      "task_definition_sha256": "89385dd8e1ac4e4bc28de1fd0f1554c94467739ed0bbaa998c45dcd401dae732"
+    },
+    "029-multitable-join-analysis": {
+      "complete_package_sha256": "d44e17e405717bd98562bec0a6b8966131102eec1d6e20c931b8d224505dd4bb",
+      "task_definition_sha256": "17b642da9910cbe677d8681014459953097ce995dea19163136fb6dd1cfe3ef8"
+    },
+    "030-sql-query-report": {
+      "complete_package_sha256": "64fcfc1ccb1b49f829a79b13fd6fd8483690e9044f0cebb336cdd30338f0c246",
+      "task_definition_sha256": "5a10dcb9b9b16647f1085b1a5d4e1ed336c2b1ea50125b34ad1485fbd3a5500c"
+    },
+    "031-accessibility-conformance-sample-repair": {
+      "complete_package_sha256": "dffcbc9f776746a223eae371be612eac08818d6c5e605eef76c71094fcd4005c",
+      "task_definition_sha256": "69a5a021f6abd8e0926a86b5f03e22547140646d7aabb6e9f82d832789e7792c"
+    },
+    "032-anomalous-transaction-detect": {
+      "complete_package_sha256": "1f4fdc1670a07c760e34d62a75634919c094aee67e394ba31d86c65694abdbc2",
+      "task_definition_sha256": "768ab72b2ccfd04dd0c6fafff97fa2963dc9951564c9e6bf84fbb62c3110ef89"
+    },
+    "033-rate-limit-lease-reconciliation": {
+      "complete_package_sha256": "e90a377416097c15aa5b1da1289a1ff5296a07b7384d7109b1befcc87a89fe6e",
+      "task_definition_sha256": "66626355c2ff18f9402483636c591696ad2930f91d587c04e5685b362003092d"
+    },
+    "034-funnel-dropoff-analysis": {
+      "complete_package_sha256": "59857236dda0ee508a2634c6b85f253a62cf508c15d805d3ed0b7ff7053cb756",
+      "task_definition_sha256": "a1d41b6760ec57fde3ef3bc074e3514cd095dcf6b4532981b9dd63b8bd5906c4"
+    },
+    "035-workspace-dependency-resolution": {
+      "complete_package_sha256": "dc24db48d3c217407cdb81fb7805ac85d89ccd5710d8de1dc30cc6bc8149d016",
+      "task_definition_sha256": "c8ecca0bc2b3ae801257aa73adb54d33acdeb7ebd0de221dae3d2ac13cb60f8c"
+    },
+    "036-consumer-api-compatibility": {
+      "complete_package_sha256": "68c497cdbd5b9fbf8be24ff7a9f726ed0f2d5b3de6886d1f5370724071081926",
+      "task_definition_sha256": "d2baaa1cfb794009587fa1873a186695af03a1aa52e4cd6a553e663ca520e75c"
+    },
+    "037-multiday-project-state": {
+      "complete_package_sha256": "a6a9fa9d0f97b787a4a32fd02a611fc285d9ed7ba48e0a561515c28480119317",
+      "task_definition_sha256": "769404d0f4df350c09b07c5cfdd1597afdd6a90a26fde97ed49fe4eafbfa34ad"
+    },
+    "038-public-assistance-validation-repair": {
+      "complete_package_sha256": "8a5f79b35205cce9cb29b78437fbced5823a13ce7e45ae9907591a443f0d9817",
+      "task_definition_sha256": "a373de5d2995af748ba1c7250badbd4f6755db28761b2f92923da34cadbc456b"
+    },
+    "039-task-cancellation-cleanup": {
+      "complete_package_sha256": "a5ae1d6a3d4a3625958819cd0445ca55edd9951a32d10d86c6cb8da06a4b798e",
+      "task_definition_sha256": "db6434f8bdafc887b10fbf12d44853cd68744364dc1da183cd491f2223a92d8a"
+    },
+    "040-service-dependency-triage": {
+      "complete_package_sha256": "e42a2450954a852100bd4f3b1156d67fbcf85b0f220285df24523cd363e7b379",
+      "task_definition_sha256": "585b01d2fd5207b3725db3b0fcfd613609272f787b135066cb372c166f912dbc"
+    },
+    "041-capacity-planning": {
+      "complete_package_sha256": "ec11a2a1359818817aba54eb8cb52ba1f0760f63aec41708bf7a60db8a5c0124",
+      "task_definition_sha256": "8e97822395b564cdc3c67782e0e28dd846db0971e74ebd150f7d683b0ef29085"
+    },
+    "042-integration-test-isolation": {
+      "complete_package_sha256": "8ea98628a66985720cf967dc302bc1ace5b762a8dca4463db8a89f246859f477",
+      "task_definition_sha256": "1412ee936fe28796fbb36d70bf5f71aafc98547438f96075d6b9928087628295"
+    },
+    "043-localization-fallback-repair": {
+      "complete_package_sha256": "12b9311f7c918f46ab5133e60dc9663931141f80bd6b7825f587648ee7f23560",
+      "task_definition_sha256": "af914e67e88a51df879d93064ee27b3a7c3f8b8cf326e009be4fae8d905372b4"
+    },
+    "044-legal-compliance-review": {
+      "complete_package_sha256": "a90583825f79e4314641d543921f7a943a393f017c90bf2c739331faf42df54c",
+      "task_definition_sha256": "6ac01cb0bdda9f14387fc8b8feb39b21f6df2c0f6a01f3c0101834169dd7dbc3"
+    },
+    "045-hr-resume-screening": {
+      "complete_package_sha256": "fd1f4776139aecef33c692defb38c2db90c1877c33f0674d0834773374d3515d",
+      "task_definition_sha256": "fb1c138f0b55060e58a6f563bcd34fb683c3b70ec6e0a336ac624fd5a9f5e523"
+    },
+    "046-ecommerce-support-routing": {
+      "complete_package_sha256": "faedf59748a3b55fe06098b608ec5248fe50fc80ae7a8da09621b69837e66781",
+      "task_definition_sha256": "a6b7dd1a91c437ebd6d82ab3f2fe990c961c84c9f2e207eb3600c9000e9e8d6f"
+    },
+    "047-logistics-delay-response": {
+      "complete_package_sha256": "b4ef6822e4126f1380548133344b6ba14491bd505d130e09cd64cbc9f37d15d1",
+      "task_definition_sha256": "146a537928ae617ee0972ce8dd63fa44232961baa15ad5a3398c85397032cc16"
+    },
+    "048-research-repro-package": {
+      "complete_package_sha256": "72298a0ab16811e0cb7898f7ef52024dfdb68049867030f540d76c046e8d05df",
+      "task_definition_sha256": "036a4918885c7122b92ba49aafbe6137ee18750c16c93f8a9a09a6ec5e8eb0ff"
+    },
+    "049-platform-appeal-review": {
+      "complete_package_sha256": "83f9e54dbad2cb1134fcde317b7e788fcbb91b9a75fd57a912284b910552b113",
+      "task_definition_sha256": "7fd584cdb45102ab8a0122e18250c4bc5b7708b3aaf97d3eca8454131938c886"
+    },
+    "050-http-range-download-resume-repair": {
+      "complete_package_sha256": "787f4250e826705632d668285e9b34137ddaf6d3ad5215bb2542efef01786ffc",
+      "task_definition_sha256": "ca6c15376a512bdb9c0ae2ecc29871e897e85327b26c2d98e4e8ff031dca0a5d"
+    },
+    "051-smallfile-batch-reject-ledger": {
+      "complete_package_sha256": "22e9da2bb88be9de51e6425c7825b92269cab99780d836d09369dc6bd04054f8",
+      "task_definition_sha256": "23a2085e93660a4097453a8e132e8e3bcde2f623684c65ad6fdb59e950f1ef78"
+    },
+    "052-local-html-dom-form-extract": {
+      "complete_package_sha256": "bd3068ceae6955eeb2062e92d6f62448ff89ac3869aaa5d873b2fe0ca8b41963",
+      "task_definition_sha256": "5aeae1efdc711b23e7844d3836f60212f3140000e67bd124eadbe991fb87d769"
+    },
+    "053-event-time-window-reconciliation": {
+      "complete_package_sha256": "095a0cbc360107af8e7b25f61adea3a0658d46deda5fba64f69b3d38617141f2",
+      "task_definition_sha256": "03671bcabd9062b585da0ba0c4e04972a7db3060f0a472f646cc2fc3b22e8d6a"
+    },
+    "054-timeseries-anomaly-attribution": {
+      "complete_package_sha256": "93eeef382f1170f396f471e889f8e95b38a1463dae0d86143e5ab5ca0cc6e8c6",
+      "task_definition_sha256": "f3d673149878842062f3b277a7ed121cf883fb353b92f99db98c740d5b59a37e"
+    },
+    "055-financial-close-reconciliation": {
+      "complete_package_sha256": "9d4a9f8b064f942fb803ffb3a61e7b5d5545473d7d4b77c3e86cf4db337ef486",
+      "task_definition_sha256": "61167939d8b7f41d9f84ce8759714d0fe9c6b6e5e7d9b90757e26783713f2c8f"
+    },
+    "056-jsonl-sessionization-analysis": {
+      "complete_package_sha256": "d0c072545bd3f7fbc5925475bfedfe6a018a12170a47bd3e511780cc6b7bc118",
+      "task_definition_sha256": "c7e927784e890d8698884edb2250d6cdb563e31a757b30293ad30de24838154f"
+    },
+    "057-metric-definition-migration-diff": {
+      "complete_package_sha256": "2068c528e46e22558b74faff2ddf1448a3de97bfae4821125217541fa48442e8",
+      "task_definition_sha256": "c3f10583ec714c84af8b906e4f52c0a0d3c76487c12373dcdd3c9ceaf207b120"
+    },
+    "058-policy-version-conflict-resolution": {
+      "complete_package_sha256": "680a20efc345f94347a46d39f6186b9250b8b7a86fd208820d147c95272b95f5",
+      "task_definition_sha256": "42c8ce0a83ff4bc64b680d0fa87e58362566fcaef232f9355aec207a16667522"
+    },
+    "059-offline-knowledge-qa-insufficient-evidence": {
+      "complete_package_sha256": "59238ef94abe13f40d5cc59de431aa7e2cf613de5e95a02c6924895d7361d1a9",
+      "task_definition_sha256": "702f69edfc0e38e111224f74580531f084116fb59093e0d2eed190d4929dc61f"
+    },
+    "060-research-claims-batch-evidence-audit": {
+      "complete_package_sha256": "d547420ca90dc7d96e29cdb93118dddabc92b6312edb5e83540231c4e3217ea6",
+      "task_definition_sha256": "3d20db14f9158e27dd9ca302fb2c0410b7a15294fe924d3c0e42ea07cbcc493f"
+    },
+    "061-three-source-decision-record-synthesis": {
+      "complete_package_sha256": "1c98ed14255daa78655ac2e1aba5e89b3c648ffea936d7c584102403206307d3",
+      "task_definition_sha256": "fa44eac881e8cf9c722f01afa97796954a561e74ad323a86b2b6f70c388a99fc"
+    },
+    "062-privacy-dsar-intake-review": {
+      "complete_package_sha256": "e10b86dbb5f1968b4bf263551699620f85bfcafcc876f5fe94a67024b773826a",
+      "task_definition_sha256": "17abaa862c46a5954ae51d2e1a54de9d2927952f8ce55a4123e5be0ddf1bc854"
+    },
+    "063-cli-stdin-tty-safety-repair": {
+      "complete_package_sha256": "27b0cb5fcafeeef73f37374f1ce8653b8f41357e0a3ffa2186b0000718132ad9",
+      "task_definition_sha256": "47d887307b4d0b6b975a7e71484ee9d269268c01a7d2566ec22601e6619e9ca3"
+    },
+    "064-internal-doc-retrieval-injection-defense": {
+      "complete_package_sha256": "10fd1e74ff0d22e68755ca933dcd5c9f608dddba5e51812109d852f605736a4e",
+      "task_definition_sha256": "f9c6989cc26e8d677121eddfc6c8509ff113d8c7d9db45711a41c6aa80240468"
+    },
+    "065-policy-update-replan-diff": {
+      "complete_package_sha256": "61eee1fb11a63d4a42a3cd7d083cfd8b9d19edab03c277cfc68d64e868fa830f",
+      "task_definition_sha256": "6215c800b9e7ff663e5aadd430ff0fdada0a88ef5a3a041d92ad71256da03a15"
+    },
+    "066-async-ops-window-rollup": {
+      "complete_package_sha256": "f3b76a8e5ba5d8f89358cec8451cfe51d7db04927dcb87f4d4a84aefdc28c538",
+      "task_definition_sha256": "79d1c8fbc3317af25bf710e630ba3d66441d777c1f95854e431718536e58f7be"
+    },
+    "067-reproducible-archive-manifest-repair": {
+      "complete_package_sha256": "d67b5c139ec0a9c8799a548c3b27b2e91c3884233f4736c45d118e4d353f68ac",
+      "task_definition_sha256": "207c98898ee3e694c31f7763fac5f8ac88388ee113e54c8a77ad07c401910e01"
+    },
+    "068-release-approval-gate-plan": {
+      "complete_package_sha256": "9b62c461aae678dbf6d7a5d0d91bbc93515247509fec260e557ea8f9f1d92891",
+      "task_definition_sha256": "d6a6d48b72378566322877d58e3b4455bee0f98552ae69e006898cc424a87214"
+    },
+    "069-git-submodule-state-recovery": {
+      "complete_package_sha256": "68f8aadff522c155f9b77e012aa5820fe34cc6e5ac08555a67375ff0e7b9422d",
+      "task_definition_sha256": "f5d8ed620f1cc5396fc9d2e8b85f1b457279c48b7df19e7ca41ea4992414bc8e"
+    },
+    "070-ci-attempt-diagnosis": {
+      "complete_package_sha256": "e56b724b9451010b9654476e0d7bc5e4653a97ae006113ecd4fb6158b605e49f",
+      "task_definition_sha256": "736b9afeaa0bbbcd1a8541f72deec57402381d4d7a810fafaf1ba10301aa2a64"
+    },
+    "071-sbom-vex-consumption-gate": {
+      "complete_package_sha256": "47a9795cb3d6618e3072adb87a0b824a1a6b24246f00dd5b251a96db2013faf0",
+      "task_definition_sha256": "0d3a9d7fba34414415b6e9654a41ce5347511609b412f94601ed8e272f1894c0"
+    },
+    "072-migration-graph-repair": {
+      "complete_package_sha256": "d5549609a168a35c219431b5921063659d995186cefc4c2e3ee5706f79ae6f9f",
+      "task_definition_sha256": "9551a4216194c6850162ffba6c5b28ca94a1550e1ba13df35640717fc7b4450d"
+    },
+    "073-cross-ecosystem-version-sync-repair": {
+      "complete_package_sha256": "f7a94c961bff16d60674a193e6b4d2d73e868b939ec9c08b162f5554e565bb2f",
+      "task_definition_sha256": "0ceee17b62f913f265cfdb12e1daf6d05ae569e6b495dbb024ec09707cabdbe3"
+    },
+    "074-codeowner-review-reconcile": {
+      "complete_package_sha256": "50105cd84d75947455e31850ad8da43da87c70af7c9f3ebab28a333905f99d10",
+      "task_definition_sha256": "88a6e5452d9ada4f7b7fee0a13decc5337c589d5abfd246c769c45b786f6cfab"
+    },
+    "075-git-case-rename-recovery": {
+      "complete_package_sha256": "e65d0412ab3cf844075fca60adc4c6eac934aa6bfa4f07167dad92354c5409c8",
+      "task_definition_sha256": "321992f555f537b9d6d92e08240fccb93062db72627640253f1e3470af18a0d4"
+    },
+    "076-transitive-security-upgrade": {
+      "complete_package_sha256": "4bcbfd6c6b76f3e261fcf03d53532834543f3c1a33571127b67c1ef301c59de4",
+      "task_definition_sha256": "f41b95b4128295a319897c7e895229aa0f1737f73aa8b70615fd6b8958ef65e7"
+    },
+    "077-sqlite-migration-transaction-recovery": {
+      "complete_package_sha256": "6274801e813b6cca9aa6fea71fb229c596cf97ddb5ae0222eb2692b5cd1f99e3",
+      "task_definition_sha256": "a5fc3216acb665dd6efabc42e6886d5e697d6b8ba775169a9236bc1536b02b64"
+    },
+    "078-artifact-provenance-gate": {
+      "complete_package_sha256": "300b33b97bfcaa42fe97ed5c0f5b6b628d9963f80b77e9fee590ce00183f6985",
+      "task_definition_sha256": "1671548ae11067adbd718fe8d42b3504a963b5e7fae8de19941bb8ed368c1b0c"
+    },
+    "079-merge-queue-reapproval": {
+      "complete_package_sha256": "b6b6aeebd7d42cde8ca511adcd3aeea2bbeae3744c3a94f4e769e1ad8bc7ffe3",
+      "task_definition_sha256": "f003fb3db828a14536c1add4a74386e1800faadb1519c17613bb3677d7677479"
+    },
+    "080-multipart-artifact-resume-recovery": {
+      "complete_package_sha256": "fcfdc0da66470be923c2edc9626ab84b0ff8571f1a0f61c3373ba5fe66da0db6",
+      "task_definition_sha256": "0ed8e6ede84b0f12e8df83732a74b9e65a544c1e84e0e9dac73bffc8e59bcd01"
+    },
+    "081-python-wheel-tag-selection-repair": {
+      "complete_package_sha256": "a8579e35e46c1eba11f9e676171051d99ca3d120761953dc65ea50330c0a7465",
+      "task_definition_sha256": "7609c9c4398698e433e8f18309bbe8df931c89a68a28f8b9e0a3aff34fb643e0"
+    },
+    "082-http-request-retry-safety-repair": {
+      "complete_package_sha256": "35fd0a818a5be64a34304723af04d6a6050eb4d57493044b17066e4e796599e7",
+      "task_definition_sha256": "b571e518825a5095f2f02f30ed0ab05c59fd370880708d7ed3d20fa766f14567"
+    },
+    "083-census-geography-align": {
+      "complete_package_sha256": "9577dc56a5b05d7e4426b59d6b89b3ded1b7a947809194153b2e84e904b3c0ef",
+      "task_definition_sha256": "17506544d00d3acef85c1cf9a9c2864074c3cabecde749b45ca21b8f2e3248be"
+    },
+    "084-indicator-vintage-reconcile": {
+      "complete_package_sha256": "4701eee01c2776c919a2ba70292f747d1b19de40ee2a08879746cdcbf029b70c",
+      "task_definition_sha256": "9a9dd27b7ba0c4fc7f557be034a583046315b0982bb67d7f9264759169a22345"
+    },
+    "085-station-qc-coverage": {
+      "complete_package_sha256": "c6a603b2fa1838f7a48dbcee90ef7e9facdbc49b1f0f4326a669fb4c43ab2412",
+      "task_definition_sha256": "76fe31e2f0871f56f0dce73c7f41325d5e90c8d7738a8d60c6af35839960c71d"
+    },
+    "086-revision-vintage-ledger": {
+      "complete_package_sha256": "82abcc1d2f1361056533a68e6ae6e3d3e9f8c22978d149d5aa542f5c403e53e5",
+      "task_definition_sha256": "f39e7c9f11908fc4076483e6e35bd97ea2a1d22807a730c043a986534c1c512d"
+    },
+    "087-structured-log-redaction-repair": {
+      "complete_package_sha256": "fd16b7e812919b3d2af61472e8e5594641d81934a3de03def5bd0baa33e53fa1",
+      "task_definition_sha256": "3ed7ccae97ad8e793c638e51f785bd188dd6be6a570df0f2ed52e4af41dc72cd"
+    },
+    "088-cardinality-guarded-join": {
+      "complete_package_sha256": "a56a2ac905bfa07459e92356e96d575f6fa048f050864c4ca3982ad17dc7e1f3",
+      "task_definition_sha256": "fee3a03ff320c3e80dcfc61e461e6f69e55d4f9aaf4aafd2d05cdb25fd67459c"
+    },
+    "089-file-watcher-atomic-save-repair": {
+      "complete_package_sha256": "83d428d61a20ed21ef1d87c41fd430b65cbfc26b63a68058bc85a27a5b54dd15",
+      "task_definition_sha256": "1f69c91d928da198e515c108cd04bda6595fea576cf7bed3898866cba0ca86f1"
+    },
+    "090-async-backpressure-cancellation-repair": {
+      "complete_package_sha256": "bbbd70774da2db3c5f62ae856c870fe16df50a656ffed5642dafba6a3d46d7e9",
+      "task_definition_sha256": "5a73a67dadc4f6ea1142c7d87d5079791fa6589862cc01d1daffcf6f42e475d0"
+    },
+    "091-versioned-json-import-migration": {
+      "complete_package_sha256": "5c946437ecdf072abff3a879385cca81e1dbcba1801ac90e1e480eb18ba7dd65",
+      "task_definition_sha256": "0cad85b969022c3ad477e44556d0d527dee1ca332a9e1de87650978b298f5f02"
+    },
+    "092-bounded-cache-eviction-repair": {
+      "complete_package_sha256": "46d9d75057c0dcfcc925efae71abed131e6843254f9e98b7fffcc0e3dbd095a1",
+      "task_definition_sha256": "a93495204211d9afd88ba0f6eafa1f4446f8cb07976564836644ab7a8de74321"
+    },
+    "093-incremental-jsonl-stream-recovery": {
+      "complete_package_sha256": "b15dbe51c31ade84dc417709d262eb3d08b05d07f334f13b429aad02d52cd4e6",
+      "task_definition_sha256": "6e1fffc18015a3d1c66883670e7198ab83111760ff22aaa76b19b2ada0535807"
+    },
+    "094-alert-routing-repair": {
+      "complete_package_sha256": "42cd08fa208f67b6bd5f6f2b20de95862e588b2b3337dd22138e336f96d70c0b",
+      "task_definition_sha256": "cc9fa8e4fca93448aae4e359203904d0723df0521dd364ff0f883b8af2db0a7f"
+    },
+    "095-incident-evidence-handoff": {
+      "complete_package_sha256": "8963c4ed56a5c73d60bdfc0440179d6e0f156dd1bd0ab3a88d56b4d9ab46c6e9",
+      "task_definition_sha256": "1ca01c02eee3ef611be7d84b984649e5e53b45ffa0e58797f9db0103e13f9855"
+    },
+    "096-pod-config-secret-diagnosis": {
+      "complete_package_sha256": "2977a978057a52b52354a978e862e54bbf99b23de3cf4cc291e4eed96559e769",
+      "task_definition_sha256": "f75b8c7d69139ffcf362c0ca992ea55d600f58cf092f04cd5b5950e4bf1cd5dd"
+    },
+    "097-kubernetes-ca-trust-rotation-recovery": {
+      "complete_package_sha256": "a616188224bb354122ec17f5a5bb2e8d46125a991f53e1d58f00ab332e18fffb",
+      "task_definition_sha256": "341c77b9a3de53e7d07d1950f330859b210e5261bee09823e9136944d3272673"
+    },
+    "098-webhook-signing-key-rotation-repair": {
+      "complete_package_sha256": "6a89d57a5108010aa28a03030af03da1282b442c424f43b7be688971c55819fb",
+      "task_definition_sha256": "d26854a21cf2ad0270529b796a9589d085fa1f827eff3bfdfbd64cf39186c287"
+    },
+    "099-incident-checkpoint-recovery": {
+      "complete_package_sha256": "d9d6e9ce1c147dc66d35ba6c14507fbcd1d20b9fdfd5aeb160ee936566269523",
+      "task_definition_sha256": "db60fd5108885a2902a3594bc4680f1c065ce6abbaccf00abf4a6e721d429069"
+    },
+    "100-prisma-screening-reconcile": {
+      "complete_package_sha256": "1187c6b32c2624499bab61a02c32ca62de3d7bcd533fa84a49f09fcd1fa4e93f",
+      "task_definition_sha256": "cc93f286c1d6b6c4262260a817ae93eeb1bd971829c69b2987ce3e3726ce661c"
+    },
+    "101-pki-truststore-rotation-recovery": {
+      "complete_package_sha256": "f68e8899b70bc2cf1c007c87c7d388cc09e0889516032fdf264d9f1f2fee9f42",
+      "task_definition_sha256": "fadb1001d69babcaa530e67dd49b7a3f8a79cb8f08bfb6285940abbd7b9bc20e"
+    },
+    "102-openalex-evidence-graph": {
+      "complete_package_sha256": "e998c771e1dcf6943463a5182e528bbecb7f0cd4cbccd9af2888dd38ab2c0302",
+      "task_definition_sha256": "3dc6a43c9ec11924e4c917e4feb972cb07ca1e3c8595d1d3e78501514e092155"
+    },
+    "103-plugin-lifecycle-transaction-repair": {
+      "complete_package_sha256": "66d113221ef4d011fc0317e397b1662cc1e86a4e85cf0e8c1a351fccaeb996f1",
+      "task_definition_sha256": "1176fa1be61710178df6822afa034955b570c82d2d104c8b943ec54576eda3b6"
+    },
+    "104-datacite-version-graph": {
+      "complete_package_sha256": "a9e6db55f64926e6def8c5d88ba811da214ea246552acf52ea66881e183fdbbe",
+      "task_definition_sha256": "1692bc4acc43892a16ad217b47ccf2ec65dab4ae67b5601f644640cfa230dbf9"
+    },
+    "105-nih-dms-package-staging": {
+      "complete_package_sha256": "8d8657517495e4806958f9cba6d140cb4b4cc94566841bdcf04527c6727c8470",
+      "task_definition_sha256": "35e940704004cc218a5d80b2f1becb787997a3d43836107179c689af89800932"
+    },
+    "106-waf-policy-replay-repair": {
+      "complete_package_sha256": "4af925be4bb54323dd9acb8fa5910b8cb5602162aef408d70cec9883823ca691",
+      "task_definition_sha256": "821a160e66e19d56e740bac76ca80826122891433920e849e72c19789e5ba375"
+    },
+    "107-meta-analysis-correction-recompute": {
+      "complete_package_sha256": "aaf241b44a009e8f4d456eab678580e89ff89be4429740e5983069179a3ea7c5",
+      "task_definition_sha256": "3740bb3a49ea06220ae0b715a026c7a637df2ecb2f1b100975c0d337d8625b86"
+    },
+    "108-dst-recurrence-schedule-repair": {
+      "complete_package_sha256": "fce202172b583344e090b4cfc3288f1e4e8569e5e9ba6c87205fecde97c36e76",
+      "task_definition_sha256": "a7096c90044493679712b94eb1264f8b347d3e10e99aa695488d271545e6863f"
+    },
+    "109-unicode-identifier-migration-repair": {
+      "complete_package_sha256": "9713ee7da593b57481a1e8ffecae5a6706e8b4d1d2526b64cdb366bffc818823",
+      "task_definition_sha256": "fdc7e4e88b23023d0ae214ac3a3beeeafc4cc756ab4238596a5db336acecae6b"
+    },
+    "110-ooxml-revision-adjudication-recovery": {
+      "complete_package_sha256": "a57505e36df932600f7544ff0d9f11d8e1b4f48d9f1eea4b1e97b1eeddf96201",
+      "task_definition_sha256": "799c1b3f664e2f8111bf276b0ff29ac6f86e9f80edef1939717830c3420573c4"
+    },
+    "111-leave-payroll-retro-recovery": {
+      "complete_package_sha256": "3e7697a0e215b6eb5cd3edf300feaee5c3cb815ccb177e5e58a22d299a9d704a",
+      "task_definition_sha256": "1e41db83136de99e5935f744bec6170c07bec62bf2ec0278738df25efcb0de9c"
+    },
+    "112-container-sbom-remediation": {
+      "complete_package_sha256": "be6d169d66b5434c81fc698c0c09150c3d81a1d4266b49fdf083ef1b3df41828",
+      "task_definition_sha256": "fe4a056b1b20593bc201a455a0e4feacc4d75838f8c8a27217404bb90bdc8bab"
+    },
+    "113-subscription-entitlement-webhook-recovery": {
+      "complete_package_sha256": "9036ede5d5a186fa83000e25be5e6ddcefe9606a851c4f79abe23cfd1e1e6e62",
+      "task_definition_sha256": "f42b8d59efc8b56e7fef437dfb16f1e45ddd836b2f7ab87b86b19dfe9b9004f8"
+    },
+    "114-csv-dialect-encoding-intake-repair": {
+      "complete_package_sha256": "bb4278c9e69fb36e142634b75a360e6804aa425de77d8247af9adb7c41b83bf5",
+      "task_definition_sha256": "9a6ce754e71e3d7ab2cfee7d5f900a87411f50178319fd63c2d412c44bc647a5"
+    },
+    "115-cdc-scd2-recovery": {
+      "complete_package_sha256": "679ed1026c53301537d24c144499a74595ed3a37d157770ef4213db3197253ba",
+      "task_definition_sha256": "eef8553fcafd88cfc86eaba1eb1899deee5f94ecbe22c40658051ce4db0749ba"
+    },
+    "116-mailbox-dsn-draft-recovery": {
+      "complete_package_sha256": "823bd1e63cc0cf8a24b22f0de40a8ed277b3048016af89e01311dfcef65dae86",
+      "task_definition_sha256": "8b1350949d7b3029e63052b8d2dd8f76ca33474f48c72928e9dbdf3b04d24387"
+    },
+    "117-calendar-delta-fallback-recovery": {
+      "complete_package_sha256": "a6237b2bbebf90ac25fa4326a5cc199056a97641c5eb181e93ee7f551b9356bd",
+      "task_definition_sha256": "7ccd29c2b497f01a93c2573903850d6ecd77d08cc5c0967f25ce65cb3dbaf236"
+    },
+    "118-warehouse-reservation-recovery": {
+      "complete_package_sha256": "78c8f0f27e9761c3b185cc7f5ad83b2b7bb754e431991bc2d920653ab9f1bfcb",
+      "task_definition_sha256": "034365a5a6c9b92f50949576de3cbe0c57c97a8282b2f6f0982c8e44ad6e7bf8"
+    },
+    "119-selective-restore-manifest-repair": {
+      "complete_package_sha256": "4b6c7223ad8398e0be1c7f6a7592e7590599b329a5462915c7c949afd21376c2",
+      "task_definition_sha256": "0fed4bfc9d52a71ec2b933301e261841f6f8a77ba0b9f00c9835e9365ff1970a"
+    },
+    "120-http-cookie-jar-policy-repair": {
+      "complete_package_sha256": "151a17876f5edeb1970a7965b43469378e49f7803afce6295e815934b899ecdc",
+      "task_definition_sha256": "865fe9bdd3e6b769778af6a69b2ca220f9448257b039bcec676f3a302be46502"
+    },
+    "121-three-way-invoice-match": {
+      "complete_package_sha256": "54e2ce425699baca14edac8614b4fce5d84fb0990268d337686ea85603ca559c",
+      "task_definition_sha256": "988aa6a83e66f5c3d88d1575886d8ad3bb0494ceeae6922258ec75d1d549c3b8"
+    },
+    "122-pcard-month-close-reconciliation": {
+      "complete_package_sha256": "db8df679171e45ab2e583a73d64938296a4629194d6dfd7a29c46fcb9f1f3835",
+      "task_definition_sha256": "26332666641d1895d4837548f5e045c67c20087208e5ded31e9f73f9fa9dc2c3"
+    },
+    "123-entity-renewal-fallback-verification": {
+      "complete_package_sha256": "540947a6541b8c5def6c17fa1b03f61317d273b28c445da012baedb37400aeab",
+      "task_definition_sha256": "ef5866b21d6a7e5ee1570d8c96b46d84897dd4ed26573220c4e75d84dcc428c8"
+    },
+    "124-contract-closeout-gates": {
+      "complete_package_sha256": "4d79bd9f55cf147dfd3c12434079cc4edf4f3de32df54bdb054114d6ba2127c2",
+      "task_definition_sha256": "1e243d934685f096911ae8202a517ad7c90adeac68e0e053e879b4c59adc08e8"
+    },
+    "125-product-recall-scope-plan": {
+      "complete_package_sha256": "803505f205671db595dba3c209b0444568d8ed26bfc3f78fdf043b4d13d70448",
+      "task_definition_sha256": "dc8b0d3181389b0ef62049c63d218507d5af7d5ba03e41f8055cd4b99486dedd"
+    },
+    "126-grade-passback-recovery": {
+      "complete_package_sha256": "15b64b938f023b19fecd54e197f4b0a83a83fd4c1b513fdb6838e497337c47c5",
+      "task_definition_sha256": "301dafeb6c1d16e2bdc3064f7c5a2395542fb86d963636dff4355138f5ee55de"
+    },
+    "127-environmental-lims-accession-recovery": {
+      "complete_package_sha256": "e9807f3cbaef370897df66cbc3221cf26b084c610997974ae1dfaabd03998ea3",
+      "task_definition_sha256": "9ccb2a1df00767435f203d18d70fba549037b3118aa7336c69191f82d2e1bf28"
+    },
+    "128-json-schema-reference-scope-repair": {
+      "complete_package_sha256": "1c04b9f4a29badd9339da5731cbf6ab3a26d0e6b4e0b508ce9eae49599f14b0c",
+      "task_definition_sha256": "43c7774457ff69ad1a0eeeb92198de70f9e70c35a6943c5abb6e991f792196bd"
+    },
+    "129-royalty-usage-allocation-recovery": {
+      "complete_package_sha256": "d0a313f51694311f9db6480bc8bdf51156e40442fbbdf55e3b415d5fa77c0155",
+      "task_definition_sha256": "d3d460c8791fd0b801b462484d8a36dbd4cc2749dabde0c60fd06544048e12e0"
+    },
+    "130-multi-carrier-shipment-claim-recovery": {
+      "complete_package_sha256": "5969b86234f5883e3c950eb04afe3c1dcca6cf8fd5ca178bf3844caf88599bd0",
+      "task_definition_sha256": "be77bf934d75a56229e00622fc48e658e9cd46b90464df847912f493c87b433e"
+    },
+    "131-journal-cursor-resume-repair": {
+      "complete_package_sha256": "7fa664394b3574ecb1ebc1b8d6d165ae535c15e7d9aae5ec6a022d507ee87aef",
+      "task_definition_sha256": "77bf38fff2afa453ae10a573550b8e417900cb8408d45adf9ab25c5649c04729"
+    },
+    "132-itinerary-replan-after-second-disruption": {
+      "complete_package_sha256": "df7ae7d0fd404b82a6c92db8999d63a3c842ba973f4428d3407ef1299dd88e33",
+      "task_definition_sha256": "5b80efbfaeb76e2fb02e5851e6b83c58899a9dd830d6badb1e5aa3a6eacafe64"
+    },
+    "133-dockerignore-build-context-repair": {
+      "complete_package_sha256": "18cbe1e2d8b0548ba91233fbafa774555f3e609ba72a808ab05ea234885446ac",
+      "task_definition_sha256": "8aa6618615ac6f525f63d0f7eb1300ab380833a3672f776f46efaa45ee72cae9"
+    },
+    "134-python-namespace-import-resolution-repair": {
+      "complete_package_sha256": "8cf9dfb4e54c2513b0b05d516046a3df3577cd8d2270f6b39ec2cb2a09ccf4bd",
+      "task_definition_sha256": "ac2bde3a0ff9e73f89f3ce844c41108858b49de0203e1f0e1cd12c9e7c79f839"
+    },
+    "135-log-rotation-checkpoint-recovery": {
+      "complete_package_sha256": "be870c0041ab32809be80808e3954f0d1531d9a854ac1c9d22763d6ae7a68a51",
+      "task_definition_sha256": "d6c6853795930b08560583810ef239fa3ce0fc6e1d91a9cbda1a839eb2205d04"
+    },
+    "136-escrow-disbursement-recovery": {
+      "complete_package_sha256": "28d98bf8517716cd7c0e4b027fc9d26ae0e4af751dd611118534172f88201203",
+      "task_definition_sha256": "b8be3c5b0a438fa82d5be67161392068a4037fc48e38ec76ab1524a2f401b8a1"
+    },
+    "137-calibration-certificate-control-recovery": {
+      "complete_package_sha256": "29c331dddaab2df43f0534ebf49d66e74f5525f7bbe2e29fb221d2e237be1de7",
+      "task_definition_sha256": "f471412790069371cabe341ec0b663d1ffce8e77053b9f08bbeaf1a5f49c7a42"
+    },
+    "138-prior-authorization-packet-recovery": {
+      "complete_package_sha256": "3de5bbb96ec52d42b8f1e7d42dfeed9c6a5ce456baac9064e827809b07fe4ce3",
+      "task_definition_sha256": "004ce1b4dce4e5508116f9debcae7605a72995ba968c876ca1c2f5b53b15f7a4"
+    },
+    "139-oci-layer-whiteout-merge-repair": {
+      "complete_package_sha256": "1b6e6221e359b3fbad0d7fd618fabfc83918d7bb374acde400a462c76fc3543b",
+      "task_definition_sha256": "18f997c8e766d49b38bea35926eb4430b5d648ad8b5cbe0f7ee3d99d0cc663ff"
+    },
+    "140-pharmacovigilance-case-intake-recovery": {
+      "complete_package_sha256": "8307f2cb97ca0b6e26a6ab62b26abb2e89210162faef87b8d3c2e6743ab7ffcc",
+      "task_definition_sha256": "6dd9b41b199f384ef13f2923cec675edeb0bc11d09858a79c37872e5d5332fb0"
+    },
+    "141-dicom-deidentification-recovery": {
+      "complete_package_sha256": "7afc46771ccac03ccc0bca2f169bb19f5ed68608e8ce338acd53711dbbcd7547",
+      "task_definition_sha256": "890b3f84d47f246f13b278c41b5b127824183412ccdcb867f01dd20e022bbef5"
+    },
+    "142-trace-context-propagation-repair": {
+      "complete_package_sha256": "71d2c204d05a1c0f1c7c84b6492507f964c7984d360c0b48a1dee1b511227eb5",
+      "task_definition_sha256": "aa3900900fb3e45c00a4e015f074490d55df297364dac930d3fb7a6bdef29206"
+    },
+    "143-mime-multipart-decoding-repair": {
+      "complete_package_sha256": "9b45a7e21027d74b47baac9a9275b16cf3c347d68bad95afde692382fd0893ca",
+      "task_definition_sha256": "2f4a1e4c2bc6b3d8c73036516b8f684f9a2ca7a22ee420bbc5072fe06f24dd59"
+    },
+    "144-formulary-substitution-review-recovery": {
+      "complete_package_sha256": "d7694b4f910f7139445ae4d98e36b52de22ee044e401534ce45438f0d0a05b85",
+      "task_definition_sha256": "4fca79dc77307e3d406290bec52bad3d172f6dde7baa8001aa9668f2115b6f8b"
+    },
+    "145-permit-routing-constraint-repair": {
+      "complete_package_sha256": "691a13bc8aac113b91e115a1eaee9798dd52db008b322a35f10753c11e696dff",
+      "task_definition_sha256": "43af5f98792608ba498e2c91e3296eaeb66749122b990ea6f36afce4a3c658c0"
+    },
+    "146-transactional-outbox-replay-repair": {
+      "complete_package_sha256": "a7c53baab4ab433a243f3f95cca9d5d436266398b1defa1e6e414718a212e9bc",
+      "task_definition_sha256": "d89f77b429878d037f207c1b502bf8c342a6f79a672b06e8d6d411d302d4b293"
+    },
+    "147-iac-lifecycle-plan-repair": {
+      "complete_package_sha256": "518564347b50f0927b6575732b61d2fd5bbb16a775b597c1fb52fffcb5696fad",
+      "task_definition_sha256": "9210849536ac245a069a0b64a66ad89e620de0bb84c2ed91fd2b639cd2cf3266"
+    },
+    "148-kubernetes-field-ownership-repair": {
+      "complete_package_sha256": "54c11c6ef6ba1b943644b66b0a1a2e8130888f2e3fe43563d9d110406719c2d4",
+      "task_definition_sha256": "f335a941e604d7f576975fa9f553cc933d9da7746d596eee46fc513517c9b5ee"
+    },
+    "149-graphql-optimistic-cache-repair": {
+      "complete_package_sha256": "fad8285026dc83ea7948dc434fdf5d92cc7975968ab035726039f957ad139475",
+      "task_definition_sha256": "786148530140901db906eaf93ec92e29285212f34760f53e24058a2a42d7f46a"
+    },
+    "150-webauthn-counter-risk-repair": {
+      "complete_package_sha256": "224638a9f02e6ee1f806c2055a56562f1930517910264a1e77f4ca0d076f7626",
+      "task_definition_sha256": "32b47fe07b1e1f9cc7e3fab9a43f1846a705174004ad0242bd217b2770226af4"
+    },
+    "151-crm-account-merge-recovery": {
+      "complete_package_sha256": "3baec386051d82920298021c736990de2a72b73fe7a06c35cc43a019dad64538",
+      "task_definition_sha256": "cc6c31c9eada4aeef291ab2e4714d6716a8a0e1211231b0831631fbf00b96136"
+    },
+    "152-postgres-replication-slot-recovery": {
+      "complete_package_sha256": "688d8debd60a5f06f93d57005a656a36eb40fb9beec118f15623b996869b7449",
+      "task_definition_sha256": "effe55ace6e8e7b443647e2c1f08d72f8483dc0404a5def0b7e0445e33edb0c7"
+    },
+    "153-github-actions-matrix-rerun": {
+      "complete_package_sha256": "ee778f1a6f9283456bff557e6bb9828f75b99c24928fab792e08d7f0be007092",
+      "task_definition_sha256": "8c4dedc1052047bcbbf0dbd406e30276330e87c774af364d01db3c828066a687"
+    },
+    "154-postgres-expand-contract-migration-repair": {
+      "complete_package_sha256": "6a3856c66bee025311bae98c29ae46760e5e64f474dd9683a9d98456c86b828e",
+      "task_definition_sha256": "59de700eafb5725ed39e3d0b0e9e57a6e6d9b3f051ca5399a384d1b460707a97"
+    },
+    "155-payee-screening-service-recovery": {
+      "complete_package_sha256": "eed0a6f8190727a13d8a42d6c96092227a0728ffee2eafe3285755832f728818",
+      "task_definition_sha256": "da304c6cb5f49a5633396dbb50fd77e5f153be689552506ff20f981289f7b956"
+    },
+    "156-subtitle-timing-format-repair": {
+      "complete_package_sha256": "3f24511e5c46ab42f3b4faf8d3ebf8a1e816fceffbfc0ec3a9d6a37e3b7e3ae7",
+      "task_definition_sha256": "82cb2fec0226284feacfcf3eefb07e852eac067df50977d31d8395b30a7761fe"
+    },
+    "157-github-oidc-trust-policy-repair": {
+      "complete_package_sha256": "c9f2ac24297ac1249539c86385a06d4a8ef7e4f198b8c8a2eab8cc2ee67c1533",
+      "task_definition_sha256": "fd4e8f24abcfdbf2cc3b41b90b476928139290bdf971b84076d5e05d25bb2da9"
+    },
+    "158-kafka-transactional-offset-recovery": {
+      "complete_package_sha256": "e85a918eb71d68e663237fffb97f1f86329a9b03ea08e8f44be69448c129444c",
+      "task_definition_sha256": "87815662b9d59bfcecb4cd42a4b04fa129bafae2551f0bdedbfd3e6a17f98b1b"
+    },
+    "159-http2-goaway-retry-repair": {
+      "complete_package_sha256": "c0bb1fdbac5d3df000c9ade338b8efed1bec291251a3ec6cf6dd6d9ec25968b9",
+      "task_definition_sha256": "3f23bcee60e736f5a3e4f4f242737e24bafc0202eb904dd6f9c1a59f9f17b858"
+    },
+    "160-xbrl-prefiling-semantic-repair": {
+      "complete_package_sha256": "ea91cebc10b8b6c31556c43275602087fb1630678bb636726d8c3d4248d233d1",
+      "task_definition_sha256": "deba8d60f9283656799610cced9ea82a25aa3296672ca51acba8d336d4607d1e"
+    },
+    "161-prometheus-histogram-migration-repair": {
+      "complete_package_sha256": "a0450a28e2cc8c4ae72e56747408e1bc585cecd8e0384dd504c8fa23e7cf15d8",
+      "task_definition_sha256": "fcb8ba903ad3c267fc76bfd4956b65909687309b46ad62c4c4f662bbc4804b60"
+    },
+    "162-degree-prerequisite-audit": {
+      "complete_package_sha256": "672ed2ef12a76d5f4454cc7c2bfada7359830a67fc8eaed85f89b549a836d72f",
+      "task_definition_sha256": "0de3f5d9313910713c9b72dbd7437cbb1871251ee6bc041b0c6afbba1b86cd33"
+    },
+    "163-grpc-deadline-cancellation-repair": {
+      "complete_package_sha256": "ff5e1a940d75e479683a1de0a3db447c6f6024c817555345035fb4f1f6a2add9",
+      "task_definition_sha256": "36f2f4b5a818ab6678fac0acc8978cae792cfc026b4b040ca22e7a3efe3f3028"
+    },
+    "164-s3-event-sequencer-reconciliation": {
+      "complete_package_sha256": "b238b24590f908c6e45c4fb86acfddeb7be285db79088b91aa5eed5d764777ad",
+      "task_definition_sha256": "a845ad00aee88ab980237bdf7af6c30fe2fb92e83d7b0b91f2431eb3ee5abd3f"
+    },
+    "165-kubernetes-admission-convergence-repair": {
+      "complete_package_sha256": "b74c1be74ad76311de80725a570b47a1b1cf7618c3511b63a3ca43692c87de29",
+      "task_definition_sha256": "ec63b2992e5137a26c8cec97614deb95f4bff58525d73bac301ba4d89d41b727"
+    },
+    "166-sigstore-bundle-policy-repair": {
+      "complete_package_sha256": "154a586ab700efb7affa8ec2e3aec4607fe604b03fb42ee05b5488220b4a5bbc",
+      "task_definition_sha256": "6cf29d6c4b40d37ae754ca4b1c052d1e2d5c31e44741c08ba9e7bef270c78452"
+    },
+    "167-sanctions-filter-health-recovery": {
+      "complete_package_sha256": "25c436cb92d1f3048685160dacb7f3f1c3207acd0596cc2d9211e55a7bf4d459",
+      "task_definition_sha256": "ed894bf4d9857763ac806cd87b051bf4dae0e2611c91982e925c7ce0ca974b9e"
+    },
+    "168-http-early-data-replay-repair": {
+      "complete_package_sha256": "7fe8faefbd9caf6c14dd1b1eac5ab0eac9a8bbb3bcbdaf7b5cbd3ea82e5932ce",
+      "task_definition_sha256": "a97bb6b5600376de3bedc6959b4c79befafbdeeac01f112a8b69a35d3fe0e74b"
+    },
+    "169-redis-cluster-redirection-repair": {
+      "complete_package_sha256": "b7fed1a8bc660a9a571b1b874fe3d65585233ec6624c1f8ef24ae0a6eb09694f",
+      "task_definition_sha256": "58b9aa148231147b79cf5485c6792404f0ebf2ae2c832751fc210e3d9f1b777c"
+    },
+    "170-cs-priority-routing-base": {
+      "complete_package_sha256": "238c4c10c3408a2122869486b46f617a76defcf6815e94c8dc09418d0ec1ae43",
+      "task_definition_sha256": "275fedf6f2ed849be6f7b2f7b52aae13758715964b9b23c9327db1ef303a9f40"
+    },
+    "171-openapi-compatibility-repair": {
+      "complete_package_sha256": "883a18a4cae0e509cca8d736dd6020d5d5550ec6919893de5512425eefe15288",
+      "task_definition_sha256": "9cfe01ca48ced6e07ca501ce3de521f969c211eac1ab5a60e95e7fc09e11e687"
+    },
+    "172-oauth-dpop-replay-policy-repair": {
+      "complete_package_sha256": "ca16b217c7526ffcd1d6c3d27c510d27a35d4a3b3bf3ba02e5e298c3838552f8",
+      "task_definition_sha256": "ae2057aebad9f33f577c53d211e8fd09e5f543d6c11e17c8fdaae5aa9b28c222"
+    },
+    "173-kubernetes-watch-recovery": {
+      "complete_package_sha256": "8b79b3019a1fc19498c55b0df40232bd8a9520fb0f73eb7d25224691808f34b8",
+      "task_definition_sha256": "b4fe6f4b3037fe9ba832ba4c401fd6d10cb4b1f7995d1e8b5130a6515b8c878f"
+    },
+    "174-dns-stale-negative-cache-repair": {
+      "complete_package_sha256": "ab646bab073d1908bbb06f4a205612bba4a4cbd230b58d697989c038713b9371",
+      "task_definition_sha256": "418a1a1e41731358274558b097edd240ca771548333fa31ec746aafdf1841a9e"
+    },
+    "175-service-health-budget-repair": {
+      "complete_package_sha256": "ae98e4735c15112fd6d10fdb927df83b77dbb91c57fb931fed16a50c29378d63",
+      "task_definition_sha256": "199883d9362f5a37fae2f181e425bfd7712f1417055a80d39b9364bc9a23cade"
+    },
+    "176-jwks-cache-rotation-repair": {
+      "complete_package_sha256": "5ef4ecb8589da811f5e7e367ce37affd9c737d427663bbee89483cbdf30acb0b",
+      "task_definition_sha256": "301e84dd74c986c4a81c33b1ebf1633e1130ae1ab3a77a2f69eef89561219fad"
+    },
+    "177-connection-pool-reset-repair": {
+      "complete_package_sha256": "5589878194234f2b69ba3884fd760d047b006f89574d4c4f2a8ac0f296c09794",
+      "task_definition_sha256": "fe7fd22c69dcdd5037ac783100b6d43a0adfd9f4d177afe16ee272de7a5aa363"
+    },
+    "178-make-incremental-rebuild-repair": {
+      "complete_package_sha256": "a0b01bd1ed020e992bd6fe50901b54c2f22d33818b58e09d47fad1f3f17154f1",
+      "task_definition_sha256": "8776fc1e915fc4f233261a980da25f1d5caf538f5e47be0b517f7984ea65ba63"
+    },
+    "179-git-worktree-prune-planner": {
+      "complete_package_sha256": "e32d9ba64025d1e6cb1feba28995e0ec0da3ede7c280dc48bec10e11b1f4d1a4",
+      "task_definition_sha256": "26e21b6459ddf7bf5c1bec013c67c9c7021b2fc76808199f1c169baac2c90407"
+    },
+    "180-oci-platform-manifest-selection": {
+      "complete_package_sha256": "acd78944a1347b80ab1891eebaa90c52b0cad4ba000ec27d5d57ee841102c4f0",
+      "task_definition_sha256": "f35c63a59a4a51002f2a6f930fa749b2dacff1a58d4487ace15882d6fb98a8b3"
+    },
+    "181-systemd-restart-budget-repair": {
+      "complete_package_sha256": "d9c0f17607b47087833339fbcbe8ab052a66469ea81bad7a3eb429c3c3c6bd75",
+      "task_definition_sha256": "2e3b1eacf7c850cc50aeeddaa4f4a04399d9e26affda05f8904adec4d15f72b0"
+    },
+    "182-message-inbox-dedup-recovery": {
+      "complete_package_sha256": "6655b2b8157d40884ccea238a8200197ccdd22067a735e74b3a6664598a7327c",
+      "task_definition_sha256": "693a2880d088ba25d23e1748aa5f610b546356bc701d71dace18f2812596b82e"
+    },
+    "183-certificate-path-selection-repair": {
+      "complete_package_sha256": "db14c61925f6f50aa0da179c0bd66a968066982873638a09e1c684c3136c8e6d",
+      "task_definition_sha256": "4c87acc69a04ef59175b1a183b7a7d50facea284c921f0428431b1673972bf9b"
+    },
+    "184-rolling-deployment-capacity-repair": {
+      "complete_package_sha256": "f42c76b48b7e6a271d301e3217eae042df379d1f3c3ea84d6f1440bef0378048",
+      "task_definition_sha256": "af7740e9c748da00dc4380257ad5c4f1dd3937a91b2b95a55f880ae9782ffa51"
+    },
+    "185-unix-permission-transition-repair": {
+      "complete_package_sha256": "10e20b5a47782aff0fa5351f576f20e59b2ea8eb73924cbd1200169cebf388c1",
+      "task_definition_sha256": "2f01bf9baf59f4577eedece69636db4771a4a946babefc04c5ee391a16501a1c"
+    },
+    "186-dmarc-alignment-repair": {
+      "complete_package_sha256": "4f3d1e54732a7eb3d6f45f284755cf805582c9f376324f5367bc449ae2e2986b",
+      "task_definition_sha256": "71d664fa060372b81f0bc549293417eaf0379d7d42b51c7d60c3d5951be59826"
+    },
+    "187-content-negotiation-vary-repair": {
+      "complete_package_sha256": "494f5941a3e1c282d42c6e1f62708e7034366e76fe5c34892a9e1345fbdc0f3e",
+      "task_definition_sha256": "0705ec2e727fb5e4f8ee503567496b521dce786da2436f3d38c680ded9070db8"
+    },
+    "188-dns-zone-serial-repair": {
+      "complete_package_sha256": "34564f85f274a8d00059383e757f336e1161b57df2e7ca71a59ba359e286322d",
+      "task_definition_sha256": "db0367f591f96e59048fbf439c94f4da29f827af5d06f4657aa68b95b82cae40"
+    },
+    "189-database-deadlock-retry-repair": {
+      "complete_package_sha256": "1a985559a44ae65abdd25971591312653c68f220b16f38058fe3056955514407",
+      "task_definition_sha256": "4acec561edacb734d4eb47af6ff7d222a48161c16184d7dc3b905f1b791b2b8f"
+    },
+    "190-api-pagination-cursor-recovery": {
+      "complete_package_sha256": "a1b9de5997d08904d87360e528ab4c535094d1384d678e69dd697d54780d9b74",
+      "task_definition_sha256": "826f81eeae76f9cbb82ddb234e2e666e283f40c3c173e1df7ab0d7e6603dd0e8"
+    },
+    "191-backup-chunk-gc-repair": {
+      "complete_package_sha256": "1a9daa86004eb8c42b25eccff0d6b21ed0bbeccb44cd6c0b8f1444f53b3d0449",
+      "task_definition_sha256": "e1f8d9c3f09b5b627fa6fd6fb1479b79653eea99a90c3d7fc28bb00aadb97719"
+    },
+    "192-retention-hold-compaction-repair": {
+      "complete_package_sha256": "68ee27cffe1fe5321596688f67dbb631d0ccdbdae1992fb6ed1cb3020fc66a6e",
+      "task_definition_sha256": "672ae6399e7f83c49bfe3d4d28749ec337d90f37a6931ebaecc48d598d54dc0a"
+    },
+    "193-kubernetes-finalizer-recovery": {
+      "complete_package_sha256": "9d17180f51a1d8ebce15cd4b83182c1424d52305042f802fd8668beb562f83a3",
+      "task_definition_sha256": "a00b29fa53d64cd6f1641a67e947e72645e0ea95b71aa12084d566303d1a5171"
+    },
+    "194-shell-pipeline-status-repair": {
+      "complete_package_sha256": "3420d3901309966bc2c3f3b4531afdf31c4c9000c7ff4b56277b786bdac6bfa0",
+      "task_definition_sha256": "72d973500d7eb85fe353a4da453b840f510b3aa1e4ce3257845dc75a0a6715e4"
+    },
+    "195-hr-injury-evidence-stress": {
+      "complete_package_sha256": "338d0b64b4d349d3bbe0ca7af7574735c208a8b64a5bd50d7d77b674fc6c0a66",
+      "task_definition_sha256": "6cdbc8a288dfdf90e95952c11a590c134c3d6c134194541b48d07c85efe87f5e"
+    },
+    "196-proxy-no-proxy-matching-repair": {
+      "complete_package_sha256": "f6ca292780849c1d744dfc4583bdf21f3559b63d51a09f7ee3263d4360d34a5c",
+      "task_definition_sha256": "1c8fd6515d5a9e5db54a81c51c6eb247352d0b6d9041e433cfef356d03fb0b1b"
+    },
+    "197-hr-coverage-delivery-stress": {
+      "complete_package_sha256": "e0e424fc7ebc27afd90227cd4d67b2ad0268f3d7e173b3197dc860ce5ab25aaf",
+      "task_definition_sha256": "8bfa9f33f875fa95718e95322b86d7c985f1c0d45e84eace85ee0c9d3d39fc56"
+    },
+    "198-postgres-vacuum-wraparound-planner": {
+      "complete_package_sha256": "957c317eefd3327b6d9d36dff6435090c85041674724ea60cc5db5d539369767",
+      "task_definition_sha256": "49e086a3cf1bf297035c8946fd5d3a64918d067d4987d083c587946ecaa9948e"
+    },
+    "199-git-lfs-pointer-repair": {
+      "complete_package_sha256": "b78547af6e212e18578ad5bc43089833899d905ab5ecc3bbeaf8e23f66c96c72",
+      "task_definition_sha256": "b80a659003425aff13ce3669cababf9b0c2d75a4cf185c6ecc087828fbbdfaa1"
+    },
+    "200-hr-transfer-least-privilege": {
+      "complete_package_sha256": "fc4f98133816b720b2af778277e72fd30f7f78db834d200d5a6dceded9e6e4a1",
+      "task_definition_sha256": "9573602dc824f49290ee1f244012fee72df245d7983929130af0f8b076d61a36"
+    },
+    "201-secret-lineage-containment-recovery": {
+      "complete_package_sha256": "0b5712d23d5aff6232a240e417ebb7f154d8321e53bcfb0948b020166eb03176",
+      "task_definition_sha256": "5f49f65c29b8f8289f7b5ed179382190a0d86a3566b602b51c3a27bfccd690c3"
+    },
+    "202-smart-meter-billing-correction-recovery": {
+      "complete_package_sha256": "e6798b82fd54de5056b9a1c75a4b78a867d5f6912e2705c2c816943e8aee0321",
+      "task_definition_sha256": "f07bf318865dedc9a33a3c6768133bb0c9e6d906e7f9fc9404766cb9bc85e9c0"
+    },
+    "203-cold-chain-excursion-recovery": {
+      "complete_package_sha256": "5c8033de1917a64a4050c089af535870518ec916f2c58365bab8ffe04ad216e9",
+      "task_definition_sha256": "08247476b52b857d7a630f49b695ffa5f50a9b215c0c6b9dbed4b0ba15d416d7"
+    },
+    "204-purchase-order-edi-recovery": {
+      "complete_package_sha256": "8ce26316604e92acd66e39f27a9ddcb73c2b09a884e23dda49e1e797af09fb3f",
+      "task_definition_sha256": "f9354cc518481ccd0a89faf8791a05b3fe3f854156d6420b7618f7671cd983f3"
+    },
+    "205-serialized-equipment-maintenance-recovery": {
+      "complete_package_sha256": "e5289c1d54f8de8a6d75c62ac4337a2161e417d24c8f685c24885f69c7923ccc",
+      "task_definition_sha256": "a3978df25c38bc6b0f205815d737a6c9ff9e37759c92e34a68f1b91c02c60973"
+    },
+    "206-bom-engineering-change-propagation": {
+      "complete_package_sha256": "3b44ee6a35bd32256332241e8f123abe1ad419baadfd095433561b03db2a9c5b",
+      "task_definition_sha256": "1cc368786aafa1a465508164f1e743668517ab9b672bf7faec4f8c3770162c24"
+    },
+    "207-water-main-isolation-recovery": {
+      "complete_package_sha256": "aa6cab8c61f396a9e0c945cbd4c65cc89ede383220de47046894dcd1ac9c7f53",
+      "task_definition_sha256": "f0fab0b79cefa320aba51694b2a03f461089fe4b8519aa522bd9f1a7735e4099"
+    },
+    "208-idempotency-ledger-replay-recovery": {
+      "complete_package_sha256": "1c553c90953ee82c7cab3e016a314ffd403f690002c60c18269cab013ff9a7e7",
+      "task_definition_sha256": "c74ebb95689d6c5bc147a09f578dbc91637050cf519285452623d94b4e112b2a"
+    },
+    "209-jsonrpc-admission-gate": {
+      "complete_package_sha256": "63d529fe2e077238605bc5d2934999a9615f3180a22a9c8eca0d8dfc97f59258",
+      "task_definition_sha256": "cfb88b2f3e2a8d2014954a3220f91f81426c4b8aba390445c8f049be39fc5185"
+    },
+    "210-attestation-evidence-chain": {
+      "complete_package_sha256": "b7e5b4523405c684e263f1336c04166a16090194e8062da6666ce952ca33ab3a",
+      "task_definition_sha256": "7f1e60fda5445f18f767f569cc16dfaa2a3405575c38849db591ce7f3a49aeef"
+    },
+    "211-sliding-window-quota-ledger": {
+      "complete_package_sha256": "a019459886cb875f0cc10df3b3bb42674fce9e6134c3661acffb65dc2de5e859",
+      "task_definition_sha256": "f9cd1cc6f7d5506e30f350e0420a847984ad53b52ea895c20ac56503311ac8cb"
+    },
+    "212-bounded-archive-ingest": {
+      "complete_package_sha256": "5bb6f8b03b3c360e6fef162d97b0faa77188a746baaea714edaef5e42608d502",
+      "task_definition_sha256": "30ca1c095216f1c2318abe8d92a4444d82181bf258cab42997a534698a4c32a3"
+    },
+    "213-out-of-order-job-journal": {
+      "complete_package_sha256": "5f7fbe22b1385ec21fa989f6011f6dea6c29aba750dec36ae93e0f04647ae5de",
+      "task_definition_sha256": "22251c81585fd6abc1d64750e92ce11ec5cfd15c7d8c148e6a6b0cf37c0fbd18"
+    },
+    "214-circuit-breaker-probe-budget": {
+      "complete_package_sha256": "87f31d3517ec60704293a8f9dae2474dd91432cf08769af911184b6384486ae5",
+      "task_definition_sha256": "52d0b1d7461ae7b4cfc5585fcaa3c62aa1157bc037e54e9cc648a96fc5be8dc2"
+    },
+    "215-placement-inventory-union": {
+      "complete_package_sha256": "9f855f28ce1a578a683bddca544c23bbfda1943811d62fd401f018a896f79143",
+      "task_definition_sha256": "f5d30c3e1f601873c8533d93c3188c737105beef1ec398ac9e378c54a7ed5c4f"
+    },
+    "216-sso-audit-token-quarantine": {
+      "complete_package_sha256": "2f2e0f21fd059720649c681d3de949cf9ff4e882537dfc0f4fffa8e34766237f",
+      "task_definition_sha256": "c378ee2a65eb3eb654b75b0e71bf0c88fe48defe09f9ef46886a4c78353fb22c"
+    },
+    "217-offline-patchset-merge-gate": {
+      "complete_package_sha256": "1e77be8b6c5927b981d6e65f5c4e6817bff23fa3d351ac4df343e41ba2d0d9ac",
+      "task_definition_sha256": "37882efd6e3065bdcfc6862c99eb41173f244530478ed5e6f83bafbc5f35c190"
+    },
+    "218-content-addressed-case-log": {
+      "complete_package_sha256": "29c38aa8847cd292134914d7009b4da889bf1d7d3db5f45afbeaaf18e66b5208",
+      "task_definition_sha256": "4e9bfa38e744b67b4249f5a4e00764700eab707aae00f368e141699b9a3162ca"
+    },
+    "219-dataset-manifest-pin": {
+      "complete_package_sha256": "28cc41e01f776c4485fa61c52c0a72830dc610ab7198305a7fa4fb14823eb45f",
+      "task_definition_sha256": "2633005070fa3872a0dd82d9b55dc8f0e608dee7c0852648f0d97118e2e3a231"
+    },
+    "220-ferpa-directory-disclosure-gate": {
+      "complete_package_sha256": "7aad12c5d31a006e8e45a4a57ebae6e5e504ad13ec9d4e12c656b2fcfe343a6f",
+      "task_definition_sha256": "bc59cdc65544c44faf55f96af4632c9971be7ab7bb276dd6f4516b1652b55eb4"
+    },
+    "221-loto-energize-tag-gate": {
+      "complete_package_sha256": "33b8372cae249b97aa64af2a91222b169201a2fa95e9c5b414bbbe50ad08d0ad",
+      "task_definition_sha256": "dc0791ac72cc2f5606340e157bdd0eb6f4e0e1efb710a0fa4694fdad9efa1c89"
+    },
+    "222-medication-refill-window-gate": {
+      "complete_package_sha256": "c5fca791ae1f53477d4da5f7f7928ad3128a22658b81078fc4077833d1d04064",
+      "task_definition_sha256": "1c96e94ae2787a66dbe112928269df67a23ec761df8179714c3332db9f12f17c"
+    },
+    "223-isrc-territory-rights-gate": {
+      "complete_package_sha256": "e2fa6bae921630476c0dfd8dd438fbf6e41c37d7b6ee92e41e6328b799f0a924",
+      "task_definition_sha256": "85cd572fcc0cc0f909488af277402956de73b286731ee7d52964cd6c5a82d4ab"
+    },
+    "224-sla-refund-chargeback-gate": {
+      "complete_package_sha256": "40e06a558df3f2e5de76c34d40264635c667d177bbddba7e06e3a713ec84c516",
+      "task_definition_sha256": "633cde4b1ad3be7b3675b267e2f89692790f292497ba4526556f6e6408a22611"
+    },
+    "225-i9-document-completeness-gate": {
+      "complete_package_sha256": "b347c7a91050bae2be77faeb9ec261f3f6501347a3c7988d1e4e6a11b61289ba",
+      "task_definition_sha256": "2d9c7f57792ea2829cd32ee85c73153d16e9d7d953bdcdf5ac3b4e50779e804d"
+    },
+    "226-shared-mailbox-sent-identity": {
+      "complete_package_sha256": "96696980af87fec59ef4930d02b2e451ba580e7d7cd153471081d3d680a15d12",
+      "task_definition_sha256": "31b63fe136396642122102c3973deb78091ea6d2ca67f3a45ace37f8e118a410"
+    },
+    "227-contractor-1099-threshold-gate": {
+      "complete_package_sha256": "e9bd4d38395ad67e6b6350a828594a0d9bf9d3797254ebafda40c7f86c3b2da3",
+      "task_definition_sha256": "cbc2d01a6252ff4171786a2f3867683a004e747b53a4c3b5ee5ae7d980013e1c"
+    },
+    "228-event-time-watermark-late-drop": {
+      "complete_package_sha256": "f1874daa2a78ba2413a838ab9632ef0da54beca3dca8919e8260c3b0ede4d456",
+      "task_definition_sha256": "b2ea4363d2c21a23b3f0d4fef117b882f853882866b147caa2d8a8cd31dd9f55"
+    },
+    "229-purchase-order-ack-qty-gate": {
+      "complete_package_sha256": "a2437c32637129d9716c0bc694356238dc7756785325736561eabaa4824d6423",
+      "task_definition_sha256": "d4b5b77178149f3398695b0860377d6ce6da6ab6e1454e59059fd2e7930defa9"
+    },
+    "230-sample-custody-holding-gate": {
+      "complete_package_sha256": "9cb7e0ad359707df13bfbc958464af23c42b059f221d4fe351b1a46e7f56312d",
+      "task_definition_sha256": "f7b794009e0fa9e736848fa6cd42bf8b2b7d3160722d0cbc2fdd02b60d79dd9e"
+    },
+    "231-embargo-preprint-release-gate": {
+      "complete_package_sha256": "363b83c3552f37a813a359d729b78227ca579871dc65fcb0f482873af91a7f7a",
+      "task_definition_sha256": "3f88c72e8831810b7bbed12b09904214854e30922d18dbb437e9384f8ff33192"
+    },
+    "232-gpc-cookie-purpose-gate": {
+      "complete_package_sha256": "6befd37a3086f95c76bcde24b7dfe6063019eb44eaa30fbd28ff9f7d1218b636",
+      "task_definition_sha256": "3492ad3a8ed5190f83dec522bef4879a022f2dc0e259860f0a7f4a0004425ce9"
+    },
+    "233-dns-cache-zone-admission": {
+      "complete_package_sha256": "eb8c7917fd18a3d5a888b8a860dc1a9395aae0f1d0b68736f40af92e9821596a",
+      "task_definition_sha256": "c8ca01e08102e9deaeca143513ed10a94868c4011108c137526b256abd79909e"
+    },
+    "234-flake-quarantine-fail-window": {
+      "complete_package_sha256": "7458b780d5890e04596a9c057b4bc6199c2e2f4cc55cf7b594ba3bad32614fd9",
+      "task_definition_sha256": "4a9c30e0dc482f020168877db6f6a04cfceed19ec75739568131e45abbffe014"
+    },
+    "235-section-waitlist-seat-gate": {
+      "complete_package_sha256": "4551448ae8035cc3bf90ed233cb4707ec1f1631ef0129b63e3fb023db52b1bb6",
+      "task_definition_sha256": "ad2debae0e51f4e273f69800c003faa5eb332a65df83763ae3295e8968090001"
+    },
+    "236-demand-response-dispatch-gate": {
+      "complete_package_sha256": "707341863c2b559f237f30c84b0760ba029d4f15b4a5382e8e01b0d408c4019f",
+      "task_definition_sha256": "3fd4da86b5b5e64b4ee85cbd5708c740abe2c80577093c44b1ca400021032841"
+    },
+    "237-rma-serial-warranty-gate": {
+      "complete_package_sha256": "89914627d3483c52bc0e50f2cb5557107eec884bcb2bb46b3d2752a301198baf",
+      "task_definition_sha256": "ebb3a8a0c91d62778d0e931c410528be34abb516def0b7ff5d0770db01115c82"
+    },
+    "238-gtfs-realtime-vs-static-reconcile": {
+      "complete_package_sha256": "3e1a213919bea5426c6d5ec35f0d30369726bf87e84b85083dc5fbfede824deb",
+      "task_definition_sha256": "01bc0e68f2bdeb0a45e8cfe41bc69ac23b0ead427ab2c5387526668d4a4b4fc2"
+    },
+    "239-dag-priority-scheduler-repair": {
+      "complete_package_sha256": "edef9a7e8e0ca15bf5f1953f8952441540c1bbf58f19be27ff0be57f8898de5b",
+      "task_definition_sha256": "936b20bbc4b39fd0060e4933887b21cae44ebd5f881450a5ffd9413a2386faac"
+    },
+    "240-cidr-pool-allocation": {
+      "complete_package_sha256": "dc4e289a3e07a169e1df746f732d7ad19231ae8af0cf2e8c4d31d568a35b9185",
+      "task_definition_sha256": "8bef2d51f7ef00d006d3276e4fc0cc11aa28f17e0140f4ff38eb0d38d9e6dade"
+    },
+    "241-git-excise-bad-commit": {
+      "complete_package_sha256": "b783859efa0bb078b268d472816f2a612bda0257831f70aedf533c440cdf12eb",
+      "task_definition_sha256": "8cc417139cb0107f85d21862eef0d3d402c729611ed1bad71d3a30bf6bd40f22"
+    },
+    "242-cron-next-fire-repair": {
+      "complete_package_sha256": "203c0daf5d5e6c9c7d95224cfcb60141082e6075c70f7b5d01ba1c824901a703",
+      "task_definition_sha256": "84d2b408d71cf556322176a4a6611abf9b24975d52c707998fba43b8795e2466"
+    },
+    "243-json-pointer-resolve-repair": {
+      "complete_package_sha256": "5202c73e44657a30d4abeb0c0a8057b4251447c8d1fa1e51647a0ca1d4dae326",
+      "task_definition_sha256": "f9410f1d0af4376c04a24c61264ed8f859ea78342ca6e31e04e1dfa3a7898013"
+    },
+    "244-aircraft-weight-balance-loadsheet": {
+      "complete_package_sha256": "a282f50a1f99f6770c4dcd00b7c7c24b135292a6d933fe70d1ae8f0b39c56bef",
+      "task_definition_sha256": "290584c773abdbbe045a881fed62ce2bb80ec2cf8e15fb0412ac42028ed3402c"
+    },
+    "245-sqlite-unordered-migrations": {
+      "complete_package_sha256": "1eae23694556f4e6e27650cf9c10bd08ddfe4d57f28e59e2a64a10daf22eb370",
+      "task_definition_sha256": "1411a1beb52a9110bf1fcc0cc4fea13ca57045b5069cea98525cd02980972581"
+    },
+    "246-interval-capacity-packing": {
+      "complete_package_sha256": "eddc1cf98929a9a01aa069cfb30201da7372a33b4a1b32501e1ea18fa4e417b3",
+      "task_definition_sha256": "1551874b0e2d91d43c699849eed14b65558e9327b74abb1447fe1b8b87618d08"
+    },
+    "247-stv-ranked-choice-tabulation": {
+      "complete_package_sha256": "4f264a586a31f8edaa76594df0c4771d63bc256bba974b4d733052d3eca7f6ee",
+      "task_definition_sha256": "bce60a9af6bc4c6f8733c0f60ff43bed8d91cb802c3ef314eee9b27ddf7238e0"
+    },
+    "248-hosts-alias-flatten": {
+      "complete_package_sha256": "5ded4c53d5731c8c6b7af80f07c1c8862fa0aad8c71930c37a1e7fea191dcc74",
+      "task_definition_sha256": "f239c80e804ddab41d300cdc5600bf27cc5809f6562ff7fb6c48eb43c9388038"
+    },
+    "249-airflow-sensor-deadlock-repair": {
+      "complete_package_sha256": "fe8516ddaf16fa8f0274447d67bf080285a2f6bd1a517817c111320837120c3f",
+      "task_definition_sha256": "3bbf7ea817dfd76423e740c7bb09309358dc9f601231bfee92440fe0cd97636b"
+    },
+    "250-boolean-term-retrieval": {
+      "complete_package_sha256": "b8a6416e1449d10d0c989576e40b8094f83e512b5751e0c9a885d60ada9580ee",
+      "task_definition_sha256": "79eae5243cfc274f2092e39542de2dcdcb36c9e2fc6f8e3859a4d21d4f5cebae"
+    },
+    "251-jsonl-wal-replay": {
+      "complete_package_sha256": "120013892f0a00449c7b4fbaa34f7aa14e276e4871451d3967ffcbffadbdc171",
+      "task_definition_sha256": "ea0e513f41be07e2510dc394767e17d4b85baf98451a5acbd330217bacbd1930"
+    },
+    "252-gettext-catalog-leverage": {
+      "complete_package_sha256": "874574c3f24eb865a9e0d271c74f390d66c20b0ed5e1e9936af175d136a82e57",
+      "task_definition_sha256": "981dae0747c0ab7e5f2daa2013ae92844c1a64b3d5927e9198daa97de5555e27"
+    },
+    "253-haversine-cpa-alert": {
+      "complete_package_sha256": "a8086d1b38509e20e05357f9d9fb3748f8435a288fdb6a8334b25fad88233090",
+      "task_definition_sha256": "440bf60e72c8fad41ff440fde24118cf8d8bd259f154fe407b78c0f446842e52"
+    },
+    "254-bibtex-key-collision-repair": {
+      "complete_package_sha256": "2e025e943941f444138b16d9270101c0b9faf592add60a1ce3fe1d1ba5abf865",
+      "task_definition_sha256": "201a4215f9c01c0ac6a872bc482c6ca68f29d8afda21252e83af5b5216ad5d9a"
+    },
+    "255-construction-implementation-plan": {
+      "complete_package_sha256": "67fc854d7ac16c23a913d3c38e84322e8a81465d06fecda358fb24f2ce63fb66",
+      "task_definition_sha256": "f927974c9acde3d6a38b52d15f165c14966ea16248d42880aaaa3ca1bcf116b2"
+    },
+    "256-incident-evidence-postmortem": {
+      "complete_package_sha256": "c0ff94209dc25625f7b65950778b323180e42b5f99e4cf8725a465f7000afff4",
+      "task_definition_sha256": "c119b075137746b62eca3df521a16613d8aefd021e7e1ec5b9686ce0f921ce6e"
+    },
+    "257-equipment-inspection-word-form": {
+      "complete_package_sha256": "ebce44c1b1428dfd82729bf9eed8b29dff6f7db7850f297eaa44e2e0a2b1b61f",
+      "task_definition_sha256": "35f894ba8d6546dc75810eaaeddf24f51bbd139b692d96a2120c25385b0ea767"
+    },
+    "258-policy-document-contradiction-review": {
+      "complete_package_sha256": "f4f6d364104c7359e3037e10adb0783e12260abe3492c45f1cf52bd088051cd9",
+      "task_definition_sha256": "96b384195d30ef30cd2850abfee89d052f7503d1c9094802e592bdaa9a05eeae"
+    },
+    "259-editable-management-review-deck": {
+      "complete_package_sha256": "1e0f94ddf39240063be4da22342e9fd938dfc8e072bc83091700a82d960df1a3",
+      "task_definition_sha256": "f8a0036c18545b47c5990cb15e897ffd9f64987f932250fd412c307279ed8ec4"
+    },
+    "260-batch-presentation-standardization": {
+      "complete_package_sha256": "4379c50e45435fe4d5262cdcd027c4ffe6cea58311b42f45606ff7c2752a8284",
+      "task_definition_sha256": "74c636a543e9a00bdad0d35a1c30ad39dcd595c044b0173b652951a91aa4b4ab"
+    },
+    "261-sales-analysis-formula-workbook": {
+      "complete_package_sha256": "d7329686109cbaa3b22c876fee15eac9ec7613cb2d5cd0188511b249d8ff0dde",
+      "task_definition_sha256": "428f56a64fc89c32c6293b2797599d0b01dcf67b6324eded4bed2fe0559b5bc2"
+    },
+    "262-user-service-registration-repair": {
+      "complete_package_sha256": "91df10bf2b5ac4698966f940b843a04ed90ce1bfdda6dbbe242b70e7cc1ff08f",
+      "task_definition_sha256": "5eca96562d21e7f3cefd504514b221cb1c20d448e746d6b7f0f5251e867f8abb"
+    },
+    "263-stateful-python-rpc-service": {
+      "complete_package_sha256": "b5e0b7e3f3c4af416df43d3f4eb495983a60a24ef0ff59dd0e22b73e97fc2506",
+      "task_definition_sha256": "cfc61d50e603ff136e17b670028423244f4eedd3b1fca03927af6e0d8472ac63"
+    },
+    "264-node-record-processing-contract": {
+      "complete_package_sha256": "c3298faf4d7a40e76138ed48ede399492256ea4af29e8d8f61225377bac41d14",
+      "task_definition_sha256": "138ca786723deb2637e7467bc0113725994964f23132430490459808fa8f68a9"
+    },
+    "265-weekly-operations-brief-generator": {
+      "complete_package_sha256": "54abf53b8a6e415d7d27156df704c148eafc6b82d3ae9bfcb9a5ba500d6f4647",
+      "task_definition_sha256": "3c53d52da3a277a64e97357ba47688e2b64e507346b6ee10bde8ba31138e3303"
+    },
+    "266-evidence-grounded-travel-plan": {
+      "complete_package_sha256": "f0c5190efb5cf8b2a59b4ed36b366905164209e71fe6843560703a2d6538f0b6",
+      "task_definition_sha256": "7699f7ff2b1cb0229598602319acca7f3d35098a14d82f042bb3194041df1c6d"
+    },
+    "267-eldercare-research-evidence-report": {
+      "complete_package_sha256": "9f1a6a5a9c5ba43c6251353f6d0fd4391331fe76ab6c9a256d9c3a36d69473b7",
+      "task_definition_sha256": "e36450bb901fcd2a183ceaf579a5d1f527cf6d2e8b0ef21faf46bef5ce5b287f"
+    },
+    "268-sla-credit-evidence-assessment": {
+      "complete_package_sha256": "aff03feb11e90d3348694effd7e84c40139557678c43c46370a5531fbec2d9ea",
+      "task_definition_sha256": "8dd15cf56d41c32f421ed33714d469d139fc349719699934d076cc777d747630"
+    },
+    "269-constrained-shopping-cart-update": {
+      "complete_package_sha256": "ccd837c5140c04e0cab185254a8fb1237e466e8f6ff7ed5ad543ecc13d511db4",
+      "task_definition_sha256": "dd7a485d35e0fff65aacd788313664691ac0426bc2785108e77688d7a026198e"
+    },
+    "270-idempotent-family-hotel-booking": {
+      "complete_package_sha256": "5deefd9b3bf0c95c71b76997cdb199732150bd62b848a786cefbcd741a0f2d10",
+      "task_definition_sha256": "f749f0e23bafd45a7cc1784e76cf22b6cde2f6bf1cda880ffe5e51f68452c908"
+    },
+    "271-itemized-shared-expense-requests": {
+      "complete_package_sha256": "7bdd90e606ccd0b82bf798cef4664b7de74955a01af5781d18e4cc6bbced7e81",
+      "task_definition_sha256": "105b4fc196a85c454eda461759f33939aefbd5b7b0850cc449bb221fb6a32b62"
+    },
+    "272-video-compression-fidelity-delivery": {
+      "complete_package_sha256": "aee1b8e20d49869005b9f285f98921e47a98f47d07ea90684fa703cf22e563d1",
+      "task_definition_sha256": "52198239c4167feb2359c2efa170a6ab5870341e7319f99349d7e3e56577c0a8"
+    },
+    "273-safe-skill-archive-packaging": {
+      "complete_package_sha256": "25c71afc10113589cea5c634d3a3820c8233f81399885882fbfadc2de042e3f9",
+      "task_definition_sha256": "f5fd229824485331410b906bafd89b9f13a7fd37a4e97fd862eb2c6a3bcec554"
+    },
+    "274-collaboration-materials-reminder-close": {
+      "complete_package_sha256": "1f8c339f346abcf5f5987114e6e268aa4582de2a7deee71dea871eb757449edd",
+      "task_definition_sha256": "162b199dcd5103e1c4e53d1c8f0fca33230b840558f62c7c19ce5d95182cc8df"
+    }
+  }
+}

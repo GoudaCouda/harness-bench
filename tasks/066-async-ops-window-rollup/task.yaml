@@ -1,0 +1,52 @@
+task_id: 066-async-ops-window-rollup
+title: Reconcile an asynchronous operations update window
+prompt_file: instruction.md
+hooks_module: environment/hooks.py
+timeout_sec: 7200
+difficulty: hard
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- state_management
+stressors:
+- dirty_input
+- high_stakes_rules
+- long_horizon
+required_artifacts:
+- ops_rollup.md
+- seen_state.json
+- update_ledger.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-066
+task_family: 066-async-ops-window-rollup
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - ops_rollup.md
+  - seen_state.json
+  - update_ledger.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

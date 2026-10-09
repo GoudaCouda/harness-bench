@@ -1,0 +1,9 @@
+{
+  "source_id": "SAP-V2",
+  "trial_id": "NCT-SYN-21021",
+  "signed_date": "2025-06-01",
+  "unblinding_date": "2025-07-10",
+  "primary_outcome": {"measure": "Symptom score change", "time_frame": "Day 28", "population": "modified_itt_with_observed_day28"},
+  "additional_analysis": {"measure": "Symptom score change", "time_frame": "Day 56", "classification": "post_hoc_if_reported"},
+  "arm_map": {"A": "LX-21", "B": "Placebo"}
+}

@@ -1,0 +1,61 @@
+task_id: 052-local-html-dom-form-extract
+title: Place a safe passport-renewal appointment hold
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 1800
+difficulty: hard
+hooks_module: environment/hooks.py
+domain: Personal Assistance
+task_category: Business Operations
+task_subcategory: Transaction Processing
+capability_tags:
+- browser
+- local_service
+- scheduling
+- document_generation
+harness_demands:
+- multi_step_execution
+- state_management
+- verification_behavior
+- safety_boundary
+stressors:
+- near_miss_options
+- consequential_action
+required_artifacts:
+- appointment_summary.md
+- appointment.ics
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-052
+task_family: 052-local-html-dom-form-extract
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - appointment_summary.md
+  - appointment.ics
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs:
+  - environment/hooks.py
+  - environment/slots.json
+  grader: {}
+  services:
+  - name: appointment
+    script: environment/service.py
+    port: 8080
+    health_path: /healthz
+    state_file: appointment-service-state.json
+    health_timeout_sec: 20
+schema_version: 2

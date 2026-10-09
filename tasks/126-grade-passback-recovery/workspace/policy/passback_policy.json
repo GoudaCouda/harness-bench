@@ -1,0 +1,34 @@
+{
+  "accepted_dispositions": [
+    "accepted_on_time",
+    "accepted_late"
+  ],
+  "disposition_vocabulary": [
+    "accept",
+    "quarantine"
+  ],
+  "external_action_vocabulary": [
+    "none"
+  ],
+  "external_publish_authorized": false,
+  "gradebook_action_vocabulary": [
+    "upsert_local",
+    "quarantine_local"
+  ],
+  "interrupted_passback_id": "GP-INTERRUPTED-20260817",
+  "notification_authorized": false,
+  "passback_id": "GP-20260818-DISTRICT-01",
+  "reason_code_vocabulary": [
+    "accepted_on_time",
+    "accepted_late",
+    "unknown_identity",
+    "inactive_enrollment",
+    "unknown_assignment",
+    "stale_assignment_version",
+    "invalid_score_scale",
+    "attempt_mismatch",
+    "late_window_closed"
+  ],
+  "schema_version": 1,
+  "target_revision": 42
+}

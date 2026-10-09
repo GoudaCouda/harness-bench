@@ -1,0 +1,3 @@
+Case 13 synthetic fixture license
+
+All fixture documents under this case were authored specifically for the agent_sft project. They contain only fictional entities and synthetic values. Internal training, evaluation, modification, and redistribution within the project are permitted. No third-party copyrighted text is included.

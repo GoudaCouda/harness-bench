@@ -1,0 +1,6 @@
+[
+  {"artifact_id":"a1","reason":"trusted","signing_time":1600,"status":"verified","tlog_operator_count":2},
+  {"artifact_id":"a2","reason":"digest","signing_time":null,"status":"blocked","tlog_operator_count":0},
+  {"artifact_id":"a3","reason":"identity","signing_time":null,"status":"blocked","tlog_operator_count":0},
+  {"artifact_id":"a4","reason":"tlog_operator_threshold","signing_time":null,"status":"blocked","tlog_operator_count":1}
+]

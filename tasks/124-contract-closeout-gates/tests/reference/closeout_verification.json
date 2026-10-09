@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "contract_state_matches_policy": true,
+    "external_actions_not_executed": true,
+    "ordered_audit_is_complete": true,
+    "single_recovery_transaction": true,
+    "source_checkpoint_matches": true
+  },
+  "external_actions_executed": false,
+  "logical_state_sha256": "0ee4d12e836e08c5bfe5638eb495fe766c361ceb4e3426d4151833eff7d96b5a",
+  "review_id": "CLOSEOUT-2026-08-15-R1",
+  "source_checkpoint_sha256": "177bcdc5b7df571fd258339fec49a91fbf504ee998f986fec0d760b75367e7e2",
+  "status": "pass",
+  "tool": "closeoutctl/2"
+}

@@ -1,0 +1,9 @@
+{
+  "case_context": "完全虚构的岚州市养老服务研究，不对应真实地区、机构或个人",
+  "current_evidence_ids": ["S01", "S02", "S03", "S04", "S05", "S06", "S07"],
+  "superseded_or_forbidden_evidence_ids": ["S08"],
+  "fixed_as_of": "2025-04-10",
+  "languages": ["zh-CN", "en"],
+  "license": "Project-authored synthetic fixture; internal training and evaluation use approved",
+  "network_required": false
+}

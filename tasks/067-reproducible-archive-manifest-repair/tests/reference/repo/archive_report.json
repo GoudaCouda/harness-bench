@@ -1,0 +1,5 @@
+[
+  {"case_id":"root-a","result":[{"path":"bin/run","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","mode":493,"timestamp":1700000000},{"path":"docs/","kind":"dir","sha256":null,"mode":493,"timestamp":1700000000},{"path":"docs/readme.txt","kind":"file","sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","mode":420,"timestamp":1700000000}]},
+  {"case_id":"root-b","result":[{"path":"bin/run","kind":"file","sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","mode":493,"timestamp":1700000000},{"path":"docs/","kind":"dir","sha256":null,"mode":493,"timestamp":1700000000},{"path":"docs/readme.txt","kind":"file","sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","mode":420,"timestamp":1700000000}]},
+  {"case_id":"zip-floor","result":[{"path":"data.json","kind":"file","sha256":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","mode":420,"timestamp":315532800}]}
+]

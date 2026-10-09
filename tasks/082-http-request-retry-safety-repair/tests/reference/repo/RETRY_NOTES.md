@@ -1,0 +1,5 @@
+# Retry notes
+
+Send-phase evidence distinguishes a connect failure or zero-byte write from partial write and response loss. Unknown outcomes retry only when the HTTP method is idempotent or an enforced idempotency key contract binds the same body; unsafe POST and PATCH outcomes require a probe. HTTP application state can prove not-applied or applied independently of status. Retryable status, attempt exhaustion, capped exponential backoff, and Retry-After are then combined without retrying earlier than the server delay.
+
+I ran PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v; all tests pass. Verification covered transport phases, idempotent methods, key authority, status state, attempt limits, exponential delay, Retry-After deferral, and malformed evidence. Residual live-client risk includes proxies writing bytes after local failure, a server violating its idempotency contract, clock or header parsing outside this planner, operation-status probe races, and reusing a key with another body. No HTTP request was made and no operation, job, charge, or service state was replayed or mutated.

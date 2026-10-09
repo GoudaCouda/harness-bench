@@ -1,0 +1,139 @@
+{
+  "schema_version": "case04_ground_truth_v1",
+  "expected_findings": [
+    {
+      "ground_truth_id": "threshold_conflict",
+      "issue_type": "fact_conflict",
+      "severity": "high",
+      "evidence": [
+        {
+          "file": "input/A01_采购管理办法_v3.2.md",
+          "section": "第 3.2 节 采购审批",
+          "quote": "单笔含税金额达到人民币 50,000 元的采购，应在下单前取得采购委员会书面批准。"
+        },
+        {
+          "file": "input/A02_费用报销细则_v2.0.md",
+          "section": "第 4.2 节 采购类费用附件",
+          "quote": "单笔含税金额达到人民币 30,000 元的采购报销，必须附采购委员会在下单前出具的书面批准。"
+        }
+      ],
+      "recommendation": {
+        "target_file": "input/A02_费用报销细则_v2.0.md",
+        "target_section": "第 4.2 节 采购类费用附件",
+        "required_terms": ["50,000", "下单前", "采购委员会"]
+      }
+    },
+    {
+      "ground_truth_id": "retention_conflict",
+      "issue_type": "fact_conflict",
+      "severity": "medium",
+      "evidence": [
+        {
+          "file": "input/A01_采购管理办法_v3.2.md",
+          "section": "第 8.2 节 档案保存",
+          "quote": "采购合同、询价记录与审批材料的保存期限统一为 5 年，自合同关闭之日起计算。"
+        },
+        {
+          "file": "input/A02_费用报销细则_v2.0.md",
+          "section": "第 6.1 节 采购档案保存",
+          "quote": "采购合同、询价记录与审批材料的保存期限统一为 3 年，自合同关闭之日起计算。"
+        }
+      ],
+      "recommendation": {
+        "target_file": "input/A02_费用报销细则_v2.0.md",
+        "target_section": "第 6.1 节 采购档案保存",
+        "required_terms": ["5 年", "合同关闭"]
+      }
+    },
+    {
+      "ground_truth_id": "device_conflict",
+      "issue_type": "fact_conflict",
+      "severity": "high",
+      "evidence": [
+        {
+          "file": "input/A03_信息安全控制标准_v4.0.md",
+          "section": "第 5.2 节 远程访问终端",
+          "quote": "接入公司核心业务系统的远程终端必须是纳入公司统一管理的设备，并启用多因素认证。"
+        },
+        {
+          "file": "input/A04_远程办公实施细则_v1.3.md",
+          "section": "第 3.1 节 可用终端",
+          "quote": "员工可使用个人设备或公司统一管理设备接入公司核心业务系统，但终端磁盘必须加密。"
+        }
+      ],
+      "recommendation": {
+        "target_file": "input/A04_远程办公实施细则_v1.3.md",
+        "target_section": "第 3.1 节 可用终端",
+        "required_terms": ["公司统一管理", "多因素认证"]
+      }
+    },
+    {
+      "ground_truth_id": "procurement_version_mismatch",
+      "issue_type": "version_mismatch",
+      "severity": "medium",
+      "evidence": [
+        {
+          "file": "input/A02_费用报销细则_v2.0.md",
+          "section": "第 8.1 节 采购制度依据",
+          "quote": "本细则涉及采购事项时，依据《采购管理办法》v3.1 执行。"
+        },
+        {
+          "file": "input/A05_制度版本与引用目录_2026Q2.md",
+          "section": "第 1.1 节 当前有效版本",
+          "quote": "《采购管理办法》当前有效版本为 v3.2，生效日期为 2026-04-01；v3.1 已于 2026-03-31 终止有效。"
+        }
+      ],
+      "recommendation": {
+        "target_file": "input/A02_费用报销细则_v2.0.md",
+        "target_section": "第 8.1 节 采购制度依据",
+        "required_terms": ["v3.2", "依据"]
+      }
+    },
+    {
+      "ground_truth_id": "remote_reference_error",
+      "issue_type": "reference_error",
+      "severity": "medium",
+      "evidence": [
+        {
+          "file": "input/A04_远程办公实施细则_v1.3.md",
+          "section": "第 7.1 节 规范引用",
+          "quote": "远程访问终端的控制基线见《信息安全控制标准》v4.0 第 4.3 节。"
+        },
+        {
+          "file": "input/A05_制度版本与引用目录_2026Q2.md",
+          "section": "第 2.1 节 规范引用索引",
+          "quote": "远程访问终端控制基线的规范位置为《信息安全控制标准》v4.0 第 5.2 节。"
+        }
+      ],
+      "recommendation": {
+        "target_file": "input/A04_远程办公实施细则_v1.3.md",
+        "target_section": "第 7.1 节 规范引用",
+        "required_terms": ["第 5.2 节"]
+      }
+    }
+  ],
+  "semantic_distractors": [
+    {
+      "topic": "travel_submission_deadline",
+      "quotes": [
+        "出差期间发生的经批准采购，应不晚于返程后的第 10 个自然日提交报销材料。",
+        "员工应在出差结束后 10 个自然日内提交完整报销材料。",
+        "出差期间远程办公产生的合规费用，应不晚于返程后的第 10 个自然日提交报销材料。"
+      ]
+    },
+    {
+      "topic": "aes256_local_copy",
+      "quotes": [
+        "远程办公期间保存到终端的公司资料副本必须使用 AES-256 加密。",
+        "远程办公时下载到终端的公司资料副本须采用 AES-256 方式加密保存。"
+      ]
+    },
+    {
+      "topic": "incident_report_deadline",
+      "quotes": [
+        "发现疑似信息安全事件后，应在 2 小时内向信息安全值班人员报告。",
+        "员工发现疑似信息安全事件，最迟应在发现后的 120 分钟内报告信息安全值班人员。"
+      ]
+    }
+  ]
+}

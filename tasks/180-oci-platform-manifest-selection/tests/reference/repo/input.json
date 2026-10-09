@@ -1,0 +1,61 @@
+{
+  "policy": {
+    "preferred_features": [
+      "avx2"
+    ],
+    "required_annotations": {
+      "channel": "stable"
+    },
+    "target": {
+      "architecture": "amd64",
+      "os": "linux",
+      "required_features": [
+        "sse4"
+      ]
+    }
+  },
+  "records": [
+    {
+      "annotations": {
+        "channel": "stable"
+      },
+      "digest": "sha256:aaa",
+      "id": "amd",
+      "platform": {
+        "architecture": "amd64",
+        "os.features": [
+          "sse4"
+        ],
+        "os": "linux"
+      }
+    },
+    {
+      "annotations": {
+        "channel": "stable"
+      },
+      "digest": "sha256:bbb",
+      "id": "arm",
+      "platform": {
+        "architecture": "arm64",
+        "os.features": [],
+        "os": "linux",
+        "variant": "v8"
+      }
+    },
+    {
+      "annotations": {
+        "channel": "stable"
+      },
+      "digest": "sha256:ccc",
+      "id": "amd-avx",
+      "platform": {
+        "architecture": "amd64",
+        "os.features": [
+          "sse4",
+          "avx2"
+        ],
+        "os": "linux"
+      }
+    }
+  ]
+}

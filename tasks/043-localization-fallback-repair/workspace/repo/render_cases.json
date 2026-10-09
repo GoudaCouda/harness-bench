@@ -1,0 +1,5 @@
+[
+  {"case_id":"explicit-parent-and-empty","catalogs":{"en-GB":{"legal.short":""},"en-001":{"greeting":"Hello {name}"},"en":{"greeting":"Hi {name}"},"root":{"greeting":"Welcome {name}"}},"parent_locales":{"en-GB":"en-001"},"locale":"en_gb","key":"legal.short","variables":{},"count":null},
+  {"case_id":"russian-plural","catalogs":{"ru":{"files":{"one":"{count} файл","few":"{count} файла","many":"{count} файлов","other":"{count} файла"}},"root":{}},"parent_locales":{},"locale":"ru-RU","key":"files","variables":{},"count":22},
+  {"case_id":"parent-interpolation","catalogs":{"en-001":{"greeting":"Hello {name}"},"root":{}},"parent_locales":{"en-GB":"en-001"},"locale":"en-GB","key":"greeting","variables":{"name":"Ada"},"count":null}
+]

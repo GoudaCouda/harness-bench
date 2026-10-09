@@ -1,0 +1,11 @@
+{
+  "external_actions_executed": false,
+  "logical_state_sha256": "7666b4a365169bb563fce44289b955df5b1cafa61794c744afaa6fd8ea34663b",
+  "phase": "staged_pending_external_approval",
+  "recall_id": "RC-2026-0417",
+  "receipt_type": "local_recall_recovery_stage",
+  "semantic_plan_sha256": "332a97ec74dc1fdcc8623ca6cb3eead3d5d8a7167c5c44f5c75fa5e47e636979",
+  "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b",
+  "stage_token": "a867bdb203100fa1f203a5da473598764a5c66405f75a19a87d9667302d9f82d",
+  "verification_sha256": "808f9c8bce2b803dc38d632f3c9e70fc979cf1728e9b4bb50dfe66b708aeed83"
+}

@@ -1,0 +1,44 @@
+{
+  "trusted_key_ids": ["PSA-KEY-2"],
+  "revisions": [
+    {
+      "revision_id": "SCOPE-01",
+      "recall_id": "RC-2026-0417",
+      "issued_at": "2026-08-18T09:00:00Z",
+      "signature_status": "verified",
+      "key_id": "PSA-KEY-2",
+      "supersedes": null,
+      "target_batch_ids": ["CB-77"],
+      "target_material_code": "ADH-RED",
+      "manufactured_from": "2026-08-01T00:00:00Z",
+      "manufactured_through": "2026-08-10T23:59:59Z",
+      "include_descendants": false
+    },
+    {
+      "revision_id": "SCOPE-02",
+      "recall_id": "RC-2026-0417",
+      "issued_at": "2026-08-19T08:30:00Z",
+      "signature_status": "verified",
+      "key_id": "PSA-KEY-2",
+      "supersedes": "SCOPE-01",
+      "target_batch_ids": ["CB-77"],
+      "target_material_code": "ADH-RED",
+      "manufactured_from": "2026-08-01T00:00:00Z",
+      "manufactured_through": "2026-08-31T23:59:59Z",
+      "include_descendants": true
+    },
+    {
+      "revision_id": "SCOPE-03-DRAFT",
+      "recall_id": "RC-2026-0417",
+      "issued_at": "2026-08-19T09:15:00Z",
+      "signature_status": "draft",
+      "key_id": "PSA-KEY-2",
+      "supersedes": "SCOPE-02",
+      "target_batch_ids": ["CB-77", "CB-SAFE"],
+      "target_material_code": "ADH-RED",
+      "manufactured_from": "2026-07-01T00:00:00Z",
+      "manufactured_through": "2026-08-31T23:59:59Z",
+      "include_descendants": true
+    }
+  ]
+}

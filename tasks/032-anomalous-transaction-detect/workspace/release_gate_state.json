@@ -1,0 +1,16 @@
+{
+  "batch_id": "AP-RG-2026-08-19-15",
+  "execution_mode": "review_only",
+  "external_actions_executed": false,
+  "interrupted_attempt": {
+    "committed_records": 0,
+    "operation": "apply",
+    "prepared_records": 2,
+    "rollback_required": true
+  },
+  "phase": "interrupted_apply",
+  "review_records": [],
+  "revision": 3,
+  "schema_version": 1,
+  "source_checkpoint": "fde46d41f3708150666b36247204eceff6497e1ee903d214e0a8898d6cfe777d"
+}

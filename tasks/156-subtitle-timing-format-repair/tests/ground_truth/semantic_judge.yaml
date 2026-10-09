@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 156-subtitle-timing-format-repair
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Subtitle-QC handoff is complete
+  question: Does the handoff accurately explain numbering, overlap, transcript corrections including beacon, duration, gap and shot-boundary validation, safe rerender behavior, and offline scope?
+  pass_anchors: [Equivalent wording for byte-stable or idempotent rendering is acceptable.]
+  fail_anchors: [Contradicting the transcript or timing checks, or claiming publication, fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

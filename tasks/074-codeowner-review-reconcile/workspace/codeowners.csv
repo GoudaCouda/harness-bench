@@ -1,0 +1,12 @@
+pattern,owner,order
+*,platform,1
+src/payments/*,payments,2
+src/payments/generated/*,platform,3
+infra/*,sre,4
+docs/*,docs,5
+docs/payments/*,payments-docs,6
+config/*,platform,7
+config/secrets/*,security,8
+scripts/*,release,9
+.github/*,platform,10
+.github/workflows/*,ci,11

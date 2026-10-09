@@ -1,0 +1,7 @@
+{
+  "external_actions_executed": false,
+  "recovery_id": "IER-20260819-01",
+  "semantic_digest": "de1ff34c7323a1dcd286f18c40cb6355cea191fefe112cb103f223797b7ba6f5",
+  "source_checkpoint": "57cf32b1c9bd3272e8c091656ac7abd5df789474f77e645cc459f5d6f579baf7",
+  "status": "applied_local"
+}

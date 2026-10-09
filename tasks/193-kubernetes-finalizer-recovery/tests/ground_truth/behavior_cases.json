@@ -1,0 +1,296 @@
+{
+  "edges": [
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": false,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 11,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "child",
+          "owner": "parent"
+        },
+        {
+          "deletion_timestamp": null,
+          "dependents_gone": false,
+          "finalizers": [],
+          "id": "live",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "example.io/cleanup"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [
+            "f"
+          ],
+          "id": "a",
+          "owner": "b"
+        },
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [
+            "f"
+          ],
+          "id": "b",
+          "owner": "a"
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "f"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [],
+          "id": "already-clear",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "f"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 11,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "child",
+          "owner": "parent"
+        },
+        {
+          "deletion_timestamp": null,
+          "dependents_gone": false,
+          "finalizers": [],
+          "id": "live",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "example.io/cleanup"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [],
+          "id": "a",
+          "owner": []
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [],
+          "id": "a",
+          "owner": "missing"
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 1,
+          "dependents_gone": true,
+          "finalizers": [
+            7
+          ],
+          "id": "bad",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "f"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    }
+  ],
+  "primary": [
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 11,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "child",
+          "owner": "parent"
+        },
+        {
+          "deletion_timestamp": null,
+          "dependents_gone": false,
+          "finalizers": [],
+          "id": "live",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "example.io/cleanup"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 11,
+          "dependents_gone": true,
+          "finalizers": [
+            "other.io/final"
+          ],
+          "id": "child",
+          "owner": "parent"
+        },
+        {
+          "deletion_timestamp": null,
+          "dependents_gone": false,
+          "finalizers": [],
+          "id": "live",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "example.io/cleanup"
+        ],
+        "propagation": "foreground",
+        "protected": []
+      }
+    },
+    {
+      "nodes": [
+        {
+          "deletion_timestamp": 10,
+          "dependents_gone": false,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "parent",
+          "owner": null
+        },
+        {
+          "deletion_timestamp": 11,
+          "dependents_gone": true,
+          "finalizers": [
+            "example.io/cleanup"
+          ],
+          "id": "child",
+          "owner": "parent"
+        },
+        {
+          "deletion_timestamp": null,
+          "dependents_gone": false,
+          "finalizers": [],
+          "id": "live",
+          "owner": null
+        }
+      ],
+      "policy": {
+        "managed_finalizers": [
+          "example.io/cleanup"
+        ],
+        "propagation": "orphan",
+        "protected": []
+      }
+    }
+  ]
+}

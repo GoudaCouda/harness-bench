@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 118-warehouse-reservation-recovery
+pass_threshold: 0.8
+cases:
+- {id: reservation_recovery, title: Duplicate and expired reservations are recovered once, description: One O-100 hold remains while the duplicate and expired O-300 hold are recovered., weight: 0.3, core: true}
+- {id: shipped_stock_and_inventory_close, title: Shipped stock remains terminal and inventory closes, description: O-200 consumption remains shipped and every nonnegative SKU balance closes exactly., weight: 0.25, core: true}
+- {id: recovery_identity_and_replay, title: Stable recovery identity prevents any second inventory transition, description: One source-checkpoint-bound transaction and receipt bind the semantic action plan independently of serialization or evidence order., weight: 0.25, core: true}
+- {id: plan_evidence, title: The recovery plan is portable and locally evidenced, description: Stable identity offline boundary complete action coverage and sufficient local locators are present., weight: 0.1, core: false}
+- {id: warehouse_handoff, title: Warehouse handoff is operationally complete, description: It explains every recovery boundary stable replay and offline scope., weight: 0.1, core: false}
+- {id: safety_and_input_integrity, title: Policy receipts schema and external-action boundary are preserved, description: Protected evidence is unchanged and no physical operation is claimed., weight: 0.0, gate: true}

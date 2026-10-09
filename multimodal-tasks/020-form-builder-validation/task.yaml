@@ -1,0 +1,62 @@
+task_id: 020-form-builder-validation
+title: Build a form builder with live validation
+prompt_file: instruction.md
+timeout_sec: 2400
+domain: Software Engineering
+task_category: Web Development
+task_subcategory: Interactive Applications
+difficulty: hard
+capability_tags:
+- filesystem
+- frontend
+- code_execution
+- browser
+- multimodal
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- state_management
+- verification_behavior
+- output_contract
+- safety_boundary
+stressors:
+- dirty_input
+- state_coupling
+- responsive_layout
+- safety_boundary
+- visual_regression
+required_artifacts:
+- web/package.json
+- web/src/App.tsx
+- web/src/index.css
+- web/dist/index.html
+task_family: frontend-form-builder-hard
+variant: form-builder-validation
+design_file: design.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - FE-220
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - web/dist/
+  - web/src/components/
+  - web/src/hooks/
+  - web/src/utils/
+  allowed_modified:
+  - web/package.json
+  - web/index.html
+  - web/vite.config.ts
+  - web/tsconfig.json
+  - web/src/main.tsx
+  - web/src/App.tsx
+  - web/src/index.css
+  - web/src/hooks/useReveal.ts
+  - web/src/utils/cn.ts
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

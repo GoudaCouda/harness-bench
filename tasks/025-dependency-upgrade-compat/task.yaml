@@ -1,0 +1,56 @@
+task_id: 025-dependency-upgrade-compat
+title: Prepare a production-safe slug library dependency upgrade
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Repository Maintenance
+capability_tags:
+- code_execution
+- filesystem
+- repository
+- terminal
+harness_demands:
+- error_recovery
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- verification_behavior
+stressors:
+- dirty_input
+- high_stakes_rules
+required_artifacts:
+- repo/pyproject.toml
+- repo/src/catalog_slug/slugger.py
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-025
+task_family: 025-dependency-upgrade-compat
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - repo/UPGRADE_NOTES.md
+  allowed_modified:
+  - repo/pyproject.toml
+  - repo/src/catalog_slug/slugger.py
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    python-slugify: 8.0.4
+  inputs:
+  - environment/requirements.lock
+  grader: {}
+  services: []
+schema_version: 2

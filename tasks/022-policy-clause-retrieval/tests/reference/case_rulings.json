@@ -1,0 +1,184 @@
+[
+    {
+      "case_id": "T100",
+      "applicable_clause": "TR-1",
+      "decision": "approve",
+      "reason_code": "domestic_with_receipt",
+      "quote_or_signal": "Domestic lodging | itemized hotel receipt",
+      "secondary_clauses": [],
+      "blocking_condition": "",
+      "missing_information": []
+    },
+    {
+      "case_id": "T101",
+      "applicable_clause": "TR-2",
+      "decision": "needs_review",
+      "reason_code": "international_over_cap",
+      "quote_or_signal": "above USD 310 | finance review",
+      "secondary_clauses": [],
+      "blocking_condition": "above | 310",
+      "missing_information": []
+    },
+    {
+      "case_id": "T102",
+      "applicable_clause": "ME-1",
+      "decision": "deny",
+      "reason_code": "alcohol_not_reimbursable",
+      "quote_or_signal": "Alcohol | never reimbursable",
+      "secondary_clauses": [],
+      "blocking_condition": "alcohol",
+      "missing_information": []
+    },
+    {
+      "case_id": "T103",
+      "applicable_clause": "EQ-1",
+      "decision": "approve",
+      "reason_code": "equipment_under_500_with_receipt",
+      "quote_or_signal": "up to USD 500 | needed for assigned work",
+      "secondary_clauses": [],
+      "blocking_condition": "",
+      "missing_information": []
+    },
+    {
+      "case_id": "T104",
+      "applicable_clause": "TR-1",
+      "decision": "needs_review",
+      "reason_code": "missing_itemized_receipt",
+      "quote_or_signal": "Missing itemized receipts | require review",
+      "secondary_clauses": [
+        "EX-1"
+      ],
+      "blocking_condition": "missing | itemized",
+      "missing_information": [
+        "itemized"
+      ]
+    },
+    {
+      "case_id": "T105",
+      "applicable_clause": "ME-2",
+      "decision": "needs_review",
+      "reason_code": "client_meal_over_cap_review",
+      "quote_or_signal": "above USD 65 | client attendee list | finance review",
+      "secondary_clauses": [],
+      "blocking_condition": "above | 65 | review",
+      "missing_information": []
+    },
+    {
+      "case_id": "T106",
+      "applicable_clause": "AM-3",
+      "decision": "approve",
+      "reason_code": "equipment_over_500_department_approved",
+      "quote_or_signal": "Equipment above USD 500 | department approval | clear assigned-work business purpose",
+      "secondary_clauses": [
+        "EQ-1"
+      ],
+      "blocking_condition": "",
+      "missing_information": []
+    },
+    {
+      "case_id": "T107",
+      "applicable_clause": "AM-1",
+      "decision": "needs_review",
+      "reason_code": "domestic_over_cap_approval_missing",
+      "quote_or_signal": "pre-approval claimed | no approval record attached",
+      "secondary_clauses": [
+        "EX-2"
+      ],
+      "blocking_condition": "225 | approval | missing",
+      "missing_information": [
+        "approval"
+      ]
+    },
+    {
+      "case_id": "T108",
+      "applicable_clause": "ME-2",
+      "decision": "deny",
+      "reason_code": "client_meal_over_cap_no_attendee_list",
+      "quote_or_signal": "Without the attendee list | deny",
+      "secondary_clauses": [
+        "EX-2"
+      ],
+      "blocking_condition": "attendee | without",
+      "missing_information": [
+        "attendee"
+      ]
+    },
+    {
+      "case_id": "T109",
+      "applicable_clause": "EX-1",
+      "decision": "needs_review",
+      "reason_code": "equipment_over_cap_unclear_purpose",
+      "quote_or_signal": "assigned project missing | unclear business purpose",
+      "secondary_clauses": [
+        "EQ-1",
+        "EX-2"
+      ],
+      "blocking_condition": "approval | business",
+      "missing_information": [
+        "department",
+        "business"
+      ]
+    },
+    {
+      "case_id": "T110",
+      "applicable_clause": "AM-2",
+      "decision": "deny",
+      "reason_code": "mixed_packet_has_denied_line",
+      "quote_or_signal": "mixed | line | deny",
+      "secondary_clauses": [
+        "AM-1",
+        "ME-2",
+        "EQ-1",
+        "AM-3"
+      ],
+      "blocking_condition": "deny | line",
+      "missing_information": [
+        "attendee",
+        "business"
+      ],
+      "line_item_rulings": [
+        {
+          "line_id": "L1",
+          "applicable_clause": "AM-1",
+          "decision": "needs_review",
+          "reason_code": "domestic_over_cap_preapproved_review",
+          "quote_or_signal": "235 | 240 | finance | pre-approval",
+          "secondary_clauses": [
+            "TR-1"
+          ],
+          "blocking_condition": "235 exceeds the base USD 220 cap; attached finance pre-approval routes the line to AM-1 review",
+          "missing_information": []
+        },
+        {
+          "line_id": "L2",
+          "applicable_clause": "ME-2",
+          "decision": "deny",
+          "reason_code": "client_meal_over_cap_no_attendee_list",
+          "quote_or_signal": "88 | attendee | deny",
+          "secondary_clauses": [
+            "EX-2"
+          ],
+          "blocking_condition": "client attendee list is missing",
+          "missing_information": [
+            "attendee"
+          ]
+        },
+        {
+          "line_id": "L3",
+          "applicable_clause": "AM-3",
+          "decision": "needs_review",
+          "reason_code": "equipment_over_cap_unclear_purpose",
+          "quote_or_signal": "540 | department approval | unclear business purpose",
+          "secondary_clauses": [
+            "EQ-1",
+            "EX-1"
+          ],
+          "blocking_condition": "assigned-work business purpose is unclear",
+          "missing_information": [
+            "business",
+            "project"
+          ]
+        }
+      ]
+    }
+]

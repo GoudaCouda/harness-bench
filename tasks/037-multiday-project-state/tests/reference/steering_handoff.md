@@ -1,0 +1,2 @@
+# Steering handoff
+Selected the standard recovery under PROC-119 because the expedite increment breaks the ceiling. Derived planned cost is USD 89,000. M3 restarts Day 14; the dependency-safe placeholder launch is Day 27 outside CS-90. PRIV-77 remains pending and the SALES-31/PRIV-77 conflict remains open. `planctl.py verify ...` returned PASS. Steering humans must clear procurement and Privacy gates; no external action was executed.

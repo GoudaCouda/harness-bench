@@ -1,0 +1,30 @@
+{
+  "allowed_build_type": "https://example.invalid/buildtypes/oci-offline/v1",
+  "allowed_builder_id": "urn:synthetic:builder:hermetic-image-v3",
+  "application_name": "report-worker",
+  "application_version": "2026.8.0",
+  "attestation_key_id": "synthetic-release-attestor-2026",
+  "attestation_verifier": "offline-demo-verifier-v1",
+  "candidate_tag": "report-worker:2026.08-rc2",
+  "initial_direct_dependencies": {
+    "archive-stack": "4.8.0",
+    "document-loader": "2.2.0",
+    "render-native": "3.1.0",
+    "telemetry-core": "2.5.0"
+  },
+  "prior_image_digest": "sha256:9e3d8c5a712db6616ea56a6ca7e1ae0879348ed9b71734086a06ed6411d1036b",
+  "release_id": "REL-REPORT-2026-08",
+  "remediation_direct_packages": [
+    "archive-stack",
+    "document-loader"
+  ],
+  "runtime": {
+    "glibc": "2.36.0",
+    "node_api": 9,
+    "node_version": "20.16.0",
+    "platform": "linux/amd64"
+  },
+  "schema_version": 1,
+  "selection_policy": "fewest_changed_direct_packages_then_lowest_registry_steps",
+  "stage_boundary": "local_only_pending_release_approval"
+}

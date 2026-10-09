@@ -1,0 +1,19 @@
+{
+  "stream_id": "pebbleward-247",
+  "gate_clock_epoch": 1776468800,
+  "counts": {
+    "recorded": 3,
+    "conflict": 2,
+    "malformed": 2
+  },
+  "recorded_ids": [
+    "b1",
+    "b6",
+    "b7"
+  ],
+  "conflict_ids": [
+    "b2",
+    "b3"
+  ],
+  "state": "gated"
+}

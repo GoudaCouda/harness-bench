@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "batch_id": "CDC-2026-08-19-42",
+  "source_sha256": "b9dff8681699fc32c0d970a28c63639fc5b0a98d799e9189e24d3898053afcfb",
+  "actions": [
+    {
+      "event_id": "EV-401",
+      "disposition": "apply_upsert",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-401"
+      ]
+    },
+    {
+      "event_id": "EV-402",
+      "disposition": "apply_upsert",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-402"
+      ]
+    },
+    {
+      "event_id": "EV-403",
+      "disposition": "apply_upsert",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-403"
+      ]
+    },
+    {
+      "event_id": "EV-404",
+      "disposition": "quarantine_retention_hold",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-404",
+        "retention_holds.csv#C003"
+      ]
+    },
+    {
+      "event_id": "EV-405",
+      "disposition": "quarantine_missing_consent",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-405",
+        "recovery_policy.md#missing-consent"
+      ]
+    },
+    {
+      "event_id": "EV-406",
+      "disposition": "apply_upsert",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-406",
+        "warehouse.db#recovery_journal"
+      ]
+    },
+    {
+      "event_id": "EV-407",
+      "disposition": "ignore_stale",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-407"
+      ]
+    },
+    {
+      "event_id": "EV-408",
+      "disposition": "apply_signed_correction",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-408",
+        "signed_corrections.json#CORR-88"
+      ]
+    },
+    {
+      "event_id": "EV-409",
+      "disposition": "quarantine_unsupported_schema",
+      "evidence_refs": [
+        "cdc_batch.jsonl#EV-409",
+        "schema_registry.json#supported"
+      ]
+    }
+  ],
+  "external_publish_executed": false
+}

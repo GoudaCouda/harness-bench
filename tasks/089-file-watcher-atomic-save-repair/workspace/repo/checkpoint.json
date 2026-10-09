@@ -1,0 +1,8 @@
+{
+  "seq": 40,
+  "watched": {
+    "config/app.json": {"inode": 101, "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+    "config/limits.yaml": {"inode": 102, "digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+    "rules/legacy.json": {"inode": 103, "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}
+  }
+}

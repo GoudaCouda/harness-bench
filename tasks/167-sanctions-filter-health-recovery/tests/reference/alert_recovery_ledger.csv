@@ -1,0 +1,9 @@
+item_id,decision,reason_code,owner,next_action,evidence_refs
+S-401,clear,AUTHORIZED_NO_MATCH,sanctions_compliance,record_authorized_clearance,post_repair_alerts.csv#S-401;alert_recovery_policy.md;context.md
+S-402,review,POSSIBLE_ALERT_MATCH,sanctions_compliance,perform_alert_review,post_repair_alerts.csv#S-402;alert_recovery_policy.md;context.md
+S-403,blocked,EXACT_ALERT_MATCH,sanctions_compliance,open_alert_investigation,post_repair_alerts.csv#S-403;alert_recovery_policy.md;context.md
+S-404,pending_rescreen,CONTROL_NOT_VERIFIED,sanctions_operations,resume_post_repair_screening,post_repair_alerts.csv#S-404;alert_recovery_policy.md;context.md
+S-405,review,UNAUTHORIZED_DISPOSITION,sanctions_compliance,route_to_authorized_reviewer,post_repair_alerts.csv#S-405;alert_recovery_policy.md;context.md
+S-406,pending_rescreen,CONTROL_NOT_VERIFIED,sanctions_operations,resume_post_repair_screening,post_repair_alerts.csv#S-406;alert_recovery_policy.md;context.md
+S-407,pending_rescreen,CONTROL_NOT_VERIFIED,sanctions_operations,resume_post_repair_screening,post_repair_alerts.csv#S-407;alert_recovery_policy.md;context.md
+S-408,clear,AUTHORIZED_NO_MATCH,sanctions_compliance,record_authorized_clearance,post_repair_alerts.csv#S-408;alert_recovery_policy.md;context.md

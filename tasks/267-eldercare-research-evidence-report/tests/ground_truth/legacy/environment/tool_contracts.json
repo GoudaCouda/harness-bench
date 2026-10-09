@@ -1,0 +1,26 @@
+{
+  "schema_version": "case13_tool_contracts_v1",
+  "network_policy": "none",
+  "tools": [
+    {
+      "tool_id": "filesystem",
+      "actions": ["read"],
+      "scope": ["input/**"],
+      "notes": "只能读取固定资料库和报告模板"
+    },
+    {
+      "tool_id": "local_search",
+      "entrypoint": "environment/local_search.py",
+      "actions": ["search"],
+      "scope": ["input/corpus/*"],
+      "notes": "仅做本地逐行文字搜索，不访问网络"
+    },
+    {
+      "tool_id": "document_writer",
+      "entrypoint": "environment/write_document.py",
+      "actions": ["write"],
+      "scope": ["output/养老行业研究报告.md"],
+      "notes": "只允许写一个 Markdown 成品"
+    }
+  ]
+}

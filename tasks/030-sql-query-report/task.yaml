@@ -1,0 +1,54 @@
+task_id: 030-sql-query-report
+title: Rebuild the quarterly net-revenue reporting query
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+difficulty: hard
+domain: Data Analytics
+task_category: Research and Analysis
+task_subcategory: Quantitative Analysis
+capability_tags:
+- code_execution
+- filesystem
+- structured_data
+- terminal
+harness_demands:
+- context_management
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+- tool_selection
+- verification_behavior
+stressors:
+- dirty_input
+- high_stakes_rules
+required_artifacts:
+- quarterly_report.sql
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-030
+task_family: 030-sql-query-report
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - quarterly_report.sql
+  - quarterly_revenue_brief.md
+  allowed_modified: []
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    sqlite3: ">=3.40,<4"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

@@ -1,0 +1,200 @@
+{
+  "task_id": "003-pet-care-game",
+  "record_ids": [
+    "PET-FINCH",
+    "PET-CAT",
+    "PET-PUP",
+    "PET-LIZ",
+    "PET-FINCH-R1",
+    "PET-CAT-R2",
+    "PET-PUP-R3",
+    "PET-LIZ-R4",
+    "PET-CAT-X9",
+    "PET-CAT-X10"
+  ],
+  "records": {
+    "PET-FINCH": {
+      "name": "Comet Finch",
+      "category": "bird",
+      "owner": "Rae",
+      "status": "clear",
+      "primary": 76,
+      "secondary": 18
+    },
+    "PET-CAT": {
+      "name": "Miso Cat",
+      "category": "cat",
+      "owner": "Dee",
+      "status": "watch",
+      "primary": 64,
+      "secondary": 31
+    },
+    "PET-PUP": {
+      "name": "Juniper Pup",
+      "category": "dog",
+      "owner": "Ash",
+      "status": "review",
+      "primary": 58,
+      "secondary": 44
+    },
+    "PET-LIZ": {
+      "name": "Pixel Lizard",
+      "category": "reptile",
+      "owner": "Sol",
+      "status": "watch",
+      "primary": 69,
+      "secondary": 26
+    },
+    "PET-FINCH-R1": {
+      "name": "Comet Finch follow-up",
+      "category": "cat",
+      "owner": "Ash",
+      "status": "clear",
+      "primary": 90,
+      "secondary": 24
+    },
+    "PET-CAT-R2": {
+      "name": "Miso Cat follow-up",
+      "category": "dog",
+      "owner": "Sol",
+      "status": "watch",
+      "primary": 81,
+      "secondary": 38
+    },
+    "PET-PUP-R3": {
+      "name": "Juniper Pup follow-up",
+      "category": "reptile",
+      "owner": "Rae",
+      "status": "review",
+      "primary": 78,
+      "secondary": 52
+    },
+    "PET-LIZ-R4": {
+      "name": "Pixel Lizard follow-up",
+      "category": "bird",
+      "owner": "Dee",
+      "status": "watch",
+      "primary": 92,
+      "secondary": 35
+    },
+    "PET-CAT-X9": {
+      "name": "Miso Cat scenario 9",
+      "category": "cat",
+      "owner": "Ash",
+      "status": "clear",
+      "primary": 130,
+      "secondary": 35
+    },
+    "PET-CAT-X10": {
+      "name": "Miso Cat scenario 10",
+      "category": "dog",
+      "owner": "Sol",
+      "status": "watch",
+      "primary": 137,
+      "secondary": 31
+    }
+  },
+  "domain_groups": [
+    ["pet", "companion", "care"],
+    ["feed", "hunger", "food"],
+    ["play", "energy", "stamina"],
+    ["game stage", "pet care loop", "routine"]
+  ],
+  "control_groups": [
+    ["Species filter", "species filter", "species"],
+    ["Care mode", "care mode", "game-review"],
+    ["Companion search", "companion search", "search"],
+    ["Energy boost", "energy boost", "night routine", "routine"]
+  ],
+  "summary_groups": [
+    ["Care score", "care score", "care total"],
+    ["Hunger risk", "hunger risk", "risk average"],
+    ["Action streak", "action streak", "streak count"],
+    ["Energy forecast", "energy forecast", "energy meter"]
+  ],
+  "interaction_groups": [
+    ["speciesFilter", "setSpeciesFilter", "species filter"],
+    ["selectedPetId", "selectedPet", "activePet", "currentPet", "onSelect"],
+    ["careMode", "setCareMode", "game-review"],
+    ["companionSearch", "setCompanionSearch", "query"],
+    ["nightRoutine", "setNightRoutine", "routine"],
+    ["energyBoost", "setEnergyBoost", "range"]
+  ],
+  "calculation_groups": [
+    ["reduce", "sum", "toLocaleString"],
+    ["filter", "species", "category"],
+    ["status", "review", "watch"],
+    ["energy", "boost", "forecast"]
+  ],
+  "presentation_groups": [
+    ["game stage", "care meter", "companion card"],
+    ["routine tray", "energy meter", "action log"],
+    ["focus-visible", "aria-label", "aria-labelledby"],
+    ["prefers-reduced-motion", "reduced motion"]
+  ],
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Species filter",
+        "value": "cat"
+      },
+      {
+        "kind": "fill",
+        "label": "Companion search",
+        "value": "Dee"
+      },
+      {
+        "kind": "click",
+        "text": "PET-CAT"
+      },
+      {
+        "kind": "select",
+        "label": "Care mode",
+        "value": "game-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Energy boost",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "game-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "PET-CAT",
+      "category": "cat",
+      "mode": "game-review",
+      "visible_id_subset": ["PET-CAT"],
+      "after_clearing_search_subset": ["PET-FINCH", "PET-CAT", "PET-LIZ-R4"],
+      "night_subset": ["PET-PUP", "PET-PUP-R3"],
+      "night_forbidden": ["PET-FINCH"],
+      "detail_switch_id": "PET-LIZ-R4",
+      "detail_switch_tokens": [
+        "PET-LIZ-R4",
+        "Pixel Lizard follow-up",
+        "Dee",
+        "bird",
+        "watch",
+        "92",
+        "35"
+      ],
+      "summary_change_labels": [
+        "Care score",
+        "Hunger risk",
+        "Action streak",
+        "Energy forecast"
+      ],
+      "mobile_viewport": {"width": 390, "height": 844},
+      "record_count": 10
+    },
+    "action_count": 6
+  }
+}

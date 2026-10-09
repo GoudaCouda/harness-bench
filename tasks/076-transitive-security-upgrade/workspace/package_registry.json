@@ -1,0 +1,44 @@
+{
+  "direct_packages": ["webstack", "auth-ui", "upload-agent", "storage-sdk"],
+  "baseline": {"webstack": "5.4.0", "auth-ui": "3.2.0", "upload-agent": "2.7.0", "storage-sdk": "4.1.0"},
+  "packages": {
+    "webstack": {
+      "5.4.0": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-ws540", "compat_profile": "session-v1", "dependencies": {"cookiejar": "3.1.0", "http-core": "2.8.1"}},
+      "5.4.2": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-ws542", "compat_profile": "session-v1", "dependencies": {"cookiejar": "3.1.4", "http-core": "2.8.1"}},
+      "5.4.3": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-ws543", "compat_profile": "session-v1", "dependencies": {"cookiejar": "3.1.4", "http-core": "2.8.3"}},
+      "5.5.0": {"node_min": 18, "node_max_exclusive": 20, "integrity": "sha512-ws550", "compat_profile": "session-v2", "dependencies": {"cookiejar": "3.2.0", "http-core": "2.9.0"}},
+      "6.0.0": {"node_min": 20, "node_max_exclusive": 99, "integrity": "sha512-ws600", "compat_profile": "session-v2", "dependencies": {"cookiejar": "4.0.0", "http-core": "3.0.0"}}
+    },
+    "auth-ui": {
+      "3.2.0": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-au320", "compat_profile": "claims-v1", "peer": {"webstack": ">=5.4.0 <5.5.0"}, "dependencies": {"urlpattern": "2.0.1"}},
+      "3.2.1": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-au321", "compat_profile": "claims-v1", "peer": {"webstack": ">=5.4.2 <5.5.0"}, "dependencies": {"urlpattern": "2.0.3"}},
+      "3.3.0": {"node_min": 18, "node_max_exclusive": 20, "integrity": "sha512-au330", "compat_profile": "claims-v2", "peer": {"webstack": ">=5.5.0 <6.0.0"}, "dependencies": {"urlpattern": "2.1.0"}},
+      "4.0.0": {"node_min": 20, "node_max_exclusive": 99, "integrity": "sha512-au400", "compat_profile": "claims-v2", "peer": {"webstack": ">=6.0.0 <7.0.0"}, "dependencies": {"urlpattern": "3.0.0"}}
+    },
+    "upload-agent": {
+      "2.7.0": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-up270", "compat_profile": "stream-v1", "peer": {"storage-sdk": ">=4.0.0 <4.2.0"}, "dependencies": {"archive-kit": "1.8.0", "request-sign": "1.3.0"}},
+      "2.7.1": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-up271", "compat_profile": "stream-v1", "peer": {"storage-sdk": ">=4.0.0 <4.2.0"}, "dependencies": {"archive-kit": "1.8.1", "request-sign": "1.3.2"}},
+      "2.7.2": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-up272", "compat_profile": "stream-v1", "peer": {"storage-sdk": ">=4.0.0 <4.2.0"}, "dependencies": {"archive-kit": "1.8.2", "request-sign": "1.3.2"}},
+      "2.8.0": {"node_min": 18, "node_max_exclusive": 20, "integrity": "sha512-up280", "compat_profile": "stream-v2", "peer": {"storage-sdk": ">=4.2.0 <5.0.0"}, "dependencies": {"archive-kit": "2.0.0", "request-sign": "1.4.0"}}
+    },
+    "storage-sdk": {
+      "4.1.0": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-st410", "compat_profile": "storage-v1", "dependencies": {"retry-core": "1.2.0"}},
+      "4.1.1": {"node_min": 16, "node_max_exclusive": 20, "integrity": "sha512-st411", "compat_profile": "storage-v1", "dependencies": {"retry-core": "1.2.2"}},
+      "4.2.0": {"node_min": 18, "node_max_exclusive": 20, "integrity": "sha512-st420", "compat_profile": "storage-v2", "dependencies": {"retry-core": "1.3.0"}}
+    },
+    "archive-kit": {
+      "1.8.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-ak180", "dependencies": {"pathmatch": "4.0.1"}},
+      "1.8.1": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-ak181", "dependencies": {"pathmatch": "4.0.2"}},
+      "1.8.2": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-ak182", "dependencies": {"pathmatch": "4.0.3"}},
+      "2.0.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-ak200", "dependencies": {"pathmatch": "5.0.0"}}
+    },
+    "cookiejar": {"3.1.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-cj310"}, "3.1.4": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-cj314"}, "3.2.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-cj320"}, "4.0.0": {"node_min": 20, "node_max_exclusive": 99, "integrity": "sha512-cj400"}},
+    "http-core": {"2.8.1": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-hc281"}, "2.8.3": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-hc283"}, "2.9.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-hc290"}, "3.0.0": {"node_min": 20, "node_max_exclusive": 99, "integrity": "sha512-hc300"}},
+    "urlpattern": {"2.0.1": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-url201"}, "2.0.3": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-url203"}, "2.1.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-url210"}, "3.0.0": {"node_min": 20, "node_max_exclusive": 99, "integrity": "sha512-url300"}},
+    "pathmatch": {"4.0.1": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-pm401"}, "4.0.2": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-pm402"}, "4.0.3": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-pm403"}, "5.0.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-pm500"}},
+    "request-sign": {"1.3.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-rs130"}, "1.3.2": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-rs132"}, "1.4.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-rs140"}},
+    "retry-core": {"1.2.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-rc120"}, "1.2.2": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-rc122"}, "1.3.0": {"node_min": 18, "node_max_exclusive": 99, "integrity": "sha512-rc130"}},
+    "parser-cli": {"2.2.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-pc220", "dependencies": {"parserx": "7.0.0"}}},
+    "parserx": {"7.0.0": {"node_min": 16, "node_max_exclusive": 99, "integrity": "sha512-px700"}}
+  }
+}

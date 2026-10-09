@@ -1,0 +1,50 @@
+{
+  "schema_version": "case07_spreadsheet_writer_contract_v1",
+  "tool_id": "spreadsheet_writer",
+  "version": "1.0.0",
+  "command": "python3 /opt/agent-tools/spreadsheet_writer.py --workspace /workspace --spec /workspace/workbook_spec.json --output /workspace/output/sales_analysis.xlsx",
+  "description": "按调用者提供的 JSON 单元格、公式、缓存值和图表引用生成无宏、无外链的 OOXML 工作簿；工具不判断异常、不计算销售口径，也不补写答案。",
+  "input": {
+    "type": "object",
+    "required": ["sheets", "charts"],
+    "properties": {
+      "sheets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["name", "rows"],
+          "properties": {
+            "name": {"type": "string"},
+            "rows": {"type": "array"},
+            "freeze_panes": {"type": "string"},
+            "auto_filter": {"type": "string"},
+            "column_widths": {"type": "array", "items": {"type": "number"}}
+          }
+        }
+      },
+      "charts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["sheet", "type", "title", "series_name_ref", "category_ref", "value_ref"],
+          "properties": {
+            "sheet": {"type": "string"},
+            "type": {"const": "column"},
+            "title": {"type": "string"},
+            "series_name_ref": {"type": "string"},
+            "category_ref": {"type": "string"},
+            "value_ref": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "cell_types": {
+    "string": {"required": ["type", "value"]},
+    "number": {"required": ["type", "value"]},
+    "date": {"required": ["type", "value"]},
+    "formula": {"required": ["type", "formula", "value"]}
+  },
+  "styles": ["normal", "date", "header", "money", "percent", "title", "integer", "kpi_label"],
+  "errors": ["invalid_spec", "path_outside_workspace", "output_exists", "unsafe_formula", "write_failed"]
+}

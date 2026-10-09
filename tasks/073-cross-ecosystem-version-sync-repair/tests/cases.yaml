@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 073-cross-ecosystem-version-sync-repair
+pass_threshold: 0.8
+cases:
+- id: authoritative_release_and_translation
+  title: The authoritative tag maps to each ecosystem exactly
+  description: Final and prerelease versions are translated while semantic equality becomes a no-op.
+  weight: 0.35
+  core: true
+- id: precedence_atomicity_and_invalid_safety
+  title: Release precedence and the complete manifest set fail closed
+  description: Downgrades, duplicate paths, unsafe paths, malformed records, and unsupported ecosystems
+    are blocked.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_version_plan
+  title: Visible synchronization incidents are reproduced exactly
+  description: The plan preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Version translation and publisher risk are handed off
+  description: Notes explain authority, translation, atomicity, verification, and residual risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_publish_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

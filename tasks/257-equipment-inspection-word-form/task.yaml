@@ -1,0 +1,41 @@
+schema_version: 2
+task_id: 257-equipment-inspection-word-form
+title: equipment inspection word form
+prompt_file: instruction.md
+workspace_dir: workspace
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+design_file: design.md
+timeout_sec: 7200
+domain: Office Productivity
+task_category: Content Production
+task_subcategory: Documents and Presentations
+difficulty: medium
+capability_tags:
+- goal_understanding
+- planning
+- tool_use
+- workspace_operation
+- deliverable_completion
+- safety_cost_awareness
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- output_contract
+- verification_behavior
+stressors:
+- cross_source_consistency
+- strict_delivery_contract
+required_artifacts: &id001
+- output/monitoring_equipment_inspection_form.docx
+task_family: 257-equipment-inspection-word-form
+variant: standalone
+mutation_contract:
+  allowed_created: *id001
+  allowed_modified: []
+  allowed_deleted: []
+provenance:
+  origin: adapted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - NAMI-GOLD20-case_03

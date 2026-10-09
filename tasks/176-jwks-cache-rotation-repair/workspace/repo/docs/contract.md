@@ -1,0 +1,7 @@
+# Repair JWKS cache rotation and key selection contract
+
+For each JWT verification request, compute cache age `now-fetched_at` first. A negative age is clock inconsistency and always rejects with `clock_before_fetch`, before any key lookup or verification decision. Otherwise select only a key with the same issuer and `kid`; then enforce algorithm, revocation, and the half-open validity window `not_before <= now < not_after`. Missing/inactive keys request refresh. After an explicitly failed refresh, an expired known key may be used only while cache age is between zero and `max_stale` inclusive; revoked or algorithm-mismatched keys never receive stale fallback. Return sorted decisions with `id,action,reason,kid,cache_age` and action counts. Duplicate request ids or `(issuer,kid)` keys and malformed intervals raise `ValueError`.
+
+The output object has exactly `decisions,summary`. Each id-sorted decision has exactly `id,action,reason,kid,cache_age`; action is `verify`, `verify_stale`, `refresh`, or `reject`; reason is `active_key`, `bounded_stale_fallback`, `key_missing_or_inactive`, `revoked_key`, `algorithm_mismatch`, `clock_before_fetch`, or `refresh_failed_no_safe_key`. Summary contains exactly those four action counts.
+
+The function must not mutate inputs. Run `python3 -m unittest discover -s tests -v` and `python3 bin/run_repair.py`, re-open `out/result.json`, and document verification evidence plus the offline boundary in `REPAIR_NOTES.md`.

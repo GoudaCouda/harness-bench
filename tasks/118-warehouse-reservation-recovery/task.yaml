@@ -1,0 +1,70 @@
+task_id: 118-warehouse-reservation-recovery
+title: Recover Warehouse Reservations After a Worker Crash
+prompt_file: instruction.md
+timeout_sec: 3600
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- local_state_machine
+- structured_data
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- partial_failure
+- duplicate_operation
+- irreversible_shipment
+- stale_reservation
+- conflicting_replay
+required_artifacts:
+- warehouse.db
+- recovery_plan.json
+- recovery_receipt.json
+- warehouse_handoff.md
+task_family: supply-warehouse-reservation-recovery
+variant: crash-and-duplicate-hold
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SUPPLY-WMS-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recovery_plan.json
+  - recovery_receipt.json
+  - warehouse_handoff.md
+  allowed_modified:
+  - warehouse.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: warehouse_handoff
+  max_fallback_weight: 0.1
+schema_version: 2

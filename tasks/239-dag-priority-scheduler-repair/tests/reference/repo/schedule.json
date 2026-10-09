@@ -1,0 +1,9 @@
+{
+  "order": [
+    "load-cache",
+    "compile-core",
+    "compile-ui",
+    "notify-ops",
+    "link-all"
+  ]
+}

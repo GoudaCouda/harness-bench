@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "case_number": 9,
+  "blocks": [
+    [
+      "read_protocol",
+      "工具发现、查询与错误响应协议",
+      "native_read_protocol"
+    ],
+    [
+      "durable_requests",
+      "请求创建、重试及持久化幂等",
+      "native_durable_requests"
+    ]
+  ],
+  "gates": [
+    "input_integrity",
+    "protected_state"
+  ],
+  "protected_files": {
+    "protocol_contract.json": "7c70cbfb02ab391c9212b50186ac3eba23c131cb558475e07c0d1017ca2bd303",
+    "seed.db": "0643464c8474a4124947fbcc309ed61afc1f9302a9dbb9274635e42082af2fd8",
+    "task.md": "428feb8dc612f8541c600e33b641e8ccad73ac8de9409056b569f3952da76887"
+  },
+  "required_artifacts": [
+    "submission/service.py"
+  ],
+  "provisional_id": 246,
+  "candidate_image": "sha256:6c4dd321d176d61ea848dc8c73a4f7dbae8f70e0ee48bb411ea2f045b599fa8e",
+  "controller_image": "python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b"
+}

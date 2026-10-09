@@ -1,0 +1,14 @@
+{
+  "name": "synthetic-record-processor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Gold20 case_10 synthetic Node.js data processor",
+  "scripts": {
+    "test": "node --test test/public.test.js",
+    "process": "node src/process.js"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}

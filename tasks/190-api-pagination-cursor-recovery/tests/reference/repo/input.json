@@ -1,0 +1,41 @@
+{
+  "policy": {},
+  "requests": [
+    {
+      "checkpoint_key": 10,
+      "id": "feed",
+      "pages": [
+        {
+          "cursor": "c1",
+          "items": [
+            {
+              "id": "a",
+              "sort_key": 11
+            },
+            {
+              "id": "b",
+              "sort_key": 12
+            }
+          ],
+          "snapshot": "s1",
+          "status": "ok"
+        },
+        {
+          "cursor": "c2",
+          "items": [
+            {
+              "id": "b",
+              "sort_key": 12
+            },
+            {
+              "id": "c",
+              "sort_key": 13
+            }
+          ],
+          "snapshot": "s1",
+          "status": "invalid_cursor"
+        }
+      ]
+    }
+  ]
+}

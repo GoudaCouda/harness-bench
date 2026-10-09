@@ -1,0 +1,18 @@
+{"closing_id": "ESC-101", "delivery_id": "DL-001", "event_id": "EV-101-REC", "event_type": "recording_confirmed", "payload": {"recorded_at": "2026-08-19T15:05:00Z"}, "source_sequence": 30}
+{"closing_id": "ESC-101", "delivery_id": "DL-002", "event_id": "EV-101-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 10000000, "bank_trace": "TR-101-A"}, "source_sequence": 10}
+{"closing_id": "ESC-101", "delivery_id": "DL-003", "event_id": "EV-101-AUTH", "event_type": "closing_authorized", "payload": {"document_id": "DOC-ESC-101-CLOSE"}, "source_sequence": 20}
+{"closing_id": "ESC-101", "delivery_id": "DL-004", "event_id": "EV-101-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 10000000, "bank_trace": "TR-101-A"}, "source_sequence": 10}
+{"closing_id": "ESC-102", "delivery_id": "DL-005", "event_id": "EV-102-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 8000000, "bank_trace": "TR-102-A"}, "source_sequence": 10}
+{"closing_id": "ESC-102", "delivery_id": "DL-006", "event_id": "EV-102-AUTH", "event_type": "closing_authorized", "payload": {"document_id": "DOC-ESC-102-CLOSE"}, "source_sequence": 20}
+{"closing_id": "ESC-102", "delivery_id": "DL-007", "event_id": "EV-102-REC", "event_type": "recording_confirmed", "payload": {"recorded_at": "2026-08-19T15:12:00Z"}, "source_sequence": 30}
+{"closing_id": "ESC-103", "delivery_id": "DL-008", "event_id": "EV-103-LATE", "event_type": "wire_received", "payload": {"amount_cents": 6500000, "bank_trace": "TR-LATE"}, "source_sequence": 90}
+{"closing_id": "ESC-104", "delivery_id": "DL-009", "event_id": "EV-104-AUTH", "event_type": "closing_authorized", "payload": {"document_id": "DOC-ESC-104-CLOSE"}, "source_sequence": 20}
+{"closing_id": "ESC-104", "delivery_id": "DL-010", "event_id": "EV-104-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 7200000, "bank_trace": "TR-104-A"}, "source_sequence": 10}
+{"closing_id": "ESC-105", "delivery_id": "DL-011", "event_id": "EV-105-REL", "event_type": "holdback_release_authorized", "payload": {"amount_cents": 80000, "document_id": "DOC-ESC-105-HOLDBACK-RELEASE"}, "source_sequence": 80}
+{"closing_id": "ESC-106", "delivery_id": "DL-012", "event_id": "EV-106-REC", "event_type": "recording_confirmed", "payload": {"recorded_at": "2026-08-19T15:20:00Z"}, "source_sequence": 30}
+{"closing_id": "ESC-106", "delivery_id": "DL-013", "event_id": "EV-106-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 9000000, "bank_trace": "TR-106-A"}, "source_sequence": 10}
+{"closing_id": "ESC-106", "delivery_id": "DL-014", "event_id": "EV-106-AUTH", "event_type": "closing_authorized", "payload": {"document_id": "DOC-ESC-106-CLOSE"}, "source_sequence": 20}
+{"closing_id": "ESC-107", "delivery_id": "DL-015", "event_id": "EV-107-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 4400000, "bank_trace": "TR-107-A"}, "source_sequence": 10}
+{"closing_id": "ESC-107", "delivery_id": "DL-016", "event_id": "EV-107-REC", "event_type": "recording_confirmed", "payload": {"recorded_at": "2026-08-19T15:30:00Z"}, "source_sequence": 30}
+{"closing_id": "ESC-107", "delivery_id": "DL-017", "event_id": "EV-107-AUTH", "event_type": "closing_authorized", "payload": {"document_id": "DOC-ESC-107-CLOSE"}, "source_sequence": 20}
+{"closing_id": "ESC-999", "delivery_id": "DL-018", "event_id": "EV-999-WIRE", "event_type": "wire_received", "payload": {"amount_cents": 1000000, "bank_trace": "TR-UNKNOWN"}, "source_sequence": 10}

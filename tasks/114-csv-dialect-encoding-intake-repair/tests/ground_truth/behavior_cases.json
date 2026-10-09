@@ -1,0 +1,189 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "id": "quotes",
+          "payload_hex": "612c620a312c22756e7465726d696e61746564"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "declared_encoding": null,
+          "id": "null-bom",
+          "payload_hex": "efbbbf612c620a312c32"
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "id": "x",
+          "payload_hex": "00"
+        },
+        {
+          "id": "x",
+          "payload_hex": "00"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "id": "bad",
+          "payload_hex": "not-hex"
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "declared_encoding": "utf-8-sig",
+          "id": "customers",
+          "payload_hex": "efbbbf6e616d652c6e6f74650a4164612c22612c62220a"
+        },
+        {
+          "delimiter": "\t",
+          "id": "legacy",
+          "payload_hex": "6964096e616d650a3109416e61"
+        },
+        {
+          "declared_encoding": null,
+          "id": "unknown",
+          "payload_hex": "612c620a312c32"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "declared_encoding": "latin-1",
+          "delimiter": ";",
+          "id": "latin",
+          "payload_hex": "6e616d653b636974790a416e6472e93b4c796f6e"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "allowed_delimiters": [
+          ",",
+          "\t",
+          ";"
+        ],
+        "allowed_encodings": [
+          "utf-8",
+          "utf-8-sig",
+          "utf-16-le",
+          "utf-16-be",
+          "latin-1"
+        ],
+        "default_encoding": "utf-8"
+      },
+      "records": [
+        {
+          "declared_encoding": "utf-16-le",
+          "delimiter": ",",
+          "id": "utf16",
+          "payload_hex": "fffe61002c0062000d000a0031002c003200"
+        }
+      ]
+    }
+  ]
+}

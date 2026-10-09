@@ -1,0 +1,185 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "no_proxy": ".example.com"
+      },
+      "records": [
+        {
+          "host": "example.com.",
+          "id": "edge",
+          "port": 443
+        },
+        {
+          "host": "a.example.com",
+          "id": "sub",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "*"
+      },
+      "records": [
+        {
+          "host": "anything.test",
+          "id": "all",
+          "port": 1
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "no_proxy": "example.com,db.internal:5432,10.0.0.0/8"
+      },
+      "records": [
+        {
+          "host": "api.example.com",
+          "id": "domain",
+          "port": 443
+        },
+        {
+          "host": "db.internal",
+          "id": "port",
+          "port": 5432
+        },
+        {
+          "host": "10.1.2.3",
+          "id": "cidr",
+          "port": 80
+        },
+        {
+          "host": "open.example.net",
+          "id": "public",
+          "port": 443
+        },
+        {
+          "host": "api.example.com",
+          "id": "domain",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "10.0.0.0/99"
+      },
+      "records": [
+        {
+          "host": "10.0.0.1",
+          "id": "bad",
+          "port": 80
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "example.com:70000"
+      },
+      "records": [
+        {
+          "host": "example.com",
+          "id": "bad-port",
+          "port": 80
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "example.com:abc"
+      },
+      "records": [
+        {
+          "host": "example.com",
+          "id": "bad-syntax",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "2001:db8::1"
+      },
+      "records": [
+        {
+          "host": "example.com",
+          "id": "bad-syntax",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "[bad::ip]"
+      },
+      "records": [
+        {
+          "host": "example.com",
+          "id": "bad-syntax",
+          "port": 443
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "no_proxy": "example.com,db.internal:5432,10.0.0.0/8"
+      },
+      "records": [
+        {
+          "host": "api.example.com",
+          "id": "domain",
+          "port": 443
+        },
+        {
+          "host": "db.internal",
+          "id": "port",
+          "port": 5432
+        },
+        {
+          "host": "10.1.2.3",
+          "id": "cidr",
+          "port": 80
+        },
+        {
+          "host": "open.example.net",
+          "id": "public",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": ""
+      },
+      "records": [
+        {
+          "host": "example.com",
+          "id": "empty",
+          "port": 443
+        }
+      ]
+    },
+    {
+      "policy": {
+        "no_proxy": "[::1]:8080"
+      },
+      "records": [
+        {
+          "host": "::1",
+          "id": "v6",
+          "port": 8080
+        },
+        {
+          "host": "::1",
+          "id": "wrong-port",
+          "port": 80
+        }
+      ]
+    }
+  ]
+}

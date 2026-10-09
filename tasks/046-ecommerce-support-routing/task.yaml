@@ -1,0 +1,48 @@
+task_id: 046-ecommerce-support-routing
+title: Triage a mixed e-commerce support queue
+prompt_file: instruction.md
+timeout_sec: 7200
+difficulty: hard
+domain: Customer Service
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- safety_boundary
+stressors:
+- conflicting_evidence
+- dirty_input
+required_artifacts:
+- escalation_notes.csv
+- reply_templates.md
+- routing_decisions.json
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-046
+task_family: 046-ecommerce-support-routing
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - escalation_notes.csv
+  - reply_templates.md
+  - routing_decisions.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []
+schema_version: 2

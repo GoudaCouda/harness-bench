@@ -1,0 +1,10 @@
+{
+  "files": {
+    "entitlementctl.py": "74fcdaa257e8aa4b2f44c217e6197ea048b14469dff7d18f09eb4c5d37860399",
+    "evidence/provider_snapshot.json": "dfcc6045d507ee99e60d2acf8a0ba0536464d7abfe8bbe898e9c4fa8d3cc21c3",
+    "evidence/provider_trust.json": "5aac8f6d12fc647a0ea9da170a776ef52e2ef3d2b1eb7a0ac362f5f88ba7e162",
+    "evidence/webhook_spool.jsonl": "6a18e4fc8a82cc33d422b4abc555b81bf35989de585c5c6080bc3a7f9de429b2",
+    "policy/recovery_policy.json": "1539bdec25d9fb8d3e72732575f4250de214af2eebbcdb567e86cfbedca1dcf5"
+  },
+  "schema_version": 1
+}

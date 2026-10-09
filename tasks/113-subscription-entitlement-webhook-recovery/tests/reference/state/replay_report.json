@@ -1,0 +1,9 @@
+{
+  "external_actions_executed": false,
+  "receipt_byte_stable": true,
+  "run_id": "ER-20260818-01",
+  "schema_version": 1,
+  "semantic_db_hash": "e05864027562092bf077db010ed237274d2bc2b4bb4a95463dd26a3b4ee92737",
+  "semantic_db_stable": true,
+  "status": "pass"
+}

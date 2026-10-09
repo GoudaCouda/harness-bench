@@ -1,0 +1,9 @@
+record_type,request_id,job_id,transfer_id,final_state,notice_id,evidence_ids
+job,DSAR-8821,export-job-77,,cancelled,CAN-8821-C,AUD-703;AUD-704;AUD-705;AUD-706
+job,DSAR-8821,export-job-78,,cancelled,CAN-8821-C,AUD-703;AUD-706
+job,DSAR-8821,export-job-79,,cancelled,CAN-8821-C,FAN-79;AUD-703;AUD-704;AUD-705;AUD-706
+transfer,DSAR-8821,export-job-77,xfer-901,withdrawn,CAN-8821-C,AUD-707
+transfer,DSAR-8821,export-job-78,xfer-902,withdrawn,CAN-8821-C,AUD-707
+transfer,DSAR-8821,export-job-79,xfer-904,withdrawn,CAN-8821-C,AUD-707
+transfer,DSAR-8821,export-job-77,xfer-899,retain_and_escalate,CAN-8821-C,REC-901
+transfer,DSAR-8821,export-job-79,xfer-903,retain_confirmed_delivery,CAN-8821-C,REC-903

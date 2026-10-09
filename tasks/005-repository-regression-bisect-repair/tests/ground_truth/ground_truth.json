@@ -1,0 +1,5 @@
+{
+  "first_bad_commit": "2b9263032d2c884da26d7d8f2a9b4c861713818a",
+  "first_bad_subject": "refactor account status eligibility",
+  "expected_statuses": ["active", "delinquent"]
+}

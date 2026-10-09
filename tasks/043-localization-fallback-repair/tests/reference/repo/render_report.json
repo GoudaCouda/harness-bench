@@ -1,0 +1,5 @@
+[
+  {"case_id":"explicit-parent-and-empty","result":{"text":"","locale_used":"en-GB","plural_category":null,"fallback_chain":["en-GB"]}},
+  {"case_id":"russian-plural","result":{"text":"22 файла","locale_used":"ru","plural_category":"few","fallback_chain":["ru-RU","ru"]}},
+  {"case_id":"parent-interpolation","result":{"text":"Hello Ada","locale_used":"en-001","plural_category":null,"fallback_chain":["en-GB","en-001"]}}
+]

@@ -1,0 +1,41 @@
+task_id: 069-git-submodule-state-recovery
+title: Repair a Git submodule state-recovery planner without losing local work
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, git, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [gitlink_authority, dirty_submodule, missing_object, nested_status, remote_tip_temptation]
+required_artifacts:
+- repo/src/submodule_recovery.py
+- repo/recovery_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [GIT-SUBMODULE, GIT-STATUS-SUBMODULE, GIT-SUBMODULES]
+task_family: git-submodule-recovery
+variant: recorded-gitlink-versus-working-tree-state
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/recovery_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/submodule_recovery.py]
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

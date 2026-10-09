@@ -1,0 +1,9 @@
+Maintenance branch smoke run (Python 3.12, isolated image)
+
+FAILED tests/test_public_contract.py::test_unicode_feed_key
+  expected: café-décor
+  observed: cafe-decor
+
+Review note: the runner image already contains the approved 8.x package. The
+metadata is still on 6.1.2, and the wrapper did not pass its Unicode option to
+the dependency.

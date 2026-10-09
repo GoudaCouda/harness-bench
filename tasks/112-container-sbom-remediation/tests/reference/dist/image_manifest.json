@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "org.opencontainers.image.base.digest": "sha256:e4fb44a385da07034dbd157ed8788f05e2cba6913ddd0df69dcc8308ae26cde2",
+    "org.opencontainers.image.revision": "sha256:4a6ae1028f2d632c7c8df2b0eb42530df2d7d7bcf6ecef79e3333cf9426df499",
+    "org.opencontainers.image.version": "report-worker:2026.08-rc2"
+  },
+  "config": {
+    "digest": "sha256:86b4af2467ac5d602bb425ae6ebecef373b80e4340b1e086f1b43ea9b9d45075",
+    "mediaType": "application/vnd.oci.image.config.v1+json",
+    "size": 376
+  },
+  "layers": [
+    {
+      "digest": "sha256:6586a003b60267d616cec85bddd31228726ec59984b51e7b0127bb1192cddd43",
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 48211
+    },
+    {
+      "digest": "sha256:7fedc3c94dc9ebf9bd371add39c6b9da2b0a4a873a84d50b2194216c91136a9f",
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 12907
+    },
+    {
+      "digest": "sha256:5ce5fdcc794837c20e56014a0d58f68de43a45d34aac3ac95b71daef594d7479",
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 2460
+    }
+  ],
+  "mediaType": "application/vnd.oci.image.manifest.v1+json",
+  "schemaVersion": 2
+}

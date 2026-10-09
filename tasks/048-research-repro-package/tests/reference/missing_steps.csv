@@ -1,0 +1,5 @@
+item,type,impact,recommended_fix
+data/raw_trials.csv,snapshot provenance mismatch,"CLAIM-1, CLAIM-2, and CLAIM-3 cannot be reproduced from a coherent freeze",Deposit the exact freeze-2026-04-18 trial data or regenerate code results and claims from one versioned snapshot
+results.csv retention_lift,numeric disagreement,CLAIM-2 has paper 0.038 shipped 0.031 and rerun 0.100,Reconcile the estimand and regenerate the paper and shipped table from the authoritative snapshot
+scripts/analyze_main.py --subgroups,unsupported documented interface,CLAIM-4 cannot be rerun,Implement and test the documented subgroup flag or correct the README to a versioned working command
+results/subgroup_ablation.csv,missing artifact,CLAIM-4 has no deposited output,Deposit the generated subgroup table with snapshot provenance after the subgroup command passes

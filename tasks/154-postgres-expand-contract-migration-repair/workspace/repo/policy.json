@@ -1,0 +1,1 @@
+{"contract_allowed":true,"max_lock_waiters":2,"max_replica_lag_ms":500,"required_stable_windows":3}

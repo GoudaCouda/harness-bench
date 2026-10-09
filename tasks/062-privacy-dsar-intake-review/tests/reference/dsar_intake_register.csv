@@ -1,0 +1,9 @@
+request_id,authority_status,scope_status,intake_disposition,eligible_systems,retained_systems,queue,next_action,policy_basis
+DSAR-201,verified_self,in_scope,route_for_deletion_review,profile_store;marketing_prefs;support_history;analytics_events,none,deletion_review,Privacy Fulfillment reviews the listed eligible systems; no production routing at intake,P-1;P-5;DM-1
+DSAR-202,needs_identity_evidence,pending_authority,needs_more_information,none,none,identity_followup,Request login verification or a valid account token before further review,P-1;P-5
+DSAR-203,verified_self,in_scope,route_with_retention,profile_store;marketing_prefs;support_history;analytics_events,billing_ledger;chargeback_casework,retention_review,Review eligible systems and coordinate the listed retention holds,P-1;P-4;P-5;DM-1;DM-2
+DSAR-204,verified_agent,in_scope,route_with_retention,profile_store;marketing_prefs;support_history;analytics_events,billing_ledger,retention_review,Review eligible systems and retain the billing record pending retention review,P-2;P-4;P-5;DM-1;DM-2
+DSAR-205,verified_self,out_of_scope,reject_out_of_scope,none,none,scope_response,Prepare a scope response explaining that another person's data cannot be handled under this request,P-1;P-3;P-5
+DSAR-206,needs_agent_authorization,pending_authority,needs_more_information,none,none,identity_followup,Request corrected authorization that explicitly covers the requested deletion action,P-2;P-5
+DSAR-207,verified_self,in_scope,route_with_retention,profile_store;support_history;analytics_events,legal_hold_archive,retention_review,Review eligible systems while the legal-hold record remains retained,P-1;P-4;P-5;DM-1;DM-2
+DSAR-208,verified_self,partial_scope,route_for_deletion_review,profile_store;marketing_prefs;support_history,none,deletion_review,Review holder-owned eligible systems and exclude linked-person data from scope,P-1;P-3;P-5;DM-1;DM-3

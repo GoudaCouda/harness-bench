@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "identical_passes": true,
+  "incident_id": "DB-INC-2026-0817-04",
+  "result_set_sha256": "9e56ae4bfb01a128e48d04f5c7b579c9ca1a52cd6fc19c9f5acf161504d9f784",
+  "results": [
+    {
+      "check_id": "customers_active_count",
+      "expected": 1250,
+      "observed": 1250,
+      "status": "pass"
+    },
+    {
+      "check_id": "open_invoice_amount_sum",
+      "expected": 482190,
+      "observed": 482190,
+      "status": "pass"
+    },
+    {
+      "check_id": "invoice_INV-9912_present",
+      "expected": true,
+      "observed": true,
+      "status": "pass"
+    },
+    {
+      "check_id": "cleanup_audit_marker_absent",
+      "expected": true,
+      "observed": true,
+      "status": "pass"
+    },
+    {
+      "check_id": "foreign_key_violations",
+      "expected": 0,
+      "observed": 0,
+      "status": "pass"
+    },
+    {
+      "check_id": "database_accepts_writes",
+      "expected": false,
+      "observed": false,
+      "status": "pass"
+    }
+  ],
+  "run_count": 2,
+  "status": "pass",
+  "target_lsn": "0/C120000",
+  "target_name": "before_batch_cleanup",
+  "target_timeline": 2,
+  "tool": "pitrctl/1"
+}

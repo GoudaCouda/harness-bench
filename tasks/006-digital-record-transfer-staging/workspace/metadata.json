@@ -1,0 +1,8 @@
+{
+  "records": [
+    {"record_id":"REC-001","title":"January council minutes","creator":"Office of the Clerk","record_date":"2025-01-14","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none"},
+    {"record_id":"REC-002","title":"District boundary map","creator":"Planning Division","record_date":"2025-03-02","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none"},
+    {"record_id":"REC-003","title":"Public budget hearing","creator":"Finance Committee","record_date":"2025-06-18","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none"},
+    {"record_id":"REC-004","title":"Adopted budget ledger","creator":"Finance Department","record_date":"2025-07-01","schedule_item":"DAA-0042-2021-0007-0001","access_restriction":"none"}
+  ]
+}

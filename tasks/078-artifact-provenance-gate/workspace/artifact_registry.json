@@ -1,0 +1,19 @@
+{
+ "artifacts":[
+  {"artifact_id":"SDK-204","kind":"component","package":"dispatch-sdk","commit":"f00ba47","digest":"sha256:sdk47","install":"pass","signature_id":"SIG-SDK47"},
+  {"artifact_id":"CLI-310","kind":"component","package":"dispatch-cli","commit":"c11aa20","digest":"sha256:cli20","install":"pass","signature_id":"SIG-CLI20"},
+  {"artifact_id":"B-401","kind":"bundle","package":"dispatch-suite","version":"4.1.0","commit":"aa12f00","digest":"sha256:bundle-old","parents":["SDK-201","CLI-308"],"base_digest":"sha256:base-old","install":"pass","signature_id":"SIG-B401","attestation_id":"ATT-401","build_sequence":41},
+  {"artifact_id":"B-404","kind":"bundle","package":"dispatch-suite","version":"4.1.0","commit":"aa47f00","digest":"sha256:bundle-404","parents":["SDK-204","CLI-310"],"base_digest":"sha256:base-old","install":"pass","signature_id":"SIG-B404","attestation_id":"ATT-404","build_sequence":44},
+  {"artifact_id":"B-405","kind":"bundle","package":"dispatch-suite","version":"4.1.0","commit":"aa47f00","digest":"sha256:bundle-405","parents":["SDK-204","CLI-310"],"base_digest":"sha256:base-safe","install":"pass","signature_id":"SIG-B405","attestation_id":"ATT-405","build_sequence":45},
+  {"artifact_id":"B-406","kind":"bundle","package":"dispatch-suite","version":"4.1.0","commit":"aa47f00","digest":"sha256:bundle-406","parents":["SDK-204","CLI-OLD"],"base_digest":"sha256:base-safe","install":"pass","signature_id":"SIG-B406","attestation_id":"ATT-406","build_sequence":46}
+ ],
+ "signatures":[
+  {"signature_id":"SIG-SDK47","artifact_digest":"sha256:sdk47","identity":"ci-release@northstar.example","verified":true},{"signature_id":"SIG-CLI20","artifact_digest":"sha256:cli20","identity":"ci-release@northstar.example","verified":true},{"signature_id":"SIG-B401","artifact_digest":"sha256:bundle-old","identity":"ci-release@northstar.example","verified":true},{"signature_id":"SIG-B404","artifact_digest":"sha256:bundle-404","identity":"ci-release@northstar.example","verified":true},{"signature_id":"SIG-B405","artifact_digest":"sha256:bundle-405","identity":"ci-release@northstar.example","verified":true},{"signature_id":"SIG-B406","artifact_digest":"sha256:bundle-406","identity":"ci-release@northstar.example","verified":true}
+ ],
+ "attestations":[
+  {"attestation_id":"ATT-401","artifact_digest":"sha256:bundle-old","builder":"ci-release@northstar.example","source_commit":"aa12f00","parent_digests":["sha256:sdk12","sha256:cli18"],"verified":true},
+  {"attestation_id":"ATT-404","artifact_digest":"sha256:bundle-404","builder":"ci-release@northstar.example","source_commit":"aa47f00","parent_digests":["sha256:sdk47","sha256:cli20"],"verified":true},
+  {"attestation_id":"ATT-405","artifact_digest":"sha256:bundle-405","builder":"ci-release@northstar.example","source_commit":"aa47f00","parent_digests":["sha256:sdk47","sha256:cli20"],"verified":true},
+  {"attestation_id":"ATT-406","artifact_digest":"sha256:bundle-406","builder":"ci-release@northstar.example","source_commit":"aa47f00","parent_digests":["sha256:sdk47","sha256:cli18"],"verified":true}
+ ]
+}

@@ -1,0 +1,18 @@
+{
+  "request_id": "DSAR-206",
+  "self_attestation": false,
+  "account_token": null,
+  "agent_identity_check": {
+    "check_id": "AIC-206",
+    "status": "completed",
+    "completed_at": "2026-05-18T11:01:00Z"
+  },
+  "authorization": {
+    "document_id": "AUTH-206",
+    "signed": true,
+    "holder_account_id": "acct_1006",
+    "authorized_action": "access_personal_data_copy",
+    "signed_at": "2026-05-02",
+    "expires_at": "2026-09-02"
+  }
+}

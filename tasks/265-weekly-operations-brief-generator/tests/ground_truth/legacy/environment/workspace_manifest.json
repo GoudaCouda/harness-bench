@@ -1,0 +1,18 @@
+{
+  "schema_version": "case11_workspace_fixture_manifest_v2",
+  "input_sha256": {
+    "input/brief_template.md": "f64ed5386fc9541eb314af91df6aa8af86737940461beb1da5fa8111ab821649",
+    "input/metric_definitions.json": "d25a3195060afa8e8947f96801814586d23d63e0d8680ac948be0521f8aef1cd",
+    "input/weekly_operations.csv": "8b9585a6c0e328f7a86cdde303d0ce19cf7a9738aa6d16f0cdd9c9ba8320861e"
+  },
+  "initial_directories": ["input", "output", "submission"],
+  "initial_files": [
+    "input/brief_template.md",
+    "input/metric_definitions.json",
+    "input/weekly_operations.csv"
+  ],
+  "directory_modes": {"input": 1512, "output": 1528, "submission": 1528},
+  "input_file_mode": 416,
+  "forbid_symlinks": true,
+  "reset_baseline": "evidence/reset_baselines/<workspace_id>.json"
+}

@@ -1,0 +1,151 @@
+{
+  "task_id": "008-media-timeline-editor",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "media_timeline_editor_protected_clips",
+    "media_timeline_editor_seek_trim_interaction_model",
+    "media_timeline_editor_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "CLIP-INTRO",
+      "title": "Opening bumper",
+      "track": "Video",
+      "start": 0,
+      "duration": 12,
+      "owner": "Mara",
+      "status": "locked"
+    },
+    {
+      "id": "CLIP-BROLL",
+      "title": "Kitchen b-roll",
+      "track": "Video",
+      "start": 18,
+      "duration": 28,
+      "owner": "Noel",
+      "status": "review"
+    },
+    {
+      "id": "CLIP-VO",
+      "title": "Narration take",
+      "track": "Audio",
+      "start": 8,
+      "duration": 42,
+      "owner": "Priya",
+      "status": "review"
+    },
+    {
+      "id": "CLIP-MUSIC",
+      "title": "Ambient loop",
+      "track": "Audio",
+      "start": 52,
+      "duration": 30,
+      "owner": "Priya",
+      "status": "clear"
+    },
+    {
+      "id": "CLIP-CTA",
+      "title": "End card",
+      "track": "Graphics",
+      "start": 78,
+      "duration": 14,
+      "owner": "Mara",
+      "status": "clear"
+    },
+    {
+      "id": "CLIP-LOWER",
+      "title": "Speaker lower third",
+      "track": "Graphics",
+      "start": 24,
+      "duration": 18,
+      "owner": "Noel",
+      "status": "watch"
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "timeline"
+    ],
+    [
+      "playhead"
+    ],
+    [
+      "trim"
+    ],
+    [
+      "Video"
+    ],
+    [
+      "Audio"
+    ],
+    [
+      "Graphics"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "Current time"
+    ],
+    [
+      "Set trim in"
+    ],
+    [
+      "Set trim out"
+    ],
+    [
+      "data-clip-id",
+      "clip"
+    ],
+    [
+      "selectedId",
+      "Selected clip"
+    ],
+    [
+      "play",
+      "Pause"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Timeline"
+    ],
+    [
+      "Current time"
+    ],
+    [
+      "Trim range"
+    ],
+    [
+      "Review clips"
+    ],
+    [
+      "Selected clip"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    }
+  }
+}

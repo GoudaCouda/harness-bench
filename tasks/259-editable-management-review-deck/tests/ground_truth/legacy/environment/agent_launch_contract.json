@@ -1,0 +1,12 @@
+{
+  "schema_version": "nami_work_case05_agent_launch_contract_v1",
+  "workspace_source": "fixtures/agent_workspace",
+  "workspace_target": "/workspace",
+  "mount_mode": "read-write-scoped",
+  "visible_paths": ["/workspace/TASK.md", "/workspace/input", "/workspace/output"],
+  "hidden_paths": ["/case/oracle", "/case/verifier", "/case/tests", "/case/validation"],
+  "required_output": "/workspace/output/management_review.pptx",
+  "network_mode": "none",
+  "ports": []
+}
+

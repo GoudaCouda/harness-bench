@@ -1,0 +1,43 @@
+{
+  "incident_id": "INC-114-2026-08",
+  "credential_id": "SYN-CRED-REL-PUB-A",
+  "impacted_refs": [
+    "refs/heads/main",
+    "refs/heads/release/2.7",
+    "refs/tags/build-2026.08.12"
+  ],
+  "quarantine_nodes": [
+    "ART-417",
+    "LOG-418",
+    "MIR-417-A"
+  ],
+  "detach_channels": [
+    "release-production",
+    "rollback-west"
+  ],
+  "rewrite": {
+    "replacement_text": "${RELEASE_PUBLISHER_TOKEN}",
+    "preserve_ref_names": true,
+    "preserve_unaffected_history": true
+  },
+  "replacement": {
+    "secret_ref": "vault://synthetic/nimbus/release-publisher@v3",
+    "scope": [
+      "release:publish:nimbus"
+    ],
+    "owner": "release-automation",
+    "activate": false
+  },
+  "evidence": [
+    "repository.db#refs/heads/main",
+    "repository.db#refs/heads/release/2.7",
+    "repository.db#refs/tags/build-2026.08.12",
+    "artifact_lineage.json#ART-417",
+    "artifact_lineage.json#LOG-418",
+    "artifact_lineage.json#MIR-417-A",
+    "distribution_state.json#release-production",
+    "distribution_state.json#rollback-west",
+    "incident.json#credential_id",
+    "incident.json#replacement"
+  ]
+}

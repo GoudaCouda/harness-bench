@@ -1,0 +1,12 @@
+[
+  {"id": "R1", "from": "10.data/cohort", "type": "HasVersion", "to": "10.data/cohort.v1"},
+  {"id": "R2", "from": "10.data/cohort.v1", "type": "IsVersionOf", "to": "10.data/cohort"},
+  {"id": "R3", "from": "10.data/cohort.v2", "type": "HasVersion", "to": "10.data/cohort"},
+  {"id": "R4", "from": "10.data/cohort", "type": "HasVersion", "to": "10.data/cohort.v3"},
+  {"id": "R5", "from": "10.data/cohort", "type": "HasVersion", "to": "10.data/cohort.v3"},
+  {"id": "R6", "from": "10.data/cohort.v3", "type": "IsVersionOf", "to": "10.data/cohort"},
+  {"id": "R7", "from": "10.data/cohort.v3", "type": "IsNewVersionOf", "to": "10.data/cohort.v2"},
+  {"id": "R8", "from": "10.data/cohort.v2", "type": "IsPreviousVersionOf", "to": "10.data/cohort.v3"},
+  {"id": "R9", "from": "10.data/cohort.v3", "type": "IsNewVersionOf", "to": "10.data/cohort.v3"},
+  {"id": "R10", "from": "10.data/cohort.v3-draft", "type": "IsVersionOf", "to": "10.data/cohort"}
+]

@@ -1,0 +1,37 @@
+{
+  "schema_version": "synthetic_change_ticket_v1",
+  "change_id": "CHG-2026-0712-041",
+  "title": "Increase settlement database connection pool capacity",
+  "service": "settlement-api",
+  "region": "east-1",
+  "requested_by": "Chen Kai",
+  "approved_by": "Zhou Lan",
+  "scheduled_start": "2026-07-12T09:55:00+08:00",
+  "deployment_finished_at": "2026-07-12T09:58:00+08:00",
+  "planned_diff": {
+    "path": "settlement-prod-v42.yaml",
+    "key": "db.pool.max",
+    "before": 120,
+    "intended_after": 160
+  },
+  "deployed_diff": {
+    "path": "settlement-prod-v42.yaml",
+    "key": "db.pool.max",
+    "before": 120,
+    "actual_after": 12,
+    "config_version": "v42"
+  },
+  "prechecks": [
+    {"check": "yaml_schema", "result": "passed", "detail": "integer >= 1"},
+    {"check": "production_minimum_pool", "result": "not_configured"},
+    {"check": "canary_pending_connections", "result": "not_configured"}
+  ],
+  "rollback": {
+    "approved_at": "2026-07-12T10:17:00+08:00",
+    "started_at": "2026-07-12T10:18:00+08:00",
+    "completed_at": "2026-07-12T10:22:00+08:00",
+    "restored_config_version": "v41",
+    "restored_db_pool_max": 120
+  },
+  "evidence_id": "CHANGE-EV-041"
+}

@@ -1,0 +1,13 @@
+{
+  "account_id": "acct_1003",
+  "account_holder": "Avery Lopez",
+  "primary_email": "avery.lopez@example.org",
+  "phone": "+1-303-555-0144",
+  "status": "active",
+  "current_holds": [
+    {"type": "open_billing_dispute", "case_id": "BD-7781", "status": "open"},
+    {"type": "active_chargeback", "case_id": "CB-920", "status": "active"}
+  ],
+  "linked_people": [],
+  "internal_case_note": "possible refund abuse pattern; restrict to Payments Legal"
+}

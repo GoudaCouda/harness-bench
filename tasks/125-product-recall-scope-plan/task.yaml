@@ -1,0 +1,69 @@
+task_id: 125-product-recall-scope-plan
+title: Recover an Interrupted Product Recall and Stop-Sale Staging Transaction
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- terminal
+- sqlite
+- structured_data
+- product_safety
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- signed_revision_precedence
+- unresolved_genealogy
+- mixed_lot
+- out_of_order_events
+- duplicate_delivery
+- partial_failure
+- idempotent_replay
+required_artifacts:
+- recall.db
+- recall_plan.json
+- recall_verification.json
+- recall_stage_receipt.json
+- recall_handoff.md
+task_family: product-recall-transaction-recovery
+variant: superseding-scope-with-interrupted-stop-sale-stage
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - FDA-RECALL-OPERATIONS
+  - GS1-TRACEABILITY
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - recall_plan.json
+  - recall_verification.json
+  - recall_stage_receipt.json
+  - recall_handoff.md
+  allowed_modified:
+  - recall.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

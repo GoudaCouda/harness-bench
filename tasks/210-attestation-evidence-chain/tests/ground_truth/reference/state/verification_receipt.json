@@ -1,0 +1,15 @@
+{
+  "bundle_id": "att-2026-03-16",
+  "verified_at": 1773651600,
+  "counts": {
+    "accepted": 2,
+    "digest_mismatch": 1,
+    "bad_signature": 1,
+    "key_revoked": 1,
+    "key_not_valid": 1,
+    "unknown_key": 1,
+    "stale_cache_reverified": 1
+  },
+  "accepted_count": 2,
+  "state": "verified"
+}

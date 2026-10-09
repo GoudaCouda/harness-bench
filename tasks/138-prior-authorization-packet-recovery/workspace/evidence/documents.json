@@ -1,0 +1,101 @@
+{
+  "documents": [
+    {
+      "current": true,
+      "document_id": "DOC-ORD-77",
+      "document_type": "signed_order",
+      "effective_at": "2026-08-17",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-11-17"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-CLN-22",
+      "document_type": "clinical_note",
+      "effective_at": "2026-08-16",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-10-16"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-PT-09",
+      "document_type": "conservative_therapy",
+      "effective_at": "2026-08-12",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-10-12"
+    },
+    {
+      "current": false,
+      "document_id": "DOC-CLN-OLD",
+      "document_type": "clinical_note",
+      "effective_at": "2025-02-01",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2025-04-01"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-PSYCH-4",
+      "document_type": "clinical_note",
+      "effective_at": "2026-08-18",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": "psychotherapy_note",
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-12-01"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-WRONG-MEMBER",
+      "document_type": "clinical_note",
+      "effective_at": "2026-08-18",
+      "member_id": "MEM-0000",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-12-01"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-UNSIGNED-PT",
+      "document_type": "conservative_therapy",
+      "effective_at": "2026-08-18",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": false,
+      "valid_through": "2026-12-01"
+    },
+    {
+      "current": true,
+      "document_id": "DOC-LAB-EXTRA",
+      "document_type": "laboratory_result",
+      "effective_at": "2026-08-18",
+      "member_id": "MEM-8731",
+      "patient_id": "PAT-4102",
+      "sensitive_category": null,
+      "service_code": "72148",
+      "signed": true,
+      "valid_through": "2026-12-01"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "cluster_id": "northstar-ha",
+  "policy_version": "NORTHSTAR-CA-ROTATION-3",
+  "steps": [
+    {"order": 1, "action": "repair_controller_ca_roles", "target": "kube-controller-manager", "from": "bundle_in_single_ca_flags", "to": "dual_root_plus_single_new_signer", "prerequisites": ["dual_root_bundle_published", "new_ca_certificate_and_key_available"], "evidence": ["state/rotation_state.json:controller_manager", "policy/rotation_policy.json:file_roles", "event:6"]},
+    {"order": 2, "action": "refresh_client_trust", "target": "metrics-adapter", "from": "old_only", "to": "dual", "prerequisites": ["dual_root_bundle_published"], "evidence": ["state/rotation_state.json:clients", "event:3", "event:7"]},
+    {"order": 3, "action": "rotate_server_leaf", "target": "kube-apiserver/cp-3", "from": "OLD-CA", "to": "NEW-CA", "prerequisites": ["all_required_clients_trust_new_ca"], "evidence": ["state/rotation_state.json:servers", "event:7"]},
+    {"order": 4, "action": "verify_dual_trust", "target": "required_handshake_graph", "from": "incomplete", "to": "pass", "prerequisites": ["controller_manager_healthy_with_single_new_signer", "all_required_clients_trust_new_ca", "all_required_servers_signed_by_new_ca"], "evidence": ["evidence/component_inventory.json:required_handshakes", "evidence/handshake_matrix.json"]},
+    {"order": 5, "action": "retire_old_ca", "target": "cluster_trust", "from": "dual", "to": "new_only", "prerequisites": ["complete_dual_probe_passed", "original_event_history_preserved"], "evidence": ["work/dual_probe.json", "policy/rotation_policy.json:retirement_prerequisites"]},
+    {"order": 6, "action": "verify_new_only", "target": "required_handshake_graph", "from": "unverified", "to": "pass", "prerequisites": ["old_anchor_retired"], "evidence": ["evidence/component_inventory.json:required_handshakes", "state/rotation_events.jsonl"]}
+  ],
+  "rollback_boundary": "Do not roll kube-apiserver/cp-1 or kube-apiserver/cp-2 back from NEW-CA. Before old-anchor retirement, stop and repair a failed dual-trust prerequisite; after protected retirement, recover forward with NEW-CA rather than restoring old-only trust.",
+  "retirement_gate": [
+    "controller_manager_healthy_with_single_new_signer",
+    "all_required_clients_trust_new_ca",
+    "all_required_servers_signed_by_new_ca",
+    "complete_dual_probe_passed",
+    "original_event_history_preserved"
+  ]
+}

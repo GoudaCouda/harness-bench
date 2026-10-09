@@ -1,0 +1,37 @@
+{
+  "date_fields": [
+    "StudyDate",
+    "AcquisitionDate"
+  ],
+  "direct_identifiers": [
+    "PatientName",
+    "PatientBirthDate",
+    "AccessionNumber",
+    "InstitutionName",
+    "ReferringPhysicianName"
+  ],
+  "private_tag_allowlist": [
+    "0019,1001"
+  ],
+  "recovery_id": "DICOM-DEID-141-R1",
+  "rules": {
+    "delivery_identity": "first delivery for an SOP Instance UID is authoritative; exact later content is duplicate; different later content is collision",
+    "external_boundary": "local review staging only",
+    "pixel_risk": "only BurnedInAnnotation=NO is eligible",
+    "protected_boundary": "exported_protected studies are immutable and late instances are ignored",
+    "reference_integrity": "referenced SOP must be eligible in the same export"
+  },
+  "schema_version": 1,
+  "supported_sop_classes": [
+    "1.2.840.10008.5.1.4.1.1.2",
+    "1.2.840.10008.5.1.4.1.1.4",
+    "1.2.840.10008.5.1.4.1.1.66.4"
+  ],
+  "uid_fields": [
+    "StudyInstanceUID",
+    "SeriesInstanceUID",
+    "SOPInstanceUID",
+    "ReferencedSOPInstanceUID"
+  ],
+  "uid_namespace": "2.25"
+}

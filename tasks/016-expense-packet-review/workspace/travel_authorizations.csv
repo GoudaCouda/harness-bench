@@ -1,0 +1,4 @@
+trip_id,employee,destination,start_date,end_date,status,purpose
+T-884,Mina Patel,Berlin,2026-07-12,2026-07-17,approved,Data Operations Summit
+T-885,Luis Chen,New York,2026-07-14,2026-07-14,approved,Client site visit
+T-811,Zoe King,Boston,2026-06-03,2026-06-04,closed,Partner workshop

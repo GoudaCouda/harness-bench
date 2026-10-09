@@ -1,0 +1,368 @@
+{
+  "task_id": "011-local-data-explorer",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "local_data_explorer_protected_local_data",
+    "local_data_explorer_table_interaction_model",
+    "local_data_explorer_table_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "REC-EAST",
+    "REC-WEST",
+    "REC-CENT",
+    "REC-SOUTH",
+    "REC-EAST-R1",
+    "REC-WEST-R2",
+    "REC-CENT-R3",
+    "REC-SOUTH-R4",
+    "REC-WEST-X9",
+    "REC-WEST-X10",
+    "REC-WEST-X11",
+    "REC-WEST-X12"
+  ],
+  "records": {
+    "REC-EAST": {
+      "id": "REC-EAST",
+      "name": "East sensor batch",
+      "category": "sensor",
+      "owner": "Ops North",
+      "status": "clear",
+      "primary": 128,
+      "secondary": 2
+    },
+    "REC-WEST": {
+      "id": "REC-WEST",
+      "name": "West sample batch",
+      "category": "sample",
+      "owner": "Ops West",
+      "status": "watch",
+      "primary": 96,
+      "secondary": 6
+    },
+    "REC-CENT": {
+      "id": "REC-CENT",
+      "name": "Central import",
+      "category": "import",
+      "owner": "Ops Core",
+      "status": "review",
+      "primary": 141,
+      "secondary": 9
+    },
+    "REC-SOUTH": {
+      "id": "REC-SOUTH",
+      "name": "South ledger",
+      "category": "ledger",
+      "owner": "Ops South",
+      "status": "watch",
+      "primary": 117,
+      "secondary": 4
+    },
+    "REC-EAST-R1": {
+      "id": "REC-EAST-R1",
+      "name": "East sensor batch follow-up",
+      "category": "sample",
+      "owner": "Ops Core",
+      "status": "clear",
+      "primary": 142,
+      "secondary": 8
+    },
+    "REC-WEST-R2": {
+      "id": "REC-WEST-R2",
+      "name": "West sample batch follow-up",
+      "category": "import",
+      "owner": "Ops South",
+      "status": "watch",
+      "primary": 113,
+      "secondary": 13
+    },
+    "REC-CENT-R3": {
+      "id": "REC-CENT-R3",
+      "name": "Central import follow-up",
+      "category": "ledger",
+      "owner": "Ops North",
+      "status": "review",
+      "primary": 161,
+      "secondary": 17
+    },
+    "REC-SOUTH-R4": {
+      "id": "REC-SOUTH-R4",
+      "name": "South ledger follow-up",
+      "category": "sensor",
+      "owner": "Ops West",
+      "status": "watch",
+      "primary": 140,
+      "secondary": 13
+    },
+    "REC-WEST-X9": {
+      "id": "REC-WEST-X9",
+      "name": "West sample batch scenario 9",
+      "category": "sample",
+      "owner": "Ops Core",
+      "status": "review",
+      "primary": 170,
+      "secondary": 12
+    },
+    "REC-WEST-X10": {
+      "id": "REC-WEST-X10",
+      "name": "West sample batch scenario 10",
+      "category": "import",
+      "owner": "Ops South",
+      "status": "clear",
+      "primary": 177,
+      "secondary": 8
+    },
+    "REC-WEST-X11": {
+      "id": "REC-WEST-X11",
+      "name": "West sample batch scenario 11",
+      "category": "ledger",
+      "owner": "Ops North",
+      "status": "watch",
+      "primary": 184,
+      "secondary": 9
+    },
+    "REC-WEST-X12": {
+      "id": "REC-WEST-X12",
+      "name": "West sample batch scenario 12",
+      "category": "sample",
+      "owner": "Ops West",
+      "status": "review",
+      "primary": 191,
+      "secondary": 10
+    }
+  },
+  "domain_groups": [
+    [
+      "data",
+      "dataset",
+      "record",
+      "row",
+      "item"
+    ],
+    [
+      "table",
+      "grid",
+      "list",
+      "index"
+    ],
+    [
+      "table",
+      "data explorer",
+      "record"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Facet",
+      "facet",
+      "filter"
+    ],
+    [
+      "Sort mode",
+      "sort mode",
+      "table-review"
+    ],
+    [
+      "Global search",
+      "global search",
+      "search"
+    ],
+    [
+      "Rows per page",
+      "rows per page",
+      "Hide clear records",
+      "hide clear records"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Total value",
+      "Total",
+      "Metric value"
+    ],
+    [
+      "Freshness days",
+      "Freshness"
+    ],
+    [
+      "Facet matches",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Column audit",
+      "data explorer"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "activeFacet",
+      "setActiveFacet",
+      "facet selection"
+    ],
+    [
+      "selectedRecordId",
+      "setSelectedRecordId",
+      "row selection"
+    ],
+    [
+      "sortMode",
+      "setSortMode",
+      "sort mode"
+    ],
+    [
+      "hideClearRecords",
+      "setHideClearRecords",
+      "column audit toggle"
+    ],
+    [
+      "rowsPerPage",
+      "setRowsPerPage",
+      "rows per page"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "totalValue",
+      "Total value",
+      "value total"
+    ],
+    [
+      "freshnessDays",
+      "Freshness days",
+      "freshness average"
+    ],
+    [
+      "facetMatches",
+      "Facet matches",
+      "matching rows"
+    ],
+    [
+      "columnAuditScore",
+      "Column audit",
+      "column audit"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "data table",
+      "facet rail",
+      "column drawer"
+    ],
+    [
+      "pagination",
+      "row inspector",
+      "table shell"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Facet",
+    "mode_label": "Sort mode",
+    "search_label": "Global search",
+    "range_label": "Rows per page",
+    "toggle_label": "Hide clear records",
+    "toggle_regex": "Hide\\ clear\\ records|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Facet",
+        "value": "sensor"
+      },
+      {
+        "kind": "fill",
+        "label": "Global search",
+        "value": "East"
+      },
+      {
+        "kind": "click",
+        "text": "REC-EAST"
+      },
+      {
+        "kind": "select",
+        "label": "Sort mode",
+        "value": "table-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Rows per page",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "table-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "REC-EAST",
+      "category": "sensor",
+      "mode": "table-review",
+      "search_value": "East",
+      "range_value": 64,
+      "visible_id_subset": [
+        "REC-EAST"
+      ],
+      "selected_detail_tokens": [
+        "Ops North",
+        "sensor",
+        "clear",
+        "128",
+        "2"
+      ],
+      "after_clearing_search_subset": [
+        "REC-EAST",
+        "REC-SOUTH-R4"
+      ],
+      "focus_subset": [
+        "REC-CENT",
+        "REC-WEST-X9"
+      ],
+      "focus_forbidden": [
+        "REC-EAST"
+      ],
+      "detail_switch_id": "REC-SOUTH-R4",
+      "detail_switch_tokens": [
+        "REC-SOUTH-R4",
+        "South ledger follow-up",
+        "Ops West",
+        "sensor",
+        "watch",
+        "140",
+        "13"
+      ],
+      "summary_change_labels": [
+        "Total value",
+        "Freshness days",
+        "Facet matches",
+        "Column audit"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 12
+    },
+    "action_count": 6
+  }
+}

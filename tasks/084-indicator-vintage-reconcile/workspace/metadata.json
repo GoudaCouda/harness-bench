@@ -1,0 +1,17 @@
+[
+  {
+    "code": "GDPCUR",
+    "label": "Gross domestic product, current prices",
+    "unit": "current credits"
+  },
+  {
+    "code": "GDPCON15",
+    "label": "Gross domestic product, constant prices (2015 base)",
+    "unit": "constant 2015 credits"
+  },
+  {
+    "code": "GDPCON20",
+    "label": "Gross domestic product, constant prices (2020 base)",
+    "unit": "constant 2020 credits"
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "task_id": "020-form-builder-validation",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "form_builder_validation_protected_fields",
+    "form_builder_validation_builder_interaction_model",
+    "form_builder_validation_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "FORM-NAME",
+      "label": "Applicant name",
+      "type": "text",
+      "group": "identity",
+      "required": true,
+      "pattern": "nonempty"
+    },
+    {
+      "id": "FORM-EMAIL",
+      "label": "Contact email",
+      "type": "email",
+      "group": "contact",
+      "required": true,
+      "pattern": "email"
+    },
+    {
+      "id": "FORM-PHONE",
+      "label": "Phone number",
+      "type": "tel",
+      "group": "contact",
+      "required": false,
+      "pattern": "phone"
+    },
+    {
+      "id": "FORM-BUDGET",
+      "label": "Budget range",
+      "type": "number",
+      "group": "project",
+      "required": false,
+      "pattern": "number"
+    },
+    {
+      "id": "FORM-CONSENT",
+      "label": "Consent checkbox",
+      "type": "checkbox",
+      "group": "legal",
+      "required": true,
+      "pattern": "checked"
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "form builder"
+    ],
+    [
+      "field palette"
+    ],
+    [
+      "form preview"
+    ],
+    [
+      "validation"
+    ],
+    [
+      "schema"
+    ],
+    [
+      "required"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-field-id"
+    ],
+    [
+      "Add selected field"
+    ],
+    [
+      "Move field up"
+    ],
+    [
+      "Required field"
+    ],
+    [
+      "sample value"
+    ],
+    [
+      "Schema preview"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Field count"
+    ],
+    [
+      "Required fields"
+    ],
+    [
+      "Validation errors"
+    ],
+    [
+      "Selected field"
+    ],
+    [
+      "Schema preview"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    }
+  }
+}

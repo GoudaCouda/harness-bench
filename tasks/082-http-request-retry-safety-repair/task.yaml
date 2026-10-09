@@ -1,0 +1,41 @@
+task_id: 082-http-request-retry-safety-repair
+title: Repair HTTP retries across unknown non-idempotent outcomes
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [api_client, code_execution, reliability, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [partial_write, response_loss, non_idempotent_method, idempotency_contract, retry_after_budget]
+required_artifacts:
+- repo/src/retry_planner.py
+- repo/retry_report.json
+- repo/RETRY_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [HTTP-SEMANTICS-RFC9110, HTTP-STATUS-RFC6585]
+task_family: http-client-request-recovery
+variant: transport-ambiguity-idempotency-and-retry-after
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/retry_report.json, repo/RETRY_NOTES.md]
+  allowed_modified: [repo/src/retry_planner.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

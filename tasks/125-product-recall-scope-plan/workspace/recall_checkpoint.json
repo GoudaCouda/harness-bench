@@ -1,0 +1,7 @@
+{
+  "created_at": "2026-08-19T08:20:00Z",
+  "interrupted_phase": "prepared",
+  "prepared_action_key": "EV-504",
+  "recall_id": "RC-2026-0417",
+  "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b"
+}

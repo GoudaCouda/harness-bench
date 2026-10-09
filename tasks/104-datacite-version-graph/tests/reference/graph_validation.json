@@ -1,0 +1,24 @@
+{
+  "new_version": "10.data/cohort.v4",
+  "concept": "10.data/cohort",
+  "versions": ["10.data/cohort.v1", "10.data/cohort.v2", "10.data/cohort.v3", "10.data/cohort.v4"],
+  "excluded_records": ["10.data/cohort.v3-draft"],
+  "removed_invalid_edges": ["R9:self-edge", "R10:draft-public-edge"],
+  "corrected_direction_edges": ["R3:10.data/cohort.v2|HasVersion|10.data/cohort->10.data/cohort|HasVersion|10.data/cohort.v2", "R3:10.data/cohort.v2|HasVersion|10.data/cohort->10.data/cohort.v2|IsVersionOf|10.data/cohort"],
+  "duplicate_relation_edges_removed": 1,
+  "duplicate_citations_removed": 1,
+  "citation_retargets": ["C2:10.data/cohort.v3->10.data/cohort.v4"],
+  "citation_preserved": ["C1:10.data/cohort.v2", "C3:10.data/cohort"],
+  "old_versions_retained": true,
+  "cycles": 0,
+  "self_edges": 0,
+  "prior_checkpoint_id": "datacite-v3-checkpoint",
+  "state_changes": {
+    "added_edges": ["10.data/cohort|HasVersion|10.data/cohort.v4", "10.data/cohort.v4|IsVersionOf|10.data/cohort", "10.data/cohort.v4|IsNewVersionOf|10.data/cohort.v3", "10.data/cohort.v3|IsPreviousVersionOf|10.data/cohort.v4", "10.data/cohort.v2|IsNewVersionOf|10.data/cohort.v1", "10.data/cohort.v1|IsPreviousVersionOf|10.data/cohort.v2"],
+    "corrected_edges": ["R3"],
+    "removed_edges": ["R9", "R10"],
+    "retained_edges": ["10.data/cohort|HasVersion|10.data/cohort.v1", "10.data/cohort|HasVersion|10.data/cohort.v3", "10.data/cohort.v1|IsVersionOf|10.data/cohort", "10.data/cohort.v3|IsVersionOf|10.data/cohort", "10.data/cohort.v3|IsNewVersionOf|10.data/cohort.v2", "10.data/cohort.v2|IsPreviousVersionOf|10.data/cohort.v3"],
+    "retargeted_citations": ["C2"],
+    "unchanged_citations": ["C1", "C3"]
+  }
+}

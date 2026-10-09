@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source_run": "gemma4-31b-openclaw-hb11-r1-20260731",
+  "source_shard": "shard-1",
+  "task_id": "025-dependency-upgrade-compat",
+  "harness": "openclaw",
+  "harness_version": "2026.5.26",
+  "original_outcome_score": 0.0,
+  "expected_outcome_score_after_fairness_fix": 1.0,
+  "files": {
+    "repo/pyproject.toml": "7afc953c0e3fc074d2403790382209a934ac398d7376bc228f56d398b4017bac",
+    "repo/src/catalog_slug/slugger.py": "3dcee24422e9e1f288e2e0d40ec6da97642a642e15791fe65d481ea2a2a7e590",
+    "repo/UPGRADE_NOTES.md": "96ed1b5bc66e1c0b35e43685015c0dedc5747a16b57a77a08ef716ce5264f152"
+  },
+  "note": "The three repo files are byte-for-byte copies of the completed formal-run product."
+}

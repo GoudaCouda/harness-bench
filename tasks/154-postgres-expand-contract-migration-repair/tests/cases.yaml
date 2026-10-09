@@ -1,0 +1,40 @@
+schema_version: 2
+task_id: 154-postgres-expand-contract-migration-repair
+pass_threshold: 0.8
+cases:
+- id: phase_precedence_and_rollout_skew
+  title: Expand dual-write backfill and cutover phases advance in order
+  description: Mixed versions counts mismatches and constraint state choose one deterministic next action
+    without phase skipping.
+  weight: 0.3
+  core: true
+- id: load_and_contract_safety
+  title: Database load and destructive contraction remain fail closed
+  description: Lock-taking steps wait under pressure and old-column removal requires policy and stable
+    no-read evidence.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: migration_replay
+  title: Protected decisions and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: migration_handoff
+  title: Migration semantics and offline boundaries are handed off clearly
+  description: Another engineer can audit rollout DDL gates contraction and verification.
+  weight: 0.2
+  core: false
+- id: source_and_database_boundary
+  title: Planner validation and malformed-input behavior are correct
+  description: The implementation stays in the auditable pure subset and malformed migration state fails predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence and real database boundaries are respected
+  description: Inputs remain unchanged, filesystem redlines stay intact, and the handoff does not claim prohibited live actions.
+  weight: 0.0
+  core: false
+  gate: true

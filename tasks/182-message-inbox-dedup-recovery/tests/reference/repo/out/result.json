@@ -1,0 +1,30 @@
+{
+  "conflicts": [
+    {
+      "epoch": 1,
+      "producer": "p",
+      "seq": 2
+    }
+  ],
+  "ledger": {
+    "p": {
+      "epoch": 2,
+      "seq": 1,
+      "tombstone": -1
+    }
+  },
+  "process": [
+    {
+      "epoch": 1,
+      "payload_hash": "a",
+      "producer": "p",
+      "seq": 1
+    },
+    {
+      "epoch": 2,
+      "payload_hash": "c",
+      "producer": "p",
+      "seq": 1
+    }
+  ]
+}

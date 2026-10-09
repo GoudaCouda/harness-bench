@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "case_number": 10,
+  "blocks": [
+    [
+      "valid_processing",
+      "有效记录的稳定处理与聚合",
+      "functional_success_empty functional_success_stable_and_aggregate functional_success_unicode_codepoint_sort functional_success_inclusive_schema_boundaries"
+    ],
+    [
+      "invalid_processing",
+      "无效输入的完整拒绝合同",
+      "functional_error_malformed_json functional_error_wrong_top_schema functional_error_missing_records functional_error_top_level_array functional_error_records_not_array functional_error_record_not_object functional_error_missing_field functional_error_duplicate_trimmed_id functional_error_invalid_negative_amount functional_error_invalid_fractional_cents functional_error_unexpected_record_field functional_error_blank_trimmed_id functional_error_blank_trimmed_category functional_error_amount_above_maximum functional_error_priority_out_of_range functional_error_priority_not_integer functional_error_active_not_boolean functional_error_amount_not_number functional_error_record_count_above_maximum functional_error_input_above_two_mib"
+    ]
+  ],
+  "gates": [
+    "protected_files_unchanged",
+    "runtime_no_contract_outside_files",
+    "runtime_no_process_leak"
+  ],
+  "protected_files": {
+    "package-lock.json": "929f3b2700c6224b6fcb65f7a1c037e5d3bc20ca20e05cc1609e4ae3c1077e77",
+    "package.json": "9bed968b29ad701472836cd9ddd740e41a9784196714bc779927bf25baa1fea4",
+    "task.md": "09911a35734e0fd746788e91c6d71492644f9abcc7fa4793fce2d8b352be5aee",
+    "test/public.test.js": "abe900472103868d2256bc878c019336ed0fc32195cb9bd761ff4d4c545fad9d"
+  },
+  "required_artifacts": [
+    "src/process.js"
+  ],
+  "provisional_id": 247,
+  "candidate_image": "sha256:4d65ea6fb92d6a971d38f81748817c1ad65b656d1fa63f1cd4919d397aee9e42",
+  "controller_image": "python:3.12-slim-bookworm@sha256:d50fb7611f86d04a3b0471b46d7557818d88983fc3136726336b2a4c657aa30b"
+}

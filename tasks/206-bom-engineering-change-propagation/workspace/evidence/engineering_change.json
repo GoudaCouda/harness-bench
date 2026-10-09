@@ -1,0 +1,17 @@
+{
+  "approval_state": "approved",
+  "approval_token": "ECN-442/APPROVED/20260818",
+  "approved_at": "2026-08-18T16:00:00Z",
+  "approved_by": [
+    "ENG-CFG-12",
+    "QUALITY-07"
+  ],
+  "direct_assembly": "ACTUATOR-MODULE",
+  "ecn_id": "ECN-442",
+  "from_part": "CONN-CU-4P",
+  "lot_effectivity": "LOT-2026-09",
+  "reason": "replace copper-contact connector with nickel-contact connector",
+  "schema_version": 1,
+  "serial_effectivity": "SN-0500",
+  "to_part": "CONN-NI-4P"
+}

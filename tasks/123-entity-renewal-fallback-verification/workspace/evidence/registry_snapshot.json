@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-08-18T22:00:00Z",
+  "key_id": "registry-offline-2026-q3",
+  "records": [
+    {
+      "effective_date": "2026-07-28",
+      "legal_name": "Alpine Field Parts LLC",
+      "registration_expires_on": "2026-10-15",
+      "registration_status": "active",
+      "registry_entity_id": "REG-ALP-501",
+      "version": 12
+    },
+    {
+      "beneficial_owner_attestation": {
+        "effective_date": "2026-08-02",
+        "expires_on": "2027-08-02",
+        "owner_count": 2,
+        "source_ref": "registry-attestation/BOA-BOR-20260802",
+        "status": "verified"
+      },
+      "effective_date": "2026-08-05",
+      "legal_name": "Borealis Scientific Supply LLC",
+      "registration_expires_on": "2026-09-01",
+      "registration_status": "active",
+      "registry_entity_id": "REG-BOR-772",
+      "version": 9
+    },
+    {
+      "effective_date": "2026-08-03",
+      "legal_name": "Cypress Instrument Services Inc",
+      "registration_expires_on": "2026-09-20",
+      "registration_status": "active",
+      "registry_entity_id": "REG-CYP-883",
+      "version": 4
+    },
+    {
+      "effective_date": "2026-07-31",
+      "legal_name": "Delta Civic Materials Cooperative",
+      "registration_expires_on": "2026-07-31",
+      "registration_status": "expired",
+      "registry_entity_id": "REG-DEL-194",
+      "version": 6
+    }
+  ],
+  "schema_version": 1,
+  "signature": "de50ffabfdd5826c6c85491769c285c1d917aa0cc1b551585f06fd4cab0c62e7",
+  "snapshot_id": "REG-SNAP-20260818-2200Z"
+}

@@ -1,0 +1,67 @@
+task_id: 032-anomalous-transaction-detect
+title: Recover an Interrupted Supplier-Bank Release Gate
+prompt_file: instruction.md
+timeout_sec: 7200
+difficulty: hard
+domain: Finance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- terminal
+- structured_data
+- local_state_machine
+- reconciliation
+- security_controls
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- interrupted_apply
+- stale_state
+- conflicting_requests
+- approval_timing
+- bank_change_lineage
+- semantic_replay
+required_artifacts:
+- release_gate_state.json
+- release_gate_plan.json
+- .release_gate_preview.json
+- release_gate_verification.json
+- controller_handoff.md
+- release_gate_receipt.json
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - FBI-BEC-PAYMENT-DIVERSION
+  - NACHA-ACCOUNT-VALIDATION
+task_family: finance-supplier-bank-release-recovery
+variant: interrupted-review-gate
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - release_gate_plan.json
+  - .release_gate_preview.json
+  - release_gate_verification.json
+  - controller_handoff.md
+  - release_gate_receipt.json
+  allowed_modified:
+  - release_gate_state.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  grader: {}
+  services: []
+schema_version: 2

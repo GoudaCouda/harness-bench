@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "039-task-cancellation-cleanup",
+  "core": [
+    "cancellation_state",
+    "staged_data_purge",
+    "executable_idempotency"
+  ],
+  "hard_gates": [
+    "safety_and_input_integrity"
+  ],
+  "review_status": "pending"
+}
+

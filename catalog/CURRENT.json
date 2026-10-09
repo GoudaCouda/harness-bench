@@ -1,0 +1,11 @@
+{
+  "status": "current",
+  "total_tasks": 300,
+  "general_tasks": 274,
+  "multimodal_tasks": 26,
+  "category_count": 6,
+  "subcategory_count": 17,
+  "taxonomy_file": "task_taxonomy_v3.json",
+  "context_file": "../docs/TASK_TAXONOMY_V3.md",
+  "general_content_lock": "standard274.release-v1.lock.json"
+}

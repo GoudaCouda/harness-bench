@@ -1,0 +1,66 @@
+{
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "policy_version": "PA-VAYGO-SYN-2026.08",
+  "lines": [
+    {
+      "line_id": "FA-LAB-001",
+      "cost_type": "force_account_labor",
+      "claimed_amount": 32000,
+      "validated_gross": 32000,
+      "correction_source": null,
+      "reductions": [],
+      "net_eligible": 32000,
+      "status": "ready",
+      "reason": "approved labor calculation reconciles to the ledger",
+      "evidence_ids": ["TS-001", "WO-17", "ROSTER-9", "APR-001", "GL-8801"]
+    },
+    {
+      "line_id": "FA-LAB-002",
+      "cost_type": "force_account_labor",
+      "claimed_amount": 8000,
+      "validated_gross": 8000,
+      "correction_source": null,
+      "reductions": [],
+      "net_eligible": 0,
+      "status": "hold_documentation",
+      "reason": "supervisor approval is missing",
+      "evidence_ids": ["TS-002", "WO-18", "ROSTER-9", "GL-8802"]
+    },
+    {
+      "line_id": "CON-DEB-003",
+      "cost_type": "contracted_debris",
+      "claimed_amount": 120000,
+      "validated_gross": 120000,
+      "correction_source": "INV-DB-31-B",
+      "reductions": [{"type": "insurance", "source_id": "INS-ALLOC-44", "amount": 30000}],
+      "net_eligible": 90000,
+      "status": "ready_with_reduction",
+      "reason": "signed corrected invoice governs and same-purpose insurance is reduced once",
+      "evidence_ids": ["CONTRACT-DB-31", "INV-DB-31-A", "INV-DB-31-B", "CO-DB-31-1", "POP-DB-31", "GL-8803", "INS-ALLOC-44"]
+    },
+    {
+      "line_id": "EQUIP-004",
+      "cost_type": "equipment_rental",
+      "claimed_amount": 25000,
+      "validated_gross": 25000,
+      "correction_source": null,
+      "reductions": [{"type": "vendor_credit", "source_id": "VC-77", "amount": 5000}],
+      "net_eligible": 20000,
+      "status": "ready_with_reduction",
+      "reason": "unapplied same-scope vendor credit is reduced once",
+      "evidence_ids": ["LEASE-EQ-14", "INV-EQ-14", "POP-EQ-14", "GL-8804", "VC-77"]
+    },
+    {
+      "line_id": "SUP-005",
+      "cost_type": "emergency_supplies",
+      "claimed_amount": 18000,
+      "validated_gross": 18000,
+      "correction_source": null,
+      "reductions": [{"type": "other_federal_award", "source_id": "HHS-ES-220", "amount": 18000}],
+      "net_eligible": 0,
+      "status": "excluded_duplicate_benefit",
+      "reason": "another federal award is designated for the same emergency supplies",
+      "evidence_ids": ["PO-SUP-8", "INV-SUP-8", "POP-SUP-8", "GL-8805", "HHS-ES-220"]
+    }
+  ]
+}

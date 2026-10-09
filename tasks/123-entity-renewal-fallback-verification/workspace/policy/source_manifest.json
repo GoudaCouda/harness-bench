@@ -1,0 +1,11 @@
+{
+  "files": {
+    "evidence/legal_name_corrections.jsonl": "a6e67d0409a36817e699d13c7eaf2979bc0490ae9bc0f96422598d2783e01e37",
+    "evidence/primary_registry_export.json.part": "2f8bb479ffec36a0172cbcf5561f01c81d74e971ee8d180c3a660a4005f1eb8b",
+    "evidence/registry_snapshot.json": "98a0dc6d7c1272d9445068d623ae227352e8b6cf5f6cf58a70e05bff71d33d4a",
+    "evidence/registry_trust.json": "1fdfa6284188023a78bf690979e01bae0fa2f4fa7ea4eb5b260c63cb2b238b75",
+    "policy/renewal_policy.json": "fcc4533a259461e66f9c71374ecca0b6edf5c32fa9adc4789af6f51d27d81a04",
+    "vendorctl.py": "c051b48e3fa6aa8b6530599e0479a16db81863d2d66bd2a3a9b49b89b35ea620"
+  },
+  "schema_version": 1
+}

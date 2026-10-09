@@ -1,0 +1,15 @@
+{
+  "policy_version": "2026.08",
+  "as_of": "2026-08-17T12:00:00Z",
+  "max_vex_age_days": 30,
+  "allowed_vex_statuses": ["not_affected", "affected", "fixed", "under_investigation"],
+  "accepted_not_affected_justifications": ["component_not_present", "vulnerable_code_not_present", "vulnerable_code_not_in_execute_path", "vulnerable_code_cannot_be_controlled_by_adversary", "inline_mitigations_already_exist"],
+  "require_not_affected_impact_statement": true,
+  "blocking_effective_statuses": ["affected", "under_investigation"],
+  "blocking_severities": ["high", "critical"],
+  "priorities": {"kev_affected": "emergency", "affected": "high", "under_investigation": "high", "not_affected": "documented"},
+  "dispositions": {"kev_affected": "block_release", "affected": "block_release", "under_investigation": "quarantine_review", "not_affected": "accept_with_evidence"},
+  "blocked_state": "blocked_vulnerability_review",
+  "clear_state": "security_review_passed",
+  "allowed_initial_states": ["pending_security_review", "blocked_vulnerability_review"]
+}

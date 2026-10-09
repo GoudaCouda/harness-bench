@@ -1,0 +1,49 @@
+{
+  "pay-1001": {
+    "status": "completed",
+    "fingerprint": "d414300e107c312caeba46de8689b8e023daf722ba82925287909eb290966c8d",
+    "created_at": 1773475200,
+    "response": {
+      "invoice": "INV-1001",
+      "status": "settled",
+      "amount_cents": 125000,
+      "receipt_id": "RCP-pay-1001"
+    }
+  },
+  "pay-1002": {
+    "status": "in_flight",
+    "fingerprint": "5ac81e3842308108a0b2eb21c0874bb3ff7cd55804f76f70732c1b636c40fce8",
+    "created_at": 1773477000,
+    "lease_expires_at": 1773478680,
+    "worker_id": "settle-worker-7"
+  },
+  "pay-1003": {
+    "status": "in_flight",
+    "fingerprint": "b690583235576585b1e78820dbc9909fd4ee2b31279da4a4266c511bea26e5b4",
+    "created_at": 1773478500,
+    "lease_expires_at": 1773479400,
+    "worker_id": "settle-worker-7"
+  },
+  "pay-1004": {
+    "status": "completed",
+    "fingerprint": "5eb97113ad6ca2ac6d82b87f857b17a3a9cad9c0f1ca9471a1993d0665a6f533",
+    "created_at": 1773388800,
+    "response": {
+      "invoice": "INV-1004",
+      "status": "settled",
+      "amount_cents": 64000,
+      "receipt_id": "RCP-pay-1004"
+    }
+  },
+  "pay-1005": {
+    "status": "completed",
+    "fingerprint": "ad8e7f5f4106a5f7dd5d17d8a238cffc2719846d54fa4fbe266ddcef15826f3d",
+    "created_at": 1773471600,
+    "response": {
+      "invoice": "INV-1005",
+      "status": "settled",
+      "amount_cents": 31000,
+      "receipt_id": "RCP-pay-1005"
+    }
+  }
+}

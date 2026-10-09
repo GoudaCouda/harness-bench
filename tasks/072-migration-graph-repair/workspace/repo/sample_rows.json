@@ -1,0 +1,12 @@
+[
+  {
+    "id": "o1",
+    "region": null,
+    "country": "CA"
+  },
+  {
+    "id": "o2",
+    "region": "manual",
+    "country": "US"
+  }
+]

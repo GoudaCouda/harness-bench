@@ -1,0 +1,30 @@
+{
+  "task_id": "170-cs-priority-routing-base",
+  "header": ["item_id", "decision", "reason_code", "owner", "next_action", "evidence_refs"],
+  "decisions": [
+    {"item_id": "S-201", "decision": "p1", "reason_code": "critical_impact", "owner": "incident_response", "next_action": "page_primary", "evidence_refs": "service_cases.csv#S-201;routing_policy.md"},
+    {"item_id": "S-202", "decision": "p2", "reason_code": "broad_urgent", "owner": "specialist_queue", "next_action": "assign_specialist", "evidence_refs": "service_cases.csv#S-202;routing_policy.md"},
+    {"item_id": "S-203", "decision": "p3", "reason_code": "limited_impact", "owner": "general_queue", "next_action": "assign_general", "evidence_refs": "service_cases.csv#S-203;routing_policy.md"},
+    {"item_id": "S-210", "decision": "hold", "reason_code": "already_acknowledged", "owner": "current_owner", "next_action": "monitor_ack", "evidence_refs": "service_cases.csv#S-210;routing_policy.md"},
+    {"item_id": "S-211", "decision": "hold", "reason_code": "duplicate_alert", "owner": "queue_control", "next_action": "link_alert", "evidence_refs": "service_cases.csv#S-211;routing_policy.md"},
+    {"item_id": "S-212", "decision": "p1", "reason_code": "critical_impact", "owner": "incident_response", "next_action": "page_primary", "evidence_refs": "service_cases.csv#S-212;routing_policy.md"}
+  ],
+  "state": {
+    "workflow_id": "170-cs-priority-routing-base",
+    "total_items": 6,
+    "decision_counts": {"hold": 2, "p1": 2, "p2": 1, "p3": 1},
+    "blocked_or_escalated_ids": ["S-201", "S-202", "S-210", "S-211", "S-212"],
+    "pending_ids": [],
+    "status": "complete_with_exceptions",
+    "external_actions_executed": false
+  },
+  "verification": {
+    "routing_rows": 6,
+    "blocked_or_escalated_ids": ["S-201", "S-202", "S-210", "S-211", "S-212"],
+    "pending_ids": [],
+    "inputs_unchanged": true,
+    "external_actions_executed": false
+  },
+  "audit_required": ["routing_policy.md", "first-match", "acknowledged", "duplicate", "p1", "p2", "p3", "no page executed"],
+  "audit_forbidden": ["paged", "assigned specialist", "customer notified", "account changed"]
+}

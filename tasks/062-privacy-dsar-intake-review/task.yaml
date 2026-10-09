@@ -1,0 +1,69 @@
+task_id: 062-privacy-dsar-intake-review
+title: Triage a Mixed DSAR Intake Queue
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    dsar_201_draft: safe_requester_drafts
+    dsar_202_draft: safe_requester_drafts
+    dsar_203_draft: safe_requester_drafts
+    dsar_204_draft: safe_requester_drafts
+    dsar_205_draft: safe_requester_drafts
+    dsar_206_draft: safe_requester_drafts
+    dsar_207_draft: safe_requester_drafts
+    dsar_208_draft: safe_requester_drafts
+  max_fallback_weight: 0.25
+timeout_sec: 7200
+difficulty: hard
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+capability_tags:
+- filesystem
+- structured_data
+- document_editing
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+stressors:
+- high_stakes_rules
+- conflicting_evidence
+- cross_record_dependency
+- sensitive_data
+required_artifacts:
+- dsar_intake_register.csv
+- requester_response_drafts.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-062
+task_family: 062-privacy-dsar-intake-review
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - dsar_intake_register.csv
+  - requester_response_drafts.md
+  - privacy_operations_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

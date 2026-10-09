@@ -1,0 +1,46 @@
+{
+  "as_of": "2026-08-18T09:00:00Z",
+  "dispute_status_vocabulary": [
+    "none",
+    "lost"
+  ],
+  "duplicate_key": "event_id",
+  "entitlement_state_vocabulary": [
+    "active",
+    "suspended"
+  ],
+  "event_order_key": "provider_sequence",
+  "full_lost_chargeback_entitlement_rule": "suspend_only_after_grace_until",
+  "invoice_status_vocabulary": [
+    "paid",
+    "partially_refunded",
+    "charged_back"
+  ],
+  "money_unit": "integer_cents",
+  "next_local_action_vocabulary": [
+    "support_review_partial_refund",
+    "manual_billing_review",
+    "close_recovered_payment_incident",
+    "review_at_period_end"
+  ],
+  "partial_refund_changes_seats": false,
+  "prohibited_external_actions": [
+    "provider_refund",
+    "provider_cancel",
+    "provider_entitlement_update",
+    "customer_notification",
+    "customer_contact"
+  ],
+  "run_id": "ER-20260818-01",
+  "scheduled_cancellation_rule": "keep_active_until_current_period_end",
+  "schema_version": 1,
+  "snapshot_required_for_sequence_gaps": true,
+  "stage_boundary": "local_only_pending_support_approval",
+  "subscription_status_vocabulary": [
+    "active",
+    "delinquent",
+    "cancel_at_period_end"
+  ],
+  "unknown_subscription_rule": "quarantine_without_projection_mutation",
+  "verified_payment_supersedes_failure": true
+}

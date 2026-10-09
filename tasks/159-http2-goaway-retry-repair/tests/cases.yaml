@@ -1,0 +1,40 @@
+schema_version: 2
+task_id: 159-http2-goaway-retry-repair
+pass_threshold: 0.8
+cases:
+- id: goaway_evidence_and_retry
+  title: Stream-boundary and reset evidence choose exact retry behavior
+  description: Completed requests settle while definitely unprocessed and ambiguous streams follow distinct
+    protocol paths.
+  weight: 0.3
+  core: true
+- id: side_effect_and_connection_safety
+  title: Body method key budget and connection error controls fail closed
+  description: Transport evidence never bypasses body replayability or configured ambiguity and error
+    policy.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: retry_replay
+  title: Protected decisions and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: retry_handoff
+  title: Protocol and application retry semantics are handed off clearly
+  description: Another engineer can audit boundary evidence side-effect safety and verification.
+  weight: 0.2
+  core: false
+- id: source_and_network_boundary
+  title: Retry planner validation and malformed-input behavior are correct
+  description: The implementation stays in the auditable pure subset and malformed request or GOAWAY state fails predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence filesystem and live HTTP boundaries are respected
+  description: Inputs remain unchanged dangerous workspace nodes are absent and no concrete live request reconnect or production replay is claimed.
+  weight: 0.0
+  core: false
+  gate: true

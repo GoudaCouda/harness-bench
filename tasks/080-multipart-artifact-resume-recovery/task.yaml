@@ -1,0 +1,41 @@
+task_id: 080-multipart-artifact-resume-recovery
+title: Recover a checksummed multipart CI artifact upload safely
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, cloud_storage, recovery, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [upload_id_authority, paginated_parts, part_checksum_mismatch, complete_unknown, overwrite_risk]
+required_artifacts:
+- repo/src/multipart_resume.py
+- repo/resume_plan.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [S3-MULTIPART, S3-CHECKSUMS, S3-COMPLETE-MULTIPART]
+task_family: object-storage-artifact-recovery
+variant: paginated-part-reconciliation-and-completion-probe
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/resume_plan.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/multipart_resume.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []
+schema_version: 2

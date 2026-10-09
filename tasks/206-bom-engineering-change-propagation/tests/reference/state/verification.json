@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "baseline_revisions_exact": true,
+    "interrupted_journal_restored": true,
+    "logical_database_bound": true,
+    "run_committed_once": true,
+    "semantic_plan_bound": true,
+    "source_checkpoint_bound": true,
+    "where_used_rows_exact": true,
+    "work_order_boundaries_exact": true
+  },
+  "ecn_id": "ECN-442",
+  "external_actions_executed": false,
+  "logical_db_sha256": "8329332b267135d2221db390521fbe633456df76a68eb7d475bbb25c5b3c818b",
+  "recovery_id": "ECNREC-20260819-442",
+  "semantic_plan_sha256": "5c496a3da9597a2b108cce8dd296d07dbf04993a8c4b4c4258b479db07416edd",
+  "source_checkpoint": "3e0a3d6ddd957b4f5b117615fb280112ae9f253338be9b468578fae9ce2ac717",
+  "status": "pass"
+}

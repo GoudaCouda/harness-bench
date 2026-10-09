@@ -1,0 +1,16 @@
+{
+  "bundle_path": "staging/claim_packet_bundle.json",
+  "bundle_sha256": "92c96a39651761507d784c87e6a35b9896cd89b9ca1833a5ac532590f91c7e11",
+  "external_actions_executed": false,
+  "packet_count": 4,
+  "packet_order": [
+    "CL-F1",
+    "CL-A1",
+    "CL-B1",
+    "CL-C1"
+  ],
+  "recovery_id": "CRR-20260819-01",
+  "schema_version": 1,
+  "semantic_plan_digest": "680157bb294c7d2983290ed0221cf272254430f4d871b6c3ddb901ac52ee0154",
+  "source_checkpoint": "63ac4d7ca1eaa7c6303fadaf46345b4a42a921361d2e41f74e1fe326a0126493"
+}

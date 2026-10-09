@@ -1,0 +1,25 @@
+{
+  "control_totals": {
+    "excluded_total": 18000,
+    "held_total": 8000,
+    "reduction_total": 53000,
+    "sampled_claimed_total": 203000,
+    "staged_net_total": 142000,
+    "validated_gross_total": 203000
+  },
+  "disbursed_amount": 0,
+  "exceptions_sha256": "0a954b47804b4c8534c5ba567f6a303564482c1972bf0255d1703b2629b13d21",
+  "policy_version": "PA-VAYGO-SYN-2026.08",
+  "posted": false,
+  "replay_verified": true,
+  "request_id": "PA-DR-4917-PW-0042-R2",
+  "review_sha256": "84fe41d05e633532f93aae673751b7dd47c0ef29e395bb7cfe02b7e02eed8971",
+  "selected_line_ids": [
+    "CON-DEB-003",
+    "EQUIP-004",
+    "FA-LAB-001"
+  ],
+  "status": "staged_not_disbursed",
+  "submitted": false,
+  "validation_fingerprint": "163b57ef75af6ed5168c5efa88100cb50f9043400c0f7da34f6a4fbfd69e59dc"
+}

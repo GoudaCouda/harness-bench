@@ -1,0 +1,1 @@
+{"name":"dispatch-console","version":"2.7.3","private":true,"workspaces":["packages/worker"],"engines":{"node":"18.x"},"dependencies":{"webstack":"5.4.3","auth-ui":"3.2.1"},"devDependencies":{"parser-cli":"2.2.0"},"scripts":{"test:compat":"python3 -B repo/check_upgrade.py repo/package.json repo/package-lock.json"}}

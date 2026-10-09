@@ -1,0 +1,12 @@
+{
+  "policy_version": "DB-PITR-DRILL-2026.08",
+  "required_backup_checks": ["matching_system_identifier", "verified_manifest", "verified_files", "verified_manifest_wal"],
+  "timeline_rule": "select_the_timeline_containing_the_incident_not_latest",
+  "target_rule": "use_a_named_restore_point_when_timestamp_commits_are_ambiguous",
+  "required_target_action": "pause",
+  "restore_command_template": "cp archive/%f %p",
+  "probe_minimum_runs": 2,
+  "probe_rule": "two_complete_identical_passes_after_isolated_restore",
+  "gate_final_status": "ready_for_manual_promotion_review",
+  "forbidden_actions": ["production_restore", "promotion", "client_routing", "external_notification"]
+}

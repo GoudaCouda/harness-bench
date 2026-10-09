@@ -1,0 +1,59 @@
+{
+  "schema_version": "case09_synthetic_fixture_manifest_v1",
+  "generated_at": "2026-07-20",
+  "source_mode": "project_generated_synthetic",
+  "source_cluster_id": "dup_fa643d64ed46e60654902746",
+  "source_packet": "tasks/20260719_nami_work_gold20_v1/source_packets/case_09.json",
+  "source_lock_sha256": "d137ec310ad1079b02181fb03ca4d107b677c5fe64f81d6969b82bb60b669c3e",
+  "privacy": "No original user text, identity, credential, system prompt or hidden reasoning is present.",
+  "license": {
+    "name": "project_internal",
+    "status": "cleared",
+    "commercial_training_allowed": true,
+    "attribution_required": false,
+    "terms_ref": "fixtures/LICENSES.md",
+    "component_refs": [
+      "fixtures/task.md",
+      "fixtures/protocol_contract.json",
+      "fixtures/seed.db",
+      "fixtures/initial_workspace/submission/service.py",
+      "environment/runtime_contract.json",
+      "environment/candidate_sandbox_contract.json",
+      "environment/workspace_manifest.json",
+      "environment/reset.py",
+      "verifier/verify.py",
+      "verifier/result.schema.json",
+      "tests/run_validation.py",
+      "oracle/service.py",
+      "oracle/solve.py",
+      "case.json#acceptance_rubric"
+    ]
+  },
+  "files": [
+    {
+      "path": "fixtures/task.md",
+      "sha256": "428feb8dc612f8541c600e33b641e8ccad73ac8de9409056b569f3952da76887",
+      "provenance": "Human-authored synthetic instruction derived only from the approved task summary."
+    },
+    {
+      "path": "fixtures/protocol_contract.json",
+      "sha256": "7c70cbfb02ab391c9212b50186ac3eba23c131cb558475e07c0d1017ca2bd303",
+      "provenance": "Project-generated JSON-RPC and tool contract based on open protocol concepts, without copied benchmark content."
+    },
+    {
+      "path": "fixtures/seed.db",
+      "sha256": "0643464c8474a4124947fbcc309ed61afc1f9302a9dbb9274635e42082af2fd8",
+      "provenance": "Project-generated SQLite database containing five fictional contacts, two deterministic fault rules and three policy values."
+    },
+    {
+      "path": "fixtures/initial_workspace/submission/service.py",
+      "sha256": "d284bc0ad188269ee3b57bde52f05c7c523dee711af58dde9c0385588e76380e",
+      "provenance": "Project-generated incomplete service skeleton."
+    },
+    {
+      "path": "fixtures/LICENSES.md",
+      "sha256": "aacc8918fa073a87dd21a6d469b69200c8b85fdfa352e9764bea47be27963063",
+      "provenance": "Project-authored internal license and redistribution boundary for all synthetic case components."
+    }
+  ]
+}

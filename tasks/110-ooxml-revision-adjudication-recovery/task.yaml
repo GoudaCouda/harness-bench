@@ -1,0 +1,74 @@
+task_id: 110-ooxml-revision-adjudication-recovery
+title: Recover and Adjudicate an Interrupted OOXML Revision Package
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Office Productivity
+task_category: Content Production
+task_subcategory: Document Processing
+difficulty: hard
+capability_tags:
+- terminal
+- ooxml
+- sqlite
+- document_editing
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- conflicting_evidence
+- late_signed_revision
+- dependency_graph
+- interrupted_commit
+- append_only_history
+- idempotent_replay
+required_artifacts:
+- approved_bulletin.docx
+- review_state.db
+- adjudication_plan.json
+- verification_receipt.json
+- editorial_handoff.md
+task_family: office-ooxml-revision-recovery
+variant: interrupted-journal-late-signed-correction
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - OP-01
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - adjudication_plan.json
+  - approved_bulletin.docx
+  - editorial_handoff.md
+  - verification_receipt.json
+  allowed_modified:
+  - review_state.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    editorial_handoff: editorial_handoff
+  max_fallback_weight: 0.06
+schema_version: 2

@@ -1,0 +1,8 @@
+{
+  "catalog": "CISA-KEV-style synthetic offline snapshot",
+  "snapshot_at": "2026-08-17T08:05:00Z",
+  "entries": [
+    {"vulnerability_id": "CVE-SYN-2026-7101", "date_added": "2026-08-14", "due_date": "2026-08-21", "known_ransomware_use": "Unknown"},
+    {"vulnerability_id": "CVE-SYN-2026-7199", "date_added": "2026-08-10", "due_date": "2026-08-20", "known_ransomware_use": "Known"}
+  ]
+}

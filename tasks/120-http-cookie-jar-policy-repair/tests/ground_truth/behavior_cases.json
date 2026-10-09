@@ -1,0 +1,213 @@
+{
+  "storage_scope_and_expiry": [
+    {
+      "jar": [],
+      "responses": [
+        {
+          "response_id": "a",
+          "scheme": "https",
+          "host": "api.example.com",
+          "path": "/v1/login",
+          "received_at": 100,
+          "set_cookie": [
+            "x=1",
+            "y=2; Domain=.example.com; Path=/v1",
+            "z=3; Domain=com"
+          ]
+        }
+      ],
+      "requests": [],
+      "policy": {
+        "public_suffixes": [
+          "com"
+        ]
+      }
+    },
+    {
+      "jar": [
+        {
+          "name": "id",
+          "value": "old",
+          "domain": "a.example.com",
+          "path": "/",
+          "host_only": true,
+          "secure": false,
+          "http_only": false,
+          "expires_at": null,
+          "creation_index": 7
+        }
+      ],
+      "responses": [
+        {
+          "response_id": "a",
+          "scheme": "https",
+          "host": "a.example.com",
+          "path": "/p",
+          "received_at": 20,
+          "set_cookie": [
+            "id=new; Path=/; Max-Age=5"
+          ]
+        },
+        {
+          "response_id": "b",
+          "scheme": "https",
+          "host": "a.example.com",
+          "path": "/p",
+          "received_at": 25,
+          "set_cookie": [
+            "id=x; Path=/; Expires=999; Max-Age=0"
+          ]
+        }
+      ],
+      "requests": [],
+      "policy": {
+        "public_suffixes": [
+          "com"
+        ]
+      }
+    }
+  ],
+  "request_matching_and_order": [
+    {
+      "jar": [
+        {
+          "name": "root",
+          "value": "r",
+          "domain": "example.com",
+          "path": "/",
+          "host_only": false,
+          "secure": false,
+          "http_only": false,
+          "expires_at": null,
+          "creation_index": 0
+        },
+        {
+          "name": "foo",
+          "value": "f",
+          "domain": "example.com",
+          "path": "/foo",
+          "host_only": false,
+          "secure": false,
+          "http_only": false,
+          "expires_at": null,
+          "creation_index": 1
+        },
+        {
+          "name": "host",
+          "value": "h",
+          "domain": "api.example.com",
+          "path": "/",
+          "host_only": true,
+          "secure": true,
+          "http_only": true,
+          "expires_at": 50,
+          "creation_index": 2
+        }
+      ],
+      "responses": [],
+      "requests": [
+        {
+          "request_id": "q1",
+          "scheme": "https",
+          "host": "api.example.com",
+          "path": "/foobar",
+          "at": 49,
+          "http_api": true
+        },
+        {
+          "request_id": "q2",
+          "scheme": "https",
+          "host": "sub.api.example.com",
+          "path": "/foo/x",
+          "at": 49,
+          "http_api": false
+        },
+        {
+          "request_id": "q3",
+          "scheme": "https",
+          "host": "api.example.com",
+          "path": "/foo",
+          "at": 50,
+          "http_api": true
+        }
+      ],
+      "policy": {
+        "public_suffixes": [
+          "com"
+        ]
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "jar": [],
+      "responses": [],
+      "requests": [],
+      "policy": {
+        "public_suffixes": [
+          "COM"
+        ]
+      }
+    },
+    {
+      "jar": [
+        {
+          "name": "a",
+          "value": "1",
+          "domain": "example.com",
+          "path": "/",
+          "host_only": false,
+          "secure": false,
+          "http_only": false,
+          "expires_at": null,
+          "creation_index": 0
+        },
+        {
+          "name": "a",
+          "value": "2",
+          "domain": "example.com",
+          "path": "/",
+          "host_only": false,
+          "secure": false,
+          "http_only": false,
+          "expires_at": null,
+          "creation_index": 1
+        }
+      ],
+      "responses": [],
+      "requests": [],
+      "policy": {
+        "public_suffixes": [
+          "com"
+        ]
+      }
+    },
+    {
+      "jar": [],
+      "responses": [
+        {
+          "response_id": "r1",
+          "scheme": "https",
+          "host": "example.com",
+          "path": "/",
+          "received_at": 2,
+          "set_cookie": []
+        },
+        {
+          "response_id": "r2",
+          "scheme": "https",
+          "host": "example.com",
+          "path": "/",
+          "received_at": 1,
+          "set_cookie": []
+        }
+      ],
+      "requests": [],
+      "policy": {
+        "public_suffixes": [
+          "com"
+        ]
+      }
+    }
+  ]
+}

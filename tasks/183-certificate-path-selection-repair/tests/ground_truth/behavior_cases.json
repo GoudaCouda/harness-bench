@@ -1,0 +1,315 @@
+{
+  "edges": [
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "other.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    },
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": false,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        },
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    },
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 0,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    }
+  ],
+  "primary": [
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    },
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "direct",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 200,
+          "not_before": 0,
+          "path_len": 1,
+          "subject": "Inter"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 100
+      }
+    },
+    {
+      "nodes": [
+        {
+          "dns_names": [
+            "svc.example"
+          ],
+          "id": "leaf",
+          "is_ca": false,
+          "issuer": "Inter",
+          "not_after": 200,
+          "not_before": 0,
+          "subject": "svc"
+        },
+        {
+          "id": "inter",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 150,
+          "not_before": 0,
+          "path_len": 0,
+          "subject": "Inter"
+        },
+        {
+          "id": "root",
+          "is_ca": true,
+          "issuer": "Root",
+          "not_after": 500,
+          "not_before": 0,
+          "path_len": 2,
+          "subject": "Root"
+        }
+      ],
+      "policy": {
+        "anchors": [
+          "root"
+        ],
+        "dns_name": "svc.example",
+        "leaf": "leaf",
+        "now": 150
+      }
+    }
+  ]
+}

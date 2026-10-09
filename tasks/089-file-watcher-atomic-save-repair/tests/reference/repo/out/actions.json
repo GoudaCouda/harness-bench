@@ -1,0 +1,22 @@
+[
+  {
+    "actions": [
+      {"action": "reload", "path": "config/app.json", "reason": "content_changed"}
+    ],
+    "seq": 41
+  },
+  {
+    "actions": [
+      {"action": "rebind", "path": "config/limits.yaml", "reason": "inode_replaced"},
+      {"action": "delete", "path": "rules/legacy.json", "reason": "removed"},
+      {"action": "reload", "path": "rules/new.json", "reason": "created"}
+    ],
+    "seq": 42
+  },
+  {
+    "actions": [
+      {"action": "block", "path": "rules/new.json", "reason": "unsafe_node"}
+    ],
+    "seq": 43
+  }
+]

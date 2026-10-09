@@ -1,0 +1,7 @@
+# BEGIN MULTIMODAL26 SUITE RELEASE
+schema_version: 1
+release: multimodal26
+active_manifest: multimodal26
+archive_manifest: archive0
+historical_prefix_count: 26
+# END MULTIMODAL26 SUITE RELEASE

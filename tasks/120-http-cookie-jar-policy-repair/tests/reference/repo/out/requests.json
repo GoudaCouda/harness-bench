@@ -1,0 +1,22 @@
+[
+  {
+    "request_id": "q1",
+    "cookie_names": [
+      "theme",
+      "session"
+    ],
+    "cookie_header": "theme=dark; session=new"
+  },
+  {
+    "request_id": "q2",
+    "cookie_names": [],
+    "cookie_header": ""
+  },
+  {
+    "request_id": "q3",
+    "cookie_names": [
+      "theme"
+    ],
+    "cookie_header": "theme=dark"
+  }
+]

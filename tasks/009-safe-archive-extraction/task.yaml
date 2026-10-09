@@ -1,0 +1,59 @@
+task_id: 009-safe-archive-extraction
+title: Repair a cross-platform archive extraction preflight
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: medium
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags:
+- code_execution
+- filesystem
+- repository
+- structured_data
+- terminal
+harness_demands:
+- evidence_grounding
+- multi_step_execution
+- output_contract
+- verification_behavior
+- safety_boundary
+stressors:
+- adversarial_paths
+- cross_platform_semantics
+- resource_limits
+required_artifacts:
+- repo/src/archive_preflight.py
+- repo/extraction_plan.json
+- repo/SECURITY_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - PYTHON-TARFILE-FILTERS
+  - POSIX-PATHNAME-RESOLUTION
+task_family: archive-extraction-preflight-repair
+variant: path-link-collision-budget
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - repo/extraction_plan.json
+  - repo/SECURITY_NOTES.md
+  allowed_modified:
+  - repo/src/archive_preflight.py
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    tarfile: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

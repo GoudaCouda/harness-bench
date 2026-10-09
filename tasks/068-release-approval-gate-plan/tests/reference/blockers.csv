@@ -1,0 +1,6 @@
+blocker_id,severity,owner_role,evidence_ref,required_approval_or_action,rationale
+RR-DB-REV,critical,database_owner,preflight_checks.json#PF-DB-REV | rollback_runbook.md#CH-DB-1,test the reversal step or obtain a signed database_owner waiver,CH-DB-1 has no tested reversal or signed waiver
+RR-CANARY,critical,sre_lead,preflight_checks.json#PF-CANARY-ERR,reduce canary error rate to 1.5 percent or below and rerun PF-CANARY-ERR,canary error rate is 2.3 percent against a 1.5 percent maximum
+RR-SEC,high,security_reviewer,preflight_checks.json#PF-SEC | release_manifest.json#CH-API-1,obtain security_reviewer approval,CH-API-1 adds a customer-facing reason code without approval
+RR-FREEZE,critical,incident_commander,change_calendar.csv#FRZ-2026-05-07 | release_manifest.json#2026-05-07T03:00:00Z,obtain a written incident_commander exception or reschedule outside the freeze window,target start falls inside freeze FRZ-2026-05-07
+RR-INCIDENT,high,sre_lead,incident_history.json#INC-2026-04-29-17,obtain sre_lead approval,INC-2026-04-29-17 is a related severity 2 incident within 14 days

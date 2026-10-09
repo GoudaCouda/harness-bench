@@ -1,0 +1,353 @@
+{
+  "task_id": "006-appointment-finder-ui",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "appointment_finder_ui_protected_local_data",
+    "appointment_finder_ui_appointment_interaction_model",
+    "appointment_finder_ui_appointment_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "APT-140",
+    "APT-185",
+    "APT-203",
+    "APT-244",
+    "APT-140-R1",
+    "APT-185-R2",
+    "APT-203-R3",
+    "APT-244-R4",
+    "APT-185-X9",
+    "APT-185-X10",
+    "APT-185-X11"
+  ],
+  "records": {
+    "APT-140": {
+      "id": "APT-140",
+      "name": "Dermatology Tue 09:20",
+      "category": "medical",
+      "owner": "North Clinic",
+      "status": "clear",
+      "primary": 88,
+      "secondary": 18
+    },
+    "APT-185": {
+      "id": "APT-185",
+      "name": "Dental Wed 13:45",
+      "category": "dental",
+      "owner": "Union Care",
+      "status": "watch",
+      "primary": 76,
+      "secondary": 31
+    },
+    "APT-203": {
+      "id": "APT-203",
+      "name": "PT Thu 08:10",
+      "category": "therapy",
+      "owner": "Harbor PT",
+      "status": "review",
+      "primary": 72,
+      "secondary": 27
+    },
+    "APT-244": {
+      "id": "APT-244",
+      "name": "Vision Fri 15:30",
+      "category": "vision",
+      "owner": "Linden Eye",
+      "status": "clear",
+      "primary": 84,
+      "secondary": 22
+    },
+    "APT-140-R1": {
+      "id": "APT-140-R1",
+      "name": "Dermatology Tue 09:20 follow-up",
+      "category": "dental",
+      "owner": "Harbor PT",
+      "status": "clear",
+      "primary": 102,
+      "secondary": 24
+    },
+    "APT-185-R2": {
+      "id": "APT-185-R2",
+      "name": "Dental Wed 13:45 follow-up",
+      "category": "therapy",
+      "owner": "Linden Eye",
+      "status": "watch",
+      "primary": 93,
+      "secondary": 38
+    },
+    "APT-203-R3": {
+      "id": "APT-203-R3",
+      "name": "PT Thu 08:10 follow-up",
+      "category": "vision",
+      "owner": "North Clinic",
+      "status": "review",
+      "primary": 92,
+      "secondary": 35
+    },
+    "APT-244-R4": {
+      "id": "APT-244-R4",
+      "name": "Vision Fri 15:30 follow-up",
+      "category": "medical",
+      "owner": "Union Care",
+      "status": "watch",
+      "primary": 107,
+      "secondary": 31
+    },
+    "APT-185-X9": {
+      "id": "APT-185-X9",
+      "name": "Dental Wed 13:45 scenario 9",
+      "category": "dental",
+      "owner": "Union Care",
+      "status": "clear",
+      "primary": 145,
+      "secondary": 35
+    },
+    "APT-185-X10": {
+      "id": "APT-185-X10",
+      "name": "Dental Wed 13:45 scenario 10",
+      "category": "therapy",
+      "owner": "North Clinic",
+      "status": "watch",
+      "primary": 152,
+      "secondary": 31
+    },
+    "APT-185-X11": {
+      "id": "APT-185-X11",
+      "name": "Dental Wed 13:45 scenario 11",
+      "category": "vision",
+      "owner": "Union Care",
+      "status": "review",
+      "primary": 159,
+      "secondary": 32
+    }
+  },
+  "domain_groups": [
+    [
+      "appointment",
+      "booking",
+      "visit",
+      "slot",
+      "time"
+    ],
+    [
+      "service",
+      "appointment type",
+      "care type",
+      "provider type"
+    ],
+    [
+      "appointment",
+      "appointment shortlist",
+      "slot"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Service type",
+      "service type",
+      "filter"
+    ],
+    [
+      "Visit mode",
+      "visit mode",
+      "appointment-review"
+    ],
+    [
+      "Provider search",
+      "provider search",
+      "search"
+    ],
+    [
+      "Travel window",
+      "travel window",
+      "Shortlist only",
+      "shortlist only"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Fit score",
+      "Fit",
+      "Fit score"
+    ],
+    [
+      "Minutes travel",
+      "Minutes"
+    ],
+    [
+      "Shortlist size",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Travel window review",
+      "appointment shortlist"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "serviceType",
+      "setServiceType",
+      "service type"
+    ],
+    [
+      "selectedSlotId",
+      "setSelectedSlotId",
+      "slot selection"
+    ],
+    [
+      "shortlistOnly",
+      "setShortlistOnly",
+      "shortlist toggle"
+    ],
+    [
+      "travelWindow",
+      "setTravelWindow",
+      "travel window"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "fitScore",
+      "Fit score",
+      "fit average"
+    ],
+    [
+      "travelMinutes",
+      "Minutes travel",
+      "travel burden"
+    ],
+    [
+      "shortlistSize",
+      "Shortlist size",
+      "candidate count"
+    ],
+    [
+      "windowAdjustedFit",
+      "Travel window review",
+      "window adjustment"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "slot rail",
+      "appointment cards",
+      "shortlist"
+    ],
+    [
+      "travel window",
+      "provider panel",
+      "availability cue"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Service type",
+    "mode_label": "Visit mode",
+    "search_label": "Provider search",
+    "range_label": "Travel window",
+    "toggle_label": "Shortlist only",
+    "toggle_regex": "Shortlist\\ only|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Service type",
+        "value": "medical"
+      },
+      {
+        "kind": "fill",
+        "label": "Provider search",
+        "value": "Dermatology"
+      },
+      {
+        "kind": "click",
+        "text": "APT-140"
+      },
+      {
+        "kind": "select",
+        "label": "Visit mode",
+        "value": "appointment-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Travel window",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "appointment-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "APT-140",
+      "category": "medical",
+      "mode": "appointment-review",
+      "search_value": "Dermatology",
+      "range_value": 64,
+      "visible_id_subset": [
+        "APT-140"
+      ],
+      "selected_detail_tokens": [
+        "North Clinic",
+        "medical",
+        "clear",
+        "88",
+        "18"
+      ],
+      "after_clearing_search_subset": [
+        "APT-140",
+        "APT-244-R4"
+      ],
+      "focus_subset": [
+        "APT-203",
+        "APT-203-R3"
+      ],
+      "focus_forbidden": [
+        "APT-140"
+      ],
+      "detail_switch_id": "APT-244-R4",
+      "detail_switch_tokens": [
+        "APT-244-R4",
+        "Vision Fri 15:30 follow-up",
+        "Union Care",
+        "medical",
+        "watch",
+        "107",
+        "31"
+      ],
+      "summary_change_labels": [
+        "Fit score",
+        "Minutes travel",
+        "Shortlist size",
+        "Travel window review"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 11
+    },
+    "action_count": 6
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "locale": [
+    {"catalogs":{"en-GB":{"x":""},"en-001":{"x":"world"},"en":{"x":"language"},"root":{"x":"root"}},"parent_locales":{"en-GB":"en-001"},"locale":"EN_gb","key":"x","variables":{},"count":null},
+    {"catalogs":{"zh-Hant":{"x":"script"},"zh":{"x":"language"},"root":{}},"parent_locales":{},"locale":"zh-Hant-TW","key":"x","variables":{},"count":null},
+    {"catalogs":{"root":{"x":"root"}},"parent_locales":{"en":"en-US","en-US":"en"},"locale":"en-US","key":"x","variables":{},"count":null},
+    {"catalogs":{"en-us":{"x":"a"},"en-US":{"x":"b"},"root":{}},"parent_locales":{},"locale":"en-US","key":"x","variables":{},"count":null}
+  ],
+  "plural": [
+    {"catalogs":{"fr":{"n":{"one":"{count} élément","other":"{count} éléments"}},"root":{}},"parent_locales":{},"locale":"fr-CA","key":"n","variables":{},"count":0},
+    {"catalogs":{"ru":{"n":{"one":"one","few":"few","many":"many","other":"other"}},"root":{}},"parent_locales":{},"locale":"ru","key":"n","variables":{},"count":11},
+    {"catalogs":{"ru":{"n":{"one":"one","few":"few","many":"many","other":"other","=22":"exact {name}"}},"root":{}},"parent_locales":{},"locale":"ru","key":"n","variables":{"name":"match"},"count":22},
+    {"catalogs":{"pl":{"n":{"other":"{count} szt."}},"root":{}},"parent_locales":{},"locale":"pl","key":"n","variables":{},"count":2},
+    {"catalogs":{"en":{"x":"Hello {missing}"},"root":{}},"parent_locales":{},"locale":"en","key":"x","variables":{},"count":null}
+  ],
+  "invalid": [
+    {"catalogs":{"en":{"x":"bad {name"},"root":{}},"parent_locales":{},"locale":"en","key":"x","variables":{"name":"a"},"count":null},
+    {"catalogs":{"en":{"n":{"one":"one"}},"root":{}},"parent_locales":{},"locale":"en","key":"n","variables":{},"count":1}
+  ]
+}

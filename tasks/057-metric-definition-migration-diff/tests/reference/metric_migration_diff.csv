@@ -1,0 +1,6 @@
+metric_name,old_value,new_value,absolute_diff,relative_diff,expected_direction,classification
+activation_rate,0.4000,0.4500,0.0500,0.1250,increase,expected_definition_change
+arr,100000.0000,92000.0000,8000.0000,-0.0800,decrease,expected_definition_change
+gross_margin,0.5500,,,,unknown,requires_review
+retention_rate,0.7000,0.6900,0.0100,-0.0143,unknown,unexpected_regression
+support_sla,0.9500,0.9510,0.0010,0.0011,stable,no_material_change

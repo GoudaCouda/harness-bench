@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-227",
+  "gate_clock_epoch": 1775604800,
+  "events": [
+    {
+      "payee_id": "v1",
+      "tax_year": "2025",
+      "classification": "contractor",
+      "amount_cents": 125000,
+      "invoice_label": "contractor"
+    },
+    {
+      "payee_id": "v2",
+      "tax_year": "2025",
+      "classification": "employee",
+      "amount_cents": 200000,
+      "invoice_label": "contractor"
+    },
+    {
+      "payee_id": "v3",
+      "tax_year": "2025",
+      "classification": "contractor",
+      "amount_cents": 12000,
+      "invoice_label": "contractor"
+    },
+    {
+      "payee_id": "v1",
+      "tax_year": "2025",
+      "classification": "contractor",
+      "amount_cents": 125000,
+      "invoice_label": "contractor"
+    },
+    {
+      "payee_id": "v5",
+      "tax_year": "",
+      "classification": "contractor",
+      "amount_cents": 90000,
+      "invoice_label": "contractor"
+    },
+    {
+      "payee_id": "v6",
+      "tax_year": "2025",
+      "classification": "contractor",
+      "amount_cents": 60000,
+      "invoice_label": "vendor"
+    },
+    {
+      "payee_id": "v7",
+      "tax_year": "2025",
+      "classification": "employee",
+      "amount_cents": 8000,
+      "invoice_label": "contractor"
+    }
+  ]
+}

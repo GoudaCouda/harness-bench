@@ -1,0 +1,10 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE accounts(id TEXT PRIMARY KEY,name TEXT,domain TEXT,status TEXT);
+CREATE TABLE contacts(id TEXT PRIMARY KEY,account_id TEXT,email TEXT,email_opt_out INTEGER);
+CREATE TABLE opportunities(id TEXT PRIMARY KEY,account_id TEXT,amount INTEGER,status TEXT);
+CREATE TABLE activities(id TEXT PRIMARY KEY,account_id TEXT,kind TEXT);
+CREATE TABLE merge_log(plan_sha256 TEXT PRIMARY KEY,primary_id TEXT,duplicate_id TEXT,moved_count INTEGER);
+INSERT INTO accounts VALUES ('A-100','Northwind Logistics','northwind.example','active'),('A-101','Northwind Logistics Inc','northwind.example','duplicate'),('A-200','Northwind Labs','northwindlabs.example','active');
+INSERT INTO contacts VALUES ('C-1','A-100','buyer@northwind.example',0),('C-2','A-101','ops@northwind.example',1),('C-3','A-200','lab@northwindlabs.example',0);
+INSERT INTO opportunities VALUES ('O-1','A-100',50000,'open'),('O-2','A-101',25000,'open'),('O-3','A-200',9000,'open');
+INSERT INTO activities VALUES ('T-1','A-100','call'),('T-2','A-101','meeting'),('T-3','A-200','email');

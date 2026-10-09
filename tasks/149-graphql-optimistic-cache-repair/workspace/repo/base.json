@@ -1,0 +1,5 @@
+{
+  "Comment:1":{"author":{"$ref":"User:1"},"content":"old","pending":false},
+  "ROOT_QUERY:root":{"comments":[{"$ref":"Comment:1"}]},
+  "User:1":{"name":"Ada"}
+}

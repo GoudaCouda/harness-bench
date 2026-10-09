@@ -1,0 +1,11 @@
+po_line,sku,ordered_qty,unit_price
+PO-10-L1,A,10,20
+PO-10-L2,B,5,50
+PO-11-L1,C,2,100
+PO-12-L1,D,4,75
+PO-13-L1,E,8,12.50
+PO-14-L1,F,3,40
+PO-15-L1,G,5,60
+PO-16-L1,H,6,30
+PO-17-L1,I,2,500
+PO-18-L1,J,1,90

@@ -1,0 +1,60 @@
+task_id: 003-git-pr-merge
+title: Safely integrate a PR whose final diff hides unsafe history
+prompt_file: instruction.md
+hooks_module: environment/hooks.py
+timeout_sec: 3600
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Repository Maintenance
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- git
+- code_review
+- security
+harness_demands:
+- multi_step_execution
+- tool_selection
+- evidence_grounding
+- error_recovery
+- verification_behavior
+- state_management
+stressors:
+- conflicting_evidence
+- stale_check_status
+- history_vs_final_tree
+- dirty_input
+required_artifacts:
+- review.txt
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-003
+task_family: 003-git-pr-merge
+variant: history-sensitive-clean-integration
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - CONTRIBUTING.md
+  - review.txt
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    git: ">=2.39,<3"
+    python3: "3.12"
+  inputs:
+  - environment/hooks.py
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

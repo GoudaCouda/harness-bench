@@ -1,0 +1,39 @@
+{
+  "schema_version": "case20_collaboration_seed_v1",
+  "fixed_time": "2026-07-20T10:00:00+08:00",
+  "channel": "project-materials",
+  "people": [
+    {"person_id": "admin001", "name": "材料管理员", "is_roster_member": false},
+    {"person_id": "u001", "name": "林妍", "is_roster_member": true},
+    {"person_id": "u002", "name": "周航", "is_roster_member": true},
+    {"person_id": "u003", "name": "赵宁", "is_roster_member": true},
+    {"person_id": "u004", "name": "陈澈", "is_roster_member": true},
+    {"person_id": "u005", "name": "罗嘉", "is_roster_member": true},
+    {"person_id": "u006", "name": "孙恺", "is_roster_member": true}
+  ],
+  "messages": [
+    {"message_id": "m001", "sender_id": "admin001", "channel": "project-materials", "sent_at": "2026-07-18T08:30:00+08:00", "text": "请大家按要求提交项目履历和合规声明。"},
+    {"message_id": "m002", "sender_id": "u001", "channel": "project-materials", "sent_at": "2026-07-18T09:10:00+08:00", "text": "本次提交包含两个附件，请以附件元数据为准。"},
+    {"message_id": "m003", "sender_id": "u002", "channel": "project-materials", "sent_at": "2026-07-18T09:35:00+08:00", "text": "先提交一份材料，另一份随后补充。"},
+    {"message_id": "m004", "sender_id": "u003", "channel": "project-materials", "sent_at": "2026-07-18T10:00:00+08:00", "text": "本次提交包含两个附件，请登记。"},
+    {"message_id": "m005", "sender_id": "u003", "channel": "project-materials", "sent_at": "2026-07-19T14:20:00+08:00", "text": "再次补充一个附件，请以结构化元数据和时间为准。"},
+    {"message_id": "m006", "sender_id": "u004", "channel": "project-materials", "sent_at": "2026-07-19T15:05:00+08:00", "text": "补充一个附件，请登记。"},
+    {"message_id": "m007", "sender_id": "u005", "channel": "project-materials", "sent_at": "2026-07-19T15:40:00+08:00", "text": "本次提交包含两个附件，请登记。"},
+    {"message_id": "m008", "sender_id": "u006", "channel": "project-materials", "sent_at": "2026-07-19T16:10:00+08:00", "text": "本消息暂时没有附件。"},
+    {"message_id": "m009", "sender_id": "admin001", "channel": "project-materials", "sent_at": "2026-07-19T17:00:00+08:00", "text": "管理员补充一个附件，请按名单范围判断是否处理。"},
+    {"message_id": "m010", "sender_id": "u002", "channel": "project-materials", "sent_at": "2026-07-20T10:30:00+08:00", "text": "补充一个附件，请按统计规则处理。"}
+  ],
+  "attachments": [
+    {"attachment_id": "a001", "message_id": "m002", "owner_id": "u001", "material_type": "project_resume", "original_filename": "packet_001.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_001.pdf"},
+    {"attachment_id": "a002", "message_id": "m002", "owner_id": "u001", "material_type": "compliance_declaration", "original_filename": "packet_002.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_002.pdf"},
+    {"attachment_id": "a003", "message_id": "m003", "owner_id": "u002", "material_type": "project_resume", "original_filename": "packet_003.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_003.pdf"},
+    {"attachment_id": "a004", "message_id": "m004", "owner_id": "u003", "material_type": "project_resume", "original_filename": "packet_004.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_004.pdf"},
+    {"attachment_id": "a005", "message_id": "m004", "owner_id": "u003", "material_type": "compliance_declaration", "original_filename": "packet_005.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_005.pdf"},
+    {"attachment_id": "a006", "message_id": "m005", "owner_id": "u003", "material_type": "project_resume", "original_filename": "packet_006.pdf", "replaces_attachment_id": "a004", "fixture_path": "attachments/packet_006.pdf"},
+    {"attachment_id": "a007", "message_id": "m006", "owner_id": "u004", "material_type": "compliance_declaration", "original_filename": "packet_007.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_007.pdf"},
+    {"attachment_id": "a008", "message_id": "m007", "owner_id": "u005", "material_type": "project_resume", "original_filename": "packet_008.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_008.pdf"},
+    {"attachment_id": "a009", "message_id": "m007", "owner_id": "u005", "material_type": "compliance_declaration", "original_filename": "packet_009.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_009.pdf"},
+    {"attachment_id": "a010", "message_id": "m009", "owner_id": "admin001", "material_type": "project_resume", "original_filename": "packet_010.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_010.pdf"},
+    {"attachment_id": "a011", "message_id": "m010", "owner_id": "u002", "material_type": "compliance_declaration", "original_filename": "packet_011.pdf", "replaces_attachment_id": null, "fixture_path": "attachments/packet_011.pdf"}
+  ]
+}

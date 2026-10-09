@@ -1,0 +1,10 @@
+{
+  "notice_id":"PCR-2026-05-REFUND-17-LATE-3","version":3,"received_at":"2026-05-16T08:30:00Z","supersedes":"PCR-2026-05-REFUND-17-LATE-1",
+  "changes":[
+    {"change_id":"CHG-EU-48H","scope":{"regions":["EU"],"workstreams":["launch_gate","customer_comms"]},"rule":"EU launch starts at least 48 hours after its baseline launch; communications must be rescheduled to retain the regional minimum notice"},
+    {"change_id":"CHG-APAC-ABSENCE","scope":{"regions":["APAC"],"owners":["Priya"]},"rule":"replace Priya on every unfinished APAC decision using the approved backup list"},
+    {"change_id":"CHG-DRILL-V3","scope":{"regions":["AMER","EU","APAC"],"workstreams":["support_training"]},"rule":"training artifact must include refund exception drill v3"},
+    {"change_id":"CHG-SAMPLING","scope":{"regions":"exposure_driven"},"rule":"regions at or above the sampling threshold require a two-hour supervisor_sampling decision after training and before launch"}
+  ],
+  "constraint_overrides":{"EU":{"latest_launch_gate":"2026-05-23T17:00:00+02:00"}}
+}

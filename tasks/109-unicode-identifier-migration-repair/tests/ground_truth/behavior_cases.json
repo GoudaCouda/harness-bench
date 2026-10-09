@@ -1,0 +1,19 @@
+{
+  "canonicalization":[
+    {"records":[{"record_id":"a","identifier":"éclair","references":[]},{"record_id":"b","identifier":"éclair","references":[]},{"record_id":"c","identifier":"Straße","references":[]},{"record_id":"d","identifier":"STRASSE","references":[]}],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":32}},
+    {"records":[{"record_id":"latin","identifier":"Alpha","references":["greek"]},{"record_id":"greek","identifier":"Αlpha","references":["latin"]},{"record_id":"width","identifier":"Ｕｓｅｒ１","references":[]}],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":32}},
+    {"records":[{"record_id":"reserved","identifier":"ＳＹＳＴＥＭ","references":[]},{"record_id":"bad","identifier":"bad-name","references":[]},{"record_id":"long","identifier":"ﬃﬃ","references":[]}],"reserved":["system"],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":5}}
+  ],
+  "references":[
+    {"records":[{"record_id":"a","identifier":"One","references":["b","c","d"]},{"record_id":"b","identifier":"Ｔｗｏ","references":[]},{"record_id":"c","identifier":"Key","references":[]},{"record_id":"d","identifier":"ＫＥＹ","references":[]}],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}},
+    {"records":[{"record_id":"a","identifier":"root","references":["b"]},{"record_id":"b","identifier":"Admin","references":["a"]}],"reserved":["ＡＤＭＩＮ"],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}}
+  ],
+  "invalid":[
+    {"records":{},"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}},
+    {"records":[],"reserved":[],"policy":{"normalization":"NFC","case_insensitive":true,"max_codepoints":20}},
+    {"records":[],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":true}},
+    {"records":[],"reserved":["bad-name"],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}},
+    {"records":[{"record_id":"a","identifier":"x","references":["missing"]}],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}},
+    {"records":[{"record_id":"a","identifier":"x","references":[],"extra":1}],"reserved":[],"policy":{"normalization":"NFKC","case_insensitive":true,"max_codepoints":20}}
+  ]
+}

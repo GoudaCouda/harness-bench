@@ -1,0 +1,8 @@
+[
+  {"action":"upsert","arrival_index":0,"event_id":"e1","reason":"newer_sequencer","status":"applied"},
+  {"action":"ignore","arrival_index":1,"event_id":"e2","reason":"stale","status":"ignored"},
+  {"action":"ignore","arrival_index":2,"event_id":"e1","reason":"duplicate","status":"ignored"},
+  {"action":"delete","arrival_index":3,"event_id":"e3","reason":"newer_sequencer","status":"applied"},
+  {"action":"quarantine","arrival_index":4,"event_id":"e4","reason":"version_id_required","status":"blocked"},
+  {"action":"quarantine","arrival_index":5,"event_id":"e5","reason":"sequencer_conflict","status":"blocked"}
+]

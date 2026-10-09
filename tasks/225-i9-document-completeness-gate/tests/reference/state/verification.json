@@ -1,0 +1,17 @@
+{
+  "controller": "i9ctl.py",
+  "command": "python3 i9ctl.py validate",
+  "runs": [
+    {
+      "attempt": 1,
+      "status": "pass",
+      "checks_failed": []
+    },
+    {
+      "attempt": 2,
+      "status": "pass",
+      "checks_failed": []
+    }
+  ],
+  "idempotent": true
+}

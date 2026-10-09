@@ -1,0 +1,326 @@
+{
+  "task_id": "005-research-lab-site",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "research_lab_site_protected_local_data",
+    "research_lab_site_site_interaction_model",
+    "research_lab_site_site_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "LAB-A11",
+    "LAB-B24",
+    "LAB-C31",
+    "LAB-D09",
+    "LAB-A11-R1",
+    "LAB-B24-R2",
+    "LAB-C31-R3",
+    "LAB-D09-R4"
+  ],
+  "records": {
+    "LAB-A11": {
+      "id": "LAB-A11",
+      "name": "Wetland Sensors",
+      "category": "field",
+      "owner": "Dr. Vale",
+      "status": "clear",
+      "primary": 6,
+      "secondary": 18
+    },
+    "LAB-B24": {
+      "id": "LAB-B24",
+      "name": "Urban Heat Maps",
+      "category": "climate",
+      "owner": "Dr. Hsu",
+      "status": "watch",
+      "primary": 4,
+      "secondary": 35
+    },
+    "LAB-C31": {
+      "id": "LAB-C31",
+      "name": "Open Soil Models",
+      "category": "modeling",
+      "owner": "Dr. Okafor",
+      "status": "review",
+      "primary": 8,
+      "secondary": 42
+    },
+    "LAB-D09": {
+      "id": "LAB-D09",
+      "name": "River DNA Atlas",
+      "category": "bioinformatics",
+      "owner": "Dr. Marin",
+      "status": "watch",
+      "primary": 3,
+      "secondary": 27
+    },
+    "LAB-A11-R1": {
+      "id": "LAB-A11-R1",
+      "name": "Wetland Sensors follow-up",
+      "category": "climate",
+      "owner": "Dr. Okafor",
+      "status": "clear",
+      "primary": 20,
+      "secondary": 24
+    },
+    "LAB-B24-R2": {
+      "id": "LAB-B24-R2",
+      "name": "Urban Heat Maps follow-up",
+      "category": "modeling",
+      "owner": "Dr. Marin",
+      "status": "watch",
+      "primary": 21,
+      "secondary": 42
+    },
+    "LAB-C31-R3": {
+      "id": "LAB-C31-R3",
+      "name": "Open Soil Models follow-up",
+      "category": "bioinformatics",
+      "owner": "Dr. Vale",
+      "status": "review",
+      "primary": 28,
+      "secondary": 50
+    },
+    "LAB-D09-R4": {
+      "id": "LAB-D09-R4",
+      "name": "River DNA Atlas follow-up",
+      "category": "field",
+      "owner": "Dr. Hsu",
+      "status": "watch",
+      "primary": 26,
+      "secondary": 36
+    }
+  },
+  "domain_groups": [
+    [
+      "research",
+      "lab",
+      "laboratory",
+      "study"
+    ],
+    [
+      "publication",
+      "paper",
+      "papers",
+      "published work"
+    ],
+    [
+      "team",
+      "group",
+      "collaboration",
+      "collab",
+      "partner",
+      "contact",
+      "outreach"
+    ],
+    [
+      "site",
+      "research project site",
+      "project"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Research area",
+      "research area",
+      "filter"
+    ],
+    [
+      "Review lens",
+      "review lens",
+      "site-review"
+    ],
+    [
+      "Project search",
+      "project search",
+      "search"
+    ],
+    [
+      "Evidence weight",
+      "evidence weight",
+      "Replication watch",
+      "replication watch"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Publication count",
+      "Publication",
+      "Publication count"
+    ],
+    [
+      "Replication risk",
+      "Replication"
+    ],
+    [
+      "Collaboration depth",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Lab contact triage",
+      "research project site"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "researchArea",
+      "setResearchArea",
+      "research area"
+    ],
+    [
+      "selected project",
+      "selected study",
+      "project profile"
+    ],
+    [
+      "reviewLens",
+      "setReviewLens",
+      "review lens"
+    ],
+    [
+      "replicationWatch",
+      "setReplicationWatch",
+      "replication watch"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "publicationTotal",
+      "Publication count",
+      "publication total"
+    ],
+    [
+      "replicationIndex",
+      "Replication risk",
+      "replication index"
+    ],
+    [
+      "collaborationDepth",
+      "Collaboration depth",
+      "collaboration spread"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "hero",
+      "lab site",
+      "publication cards"
+    ],
+    [
+      "collaborator rail",
+      "project profile",
+      "contact-safe triage"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Research area",
+    "mode_label": "Review lens",
+    "search_label": "Project search",
+    "range_label": "Evidence weight",
+    "toggle_label": "Replication watch",
+    "toggle_regex": "Replication\\ watch|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Research area",
+        "value": "field"
+      },
+      {
+        "kind": "fill",
+        "label": "Project search",
+        "value": "Wetland"
+      },
+      {
+        "kind": "click",
+        "text": "LAB-A11"
+      },
+      {
+        "kind": "select",
+        "label": "Review lens",
+        "value": "site-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "Evidence weight",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "site-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "LAB-A11",
+      "category": "field",
+      "mode": "site-review",
+      "search_value": "Wetland",
+      "range_value": 64,
+      "visible_id_subset": [
+        "LAB-A11"
+      ],
+      "selected_detail_tokens": [
+        "Dr. Vale",
+        "field",
+        "clear",
+        "6",
+        "18"
+      ],
+      "after_clearing_search_subset": [
+        "LAB-A11",
+        "LAB-D09-R4"
+      ],
+      "focus_subset": [
+        "LAB-C31",
+        "LAB-C31-R3"
+      ],
+      "focus_forbidden": [
+        "LAB-A11"
+      ],
+      "detail_switch_id": "LAB-D09-R4",
+      "detail_switch_tokens": [
+        "LAB-D09-R4",
+        "River DNA Atlas follow-up",
+        "Dr. Hsu",
+        "field",
+        "watch",
+        "26",
+        "36"
+      ],
+      "summary_change_labels": [
+        "Publication count",
+        "Replication risk",
+        "Collaboration depth",
+        "Lab contact triage"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 8
+    },
+    "action_count": 6
+  }
+}

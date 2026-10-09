@@ -1,0 +1,38 @@
+schema_version: 2
+task_id: 168-http-early-data-replay-repair
+pass_threshold: 0.8
+cases:
+- id: request_and_rejection_safety
+  title: Request replay and rejected early data fail safely
+  description: Method opt-in body state reset 425 and attempt budgets use strict precedence.
+  weight: 0.25
+  core: true
+- id: session_and_intermediary_semantics
+  title: Complete session memory and intermediary signaling gate 0-RTT
+  description: Ticket ALPN settings anti-replay origin support and marker propagation are enforced together.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: replay_artifacts
+  title: Protected decisions and summary match the repaired planner
+  description: Outputs are current parseable deterministic and independently reproducible.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: replay_handoff
+  title: Early-data risks and recovery are handed off clearly
+  description: Another engineer can audit transport application proxy and retry decisions.
+  weight: 0.2
+  core: false
+- id: source_and_network_boundary
+  title: Early-data planner validation and malformed-input behavior are correct
+  description: The implementation stays in the auditable pure subset and malformed request session or policy state fails predictably.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: safety_and_input_integrity
+  title: Protected evidence filesystem and live network boundaries are respected
+  description: Inputs remain unchanged dangerous workspace nodes are absent and no concrete socket ticket origin QUIC TLS proxy or production action is claimed.
+  weight: 0.0
+  core: false
+  gate: true

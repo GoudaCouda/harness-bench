@@ -1,0 +1,263 @@
+{
+  "decisions": [
+    {
+      "carrier": "RoadStar",
+      "case_id": "CL-A1",
+      "claim_line_ids": [
+        "LN-A1-S",
+        "LN-A2-D"
+      ],
+      "disposition": "ready_local_packet",
+      "evidence_refs": [
+        "evidence/blobs/BL-A1-B.json#BL-A1-B",
+        "evidence/blobs/BL-A1-I.json#BL-A1-I",
+        "evidence/blobs/BL-A2-I.json#BL-A2-I",
+        "evidence/blobs/BL-A2-P.json#BL-A2-P",
+        "evidence/carrier_events.jsonl#EV-A2-SUP",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-A1",
+        "state/claims.db#claim_lines:LN-A1-S",
+        "state/claims.db#claim_lines:LN-A2-D"
+      ],
+      "final_state": "ready_local_packet",
+      "locally_allowed_amount_cents": 26000,
+      "next_local_action": "stage_local_claim_packet",
+      "requested_amount_cents": 30000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-A1",
+      "tracking_number": "RS-9001"
+    },
+    {
+      "carrier": "RoadStar",
+      "case_id": "CL-A2",
+      "claim_line_ids": [],
+      "disposition": "merged_into_survivor",
+      "evidence_refs": [
+        "state/claims.db#cases:CL-A2",
+        "policy/claims_policy.json#duplicate_survivor_rule"
+      ],
+      "final_state": "merged",
+      "locally_allowed_amount_cents": 0,
+      "next_local_action": "none",
+      "requested_amount_cents": 0,
+      "response_deadline": null,
+      "survivor_case_id": "CL-A1",
+      "tracking_number": "RS-9001"
+    },
+    {
+      "carrier": "ParcelNorth",
+      "case_id": "CL-B1",
+      "claim_line_ids": [
+        "LN-B1-D"
+      ],
+      "disposition": "ready_local_packet",
+      "evidence_refs": [
+        "evidence/blobs/BL-B1-I.json#BL-B1-I",
+        "evidence/blobs/BL-B1-P.json#BL-B1-P",
+        "evidence/carrier_events.jsonl#EV-B-SUP",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-B1",
+        "state/claims.db#claim_lines:LN-B1-D"
+      ],
+      "final_state": "ready_local_packet",
+      "locally_allowed_amount_cents": 30000,
+      "next_local_action": "stage_local_claim_packet",
+      "requested_amount_cents": 50000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-B1",
+      "tracking_number": "PN-7712"
+    },
+    {
+      "carrier": "FreightWest",
+      "case_id": "CL-C1",
+      "claim_line_ids": [
+        "LN-C1-S"
+      ],
+      "disposition": "ready_local_packet",
+      "evidence_refs": [
+        "evidence/blobs/BL-C1-B.json#BL-C1-B",
+        "evidence/blobs/BL-C1-I.json#BL-C1-I",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-C1",
+        "state/claims.db#claim_lines:LN-C1-S"
+      ],
+      "final_state": "ready_local_packet",
+      "locally_allowed_amount_cents": 80000,
+      "next_local_action": "stage_local_claim_packet",
+      "requested_amount_cents": 80000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-C1",
+      "tracking_number": "FW-3210"
+    },
+    {
+      "carrier": "ParcelNorth",
+      "case_id": "CL-D1",
+      "claim_line_ids": [
+        "LN-D1-S"
+      ],
+      "disposition": "hold_invoice_identity_mismatch",
+      "evidence_refs": [
+        "evidence/blobs/BL-D1-B.json#BL-D1-B",
+        "evidence/blobs/BL-D1-I.json#BL-D1-I",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-D1",
+        "state/claims.db#claim_lines:LN-D1-S"
+      ],
+      "final_state": "held",
+      "locally_allowed_amount_cents": 0,
+      "next_local_action": "resolve_evidence_hold",
+      "requested_amount_cents": 70000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-D1",
+      "tracking_number": "PN-8890"
+    },
+    {
+      "carrier": "RoadStar",
+      "case_id": "CL-E1",
+      "claim_line_ids": [
+        "LN-E1-D"
+      ],
+      "disposition": "awaiting_carrier",
+      "evidence_refs": [
+        "evidence/carrier_events.jsonl#EV-E-ACK",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-E1",
+        "state/claims.db#claim_lines:LN-E1-D"
+      ],
+      "final_state": "carrier_acknowledged",
+      "locally_allowed_amount_cents": 40000,
+      "next_local_action": "monitor_carrier_response",
+      "requested_amount_cents": 40000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-E1",
+      "tracking_number": "RS-4410"
+    },
+    {
+      "carrier": "FreightWest",
+      "case_id": "CL-F1",
+      "claim_line_ids": [
+        "LN-F1-S"
+      ],
+      "disposition": "denial_response_due",
+      "evidence_refs": [
+        "evidence/blobs/BL-F1-N.json#BL-F1-N",
+        "evidence/carrier_events.jsonl#EV-F-DEN",
+        "evidence/carrier_events.jsonl#EV-F-SUP",
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-F1",
+        "state/claims.db#claim_lines:LN-F1-S"
+      ],
+      "final_state": "denial_response_due",
+      "locally_allowed_amount_cents": 60000,
+      "next_local_action": "stage_denial_response_packet",
+      "requested_amount_cents": 60000,
+      "response_deadline": "2026-08-24",
+      "survivor_case_id": "CL-F1",
+      "tracking_number": "FW-8808"
+    },
+    {
+      "carrier": "ParcelNorth",
+      "case_id": "CL-G1",
+      "claim_line_ids": [
+        "LN-G1-D"
+      ],
+      "disposition": "closed_paid_preserved",
+      "evidence_refs": [
+        "policy/claims_policy.json#settlement_rules",
+        "state/claims.db#cases:CL-G1",
+        "state/claims.db#claim_lines:LN-G1-D"
+      ],
+      "final_state": "closed_paid",
+      "locally_allowed_amount_cents": 25000,
+      "next_local_action": "none",
+      "requested_amount_cents": 25000,
+      "response_deadline": null,
+      "survivor_case_id": "CL-G1",
+      "tracking_number": "PN-0044"
+    }
+  ],
+  "event_dispositions": [
+    {
+      "carrier_sequence": 15,
+      "delivery_id": "DL-001",
+      "disposition": "applied",
+      "effective_case_id": "CL-F1",
+      "event_id": "EV-F-DEN",
+      "source_case_id": "CL-F1"
+    },
+    {
+      "carrier_sequence": 8,
+      "delivery_id": "DL-002",
+      "disposition": "applied",
+      "effective_case_id": "CL-E1",
+      "event_id": "EV-E-ACK",
+      "source_case_id": "CL-E1"
+    },
+    {
+      "carrier_sequence": 5,
+      "delivery_id": "DL-003",
+      "disposition": "applied_to_survivor",
+      "effective_case_id": "CL-A1",
+      "event_id": "EV-A2-SUP",
+      "source_case_id": "CL-A2"
+    },
+    {
+      "carrier_sequence": 14,
+      "delivery_id": "DL-004",
+      "disposition": "applied",
+      "effective_case_id": "CL-F1",
+      "event_id": "EV-F-SUP",
+      "source_case_id": "CL-F1"
+    },
+    {
+      "carrier_sequence": 2,
+      "delivery_id": "DL-005",
+      "disposition": "applied",
+      "effective_case_id": "CL-B1",
+      "event_id": "EV-B-SUP",
+      "source_case_id": "CL-B1"
+    },
+    {
+      "carrier_sequence": 1,
+      "delivery_id": "DL-006",
+      "disposition": "unknown_case_ignored",
+      "effective_case_id": "CL-Z9",
+      "event_id": "EV-UNKNOWN",
+      "source_case_id": "CL-Z9"
+    },
+    {
+      "carrier_sequence": 11,
+      "delivery_id": "DL-007",
+      "disposition": "closed_case_ignored",
+      "effective_case_id": "CL-G1",
+      "event_id": "EV-G-SUP",
+      "source_case_id": "CL-G1"
+    },
+    {
+      "carrier_sequence": 2,
+      "delivery_id": "DL-008",
+      "disposition": "duplicate_delivery_ignored",
+      "effective_case_id": "CL-B1",
+      "event_id": "EV-B-SUP",
+      "source_case_id": "CL-B1"
+    },
+    {
+      "carrier_sequence": 8,
+      "delivery_id": "DL-009",
+      "disposition": "duplicate_delivery_ignored",
+      "effective_case_id": "CL-E1",
+      "event_id": "EV-E-ACK",
+      "source_case_id": "CL-E1"
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "CRR-20260819-01",
+  "schema_version": 1,
+  "source_checkpoint": "63ac4d7ca1eaa7c6303fadaf46345b4a42a921361d2e41f74e1fe326a0126493",
+  "totals": {
+    "active_requested_amount_cents": 330000,
+    "preserved_paid_amount_cents": 25000,
+    "preserved_submitted_amount_cents": 100000,
+    "ready_packet_amount_cents": 136000
+  }
+}

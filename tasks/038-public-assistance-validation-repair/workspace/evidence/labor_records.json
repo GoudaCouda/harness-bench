@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "line_id": "FA-LAB-001",
+      "timesheet_id": "TS-001",
+      "hours": 400,
+      "hourly_rate": 50,
+      "fringe_amount": 12000,
+      "work_order_id": "WO-17",
+      "employee_roster_id": "ROSTER-9",
+      "supervisor_approval_id": "APR-001",
+      "supervisor_approved": true
+    },
+    {
+      "line_id": "FA-LAB-002",
+      "timesheet_id": "TS-002",
+      "hours": 100,
+      "hourly_rate": 75,
+      "fringe_amount": 500,
+      "work_order_id": "WO-18",
+      "employee_roster_id": "ROSTER-9",
+      "supervisor_approval_id": null,
+      "supervisor_approved": false
+    }
+  ]
+}

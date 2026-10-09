@@ -1,0 +1,296 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            },
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            },
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            }
+          ],
+          "id": "budget",
+          "replayable": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "23505",
+              "phase": "before_commit"
+            }
+          ],
+          "id": "constraint",
+          "replayable": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "after_commit"
+            }
+          ],
+          "id": "late-abort",
+          "replayable": true
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            }
+          ],
+          "id": "deadlock",
+          "replayable": true
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "connection_lost",
+              "phase": "commit"
+            }
+          ],
+          "id": "ambiguous",
+          "replayable": false
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "success",
+              "phase": "after_commit"
+            }
+          ],
+          "id": "ok",
+          "replayable": true
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            }
+          ],
+          "id": "deadlock",
+          "replayable": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "middle"
+            }
+          ],
+          "id": "deadlock",
+          "replayable": true
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "connection_lost",
+              "phase": "commit"
+            }
+          ],
+          "id": "ambiguous",
+          "replayable": false
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "success",
+              "phase": "after_commit"
+            }
+          ],
+          "id": "ok",
+          "replayable": true
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "outcome": "40P01",
+              "phase": "before_commit"
+            }
+          ],
+          "id": "deadlock",
+          "replayable": true
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "connection_lost",
+              "phase": "commit"
+            }
+          ],
+          "id": "ambiguous",
+          "replayable": false
+        },
+        {
+          "attempts": [
+            {
+              "outcome": "success",
+              "phase": "after_commit"
+            }
+          ],
+          "id": "ok",
+          "replayable": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "commit_probe": "committed",
+              "outcome": "timeout",
+              "phase": "commit"
+            }
+          ],
+          "id": "probe",
+          "replayable": false
+        }
+      ]
+    },
+    {
+      "policy": {
+        "backoff_ms": [
+          10,
+          50,
+          100
+        ],
+        "max_attempts": 3,
+        "retryable": [
+          "40P01",
+          "40001"
+        ]
+      },
+      "requests": [
+        {
+          "attempts": [
+            {
+              "commit_probe": "absent",
+              "outcome": "connection_lost",
+              "phase": "commit"
+            }
+          ],
+          "id": "absent",
+          "replayable": true
+        }
+      ]
+    }
+  ]
+}

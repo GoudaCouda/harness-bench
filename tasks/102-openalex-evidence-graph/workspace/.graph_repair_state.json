@@ -1,0 +1,30 @@
+{
+  "audit_sha256": null,
+  "coverage_sha256": null,
+  "export_id": "openalex-synthetic-graph-102",
+  "external_actions_executed": false,
+  "graph_sha256": null,
+  "input_bundle_sha256": "d3491fdc589442744dab659b67e24e71367b05c8343831c513737b5131c87b42",
+  "page_observations": {
+    "1": {
+      "expected_rows": 3,
+      "file": "works_page1.json",
+      "observed_rows": 3,
+      "page": 1,
+      "row_count_mismatch": null,
+      "status": "consumed"
+    },
+    "2": {
+      "expected_rows": 5,
+      "file": "works_page2.json",
+      "observed_rows": 5,
+      "page": 2,
+      "row_count_mismatch": null,
+      "status": "consumed"
+    }
+  },
+  "phase": "interrupted_after_checkpoint",
+  "revision": 0,
+  "schema_version": 1,
+  "stage_token": null
+}

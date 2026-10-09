@@ -1,0 +1,19 @@
+[
+  {
+    "case_id": "preserve-compatible-peer-set",
+    "result": {
+      "packages": [
+        {"name": "ui-kit", "version": "2.1.0", "source": "preserved"},
+        {"name": "view-core", "version": "4.3.0", "source": "preserved"}
+      ],
+      "skipped_optional": []
+    }
+  },
+  {
+    "case_id": "skip-platform-optional",
+    "result": {
+      "packages": [{"name": "builder", "version": "1.1.0", "source": "preserved"}],
+      "skipped_optional": ["native-watch"]
+    }
+  }
+]

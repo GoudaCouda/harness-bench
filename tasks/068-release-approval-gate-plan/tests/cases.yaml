@@ -1,0 +1,50 @@
+schema_version: 2
+task_id: 068-release-approval-gate-plan
+pass_threshold: 0.8
+cases:
+- id: reversal_and_canary_blockers
+  title: Database reversal and canary threshold are grounded as hard blockers
+  description: Both high-risk technical blockers have the correct severity, owner, concrete evidence locators,
+    and source-grounded rationale.
+  weight: 0.25
+  core: true
+  score_group: decision_and_state
+- id: approval_and_schedule_blockers
+  title: Security, freeze, and recent-incident gates are all grounded
+  description: The three approval/schedule blockers preserve the correct owners, severities, local records,
+    and policy rationale.
+  weight: 0.25
+  core: true
+  score_group: decision_and_state
+- id: approval_decision
+  title: The approval packet reaches the policy-supported state
+  description: The packet identifies the release as blocked, lists only still-pending approval roles,
+    and remains explicitly planning-only.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: resolution_actions
+  title: Every blocker has one policy-valid resolution path across the handoff
+  description: The blocker table, packet, and pending-action document all carry valid actions, including
+    the non-waivable canary retest rule and signed/written qualifiers.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay
+- id: audit_trace
+  title: The audit maps evidence to the release decision
+  description: Every blocker and the blocked decision map to their applicable policy and concrete local
+    evidence within their own audit entry.
+  weight: 0.1
+  core: false
+- id: package_consistency
+  title: All four deliverables form a closed canonical RR-ID package
+  description: The CSV and packet schemas are usable, all artifacts use the same exact RR IDs, and the
+    packet carries complete policy/risk/evidence locators.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

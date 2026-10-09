@@ -1,0 +1,13 @@
+{
+  "blockers": [
+    "CVE-SYN-2026-7101",
+    "CVE-SYN-2026-7103",
+    "CVE-SYN-2026-7104",
+    "CVE-SYN-2026-7105"
+  ],
+  "decision_ledger_sha256": "66993009090ed4c9589915cdf995ebbb2f73e3f547ba2c83b6beaad402cb29cb",
+  "policy_version": "2026.08",
+  "release_id": "REL-2026-08-17-A",
+  "state": "blocked_vulnerability_review",
+  "updated_by": "releasectl/1"
+}

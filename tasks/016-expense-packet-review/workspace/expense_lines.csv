@@ -1,0 +1,13 @@
+expense_id,employee,trip_id,service_date,submitted_category,amount,currency,attachment,card_txn_id,approval_id
+E-001,Mina Patel,T-884,2026-07-12,airfare,420.00,USD,attachments/e001_air.txt,C-1001,
+E-002,Mina Patel,T-884,2026-07-13,lodging,748.00,USD,attachments/e002_hotel.txt,C-1002,
+E-003,Mina Patel,T-884,2026-07-14,dinner,92.00,USD,attachments/e003_dinner.txt,C-1003,
+E-004,Mina Patel,T-884,2026-07-15,taxi,45.00,USD,attachments/e004_taxi.txt,C-1009,
+E-005,Mina Patel,T-884,2026-07-13,lodging,748.00,USD,attachments/e005_hotel_copy.txt,C-1002,
+E-006,Mina Patel,T-884,2026-07-14,lodging incidental,38.00,USD,attachments/e006_minibar.txt,C-1004,
+E-007,Mina Patel,T-884,2026-07-16,rail,80.00,EUR,attachments/e007_rail.txt,C-1005,
+E-008,Mina Patel,T-884,2026-07-16,airline change fee,250.00,USD,attachments/e008_change.txt,C-1006,AP-777
+E-009,Mina Patel,T-884,2026-07-15,breakfast,20.00,USD,,,
+E-010,Mina Patel,T-884,2026-07-16,lodging,330.00,USD,attachments/e010_hotel.txt,C-1007,
+E-011,Luis Chen,T-885,2026-07-14,taxi,18.00,USD,,,
+E-012,Zoe King,T-999,2026-07-14,dinner,120.00,USD,attachments/e012_dinner.txt,C-1008,

@@ -1,0 +1,8 @@
+canonical_customer_id,name,region,order_count,gross_revenue_usd,refund_amount_usd,chargeback_amount_usd,net_revenue_usd,segment
+C001,Ada Chen,North,4,440.00,22.00,0.00,418.00,gold
+C002,Ben Ortiz,West,0,0.00,0.00,0.00,0.00,dormant
+C003,Cleo Singh,East,2,338.00,11.00,43.00,284.00,gold
+C004,Dara Moore,South,1,100.00,0.00,0.00,100.00,silver
+C005,Eli Park,North,0,0.00,0.00,0.00,0.00,dormant
+C008,Faye Liu,Central,1,550.00,50.00,0.00,500.00,platinum
+C009,Gus Rivera,West,0,0.00,0.00,0.00,0.00,dormant

@@ -1,0 +1,6 @@
+issue_id,severity,action,target,new_value,status,evidence_refs
+E-CIK,error,replace_value,entity.cik,0000123456,repaired,validation_results.csv;rulebook.md
+E-PERIOD,error,replace_value,period.end,2025-12-31,repaired,validation_results.csv;rulebook.md
+W-TAX,warning,replace_value,taxonomy,us-gaap-2025,repaired,validation_results.csv;rulebook.md
+W-CONTEXT,warning,merge_context,contexts,C-YEAR,repaired,validation_results.csv;filing.json;rulebook.md
+E-FILE,error,rename,exhibit.filename,exhibit_101.xml,repaired,validation_results.csv;rulebook.md

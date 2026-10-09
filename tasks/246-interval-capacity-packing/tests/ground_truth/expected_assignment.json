@@ -1,0 +1,11 @@
+{
+  "assignments": {
+    "cut-b": "m-east",
+    "cut-a": "m-west",
+    "cut-d": "m-east"
+  },
+  "unplaced": [
+    "cut-c",
+    "cut-e"
+  ]
+}

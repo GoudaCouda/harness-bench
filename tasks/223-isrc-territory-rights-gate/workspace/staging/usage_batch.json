@@ -1,0 +1,55 @@
+{
+  "stream_id": "harborwatch-223",
+  "gate_clock_epoch": 1775259200,
+  "events": [
+    {
+      "usage_id": "u1",
+      "isrc": "US-AAA-00-00001",
+      "title": "Night Ferry",
+      "territory": "US",
+      "allowed_territories": "US,CA"
+    },
+    {
+      "usage_id": "u2",
+      "isrc": "US-AAA-00-00001",
+      "title": "Night Ferry Remix",
+      "territory": "US",
+      "allowed_territories": "US,CA"
+    },
+    {
+      "usage_id": "u3",
+      "isrc": "US-AAA-00-00002",
+      "title": "Dockside",
+      "territory": "GB",
+      "allowed_territories": "US,CA"
+    },
+    {
+      "usage_id": "u1",
+      "isrc": "US-AAA-00-00001",
+      "title": "Night Ferry",
+      "territory": "US",
+      "allowed_territories": "US,CA"
+    },
+    {
+      "usage_id": "u5",
+      "isrc": "",
+      "title": "Dockside",
+      "territory": "US",
+      "allowed_territories": "US"
+    },
+    {
+      "usage_id": "u6",
+      "isrc": "US-AAA-00-00003",
+      "title": "Harbor Light",
+      "territory": "CA",
+      "allowed_territories": "US,CA"
+    },
+    {
+      "usage_id": "u7",
+      "isrc": "US-AAA-00-00003",
+      "title": "Harbor Light",
+      "territory": "US",
+      "allowed_territories": "US,CA"
+    }
+  ]
+}

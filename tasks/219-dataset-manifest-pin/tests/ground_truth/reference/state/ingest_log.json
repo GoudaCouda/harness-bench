@@ -1,0 +1,72 @@
+{
+  "catalog_id": "shorefront-0325",
+  "gate_clock_epoch": 1774429200,
+  "decisions": [
+    {
+      "index": 0,
+      "request_id": "q1",
+      "dataset_id": "d1",
+      "decision": "ingested"
+    },
+    {
+      "index": 1,
+      "request_id": "q2",
+      "dataset_id": "d2",
+      "decision": "pin_protected"
+    },
+    {
+      "index": 2,
+      "request_id": "q3",
+      "dataset_id": "d3",
+      "decision": "updated"
+    },
+    {
+      "index": 3,
+      "request_id": "q4",
+      "dataset_id": "d8",
+      "decision": "digest_mismatch"
+    },
+    {
+      "index": 4,
+      "request_id": "q5",
+      "dataset_id": "d9",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "request_id": "q6",
+      "dataset_id": "d1",
+      "decision": "malformed"
+    },
+    {
+      "index": 6,
+      "request_id": "q7",
+      "dataset_id": "d10",
+      "decision": "rejected_scheme"
+    },
+    {
+      "index": 7,
+      "request_id": "q8",
+      "dataset_id": "d11",
+      "decision": "ingested"
+    }
+  ],
+  "counts": {
+    "ingested": 2,
+    "updated": 1,
+    "pin_protected": 1,
+    "digest_mismatch": 1,
+    "rejected_scheme": 1,
+    "malformed": 2
+  },
+  "dataset_ids": [
+    "d1",
+    "d11",
+    "d2",
+    "d3"
+  ],
+  "pinned_ids": [
+    "d11",
+    "d2"
+  ]
+}

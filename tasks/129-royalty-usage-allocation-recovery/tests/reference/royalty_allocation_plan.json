@@ -1,0 +1,200 @@
+{
+  "actions": [
+    {
+      "allocations": [
+        {
+          "rightsholder_id": "RIGHTHOLDER-A",
+          "royalty_cents": 60000,
+          "units": 600
+        },
+        {
+          "rightsholder_id": "RIGHTHOLDER-B",
+          "royalty_cents": 40000,
+          "units": 400
+        }
+      ],
+      "disposition": "allocate",
+      "event_id": "USE-100",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-A2",
+        "sources/rights_catalog.json#RIGHT-A-US",
+        "sources/rights_catalog.json#SPLIT-A1",
+        "sources/usage_events.jsonl#event=USE-100;version=1"
+      ],
+      "iswc": "T-100.000.002-0",
+      "mapping_version": 2,
+      "recording_id": "REC-A",
+      "royalty_cents": 100000,
+      "split_version": 1,
+      "units": 1000
+    },
+    {
+      "allocations": [
+        {
+          "rightsholder_id": "RIGHTHOLDER-A",
+          "royalty_cents": 27500,
+          "units": 275
+        },
+        {
+          "rightsholder_id": "RIGHTHOLDER-B",
+          "royalty_cents": 27500,
+          "units": 275
+        }
+      ],
+      "disposition": "allocate",
+      "event_id": "USE-101",
+      "event_version": 2,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-A2",
+        "sources/rights_catalog.json#RIGHT-A-US",
+        "sources/rights_catalog.json#SPLIT-A2",
+        "sources/usage_events.jsonl#event=USE-101;version=2"
+      ],
+      "iswc": "T-100.000.002-0",
+      "mapping_version": 2,
+      "recording_id": "REC-A",
+      "royalty_cents": 55000,
+      "split_version": 2,
+      "units": 550
+    },
+    {
+      "allocations": [
+        {
+          "rightsholder_id": "RIGHTHOLDER-C",
+          "royalty_cents": 28000,
+          "units": 56
+        },
+        {
+          "rightsholder_id": "RIGHTHOLDER-D",
+          "royalty_cents": 12000,
+          "units": 24
+        }
+      ],
+      "disposition": "allocate",
+      "event_id": "USE-102",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-B1",
+        "sources/rights_catalog.json#RIGHT-B-GB",
+        "sources/rights_catalog.json#SPLIT-B1",
+        "sources/usage_events.jsonl#event=USE-102;version=1"
+      ],
+      "iswc": "T-200.000.001-0",
+      "mapping_version": 1,
+      "recording_id": "REC-B",
+      "royalty_cents": 40000,
+      "split_version": 1,
+      "units": 80
+    },
+    {
+      "allocations": [],
+      "disposition": "unknown_recording",
+      "event_id": "USE-103",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#absence-isrc=QZUNKNOWN00001",
+        "sources/usage_events.jsonl#event=USE-103;version=1"
+      ],
+      "iswc": null,
+      "mapping_version": null,
+      "recording_id": null,
+      "royalty_cents": 20000,
+      "split_version": null,
+      "units": 200
+    },
+    {
+      "allocations": [],
+      "disposition": "ambiguous_mapping",
+      "event_id": "USE-104",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-X1",
+        "sources/recording_work_mappings.json#MAP-X2",
+        "sources/usage_events.jsonl#event=USE-104;version=1"
+      ],
+      "iswc": null,
+      "mapping_version": null,
+      "recording_id": null,
+      "royalty_cents": 30000,
+      "split_version": null,
+      "units": 300
+    },
+    {
+      "allocations": [],
+      "disposition": "outside_rights_window",
+      "event_id": "USE-105",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-C1",
+        "sources/rights_catalog.json#RIGHT-C-US",
+        "sources/usage_events.jsonl#event=USE-105;version=1"
+      ],
+      "iswc": "T-300.000.001-0",
+      "mapping_version": 1,
+      "recording_id": "REC-C",
+      "royalty_cents": 50000,
+      "split_version": null,
+      "units": 500
+    },
+    {
+      "allocations": [
+        {
+          "rightsholder_id": "RIGHTHOLDER-A",
+          "royalty_cents": -6000,
+          "units": -60
+        },
+        {
+          "rightsholder_id": "RIGHTHOLDER-B",
+          "royalty_cents": -4000,
+          "units": -40
+        }
+      ],
+      "disposition": "allocate_adjustment",
+      "event_id": "USE-106",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/recording_work_mappings.json#MAP-A2",
+        "sources/rights_catalog.json#RIGHT-A-US",
+        "sources/rights_catalog.json#SPLIT-A1",
+        "sources/usage_events.jsonl#adjusts=USE-100",
+        "sources/usage_events.jsonl#event=USE-106;version=1"
+      ],
+      "iswc": "T-100.000.002-0",
+      "mapping_version": 2,
+      "recording_id": "REC-A",
+      "royalty_cents": -10000,
+      "split_version": 1,
+      "units": -100
+    },
+    {
+      "allocations": [],
+      "disposition": "cross_statement_adjustment",
+      "event_id": "USE-107",
+      "event_version": 1,
+      "evidence_refs": [
+        "policy/royalty_policy.json#allocation-and-adjustment-rules",
+        "sources/usage_events.jsonl#event=USE-107;version=1",
+        "sources/usage_events.jsonl#missing-target=USE-099"
+      ],
+      "iswc": null,
+      "mapping_version": null,
+      "recording_id": null,
+      "royalty_cents": -5000,
+      "split_version": null,
+      "units": -50
+    }
+  ],
+  "external_actions_executed": false,
+  "recovery_id": "ROYREC-20260819-01",
+  "schema_version": 1,
+  "source_checkpoint": "7090dabd06308a0aeea01ad357d0acbfd82ad3050a468e164857fd86c977320e",
+  "statement_id": "RST-2026Q2-NORTH-01"
+}

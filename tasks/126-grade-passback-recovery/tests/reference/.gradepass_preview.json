@@ -1,0 +1,27 @@
+{
+  "accepted_event_ids": [
+    "evt-result-alice-v2",
+    "evt-result-bob-corrected",
+    "evt-result-carol-late",
+    "evt-result-merged-student"
+  ],
+  "assignment_binding_count": 2,
+  "duplicate_event_ids": [
+    "evt-result-alice-v2"
+  ],
+  "external_actions_executed": false,
+  "passback_id": "GP-20260818-DISTRICT-01",
+  "plan_hash": "708efb08cb03797d749a9db2adbbb10b85f97641ab1fc7922950201c20c82d0e",
+  "quarantined_event_ids": [
+    "evt-result-alice-v1",
+    "evt-result-bob-badscale",
+    "evt-result-dave-expired",
+    "evt-result-unknown"
+  ],
+  "result_action_count": 8,
+  "schema_version": 1,
+  "source_bundle_hash": "279a1caf08cf1573e9f29a798ec649e091bf2eb6ef71d6c0ecea50c7351ea8b8",
+  "source_checkpoint": "GP-CHECKPOINT-20260818-012",
+  "status": "valid",
+  "unique_event_count": 11
+}

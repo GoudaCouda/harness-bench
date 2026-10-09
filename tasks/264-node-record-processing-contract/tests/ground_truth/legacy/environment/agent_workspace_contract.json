@@ -1,0 +1,118 @@
+{
+  "schema_version": "nami_work_case10_agent_workspace_contract_v1",
+  "case_id": "case_10",
+  "contract_version": "1.0.0",
+  "purpose": "在教师 Agent 可编辑阶段与候选代码执行阶段之间建立显式、可审计且 fail-closed 的冻结边界。",
+  "fixture": {
+    "root": "fixtures/initial_repo",
+    "workspace_manifest": "environment/workspace_manifest.json",
+    "initial_state_sha256": "b3c971a8d53f93661cbdb9932dfc6cd968b61828f74db5b8509adb6ceeb61d08"
+  },
+  "path_policy": {
+    "allowed_root_must_exist": true,
+    "allowed_root_must_be_real_directory": true,
+    "workspace_and_submission_must_be_strict_descendants": true,
+    "symlink_in_managed_path_forbidden": true,
+    "lock_filename": ".case10-agent-workspace.lock",
+    "temporary_prefixes": [
+      ".agent-workspace.prepare.",
+      ".submission.freeze."
+    ]
+  },
+  "workspace_policy": {
+    "ownership_arguments_required": [
+      "agent_uid",
+      "agent_gid",
+      "controller_uid",
+      "controller_gid"
+    ],
+    "workspace_root_mode": "0555",
+    "editable_directory_modes": {
+      "src": "0755"
+    },
+    "editable_file_modes": {
+      "src/process.js": "0644"
+    },
+    "protected_directory_mode": "0555",
+    "protected_file_mode": "0444",
+    "only_mutable_path": "src/process.js",
+    "exact_inventory_required": true
+  },
+  "freeze_policy": {
+    "agent_and_tool_processes_must_be_stopped_before_freeze": true,
+    "caller_must_assert_agent_stopped": true,
+    "source_scanned_before_and_after_copy": true,
+    "atomic_publish_required": true,
+    "frozen_directory_mode": "0555",
+    "frozen_file_mode": "0444",
+    "max_entries": 64,
+    "max_total_bytes": 262144,
+    "max_single_file_bytes": 65536,
+    "max_depth": 8,
+    "max_relative_path_bytes": 512,
+    "forbidden_entry_types": [
+      "symlink",
+      "hardlink",
+      "fifo",
+      "socket",
+      "device",
+      "other_special"
+    ]
+  },
+  "teacher_runtime": {
+    "image_digest_source": "environment/candidate_sandbox_contract.json#image.digest",
+    "identity": "non_root_agent_uid_gid",
+    "workspace_mount": {
+      "destination": "/workspace",
+      "readonly": false
+    },
+    "network_mode": "none",
+    "published_ports": [],
+    "forbidden_visible_paths": [
+      "/case",
+      "/oracle",
+      "/verifier",
+      "/tests",
+      "/validation",
+      "/runtime/submission",
+      "/var/run/docker.sock"
+    ],
+    "required_logical_environment": {
+      "HOME": "/work",
+      "TZ": "UTC",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "CASE_FIXED_TIME": "2026-07-20T00:00:00Z",
+      "CASE_LOCALE": "zh-CN"
+    }
+  },
+  "lifecycle": [
+    {
+      "step": 1,
+      "action": "prepare",
+      "entrypoint": "environment/prepare_agent_workspace.py",
+      "result": "原子发布一份仅 src/process.js 可编辑的确定性初态。"
+    },
+    {
+      "step": 2,
+      "action": "teacher_edit",
+      "result": "教师容器只挂载可写 workspace，不挂载 case、隐藏测试、参考实现或验收器。"
+    },
+    {
+      "step": 3,
+      "action": "quiesce",
+      "result": "按 exact ID 停止教师及其工具进程，并由控制面确认没有残留写者。"
+    },
+    {
+      "step": 4,
+      "action": "freeze",
+      "entrypoint": "environment/freeze_submission.py",
+      "result": "双重扫描后原子发布只读 submission，并输出内容哈希。"
+    },
+    {
+      "step": 5,
+      "action": "verify",
+      "result": "独立候选执行容器只读挂载 frozen submission，独立可信控制器运行 verifier。"
+    }
+  ]
+}

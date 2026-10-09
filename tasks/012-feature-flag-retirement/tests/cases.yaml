@@ -1,0 +1,36 @@
+schema_version: 2
+task_id: 012-feature-flag-retirement
+pass_threshold: 0.8
+cases:
+- id: historical_and_retired_behavior
+  title: Historical replay and retired-default behavior are correct
+  description: Event time, strict recorded booleans, the exact cutoff, receipt-time independence, output
+    shape, and input immutability follow the contract.
+  weight: 0.45
+  core: true
+- id: fail_closed_replay_edges
+  title: Malformed replay and policy inputs fail closed
+  description: Invalid calendars, timestamp shapes, schemas, policy values, and historical snapshots raise
+    ValueError instead of guessing.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: registry_retirement
+  title: Only the completed checkout flag is removed
+  description: The registry preserves its schema and unrelated flag records exactly while checkout_v2
+    is absent.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: migration_handoff
+  title: Migration notes truthfully explain and verify the change
+  description: Notes explain historical versus live behavior, record the exact test command and result,
+    and name an adapter risk without claiming external actions.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected evidence and workspace integrity are preserved
+  description: Protected evidence is unchanged and the submission creates no undeclared, linked, special,
+    or path-escaping artifacts. Code defects and unsupported deployment claims reduce scored cases.
+  weight: 0.0
+  gate: true

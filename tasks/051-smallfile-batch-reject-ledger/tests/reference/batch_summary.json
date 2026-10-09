@@ -1,0 +1,9 @@
+{
+  "by_type": {
+    "customer": 3,
+    "note": 3,
+    "order": 3
+  },
+  "reject_count": 9,
+  "success_count": 9
+}

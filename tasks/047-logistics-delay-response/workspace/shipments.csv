@@ -1,0 +1,7 @@
+shipment_id,customer_id,order_id,promised_date,sku,units,carrier
+S-7001,C-201,O-9101,2026-06-05,SKU-LAMP,1,NorthRoad
+S-7002,C-202,O-9102,2026-06-06,SKU-MUG,2,ParcelJet
+S-7003,C-203,O-9103,2026-06-05,SKU-HUB,1,NorthRoad
+S-7004,C-204,O-9104,2026-06-07,SKU-MONITOR,1,MetroShip
+S-7005,C-205,O-9105,2026-06-08,SKU-CABLE,3,ParcelJet
+S-7006,C-206,O-9106,2026-06-06,SKU-ROUTER,1,MetroShip

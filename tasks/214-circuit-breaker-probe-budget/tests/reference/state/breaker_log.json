@@ -1,0 +1,76 @@
+{
+  "stream_id": "northharbor-0320",
+  "gate_clock_epoch": 1773997200,
+  "decisions": [
+    {
+      "index": 0,
+      "event_id": "e1",
+      "service": "svc-a",
+      "decision": "executed",
+      "mode_after": "closed"
+    },
+    {
+      "index": 1,
+      "event_id": "e2",
+      "service": "svc-a",
+      "decision": "executed",
+      "mode_after": "closed"
+    },
+    {
+      "index": 2,
+      "event_id": "e3",
+      "service": "svc-a",
+      "decision": "executed",
+      "mode_after": "closed"
+    },
+    {
+      "index": 3,
+      "event_id": "e4",
+      "service": "svc-a",
+      "decision": "executed",
+      "mode_after": "open"
+    },
+    {
+      "index": 4,
+      "event_id": "e5",
+      "service": "svc-a",
+      "decision": "short_circuited",
+      "mode_after": "open"
+    },
+    {
+      "index": 5,
+      "event_id": "e6",
+      "service": "svc-b",
+      "decision": "executed",
+      "mode_after": "closed"
+    },
+    {
+      "index": 6,
+      "event_id": "e7",
+      "service": "svc-a",
+      "decision": "probed",
+      "mode_after": "open"
+    },
+    {
+      "index": 7,
+      "event_id": "e8",
+      "service": "svc-a",
+      "decision": "probed",
+      "mode_after": "closed"
+    }
+  ],
+  "counts": {
+    "executed": 5,
+    "short_circuited": 1,
+    "probed": 2
+  },
+  "forwarded_event_ids": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e6",
+    "e7",
+    "e8"
+  ]
+}

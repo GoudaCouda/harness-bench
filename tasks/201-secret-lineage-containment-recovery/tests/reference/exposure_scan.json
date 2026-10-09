@@ -1,0 +1,45 @@
+{
+  "direct_payload_matches": [
+    {
+      "match_count": 1,
+      "members": [
+        "app/release.env"
+      ],
+      "node_id": "ART-417",
+      "path": "artifact_store/build-417.tar"
+    },
+    {
+      "match_count": 1,
+      "members": [
+        "build-418.log"
+      ],
+      "node_id": "LOG-418",
+      "path": "logs/build-418.log"
+    }
+  ],
+  "fingerprint_sha256": "b68d7fa33c328f61ed84125cd4b11e37fa9e06c31124197d66059b7f10620173",
+  "incident_id": "INC-114-2026-08",
+  "note": "direct matches only; compute inherited payload and distribution closure from artifact_lineage.json",
+  "repository": {
+    "direct_matches": [
+      {
+        "commit_id": "r69657ca6ed1f046",
+        "fingerprint_sha256": "b68d7fa33c328f61ed84125cd4b11e37fa9e06c31124197d66059b7f10620173",
+        "match_count": 1,
+        "path": "deploy/release.env"
+      },
+      {
+        "commit_id": "r9c2d8e98aa97e6d",
+        "fingerprint_sha256": "b68d7fa33c328f61ed84125cd4b11e37fa9e06c31124197d66059b7f10620173",
+        "match_count": 1,
+        "path": ".ci/cache/release.args"
+      }
+    ],
+    "impacted_refs": [
+      "refs/heads/main",
+      "refs/heads/release/2.7",
+      "refs/tags/build-2026.08.12"
+    ]
+  },
+  "schema_version": 1
+}

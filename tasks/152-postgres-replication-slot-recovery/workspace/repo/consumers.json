@@ -1,0 +1,6 @@
+[
+  {"consumer_id":"billing-worker","slot_name":"billing-slot","database":"appdb","plugin":"pgoutput","last_applied_lsn":880,"can_resnapshot":true,"state":"stopped"},
+  {"consumer_id":"events-worker","slot_name":"events-slot","database":"appdb","plugin":"pgoutput","last_applied_lsn":480,"can_resnapshot":true,"state":"stopped"},
+  {"consumer_id":"legacy-worker","slot_name":"legacy-slot","database":"legacydb","plugin":"pgoutput","last_applied_lsn":430,"can_resnapshot":false,"state":"stopped"},
+  {"consumer_id":"orders-worker","slot_name":"orders-slot","database":"appdb","plugin":"pgoutput","last_applied_lsn":870,"can_resnapshot":true,"state":"running"}
+]

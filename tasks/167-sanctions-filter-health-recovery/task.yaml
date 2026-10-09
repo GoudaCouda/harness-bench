@@ -1,0 +1,73 @@
+task_id: 167-sanctions-filter-health-recovery
+title: Recover Alert State after a Screening Filter Failure
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- configuration
+harness_demands:
+- multi_step_execution
+- error_recovery
+- state_management
+- tool_selection
+- safety_boundary
+- verification_behavior
+stressors:
+- partial_failure
+- silent_tool_failure
+- high_stakes_rules
+- stale_state
+required_artifacts:
+- filter_config.json
+- filter_probe_report.json
+- alert_recovery_ledger.csv
+- filter_recovery_state.json
+- filter_recovery_audit.md
+- verification.json
+task_family: compliance-sanctions-filter-repair
+variant: executable-control-recovery
+design_file: design.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - CO-06-OFAC-FRAMEWORK
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - alert_recovery_ledger.csv
+  - filter_recovery_audit.md
+  - filter_recovery_state.json
+  - filter_probe_report.json
+  - verification.json
+  allowed_modified:
+  - filter_config.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    audit_semantics: filter_recovery_audit
+  max_fallback_weight: 0.1
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

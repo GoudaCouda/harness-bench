@@ -1,0 +1,120 @@
+{
+  "expected_modules": [
+    "minisvc.cli",
+    "minisvc.api.handlers",
+    "minisvc.api.routes",
+    "minisvc.storage.repo",
+    "minisvc.models",
+    "minisvc.config",
+    "minisvc.audit"
+  ],
+  "expected_entry_points": ["minisvc.cli:main", "minisvc.api.routes:register_routes"],
+  "expected_edges": [
+    ["minisvc.cli", "minisvc.config"],
+    ["minisvc.cli", "minisvc.storage.repo"],
+    ["minisvc.api.routes", "minisvc.api.handlers"],
+    ["minisvc.api.handlers", "minisvc.storage.repo"],
+    ["minisvc.api.handlers", "minisvc.audit"],
+    ["minisvc.storage.repo", "minisvc.models"]
+  ],
+  "expected_typed_edges": [
+    {"from": "minisvc.cli", "to": "minisvc.config", "types": ["imports", "calls", "reads_config"]},
+    {"from": "minisvc.cli", "to": "minisvc.storage.repo", "types": ["imports", "instantiates", "calls"]},
+    {"from": "minisvc.api.routes", "to": "minisvc.api.handlers", "types": ["imports", "calls"]},
+    {"from": "minisvc.api.handlers", "to": "minisvc.storage.repo", "types": ["imports", "instantiates", "calls"]},
+    {"from": "minisvc.api.handlers", "to": "minisvc.audit", "types": ["imports", "calls", "persists_to"]},
+    {"from": "minisvc.storage.repo", "to": "minisvc.models", "types": ["imports"]}
+  ],
+  "expected_functions": [
+    "main",
+    "load_settings",
+    "register_routes",
+    "create_order",
+    "get_order",
+    "order_event",
+    "OrderRepository.save",
+    "OrderRepository.get"
+  ],
+  "allowed_edge_types": ["imports", "calls", "instantiates", "reads_config", "persists_to"],
+  "required_runtime_flow_terms": ["cli", "load_settings", "init_schema", "post /orders", "create_order", "repo.save", "order_event"],
+  "runtime_flow_sequences": [
+    ["cli", "load_settings", "init_schema"],
+    ["post /orders", "create_order", "repo.save", "order_event"]
+  ],
+  "architecture_concept_groups": [
+    ["module", "minisvc."],
+    ["entry point", "entry-point", "entrypoint"],
+    ["data flow", "request flow"],
+    ["storage", "persistence"],
+    ["risk", "extension point"],
+    ["runtime flow", "execution flow", "runtime path"]
+  ],
+  "architecture_flow_groups": [
+    [
+      ["cli"],
+      ["config", "settings"],
+      ["repository", "storage"],
+      ["schema", "sqlite"]
+    ],
+    [
+      ["http", "api", "order creation", "create order", "post /orders"],
+      ["handler", "create_order"],
+      ["repository", "repo.save", "storage"],
+      ["audit", "event"]
+    ]
+  ],
+  "discrepancy_required_columns": ["claim", "doc_source", "code_evidence", "assessment", "risk"],
+  "discrepancy_term_groups": [
+    ["readonly", "read-only"],
+    ["retry", "retries"],
+    ["audit"],
+    ["contradicted", "contradicts"],
+    ["handlers.py", "minisvc.api.handlers", "create_order"],
+    ["repo.py", "minisvc.storage.repo", "OrderRepository"]
+  ],
+  "discrepancy_expectations": [
+    {
+      "claim_alias_groups": [["readonly", "read-only"]],
+      "assessment": "contradicted",
+      "evidence_alias_groups": [["repo.py", "minisvc.storage.repo", "OrderRepository.save"]]
+    },
+    {
+      "claim_alias_groups": [["retry", "retries"]],
+      "assessment": "contradicted",
+      "evidence_alias_groups": [["repo.py", "minisvc.storage.repo", "OrderRepository", "create_order", "repo.save"]]
+    },
+    {
+      "claim_alias_groups": [["audit"]],
+      "assessment": "contradicted",
+      "evidence_alias_groups": [["audit.py", "minisvc.audit", "order_event", "init_schema", "audit table"]]
+    }
+  ],
+  "risk_register_required_columns": ["risk_id", "area", "evidence", "impact", "mitigation", "owner_hint"],
+  "risk_register_area_groups": [
+    ["storage", "durability", "data durability"],
+    ["audit"],
+    ["config", "configuration", "runtime environment"],
+    ["validation", "input validation"]
+  ],
+  "onboarding_term_groups": [
+    ["read order", "reading order", "start with"],
+    ["local", "run locally"],
+    ["test", "pytest", "unittest"],
+    ["debug", "trace"],
+    ["breakpoint", "trace point"],
+    ["safe first", "first change", "first task", "suggested first"],
+    ["runtime", "active code", "execution path"],
+    ["__init__", "package marker"]
+  ],
+  "scoring": {
+    "weights": {
+      "module_map": 0.35,
+      "architecture_md": 0.18,
+      "doc_code_discrepancies": 0.14,
+      "risk_register": 0.13,
+      "onboarding_plan": 0.08,
+      "fixture_integrity": 0.12
+    },
+    "thresholds": {"excellent": 0.9, "good": 0.75, "pass": 0.6}
+  }
+}

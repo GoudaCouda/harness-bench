@@ -1,0 +1,35 @@
+{
+  "receipts": [
+    {
+      "media_type": "application/pdf",
+      "path": "receipts/PC-201.pdf",
+      "sha256": "057269adbe31b06a6b34114ed2fd50720b53a36787fa6f21616fd887d9cc5b26",
+      "transaction_id": "PC-201"
+    },
+    {
+      "media_type": "text/html",
+      "path": "receipts/PC-203.html",
+      "sha256": "c6bb13af1c99de7c0ce2a6ab6d5de11a868fb38666d13f7354ec2ef6307fa735",
+      "transaction_id": "PC-203"
+    },
+    {
+      "media_type": "application/json",
+      "path": "receipts/PC-204.json",
+      "sha256": "e9292e8ef08af9957472a122971d8a987580e6c2e1f26e283073e67811e2a2e1",
+      "transaction_id": "PC-204"
+    },
+    {
+      "media_type": "text/html",
+      "path": "receipts/PC-205.html",
+      "sha256": "c0b11088f97ab26a5c767a7cca92e2c09ab6a614e74b320b2dd30459e4886722",
+      "transaction_id": "PC-205"
+    },
+    {
+      "media_type": "application/pdf",
+      "path": "receipts/PC-207.pdf",
+      "sha256": "7cf8aa6c4adb13216430a20e0fea81c3f61cb1e746ff1ce3e328fd8087c371b6",
+      "transaction_id": "PC-207"
+    }
+  ],
+  "schema_version": 1
+}

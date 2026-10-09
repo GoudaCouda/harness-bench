@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "audit:single-transition": true,
+    "billing-api:chain": true,
+    "billing-api:expected_leaf": true,
+    "billing-api:not_expired": true,
+    "billing-api:root_trusted": true,
+    "billing-api:subject": true,
+    "event-worker:chain": true,
+    "event-worker:expected_leaf": true,
+    "event-worker:not_expired": true,
+    "event-worker:root_trusted": true,
+    "event-worker:subject": true,
+    "overlap:root-2024-retained": true,
+    "reporting:chain": true,
+    "reporting:expected_leaf": true,
+    "reporting:not_expired": true,
+    "reporting:root_trusted": true,
+    "reporting:subject": true
+  },
+  "state_sha256": "aab83dcdaf2257de7799c58d592c4b8a4d2b1a21ef6d136db1b9d66cc296b4c0",
+  "status": "pass",
+  "tool": "pki_ctl/1"
+}

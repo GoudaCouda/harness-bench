@@ -1,0 +1,57 @@
+task_id: 037-multiday-project-state
+title: Reconcile a vendor rollout after late approvals and owner loss
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Coordination
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- project_management
+- code_execution
+harness_demands:
+- evidence_grounding
+- state_management
+- multi_step_execution
+- verification_behavior
+stressors:
+- conflicting_evidence
+- partial_failure
+- cross_record_dependency
+required_artifacts:
+- project_plan.json
+- decision_register.csv
+- risk_register.csv
+- steering_handoff.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-037
+task_family: 037-multiday-project-state
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - steering_handoff.md
+  - risk_register.csv
+  allowed_modified:
+  - project_plan.json
+  - decision_register.csv
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

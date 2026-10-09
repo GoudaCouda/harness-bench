@@ -1,0 +1,1 @@
+{"tags":[{"tag":"v4.1.0-rc1","commit":"aa12f00","signed":true},{"tag":"v4.1.0","commit":"aa47f00","signed":true}],"component_commits":{"aa47f00":{"dispatch-sdk":"f00ba47","dispatch-cli":"c11aa20"},"aa12f00":{"dispatch-sdk":"f00ba12","dispatch-cli":"c11aa18"}}}

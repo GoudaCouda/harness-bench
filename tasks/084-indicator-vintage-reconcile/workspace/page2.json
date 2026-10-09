@@ -1,0 +1,11 @@
+{
+  "page": 2,
+  "pages": 3,
+  "vintage": "2026-07",
+  "rows": [
+    {"country": "Boron", "year": 2023, "code": "GDPCON15", "value": 482},
+    {"country": "Boron", "year": 2024, "code": "GDPCON15", "value": 490},
+    {"country": "Boron", "year": 2025, "code": "GDPCON15", "value": 530},
+    {"country": "Boron", "year": 2025, "code": "GDPCON20", "value": 507}
+  ]
+}

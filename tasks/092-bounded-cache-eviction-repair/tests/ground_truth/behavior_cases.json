@@ -1,0 +1,18 @@
+{
+  "eviction": [
+    {"state":{"clock":0,"next_access":4,"entries":{"b":{"value":2,"size":3,"expires_at":20,"last_access":1,"pinned":false},"a":{"value":1,"size":3,"expires_at":20,"last_access":1,"pinned":false}}},"operations":[{"op":"put","key":"c","value":3,"size":3,"ttl":5,"pinned":false}],"policy":{"capacity":6,"max_entry_size":6}},
+    {"state":{"clock":2,"next_access":3,"entries":{"old":{"value":{"v":1},"size":6,"expires_at":30,"last_access":2,"pinned":false}}},"operations":[{"op":"put","key":"old","value":{"v":2},"size":5,"ttl":7,"pinned":true},{"op":"get","key":"old"}],"policy":{"capacity":6,"max_entry_size":6}}
+  ],
+  "boundaries": [
+    {"state":{"clock":9,"next_access":2,"entries":{"x":{"value":"x","size":2,"expires_at":10,"last_access":1,"pinned":false}}},"operations":[{"op":"advance","to":10},{"op":"get","key":"x"}],"policy":{"capacity":5,"max_entry_size":5}},
+    {"state":{"clock":0,"next_access":3,"entries":{"pin":{"value":"p","size":4,"expires_at":20,"last_access":1,"pinned":true},"old":{"value":"old","size":1,"expires_at":20,"last_access":2,"pinned":false}}},"operations":[{"op":"put","key":"old","value":"new","size":3,"ttl":3,"pinned":false}],"policy":{"capacity":5,"max_entry_size":5}},
+    {"state":{"clock":0,"next_access":1,"entries":{}},"operations":[{"op":"put","key":"huge","value":0,"size":6,"ttl":1,"pinned":false}],"policy":{"capacity":5,"max_entry_size":4}}
+  ],
+  "invalid": [
+    {"state":{"clock":0,"next_access":1,"entries":{}},"operations":{},"policy":{"capacity":5,"max_entry_size":4}},
+    {"state":{"clock":0,"next_access":1,"entries":{}},"operations":[{"op":"advance","to":-1}],"policy":{"capacity":5,"max_entry_size":4}},
+    {"state":{"clock":0,"next_access":true,"entries":{}},"operations":[],"policy":{"capacity":5,"max_entry_size":4}},
+    {"state":{"clock":0,"next_access":2,"entries":{"x":{"value":1,"size":6,"expires_at":3,"last_access":1,"pinned":false}}},"operations":[],"policy":{"capacity":5,"max_entry_size":5}},
+    {"state":{"clock":0,"next_access":1,"entries":{}},"operations":[{"op":"put","key":"x","value":0,"size":1,"ttl":0,"pinned":false}],"policy":{"capacity":5,"max_entry_size":5}}
+  ]
+}

@@ -1,0 +1,11 @@
+source_record_id,title,first_author,year,doi,pmid,publication_type,trial_id,design,population,outcomes_reported,full_text_available
+P01,Adjustable workstations and musculoskeletal symptoms,Arden,2024,10.7777/ALPHA.2024,100001,article,ALPHA-WORK-01,randomized,workplace,yes,true
+P02,Team huddles for safer warehouse shifts,Bennet,2023,,100002,article,BETA-STEP-02,controlled,workplace,yes,true
+P03,Flexible scheduling in distribution centers: conference outcomes,Chen,2022,,,conference_abstract,GAMMA-WORK-03,controlled,workplace,yes,true
+P04,Peer support for rotating teams: trial protocol,Diaz,2024,10.7777/delta.protocol,100004,protocol,DELTA-TEAM-04,controlled,workplace,no,true
+P05,Why workplace wellness trials miss the point,Evans,2021,10.7777/EPSILON.EDITORIAL,100005,editorial,,observational,animals,no,true
+P06,Lighting interventions in laboratory mice,Fischer,2020,10.7777/zeta.animals,100006,article,,randomized,animals,yes,true
+P07,Hybrid work coaching and employee retention,Ghosh,2025,,100007,article,THETA-HYBRID-07,controlled,workplace,yes,true
+P08,Mindful scheduling for hospital staff,Ibrahim,2024,10.7777/iota.hospital,100008,article,NCT1008,controlled,workplace,yes,true
+P09,Digital coaching for shift workers: feasibility protocol,Jones,2025,,,protocol,SHIFT-DIGITAL-10,controlled,workplace,no,true
+P10,Manager nudges and burnout follow-up,Khan,2022,,,article,,controlled,workplace,yes,false

@@ -1,0 +1,45 @@
+{
+  "authority": "district_sis_identity_index_snapshot_17",
+  "schema_version": 1,
+  "section_rekeys": [
+    {
+      "canonical_id": "SEC-MATH-8A",
+      "external_id": "lms-math-legacy",
+      "relationship": "section_rekey"
+    },
+    {
+      "canonical_id": "SEC-ENG-8B",
+      "external_id": "lms-eng-8b",
+      "relationship": "direct_binding"
+    }
+  ],
+  "student_merges": [
+    {
+      "canonical_id": "STU-1004",
+      "external_id": "lms-temp-440",
+      "relationship": "merged_identity"
+    }
+  ],
+  "student_rekeys": [
+    {
+      "canonical_id": "STU-1001",
+      "external_id": "lms-alice-old",
+      "relationship": "student_rekey"
+    },
+    {
+      "canonical_id": "STU-1002",
+      "external_id": "lms-bob",
+      "relationship": "direct_binding"
+    },
+    {
+      "canonical_id": "STU-1003",
+      "external_id": "lms-carol-old",
+      "relationship": "student_rekey"
+    },
+    {
+      "canonical_id": "STU-1005",
+      "external_id": "lms-dave",
+      "relationship": "direct_binding"
+    }
+  ]
+}

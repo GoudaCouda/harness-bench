@@ -1,0 +1,6 @@
+{
+  "sha": "bbb222",
+  "previous_sha": "aaa111",
+  "reason": "conflict_resolution",
+  "changed_paths": ["deps/parser.lock", ".github/workflows/release.yml"]
+}

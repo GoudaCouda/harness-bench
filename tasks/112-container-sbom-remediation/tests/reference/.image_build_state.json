@@ -1,0 +1,18 @@
+{
+  "external_push_executed": false,
+  "generated_sha256": {
+    "abi_report.json": "d8fbcb0d367788911a5a98a68934b2f17211aee8c77de87cd514d9bd981be7bf",
+    "image_manifest.json": "0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d",
+    "provenance.json": "3ae93e8f37bd67dfd770d0e7e5fe55e6770b9ce40047b6dbb5d6aab6bceae7ff",
+    "sbom.cdx.json": "c75230606890d2bcf2c95e376bcac77a7d52c927559f253c78f0bc33c2d5f03b",
+    "vulnerability_scan.json": "05af16510ab8b438271da80d891f39937a7737d3c4662e14b9a1a41789c80cca"
+  },
+  "image_digest": "sha256:0ce5915e229653a3dec2ca1ab0168310f80c49027bf1d3b6468bb28e7a5da25d",
+  "package_json_sha256": "3a530109da2b53a8522b8b24ded073e4eeb990efdb9ce1b71eeaf8fe21c71a96",
+  "package_lock_sha256": "5ce5fdcc794837c20e56014a0d58f68de43a45d34aac3ac95b71daef594d7479",
+  "phase": "built_verified_offline",
+  "release_id": "REL-REPORT-2026-08",
+  "remediation_plan_sha256": "1fd69b1962bfaa22911dd675716b08fbeecb26253638b31457d1a7873aa64559",
+  "schema_version": 1,
+  "source_bundle_sha256": "d4819e05893190501f625cb938e24f44636e7c95bfec93405c6574b0bb8be7bd"
+}

@@ -1,0 +1,3 @@
+doc_id,source_file,injection_signal,action
+DOC-D,legacy_notes.md,instruction_override,quarantine untrusted document
+DOC-E,vendor_faq.md,secret_exfiltration,quarantine untrusted document

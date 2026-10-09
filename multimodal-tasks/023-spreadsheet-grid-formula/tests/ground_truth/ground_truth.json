@@ -1,0 +1,197 @@
+{
+  "task_id": "023-spreadsheet-grid-formula",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "spreadsheet_grid_formula_protected_inputs",
+    "spreadsheet_grid_formula_interaction_model",
+    "spreadsheet_grid_formula_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/grid-frame.png",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "CELL-A1",
+      "label": "A1"
+    },
+    {
+      "id": "CELL-B1",
+      "label": "B1"
+    },
+    {
+      "id": "CELL-A2",
+      "label": "A2"
+    },
+    {
+      "id": "CELL-B2",
+      "label": "B2"
+    }
+  ],
+  "visual_facts": [
+    {
+      "id": "CELL-A1",
+      "label": "A1",
+      "value": 4,
+      "kind": "input",
+      "x": 22,
+      "y": 28
+    },
+    {
+      "id": "CELL-B1",
+      "label": "B1",
+      "value": 11,
+      "kind": "input",
+      "x": 48,
+      "y": 28
+    },
+    {
+      "id": "CELL-A2",
+      "label": "A2",
+      "value": 7,
+      "kind": "input",
+      "x": 22,
+      "y": 58
+    },
+    {
+      "id": "CELL-B2",
+      "label": "B2",
+      "value": 0,
+      "kind": "formula",
+      "x": 48,
+      "y": 58
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "spreadsheet",
+      "grid"
+    ],
+    [
+      "formula"
+    ],
+    [
+      "cell"
+    ],
+    [
+      "Sheet total"
+    ],
+    [
+      "formula-bar"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "grid-board"
+    ],
+    [
+      "data-cell-id"
+    ],
+    [
+      "Commit formula"
+    ],
+    [
+      "Clear sheet"
+    ],
+    [
+      "formula-bar"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Selected cell"
+    ],
+    [
+      "Sheet total"
+    ],
+    [
+      "Preview"
+    ],
+    [
+      "Formula"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "board": "[data-testid=\"grid-board\"]",
+    "marker": {
+      "attr": "data-cell-id",
+      "id": "CELL-B2",
+      "x": 48,
+      "y": 58,
+      "tol": 10
+    },
+    "markers": [
+      {
+        "attr": "data-cell-id",
+        "id": "CELL-A1",
+        "x": 22,
+        "y": 28,
+        "tol": 10
+      },
+      {
+        "attr": "data-cell-id",
+        "id": "CELL-B1",
+        "x": 48,
+        "y": 28,
+        "tol": 10
+      },
+      {
+        "attr": "data-cell-id",
+        "id": "CELL-A2",
+        "x": 22,
+        "y": 58,
+        "tol": 10
+      },
+      {
+        "attr": "data-cell-id",
+        "id": "CELL-B2",
+        "x": 48,
+        "y": 58,
+        "tol": 10
+      }
+    ],
+    "clicks": [
+      [
+        "button",
+        "commit formula"
+      ]
+    ],
+    "body_has": [
+      "CELL-B2",
+      "Preview",
+      "SUM",
+      "33"
+    ],
+    "selects": [
+      [
+        "Formula",
+        "SUM"
+      ]
+    ],
+    "toggles": [],
+    "after_toggle": [],
+    "name": "spreadsheet_grid_formula"
+  }
+}

@@ -1,0 +1,6 @@
+[
+  {"case_id":"weak-etag-hit","decision":{"action":"not_modified","status":304,"reason":"etag_match"}},
+  {"case_id":"variant-miss","decision":{"action":"forward","status":null,"reason":"vary_miss"}},
+  {"case_id":"etag-precedence","decision":{"action":"forward","status":null,"reason":"etag_miss"}},
+  {"case_id":"date-hit","decision":{"action":"not_modified","status":304,"reason":"not_modified_since"}}
+]

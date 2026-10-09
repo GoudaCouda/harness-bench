@@ -1,0 +1,41 @@
+{
+  "cluster_id": "ridgepeak-0321",
+  "gate_clock_epoch": 1774083600,
+  "items": [
+    {
+      "region_id": "r1",
+      "status": "running",
+      "source": "running"
+    },
+    {
+      "region_id": "r2",
+      "status": "waiting",
+      "source": "waiting"
+    },
+    {
+      "region_id": "r3",
+      "status": "running",
+      "source": "running"
+    },
+    {
+      "region_id": "r5",
+      "status": "started",
+      "source": "started"
+    }
+  ],
+  "selected_ids": [
+    "r1",
+    "r2",
+    "r3",
+    "r5"
+  ],
+  "dropped_ids": [
+    "r6"
+  ],
+  "tombstoned_ids": [
+    "r4"
+  ],
+  "item_count": 4,
+  "union_count": 5,
+  "state": "placed"
+}

@@ -1,0 +1,13 @@
+{
+  "inventory_id": "NORTHSTAR-PKI-2026-08-17",
+  "authorities": [
+    {"ca_id": "OLD-CA", "fingerprint": "SHA256:OLD-CLUSTER-CA-6D31", "status": "retiring", "not_after": "2026-09-30T00:00:00Z"},
+    {"ca_id": "NEW-CA", "fingerprint": "SHA256:NEW-CLUSTER-CA-9A72", "status": "active", "not_after": "2036-08-01T00:00:00Z"}
+  ],
+  "files": [
+    {"path": "pki/ca-bundle.crt", "kind": "ca_bundle", "contains": ["OLD-CA", "NEW-CA"], "has_private_key": false},
+    {"path": "pki/old-ca.crt", "kind": "single_ca_certificate", "contains": ["OLD-CA"], "has_private_key": false},
+    {"path": "pki/new-ca.crt", "kind": "single_ca_certificate", "contains": ["NEW-CA"], "has_private_key": false},
+    {"path": "pki/new-ca.key", "kind": "private_key", "for_ca": "NEW-CA", "has_private_key": true}
+  ]
+}

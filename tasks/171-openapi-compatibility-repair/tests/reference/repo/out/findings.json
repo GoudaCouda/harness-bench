@@ -1,0 +1,30 @@
+[
+  {
+    "direction": "request",
+    "path": "role",
+    "reason": "required_added",
+    "schema_id": "create-user",
+    "status": "breaking"
+  },
+  {
+    "direction": "response",
+    "path": "kind",
+    "reason": "enum_widened",
+    "schema_id": "user-event",
+    "status": "breaking"
+  },
+  {
+    "direction": "response",
+    "path": "status",
+    "reason": "required_removed",
+    "schema_id": "user-event",
+    "status": "breaking"
+  },
+  {
+    "direction": "response",
+    "path": "$discriminator",
+    "reason": "response_variant_added",
+    "schema_id": "user-event",
+    "status": "breaking"
+  }
+]

@@ -1,0 +1,43 @@
+task_id: 047-logistics-delay-response
+title: Build a Recoverable Logistics Exception Handoff
+prompt_file: instruction.md
+timeout_sec: 3600
+difficulty: medium
+domain: Business Operations
+task_category: Business Operations
+task_subcategory: Coordination
+capability_tags:
+- filesystem
+- structured_data
+harness_demands:
+- multi_step_execution
+- safety_boundary
+stressors: []
+required_artifacts:
+- customer_messages.md
+- delay_actions.csv
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-047
+task_family: 047-logistics-delay-response
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - customer_messages.md
+  - delay_actions.csv
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools: {}
+  grader: {}
+  services: []

@@ -1,0 +1,13 @@
+{
+  "checkpoint_id": "datacite-v4-repair",
+  "decision_sha256": null,
+  "external_actions_executed": false,
+  "input_bundle_sha256": "ae4fd7c14d19b55a9d35444ed1b8334b19fb0fe70705a7c4d1a5b341c5389a47",
+  "migration_sha256": null,
+  "phase": "draft",
+  "repository_sha256": "56fa90e3a452e75861e211c096f332dda4657248233350883a612129bc73086a",
+  "revision": 0,
+  "schema_version": 1,
+  "stage_token": null,
+  "validation_sha256": null
+}

@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "committed_journal": true,
+    "inventory_nonnegative_and_conserved": true,
+    "prepared_event_preserved": true,
+    "recovery_identity_bound": true,
+    "semantic_plan_bound": true,
+    "single_recall_transaction": true,
+    "source_checkpoint_bound": true,
+    "terminal_state_matches_projection": true
+  },
+  "external_actions_executed": false,
+  "logical_state_sha256": "7666b4a365169bb563fce44289b955df5b1cafa61794c744afaa6fd8ea34663b",
+  "recall_id": "RC-2026-0417",
+  "scope_revision_id": "SCOPE-02",
+  "semantic_plan_sha256": "332a97ec74dc1fdcc8623ca6cb3eead3d5d8a7167c5c44f5c75fa5e47e636979",
+  "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b",
+  "status": "pass",
+  "tool": "recallctl/1"
+}

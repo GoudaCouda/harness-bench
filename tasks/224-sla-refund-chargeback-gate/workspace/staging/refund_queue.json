@@ -1,0 +1,69 @@
+{
+  "stream_id": "harborwatch-224",
+  "gate_clock_epoch": 1775345600,
+  "events": [
+    {
+      "ticket_id": "t1",
+      "account_id": "a-1",
+      "sla_breach": true,
+      "amount_cents": 1200,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "sorry"
+    },
+    {
+      "ticket_id": "t2",
+      "account_id": "a-1",
+      "sla_breach": false,
+      "amount_cents": 800,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "sorry for the wait"
+    },
+    {
+      "ticket_id": "t3",
+      "account_id": "a-2",
+      "sla_breach": true,
+      "amount_cents": 900,
+      "cap_cents": 2500,
+      "chargeback_open": true,
+      "note": "ok"
+    },
+    {
+      "ticket_id": "t1",
+      "account_id": "a-1",
+      "sla_breach": true,
+      "amount_cents": 1200,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "dup"
+    },
+    {
+      "ticket_id": "t5",
+      "account_id": "",
+      "sla_breach": true,
+      "amount_cents": 100,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "ok"
+    },
+    {
+      "ticket_id": "t6",
+      "account_id": "a-3",
+      "sla_breach": true,
+      "amount_cents": 4000,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "ok"
+    },
+    {
+      "ticket_id": "t7",
+      "account_id": "a-3",
+      "sla_breach": true,
+      "amount_cents": 400,
+      "cap_cents": 2500,
+      "chargeback_open": false,
+      "note": "ok"
+    }
+  ]
+}

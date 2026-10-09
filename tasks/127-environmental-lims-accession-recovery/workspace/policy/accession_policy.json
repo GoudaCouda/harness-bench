@@ -1,0 +1,147 @@
+{
+  "accession_states": [
+    "accepted_pending_analysis",
+    "quarantine_temperature_excursion",
+    "quarantine_custody_incomplete",
+    "rejected_container_integrity",
+    "rejected_preservation_failure",
+    "rejected_holding_time"
+  ],
+  "as_of": "2026-08-19T14:00:00Z",
+  "decision_vocabulary": {
+    "container_status": [
+      "intact",
+      "damaged"
+    ],
+    "custody_status": [
+      "complete",
+      "late_signature_valid",
+      "missing"
+    ],
+    "external_action": [
+      "none"
+    ],
+    "holding_time_status": [
+      "within_limit",
+      "exceeded"
+    ],
+    "local_mutations": [
+      "accession_state",
+      "alias_version",
+      "container_status",
+      "custody_status",
+      "holding_time_status",
+      "preservation_status",
+      "receipt_temperature_c",
+      "received_at",
+      "resolved_lab_label",
+      "source_event_digest",
+      "temperature_status"
+    ],
+    "next_local_action": [
+      "stage_for_qa_accession_review",
+      "retain_in_controlled_storage_for_qa",
+      "isolate_for_qa_disposition"
+    ],
+    "preservation_status": [
+      "compliant",
+      "noncompliant"
+    ],
+    "temperature_status": [
+      "within_range",
+      "excursion"
+    ]
+  },
+  "disposition_precedence": [
+    {
+      "accession_state": "rejected_container_integrity",
+      "next_local_action": "isolate_for_qa_disposition",
+      "when": "container_status == damaged"
+    },
+    {
+      "accession_state": "rejected_preservation_failure",
+      "next_local_action": "isolate_for_qa_disposition",
+      "when": "preservation_status == noncompliant"
+    },
+    {
+      "accession_state": "rejected_holding_time",
+      "next_local_action": "isolate_for_qa_disposition",
+      "when": "holding_time_status == exceeded"
+    },
+    {
+      "accession_state": "quarantine_temperature_excursion",
+      "next_local_action": "retain_in_controlled_storage_for_qa",
+      "when": "temperature_status == excursion"
+    },
+    {
+      "accession_state": "quarantine_custody_incomplete",
+      "next_local_action": "retain_in_controlled_storage_for_qa",
+      "when": "custody_status == missing"
+    },
+    {
+      "accession_state": "accepted_pending_analysis",
+      "next_local_action": "stage_for_qa_accession_review",
+      "when": "otherwise"
+    }
+  ],
+  "evidence_batch_id": "COC-BATCH-20260819-AM",
+  "evidence_locator_contract": {
+    "conditional_category": "late_custody_signature when a pending custody transfer is completed by its checksum-bound signature",
+    "event": "evidence/custody_events.jsonl#<event_id>",
+    "required_categories": [
+      "registration",
+      "highest_authorized_alias",
+      "custody_transfer",
+      "receipt_observation",
+      "suite_rule"
+    ],
+    "suite_rule": "policy/accession_policy.json#suite_rules/<analysis_suite>"
+  },
+  "external_action": "none",
+  "late_signature_grace_hours": 2,
+  "recovery_id": "LIMS-ACC-20260819-07",
+  "schema_version": 1,
+  "stage_boundary": "local_only_pending_accession_qa_review",
+  "suite_rules": {
+    "dissolved_metals": {
+      "holding_time_hours": 4320,
+      "matrix": "surface_water",
+      "required_container": "hdpe_bottle",
+      "required_preservation": "nitric_acid",
+      "temperature_c_range": [
+        2,
+        6
+      ]
+    },
+    "microbiology": {
+      "holding_time_hours": 6,
+      "matrix": "surface_water",
+      "required_container": "sterile_polypropylene",
+      "required_preservation": "none",
+      "temperature_c_range": [
+        2,
+        6
+      ]
+    },
+    "nutrients": {
+      "holding_time_hours": 672,
+      "matrix": "surface_water",
+      "required_container": "amber_glass",
+      "required_preservation": "sulfuric_acid",
+      "temperature_c_range": [
+        2,
+        6
+      ]
+    },
+    "soil_voc": {
+      "holding_time_hours": 48,
+      "matrix": "soil",
+      "required_container": "glass_vial",
+      "required_preservation": "methanol",
+      "temperature_c_range": [
+        0,
+        6
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "coverage_changed": false,
+  "external_actions_executed": false,
+  "items": [
+    {
+      "address_version": 1,
+      "beneficiary_keys": [
+        "P-7201-E",
+        "P-7201-S"
+      ],
+      "case_id": "COV-7201",
+      "disposition": "rebuild_beneficiary_notice",
+      "executed": false,
+      "next_local_action": "stage_corrected_notice",
+      "notice_version": 2,
+      "status": "local_review_only"
+    },
+    {
+      "address_version": 2,
+      "beneficiary_keys": [
+        "P-7203-C",
+        "P-7203-E"
+      ],
+      "case_id": "COV-7203",
+      "disposition": "reissue_to_verified_address",
+      "executed": false,
+      "next_local_action": "stage_reissue_package",
+      "notice_version": 2,
+      "status": "local_review_only"
+    },
+    {
+      "address_version": 1,
+      "beneficiary_keys": [
+        "P-7204-S"
+      ],
+      "case_id": "COV-7204",
+      "disposition": "hold_delivery_investigation",
+      "executed": false,
+      "next_local_action": "investigate_provider_receipt",
+      "notice_version": 1,
+      "status": "local_review_only"
+    },
+    {
+      "address_version": 1,
+      "beneficiary_keys": [
+        "P-7207-E"
+      ],
+      "case_id": "COV-7207",
+      "disposition": "escalate_deadline_review",
+      "executed": false,
+      "next_local_action": "stage_compliance_review",
+      "notice_version": 1,
+      "status": "local_review_only"
+    }
+  ],
+  "notices_sent": false,
+  "recovery_id": "CONT-REC-2026-08-14",
+  "schema_version": 1
+}

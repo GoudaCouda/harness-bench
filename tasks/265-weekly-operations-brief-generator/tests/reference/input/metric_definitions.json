@@ -1,0 +1,219 @@
+{
+  "schema_version": "weekly_operations_metric_definitions_v1",
+  "title": "线上运营周简报",
+  "timezone": "Asia/Shanghai",
+  "currency": "CNY",
+  "channels": ["合作渠道", "直营网"],
+  "comparison_period": {
+    "start": "2026-06-29",
+    "end": "2026-07-05"
+  },
+  "current_period": {
+    "start": "2026-07-06",
+    "end": "2026-07-12"
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_UP",
+    "decimal_places": 2
+  },
+  "input_contract": {
+    "csv_columns_in_order": [
+      "date",
+      "channel",
+      "visits",
+      "orders",
+      "paid_orders",
+      "revenue_cents",
+      "refund_cents",
+      "tickets_opened",
+      "tickets_resolved"
+    ],
+    "date_format": "YYYY-MM-DD（严格 ISO 日期）",
+    "numeric_fields": "除 date、channel 外均为 ASCII 非负十进制整数，不允许空值、小数、符号或千分位。",
+    "row_shape": "每个数据行的单元格数量必须与 csv_columns_in_order 完全一致，不允许缺失单元格或行尾额外单元格。",
+    "row_key": ["date", "channel"],
+    "row_key_unique": true,
+    "coverage": "每个 CSV 中出现的日期必须恰好覆盖 channels 中的全部渠道；本期和对比期都必须至少有一行。",
+    "allowed_dates": "日期只能落在 comparison_period 或 current_period（含首尾）内。",
+    "business_constraints": [
+      "paid_orders <= orders <= visits",
+      "refund_cents <= revenue_cents",
+      "tickets_resolved <= tickets_opened"
+    ],
+    "invalid_input_behavior": "任一约束不满足时，脚本必须非零退出。若 output/ 原本为空，不得留下任何文件；若其中已有完整的 summary.json 与 weekly_brief.md，两份旧文件必须逐字节保持不变。"
+  },
+  "summary_contract": {
+    "schema_version": "weekly_operations_summary_v1",
+    "top_level_keys": [
+      "schema_version",
+      "reporting_period",
+      "totals",
+      "rates",
+      "week_over_week",
+      "highlights",
+      "daily",
+      "channels",
+      "risks",
+      "data_quality"
+    ],
+    "object_fields": {
+      "reporting_period": {
+        "current_start": "string(date)",
+        "current_end": "string(date)",
+        "comparison_start": "string(date)",
+        "comparison_end": "string(date)",
+        "timezone": "string"
+      },
+      "totals": {
+        "visits": "integer",
+        "orders": "integer",
+        "paid_orders": "integer",
+        "gross_revenue_yuan": "string(decimal_2)",
+        "refund_yuan": "string(decimal_2)",
+        "net_revenue_yuan": "string(decimal_2)",
+        "tickets_opened": "integer",
+        "tickets_resolved": "integer"
+      },
+      "rates": {
+        "payment_conversion_pct": "string(decimal_2)",
+        "refund_rate_pct": "string(decimal_2)",
+        "ticket_resolution_pct": "string(decimal_2)"
+      },
+      "week_over_week": {
+        "visits_pct": "string(decimal_2)",
+        "paid_orders_pct": "string(decimal_2)",
+        "gross_revenue_pct": "string(decimal_2)",
+        "net_revenue_pct": "string(decimal_2)",
+        "payment_conversion_pp": "string(decimal_2)"
+      },
+      "highlights": {
+        "top_channel_by_net_revenue": "string",
+        "busiest_day_by_visits": "string(date)"
+      },
+      "data_quality": {
+        "row_count": "integer",
+        "current_row_count": "integer",
+        "comparison_row_count": "integer",
+        "duplicate_keys": "integer(固定为0)",
+        "invalid_rows": "integer(固定为0)"
+      }
+    },
+    "array_item_fields": {
+      "daily[]": {
+        "date": "string(date)",
+        "visits": "integer",
+        "paid_orders": "integer",
+        "net_revenue_yuan": "string(decimal_2)"
+      },
+      "channels[]": {
+        "channel": "string",
+        "visits": "integer",
+        "paid_orders": "integer",
+        "net_revenue_yuan": "string(decimal_2)",
+        "payment_conversion_pct": "string(decimal_2)",
+        "refund_rate_pct": "string(decimal_2)"
+      },
+      "risks[]": {
+        "risk_id": "string",
+        "severity": "string",
+        "label": "string",
+        "evidence": "string",
+        "recommended_action": "string"
+      }
+    },
+    "decimal_encoding": "所有比例、百分点和元金额均按 rounding 舍入后编码为恰好两位小数的 JSON 字符串；整数保持 JSON integer。JSON 键顺序、缩进和末尾换行不参与内容判分。",
+    "formulas": {
+      "period_totals": "totals 中的计数字段均为 current_period 行求和。gross_revenue_yuan=sum(revenue_cents)/100；refund_yuan=sum(refund_cents)/100；net_revenue_yuan=(sum(revenue_cents)-sum(refund_cents))/100。",
+      "payment_conversion_pct": "100 * current paid_orders / current visits",
+      "refund_rate_pct": "100 * current refund_cents / current revenue_cents",
+      "ticket_resolution_pct": "100 * current tickets_resolved / current tickets_opened",
+      "week_over_week_percent": "100 * (current - comparison) / comparison，分别用于 visits、paid_orders、gross_revenue 和 net_revenue；comparison 分母为零时输入无效。",
+      "payment_conversion_pp": "current payment_conversion_pct 的未舍入值 - comparison payment_conversion_pct 的未舍入值，单位为百分点，最后统一舍入。",
+      "daily": "只聚合 current_period，按 date 升序；字段公式与 totals 对应。",
+      "channels": "只聚合 current_period，按 channel Unicode 升序；字段公式与 totals/rates 对应。",
+      "highlights": "top_channel_by_net_revenue 取净收入最大渠道，并列取 channel Unicode 最小值；busiest_day_by_visits 取访问量最大日期，并列取最早日期。",
+      "risks": "按 risk_rules 原顺序，仅输出已触发规则；字段复制 risk_id/severity/label/recommended_action；evidence 固定为“{metric}={actual_2dp}，阈值{operator}{threshold_2dp}”。",
+      "data_quality": "row_count 为全部合法行数；current_row_count 和 comparison_row_count 为各周期行数；通过校验后 duplicate_keys=0、invalid_rows=0。"
+    },
+    "additional_properties": false
+  },
+  "brief_contract": {
+    "template_rule": "brief_template.md 中每个已声明占位符必须替换一次且不得残留 {{...}}；模板标题及 required_sections 的原顺序属于合同，禁止删除线和额外可见正文。无关空白和列表符号不要求与参考输出字节一致；canonical_line_formats 指定的标题、周期、风险、行动和数据质量句式属于机器可验收合同。",
+    "required_sections": [
+      {"section_id": "core_metrics", "heading_aliases": ["核心指标", "关键指标"]},
+      {"section_id": "week_over_week", "heading_aliases": ["环比变化", "环比"]},
+      {"section_id": "channel_table", "heading_aliases": ["渠道表现", "渠道分析"]},
+      {"section_id": "daily_table", "heading_aliases": ["每日趋势", "日度趋势"]},
+      {"section_id": "risks", "heading_aliases": ["风险与证据", "风险证据", "风险"]},
+      {"section_id": "actions", "heading_aliases": ["下周动作", "后续行动", "行动计划"]},
+      {"section_id": "data_quality", "heading_aliases": ["数据质量", "质量检查"]}
+    ],
+    "placeholder_semantics": {
+      "{{title}}": "definitions.title",
+      "{{period_line}}": "必须包含本期起止、对比期起止和 timezone。",
+      "{{core_metrics}}": "逐项展示 totals.visits、totals.paid_orders、totals.gross_revenue_yuan、totals.net_revenue_yuan 及 rates 的三项比例；所有元金额必须带 ¥、CNY、人民币或元。",
+      "{{week_over_week}}": "逐项展示 week_over_week 的五项变化；正数可带 +，支付转化变化单位为百分点。",
+      "{{channel_table}}": "合法 Markdown 表格；第一行为表头、第二行为同列数的唯一分隔行，其后每个 channels[] 元素一行并展示全部六个字段；元金额必须带币种。",
+      "{{daily_table}}": "合法 Markdown 表格；第一行为表头、第二行为同列数的唯一分隔行，其后每个 daily[] 元素一行并展示全部四个字段；元金额必须带币种。",
+      "{{risks}}": "逐项按 canonical_line_formats.risk 说明 risks[] 的身份、严重度、实际值和阈值；无风险时使用 canonical_line_formats.no_risk。",
+      "{{actions}}": "逐项按 canonical_line_formats.action 给出每个已触发风险的 recommended_action；无风险时使用 canonical_line_formats.no_risk_action。",
+      "{{data_quality}}": "按 canonical_line_formats.data_quality 展示 data_quality 的五项计数。"
+    },
+    "metric_labels": {
+      "visits": ["访问量", "访问次数"],
+      "paid_orders": ["支付订单", "已支付订单"],
+      "gross_revenue_yuan": ["总收入", "收入总额"],
+      "refund_yuan": ["退款金额", "退款"],
+      "net_revenue_yuan": ["净收入", "收入净额"],
+      "payment_conversion_pct": ["支付转化率", "转化率"],
+      "refund_rate_pct": ["退款率"],
+      "ticket_resolution_pct": ["工单解决率", "工单处理率"]
+    },
+    "table_header_aliases": {
+      "channel": ["渠道"],
+      "date": ["日期"],
+      "visits": ["访问量", "访问次数"],
+      "paid_orders": ["支付订单", "已支付订单"],
+      "net_revenue_yuan": ["净收入", "收入净额"],
+      "payment_conversion_pct": ["转化率", "支付转化率"],
+      "refund_rate_pct": ["退款率"]
+    },
+    "canonical_line_formats": {
+      "period": "本期 {current_start} 至 {current_end}；对比 {comparison_start} 至 {comparison_end}；时区 {timezone}。",
+      "risk": "{label}（{severity}）：{metric}={actual}，阈值{operator}{threshold}。",
+      "action": "{recommended_action}",
+      "no_risk": "本周未触发预设风险规则。",
+      "no_risk_action": "继续按现有口径跟踪核心指标。",
+      "data_quality": "已校验 {row_count} 行；当期 {current_row_count} 行，对比期 {comparison_row_count} 行；重复键 {duplicate_keys} 个，无效行 {invalid_rows} 行。"
+    }
+  },
+  "risk_rules": [
+    {
+      "risk_id": "conversion_decline",
+      "metric": "payment_conversion_pp",
+      "operator": "lte",
+      "threshold": "-0.50",
+      "severity": "high",
+      "label": "支付转化率显著下降",
+      "recommended_action": "分渠道复盘流量质量和下单路径，优先排查转化降幅最大的渠道。"
+    },
+    {
+      "risk_id": "refund_high",
+      "metric": "refund_rate_pct",
+      "operator": "gt",
+      "threshold": "5.00",
+      "severity": "high",
+      "label": "退款率超过警戒线",
+      "recommended_action": "按商品和渠道拆分退款原因，对高频问题建立专项整改清单。"
+    },
+    {
+      "risk_id": "ticket_resolution_low",
+      "metric": "ticket_resolution_pct",
+      "operator": "lt",
+      "threshold": "90.00",
+      "severity": "medium",
+      "label": "工单解决率低于目标",
+      "recommended_action": "每日盘点未解决工单，为超时工单指定责任人和完成时间。"
+    }
+  ]
+}

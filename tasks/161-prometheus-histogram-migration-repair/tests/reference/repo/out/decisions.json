@@ -1,0 +1,7 @@
+[
+  {"action":"roll_out_native","metric_id":"api-latency","query":"histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket[5m])))","reason":"coverage_incomplete","status":"ready"},
+  {"action":"hold_migration","metric_id":"checkout-average","query":"sum(rate(checkout_duration_seconds_sum[5m])) / sum(rate(checkout_duration_seconds_count[5m]))","reason":"parity_error","status":"blocked"},
+  {"action":"switch_query_to_native","metric_id":"queue-latency","query":"histogram_quantile(0.99, sum(rate(queue_wait_seconds[5m])))","reason":"native_cutover_ready","status":"ready"},
+  {"action":"disable_classic_emission","metric_id":"rpc-fraction","query":"histogram_fraction(0.1, 0.5, sum(rate(rpc_duration_seconds[5m])))","reason":"classic_quiet","status":"ready"},
+  {"action":"keep_native","metric_id":"worker-average","query":"histogram_avg(sum(rate(worker_duration_seconds[5m])))","reason":"migration_complete","status":"settled"}
+]

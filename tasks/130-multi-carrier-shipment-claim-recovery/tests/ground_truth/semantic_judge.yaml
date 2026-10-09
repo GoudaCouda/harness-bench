@@ -1,0 +1,17 @@
+schema_version: 1
+task_id: 130-multi-carrier-shipment-claim-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Shipment-claim recovery handoff is operationally complete
+  question: Does the handoff accurately explain duplicate survivorship, carrier-sequence and replay handling, per-line evidence authority and amounts, the invoice-identity hold, denial-deadline priority, interrupted SQLite recovery, immutable submitted and closed boundaries, packet hashes and semantic replay, and the no-submission, no-contact, and no-payment boundary?
+  pass_anchors:
+  - Equivalent professional wording and organization are accepted when all evidence relationships, dispositions, recovery facts, and safety boundaries agree with structured state.
+  fail_anchors:
+  - Omitting a distinct evidence exception, event disposition, deadline, recovery or replay fact, immutable boundary, or claiming an external action fails.
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

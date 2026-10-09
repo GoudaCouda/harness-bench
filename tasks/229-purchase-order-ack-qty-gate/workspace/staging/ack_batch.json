@@ -1,0 +1,48 @@
+{
+  "stream_id": "harborwatch-229",
+  "gate_clock_epoch": 1775777600,
+  "events": [
+    {
+      "po_id": "po1",
+      "vendor_id": "vnd-a",
+      "ordered_qty": 10,
+      "ack_qty": 10
+    },
+    {
+      "po_id": "po2",
+      "vendor_id": "vnd-a",
+      "ordered_qty": 10,
+      "ack_qty": 4
+    },
+    {
+      "po_id": "po3",
+      "vendor_id": "vnd-b",
+      "ordered_qty": 5,
+      "ack_qty": 8
+    },
+    {
+      "po_id": "po1",
+      "vendor_id": "vnd-a",
+      "ordered_qty": 10,
+      "ack_qty": 10
+    },
+    {
+      "po_id": "po5",
+      "vendor_id": "",
+      "ordered_qty": 3,
+      "ack_qty": 3
+    },
+    {
+      "po_id": "po6",
+      "vendor_id": "vnd-c",
+      "ordered_qty": 12,
+      "ack_qty": 0
+    },
+    {
+      "po_id": "po7",
+      "vendor_id": "vnd-c",
+      "ordered_qty": 5,
+      "ack_qty": 5
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+schema_version: 2
+task_id: 043-localization-fallback-repair
+pass_threshold: 0.8
+cases:
+- id: locale_parent_and_empty_semantics
+  title: Locale hierarchy and present-empty values resolve exactly
+  description: Canonicalization, explicit parent, truncation, root, collisions, cycles, and empty/missing
+    behavior are correct.
+  weight: 0.3
+  core: true
+- id: plural_and_interpolation_semantics
+  title: Plural categories and placeholders remain language-safe
+  description: Exact selectors, English/French/Russian categories, other fallback, tokens, count, and
+    malformed patterns are correct.
+  weight: 0.3
+  core: true
+  score_group: validation_and_replay
+- id: visible_render_report
+  title: Visible message resolutions are reproducible
+  description: Ordered report matches the submitted resolver.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Localization decisions and risk are handed off
+  description: Notes explain all seams and record exact successful verification.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 138-prior-authorization-packet-recovery
+pass_threshold: 0.8
+cases:
+- {id: identity_event_authority, title: Identity and event authority are exact, description: Duplicate out-of-order and wrong-member events resolve against a stable checkpoint., weight: 0.24, core: true}
+- {id: minimum_necessary_packet, title: Packet identity windows and evidence are exact, description: Current signed least-necessary documents match patient member payer service and dates., weight: 0.28, core: true}
+- {id: journal_and_irreversible_boundaries, title: Atomic recovery preserves irreversible boundaries, description: Before-images are restored in SQLite while submitted and denied attempts remain exact., weight: 0.28, core: true}
+- {id: hash_and_semantic_replay_closure, title: Staging hashes and semantic replay close, description: Packet manifest receipt verification and equivalent replay bind one state., weight: 0.12}
+- {id: authorization_handoff, title: Operational handoff is accurate and safe, description: Handoff explains evidence recovery boundaries hashes and no-action limits., weight: 0.08}
+- {id: safety_and_input_integrity, title: Sources protected fields and external boundaries hold, description: Immutable inputs and payer-facing history are preserved and no external action is claimed., weight: 0.0, gate: true}

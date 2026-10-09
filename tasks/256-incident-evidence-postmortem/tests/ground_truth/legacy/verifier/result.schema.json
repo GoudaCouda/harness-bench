@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-sft.local/schemas/nami_work_case02_verifier_result_v1.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "task_id", "verdict", "score", "checks"],
+  "properties": {
+    "schema_version": {"const": "nami_work_case02_verifier_result_v1"},
+    "task_id": {"const": "case_02"},
+    "verdict": {"enum": ["accept", "reject", "invalid"]},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "passed", "detail"],
+        "properties": {
+          "check_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+          "passed": {"type": "boolean"},
+          "detail": {"type": "string", "minLength": 1, "maxLength": 500}
+        }
+      }
+    }
+  }
+}

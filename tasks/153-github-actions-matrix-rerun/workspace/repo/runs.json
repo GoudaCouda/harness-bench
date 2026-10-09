@@ -1,0 +1,8 @@
+[
+  {"job_id":"build","shard":"py310","status":"success","attempt":1,"artifact_fresh":true},
+  {"job_id":"build","shard":"py311","status":"success","attempt":1,"artifact_fresh":true},
+  {"job_id":"deploy","shard":"prod","status":"skipped","attempt":1,"artifact_fresh":false},
+  {"job_id":"package","shard":"main","status":"skipped","attempt":1,"artifact_fresh":false},
+  {"job_id":"test","shard":"integration","status":"failure","attempt":1,"artifact_fresh":false},
+  {"job_id":"test","shard":"unit","status":"success","attempt":1,"artifact_fresh":true}
+]

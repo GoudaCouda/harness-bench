@@ -1,0 +1,12 @@
+{
+  "project": "kestrel",
+  "review_id": "KST-2025-0821",
+  "gate": "ready_full",
+  "effective_date": "2025-08-25",
+  "authorized_scope": ["east_market", "airport_connector_a", "airport_connector_b"],
+  "approved_budget_musd": 39.0,
+  "primary_operator": "Altair Transit",
+  "customer_cohort": 900,
+  "blockers": [],
+  "deferred_scope": []
+}

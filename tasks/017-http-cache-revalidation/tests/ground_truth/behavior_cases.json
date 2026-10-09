@@ -1,0 +1,25 @@
+{
+  "valid": [
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"W/\"r1\""}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"r1\"","last-modified":null,"vary":null}},"expected":{"action":"not_modified","status":304,"reason":"etag_match"}},
+    {"request":{"method":"HEAD","uri":"/a","headers":{"if-none-match":"\"miss\", W/\"r,2\""}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"r,2\"","last-modified":null,"vary":""}},"expected":{"action":"not_modified","status":304,"reason":"etag_match"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"*"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"anything\"","last-modified":null,"vary":null}},"expected":{"action":"not_modified","status":304,"reason":"etag_match"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"*"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}},"expected":{"action":"not_modified","status":304,"reason":"etag_match"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"\"miss\"","if-modified-since":"Wed, 26 Aug 2026 10:00:00 GMT"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"hit\"","last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":null}},"expected":{"action":"forward","status":null,"reason":"etag_miss"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"accept-language":" fr ","if-none-match":"\"r1\""}},"stored":{"uri":"/a","request_headers":{"accept-language":"fr"},"response_headers":{"etag":"\"r1\"","last-modified":null,"vary":" Accept-Language "}},"expected":{"action":"not_modified","status":304,"reason":"etag_match"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"accept-language":"fr","if-none-match":"\"r1\""}},"stored":{"uri":"/a","request_headers":{"accept-language":"en"},"response_headers":{"etag":"\"r1\"","last-modified":null,"vary":"accept-language"}},"expected":{"action":"forward","status":null,"reason":"vary_miss"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-modified-since":"Wed, 26 Aug 2026 10:00:00 GMT"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":"Wed, 26 Aug 2026 10:00:00 GMT","vary":null}},"expected":{"action":"not_modified","status":304,"reason":"not_modified_since"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-modified-since":"Tue, 25 Aug 2026 09:59:59 GMT"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":null}},"expected":{"action":"forward","status":null,"reason":"date_miss"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-modified-since":"Sun, 29 Feb 2026 00:00:00 GMT"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":"Tue, 25 Aug 2026 10:00:00 GMT","vary":null}},"expected":{"action":"forward","status":null,"reason":"invalid_date"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"\"unterminated"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"x\"","last-modified":null,"vary":null}},"expected":{"action":"forward","status":null,"reason":"invalid_etag"}},
+    {"request":{"method":"GET","uri":"/a","headers":{"if-none-match":"\"x\""}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":"\"x\"","last-modified":null,"vary":"*"}},"expected":{"action":"forward","status":null,"reason":"vary_star"}},
+    {"request":{"method":"POST","uri":"/a","headers":{}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}},"expected":{"action":"forward","status":null,"reason":"method_not_cacheable"}},
+    {"request":{"method":"GET","uri":"/b","headers":{}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}},"expected":{"action":"forward","status":null,"reason":"uri_miss"}},
+    {"request":{"method":"GET","uri":"/a","headers":{}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}},"expected":{"action":"forward","status":null,"reason":"no_precondition"}}
+  ],
+  "invalid": [
+    {"request":{"method":"GET","uri":"/a","headers":{},"extra":true},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}}},
+    {"request":{"method":"GET","uri":"/a","headers":{"Bad-Name":"x"}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}}},
+    {"request":{"method":"GET","uri":"/a","headers":{}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null}}},
+    {"request":{"method":true,"uri":"/a","headers":{}},"stored":{"uri":"/a","request_headers":{},"response_headers":{"etag":null,"last-modified":null,"vary":null}}}
+  ]
+}

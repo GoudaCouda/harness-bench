@@ -1,0 +1,85 @@
+{
+  "expected_findings": [
+    {
+      "id": "pii_scope_bypass",
+      "file": "app/export_api.py",
+      "severity": "critical",
+      "terms": ["include_pii", "customers:pii", "scope", "unauthorized", "export"],
+      "recommendation_terms": ["require_scope", "customers:pii", "before", "authorize"],
+      "test_terms": ["include_pii", "without", "customers:pii", "reject"]
+    },
+    {
+      "id": "cross_tenant_idempotency",
+      "file": "app/export_repo.py",
+      "severity": "high",
+      "terms": ["request_token", "tenant", "global", "idempot", "find_by_token"],
+      "recommendation_terms": ["tenant_id", "request_token", "scope", "composite"],
+      "test_terms": ["two tenants", "same token", "separate", "jobs"]
+    },
+    {
+      "id": "non_atomic_lease",
+      "file": "app/export_repo.py",
+      "severity": "high",
+      "terms": ["claim", "atomic", "race", "next_queued", "mark_running"],
+      "recommendation_terms": ["atomic", "compare-and-set", "update", "returning", "transaction"],
+      "test_terms": ["two workers", "same queued", "one", "claim"]
+    },
+    {
+      "id": "false_completion",
+      "file": "app/export_worker.py",
+      "severity": "high",
+      "terms": ["mark_complete", "upload", "failure", "retry", "etag"],
+      "recommendation_terms": ["requeue", "return", "only after", "successful upload", "not complete"],
+      "test_terms": ["transient upload", "retry", "not complete", "queued"]
+    },
+    {
+      "id": "cursor_tuple_regression",
+      "file": "app/customer_snapshot.py",
+      "severity": "medium",
+      "terms": ["updated_at", "id", "cursor", "tuple", "pagination"],
+      "recommendation_terms": ["updated_at =", "lexicographic", "tuple", "and id", "cursor"],
+      "test_terms": ["same timestamp", "id", "no duplicate", "no skip"]
+    },
+    {
+      "id": "zero_ttl_regression",
+      "file": "app/retention.py",
+      "severity": "medium",
+      "terms": ["ttl_hours", "zero", "0", "default", "falsy"],
+      "recommendation_terms": ["key presence", "not in", "preserve zero", "explicit"],
+      "test_terms": ["ttl_hours=0", "immediate", "24", "preserve"]
+    },
+    {
+      "id": "signed_url_logging",
+      "file": "app/downloads.py",
+      "severity": "high",
+      "terms": ["signed_url", "download_url", "bearer", "secret", "log"],
+      "recommendation_terms": ["remove", "redact", "do not log", "job_id", "metadata"],
+      "test_terms": ["signed url", "logs", "absent", "redact"]
+    }
+  ],
+  "expected_files": [
+    "app/export_api.py",
+    "app/export_repo.py",
+    "app/export_worker.py",
+    "app/customer_snapshot.py",
+    "app/retention.py",
+    "app/downloads.py"
+  ],
+  "false_positive_terms": [
+    "requested_by is unsafe",
+    "parameterized sql injection",
+    "line length",
+    "rename variable"
+  ],
+  "scoring": {
+    "weights": {
+      "authorization_and_tenant_review": 0.30,
+      "worker_state_review": 0.25,
+      "data_lifecycle_review": 0.20,
+      "actionable_handoff": 0.05,
+      "prioritization_and_verification": 0.10,
+      "report_integrity": 0.10
+    },
+    "thresholds": {"excellent": 0.9, "good": 0.8, "pass": 0.8}
+  }
+}

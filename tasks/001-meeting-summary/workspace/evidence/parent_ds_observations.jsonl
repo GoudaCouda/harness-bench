@@ -1,0 +1,9 @@
+{"observation_id":"P-alpha-a","zone_name":"alpha.example","probe":"ns-parent-a","observed_at":"2026-08-19T11:40:00Z","ds_key_ids":["K-alpha-100"]}
+{"observation_id":"P-alpha-b","zone_name":"alpha.example","probe":"ns-parent-b","observed_at":"2026-08-19T11:42:00Z","ds_key_ids":["K-alpha-100"]}
+{"observation_id":"P-alpha-c","zone_name":"alpha.example","probe":"ns-parent-c","observed_at":"2026-08-19T11:45:00Z","ds_key_ids":["K-alpha-100"]}
+{"observation_id":"P-bravo-a","zone_name":"bravo.example","probe":"ns-parent-a","observed_at":"2026-08-19T09:10:00Z","ds_key_ids":["K-bravo-110","K-bravo-210"]}
+{"observation_id":"P-bravo-b","zone_name":"bravo.example","probe":"ns-parent-b","observed_at":"2026-08-19T09:15:00Z","ds_key_ids":["K-bravo-110","K-bravo-210"]}
+{"observation_id":"P-bravo-c","zone_name":"bravo.example","probe":"ns-parent-c","observed_at":"2026-08-19T09:20:00Z","ds_key_ids":["K-bravo-110","K-bravo-210"]}
+{"observation_id":"P-golf-a","zone_name":"golf.example","probe":"ns-parent-a","observed_at":"2026-08-19T08:00:00Z","ds_key_ids":["K-golf-160","K-golf-260"]}
+{"observation_id":"P-golf-b","zone_name":"golf.example","probe":"ns-parent-b","observed_at":"2026-08-19T08:05:00Z","ds_key_ids":["K-golf-160"]}
+{"observation_id":"P-golf-c","zone_name":"golf.example","probe":"ns-parent-c","observed_at":"2026-08-19T08:10:00Z","ds_key_ids":["K-golf-160","K-golf-260"]}

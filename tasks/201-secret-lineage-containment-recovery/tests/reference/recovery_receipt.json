@@ -1,0 +1,38 @@
+{
+  "append_only_ledgers": true,
+  "bundle_sha256": "35be32f67aadff0127cbfeb8721f051d38ad2de5fff92264ef978149e34ecd39",
+  "distribution_closed": true,
+  "external_actions_executed": false,
+  "incident_id": "INC-114-2026-08",
+  "output_hashes": {
+    "containment_plan.json": "2a5441fc2d0e191614c484d25a8c8541c46d1ad4cafc19b6bf05ad9767b3807d",
+    "containment_state.json": "eb427201833ae63d201e9bac0e7650bfa9926476b07668953e5c5d7b04963f8b",
+    "distribution_state.json": "b05c51d16aa88f93d5974dadbbaa0a4e899cc43363def98be9c265ba18fa5731",
+    "exposure_scan.json": "9c126ae8de4c0c1b92af16dc4dad31fc5b690c7a90d93da159e369f7652fd81e",
+    "incident_handoff.md": "f4a0104c3208604b7c923e91b2c67edac98801a9b4307f2370844763001486d7",
+    "quarantine_events.jsonl": "c17fe9bed0b1401d953056463b309ee81e88ead4a6f8ba2c105b6435b77783d6",
+    "replacement_credential.json": "e409916dd9dd4e22d0d336988b14ccb2949638894bb58b7de78c77cc91555d4d",
+    "revocation_registry.jsonl": "ac24e947476dc6b0673294c77ae7441ab4a53f19630d338ef449b7e16a57b2de",
+    "sanitized_repository.db": "0a122984ae0f61fe70cd555be4088dcae73da71e11599c66df8bfb64b9b6ba42"
+  },
+  "replacement_staged_not_activated": true,
+  "replay_stable": true,
+  "result": "pass",
+  "scan_clean": true,
+  "schema_version": 1,
+  "source_hashes": {
+    "artifact_lineage.json": "95bbfa05c13b9b494f3316d882083277c7c163b37623055350e9d2f6b897282d",
+    "artifact_store/build-417.tar": "a52bdb1f9512e9f881dac36a441722e8b94b49dab428b084515f617f0edf94e9",
+    "artifact_store/build-419.tar": "ad430346240b818d3193a81b6ab80e9b8b34f6a0cb3dbcf608a517c5c993066a",
+    "artifact_store/build-420.tar": "c21bd73283f6061a3fd416a63e10f2f0817268b1f31967faa579944e7c90fb4a",
+    "artifact_store/detector-demo.tar": "7aa9a9e3ebabee41ae402cf1980412aa059cee28d88448f41165b2164eb6ab52",
+    "artifact_store/index-418.json": "9fb227ec163398ef37f75af880eb641a00069ab8d184ca8fc9339aea488683d6",
+    "containment_policy.md": "4ac32a0a1bc991074767096287112642b92afdcdba4104731eec7f921b385712",
+    "distribution_baseline.json": "340721c0017b251e1c93b01a98b0f87e6f53ebf6827c98e053d2daea68901769",
+    "incident.json": "4f19cb880d8f1a7c20e951fd53c246d90ade4880ed7c24d99a3b2c72b7339133",
+    "logs/build-418.log": "141059806465a691e7b2400c5e0ee816c915750d9d3edcd2e72b67e249238837",
+    "mirrors/build-417-copy.tar": "a98121402096f60b9ce46fe238205cb39228ea4a0d23fc145b2b25f819b6577d",
+    "repository.db": "685c6dc9e9d4e1526359861444600ed450029a8da96038cc9ce36ccb38a49394"
+  },
+  "unrelated_history_preserved": true
+}

@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 245-sqlite-unordered-migrations
+pass_threshold: 0.8
+cases:
+- id: catalog_schema
+  title: The catalog database matches the applied prefix
+  description: app.db has the items table from 001 only, without later columns or seeded rows.
+  weight: 0.5
+  core: true
+- id: migration_report
+  title: The report lists applied, duplicate, missing, and skipped files
+  description: migration_report.json matches the independent filename plan.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain the version machine and a residual risk
+  description: APPLY_NOTES.md covers gaps, duplicates, applied files, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected SQL inputs remain unchanged
+  description: Migration files stay byte-identical and the workspace has no linked or special artifacts.
+  weight: 0.0
+  core: false
+  gate: true

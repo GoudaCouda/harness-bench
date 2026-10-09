@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Product checkout accessibility target</title>
+  <desc id="desc">Synthetic product page screenshot with navigation, promo modal, product cards, and checkout form.</desc>
+  <rect width="1000" height="620" fill="#f6f8fb"/>
+  <rect x="72" y="54" width="856" height="64" rx="18" fill="#172026"/>
+  <text x="108" y="94" fill="#ffffff" font-family="Arial" font-size="28" font-weight="700">Northstar Shop</text>
+  <text x="515" y="92" fill="#b8c1c4" font-family="Arial" font-size="20">Products</text>
+  <text x="636" y="92" fill="#b8c1c4" font-family="Arial" font-size="20">Support</text>
+  <text x="748" y="92" fill="#b8c1c4" font-family="Arial" font-size="20">Account</text>
+  <rect x="636" y="124" width="250" height="98" rx="16" fill="#ffffff" stroke="#c8d1d5" stroke-width="3"/>
+  <text x="664" y="164" fill="#172026" font-family="Arial" font-size="22" font-weight="700">15% off trial kit</text>
+  <rect x="806" y="139" width="42" height="42" rx="21" fill="#e8eef2"/>
+  <text x="819" y="168" fill="#5d6b72" font-family="Arial" font-size="24">x</text>
+  <rect x="84" y="184" width="410" height="252" rx="22" fill="#ffffff" stroke="#d3dce0" stroke-width="3"/>
+  <rect x="114" y="218" width="154" height="112" rx="16" fill="#cbd7df"/>
+  <text x="296" y="248" fill="#172026" font-family="Arial" font-size="26" font-weight="700">Travel Pack</text>
+  <text x="296" y="286" fill="#889199" font-family="Arial" font-size="20">was $89</text>
+  <text x="296" y="322" fill="#aeb4bc" font-family="Arial" font-size="30" font-weight="700">$49</text>
+  <rect x="296" y="358" width="146" height="46" rx="12" fill="#254f68"/>
+  <text x="332" y="388" fill="#ffffff" font-family="Arial" font-size="19" font-weight="700">Add</text>
+  <rect x="548" y="262" width="340" height="260" rx="22" fill="#ffffff" stroke="#d3dce0" stroke-width="3"/>
+  <text x="584" y="314" fill="#172026" font-family="Arial" font-size="28" font-weight="700">Checkout</text>
+  <rect x="584" y="354" width="248" height="52" rx="10" fill="#f1f4f6" stroke="#a8b4bb" stroke-width="2"/>
+  <text x="602" y="386" fill="#6b747b" font-family="Arial" font-size="18">email@example.com</text>
+  <rect x="584" y="436" width="178" height="52" rx="12" fill="#172026"/>
+  <text x="628" y="469" fill="#ffffff" font-family="Arial" font-size="20" font-weight="700">Pay now</text>
+</svg>

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "CE-1",
+    "canonical_key": "10.oa/iota",
+    "superseded_work_id": "W8",
+    "corrected_work_id": "W8-CORR",
+    "authoritative_relation": "contradicts",
+    "note": "Page 4 correction notice reverses the relation for the Iota work; it resolves the same-DOI disagreement and is not a quarantine conflict."
+  }
+]

@@ -1,0 +1,176 @@
+{
+  "answers": {
+    "Q01": {
+      "status": "answered",
+      "facts": ["aes-256-gcm"],
+      "fact_alias_groups": [
+        ["aes-256-gcm", "aes 256 gcm", "256-bit aes in gcm mode", "aes with a 256-bit key in gcm mode"]
+      ],
+      "sources": ["kb/product_manual.md"],
+      "evidence_by_source": {
+        "kb/product_manual.md": [["aes-256-gcm", "aes 256 gcm"]]
+      },
+      "missing": []
+    },
+    "Q02": {
+      "status": "answered",
+      "facts": ["200 mb"],
+      "sources": ["kb/release_notes.md"],
+      "evidence_by_source": {
+        "kb/release_notes.md": [["200 mb"], ["attachment", "attachments"]]
+      },
+      "missing": []
+    },
+    "Q03": {
+      "status": "answered",
+      "facts": ["blocked", "admin"],
+      "sources": ["kb/security_bulletin.md"],
+      "evidence_by_source": {
+        "kb/security_bulletin.md": [["blocked"], ["admin", "admin accounts"]]
+      },
+      "missing": []
+    },
+    "Q04": {
+      "status": "answered",
+      "facts": ["self-service", "support-assisted"],
+      "sources": ["kb/product_manual.md"],
+      "evidence_by_source": {
+        "kb/product_manual.md": [["self-service"], ["support-assisted"]]
+      },
+      "missing": []
+    },
+    "Q05": {
+      "status": "answered",
+      "facts": ["skips unchanged", "checksum"],
+      "fact_alias_groups": [
+        ["skips unchanged", "skip unchanged", "skipped unchanged", "skipping unchanged"],
+        ["checksum marker", "checksum"]
+      ],
+      "sources": ["kb/release_notes.md"],
+      "evidence_by_source": {
+        "kb/release_notes.md": [["skips unchanged", "unchanged"], ["checksum marker", "checksum"]]
+      },
+      "missing": []
+    },
+    "Q06": {
+      "status": "answered",
+      "facts": ["basic", "do not", "sso"],
+      "sources": ["kb/product_manual.md"],
+      "evidence_by_source": {
+        "kb/product_manual.md": [["basic"], ["do not have sso", "no sso", "without sso"]]
+      },
+      "missing": []
+    },
+    "Q07": {
+      "status": "partial",
+      "facts": ["180 days", "enterprise"],
+      "sources": ["kb/support_faq.md"],
+      "evidence_by_source": {
+        "kb/support_faq.md": [["180 days"], ["enterprise"]]
+      },
+      "missing": ["basic", "pro"]
+    },
+    "Q08": {
+      "status": "insufficient_evidence",
+      "facts": [],
+      "sources": [],
+      "evidence_by_source": {},
+      "missing": ["price", "pro"]
+    },
+    "Q09": {
+      "status": "answered",
+      "facts": ["us-east-1", "eu-central-1"],
+      "sources": ["kb/release_notes.md"],
+      "evidence_by_source": {
+        "kb/release_notes.md": [["us-east-1", "us east 1"], ["eu-central-1", "eu central 1"]]
+      },
+      "missing": []
+    },
+    "Q10": {
+      "status": "partial",
+      "facts": ["enterprise administrators"],
+      "sources": ["kb/support_faq.md"],
+      "evidence_by_source": {
+        "kb/support_faq.md": [["enterprise administrators", "enterprise admin"]]
+      },
+      "missing": ["uptime", "service level"]
+    },
+    "Q11": {
+      "status": "answered",
+      "facts": ["security platform", "90 days"],
+      "fact_alias_groups": [
+        ["security platform"],
+        ["90 days", "90-day", "every 90 days"]
+      ],
+      "sources": ["kb/product_manual.md", "kb/security_bulletin.md"],
+      "evidence_by_source": {
+        "kb/product_manual.md": [["security platform"]],
+        "kb/security_bulletin.md": [["90 days", "90-day"]]
+      },
+      "missing": []
+    },
+    "Q12": {
+      "status": "insufficient_evidence",
+      "facts": [],
+      "sources": [],
+      "evidence_by_source": {},
+      "missing": ["phone", "telephone"],
+      "missing_alias_groups": [
+        ["phone", "telephone"]
+      ]
+    },
+    "Q13": {
+      "status": "answered",
+      "facts": ["blocked", "admin"],
+      "sources": ["kb/security_bulletin.md"],
+      "evidence_by_source": {
+        "kb/security_bulletin.md": [["blocked", "no longer valid", "not valid"], ["admin", "admin accounts"]]
+      },
+      "missing": []
+    },
+    "Q14": {
+      "status": "insufficient_evidence",
+      "facts": [],
+      "sources": ["kb/support_faq.md"],
+      "evidence_by_source": {
+        "kb/support_faq.md": [["omits", "no", "without"], ["telephone", "phone"]]
+      },
+      "related_evidence_by_source": {
+        "kb/archived_migration_note.md": [
+          ["telephone", "phone"],
+          ["placeholder"],
+          ["never approved", "not approved"]
+        ]
+      },
+      "missing": ["approved", "phone", "placeholder"],
+      "missing_alias_groups": [
+        ["approved", "authorized", "official", "valid"],
+        ["phone", "telephone"]
+      ]
+    }
+  },
+  "forbidden_answer_tokens": {
+    "Q08": ["$", "usd", "19", "29", "49"],
+    "Q12": ["555", "+1", "phone:"],
+    "Q14": ["555", "0134", "+1", "phone:"],
+    "Q03": ["allowed", "allow legacy"],
+    "Q13": ["still use", "temporarily allowed", "allowed for admin"]
+  },
+  "evidence_ids": {
+    "Q01": {"kb/product_manual.md": "PM-1"},
+    "Q02": {"kb/release_notes.md": "RN-3.4-Export"},
+    "Q03": {"kb/security_bulletin.md": "SB-2025-04-Tokens"},
+    "Q04": {"kb/product_manual.md": "PM-2"},
+    "Q05": {"kb/release_notes.md": "RN-3.5-Delta"},
+    "Q06": {"kb/product_manual.md": "PM-3"},
+    "Q07": {"kb/support_faq.md": "FAQ-1"},
+    "Q08": {},
+    "Q09": {"kb/release_notes.md": "RN-3.5-Regions"},
+    "Q10": {"kb/support_faq.md": "FAQ-2"},
+    "Q11": {"kb/product_manual.md": "PM-4", "kb/security_bulletin.md": "SB-2025-04-CMK"},
+    "Q12": {},
+    "Q13": {"kb/security_bulletin.md": "SB-2025-04-Tokens"},
+    "Q14": {"kb/support_faq.md": "FAQ-3"}
+  },
+  "scoring": {"thresholds": {"pass": 0.70, "good": 0.85, "excellent": 0.95}}
+}

@@ -1,0 +1,11 @@
+bank_line_id,transaction_type,source_id,settlement_date,currency,amount
+B001,receipt,P001,2026-03-10,USD,98.00
+B002,receipt,P002,2026-03-11,EUR,197.27
+B003,receipt,P004,2026-03-12,USD,79.00
+B004,receipt,P999,2026-03-12,USD,49.50
+B005,refund,R002,2026-03-15,EUR,-50.00
+B006,receipt,P006,2026-03-18,USD,149.00
+B007,receipt,P007,2026-03-20,EUR,49.00
+B008,refund,R006,2026-03-21,USD,-30.00
+B009,receipt,P777,2026-03-23,USD,25.00
+B010,refund,R404,2026-03-16,USD,-10.00

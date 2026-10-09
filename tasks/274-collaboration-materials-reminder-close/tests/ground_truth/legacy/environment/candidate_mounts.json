@@ -1,0 +1,21 @@
+{
+  "schema_version": "case20_candidate_mounts_v2",
+  "mounts": [
+    {"source": "<runtime>/workspace", "target": "/agent_workspace", "mode": "read_write"},
+    {"source": "environment/tools", "target": "/opt/case20/tools", "mode": "read_only"},
+    {"source": "environment/tool_contract.json", "target": "/opt/case20/tool_contract.json", "mode": "read_only"},
+    {"source": "<runtime>/service.sock", "target": "/run/case20/service.sock", "mode": "read_write_socket"}
+  ],
+  "explicitly_hidden": ["oracle", "verifier", "tests", "fixtures", "validation", "case.json", "manifest.json"],
+  "network": "none",
+  "ports": [],
+  "runtime_security": {
+    "user": "2050:4007",
+    "read_only_rootfs": true,
+    "cap_drop": ["ALL"],
+    "no_new_privileges": true,
+    "cpu_cores": 2,
+    "memory_mib": 1024,
+    "pids_limit": 128
+  }
+}

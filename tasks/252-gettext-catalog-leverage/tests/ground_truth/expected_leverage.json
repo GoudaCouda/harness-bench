@@ -1,0 +1,10 @@
+{
+  "translations": {
+    "s-open": "打开闸门",
+    "s-night": "夜班"
+  },
+  "untranslated": [
+    "s-spare",
+    "s-new"
+  ]
+}

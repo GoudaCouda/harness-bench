@@ -1,0 +1,62 @@
+{
+  "stream_id": "harborwatch-233",
+  "gate_clock_epoch": 1776123200,
+  "decisions": [
+    {
+      "index": 0,
+      "item_id": "www.harbor.test",
+      "qtype": "A",
+      "decision": "admitted"
+    },
+    {
+      "index": 1,
+      "item_id": "gone.harbor.test",
+      "qtype": "A",
+      "decision": "held"
+    },
+    {
+      "index": 2,
+      "item_id": "ns1.other.test",
+      "qtype": "A",
+      "decision": "held"
+    },
+    {
+      "index": 3,
+      "item_id": "www.harbor.test",
+      "qtype": "A",
+      "decision": "malformed"
+    },
+    {
+      "index": 4,
+      "item_id": "loop.harbor.test",
+      "qtype": "CNAME",
+      "decision": "malformed"
+    },
+    {
+      "index": 5,
+      "item_id": "api.harbor.test",
+      "qtype": "A",
+      "decision": "held"
+    },
+    {
+      "index": 6,
+      "item_id": "mail.harbor.test",
+      "qtype": "MX",
+      "decision": "admitted"
+    }
+  ],
+  "counts": {
+    "admitted": 2,
+    "held": 3,
+    "malformed": 2
+  },
+  "admitted_ids": [
+    "www.harbor.test",
+    "mail.harbor.test"
+  ],
+  "held_ids": [
+    "gone.harbor.test",
+    "ns1.other.test",
+    "api.harbor.test"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "clearance_role_is_least_privilege": true,
+    "current_filter_revision": true,
+    "current_list_snapshot": true,
+    "non_latin_alias_normalization": true,
+    "probe_error_fails_closed": true
+  },
+  "config_sha256": "d5061da523635a7569c2f44e14e9f853554e0fb3e0ed2b02f7638a8af39c0065",
+  "status": "pass",
+  "tool": "filter_probe/1"
+}

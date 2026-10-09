@@ -1,0 +1,21 @@
+{
+  "bank_information_collected": false,
+  "checks": {
+    "interrupted_journal_recovered": true,
+    "local_only": true,
+    "minimum_owner_data_only": true,
+    "semantic_plan_matches": true,
+    "single_committed_recovery": true,
+    "source_checkpoint_matches": true,
+    "vendor_master_exact": true,
+    "vendors_not_activated": true
+  },
+  "external_actions_executed": false,
+  "final_revision": 41,
+  "renewal_id": "VRR-20260819-01",
+  "schema_version": 1,
+  "semantic_db_digest": "db3fd0ec99c5e3a608e965973fb4b830c867c40004b9ce34a86a1a9f6a57e0a2",
+  "semantic_plan_digest": "eda2698413b4e7b78ef45359ef976e47c618b0be5b051f5475cf403c1cd77012",
+  "source_checkpoint": "4b8c420eed11ac954df5b93936866e82460dbcdef90a640d36f24f5c9aa7fb9b",
+  "status": "pass"
+}

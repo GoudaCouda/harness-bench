@@ -1,0 +1,7 @@
+shipment_id,status,action,owner,deadline,reason
+S-7001,delayed,notify,Customer Operations,2026-06-04,ETA 2026-06-08 misses promise 2026-06-05; standard policy provides notification without automatic credit.
+S-7002,on_track,monitor,Logistics Operations,2026-06-06,ETA equals the 2026-06-06 promise.
+S-7003,delayed,expedite_replacement,Warehouse Operations,2026-06-04,VIP original ETA is 2026-06-10; one replacement can arrive 2026-06-06 and is faster.
+S-7004,delayed,expedite_original,Carrier Operations,2026-06-04T16:00:00Z,Premium carrier upgrade improves ETA to 2026-06-08 and its cutoff is still open.
+S-7005,evidence_gap,trace,Carrier Operations,2026-06-04T17:00:00Z,ETA is missing; trace before classifying or messaging a delay.
+S-7006,delayed,notify_and_credit,Customer Operations,2026-06-04,Premium ETA 2026-06-07 misses promise and no replacement inventory or carrier recovery is available.

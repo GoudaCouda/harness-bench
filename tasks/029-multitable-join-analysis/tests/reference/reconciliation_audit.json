@@ -1,0 +1,28 @@
+{
+  "duplicate_payment_ids": [
+    "P5002-DUP",
+    "P5008-DUP"
+  ],
+  "orphan_payment_ids": [
+    "P5007",
+    "P5013"
+  ],
+  "refund_anomaly_ids": [
+    "R9002",
+    "R9003",
+    "R9006"
+  ],
+  "included_chargeback_ids": [
+    "CB7001",
+    "CB7002"
+  ],
+  "excluded_chargeback_ids": [
+    "CB7003",
+    "CB7004"
+  ],
+  "alias_customer_ids": [
+    "C006",
+    "C007",
+    "C010"
+  ]
+}

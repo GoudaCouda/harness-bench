@@ -1,0 +1,11 @@
+{
+  "cleared_cents": 12500,
+  "close_id": "PCLOSE-2026-07-CARDOPS",
+  "exception_cents": 73900,
+  "gross_charges_cents": 91400,
+  "net_feed_cents": 86400,
+  "period": "2026-07",
+  "refunds_cents": -5000,
+  "source_checkpoint": "7ce3d7997ec3bedafbad8de3dd82f952c413f0d5c7aed09794fcdddd6dfdafeb",
+  "transaction_count": 7
+}

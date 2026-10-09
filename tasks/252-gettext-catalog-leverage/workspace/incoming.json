@@ -1,0 +1,18 @@
+[
+  {
+    "string_id": "s-open",
+    "source": "Open gate"
+  },
+  {
+    "string_id": "s-spare",
+    "source": "Spare mill"
+  },
+  {
+    "string_id": "s-new",
+    "source": "Inspect weld"
+  },
+  {
+    "string_id": "s-night",
+    "source": "Night shift"
+  }
+]

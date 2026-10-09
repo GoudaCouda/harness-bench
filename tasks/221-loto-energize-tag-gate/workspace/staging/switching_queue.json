@@ -1,0 +1,42 @@
+{
+  "stream_id": "harborwatch-221",
+  "gate_clock_epoch": 1775086400,
+  "events": [
+    {
+      "order_id": "o1",
+      "asset_id": "feeder-a",
+      "tag_id": "loto-11"
+    },
+    {
+      "order_id": "o2",
+      "asset_id": "feeder-a",
+      "tag_id": "",
+      "telemetry_open": true
+    },
+    {
+      "order_id": "o3",
+      "asset_id": "feeder-b",
+      "tag_id": "loto-12"
+    },
+    {
+      "order_id": "o1",
+      "asset_id": "feeder-a",
+      "tag_id": "loto-11"
+    },
+    {
+      "order_id": "o5",
+      "asset_id": "",
+      "tag_id": "loto-13"
+    },
+    {
+      "order_id": "o6",
+      "asset_id": "feeder-c",
+      "tag_id": ""
+    },
+    {
+      "order_id": "o7",
+      "asset_id": "feeder-c",
+      "tag_id": "loto-14"
+    }
+  ]
+}

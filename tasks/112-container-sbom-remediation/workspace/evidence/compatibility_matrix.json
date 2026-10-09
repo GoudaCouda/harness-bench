@@ -1,0 +1,36 @@
+{
+  "matrix_id": "REPORT-RUNTIME-20-A",
+  "profiles": [
+    {
+      "forbidden_packages": [],
+      "profile_id": "archive-import-and-stream",
+      "required_packages": {
+        "zip-stream": "1.5.1"
+      },
+      "version_constraints": {
+        "archive-stack": ">=4.9.0 <5.0.0",
+        "document-loader": ">=2.3.0 <2.4.0"
+      }
+    },
+    {
+      "forbidden_packages": [
+        "fast-crc-native"
+      ],
+      "profile_id": "native-report-render",
+      "required_packages": {
+        "pixel-abi": "2.6.0",
+        "render-native": "3.1.0"
+      },
+      "version_constraints": {}
+    },
+    {
+      "forbidden_packages": [],
+      "profile_id": "telemetry-regression",
+      "required_packages": {
+        "log-helper": "1.1.0",
+        "telemetry-core": "2.5.0"
+      },
+      "version_constraints": {}
+    }
+  ]
+}

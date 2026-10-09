@@ -1,0 +1,4 @@
+[
+  {"case_id":"stable-monorepo","release_tag":"v2.4.0","previous_tag":"2.3.1","manifests":[{"path":"package.json","ecosystem":"npm","current":"2.3.1","publish":true},{"path":"pyproject.toml","ecosystem":"python","current":"2.4.0","publish":true},{"path":"crates/core/Cargo.toml","ecosystem":"cargo","current":"2.3.1","publish":false}]},
+  {"case_id":"release-candidate","release_tag":"3.0.0-rc.2","previous_tag":"v3.0.0-rc.1","manifests":[{"path":"python/pyproject.toml","ecosystem":"python","current":"3.0.0rc1","publish":true},{"path":"web/package.json","ecosystem":"npm","current":"3.0.0-rc.2","publish":true}]}
+]

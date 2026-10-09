@@ -1,0 +1,10 @@
+source_path,error_type,details
+dropbox/customers/customers_bad.csv,invalid_status,C-003
+dropbox/customers/customers_bad.csv,missing_required_field,C-004 email
+dropbox/customers/customers_extra.csv,duplicate_record_id,C-002
+dropbox/misc/empty.md,unsupported_extension,.md
+dropbox/misc/image.png,unsupported_extension,.png
+dropbox/notes/case_bad.txt,missing_required_field,Case
+dropbox/orders/2026/order_bad.json,invalid_amount,O-102
+dropbox/orders/2026/order_dup.json,duplicate_record_id,O-100
+dropbox/orders/2026/order_missing_currency.json,missing_required_field,currency

@@ -1,0 +1,10 @@
+{
+  "actions": [
+    {
+      "service_id": "billing-api",
+      "presented_chain": ["leaf-api-v2", "int-b"],
+      "truststore_add": ["root-2026"],
+      "truststore_remove": []
+    }
+  ]
+}

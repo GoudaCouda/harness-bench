@@ -1,0 +1,19 @@
+{
+  "by_kind": {
+    "assignment": 1,
+    "bearer_token": 1,
+    "sensitive_key": 3,
+    "url_userinfo": 1
+  },
+  "events": 3,
+  "findings": [
+    {"kind": "sensitive_key", "path": "/auth/Access_Token"},
+    {"kind": "bearer_token", "path": "/message"},
+    {"kind": "url_userinfo", "path": "/exception/message"},
+    {"kind": "assignment", "path": "/exception/message"},
+    {"kind": "sensitive_key", "path": "/cookie"},
+    {"kind": "sensitive_key", "path": "/items/1/refresh_token"}
+  ],
+  "redactions": 6,
+  "status": "redacted"
+}

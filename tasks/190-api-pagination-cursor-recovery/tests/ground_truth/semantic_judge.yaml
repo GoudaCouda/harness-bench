@@ -1,0 +1,5 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material protocol decisions, edge boundaries, verification commands/results,
+    and offline scope for Recover API pagination after cursor invalidation, without claiming external execution?

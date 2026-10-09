@@ -1,0 +1,41 @@
+task_id: 019-wheel-install-transaction-recovery
+title: Recover an interrupted wheel installation transaction safely
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [reverse_rollback, record_ownership, shared_files, drift_detection, idempotent_recovery]
+required_artifacts:
+- repo/src/install_recovery.py
+- repo/recovery_report.json
+- repo/RECOVERY_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [PYPA-WHEEL-SPEC, PYPA-INSTALLED-PROJECTS]
+task_family: package-install-transaction-recovery
+variant: interrupted-wheel-rollback-and-drift-detection
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/recovery_report.json, repo/RECOVERY_NOTES.md]
+  allowed_modified: [repo/src/install_recovery.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    re: stdlib
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

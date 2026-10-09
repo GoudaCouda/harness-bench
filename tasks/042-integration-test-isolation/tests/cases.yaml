@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 042-integration-test-isolation
+pass_threshold: 0.8
+cases:
+- id: fixture_isolation_and_true_outcomes
+  title: Every test receives isolated state and real assertions remain visible
+  description: Deep fixture copying, operations, failure details, result order, and immutability are correct.
+  weight: 0.35
+  core: true
+- id: stable_seed_and_quarantine_boundary
+  title: Random streams and expiring quarantine are deterministic
+  description: Stable per-test seeds, reordered suites, active boundary, expired entries, and passing
+    quarantined tests behave correctly.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_isolation_report
+  title: Visible suites are reproduced exactly
+  description: Report order and outputs match the submitted runner.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Isolation repair and residual risk are handed off
+  description: Notes explain all failure seams and record exact successful verification.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

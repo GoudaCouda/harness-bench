@@ -1,0 +1,4 @@
+$ORIGIN foxtrot.example.
+@ 3600 IN SOA ns1.foxtrot.example. hostmaster.foxtrot.example. 2026081906 3600 900 1209600 300
+@ 3600 IN NS ns1.foxtrot.example.
+ns1 300 IN A 192.0.2.16

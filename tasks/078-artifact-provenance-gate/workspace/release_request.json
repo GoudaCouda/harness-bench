@@ -1,0 +1,1 @@
+{"request_id":"REL-411-PROD","package":"dispatch-suite","version":"4.1.0","tag":"v4.1.0","target":"production","requested_commit":"aa47f00","component_lock":{"dispatch-sdk":"f00ba47","dispatch-cli":"c11aa20"},"required_builder":"ci-release@northstar.example","required_base_channel":"runtime18-hardened"}

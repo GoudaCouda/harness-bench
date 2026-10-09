@@ -1,0 +1,10 @@
+{
+  "database_byte_stable": true,
+  "external_analysis_started": false,
+  "notifications_sent": false,
+  "receipt_byte_stable": true,
+  "recovery_id": "LIMS-ACC-20260819-07",
+  "schema_version": 1,
+  "single_committed_recovery": true,
+  "status": "pass"
+}

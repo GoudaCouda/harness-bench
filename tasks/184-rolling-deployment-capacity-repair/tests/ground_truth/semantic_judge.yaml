@@ -1,0 +1,6 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material allocation decisions, edge boundaries, verification
+    commands/results, and offline scope for Repair rolling-deployment surge planning, without claiming external
+    execution?

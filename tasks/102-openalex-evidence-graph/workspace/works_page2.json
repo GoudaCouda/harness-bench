@@ -1,0 +1,56 @@
+{
+  "page": 2,
+  "pages": 4,
+  "works": [
+    {
+      "id": "W1-DUP",
+      "doi": "https://doi.org/10.OA/ALPHA",
+      "title": "Retrieval benchmarks for clinical synthesis",
+      "publication_year": 2024,
+      "authors": ["A1", "A5"],
+      "referenced_works": ["W2"],
+      "concepts": ["C1", "C3"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W4",
+      "doi": " DOI:10.oa/delta ",
+      "title": "Delta extraction protocol",
+      "publication_year": 2024,
+      "authors": ["A6"],
+      "referenced_works": ["W1"],
+      "concepts": ["C1"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W5",
+      "doi": "10.oa/epsilon",
+      "title": "Epsilon contradiction note",
+      "publication_year": 2024,
+      "authors": ["A2", "A7"],
+      "referenced_works": ["W4"],
+      "concepts": ["C2"],
+      "claim_relation": "contradicts"
+    },
+    {
+      "id": "W6",
+      "doi": "10.oa/zeta",
+      "title": "Zeta disconnected reference audit",
+      "publication_year": 2022,
+      "authors": ["A8"],
+      "referenced_works": ["W-MISSING"],
+      "concepts": ["C3"],
+      "claim_relation": "supports"
+    },
+    {
+      "id": "W8",
+      "doi": "10.oa/iota",
+      "title": "Iota intervention effect estimate",
+      "publication_year": 2024,
+      "authors": ["A9"],
+      "referenced_works": ["W2"],
+      "concepts": ["C2"],
+      "claim_relation": "supports"
+    }
+  ]
+}

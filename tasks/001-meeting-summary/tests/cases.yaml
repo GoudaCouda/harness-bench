@@ -1,0 +1,10 @@
+schema_version: 2
+task_id: 001-meeting-summary
+pass_threshold: 0.8
+cases:
+- {id: role_specific_rollover_decisions, title: KSK and ZSK evidence produce exact per-zone decisions, description: Parent DS quorum and dwell govern KSKs while DNSKEY dwell and RRSIG validity govern ZSKs., weight: 0.30, core: true}
+- {id: journal_and_queue_recovery, title: Interrupted state is restored before the local queue is rebuilt, description: Both before-image journals close and only exact unexecuted follow-up actions enter the local queue., weight: 0.27, core: true}
+- {id: protected_dns_state_and_receipts, title: Zone serials key facts and protected history remain exact, description: Recovery receipts bind decisions while zone and key state stays unchanged after rollback., weight: 0.23, core: true}
+- {id: hash_verify_replay_closure, title: Bundle hashes verification and semantic replay close, description: Local staging artifacts bind one normalized plan and reordered replay performs no mutation., weight: 0.12}
+- {id: dnssec_recovery_handoff, title: DNSSEC recovery handoff is accurate and bounded, description: Handoff explains evidence precedence recovery dispositions verification replay and no-publish boundaries., weight: 0.08}
+- {id: safety_and_source_integrity, title: Immutable DNS evidence and external boundaries hold, description: Sources protected durable state and the no-external-action boundary remain intact., weight: 0.0, gate: true}

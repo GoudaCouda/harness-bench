@@ -1,0 +1,6 @@
+{"address_version": 1, "attempt_id": "ATT-7204-1", "notice_id": "NOTICE-7204", "observed_at": "2026-08-10T14:01:00Z", "provider_message_id": "MSG-7204", "receipt_id": "RCPT-7204-A", "status": "accepted", "verified": true}
+{"address_version": 1, "attempt_id": "ATT-7203-1", "notice_id": "NOTICE-7203", "observed_at": "2026-08-09T14:00:00Z", "provider_message_id": "MSG-7203", "receipt_id": "RCPT-7203-R", "status": "returned", "verified": true}
+{"address_version": 2, "attempt_id": "ATT-7202-1", "notice_id": "NOTICE-7202", "observed_at": "2026-08-07T18:40:00Z", "provider_message_id": "MSG-7202", "receipt_id": "RCPT-7202-D", "status": "delivered", "verified": true}
+{"address_version": 1, "attempt_id": "ATT-7204-1", "notice_id": "NOTICE-7204", "observed_at": "2026-08-10T14:30:00Z", "provider_message_id": "MSG-7204", "receipt_id": "RCPT-7204-T", "status": "callback_timeout", "verified": false}
+{"address_version": 2, "attempt_id": "ATT-7205-1", "notice_id": "NOTICE-7205", "observed_at": "2026-07-10T18:40:00Z", "provider_message_id": "MSG-7205", "receipt_id": "RCPT-7205-D", "status": "delivered", "verified": true}
+{"address_version": 2, "attempt_id": "ATT-7202-1", "notice_id": "NOTICE-7202", "observed_at": "2026-08-07T18:10:00Z", "provider_message_id": "MSG-7202", "receipt_id": "RCPT-7202-T", "status": "callback_timeout", "verified": false}

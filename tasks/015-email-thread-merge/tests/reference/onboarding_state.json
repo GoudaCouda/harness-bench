@@ -1,0 +1,32 @@
+{
+  "account": "Northwind",
+  "as_of": "2026-08-04T11:30:00-04:00",
+  "overall_status": "blocked",
+  "milestones": {
+    "security_questionnaire": {
+      "owner": "Sam Patel",
+      "status": "in_progress",
+      "target_date": "2026-08-07",
+      "blocked_by": [],
+      "next_action": "Send the security questionnaire to Morgan; try for today but retain Friday as the committed deadline.",
+      "evidence_message_ids": ["m-100", "m-101", "m-102"]
+    },
+    "procurement_approval": {
+      "owner": "Northwind procurement",
+      "status": "blocked",
+      "target_date": null,
+      "blocked_by": ["security_questionnaire"],
+      "next_action": "Morgan confirms the procurement decision after the questionnaire is reviewed.",
+      "evidence_message_ids": ["m-100", "m-102"]
+    },
+    "pilot_kickoff": {
+      "owner": "Sam Patel",
+      "status": "tentative",
+      "target_date": "2026-08-18",
+      "blocked_by": ["procurement_approval"],
+      "next_action": "Confirm the kickoff only after Northwind procurement approves.",
+      "evidence_message_ids": ["m-100", "m-101", "m-102"]
+    }
+  },
+  "ignored_message_ids": ["m-200"]
+}

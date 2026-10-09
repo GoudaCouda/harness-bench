@@ -1,0 +1,6 @@
+{
+  "as_of": "2026-08-16T12:00:00Z",
+  "receipts": [
+    {"receipt_id": "SHIP-200-A", "order_id": "O-200", "reservation_id": "RSV-200", "sku": "SKU-A", "quantity": 3, "verified": true}
+  ]
+}

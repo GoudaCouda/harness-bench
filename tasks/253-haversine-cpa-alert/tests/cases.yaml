@@ -1,0 +1,25 @@
+schema_version: 2
+task_id: 253-haversine-cpa-alert
+pass_threshold: 0.8
+cases:
+- id: cpa_pair
+  title: The CPA pair and timestamp match the kernel
+  description: cpa.json pair and t equal the independent kernel.
+  weight: 0.5
+  core: true
+- id: distance_alert
+  title: Rounded distance and alert flag match
+  description: distance_nm and alert equal the independent kernel.
+  weight: 0.3
+  core: true
+- id: verification_handoff
+  title: Notes explain haversine and risk
+  description: CPA_NOTES.md covers haversine, threshold, vessel_id, verification, and risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Protected tracks remain unchanged
+  description: Track JSON stays byte-identical.
+  weight: 0.0
+  core: false
+  gate: true

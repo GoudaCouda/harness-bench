@@ -1,0 +1,4 @@
+term,estimate,std_error,n
+intercept,21.40,1.12,4
+age_band_70_79,-3.20,1.45,1
+age_band_80_89,-6.10,1.62,1

@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 075-git-case-rename-recovery
+pass_threshold: 0.8
+cases:
+- id: casefold_and_cycle_planning
+  title: Case-only and cyclic renames receive deterministic temporary hops
+  description: Operations are executable in order without overwriting tracked paths.
+  weight: 0.35
+  core: true
+- id: index_identity_and_collision_safety
+  title: Object identity is preserved while malformed or colliding batches fail closed
+  description: Final entries retain OIDs and unmerged, unsafe, duplicate, or occupied paths are blocked.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_rename_plan
+  title: Visible rename incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Filesystem and index risks are handed off
+  description: Notes explain casefolding, temporary hops, identity, verification, and residual risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_git_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

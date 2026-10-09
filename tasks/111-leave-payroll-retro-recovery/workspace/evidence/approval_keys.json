@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "keys": [
+    {"key_id": "K-HR-7", "signer": "SYNTHETIC-HR-DIRECTOR", "role": "payroll_hr_director", "scopes": ["leave_retro"], "status": "active", "verification_material": "northstar-offline-key-7"},
+    {"key_id": "K-MGR-3", "signer": "SYNTHETIC-LINE-MANAGER", "role": "line_manager", "scopes": ["schedule_review"], "status": "active", "verification_material": "northstar-offline-key-3"},
+    {"key_id": "K-HR-OLD", "signer": "SYNTHETIC-FORMER-HR", "role": "payroll_hr_director", "scopes": ["leave_retro"], "status": "revoked", "verification_material": "northstar-offline-key-old"}
+  ]
+}

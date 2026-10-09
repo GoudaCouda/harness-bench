@@ -1,0 +1,17 @@
+{
+  "schema_version": "case19_skillctl_contract_v1",
+  "commands": {
+    "inspect": {
+      "description": "列出技能源目录中的普通文件、大小和 SHA-256，不跟随符号链接。",
+      "side_effect": "read_only"
+    },
+    "validate-manifest": {
+      "description": "校验待打包清单的固定元数据、必需文件集合、大小和 SHA-256。",
+      "side_effect": "read_only"
+    },
+    "package": {
+      "description": "校验清单后，以固定时间戳和普通文件权限生成安全 ZIP。",
+      "side_effect": "workspace_write"
+    }
+  }
+}

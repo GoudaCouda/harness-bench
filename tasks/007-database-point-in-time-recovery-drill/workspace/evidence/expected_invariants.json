@@ -1,0 +1,12 @@
+{
+  "incident_id": "DB-INC-2026-0817-04",
+  "target_restore_point": "before_batch_cleanup",
+  "checks": [
+    {"check_id": "customers_active_count", "kind": "scalar", "expected": 1250},
+    {"check_id": "open_invoice_amount_sum", "kind": "scalar", "expected": 482190},
+    {"check_id": "invoice_INV-9912_present", "kind": "boolean", "expected": true},
+    {"check_id": "cleanup_audit_marker_absent", "kind": "boolean", "expected": true},
+    {"check_id": "foreign_key_violations", "kind": "scalar", "expected": 0},
+    {"check_id": "database_accepts_writes", "kind": "boolean", "expected": false}
+  ]
+}

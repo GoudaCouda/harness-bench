@@ -1,0 +1,19 @@
+{
+  "stream_id": "harborwatch-0322",
+  "gate_clock_epoch": 1774170000,
+  "counts": {
+    "accepted": 3,
+    "quarantined": 2,
+    "malformed": 2
+  },
+  "accepted_ids": [
+    "ev1",
+    "ev3",
+    "ev6"
+  ],
+  "quarantined_ids": [
+    "ev2",
+    "ev7"
+  ],
+  "state": "gated"
+}

@@ -1,0 +1,30 @@
+{
+  "decisions": [
+    {
+      "action": "keep",
+      "bytes": 5,
+      "id": "fresh",
+      "reason": "not_expired"
+    },
+    {
+      "action": "keep",
+      "bytes": 10,
+      "id": "held",
+      "reason": "legal_hold"
+    },
+    {
+      "action": "delete",
+      "bytes": 40,
+      "id": "old",
+      "reason": "expired"
+    },
+    {
+      "action": "keep",
+      "bytes": 20,
+      "id": "tomb",
+      "reason": "not_expired"
+    }
+  ],
+  "planned_bytes": 40,
+  "remaining_capacity": 10
+}

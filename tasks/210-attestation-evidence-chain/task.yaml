@@ -1,0 +1,63 @@
+task_id: 210-attestation-evidence-chain
+title: Rebuild an attestation evidence chain after a signing-key rotation
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Compliance
+task_category: Systems Engineering
+task_subcategory: Operations and Deployment
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- local_state_machine
+- evidence_chain
+- signature_verification
+harness_demands:
+- state_management
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+stressors:
+- conflicting_evidence
+- stale_state
+- key_rotation
+- cache_inconsistency
+required_artifacts:
+- state/attestation_ledger.json
+- state/verification_receipt.json
+- state/verification.json
+- attestation_chain_handoff.md
+task_family: 210-attestation-evidence-chain
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - SIGSTORE-COSIGN
+  - IN-TOTO-ATTESTATION
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - state/attestation_ledger.json
+  - state/verification_receipt.json
+  - state/verification.json
+  - attestation_chain_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

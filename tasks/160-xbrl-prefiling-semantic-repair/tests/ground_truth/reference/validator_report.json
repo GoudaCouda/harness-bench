@@ -1,0 +1,18 @@
+{
+  "validator_version": "local-filing-validator-1",
+  "candidate_sha256": "22cb1f5d9a73da60fae0dd2dc918d73adcc8272c6002305e0b279d1a1eb3afd1",
+  "checks": {
+    "canonical_cik": true,
+    "reporting_period": true,
+    "canonical_taxonomy": true,
+    "single_canonical_year_context": true,
+    "all_fact_contexts_resolve": true,
+    "fact_inventory_preserved": true,
+    "revenue_value_preserved": true,
+    "assets_value_preserved": true,
+    "canonical_exhibit_filename": true
+  },
+  "errors": [],
+  "warnings": [],
+  "status": "pass"
+}

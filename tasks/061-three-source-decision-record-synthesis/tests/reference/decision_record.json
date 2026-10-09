@@ -1,0 +1,72 @@
+{
+  "decision_id": "DR-001",
+  "final_decisions": [
+    {
+      "decision_key": "launch_date",
+      "value": "july 15 | 2026",
+      "status": "confirmed",
+      "winning_source": "email/thread.json#email-004",
+      "evidence_signal": "July 15 | superseded"
+    },
+    {
+      "decision_key": "deployment_mode",
+      "value": "mode b",
+      "status": "confirmed",
+      "winning_source": "docs/security_review.md",
+      "evidence_signal": "mode B | approved"
+    },
+    {
+      "decision_key": "budget_cap",
+      "value": "180000",
+      "status": "confirmed",
+      "winning_source": "docs/finance_constraints.md",
+      "evidence_signal": "USD 180000 | capped"
+    },
+    {
+      "decision_key": "feature_scope",
+      "value": "standard sync | admin reporting | exclude | real-time export",
+      "status": "confirmed",
+      "winning_source": "docs/legal_notes.md",
+      "evidence_signal": "must not be included | first launch"
+    },
+    {
+      "decision_key": "approval_gate",
+      "value": "security | finance | legal",
+      "status": "confirmed",
+      "winning_source": "docs/product_requirements.md",
+      "evidence_signal": "security approval | finance | legal"
+    }
+  ],
+  "rejected_options": [
+    {
+      "option": "mode A",
+      "reason": "blocked by the formal security review",
+      "source_file": "docs/security_review.md",
+      "evidence_signal": "mode A | blocked"
+    },
+    {
+      "option": "June 20 launch",
+      "reason": "superseded by the later decision email",
+      "source_file": "email/thread.json#email-004",
+      "evidence_signal": "June 20 | superseded"
+    },
+    {
+      "option": "real-time export",
+      "reason": "must not be included in the first launch",
+      "source_file": "docs/legal_notes.md",
+      "evidence_signal": "real-time export | must not be included"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Who owns the post-launch support rotation?",
+      "why_unresolved": "The support rotation owner remains unresolved.",
+      "needed_evidence": "An operations staffing decision naming the owner."
+    },
+    {
+      "question": "Will a 24/7 launch rotation be staffed?",
+      "why_unresolved": "Only two temporary support contractors are approved.",
+      "needed_evidence": "A separate staffing decision for the 24/7 rotation."
+    }
+  ]
+}

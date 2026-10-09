@@ -1,0 +1,26 @@
+{
+  "event_identity_rule": "first_delivery_per_event_id",
+  "event_order_rule": "source_sequence_then_event_id",
+  "evidence_rules": {
+    "closing_authorization": "signed document plus accepted closing_authorized event",
+    "holdback_release": "signed matching document plus accepted holdback_release_authorized event",
+    "instruction": "signed document hash, payee, account suffix, and amount must match",
+    "recording": "existing protected timestamp or accepted recording_confirmed event"
+  },
+  "hold_priority": [
+    "hold_wire_missing",
+    "hold_wire_amount_mismatch",
+    "hold_missing_closing_authorization",
+    "hold_payee_unverified",
+    "hold_instruction_mismatch",
+    "hold_funds_not_conserved",
+    "hold_recording_pending"
+  ],
+  "local_only": true,
+  "recovery_id": "EDR-20260819-01",
+  "schema_version": 1,
+  "stage_actions": {
+    "holdback_release_ready": "stage_local_holdback_release_packet",
+    "ready_local_disbursement_packet": "stage_local_disbursement_packet"
+  }
+}

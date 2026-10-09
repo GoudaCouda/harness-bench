@@ -1,0 +1,302 @@
+{
+  "edges": [
+    {
+      "events": [
+        {
+          "at": 70,
+          "generation": 1,
+          "id": "boundary",
+          "service": "s",
+          "status": "failure"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 90,
+          "generation": 2,
+          "id": "new",
+          "service": "s",
+          "status": "success"
+        },
+        {
+          "at": 99,
+          "generation": 1,
+          "id": "old",
+          "service": "s",
+          "status": "failure"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "events": [
+        {
+          "at": 80,
+          "generation": 2,
+          "id": "a1",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 90,
+          "generation": 2,
+          "id": "a2",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 95,
+          "generation": 2,
+          "id": "a3",
+          "service": "api",
+          "status": "success"
+        },
+        {
+          "at": 99,
+          "generation": 1,
+          "id": "old",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 85,
+          "generation": 1,
+          "id": "w1",
+          "service": "worker",
+          "status": "maintenance_start"
+        },
+        {
+          "at": 90,
+          "generation": 1,
+          "id": "w2",
+          "service": "worker",
+          "status": "failure"
+        },
+        {
+          "at": 80,
+          "generation": 2,
+          "id": "a1",
+          "service": "api",
+          "status": "failure"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 80,
+          "generation": 2,
+          "id": "a1",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 90,
+          "generation": 2,
+          "id": "a2",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 95,
+          "generation": 2,
+          "id": "a3",
+          "service": "api",
+          "status": "success"
+        },
+        {
+          "at": 99,
+          "generation": 1,
+          "id": "old",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 85,
+          "generation": 1,
+          "id": "w1",
+          "service": "worker",
+          "status": "maintenance_start"
+        },
+        {
+          "at": 90,
+          "generation": 1,
+          "id": "w2",
+          "service": "worker",
+          "status": "failure"
+        }
+      ],
+      "policy": {
+        "max_failures": 0,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    }
+  ],
+  "primary": [
+    {
+      "events": [
+        {
+          "at": 80,
+          "generation": 2,
+          "id": "a1",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 90,
+          "generation": 2,
+          "id": "a2",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 95,
+          "generation": 2,
+          "id": "a3",
+          "service": "api",
+          "status": "success"
+        },
+        {
+          "at": 99,
+          "generation": 1,
+          "id": "old",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 85,
+          "generation": 1,
+          "id": "w1",
+          "service": "worker",
+          "status": "maintenance_start"
+        },
+        {
+          "at": 90,
+          "generation": 1,
+          "id": "w2",
+          "service": "worker",
+          "status": "failure"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 80,
+          "generation": 2,
+          "id": "a1",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 90,
+          "generation": 2,
+          "id": "a2",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 95,
+          "generation": 2,
+          "id": "a3",
+          "service": "api",
+          "status": "success"
+        },
+        {
+          "at": 99,
+          "generation": 1,
+          "id": "old",
+          "service": "api",
+          "status": "failure"
+        },
+        {
+          "at": 85,
+          "generation": 1,
+          "id": "w1",
+          "service": "worker",
+          "status": "maintenance_start"
+        },
+        {
+          "at": 90,
+          "generation": 1,
+          "id": "w2",
+          "service": "worker",
+          "status": "failure"
+        },
+        {
+          "at": 96,
+          "generation": 2,
+          "id": "a4",
+          "service": "api",
+          "status": "success"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    },
+    {
+      "events": [
+        {
+          "at": 90,
+          "generation": 1,
+          "id": "m",
+          "service": "s",
+          "status": "maintenance_start"
+        },
+        {
+          "at": 91,
+          "generation": 1,
+          "id": "f",
+          "service": "s",
+          "status": "failure"
+        },
+        {
+          "at": 92,
+          "generation": 1,
+          "id": "e",
+          "service": "s",
+          "status": "maintenance_end"
+        }
+      ],
+      "policy": {
+        "max_failures": 2,
+        "now": 100,
+        "recovery_successes": 2,
+        "window": 30
+      }
+    }
+  ]
+}

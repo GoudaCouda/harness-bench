@@ -1,0 +1,10 @@
+{
+  "accounts": {
+    "acct-a": {"balance_cents": 1050, "version": 4},
+    "acct-b": {"balance_cents": 475, "version": 3},
+    "acct-c": {"balance_cents": 500, "version": 2}
+  },
+  "applied_event_ids": ["e100","e101","e102","e103","e104","e105","e106","e107","e108"],
+  "cursor": {"segment":"segment-00042.jsonl","line_no":6,"event_id":"e108"},
+  "newly_applied_event_ids": ["e105","e106","e107","e108"]
+}

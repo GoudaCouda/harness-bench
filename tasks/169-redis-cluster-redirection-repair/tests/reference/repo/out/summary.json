@@ -1,0 +1,9 @@
+{
+  "block": 2,
+  "complete": 1,
+  "refresh_and_retry": 1,
+  "request_count": 7,
+  "retry_backoff": 1,
+  "retry_redirect": 2,
+  "topology_updates": 1
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "case11_fixture_variants_v2",
+  "variants": {
+    "primary": {
+      "weekly_operations.csv": {"path": "fixtures/weekly_operations.csv", "sha256": "8b9585a6c0e328f7a86cdde303d0ce19cf7a9738aa6d16f0cdd9c9ba8320861e"},
+      "metric_definitions.json": {"path": "fixtures/metric_definitions.json", "sha256": "d25a3195060afa8e8947f96801814586d23d63e0d8680ac948be0521f8aef1cd"},
+      "brief_template.md": {"path": "fixtures/brief_template.md", "sha256": "f64ed5386fc9541eb314af91df6aa8af86737940461beb1da5fa8111ab821649"}
+    },
+    "alternate": {
+      "weekly_operations.csv": {"path": "tests/hidden/alternate_weekly_operations.csv", "sha256": "457e2d47d7d93883f799e5694560df2d0e46a457e2889cefc4fc679a5da3660f"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "minimal_valid": {
+      "weekly_operations.csv": {"path": "tests/hidden/minimal_valid_weekly_operations.csv", "sha256": "265374edee239ee18f8b75d4bfec52ddf81568065019d5d0671375b77aad32eb"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_missing_column": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_weekly_operations.csv", "sha256": "b8b9f2b70532c7686b23fda6ba2d504bcc14c0cddcd1078b222a795488b9fa15"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_extra_cell": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_extra_cell_weekly_operations.csv", "sha256": "d16573bea4a58d8339ee969392f7cb3b2ab582051fc1dbb174c61de4c7eb1943"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_date": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_date_weekly_operations.csv", "sha256": "2d6e5319c222bc2164b5e0cc8e4274cbcc25aea147d3ff556af9125acbc125dd"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_numeric": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_numeric_weekly_operations.csv", "sha256": "8e8d1245c178a3f534b8c17f7ce49ff7adf66b55244fe0e947d936b6de416c50"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_duplicate": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_duplicate_weekly_operations.csv", "sha256": "6d2fd4664b6cfb0b15944cbcb3e8c7a622fce47c57bd71d557fda51e39a2511b"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_logic": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_logic_weekly_operations.csv", "sha256": "2babbc53b18099fb87d8287d97b4a752e83d324f653fe16f0a34f7a5d13cce7b"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    },
+    "invalid_zero_denominator": {
+      "weekly_operations.csv": {"path": "tests/hidden/invalid_zero_denominator_weekly_operations.csv", "sha256": "493343bb6f46c955f627dcc5466853d50984dfd8656db7c2e6289a0aaf244815"},
+      "metric_definitions.json": {"path": "tests/hidden/alternate_metric_definitions.json", "sha256": "579a920fdbc553ecdcbed790bcd395184abad8a80e9bf31158abf9e63366112d"},
+      "brief_template.md": {"path": "tests/hidden/alternate_brief_template.md", "sha256": "37c1247ef62d2bdf3289b0747f772c7790763b079ef74922a878662f479f0298"}
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": "nami_work_case10_hidden_cases_v1",
+  "success_cases": [
+    {
+      "case_id": "empty",
+      "payload": {"records": []}
+    },
+    {
+      "case_id": "stable_and_aggregate",
+      "payload": {
+        "records": [
+          {"id": " a ", "category": "beta", "amount": 1.2, "priority": 3},
+          {"id": "b", "category": "alpha", "amount": 2, "active": false},
+          {"id": "c", "category": "beta", "amount": 1.2, "priority": 3, "active": true},
+          {"id": "d", "category": "beta", "amount": 1.2, "priority": 3, "active": false},
+          {"id": "e", "category": "alpha", "amount": 2, "priority": 5}
+        ]
+      }
+    },
+    {
+      "case_id": "unicode_codepoint_sort",
+      "payload": {
+        "records": [
+          {"id": "z", "category": "中", "amount": 0.01},
+          {"id": "x", "category": "A", "amount": 1000000000},
+          {"id": "y", "category": "a", "amount": 0}
+        ]
+      }
+    },
+    {
+      "case_id": "inclusive_schema_boundaries",
+      "payload": {
+        "records": [
+          {"id": " max ", "category": "边界", "amount": 1000000000, "priority": 1000, "active": false},
+          {"id": "min", "category": "😀", "amount": 0, "priority": -1000, "active": true}
+        ]
+      }
+    }
+  ],
+  "error_cases": [
+    {
+      "case_id": "malformed_json",
+      "raw_input": "{not-json",
+      "code": "INVALID_JSON",
+      "message": "Input is not valid JSON."
+    },
+    {
+      "case_id": "wrong_top_schema",
+      "payload": {"records": [], "extra": true},
+      "code": "INVALID_INPUT",
+      "message": "Input must match the fixed top-level schema."
+    },
+    {
+      "case_id": "missing_records",
+      "payload": {},
+      "code": "INVALID_INPUT",
+      "message": "Input must match the fixed top-level schema."
+    },
+    {
+      "case_id": "top_level_array",
+      "payload": [],
+      "code": "INVALID_INPUT",
+      "message": "Input must match the fixed top-level schema."
+    },
+    {
+      "case_id": "records_not_array",
+      "payload": {"records": {}},
+      "code": "INVALID_INPUT",
+      "message": "Input must match the fixed top-level schema."
+    },
+    {
+      "case_id": "record_not_object",
+      "payload": {"records": [null]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "missing_field",
+      "payload": {"records": [{"id": "m", "category": "ops"}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "duplicate_trimmed_id",
+      "payload": {"records": [{"id": "d", "category": "ops", "amount": 1}, {"id": " d ", "category": "dev", "amount": 2}]},
+      "code": "DUPLICATE_ID",
+      "message": "Record ids must be unique after trimming."
+    },
+    {
+      "case_id": "invalid_negative_amount",
+      "payload": {"records": [{"id": "n", "category": "ops", "amount": -0.01}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "invalid_fractional_cents",
+      "payload": {"records": [{"id": "p", "category": "ops", "amount": 1.001}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "unexpected_record_field",
+      "payload": {"records": [{"id": "e", "category": "ops", "amount": 1, "extra": true}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "blank_trimmed_id",
+      "payload": {"records": [{"id": "   ", "category": "ops", "amount": 1}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "blank_trimmed_category",
+      "payload": {"records": [{"id": "c", "category": "  ", "amount": 1}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "amount_above_maximum",
+      "payload": {"records": [{"id": "m", "category": "ops", "amount": 1000000000.01}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "priority_out_of_range",
+      "payload": {"records": [{"id": "r", "category": "ops", "amount": 1, "priority": 1001}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "priority_not_integer",
+      "payload": {"records": [{"id": "f", "category": "ops", "amount": 1, "priority": 1.5}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "active_not_boolean",
+      "payload": {"records": [{"id": "b", "category": "ops", "amount": 1, "active": 1}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "amount_not_number",
+      "payload": {"records": [{"id": "s", "category": "ops", "amount": "1.00"}]},
+      "code": "INVALID_RECORD",
+      "message": "A record violates the fixed record schema."
+    },
+    {
+      "case_id": "record_count_above_maximum",
+      "payload_generator": {"kind": "null_records", "count": 50001},
+      "code": "INVALID_INPUT",
+      "message": "Input must match the fixed top-level schema."
+    },
+    {
+      "case_id": "input_above_two_mib",
+      "raw_input_repeat": {"text": "x", "count": 2097153},
+      "code": "INVALID_INPUT",
+      "message": "Input exceeds the 2 MiB limit."
+    }
+  ],
+  "performance_case": {
+    "case_id": "fixed_50000_compact_records",
+    "generator": "compact_max_records",
+    "record_count": 50000,
+    "category_count": 1,
+    "amount_modulus_cents": 1,
+    "timeout_seconds": 8
+  }
+}

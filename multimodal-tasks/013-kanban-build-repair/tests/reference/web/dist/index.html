@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Kanban Build Repair</title><style>* { box-sizing: border-box; }
+:root { color: #172026; background: #f4f6f8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { margin: 0; }
+button, select { font: inherit; }
+.app-shell { width: min(1280px, calc(100vw - 32px)); margin: 0 auto; padding: 24px 0 40px; }
+.topbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 2rem; line-height: 1.1; }
+.lead { color: #52616a; margin-top: 8px; max-width: 760px; }
+.eyebrow { color: #65727a; font-size: .78rem; font-weight: 800; text-transform: uppercase; }
+.toolbar, .metrics, .board, .detail-grid, .history { display: grid; gap: 12px; }
+.toolbar { grid-template-columns: repeat(4, minmax(0, 1fr)); background: #fff; border: 1px solid #d9e0e4; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+.toolbar label { display: grid; gap: 6px; color: #40505a; font-weight: 700; font-size: .88rem; }
+select, button { min-height: 40px; border: 1px solid #9cadb6; border-radius: 6px; background: #fff; color: #172026; padding: 8px 10px; }
+button { cursor: pointer; font-weight: 800; }
+button:hover { border-color: #295c6f; }
+button:focus-visible, select:focus-visible { outline: 3px solid #2f6f83; outline-offset: 2px; }
+.primary-action { background: #1f5264; color: #fff; border-color: #1f5264; }
+.metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 16px; }
+.metric, .lane, .inspector { background: #fff; border: 1px solid #d9e0e4; border-radius: 8px; padding: 14px; }
+.metric strong { display: block; font-size: 1.55rem; margin-top: 4px; }
+.metric span, .fact span { color: #65727a; font-size: .78rem; font-weight: 800; }
+.board { grid-template-columns: repeat(4, minmax(180px, 1fr)); align-items: start; }
+.lane { min-height: 260px; }
+.lane header { display: flex; justify-content: space-between; gap: 8px; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #e6ebee; margin-bottom: 10px; }
+.lane-count { color: #54636b; font-size: .82rem; font-weight: 800; }
+.card-list { display: grid; gap: 8px; }
+.card { width: 100%; text-align: left; display: grid; gap: 5px; border-color: #c9d4da; }
+.card.active { background: #e7f1f2; border-color: #1f5264; }
+.card small { color: #5f6d75; }
+.status-blocked { color: #9b2d20; font-weight: 800; }
+.status-active { color: #7a4e00; font-weight: 800; }
+.status-ready { color: #1f5264; font-weight: 800; }
+.status-done { color: #376737; font-weight: 800; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 16px; align-items: start; }
+.inspector { position: sticky; top: 14px; }
+.detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; }
+.fact { border: 1px solid #e2e8eb; border-radius: 6px; padding: 10px; }
+.history { margin-top: 12px; }
+.history li { margin-bottom: 6px; }
+@media (max-width: 900px) { .toolbar, .metrics, .workspace, .board { grid-template-columns: 1fr; } .inspector { position: static; } h1 { font-size: 1.45rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+</style></head><body><div id="root"></div><script>
+const initialCards = [{"id": "KAN-101", "title": "Restore drag fallback", "lane": "Backlog", "owner": "Kai", "status": "blocked", "estimate": 8, "blockers": 3}, {"id": "KAN-108", "title": "Fix card overflow", "lane": "In Progress", "owner": "Mira", "status": "active", "estimate": 5, "blockers": 1}, {"id": "KAN-117", "title": "Column count audit", "lane": "Review", "owner": "Leo", "status": "ready", "estimate": 3, "blockers": 0}, {"id": "KAN-126", "title": "Release note cleanup", "lane": "Done", "owner": "Mira", "status": "done", "estimate": 2, "blockers": 0}, {"id": "KAN-132", "title": "Repair flaky smoke test", "lane": "Backlog", "owner": "Ari", "status": "blocked", "estimate": 6, "blockers": 2}, {"id": "KAN-144", "title": "Keyboard reorder path", "lane": "In Progress", "owner": "Kai", "status": "active", "estimate": 4, "blockers": 1}, {"id": "KAN-155", "title": "Regression checklist", "lane": "Review", "owner": "Mira", "status": "ready", "estimate": 7, "blockers": 0}, {"id": "KAN-166", "title": "Archive stale fixture", "lane": "Done", "owner": "Leo", "status": "done", "estimate": 1, "blockers": 0}];
+const lanes = ["Backlog","In Progress","Review","Done"];
+let cards = initialCards.map(card => ({...card})); let selectedId = "KAN-101"; let history = [];
+const root = document.getElementById('root');
+function metric() { const blockedPoints = cards.filter(c=>c.status==='blocked').reduce((s,c)=>s+c.estimate,0); const reviewCount = cards.filter(c=>c.lane==='Review').length; const activeWip = cards.filter(c=>c.lane==='In Progress').reduce((s,c)=>s+c.estimate,0); const last = history[history.length-1]; return {blockedPoints, reviewCount, activeWip, lastMove: last ? `${last.id} ${last.from} to ${last.to}` : 'No moves yet'}; }
+function move(to) { const card = cards.find(c=>c.id===selectedId); if (!card || card.lane===to) return; history.push({id:selectedId, from:card.lane, to}); card.lane = to; render(); }
+function undo() { const last = history.pop(); if (!last) return; const card = cards.find(c=>c.id===last.id); if (card) card.lane = last.from; selectedId = last.id; render(); }
+function laneStats(lane) { const laneCards = cards.filter(c=>c.lane===lane); return {count:laneCards.length, estimate:laneCards.reduce((s,c)=>s+c.estimate,0), cards:laneCards}; }
+function render() { const selected = cards.find(c=>c.id===selectedId) || cards[0]; const m = metric(); root.innerHTML = `<main class="app-shell" aria-label="Kanban build repair board"><header class="topbar"><div><p class="eyebrow">Build repair</p><h1>Drag-aware Kanban build board</h1><p class="lead">Move protected build cards through Backlog, In Progress, Review, and Done with deterministic fallback controls.</p></div></header><section class="toolbar" aria-label="Selected card movement controls"><button type="button" class="primary-action" id="moveReview">Move selected to Review</button><button type="button" id="moveDone">Move selected to Done</button><button type="button" id="undo">Undo last move</button><label>Jump selected lane<select id="jump" aria-label="Jump selected lane">${lanes.map(l=>`<option value="${l}" ${selected.lane===l?'selected':''}>${l}</option>`).join('')}</select></label></section><section class="metrics" aria-label="Kanban movement metrics"><article class="metric"><span>Blocked points</span><strong>${m.blockedPoints}</strong><small>Blocked estimates remain visible</small></article><article class="metric"><span>Review count</span><strong>${m.reviewCount}</strong><small>Cards currently in Review</small></article><article class="metric"><span>Active WIP</span><strong>${m.activeWip}</strong><small>Estimate in In Progress</small></article><article class="metric"><span>Last move</span><strong>${m.lastMove}</strong><small>${history.length} local moves</small></article></section><section class="workspace"><section class="board" aria-label="Kanban lanes">${lanes.map(l=>{ const stats=laneStats(l); return `<section class="lane" aria-label="${l} lane"><header><h2>${l}</h2><span class="lane-count">${stats.count} cards / ${stats.estimate} pts</span></header><div class="card-list">${stats.cards.map(card=>`<button class="card ${card.id===selectedId?'active':''}" type="button" data-id="${card.id}" draggable="true"><strong>${card.id} - ${card.title}</strong><small>${card.owner} / <span class="status-${card.status}">${card.status}</span> / ${card.estimate} pts / ${card.blockers} blockers</small></button>`).join('')}</div></section>`; }).join('')}</section><aside class="inspector" aria-live="polite" aria-label="Selected card detail"><p class="eyebrow">Selected card</p><h2>${selected.id} - ${selected.title}</h2><div class="detail-grid"><div class="fact"><span>Owner</span><strong>${selected.owner}</strong></div><div class="fact"><span>Status</span><strong>${selected.status}</strong></div><div class="fact"><span>Lane</span><strong>${selected.lane}</strong></div><div class="fact"><span>Estimate</span><strong>${selected.estimate}</strong></div><div class="fact"><span>Blockers</span><strong>${selected.blockers}</strong></div><div class="fact"><span>Card id</span><strong>${selected.id}</strong></div></div><ol class="history" aria-label="Action history">${history.length?history.map((event,index)=>`<li>${event.id} moved from ${event.from} to ${event.to}</li>`).join(''):'<li>No moves yet</li>'}</ol></aside></section></main>`; document.getElementById('moveReview').onclick=()=>move('Review'); document.getElementById('moveDone').onclick=()=>move('Done'); document.getElementById('undo').onclick=undo; document.getElementById('jump').onchange=(event)=>move(event.target.value); document.querySelectorAll('[data-id]').forEach(btn=>btn.onclick=()=>{ selectedId=btn.getAttribute('data-id'); render(); }); }
+render();
+</script></body></html>

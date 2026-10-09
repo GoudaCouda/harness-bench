@@ -1,0 +1,15 @@
+{
+  "directories": [
+    {"mode": 493, "path": "inputs"}
+  ],
+  "files": [
+    {"mode": 420, "path": "TASK.md", "sha256": "1f360a5b7be0b00540054ce3d0d4d482bd1602f16ac3fdf04cf75afa6447a958", "size_bytes": 1114},
+    {"mode": 420, "path": "inputs/nonbinding_sales_projection.json", "sha256": "af52754e881b7e35467ecd9eb6b091a61e5a6f1574acb3b5396a11c1a5bfd846", "size_bytes": 251},
+    {"mode": 420, "path": "inputs/output_contract.json", "sha256": "aaffca632d3ebe87db9ef173ed71d0d941b409c83f7ef174389c103bc6438aa8", "size_bytes": 1152},
+    {"mode": 420, "path": "inputs/region_registry.csv", "sha256": "759d275e0bc6f7c77c4e33d7dc0aeffb4f5188aa049a3d7ae4c605e4c1623e55", "size_bytes": 196},
+    {"mode": 420, "path": "inputs/service_events_2025_q3.jsonl", "sha256": "fced76d0482626098d3ceb7bb0e4c263371eb5388303c2738ac64dad32b6814f", "size_bytes": 1395},
+    {"mode": 420, "path": "inputs/sla_rules.json", "sha256": "448e7279baa82ed83a821306aa2b700717a9efcc16abf8cbbd324eeac6dc1a9e", "size_bytes": 1170}
+  ],
+  "schema_version": "case14_workspace_manifest_v2",
+  "tree_sha256": "368543556635db8c37b5e60882ac45f5e081917dd243cdd255fcdd8e9b9e533c"
+}

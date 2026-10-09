@@ -1,0 +1,30 @@
+schema_version: 1
+task_id: 088-cardinality-guarded-join
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: cardinality_explanation
+  title: Both dimension joins prevent row multiplication
+  question: Does the analysis explain that customer and rate dimensions were each made many-to-one before joining orders?
+  pass_anchors: [Uniqueness-before-join or equivalent cardinality language is acceptable.]
+  fail_anchors: [Discussing duplicates without both join boundaries fails.]
+- id: current_duplicate_resolution
+  title: Resolvable duplicates use the unique current record
+  question: Does the analysis explain that customer C2 and the July-1 EUR rate each have one authoritative current row and were selected?
+  pass_anchors: [Equivalent unique-latest or authoritative-version wording is acceptable.]
+  fail_anchors: [Either dimension choice is absent or arbitrary.]
+- id: rejection_explanation
+  title: Unresolved and missing keys keep distinct causes
+  question: Does the analysis distinguish null customer O3, unmatched customer O4, ambiguous customers O5/O9, ambiguous rate O6, and unmatched rate O7?
+  pass_anchors: [Equivalent referential-miss and ambiguity wording is acceptable.]
+  fail_anchors: [Failures are collapsed into an unexplained generic rejection.]
+- id: revenue_reconciliation
+  title: Revenue includes the valid refund and ties out
+  question: Does the analysis reconcile six matched orders to USD 585, including O12 as a negative USD 10 refund, without counting rejected rows?
+  pass_anchors: [Equivalent ledger tie-out wording is acceptable.]
+  fail_anchors: [The refund, total, accepted row set, or reconciliation is wrong or missing.]
+output_schema:
+  verdict_values: [pass, fail]
+  required_per_criterion: [id, verdict, evidence, reason]
+  evidence_max_items: 2

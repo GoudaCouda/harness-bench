@@ -1,0 +1,114 @@
+{
+  "findings": [
+    {
+      "action": "restore pre-specified Day 28 primary designation",
+      "artifact": "results_submission",
+      "authority_ids": [
+        "REG-V2",
+        "SAP-V2"
+      ],
+      "classification": "registry_correction",
+      "corrected": "primary_prespecified",
+      "field": "OUT-28.classification",
+      "finding_id": "F-01",
+      "observed": "secondary"
+    },
+    {
+      "action": "label Day 56 analysis post hoc",
+      "artifact": "results_submission",
+      "authority_ids": [
+        "REG-V2",
+        "SAP-V2",
+        "REG-V3"
+      ],
+      "classification": "registry_correction",
+      "corrected": "additional_post_hoc",
+      "field": "OUT-56.classification",
+      "finding_id": "F-02",
+      "observed": "primary"
+    },
+    {
+      "action": "restore stable arm identity without swapping values",
+      "artifact": "results_submission",
+      "authority_ids": [
+        "REG-V2",
+        "SAP-V2",
+        "CSR-T14"
+      ],
+      "classification": "registry_correction",
+      "corrected": {
+        "A": "LX-21",
+        "B": "Placebo"
+      },
+      "field": "arm_labels",
+      "finding_id": "F-03",
+      "observed": {
+        "A": "Placebo",
+        "B": "LX-21"
+      }
+    },
+    {
+      "action": "use modified-ITT participants with observed Day 28 data",
+      "artifact": "results_submission",
+      "authority_ids": [
+        "SAP-V2",
+        "CSR-T14"
+      ],
+      "classification": "registry_correction",
+      "corrected": {
+        "A": 55,
+        "B": 55
+      },
+      "field": "OUT-28.analysis_denominator",
+      "finding_id": "F-04",
+      "observed": {
+        "A": 56,
+        "B": 56
+      }
+    },
+    {
+      "action": "use treated safety population while retaining event counts",
+      "artifact": "results_submission",
+      "authority_ids": [
+        "CSR-T14"
+      ],
+      "classification": "registry_correction",
+      "corrected": {
+        "A": 58,
+        "B": 58
+      },
+      "field": "serious_adverse_events.denominator",
+      "finding_id": "F-05",
+      "observed": {
+        "A": 60,
+        "B": 60
+      }
+    },
+    {
+      "action": "revise proof before publication",
+      "artifact": "manuscript_proof",
+      "authority_ids": [
+        "REG-V2",
+        "SAP-V2"
+      ],
+      "classification": "manuscript_correction",
+      "corrected": "Day 28; Day 56 is post hoc",
+      "field": "prespecified_primary_claim",
+      "finding_id": "F-06",
+      "observed": "Day 56"
+    },
+    {
+      "action": "replace posted claim with accurate submission state",
+      "artifact": "manuscript_proof",
+      "authority_ids": [
+        "SUB-QC-4"
+      ],
+      "classification": "manuscript_correction",
+      "corrected": "submitted 2026-08-10 and still under QC; not posted",
+      "field": "registry_posting_claim",
+      "finding_id": "F-07",
+      "observed": "posted 2026-08-10"
+    }
+  ],
+  "trial_id": "NCT-SYN-21021"
+}

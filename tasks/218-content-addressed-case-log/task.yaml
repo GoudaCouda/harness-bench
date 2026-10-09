@@ -1,0 +1,64 @@
+task_id: 218-content-addressed-case-log
+title: Record aerodynamic cases by canonical digest without silent overwrite
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Science and Laboratory Operations
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- local_state_machine
+- content_addressing
+- case_recording
+harness_demands:
+- state_management
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+- output_contract
+stressors:
+- conflicting_evidence
+- schema_mismatch
+- stale_state
+- authorization_boundary
+required_artifacts:
+- state/caselog.json
+- state/case_receipt.json
+- state/verification.json
+- caselog_handoff.md
+task_family: 218-content-addressed-case-log
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - OPENMDAO-CASE-RECORDING
+  - OCI-CONTENT-ADDRESSABLE
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - state/caselog.json
+  - state/case_receipt.json
+  - state/verification.json
+  - caselog_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

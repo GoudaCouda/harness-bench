@@ -1,0 +1,19 @@
+{
+  "stream_id": "harborwatch-231",
+  "gate_clock_epoch": 1775950400,
+  "counts": {
+    "applied": 2,
+    "deferred": 3,
+    "malformed": 2
+  },
+  "applied_ids": [
+    "w1",
+    "w6"
+  ],
+  "deferred_ids": [
+    "w2",
+    "w3",
+    "w7"
+  ],
+  "state": "gated"
+}

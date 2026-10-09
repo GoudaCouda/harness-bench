@@ -1,0 +1,19 @@
+{
+  "required": [
+    ".dockerignore",
+    "Dockerfile",
+    "package.json",
+    "app/server.js",
+    "app/templates/welcome.txt",
+    "config/default.json",
+    "vendor/licenses/runtime.txt"
+  ],
+  "protected_excluded": [
+    ".env.production",
+    ".git-private/config",
+    "config/local.json",
+    "secrets/deploy-token.txt"
+  ],
+  "excluded_prefixes": ["dist/", "docs/", "node_modules/", "tests/"],
+  "manifest": "out/context_manifest.json"
+}

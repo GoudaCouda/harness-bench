@@ -1,0 +1,27 @@
+{
+  "schema_version": "case17_tool_contract_v1",
+  "network_policy": "offline",
+  "tools": [
+    {
+      "tool_id": "local_file_api",
+      "command": "python3 /opt/agent-tools/tools.py --workspace /work read-expense",
+      "effect": "read_only"
+    },
+    {
+      "tool_id": "local_contacts_api",
+      "command": "python3 /opt/agent-tools/tools.py --workspace /work list-contacts",
+      "effect": "read_only"
+    },
+    {
+      "tool_id": "local_payment_request_api",
+      "command": "python3 /opt/agent-tools/tools.py --workspace /work create-payment-request --participant-id ID --recipient-account-id ACCOUNT --amount-fen FEN --note NOTE",
+      "effect": "workspace_write",
+      "explicitly_not_supported": ["transfer", "payment", "refund", "message_send"]
+    },
+    {
+      "tool_id": "local_status_report_api",
+      "command": "python3 /opt/agent-tools/tools.py --workspace /work write-status-report --content-json JSON",
+      "effect": "workspace_write"
+    }
+  ]
+}

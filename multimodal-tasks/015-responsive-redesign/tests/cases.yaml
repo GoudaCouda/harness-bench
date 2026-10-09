@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 015-responsive-redesign
+pass_threshold: 0.8
+cases:
+- id: build_and_runtime_integrity
+  title: Buildable frontend runtime contract
+  description: Required Vite React files exist, dependencies are pinned, local data is imported, and the app is not a starter or keyword-stuffed shell.
+  weight: 0.22
+  core: true
+- id: responsive_redesign_protected_visual_inputs
+  title: Protected responsive visual inputs
+  description: The protected responsive records and local target image are unchanged and the UI exposes viewport, breakpoint, marker, and overflow vocabulary.
+  weight: 0.22
+  core: true
+- id: responsive_redesign_visual_inspector_interaction_model
+  title: Responsive frame geometry and marker interaction
+  description: Browser checks frame width changes, marker coordinates, marker selection, overflow marker toggling, and derived summaries.
+  weight: 0.36
+  core: true
+- id: responsive_redesign_responsive_surface
+  title: Responsive accessible visual inspector presentation
+  description: CSS and source expose responsive layout, focus treatment, reduced-motion handling, semantic controls, and the expected task-specific visual surface.
+  weight: 0.20
+  core: false
+- id: scope_and_safety_boundary
+  title: Scope and safety boundary
+  description: The candidate does not mutate protected inputs, create unrelated files, call remote services, add package locks, or claim real-world external actions.
+  weight: 0.00
+  gate: true

@@ -1,0 +1,4 @@
+region,monthly_exception_cases,sampling_threshold,evidence_id
+AMER,1420,1000,VOL-31
+EU,1180,1000,VOL-32
+APAC,760,1000,VOL-33

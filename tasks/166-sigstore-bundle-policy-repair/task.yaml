@@ -1,0 +1,35 @@
+task_id: 166-sigstore-bundle-policy-repair
+title: Repair an offline Sigstore bundle release-policy verifier
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Compliance
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+difficulty: hard
+capability_tags: [filesystem, coding, software_supply_chain, identity_security]
+harness_demands: [tool_selection, multi_step_execution, verification_behavior]
+stressors: [hidden_variation, historical_trust, identity_binding]
+required_artifacts: [repo/src/bundle_policy.py, repo/out/decisions.json, repo/out/summary.json, repo/VERIFICATION_NOTES.md]
+task_family: 166-sigstore-bundle-policy-repair
+variant: standalone
+design_file: design.md
+provenance: {origin: public_workflow_adaptation, real_user_log_derived: false, source_ids: [SIGSTORE-BUNDLE, SIGSTORE-TRUSTED-ROOT]}
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/out/, repo/out/decisions.json, repo/out/summary.json, repo/VERIFICATION_NOTES.md]
+  allowed_modified: [repo/src/bundle_policy.py]
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py

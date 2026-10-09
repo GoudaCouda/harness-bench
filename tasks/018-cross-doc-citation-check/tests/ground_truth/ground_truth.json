@@ -1,0 +1,44 @@
+{
+  "expected_audit": [
+    {
+      "check_id": "audit_References_S2",
+      "citation_id": "S2",
+      "location": "References",
+      "issue_kind": "reference_mismatch",
+      "expected_source": "sources/escalations.md",
+      "fix_kind": "replace_title"
+    },
+    {
+      "check_id": "audit_Claim_C",
+      "citation_id": "S4",
+      "location": "Claim C",
+      "issue_kind": "retired",
+      "expected_source": "sources/help_center.md",
+      "fix_kind": "replace_with_S3"
+    },
+    {
+      "check_id": "audit_Claim_D",
+      "citation_id": "missing",
+      "accepted_citation_ids": ["missing", "S5"],
+      "location": "Claim D",
+      "issue_kind": "missing",
+      "expected_source": "sources/csat.md",
+      "fix_kind": "add_S5"
+    },
+    {
+      "check_id": "audit_References_S4",
+      "citation_id": "S4",
+      "location": "References",
+      "issue_kind": "retired",
+      "expected_source": null,
+      "fix_kind": "remove_reference"
+    }
+  ],
+  "fixed_refs": [
+    "[S1] Support latency dashboard - sources/latency.md",
+    "[S2] Escalation trend memo - sources/escalations.md",
+    "[S3] Help center analytics - sources/help_center.md",
+    "[S5] CSAT survey extract - sources/csat.md"
+  ],
+  "forbidden_refs": ["[S4]", "Renewal briefing", "retired"]
+}

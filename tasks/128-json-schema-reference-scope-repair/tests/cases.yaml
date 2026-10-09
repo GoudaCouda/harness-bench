@@ -1,0 +1,29 @@
+schema_version: 2
+task_id: 128-json-schema-reference-scope-repair
+pass_threshold: 0.8
+cases:
+- id: resource_graph
+  title: Resource identifiers, anchors, and references form the intended closed graph
+  description: Effective bases stay under the migrated catalog prefix and every reference resolves to the registered resource or anchor.
+  weight: 0.35
+  core: true
+- id: example_classification
+  title: Positive and negative order examples are classified by schema semantics
+  description: Required order and address fields remain enforced without weakening the schema to make the sample pass.
+  weight: 0.25
+  core: true
+- id: reproducible_audit
+  title: The durable audit matches independent recomputation
+  description: The generated audit is parseable, current, deterministic, and records the complete resource graph and example results.
+  weight: 0.2
+  core: true
+- id: engineering_handoff
+  title: The migration repair is handed off with evidence
+  description: The handoff explains scope, causal repair, verification commands, results, and offline boundary.
+  weight: 0.2
+  core: false
+- id: source_and_action_safety
+  title: Protected evidence and execution boundaries remain intact
+  description: Registry, checker, examples, catalog/address schemas, and filesystem boundaries are preserved.
+  weight: 0.0
+  gate: true

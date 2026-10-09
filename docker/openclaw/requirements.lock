@@ -1,0 +1,17 @@
+# HarnessBench task toolchain. Keep direct and transitive dependencies exact.
+et_xmlfile==2.0.0
+iniconfig==2.0.0
+lxml==5.3.1
+openpyxl==3.1.5
+packaging==24.2
+Pillow==11.1.0
+pluggy==1.5.0
+pypdf==5.3.1
+pytest==8.3.5
+python-docx==1.1.2
+python-pptx==1.0.2
+python-slugify==8.0.4
+PyYAML==6.0.2
+text-unidecode==1.3
+typing_extensions==4.12.2
+XlsxWriter==3.2.2

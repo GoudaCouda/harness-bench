@@ -1,0 +1,142 @@
+{
+  "task_id": "017-travel-itinerary-planner",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "travel_itinerary_planner_protected_map_inputs",
+    "travel_itinerary_planner_route_map_interaction_model",
+    "travel_itinerary_planner_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "required_files": [
+    "web/package.json",
+    "web/index.html",
+    "web/vite.config.ts",
+    "web/tsconfig.json",
+    "web/src/main.tsx",
+    "web/src/App.tsx",
+    "web/src/index.css",
+    "web/src/data/localRecords.json",
+    "web/public/floorplan.svg",
+    "web/dist/index.html"
+  ],
+  "records": [
+    {
+      "id": "TRV-HOTEL",
+      "name": "Harbor hotel",
+      "kind": "stay",
+      "x": 16,
+      "y": 22,
+      "minutes": 0,
+      "cost": 0
+    },
+    {
+      "id": "TRV-MUS",
+      "name": "Modern art museum",
+      "kind": "museum",
+      "x": 38,
+      "y": 30,
+      "minutes": 90,
+      "cost": 24
+    },
+    {
+      "id": "TRV-PARK",
+      "name": "Riverside park",
+      "kind": "outdoor",
+      "x": 66,
+      "y": 26,
+      "minutes": 60,
+      "cost": 0
+    },
+    {
+      "id": "TRV-FOOD",
+      "name": "Neighborhood food tour",
+      "kind": "food",
+      "x": 73,
+      "y": 62,
+      "minutes": 80,
+      "cost": 36
+    },
+    {
+      "id": "TRV-FRY",
+      "name": "Ferry sunset loop",
+      "kind": "transit",
+      "x": 28,
+      "y": 70,
+      "minutes": 55,
+      "cost": 18
+    }
+  ],
+  "minimum_handlers": 6,
+  "domain_groups": [
+    [
+      "floorplan",
+      "map"
+    ],
+    [
+      "route"
+    ],
+    [
+      "marker"
+    ],
+    [
+      "Travel mode"
+    ],
+    [
+      "Total minutes"
+    ],
+    [
+      "Total cost"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "data-testid",
+      "map-board"
+    ],
+    [
+      "data-stop-id"
+    ],
+    [
+      "Add selected stop"
+    ],
+    [
+      "Clear route"
+    ],
+    [
+      "route-line"
+    ],
+    [
+      "Route order"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "Route stops"
+    ],
+    [
+      "Total minutes"
+    ],
+    [
+      "Total cost"
+    ],
+    [
+      "Selected stop"
+    ],
+    [
+      "Route order"
+    ],
+    [
+      "aria-label"
+    ]
+  ],
+  "interaction_probe": {
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "nami_work_candidate_sandbox_contract_v2",
+  "contract_sha256": "6b21318a4bffed55136e49d6b8bdfbc1f89a98ae820c42f3abf4acf34682ae92",
+  "case_id": "case_10",
+  "runtime_role": "candidate_execution_sandbox",
+  "image": {
+    "reference": "harnessbench-task264-candidate:20260908-v2",
+    "digest": "sha256:4d65ea6fb92d6a971d38f81748817c1ad65b656d1fa63f1cd4919d397aee9e42",
+    "node_version": "v22.22.3"
+  },
+  "network": {
+    "mode": "none",
+    "published_ports": []
+  },
+  "identity": {
+    "user": "65534:65534",
+    "non_root_required": true
+  },
+  "logical_context": {
+    "fixed_time": "2026-07-20T00:00:00Z",
+    "timezone": "UTC",
+    "case_locale": "zh-CN",
+    "process_locale": "C.UTF-8",
+    "wall_clock_virtualized": false
+  },
+  "filesystem": {
+    "readonly_rootfs": true,
+    "working_directory": "/workspace",
+    "mounts": [
+      {
+        "source_relative_to_host_runtime_root": "submission",
+        "destination": "/workspace",
+        "type": "bind",
+        "readonly": true,
+        "source_must_be_real_directory": true,
+        "source_must_not_contain_symlinks": true
+      },
+      {
+        "source_relative_to_host_runtime_root": "immutable_shm",
+        "destination": "/dev/shm",
+        "type": "bind",
+        "readonly": true,
+        "source_must_be_real_directory": true,
+        "source_must_not_contain_symlinks": true
+      }
+    ],
+    "tmpfs": {},
+    "shm": {
+      "path": "/dev/shm",
+      "max_bytes": 65536,
+      "expected_mode": "0555",
+      "readonly": true,
+      "allowed_entries_after_init": []
+    },
+    "runtime_roots": [
+      {
+        "path": "/dev/shm",
+        "expected_mode": "0555",
+        "max_entries": 0
+      }
+    ],
+    "max_submission_bytes": 262144,
+    "max_submission_entries": 64,
+    "max_submission_depth": 8,
+    "max_relative_path_bytes": 512,
+    "max_single_source_file_bytes": 65536,
+    "max_runtime_entries_per_root": 128,
+    "max_stdout_bytes": 8388608,
+    "max_stderr_bytes": 65536
+  },
+  "security": {
+    "cap_drop": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "privileged": false,
+    "auto_remove": false,
+    "restart_policy": "no",
+    "ipc_mode": "private",
+    "pid_mode": "",
+    "uts_mode": "",
+    "userns_mode": "",
+    "docker_socket_visible": false,
+    "forbidden_visible_paths": [
+      "/case",
+      "/runtime",
+      "/oracle",
+      "/verifier",
+      "/tests",
+      "/validation",
+      "/run/secrets",
+      "/var/run/docker.sock"
+    ],
+    "forbidden_nonempty_environment_name_patterns": [
+      "SECRET",
+      "TOKEN",
+      "API_KEY",
+      "PASSWORD",
+      "CREDENTIAL",
+      "AUTHORIZATION",
+      "PROXY"
+    ],
+    "allowed_config_environment_names": [
+      "GPG_KEY",
+      "LANG",
+      "LC_ALL",
+      "PATH",
+      "POETRY_HOME",
+      "PYTHON_SHA256",
+      "PYTHON_VERSION",
+      "HOME",
+      "TZ",
+      "CASE_FIXED_TIME",
+      "CASE_LOCALE",
+      "NODE_VERSION",
+      "YARN_VERSION"
+    ],
+    "required_config_environment": {
+      "HOME": "/workspace",
+      "TZ": "UTC",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "CASE_FIXED_TIME": "2026-07-20T00:00:00Z",
+      "CASE_LOCALE": "zh-CN"
+    }
+  },
+  "resources": {
+    "cpu_cores": 1,
+    "memory_bytes": 268435456,
+    "memory_swap_bytes": 268435456,
+    "pids_limit": 16,
+    "fsize_bytes": 1048576,
+    "nofile": 64,
+    "attempt_timeout_seconds": 8
+  },
+  "process": {
+    "entrypoint": [
+      "node"
+    ],
+    "command": [
+      "-e",
+      "setInterval(() => {}, 1 << 30)"
+    ],
+    "expected_init_command": "node",
+    "candidate_command": [
+      "node",
+      "/workspace/src/process.js"
+    ],
+    "expected_process_count_at_rest": 1
+  },
+  "dynamic_fields_from_ownership_plan": [
+    "run_id",
+    "task_id",
+    "host_alias",
+    "attempt_id",
+    "container_name",
+    "container_exact_id",
+    "host_runtime_root",
+    "resource_manifest_path"
+  ]
+}

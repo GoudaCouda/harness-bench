@@ -1,0 +1,13 @@
+order_id,reason,source_row,notes
+S1003,missing_amount,3,Rejected source row 3 for missing_amount
+S1001,duplicate_order_id,4,Rejected source row 4 for duplicate_order_id
+S1007,inactive_customer,8,Rejected source row 8 for inactive_customer
+S1008,invalid_quantity,9,Rejected source row 9 for invalid_quantity
+S1010,unknown_customer,11,Rejected source row 11 for unknown_customer
+S1011,unsupported_currency,12,Rejected source row 12 for unsupported_currency
+S1012,invalid_date,13,Rejected source row 13 for invalid_date
+S1013,invalid_date,14,Rejected source row 14 for invalid_date
+S1014,invalid_date,15,Rejected source row 15 for invalid_date
+S1015,missing_amount,16,Rejected source row 16 for missing_amount
+S1016,unsupported_currency,17,Rejected source row 17 for unsupported_currency
+S1017,invalid_date,19,Rejected source row 19 for invalid_date

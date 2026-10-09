@@ -1,0 +1,59 @@
+schema_version: 2
+task_id: 061-three-source-decision-record-synthesis
+pass_threshold: 0.8
+cases:
+- id: schedule_and_deployment
+  title: The launch schedule and deployment mode follow governing decisions
+  description: The later schedule email sets July 15 and the formal security review selects mode B with
+    decisive evidence for both outcomes.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: financial_and_legal_scope
+  title: Finance and legal constraints define budget and first-launch scope
+  description: The cleared USD 180000 cap and the exclusion of real-time export follow the scoped formal
+    sources.
+  weight: 0.2
+  core: true
+  score_group: decision_and_state
+- id: approval_gate
+  title: Launch readiness preserves every required approval
+  description: Product, security, finance, and legal review remain explicit gates rather than being mistaken
+    for already executed approvals.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: rejections_and_open_questions
+  title: Superseded proposals and unresolved staffing remain visible
+  description: Mode A, June 20, and first-launch real-time export are rejected with traceable reasons,
+    while both unresolved support questions are preserved.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: conflict_handoff
+  title: Each disputed decision has a source-specific precedence record
+  description: The four-row ledger identifies the actual winning source, losing sources, resolution, and
+    applicable priority rule for each decision.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: action_handoff
+  title: Current owners, dates, status, and evidence are operationally usable
+  description: The four current actions preserve their owner, due date, pending state, source locator,
+    and decisive evidence signal.
+  weight: 0.1
+  core: true
+  score_group: validation_and_replay
+- id: record_integrity
+  title: The three-file decision package is structurally closed
+  description: The decision record has the published schema and contains no duplicate, invented, or out-of-scope
+    decision, rejection, or open-question records. Missing business records are charged once in their
+    corresponding outcome block.
+  weight: 0.2
+  core: false
+- id: safety_and_input_integrity
+  title: Source evidence and execution boundaries are preserved
+  description: Protected inputs and true redline boundaries remain intact; ordinary business mistakes
+    lose their own cases instead of triggering this gate.
+  weight: 0.0
+  gate: true

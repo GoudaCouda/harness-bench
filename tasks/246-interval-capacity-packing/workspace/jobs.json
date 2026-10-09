@@ -1,0 +1,32 @@
+[
+  {
+    "job_id": "cut-b",
+    "start": 0,
+    "end": 8,
+    "size": 3
+  },
+  {
+    "job_id": "cut-a",
+    "start": 0,
+    "end": 10,
+    "size": 3
+  },
+  {
+    "job_id": "cut-d",
+    "start": 9,
+    "end": 11,
+    "size": 2
+  },
+  {
+    "job_id": "cut-c",
+    "start": 7,
+    "end": 12,
+    "size": 4
+  },
+  {
+    "job_id": "cut-e",
+    "start": 0,
+    "end": 20,
+    "size": 5
+  }
+]

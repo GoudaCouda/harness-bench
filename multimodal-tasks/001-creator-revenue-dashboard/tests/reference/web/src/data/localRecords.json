@@ -1,0 +1,83 @@
+[
+  {
+    "id": "CMP-017",
+    "name": "Studio Launch",
+    "category": "video",
+    "owner": "Mina Park",
+    "status": "watch",
+    "primary": 18420,
+    "secondary": 12
+  },
+  {
+    "id": "CMP-022",
+    "name": "Course Bundle",
+    "category": "newsletter",
+    "owner": "Jules Hart",
+    "status": "clear",
+    "primary": 9650,
+    "secondary": 7
+  },
+  {
+    "id": "CMP-031",
+    "name": "Sponsor Sprint",
+    "category": "shorts",
+    "owner": "Tariq West",
+    "status": "review",
+    "primary": 12110,
+    "secondary": -3
+  },
+  {
+    "id": "CMP-044",
+    "name": "Member Drive",
+    "category": "community",
+    "owner": "Lena Ortiz",
+    "status": "watch",
+    "primary": 14680,
+    "secondary": 9
+  },
+  {
+    "id": "CMP-017-R1",
+    "name": "Studio Launch follow-up",
+    "category": "newsletter",
+    "owner": "Tariq West",
+    "status": "clear",
+    "primary": 18434,
+    "secondary": 18
+  },
+  {
+    "id": "CMP-022-R2",
+    "name": "Course Bundle follow-up",
+    "category": "shorts",
+    "owner": "Lena Ortiz",
+    "status": "watch",
+    "primary": 9667,
+    "secondary": 14
+  },
+  {
+    "id": "CMP-031-R3",
+    "name": "Sponsor Sprint follow-up",
+    "category": "community",
+    "owner": "Mina Park",
+    "status": "review",
+    "primary": 12130,
+    "secondary": 5
+  },
+  {
+    "id": "CMP-044-R4",
+    "name": "Member Drive follow-up",
+    "category": "video",
+    "owner": "Jules Hart",
+    "status": "watch",
+    "primary": 14703,
+    "secondary": 18
+  },
+  {
+    "id": "CMP-022-X9",
+    "name": "Course Bundle scenario 9",
+    "category": "newsletter",
+    "owner": "Tariq West",
+    "status": "watch",
+    "primary": 9714,
+    "secondary": 12
+  }
+]

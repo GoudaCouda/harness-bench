@@ -1,0 +1,13 @@
+[
+  {
+    "name": "theme",
+    "value": "dark",
+    "domain": "example.com",
+    "path": "/app",
+    "host_only": false,
+    "secure": false,
+    "http_only": false,
+    "expires_at": null,
+    "creation_index": 3
+  }
+]

@@ -1,0 +1,43 @@
+task_id: 135-log-rotation-checkpoint-recovery
+title: Recover a file tailer across log rotation
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: IT Operations
+task_category: Systems Engineering
+task_subcategory: Incident Recovery
+difficulty: hard
+capability_tags: [filesystem, log_rotation, checkpointing, incident_recovery, verification]
+harness_demands: [evidence_grounding, tool_selection, multi_step_execution, verification_behavior, state_management]
+stressors: [inode_identity, stale_offset, ledger_ahead, duplicate_suppression]
+required_artifacts:
+- repo/state/checkpoint.json
+- repo/state/processed.jsonl
+- repo/out/recovered.jsonl
+- repo/TAILER_HANDOFF.md
+task_family: rotated-file-tailer-recovery
+variant: ledger-ahead-stale-inode-offset
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [LOGROTATE-STATE]
+workspace_dir: workspace
+hooks_module: environment/hooks.py
+mutation_contract:
+  allowed_created: [repo/state/, repo/state/checkpoint.json, repo/out/, repo/out/recovered.jsonl, repo/TAILER_HANDOFF.md]
+  allowed_modified: [repo/state/checkpoint.json, repo/state/processed.jsonl, repo/out/recovered.jsonl]
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

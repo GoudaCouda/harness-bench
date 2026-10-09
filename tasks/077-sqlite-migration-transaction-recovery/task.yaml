@@ -1,0 +1,42 @@
+task_id: 077-sqlite-migration-transaction-recovery
+title: Repair an idempotent SQLite migration transaction-recovery planner
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, database, recovery, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [sqlite_busy_phase, active_transaction, unknown_commit, ledger_idempotency, schema_version_divergence]
+required_artifacts:
+- repo/src/migration_recovery.py
+- repo/recovery_plan.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [SQLITE-TRANSACTION, SQLITE-BUSY, SQLITE-STEP]
+task_family: database-migration-recovery
+variant: busy-rollback-commit-unknown-idempotency
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/recovery_plan.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/migration_recovery.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    python: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

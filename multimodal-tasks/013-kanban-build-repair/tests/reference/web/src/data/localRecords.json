@@ -1,0 +1,74 @@
+[
+  {
+    "id": "KAN-101",
+    "title": "Restore drag fallback",
+    "lane": "Backlog",
+    "owner": "Kai",
+    "status": "blocked",
+    "estimate": 8,
+    "blockers": 3
+  },
+  {
+    "id": "KAN-108",
+    "title": "Fix card overflow",
+    "lane": "In Progress",
+    "owner": "Mira",
+    "status": "active",
+    "estimate": 5,
+    "blockers": 1
+  },
+  {
+    "id": "KAN-117",
+    "title": "Column count audit",
+    "lane": "Review",
+    "owner": "Leo",
+    "status": "ready",
+    "estimate": 3,
+    "blockers": 0
+  },
+  {
+    "id": "KAN-126",
+    "title": "Release note cleanup",
+    "lane": "Done",
+    "owner": "Mira",
+    "status": "done",
+    "estimate": 2,
+    "blockers": 0
+  },
+  {
+    "id": "KAN-132",
+    "title": "Repair flaky smoke test",
+    "lane": "Backlog",
+    "owner": "Ari",
+    "status": "blocked",
+    "estimate": 6,
+    "blockers": 2
+  },
+  {
+    "id": "KAN-144",
+    "title": "Keyboard reorder path",
+    "lane": "In Progress",
+    "owner": "Kai",
+    "status": "active",
+    "estimate": 4,
+    "blockers": 1
+  },
+  {
+    "id": "KAN-155",
+    "title": "Regression checklist",
+    "lane": "Review",
+    "owner": "Mira",
+    "status": "ready",
+    "estimate": 7,
+    "blockers": 0
+  },
+  {
+    "id": "KAN-166",
+    "title": "Archive stale fixture",
+    "lane": "Done",
+    "owner": "Leo",
+    "status": "done",
+    "estimate": 1,
+    "blockers": 0
+  }
+]

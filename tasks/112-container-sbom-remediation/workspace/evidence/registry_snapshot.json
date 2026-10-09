@@ -1,0 +1,214 @@
+{
+  "packages": {
+    "archive-stack": {
+      "4.8.0": {
+        "dependencies": {
+          "zip-stream": "1.4.2"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-fdfd3921f30a8cc5bc2d0e295a7315bb6924fccbcbfa58f07f5749d6b9ef621f",
+        "peerDependencies": {
+          "document-loader": ">=2.2.0 <3.0.0"
+        },
+        "version": "4.8.0"
+      },
+      "4.8.1": {
+        "dependencies": {
+          "zip-stream": "1.4.3"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-5a510a7cc97af7c25aed6c6681a99397692e6e30dbf4a97b5ddee9bd97c183bc",
+        "peerDependencies": {
+          "document-loader": ">=2.2.0 <3.0.0"
+        },
+        "version": "4.8.1"
+      },
+      "4.9.0": {
+        "dependencies": {
+          "zip-stream": "1.5.1"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-d4fc1358fe1fba09adcd09fb5d1aebc7ca51f0e4404e9eaefa5328bb5ff7913f",
+        "peerDependencies": {
+          "document-loader": ">=2.3.0 <3.0.0"
+        },
+        "version": "4.9.0"
+      },
+      "5.0.0": {
+        "dependencies": {
+          "zip-stream": "2.0.0"
+        },
+        "engines": {
+          "node": ">=22.0.0 <23.0.0"
+        },
+        "integrity": "sha256-7745d381a673504991aa4656a8bbad5057161bff81193da403116bb13518c6ad",
+        "peerDependencies": {
+          "document-loader": ">=3.0.0 <4.0.0"
+        },
+        "version": "5.0.0"
+      }
+    },
+    "document-loader": {
+      "2.2.0": {
+        "dependencies": {
+          "zip-stream": "1.4.2"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-e04a87e14a545f6f529e4328551d97ca6da4b5c49dbcdc6288069e0784d49817",
+        "peerDependencies": {
+          "archive-stack": ">=4.8.0 <5.0.0"
+        },
+        "version": "2.2.0"
+      },
+      "2.2.1": {
+        "dependencies": {
+          "zip-stream": "1.4.3"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-f1ed1a5b8967cb2a372934f44a148440bb30d417d90635bc51bc66948a2ea19d",
+        "peerDependencies": {
+          "archive-stack": ">=4.8.0 <5.0.0"
+        },
+        "version": "2.2.1"
+      },
+      "2.3.0": {
+        "dependencies": {
+          "zip-stream": "1.5.1"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-c9ae6d659f8b8be148b2646c8309f307f50c665015dbd96a1a2a1b229a1f1db6",
+        "peerDependencies": {
+          "archive-stack": ">=4.9.0 <5.0.0"
+        },
+        "version": "2.3.0"
+      },
+      "2.4.0": {
+        "dependencies": {
+          "fast-crc-native": "4.0.0",
+          "zip-stream": "1.5.1"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-f605a71334d93453e0b6642a4bebea835bbc9e92d630223a8f16c2ccfe553131",
+        "peerDependencies": {
+          "archive-stack": ">=4.9.0 <5.0.0"
+        },
+        "version": "2.4.0"
+      }
+    },
+    "fast-crc-native": {
+      "4.0.0": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-65dc3f773f0f24c794d50788178e2fb44a862f39028a5eea305bd3646b1e6c0e",
+        "native": {
+          "glibc_min": "2.38.0",
+          "node_api": 9,
+          "platform": "linux/amd64"
+        },
+        "version": "4.0.0"
+      }
+    },
+    "log-helper": {
+      "1.1.0": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-43521a7385bc6955a48c0a6e75a3c0ab6f203fc47660d320e5c63a6e3b8e402b",
+        "version": "1.1.0"
+      }
+    },
+    "pixel-abi": {
+      "2.6.0": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-5d71c4ab7fcbe0ec4bed4092e92c20bb7cfbdf7a78626f6bf73c27c4b599bb48",
+        "native": {
+          "glibc_min": "2.28.0",
+          "node_api": 8,
+          "platform": "linux/amd64"
+        },
+        "version": "2.6.0"
+      }
+    },
+    "render-native": {
+      "3.1.0": {
+        "dependencies": {
+          "pixel-abi": "2.6.0"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-a5fba8d71c68c94ad950576e8005fd88f2a5e1bd0ae8967b7a79e6286d79f548",
+        "version": "3.1.0"
+      }
+    },
+    "shell-helper": {
+      "7.0.0": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-4e47d0222ec4a02f08799805b8154fc6dba86dd3e9b388d93f8d89a52901e867",
+        "version": "7.0.0"
+      }
+    },
+    "telemetry-core": {
+      "2.5.0": {
+        "dependencies": {
+          "log-helper": "1.1.0"
+        },
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-b155f2842c71f09022c3dde625df66c55e94be9dda8f153b649787939ec55b9d",
+        "version": "2.5.0"
+      }
+    },
+    "zip-stream": {
+      "1.4.2": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-f0b81b22e7d72189a1e24e073764aa4f7c271d78222e72c69516eac04e88f1d0",
+        "version": "1.4.2"
+      },
+      "1.4.3": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-ea96f8e0799434fb0c58b402d5a48f7fe58d3cb8ffe7a16a36483201fecc501c",
+        "version": "1.4.3"
+      },
+      "1.5.1": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-c3daf8470c469ad217ed4f405fe29335dc4c56360e40e1681e3418cd9f1e69aa",
+        "version": "1.5.1"
+      },
+      "2.0.0": {
+        "engines": {
+          "node": ">=18.0.0 <21.0.0"
+        },
+        "integrity": "sha256-fff0ad14324ebfffa14519d601e2aff9678114afefdc06ecc6f0fa18cd7d5331",
+        "version": "2.0.0"
+      }
+    }
+  },
+  "snapshot_id": "SYN-NPM-2026-08-17"
+}

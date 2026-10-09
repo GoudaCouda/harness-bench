@@ -1,0 +1,23 @@
+From: mailer-daemon@example.test
+To: operations@example.test
+Message-ID: <dsn-mismatch-d@dsn.local>
+X-DSN-ID: dsn-mismatch-d
+Subject: Delivery Status Notification
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status; boundary="dsn-boundary-dsn-mismatch-d"
+
+--dsn-boundary-dsn-mismatch-d
+Content-Type: text/plain; charset=utf-8
+
+Delivery report follows.
+--dsn-boundary-dsn-mismatch-d
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mx.example.test
+
+Original-Message-ID: <renewal-d@ops.local>
+Final-Recipient: rfc822; other@example.test
+Action: failed
+Status: 5.1.1
+Diagnostic-Code: smtp; 550 recipient mismatch
+--dsn-boundary-dsn-mismatch-d--

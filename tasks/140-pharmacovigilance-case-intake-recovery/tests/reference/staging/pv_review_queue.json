@@ -1,0 +1,60 @@
+{
+  "external_transmissions_executed": false,
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "review_items": [
+    {
+      "case_id": "ICSR-2402",
+      "deadline_class": "seven_calendar_days",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2402-V2",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2402-V3",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2402"
+      ],
+      "position": 1,
+      "queue": "expedited_review",
+      "selected_message_ids": [
+        "MSG-2402-V2",
+        "MSG-2402-V3"
+      ],
+      "version": 3
+    },
+    {
+      "case_id": "ICSR-2404",
+      "deadline_class": "seven_calendar_days",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2404-V1",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2404"
+      ],
+      "position": 2,
+      "queue": "expedited_review",
+      "selected_message_ids": [
+        "MSG-2404-V1"
+      ],
+      "version": 1
+    },
+    {
+      "case_id": "ICSR-2407",
+      "deadline_class": "routine_processing",
+      "evidence_refs": [
+        "evidence/acknowledgements.jsonl",
+        "evidence/inbound_messages.jsonl#message_id:MSG-2407-V2",
+        "policy/pv_policy.json#rules",
+        "state/pv.db#safety_cases:ICSR-2407"
+      ],
+      "position": 3,
+      "queue": "routine_review",
+      "selected_message_ids": [
+        "MSG-2407-V2"
+      ],
+      "version": 2
+    }
+  ],
+  "schema_version": 1,
+  "semantic_plan_digest": "f30185a577832814eda0610dc810e81a2a3cb1ff6744ae5ea5a7f3922ca884b7",
+  "source_checkpoint": "86c4d6a2485037b57155cceebea70e4c03dfbc4afe35c156001531b95cd3b862",
+  "stage_boundary": "local_safety_review_not_transmitted"
+}

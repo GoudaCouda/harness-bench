@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "entrypoint": {"const": "scripts/main.py"},
+    "files": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "path": {"enum": ["SKILL.md", "assets/template.txt", "scripts/main.py"]},
+          "sha256": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+          "size_bytes": {"minimum": 0, "type": "integer"}
+        },
+        "required": ["path", "sha256", "size_bytes"],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    },
+    "package_name": {"const": "calendar_briefing_skill"},
+    "schema_version": {"const": "skill_package_manifest_v1"},
+    "version": {"const": "1.2.0"}
+  },
+  "required": ["schema_version", "package_name", "version", "entrypoint", "files"],
+  "type": "object"
+}

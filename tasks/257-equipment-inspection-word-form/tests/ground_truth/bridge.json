@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "case_number": 3,
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--workspace",
+    "{w}",
+    "--result",
+    "{r}"
+  ],
+  "groups": [
+    [
+      "device_mapping",
+      "inspection_rows"
+    ],
+    [
+      "fillable_areas",
+      "page_layout",
+      "privacy_boundary"
+    ]
+  ],
+  "expected_checks": [
+    "workspace_shape",
+    "protected_inputs",
+    "output_contract",
+    "docx_package",
+    "editable_ooxml",
+    "page_layout",
+    "device_mapping",
+    "inspection_rows",
+    "fillable_areas",
+    "privacy_boundary",
+    "verifier_nonmutation"
+  ],
+  "runtime_checks": [],
+  "outputs": [
+    "output/monitoring_equipment_inspection_form.docx"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "e0732f5f04081cfd44cd463be8706933e8a3d1a3fb4ce5e39df17a2039158cc2",
+    "hb_tools/docx_writer.py": "4d294b46503eb4fd6c739b32fa0918ffbcd184cc0fe16546781ba0f243568029",
+    "hb_tools/tool_contract.md": "0ee4aa04e406a71a89e22780679e4a192e6e4d9f9b1f6ead4a4ce3996af9000d",
+    "input/equipment_registry.json": "ad6e94677c58e4dbc5e861391e444579a3ce61eae8588892c2556ff372943b63",
+    "input/hospital_header.json": "c0e1ea3a253243e54bd701de893cd708a050b17037a345cced2c9ed9389485cf",
+    "input/inspection_standard.json": "8c65eb6cc1b2fd387c777ecd98676f5160725d68f13103a18892670e16953858",
+    "task/instruction.md": "1e725a8a8b33bb5ecdec02df2bc494f915341864abeed2b38df8d6a2f7b7a468",
+    "tools/docx_writer.py": "4d294b46503eb4fd6c739b32fa0918ffbcd184cc0fe16546781ba0f243568029",
+    "tools/tool_contract.json": "319667edf4ae0ba05dccb3e479a664600f26f587161db4553d5afd72213e958f"
+  },
+  "allowed_directories": [
+    "hb_tools",
+    "input",
+    "output",
+    "task",
+    "tools"
+  ],
+  "original_directories": [
+    "input",
+    "output",
+    "task",
+    "tools"
+  ],
+  "original_modes": {
+    "input": 488,
+    "input/equipment_registry.json": 288,
+    "input/hospital_header.json": 288,
+    "input/inspection_standard.json": 288,
+    "output": 488,
+    "task": 488,
+    "task/instruction.md": 288,
+    "tools": 488,
+    "tools/docx_writer.py": 360,
+    "tools/tool_contract.json": 288
+  }
+}

@@ -1,0 +1,5 @@
+schema_version: 1
+criteria:
+- id: handoff_equivalence
+  question: Does the handoff accurately explain the material merge decisions, edge boundaries, verification commands/results,
+    and offline scope for Repair Git LFS pointer and object reconciliation, without claiming external execution?

@@ -1,0 +1,27 @@
+{
+  "policy": {
+    "no_proxy": "example.com,db.internal:5432,10.0.0.0/8"
+  },
+  "records": [
+    {
+      "host": "api.example.com",
+      "id": "domain",
+      "port": 443
+    },
+    {
+      "host": "db.internal",
+      "id": "port",
+      "port": 5432
+    },
+    {
+      "host": "10.1.2.3",
+      "id": "cidr",
+      "port": 80
+    },
+    {
+      "host": "open.example.net",
+      "id": "public",
+      "port": 443
+    }
+  ]
+}

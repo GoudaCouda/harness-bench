@@ -1,0 +1,291 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "retry",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "empty",
+          "pipefail": true,
+          "replayable": true,
+          "stages": []
+        }
+      ]
+    },
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "chain",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "short",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "hidden",
+          "pipefail": false,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 2
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "effect",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 0,
+              "side_effect": true
+            },
+            {
+              "code": 75
+            }
+          ]
+        },
+        {
+          "id": "short",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "short",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 300,
+              "expected_short_read": true
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "hidden",
+          "pipefail": false,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 2
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "effect",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 0,
+              "side_effect": true
+            },
+            {
+              "code": 75
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "short",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "hidden",
+          "pipefail": false,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 2
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "effect",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 0,
+              "side_effect": true
+            },
+            {
+              "code": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "pf",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 2
+            },
+            {
+              "code": 0
+            }
+          ]
+        },
+        {
+          "id": "no",
+          "pipefail": false,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 2
+            },
+            {
+              "code": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": {
+        "retryable_statuses": [
+          75
+        ]
+      },
+      "requests": [
+        {
+          "id": "sig",
+          "pipefail": true,
+          "replayable": true,
+          "stages": [
+            {
+              "code": 141,
+              "expected_short_read": true
+            },
+            {
+              "code": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

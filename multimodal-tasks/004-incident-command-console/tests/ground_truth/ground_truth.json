@@ -1,0 +1,304 @@
+{
+  "task_id": "004-incident-command-console",
+  "case_ids": [
+    "build_and_runtime_integrity",
+    "incident_command_console_protected_local_data",
+    "incident_command_console_timeline_interaction_model",
+    "incident_command_console_timeline_responsive_surface",
+    "scope_and_safety_boundary"
+  ],
+  "record_ids": [
+    "INC-4081",
+    "INC-4084",
+    "INC-4087",
+    "INC-4090",
+    "INC-4081-R1",
+    "INC-4084-R2"
+  ],
+  "records": {
+    "INC-4081": {
+      "id": "INC-4081",
+      "name": "Checkout latency",
+      "category": "payments",
+      "owner": "SRE Blue",
+      "status": "review",
+      "primary": 92,
+      "secondary": 47
+    },
+    "INC-4084": {
+      "id": "INC-4084",
+      "name": "Search error rate",
+      "category": "search",
+      "owner": "SRE Green",
+      "status": "watch",
+      "primary": 66,
+      "secondary": 28
+    },
+    "INC-4087": {
+      "id": "INC-4087",
+      "name": "Webhook backlog",
+      "category": "integrations",
+      "owner": "SRE Gold",
+      "status": "clear",
+      "primary": 39,
+      "secondary": 11
+    },
+    "INC-4090": {
+      "id": "INC-4090",
+      "name": "CDN purge delay",
+      "category": "edge",
+      "owner": "SRE Red",
+      "status": "watch",
+      "primary": 71,
+      "secondary": 33
+    },
+    "INC-4081-R1": {
+      "id": "INC-4081-R1",
+      "name": "Checkout latency follow-up",
+      "category": "search",
+      "owner": "SRE Gold",
+      "status": "clear",
+      "primary": 106,
+      "secondary": 53
+    },
+    "INC-4084-R2": {
+      "id": "INC-4084-R2",
+      "name": "Search error rate follow-up",
+      "category": "integrations",
+      "owner": "SRE Red",
+      "status": "watch",
+      "primary": 83,
+      "secondary": 35
+    }
+  },
+  "domain_groups": [
+    [
+      "incident",
+      "outage",
+      "event"
+    ],
+    [
+      "severity",
+      "impact",
+      "priority"
+    ],
+    [
+      "timeline",
+      "incident timeline",
+      "incident"
+    ]
+  ],
+  "control_groups": [
+    [
+      "Service filter",
+      "service filter",
+      "filter"
+    ],
+    [
+      "Response mode",
+      "response mode",
+      "timeline-review"
+    ],
+    [
+      "Incident search",
+      "incident search",
+      "search"
+    ],
+    [
+      "SLA pressure",
+      "sla pressure",
+      "Escalated only",
+      "escalated only"
+    ]
+  ],
+  "summary_groups": [
+    [
+      "Impact score",
+      "Impact",
+      "Impact score"
+    ],
+    [
+      "Minutes open",
+      "Minutes"
+    ],
+    [
+      "Escalation queue",
+      "Review count",
+      "Reviews",
+      "Needs review"
+    ],
+    [
+      "Response checkpoint",
+      "incident timeline"
+    ]
+  ],
+  "interaction_groups": [
+    [
+      "serviceFilter",
+      "setServiceFilter",
+      "service filter"
+    ],
+    [
+      "selectedIncidentId",
+      "setSelectedIncidentId",
+      "timeline selection"
+    ],
+    [
+      "responseMode",
+      "setResponseMode",
+      "response mode"
+    ],
+    [
+      "escalatedOnly",
+      "setEscalatedOnly",
+      "escalation toggle"
+    ]
+  ],
+  "calculation_groups": [
+    [
+      "impactLoad",
+      "Impact score",
+      "impact load"
+    ],
+    [
+      "openMinutes",
+      "Minutes open",
+      "time open"
+    ],
+    [
+      "escalationQueue",
+      "Escalation queue",
+      "escalated incidents"
+    ],
+    [
+      "slaAdjustedImpact",
+      "SLA pressure",
+      "response pressure"
+    ],
+    [
+      "ownerSpread",
+      "owner spread",
+      "owner count"
+    ]
+  ],
+  "presentation_groups": [
+    [
+      "timeline",
+      "command log",
+      "checkpoint rail"
+    ],
+    [
+      "severity ribbon",
+      "response pane",
+      "incident console"
+    ]
+  ],
+  "ui": {
+    "filter_label": "Service filter",
+    "mode_label": "Response mode",
+    "search_label": "Incident search",
+    "range_label": "SLA pressure",
+    "toggle_label": "Escalated only",
+    "toggle_regex": "Escalated\\ only|Needs\\ review\\ only|Review\\ only|Risk\\ only|Focus\\ only",
+    "summary_region_regex": "Derived .* metrics|metrics|summary|kpi|overview",
+    "mode_fallback_terms": [
+      "review",
+      "focus",
+      "mode",
+      "capacity",
+      "preview",
+      "audit",
+      "route",
+      "validation",
+      "simulation",
+      "portfolio"
+    ],
+    "minimum_handlers": 5
+  },
+  "interaction_probe": {
+    "schema": "action_sequence_v1",
+    "target_viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "actions": [
+      {
+        "kind": "select",
+        "label": "Service filter",
+        "value": "payments"
+      },
+      {
+        "kind": "fill",
+        "label": "Incident search",
+        "value": "Checkout"
+      },
+      {
+        "kind": "click",
+        "text": "INC-4081"
+      },
+      {
+        "kind": "select",
+        "label": "Response mode",
+        "value": "timeline-review"
+      },
+      {
+        "kind": "set_range",
+        "label": "SLA pressure",
+        "value": 64
+      },
+      {
+        "kind": "snapshot",
+        "name": "timeline-evidence"
+      }
+    ],
+    "expected_state": {
+      "selected_id": "INC-4081",
+      "category": "payments",
+      "mode": "timeline-review",
+      "search_value": "Checkout",
+      "range_value": 64,
+      "visible_id_subset": [
+        "INC-4081"
+      ],
+      "selected_detail_tokens": [
+        "SRE Blue",
+        "payments",
+        "review",
+        "92",
+        "47"
+      ],
+      "after_clearing_search_subset": [
+        "INC-4081",
+        "INC-4084-R2"
+      ],
+      "focus_subset": [
+        "INC-4081"
+      ],
+      "focus_forbidden": [
+        "INC-4087"
+      ],
+      "detail_switch_id": "INC-4084-R2",
+      "detail_switch_tokens": [
+        "INC-4084-R2",
+        "Search error rate follow-up",
+        "SRE Red",
+        "integrations",
+        "watch",
+        "83",
+        "35"
+      ],
+      "summary_change_labels": [
+        "Impact score",
+        "Minutes open",
+        "Escalation queue",
+        "Response checkpoint"
+      ],
+      "mobile_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "record_count": 6
+    },
+    "action_count": 6
+  }
+}

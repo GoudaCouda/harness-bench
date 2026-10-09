@@ -1,0 +1,53 @@
+task_id: 011-calendar-scheduling-conflict
+title: Prioritize a Cross-Time-Zone Customer Escalation Meeting
+prompt_file: instruction.md
+timeout_sec: 1800
+difficulty: medium
+domain: Office Productivity
+task_category: Business Operations
+task_subcategory: Coordination
+capability_tags:
+- scheduling
+- state_reconciliation
+- business_communication
+- structured_data
+harness_demands:
+- evidence_grounding
+- context_management
+- multi_step_execution
+- safety_boundary
+stressors:
+- timezone_conversion
+- conflicting_availability
+required_artifacts:
+- scheduling_plan.json
+- customer_reply.md
+provenance:
+  origin: handcrafted_synthetic
+  real_user_log_derived: false
+  source_ids:
+  - HB-RETRO-011
+task_family: 011-calendar-scheduling-conflict
+variant: standalone
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - customer_reply.md
+  - scheduling_plan.json
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python3: "3.12"
+    zoneinfo: system-tzdata
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

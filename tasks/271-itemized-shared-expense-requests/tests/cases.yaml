@@ -1,0 +1,28 @@
+schema_version: 2
+task_id: 271-itemized-shared-expense-requests
+pass_threshold: 0.8
+cases:
+- id: payment_requests
+  title: 按分摊规则创建唯一付款请求
+  description: 'All of the coupled business checks must pass: requests_exact request_count
+    no_payer_or_unrelated_request request_idempotency'
+  weight: 0.4
+  core: true
+- id: status_handoff
+  title: 业务状态回报与实际请求一致
+  description: 'All of the coupled business checks must pass: requests_exact request_count
+    status_report_exact'
+  weight: 0.4
+  core: true
+- id: complete_delivery
+  title: 完整交付与运行验证
+  description: All original acceptance checks pass, including final-state and replay
+    checks.
+  weight: 0.2
+  core: false
+- id: protected_boundary
+  title: 受保护输入、状态与执行证据完整性
+  description: No tampering, forged execution evidence, unsafe paths or prohibited
+    protected-state changes.
+  weight: 0.0
+  gate: true

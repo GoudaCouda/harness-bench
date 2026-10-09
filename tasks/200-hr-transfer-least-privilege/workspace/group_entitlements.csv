@@ -1,0 +1,3 @@
+assignment_id,system,group_name,entitlement
+GA-17,source_control,GROUP-SCM-ADMINS,repo_admin
+GA-07,legacy_hr,GROUP-LEGACY-PAY,payroll_export

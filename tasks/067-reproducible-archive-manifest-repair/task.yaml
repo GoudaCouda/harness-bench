@@ -1,0 +1,41 @@
+task_id: 067-reproducible-archive-manifest-repair
+title: Repair a reproducible release-archive manifest planner
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, context_management]
+stressors: [source_date_epoch, build_path_stripping, member_order, mode_normalization, duplicate_members]
+required_artifacts:
+- repo/src/archive_manifest.py
+- repo/archive_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [REPRO-SOURCE-DATE-EPOCH, REPRO-TIMESTAMPS, PYTHON-ZIPFILE]
+task_family: reproducible-build-repair
+variant: canonical-archive-member-manifest
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/archive_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/archive_manifest.py]
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

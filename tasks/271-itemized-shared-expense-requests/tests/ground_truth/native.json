@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "case_number": 17,
+  "blocks": [
+    [
+      "payment_requests",
+      "按分摊规则创建唯一付款请求",
+      "requests_exact request_count no_payer_or_unrelated_request request_idempotency"
+    ],
+    [
+      "status_handoff",
+      "业务状态回报与实际请求一致",
+      "requests_exact request_count status_report_exact"
+    ]
+  ],
+  "gates": [
+    "source_expense_unchanged",
+    "source_contacts_unchanged",
+    "workspace_metadata_unchanged",
+    "contacts_table_unchanged",
+    "existing_transactions_unchanged",
+    "transfers_unchanged",
+    "prior_requests_unchanged"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "f93f1258e10faf4b522066244f5dbb018b216b02e5ccfe69ded8f02292c7d902",
+    "hb_tools/contacts.json": "c5f940634369f1af5cbe19106bf6cc378bc3b70a2c75d5b62d35bbeeb90e2cfd",
+    "hb_tools/expense_ledger.json": "3560c7d3095c16af4eeb20152e6adb408d360280e8ade02daf680d072f7b3bee",
+    "hb_tools/tool_client.py": "a45ef1363f14448212e5e2a7cda3f0fe81aaee8cec2aefdac8380e158f5fa6ce",
+    "hb_tools/tool_contract.json": "75a2d12309c975581ae6c4a7964d2a31af25724a5b22304727182b107b7e5960"
+  },
+  "required_artifacts": [],
+  "provisional_id": 254,
+  "reset": [
+    "--workspace",
+    "{w}",
+    "--fixtures",
+    "{c}/fixtures"
+  ],
+  "verify": [
+    "verifier/verify.py",
+    "--workspace",
+    "{w}",
+    "--fixtures",
+    "{c}/fixtures",
+    "--output",
+    "{r}"
+  ]
+}

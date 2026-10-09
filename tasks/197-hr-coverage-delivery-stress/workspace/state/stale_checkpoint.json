@@ -1,0 +1,35 @@
+{
+  "cases": {
+    "COV-7201": {
+      "notice_version": 1,
+      "state": "drafted"
+    },
+    "COV-7202": {
+      "notice_version": 1,
+      "state": "delivery_timeout"
+    },
+    "COV-7203": {
+      "notice_version": 1,
+      "state": "retry_queued"
+    },
+    "COV-7204": {
+      "notice_version": 1,
+      "state": "delivery_timeout"
+    },
+    "COV-7205": {
+      "notice_version": 2,
+      "state": "delivered"
+    },
+    "COV-7206": {
+      "notice_version": 1,
+      "state": "drafted"
+    },
+    "COV-7207": {
+      "notice_version": 0,
+      "state": "eligible_unsent"
+    }
+  },
+  "schema_version": 1,
+  "source_revision": 41,
+  "written_at": "2026-08-10T14:31:00Z"
+}

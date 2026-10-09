@@ -1,0 +1,63 @@
+{
+  "queue_id": "shorefront-0325-q",
+  "gate_clock_epoch": 1774429200,
+  "requests": [
+    {
+      "request_id": "q1",
+      "dataset_id": "d1",
+      "uri": "https://data.example/d1.nc",
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "pinned": false
+    },
+    {
+      "request_id": "q2",
+      "dataset_id": "d2",
+      "uri": "https://data.example/d2-new.nc",
+      "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "pinned": true
+    },
+    {
+      "request_id": "q3",
+      "dataset_id": "d3",
+      "uri": "https://data.example/d3-rev.nc",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pinned": false
+    },
+    {
+      "request_id": "q4",
+      "dataset_id": "d8",
+      "uri": "https://data.example/d8.nc",
+      "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "claimed_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "pinned": false
+    },
+    {
+      "request_id": "q5",
+      "dataset_id": "d9",
+      "uri": "",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "pinned": false
+    },
+    {
+      "request_id": "q6",
+      "dataset_id": "d1",
+      "uri": "https://data.example/d1-dup.nc",
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "pinned": false
+    },
+    {
+      "request_id": "q7",
+      "dataset_id": "d10",
+      "uri": "ftp://legacy.example/d10.nc",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "pinned": false
+    },
+    {
+      "request_id": "q8",
+      "dataset_id": "d11",
+      "uri": "file:///data/d11.nc",
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "pinned": true
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "event_dispositions": {
+    "EV-500": "ignore_stale",
+    "EV-501": "apply_current",
+    "EV-502": "apply_current",
+    "EV-503": "ignore_stale",
+    "EV-504": "apply_current",
+    "EV-505": "quarantine_unknown_shipment",
+    "EV-506": "apply_current"
+  },
+  "final_state": {
+    "channels": [
+      {
+        "authority_status": "pending",
+        "channel_id": "CH-DIST",
+        "channel_type": "distributor",
+        "local_draft_status": "pending_approval"
+      },
+      {
+        "authority_status": "verified",
+        "channel_id": "CH-MKT",
+        "channel_type": "marketplace",
+        "local_draft_status": "trace_hold"
+      },
+      {
+        "authority_status": "verified",
+        "channel_id": "CH-RETAIL",
+        "channel_type": "retailer",
+        "local_draft_status": "draft_ready"
+      }
+    ],
+    "component_batches": [
+      {
+        "batch_id": "CB-77",
+        "material_code": "ADH-RED",
+        "parent_batch_id": "PB-RED",
+        "trace_status": "verified"
+      },
+      {
+        "batch_id": "CB-77-D",
+        "material_code": "ADH-RED",
+        "parent_batch_id": "CB-77",
+        "trace_status": "verified"
+      },
+      {
+        "batch_id": "CB-SAFE",
+        "material_code": "ADH-BLUE",
+        "parent_batch_id": "PB-BLUE",
+        "trace_status": "verified"
+      },
+      {
+        "batch_id": "CB-UNK",
+        "material_code": "ADH-RED",
+        "parent_batch_id": null,
+        "trace_status": "unresolved_parent"
+      }
+    ],
+    "event_ledger": [
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "ignore_stale",
+        "event_id": "EV-500"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "apply_current",
+        "event_id": "EV-501"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "apply_current",
+        "event_id": "EV-502"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "ignore_stale",
+        "event_id": "EV-503"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "apply_current",
+        "event_id": "EV-504"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "quarantine_unknown_shipment",
+        "event_id": "EV-505"
+      },
+      {
+        "applied_at": "2026-08-19T12:00:00Z",
+        "disposition": "apply_current",
+        "event_id": "EV-506"
+      }
+    ],
+    "event_quarantine": [
+      {
+        "event_id": "EV-505",
+        "reason": "unknown_shipment"
+      }
+    ],
+    "inventory": [
+      {
+        "available": 0,
+        "lot_id": "LOT-A",
+        "on_hand": 40,
+        "quarantined": 40,
+        "stop_sale_status": "local_hold"
+      },
+      {
+        "available": 0,
+        "lot_id": "LOT-B",
+        "on_hand": 20,
+        "quarantined": 20,
+        "stop_sale_status": "local_hold"
+      },
+      {
+        "available": 25,
+        "lot_id": "LOT-C",
+        "on_hand": 25,
+        "quarantined": 0,
+        "stop_sale_status": "none"
+      },
+      {
+        "available": 0,
+        "lot_id": "LOT-D",
+        "on_hand": 12,
+        "quarantined": 12,
+        "stop_sale_status": "trace_hold"
+      },
+      {
+        "available": 0,
+        "lot_id": "LOT-E",
+        "on_hand": 7,
+        "quarantined": 7,
+        "stop_sale_status": "local_hold"
+      },
+      {
+        "available": 10,
+        "lot_id": "LOT-F",
+        "on_hand": 10,
+        "quarantined": 0,
+        "stop_sale_status": "none"
+      }
+    ],
+    "lot_components": [
+      {
+        "batch_id": "CB-77",
+        "lot_id": "LOT-A",
+        "quantity": 12
+      },
+      {
+        "batch_id": "CB-77",
+        "lot_id": "LOT-B",
+        "quantity": 5
+      },
+      {
+        "batch_id": "CB-SAFE",
+        "lot_id": "LOT-B",
+        "quantity": 4
+      },
+      {
+        "batch_id": "CB-SAFE",
+        "lot_id": "LOT-C",
+        "quantity": 6
+      },
+      {
+        "batch_id": "CB-UNK",
+        "lot_id": "LOT-D",
+        "quantity": 3
+      },
+      {
+        "batch_id": "CB-77-D",
+        "lot_id": "LOT-E",
+        "quantity": 7
+      },
+      {
+        "batch_id": "CB-77",
+        "lot_id": "LOT-F",
+        "quantity": 2
+      }
+    ],
+    "lots": [
+      {
+        "lot_id": "LOT-A",
+        "manufactured_at": "2026-08-08T10:00:00Z",
+        "product_code": "NOVA-100",
+        "recall_status": "affected_quarantined",
+        "total_units": 70
+      },
+      {
+        "lot_id": "LOT-B",
+        "manufactured_at": "2026-08-09T11:00:00Z",
+        "product_code": "NOVA-100",
+        "recall_status": "affected_quarantined",
+        "total_units": 30
+      },
+      {
+        "lot_id": "LOT-C",
+        "manufactured_at": "2026-08-11T09:00:00Z",
+        "product_code": "NOVA-200",
+        "recall_status": "cleared_unaffected",
+        "total_units": 25
+      },
+      {
+        "lot_id": "LOT-D",
+        "manufactured_at": "2026-08-12T12:00:00Z",
+        "product_code": "NOVA-100",
+        "recall_status": "pending_trace_quarantined",
+        "total_units": 18
+      },
+      {
+        "lot_id": "LOT-E",
+        "manufactured_at": "2026-08-13T08:00:00Z",
+        "product_code": "NOVA-300",
+        "recall_status": "affected_quarantined",
+        "total_units": 22
+      },
+      {
+        "lot_id": "LOT-F",
+        "manufactured_at": "2026-07-15T08:00:00Z",
+        "product_code": "NOVA-100",
+        "recall_status": "cleared_unaffected",
+        "total_units": 10
+      }
+    ],
+    "recall_journal": [
+      {
+        "committed_at": "2026-08-19T12:00:00Z",
+        "phase": "committed",
+        "prepared_action_key": "EV-504",
+        "recall_id": "RC-2026-0417",
+        "semantic_plan_sha256": "332a97ec74dc1fdcc8623ca6cb3eead3d5d8a7167c5c44f5c75fa5e47e636979",
+        "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b"
+      }
+    ],
+    "recall_transactions": [
+      {
+        "action_count": 13,
+        "committed_at": "2026-08-19T12:00:00Z",
+        "recall_id": "RC-2026-0417",
+        "semantic_plan_sha256": "332a97ec74dc1fdcc8623ca6cb3eead3d5d8a7167c5c44f5c75fa5e47e636979",
+        "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b"
+      }
+    ],
+    "shipments": [
+      {
+        "channel_id": "CH-RETAIL",
+        "last_event_id": "EV-501",
+        "last_sequence": 3,
+        "lot_id": "LOT-A",
+        "quantity": 30,
+        "shipment_id": "SH-A",
+        "status": "delivered",
+        "stop_sale_status": "local_channel_recall_draft"
+      },
+      {
+        "channel_id": "CH-DIST",
+        "last_event_id": "EV-502",
+        "last_sequence": 2,
+        "lot_id": "LOT-B",
+        "quantity": 10,
+        "shipment_id": "SH-B",
+        "status": "in_transit",
+        "stop_sale_status": "staged_stop_request"
+      },
+      {
+        "channel_id": "CH-MKT",
+        "last_event_id": "EV-506",
+        "last_sequence": 2,
+        "lot_id": "LOT-D",
+        "quantity": 6,
+        "shipment_id": "SH-D",
+        "status": "in_transit",
+        "stop_sale_status": "pending_trace_hold"
+      },
+      {
+        "channel_id": "CH-RETAIL",
+        "last_event_id": "EV-504",
+        "last_sequence": 2,
+        "lot_id": "LOT-E",
+        "quantity": 15,
+        "shipment_id": "SH-E",
+        "status": "in_transit",
+        "stop_sale_status": "staged_stop_request"
+      }
+    ]
+  },
+  "lot_dispositions": {
+    "LOT-A": "affected",
+    "LOT-B": "affected",
+    "LOT-C": "unaffected",
+    "LOT-D": "pending_trace",
+    "LOT-E": "affected",
+    "LOT-F": "unaffected"
+  },
+  "source_state_sha256": "83d3ede86210d501c503f02f7e4ddafe5af90cad8d2fab4c23c2c73b6697607b"
+}

@@ -1,0 +1,16 @@
+{
+  "rejected": [],
+  "selected_path": [
+    "leaf",
+    "inter",
+    "root"
+  ],
+  "status": "selected",
+  "valid_paths": [
+    [
+      "leaf",
+      "inter",
+      "root"
+    ]
+  ]
+}

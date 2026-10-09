@@ -1,0 +1,33 @@
+{
+  "events": [
+    {
+      "epoch": 1,
+      "id": "wrap",
+      "observed_at": 1,
+      "serial": 3,
+      "zone": "example"
+    },
+    {
+      "epoch": 1,
+      "id": "old",
+      "observed_at": 2,
+      "serial": 4294967290,
+      "zone": "example"
+    },
+    {
+      "epoch": 2,
+      "id": "epoch",
+      "observed_at": 3,
+      "serial": 1,
+      "zone": "example"
+    }
+  ],
+  "policy": {
+    "zones": {
+      "example": {
+        "epoch": 1,
+        "serial": 4294967290
+      }
+    }
+  }
+}

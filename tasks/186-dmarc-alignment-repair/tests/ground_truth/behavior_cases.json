@@ -1,0 +1,315 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "example.com",
+          "id": "pct-in",
+          "sample_bucket": 49,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        },
+        {
+          "dkim": [],
+          "from_domain": "example.com",
+          "id": "pct-out",
+          "sample_bucket": 50,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 0,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "none",
+          "sample_bucket": 0,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "spf",
+          "sample_bucket": 5,
+          "spf": {
+            "domain": "bounce.example.com",
+            "result": "pass"
+          }
+        },
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "spf",
+          "sample_bucket": 5,
+          "spf": {
+            "domain": "bounce.example.com",
+            "result": "pass"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "unknown.example",
+          "id": "unknown",
+          "sample_bucket": 0,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "malformed-auth",
+          "sample_bucket": 5,
+          "spf": {
+            "domain": 7,
+            "result": "pass"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [
+            {
+              "domain": 7,
+              "result": "pass"
+            }
+          ],
+          "from_domain": "mail.example.com",
+          "id": "malformed-auth",
+          "sample_bucket": 5,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "spf",
+          "sample_bucket": 5,
+          "spf": {
+            "domain": "bounce.example.com",
+            "result": "pass"
+          }
+        },
+        {
+          "dkim": [
+            {
+              "domain": "example.com",
+              "result": "pass"
+            }
+          ],
+          "from_domain": "example.com",
+          "id": "dkim",
+          "sample_bucket": 20,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        },
+        {
+          "dkim": [
+            {
+              "domain": "example.com",
+              "result": "fail"
+            }
+          ],
+          "from_domain": "mail.example.com",
+          "id": "fail",
+          "sample_bucket": 40,
+          "spf": {
+            "domain": "bad.test",
+            "result": "pass"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "s",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [],
+          "from_domain": "mail.example.com",
+          "id": "strict",
+          "sample_bucket": 0,
+          "spf": {
+            "domain": "bounce.example.com",
+            "result": "pass"
+          }
+        }
+      ]
+    },
+    {
+      "policy": {
+        "adkim": "s",
+        "aspf": "r",
+        "organizational_domains": {
+          "bad.test": "bad.test",
+          "bounce.example.com": "example.com",
+          "example.com": "example.com",
+          "mail.example.com": "example.com"
+        },
+        "p": "quarantine",
+        "pct": 50,
+        "sp": "reject"
+      },
+      "records": [
+        {
+          "dkim": [
+            {
+              "domain": "bad.test",
+              "result": "fail"
+            },
+            {
+              "domain": "example.com",
+              "result": "pass"
+            }
+          ],
+          "from_domain": "example.com",
+          "id": "second-sig",
+          "sample_bucket": 99,
+          "spf": {
+            "domain": "bad.test",
+            "result": "fail"
+          }
+        }
+      ]
+    }
+  ]
+}

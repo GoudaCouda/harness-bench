@@ -1,0 +1,64 @@
+{
+  "directories": [
+    "inputs",
+    "inputs/decks",
+    "outputs",
+    "outputs/standardized",
+    "tools"
+  ],
+  "generated_at": "2026-07-20T00:00:00Z",
+  "initial_state_sha256": "b09e0ff5bf48fa4e3dcb69624d622380d60c8392287611613afce753a58fe5aa",
+  "protected_files": [
+    {
+      "path": "inputs/brand_template.pptx",
+      "sha256": "c3cf928383d8b85d120fdbb2ab1734db8cc8a5a255f8aa2e7563e9a1a07277d2",
+      "size_bytes": 6455
+    },
+    {
+      "path": "inputs/decks/market_brief.pptx",
+      "sha256": "f238fa1d25cd789cce9f52a3479ffd53f50080b430e840c9ee4498fa0d6115d9",
+      "size_bytes": 9291
+    },
+    {
+      "path": "inputs/decks/project_update.pptx",
+      "sha256": "3b7fafed85711edfc0f0cf265d4cc2271fe73ef24c75905a88cc74bd30fa23b1",
+      "size_bytes": 9254
+    },
+    {
+      "path": "inputs/decks/service_review.pptx",
+      "sha256": "d3c723be5f9ccb9cfe874fde2a34570a580e0f0f6ad0fb586b1411c437170ef8",
+      "size_bytes": 9243
+    },
+    {
+      "path": "inputs/style_map.json",
+      "sha256": "913733952b4e370376ce02c6d1a792eff974cb2941319ba162dedf4b6bc527d3",
+      "size_bytes": 1803
+    },
+    {
+      "path": "task.md",
+      "sha256": "7025e1de838d690410a1ac5cc07abe26ac3dbde81deaaef6aa25ba606da07c07",
+      "size_bytes": 927
+    },
+    {
+      "path": "tools/pptx_core.py",
+      "sha256": "6c35c5a2f73b18210cd14d004ad035bf60dab4ccda1a32ec63014f07591e99ac",
+      "size_bytes": 14819
+    },
+    {
+      "path": "tools/pptx_inspect.py",
+      "sha256": "af592f750feb7e631e1163113ad1ac5f4d3ea634f46f15094322d2fecb88780e",
+      "size_bytes": 1156
+    },
+    {
+      "path": "tools/pptx_standardize.py",
+      "sha256": "39698ddf25b965dd30f7b90b2d6e78364db28fbf98644cd34c6456c650e283c6",
+      "size_bytes": 2295
+    }
+  ],
+  "required_outputs": [
+    "outputs/standardized/market_brief.pptx",
+    "outputs/standardized/project_update.pptx",
+    "outputs/standardized/service_review.pptx"
+  ],
+  "schema_version": "case06_workspace_manifest_v1"
+}

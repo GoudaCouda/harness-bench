@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "authority": "superseded_historical",
+      "kind": "registry_protocol_version",
+      "relationship": "posted_before_primary_completion",
+      "sha256": "2ea97252c74c88f0711850d2e279249ebe1948bfd25c7fc680cee8e72c373c89",
+      "source_date": "2024-01-12",
+      "source_id": "REG-V1"
+    },
+    {
+      "authority": "controlling_prespecification",
+      "kind": "registry_protocol_version",
+      "relationship": "latest_posted_before_primary_completion",
+      "sha256": "2ea97252c74c88f0711850d2e279249ebe1948bfd25c7fc680cee8e72c373c89",
+      "source_date": "2025-05-15",
+      "source_id": "REG-V2"
+    },
+    {
+      "authority": "current_but_not_prespecification",
+      "kind": "registry_protocol_version",
+      "relationship": "posted_after_primary_completion_and_unblinding",
+      "sha256": "2ea97252c74c88f0711850d2e279249ebe1948bfd25c7fc680cee8e72c373c89",
+      "source_date": "2025-08-20",
+      "source_id": "REG-V3"
+    },
+    {
+      "authority": "pre_unblinding_corroboration",
+      "kind": "statistical_analysis_plan",
+      "relationship": "confirms_day28_primary_and_arm_map",
+      "sha256": "1eebf4f1b23446809335971319746935bb771637cdebe6f9dc191992f2426bcc",
+      "source_date": "2025-06-01",
+      "source_id": "SAP-V2"
+    },
+    {
+      "authority": "candidate_under_qc",
+      "kind": "results_submission",
+      "relationship": "submitted_not_posted_requires_correction",
+      "sha256": "3a14462c8e569ba84561c2ffd51d5beb7d17df180422124efe0e691fbe2a20c0",
+      "source_date": "2026-08-10",
+      "source_id": "SUB-QC-4"
+    },
+    {
+      "authority": "result_and_population_source",
+      "kind": "clinical_study_report_tables",
+      "relationship": "controls_values_labels_and_denominators",
+      "sha256": "9cf0a5a1f5c69eaf0729c2863cf887ff8b45c014630f0ca0e53d7c43a9675560",
+      "source_date": null,
+      "source_id": "CSR-T14"
+    },
+    {
+      "authority": "correction_trigger",
+      "kind": "registry_qc_comments",
+      "relationship": "identifies_fields_for_reconciliation",
+      "sha256": "59c2fba9325b084f88716d2a434151cdd5d8321adb350f8b9e81602b279a0c24",
+      "source_date": null,
+      "source_id": "QC-CYCLE-4"
+    },
+    {
+      "authority": "downstream_candidate",
+      "kind": "manuscript_proof",
+      "relationship": "claims_must_reconcile_before_publication",
+      "sha256": "59c2fba9325b084f88716d2a434151cdd5d8321adb350f8b9e81602b279a0c24",
+      "source_date": null,
+      "source_id": "MS-PROOF-7"
+    }
+  ],
+  "primary_completion_date": "2025-06-30",
+  "trial_id": "NCT-SYN-21021",
+  "unblinding_date": "2025-07-10"
+}

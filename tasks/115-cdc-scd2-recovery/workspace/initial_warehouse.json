@@ -1,0 +1,105 @@
+{
+  "dimension_current": [
+    {
+      "consent_state": "granted",
+      "current_version": 3,
+      "customer_id": "C001",
+      "is_deleted": 0,
+      "name": "Alpha Goods",
+      "region": "west",
+      "segment": "standard"
+    },
+    {
+      "consent_state": "granted",
+      "current_version": 1,
+      "customer_id": "C002",
+      "is_deleted": 0,
+      "name": "Beacon Retail",
+      "region": "north",
+      "segment": "basic"
+    },
+    {
+      "consent_state": "denied",
+      "current_version": 2,
+      "customer_id": "C003",
+      "is_deleted": 0,
+      "name": "Cedar Clinic",
+      "region": "south",
+      "segment": "pro"
+    }
+  ],
+  "dimension_history": [
+    {
+      "consent_state": "granted",
+      "customer_id": "C001",
+      "is_deleted": 0,
+      "name": "Alpha Goods",
+      "region": "west",
+      "segment": "basic",
+      "source_event_id": "INIT-C001-1",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-05-01T00:00:00Z",
+      "version": 1
+    },
+    {
+      "consent_state": "granted",
+      "customer_id": "C001",
+      "is_deleted": 0,
+      "name": "Alpha Goods",
+      "region": "west",
+      "segment": "standard",
+      "source_event_id": "INIT-C001-2",
+      "valid_from": "2026-05-01T00:00:00Z",
+      "valid_to": "2026-08-18T08:00:00Z",
+      "version": 2
+    },
+    {
+      "consent_state": "granted",
+      "customer_id": "C001",
+      "is_deleted": 0,
+      "name": "Alpha Goods",
+      "region": "west",
+      "segment": "standard",
+      "source_event_id": "INIT-C001-3",
+      "valid_from": "2026-08-18T08:00:00Z",
+      "valid_to": null,
+      "version": 3
+    },
+    {
+      "consent_state": "granted",
+      "customer_id": "C002",
+      "is_deleted": 0,
+      "name": "Beacon Retail",
+      "region": "north",
+      "segment": "basic",
+      "source_event_id": "INIT-C002-1",
+      "valid_from": "2026-06-01T00:00:00Z",
+      "valid_to": null,
+      "version": 1
+    },
+    {
+      "consent_state": "denied",
+      "customer_id": "C003",
+      "is_deleted": 0,
+      "name": "Cedar Clinic",
+      "region": "south",
+      "segment": "basic",
+      "source_event_id": "INIT-C003-1",
+      "valid_from": "2026-02-01T00:00:00Z",
+      "valid_to": "2026-07-01T00:00:00Z",
+      "version": 1
+    },
+    {
+      "consent_state": "denied",
+      "customer_id": "C003",
+      "is_deleted": 0,
+      "name": "Cedar Clinic",
+      "region": "south",
+      "segment": "pro",
+      "source_event_id": "INIT-C003-2",
+      "valid_from": "2026-07-01T00:00:00Z",
+      "valid_to": null,
+      "version": 2
+    }
+  ]
+}

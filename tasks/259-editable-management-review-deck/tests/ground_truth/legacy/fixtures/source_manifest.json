@@ -1,0 +1,40 @@
+{
+  "schema_version": "nami_work_case05_fixture_manifest_v1",
+  "source_mode": "synthetic_replacement",
+  "source_cluster_id": "dup_3d3ee0984c565432b6143653",
+  "generation_seed": "case_05_starbridge_q2_v1",
+  "fixed_time": "2026-07-01T09:00:00+08:00",
+  "agent_visible_files": [
+    {
+      "path": "TASK.md",
+      "sha256": "34c9445abb9baf54bf2a4d4bbbb760c1f32eab36455d9b6717675e6426420ae1",
+      "license_ref": "license_synthetic_case05",
+      "provenance_ref": "prov_instruction"
+    },
+    {
+      "path": "input/brand.json",
+      "sha256": "8a43ba420024fb4190a2c99dbef1d462e99a1b08c0f0db1702daa5741c8d5598",
+      "license_ref": "license_synthetic_case05",
+      "provenance_ref": "prov_synthetic_assets"
+    },
+    {
+      "path": "input/metrics.csv",
+      "sha256": "bcc6caf96cb63caf62006ebe8602a0af0a7c89b260b95b00724d1e5a4b0eabea",
+      "license_ref": "license_synthetic_case05",
+      "provenance_ref": "prov_synthetic_assets"
+    },
+    {
+      "path": "input/report.md",
+      "sha256": "0f15d54722d16e8d63a44880e8ffeec0556388aa27f6c4b146c628f6f933f7b7",
+      "license_ref": "license_synthetic_case05",
+      "provenance_ref": "prov_synthetic_assets"
+    }
+  ],
+  "empty_output_marker": {
+    "path": "output/.keep",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "privacy_statement": "OpenClaw 仅提供脱敏后的抽象意图锚点；品牌、事实、数字、报告、版式和验收规则均为本 case 新建的合成内容。",
+  "license_statement": "全部合成资产由本项目为 case_05 创建，允许用于商业训练、环境验证和派生轨迹。"
+}
+

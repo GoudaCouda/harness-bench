@@ -1,0 +1,318 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "too-old",
+          "issuer": "https://id.example",
+          "kid": "k1",
+          "now": 141,
+          "refresh_failed": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "clock",
+          "issuer": "https://id.example",
+          "kid": "missing",
+          "now": 99
+        }
+      ]
+    },
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "active-before-fetch",
+            "not_after": 200,
+            "not_before": 0,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "clock-overrides-active",
+          "issuer": "https://id.example",
+          "kid": "active-before-fetch",
+          "now": 99
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "active",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "active",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        }
+      ]
+    },
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "active",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "unknown",
+          "issuer": "https://id.example",
+          "kid": "k3",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "stale",
+          "issuer": "https://id.example",
+          "kid": "k1",
+          "now": 130,
+          "refresh_failed": true
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "active",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "unknown",
+          "issuer": "https://id.example",
+          "kid": "k3",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "stale",
+          "issuer": "https://id.example",
+          "kid": "k1",
+          "now": 130,
+          "refresh_failed": true
+        }
+      ]
+    },
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": true
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "RS256",
+          "id": "revoked",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        }
+      ]
+    },
+    {
+      "policy": {
+        "fetched_at": 100,
+        "keys": [
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k1",
+            "not_after": 110,
+            "not_before": 0,
+            "revoked": false
+          },
+          {
+            "alg": "RS256",
+            "issuer": "https://id.example",
+            "kid": "k2",
+            "not_after": 200,
+            "not_before": 110,
+            "revoked": false
+          }
+        ],
+        "max_stale": 40
+      },
+      "records": [
+        {
+          "alg": "ES256",
+          "id": "alg",
+          "issuer": "https://id.example",
+          "kid": "k2",
+          "now": 120
+        },
+        {
+          "alg": "RS256",
+          "id": "edge",
+          "issuer": "https://id.example",
+          "kid": "k1",
+          "now": 140,
+          "refresh_failed": true
+        }
+      ]
+    }
+  ]
+}

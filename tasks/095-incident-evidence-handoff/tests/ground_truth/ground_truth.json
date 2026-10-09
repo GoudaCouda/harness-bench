@@ -1,0 +1,34 @@
+{
+  "task_id": "095-incident-evidence-handoff",
+  "incident_id": "INC-8842",
+  "recovery_id": "IER-20260819-01",
+  "source_checkpoint": "57cf32b1c9bd3272e8c091656ac7abd5df789474f77e645cc459f5d6f579baff7",
+  "semantic_digest": "de1ff34c7323a1dcd286f18c40cb6355cea191fefe112cb103f223797bb7ba6f5",
+  "event_dispositions": {
+    "DEL-001": "superseded_by_newer_sequence",
+    "DEL-002": "applied_current",
+    "DEL-003": "applied_current",
+    "DEL-004": "applied_current",
+    "DEL-005": "duplicate_delivery_ignored",
+    "DEL-006": "superseded_by_newer_sequence",
+    "DEL-007": "identity_mismatch_ignored",
+    "DEL-008": "hash_mismatch_quarantined"
+  },
+  "acquisition_actions": {
+    "ACQ-BAD-9": "quarantine_hash_mismatch",
+    "ACQ-MEM-17": "preserve_offline",
+    "ACQ-ID-7": "preserve_offline",
+    "ACQ-DUAL-8": "preserve_offline",
+    "ACQ-CHAIN-8": "quarantine_chain_break",
+    "ACQ-DISK-17": "preserve_offline"
+  },
+  "scope_actions": {
+    "sess-7x": "stage_session_disable",
+    "sess-safe-2": "observe_no_containment",
+    "user-7": "preserve_account_scope",
+    "ws-clean-03": "observe_no_containment",
+    "ws-fin-17": "preserve_observed_isolation",
+    "ws-ops-08": "analyst_review_no_containment"
+  },
+  "external_actions_executed": false
+}

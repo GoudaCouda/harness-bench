@@ -1,0 +1,24 @@
+{
+  "effective_config": {
+    "max_db_connections": "500",
+    "cache_ttl_seconds": "600",
+    "api_rate_limit": "100",
+    "default_theme": "dark",
+    "worker_timeout": "30",
+    "db_connection_pool_size": "150",
+    "enable_ssl": "true",
+    "log_level": "INFO",
+    "max_upload_size_mb": "50",
+    "session_timeout_min": "30"
+  },
+  "nodes": {
+    "web-01": ["web", "8", "16", "200", "us-east-1"],
+    "web-02": ["web", "8", "16", "200", "us-east-1"],
+    "api-01": ["api", "16", "32", "500", "us-east-1"],
+    "api-02": ["api", "16", "32", "500", "us-east-1"],
+    "db-master": ["database", "32", "64", "2000", "us-east-1"],
+    "db-replica-01": ["database", "16", "32", "1000", "us-west-2"],
+    "cache-01": ["cache", "16", "128", "100", "us-east-1"],
+    "worker-01": ["worker", "16", "64", "500", "us-west-2"]
+  }
+}

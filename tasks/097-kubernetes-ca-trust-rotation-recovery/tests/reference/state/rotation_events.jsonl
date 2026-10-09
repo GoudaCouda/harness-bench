@@ -1,0 +1,13 @@
+{"seq":1,"event":"certificate_directory_backup_verified","result":"pass"}
+{"seq":2,"event":"dual_root_bundle_published","path":"pki/ca-bundle.crt","contains":["OLD-CA","NEW-CA"]}
+{"seq":3,"event":"in_cluster_clients_restarted","result":"partial","deferred":["metrics-adapter"]}
+{"seq":4,"event":"server_leaf_rotated","server_id":"kube-apiserver/cp-1","from":"OLD-CA","to":"NEW-CA"}
+{"seq":5,"event":"server_leaf_rotated","server_id":"kube-apiserver/cp-2","from":"OLD-CA","to":"NEW-CA"}
+{"seq":6,"event":"controller_manager_restart_failed","reason":"ca_bundle_not_allowed_for_single_ca_flags"}
+{"seq":7,"event":"old_anchor_retirement_rejected","blockers":["controller_manager_degraded","client_without_new_trust:metrics-adapter","old_signed_server:kube-apiserver/cp-3","complete_dual_probe_missing"]}
+{"client_ca_file":"pki/new-ca.crt","cluster_signing_cert_file":"pki/new-ca.crt","cluster_signing_key_file":"pki/new-ca.key","event":"controller_ca_roles_repaired","root_ca_file":"pki/ca-bundle.crt","seq":8}
+{"client_id":"metrics-adapter","event":"client_trust_refreshed","from":"old_only","seq":9,"to":"dual"}
+{"event":"server_leaf_rotated","from":"OLD-CA","seq":10,"server_id":"kube-apiserver/cp-3","to":"NEW-CA"}
+{"event":"dual_trust_verification_passed","pair_count":12,"probe_sha256":"d0d1c49aa85718b1c439655cee60e22fd49b52770703d2f57638ea00267609a0","seq":11}
+{"dual_probe_sha256":"d0d1c49aa85718b1c439655cee60e22fd49b52770703d2f57638ea00267609a0","event":"old_anchor_retired","from":"dual","seq":12,"to":"new_only"}
+{"event":"new_only_verification_passed","pair_count":12,"seq":13}

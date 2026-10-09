@@ -1,0 +1,8 @@
+{
+  "schema_version": "case17_image_lock_v1",
+  "runtime_image_ref": "python:3.11.9-slim-bookworm",
+  "runtime_image_digest": "sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317",
+  "remote_observed_at": "2026-07-20T06:52:21Z",
+  "remote_host": "local-docker",
+  "policy": "launcher must compare docker image inspect .Id to runtime_image_digest and run by digest"
+}

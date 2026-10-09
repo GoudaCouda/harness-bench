@@ -1,0 +1,41 @@
+task_id: 063-cli-stdin-tty-safety-repair
+title: Repair destructive CLI confirmation across TTY and piped input
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 3600
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, safety_boundary]
+stressors: [tty_detection, piped_stdin, flag_precedence, fail_closed_confirmation, exit_codes]
+required_artifacts:
+- repo/src/confirm_policy.py
+- repo/decision_report.json
+- repo/REPAIR_NOTES.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [PYTHON-OS-ISATTY, POSIX-UTILITY-STDIN, CLI-GUIDELINES-INTERACTIVITY]
+task_family: cli-interactivity-safety
+variant: destructive-confirmation-precedence
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/decision_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/confirm_policy.py]
+  allowed_deleted: []
+schema_version: 2
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  verifier: verify_environment.py
+  grader:
+    verifier: verify_grader_environment.py
+  services: []

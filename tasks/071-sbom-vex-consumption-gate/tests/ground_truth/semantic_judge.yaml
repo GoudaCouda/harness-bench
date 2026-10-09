@@ -1,0 +1,9 @@
+schema_version: 1
+task_id: 071-sbom-vex-consumption-gate
+criteria:
+- id: handoff_semantics
+  question: Does the handoff accurately distinguish accepted and rejected VEX evidence, real blockers, absent-component KEV scope, blocked gate, replay, next actions, and offline boundaries?
+  title: Evidence-grounded release-security handoff
+  description: The handoff accurately distinguishes accepted and rejected VEX evidence, identifies true blockers and the absent-component KEV item, states the blocked gate and replay result, gives safe next actions, and does not claim deployment or external communication.
+  pass_if: Equivalent professional wording communicates all required relationships without contradicting the machine state.
+  fail_if: The prose trusts a rejected assertion, marks under-investigation or affected risk as cleared, treats the absent package as shipped, claims the gate passed, omits the offline boundary, or asserts external action.

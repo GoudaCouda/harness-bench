@@ -1,0 +1,13 @@
+expense_id,employee,claimed_usd,allowed_usd,status,reason,recommended_action
+E-001,Mina Patel,420.00,420.00,approved,Airfare supported at actual cost,Approve for controller posting
+E-002,Mina Patel,748.00,668.00,adjusted,Two room nights exceed lodging cap but USD 68 tax remains allowable,Adjust room charge to two USD 300 nights and retain tax
+E-003,Mina Patel,92.00,0.00,rejected,Dinner was provided by the conference,Reject hosted meal
+E-004,Mina Patel,45.00,0.00,pending,Taxi over USD 25 has a missing receipt,Request the taxi receipt before approval
+E-005,Mina Patel,748.00,0.00,rejected,Duplicate use of card transaction C-1002,Reject duplicate copied folio
+E-006,Mina Patel,38.00,0.00,rejected,Personal minibar is not allowable,Reject personal incidental
+E-007,Mina Patel,88.00,88.00,approved,EUR 80 rail converted at the 2026-07-16 rate of 1.10,Approve USD 88.00
+E-008,Mina Patel,250.00,0.00,pending,Travel Director approval AP-777 is only requested,Hold until deal-specific approval is granted
+E-009,Mina Patel,20.00,20.00,approved,Breakfast is within USD 25 per diem and no receipt is required,Approve USD 20.00
+E-010,Mina Patel,330.00,320.00,adjusted,One USD 310 room night exceeds the lodging cap while USD 20 tax remains allowable,Adjust room to USD 300 and retain tax
+E-011,Luis Chen,18.00,18.00,approved,Taxi is below the USD 25 receipt threshold,Approve USD 18.00
+E-012,Zoe King,120.00,0.00,rejected,Trip T-999 has no approved travel authorization,Reject as unauthorized travel

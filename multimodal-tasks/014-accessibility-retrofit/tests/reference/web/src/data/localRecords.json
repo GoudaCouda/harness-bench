@@ -1,0 +1,50 @@
+[
+  {
+    "id": "A11Y-NAV",
+    "label": "Keyboard focus gap",
+    "category": "focus",
+    "owner": "Design Systems",
+    "severity": "watch",
+    "x": 18,
+    "y": 18,
+    "w": 30,
+    "h": 12,
+    "fix": "Add visible focus state to primary navigation links"
+  },
+  {
+    "id": "A11Y-FORM",
+    "label": "Missing input label",
+    "category": "label",
+    "owner": "Growth",
+    "severity": "review",
+    "x": 59,
+    "y": 44,
+    "w": 24,
+    "h": 14,
+    "fix": "Bind visible label text to the email field"
+  },
+  {
+    "id": "A11Y-CARD",
+    "label": "Low contrast price text",
+    "category": "contrast",
+    "owner": "Catalog",
+    "severity": "review",
+    "x": 18,
+    "y": 67,
+    "w": 26,
+    "h": 16,
+    "fix": "Raise price text contrast and keep the sale badge readable"
+  },
+  {
+    "id": "A11Y-MODAL",
+    "label": "Modal close target",
+    "category": "keyboard",
+    "owner": "Marketing",
+    "severity": "watch",
+    "x": 70,
+    "y": 16,
+    "w": 17,
+    "h": 12,
+    "fix": "Expose close button name and tab stop"
+  }
+]

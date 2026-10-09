@@ -1,0 +1,11 @@
+{
+  "database_byte_stable": true,
+  "external_transmissions_executed": false,
+  "manifest_byte_stable": true,
+  "packet_byte_stable": true,
+  "receipt_byte_stable": true,
+  "recovery_id": "PV-RECOVERY-140-R1",
+  "schema_version": 1,
+  "semantic_plan_digest": "f30185a577832814eda0610dc810e81a2a3cb1ff6744ae5ea5a7f3922ca884b7",
+  "status": "pass"
+}

@@ -1,0 +1,30 @@
+**
+!src/
+!src/harnessbench/
+!src/harnessbench/__init__.py
+!src/harnessbench/grading/
+!src/harnessbench/grading/__init__.py
+!src/harnessbench/grading/oracle_contract.py
+!src/harnessbench/grading/deterministic_oracle.py
+!src/harnessbench/grading/legacy_case_adapter.py
+!src/harnessbench/grading/outcome_cases.py
+!src/harnessbench/grading/pure_function.py
+!src/harnessbench/grading/semantic_judge.py
+!src/harnessbench/grading/structured_io.py
+!src/harnessbench/grading/task_checks.py
+!docker/
+!docker/grader/
+!docker/grader/Dockerfile
+!docker/grader/grade_entrypoint.py
+!docker/grader/requirements.lock
+!docker/openclaw/
+!docker/openclaw/Dockerfile
+!docker/openclaw/requirements.lock
+!docker/openclaw/verify_toolchain.py
+!docker/harnesses/
+!docker/harnesses/**
+
+# Never traverse interpreter caches. Grader/reference runs may create these as
+# an unprivileged or container-only UID, and they are not build inputs.
+**/__pycache__/
+**/*.py[cod]

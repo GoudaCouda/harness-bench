@@ -1,0 +1,62 @@
+task_id: 247-stv-ranked-choice-tabulation
+title: Admit STV ballots only when rankings are unique legal candidates
+prompt_file: instruction.md
+timeout_sec: 2400
+domain: Compliance
+task_category: Business Operations
+task_subcategory: Rule-Based Review
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- policy_adjudication
+harness_demands:
+- state_management
+- evidence_grounding
+- multi_step_execution
+- verification_behavior
+- safety_boundary
+- output_contract
+stressors:
+- conflicting_evidence
+- stale_state
+- schema_mismatch
+- authorization_boundary
+required_artifacts:
+- state/stv_log.json
+- state/stv_receipt.json
+- state/verification.json
+- stv_handoff.md
+task_family: 247-stv-ranked-choice-tabulation
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - FERPA-DIRECTORY-INFO
+  - USCIS-I9-HANDBOOK
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: verify_environment.py
+  required_tools:
+    python3: "3.12"
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - state/stv_log.json
+  - state/stv_receipt.json
+  - state/verification.json
+  - stv_handoff.md
+  allowed_modified: []
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+schema_version: 2

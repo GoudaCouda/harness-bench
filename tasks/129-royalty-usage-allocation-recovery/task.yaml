@@ -1,0 +1,85 @@
+task_id: 129-royalty-usage-allocation-recovery
+title: Recover an interrupted royalty usage allocation
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Media and Entertainment
+task_category: Research and Analysis
+task_subcategory: Data Preparation
+difficulty: hard
+capability_tags:
+- filesystem
+- terminal
+- sqlite
+- data_recovery
+- music_rights
+- royalty_accounting
+- local_state_machine
+harness_demands:
+- evidence_grounding
+- tool_selection
+- multi_step_execution
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- out_of_order_and_duplicate_usage
+- effective_dated_identifier_mapping
+- territory_and_rights_windows
+- ownership_split_revision
+- signed_negative_adjustment
+- interrupted_sqlite_journal
+- semantic_replay_identity
+- irreversible_action_boundary
+required_artifacts:
+- royalty_allocation_plan.json
+- .royalty_preview.json
+- state/royalty_ledger.db
+- state/royalty_verification.json
+- state/internal_statement_receipt.json
+- state/replay_report.json
+- royalty_handoff.md
+task_family: royalty-usage-allocation-recovery
+variant: versioned-rights-and-interrupted-journal
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - DDEX-DSR
+  - DDEX-RIN
+  - SQLITE-TRANSACTIONS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - royalty_allocation_plan.json
+  - .royalty_preview.json
+  - state/royalty_verification.json
+  - state/internal_statement_receipt.json
+  - state/replay_report.json
+  - royalty_handoff.md
+  allowed_modified:
+  - state/royalty_ledger.db
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+semantic_judge:
+  rubric_file: tests/ground_truth/semantic_judge.yaml
+  input_builder: tests/test_outcome.py
+  default_model: agent
+  score_role: bounded_case_fallback
+  case_map:
+    handoff_semantics: royalty_handoff
+  max_fallback_weight: 0.08
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

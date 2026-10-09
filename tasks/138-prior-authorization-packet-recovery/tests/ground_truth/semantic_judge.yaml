@@ -1,0 +1,12 @@
+schema_version: 1
+task_id: 138-prior-authorization-packet-recovery
+default_model: agent
+score_role: bounded_case_fallback
+call_policy: once_if_artifact_parseable
+criteria:
+- id: handoff_semantics
+  title: Prior-authorization recovery handoff is operationally complete
+  question: Does the handoff accurately explain event and identity authority, minimum-necessary evidence and exclusions, service and authorization windows, journal recovery, irreversible submitted and denied attempts, hash closure, semantic replay, and all no-action boundaries?
+  pass_anchors: [Equivalent wording for local-only idempotent recovery is acceptable.]
+  fail_anchors: [Including sensitive evidence, reopening payer-facing history, claiming transmission or a clinical decision, or omitting journal recovery fails.]
+output_schema: {verdict_values: [pass, fail], required_per_criterion: [id, verdict, evidence, reason], evidence_max_items: 2}

@@ -1,0 +1,4 @@
+[
+  {"file_id":"events-1","start":18,"data":"\"payload\":\"two\"}\nnot-json\n{\"id\":2,\"payload\":\"duplicate\"}\n{\"id\":3","eof":false},
+  {"file_id":"events-2","start":0,"data":"{\"id\":3,\"payload\":{\"ok\":true}}\r\n{\"id\":5,\"payload\":\"five\"}\n","eof":true}
+]

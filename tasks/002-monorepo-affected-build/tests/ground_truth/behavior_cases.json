@@ -1,0 +1,83 @@
+{
+  "behavior": [
+    {
+      "changed_paths": ["lib/src/a.py"],
+      "graph": {
+        "packages": {
+          "lib": {"dependencies": [], "source_roots": ["lib/src/"], "generated_inputs": [], "buildable": true},
+          "app": {"dependencies": ["lib"], "source_roots": ["app/src/"], "generated_inputs": [], "buildable": true},
+          "docs": {"dependencies": ["app"], "source_roots": ["docs/"], "generated_inputs": [], "buildable": false}
+        },
+        "global_inputs": {}
+      },
+      "expected": ["lib", "app"]
+    },
+    {
+      "changed_paths": ["generated/client.py"],
+      "graph": {
+        "packages": {
+          "schema": {"dependencies": [], "source_roots": ["schema/src/"], "generated_inputs": ["generated/client.py"], "buildable": true},
+          "ui": {"dependencies": ["schema"], "source_roots": ["ui/src/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {}
+      },
+      "expected": ["schema", "ui"]
+    },
+    {
+      "changed_paths": ["lock.json"],
+      "graph": {
+        "packages": {
+          "a": {"dependencies": [], "source_roots": ["a/"], "generated_inputs": [], "buildable": true},
+          "b": {"dependencies": ["a"], "source_roots": ["b/"], "generated_inputs": [], "buildable": true},
+          "c": {"dependencies": [], "source_roots": ["c/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {"lock.json": ["a", "b", "c"]}
+      },
+      "expected": ["a", "c", "b"]
+    }
+  ],
+  "edges": [
+    {
+      "changed_paths": ["docs/readme.md", "pkg/src/guide.MD", "unknown.txt"],
+      "graph": {
+        "packages": {
+          "pkg": {"dependencies": [], "source_roots": ["pkg/src/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {}
+      },
+      "expected": []
+    },
+    {
+      "changed_paths": ["packages/nested/src/deleted.py", "packages/nested/src/deleted.py"],
+      "graph": {
+        "packages": {
+          "wide": {"dependencies": [], "source_roots": ["packages/"], "generated_inputs": [], "buildable": true},
+          "nested": {"dependencies": [], "source_roots": ["packages/nested/src/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {}
+      },
+      "expected": ["nested"]
+    }
+  ],
+  "invalid": [
+    {
+      "changed_paths": [],
+      "graph": {
+        "packages": {
+          "a": {"dependencies": ["b"], "source_roots": ["a/"], "generated_inputs": [], "buildable": true},
+          "b": {"dependencies": ["a"], "source_roots": ["b/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {}
+      }
+    },
+    {
+      "changed_paths": ["a/x.py"],
+      "graph": {
+        "packages": {
+          "a": {"dependencies": ["missing"], "source_roots": ["a/"], "generated_inputs": [], "buildable": true}
+        },
+        "global_inputs": {}
+      }
+    }
+  ]
+}

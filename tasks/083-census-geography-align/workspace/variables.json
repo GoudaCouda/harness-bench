@@ -1,0 +1,15 @@
+{
+  "logical_measure": "resident_population_estimate",
+  "2024": {
+    "population_est": "P001",
+    "population_moe": "P001M",
+    "universe": "resident population"
+  },
+  "2025": {
+    "population_est": "P101",
+    "population_moe": "P101M",
+    "universe": "resident population"
+  },
+  "missing_markers": [null, "S"],
+  "missing_marker_meaning": "suppressed"
+}

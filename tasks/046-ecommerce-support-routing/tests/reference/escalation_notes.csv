@@ -1,0 +1,6 @@
+ticket_id,reason,policy_basis,human_team
+T-1003,Repeated delivery failures and a manager request require review,ESC-1,Logistics Escalations
+T-1005,The active fraud hold blocks automated account action,FRAUD-1,Fraud Review
+T-1006,A delivered-status nonreceipt dispute is within 14 days,DISPUTE-1,Trust and Safety
+T-1008,Missing POD and signature require a carrier investigation,DISPUTE-1,Carrier Claims
+T-1009,Carrier status conflicts with the warehouse manifest,CONFLICT-1,Logistics Integrity

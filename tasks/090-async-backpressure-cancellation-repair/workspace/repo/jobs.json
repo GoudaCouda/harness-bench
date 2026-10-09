@@ -1,0 +1,6 @@
+[
+  {"id": "job-a", "payload": {"delay_ms": 35, "value": "alpha", "fail": false}},
+  {"id": "job-b", "payload": {"delay_ms": 5, "value": "beta", "fail": false}},
+  {"id": "job-c", "payload": {"delay_ms": 10, "value": "unused", "fail": true}},
+  {"id": "job-d", "payload": {"delay_ms": 1, "value": {"rows": 7}, "fail": false}}
+]

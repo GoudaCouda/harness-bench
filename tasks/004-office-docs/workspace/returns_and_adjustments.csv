@@ -1,0 +1,15 @@
+event_id,order_id,event_at,event_type,amount,state,supersedes_event_id
+ADJ-N1,N-1002,2026-09-15T10:30:00Z,refund,200.00,settled,
+ADJ-N2,N-1004,2026-10-02T14:00:00Z,refund,100.00,approved,
+ADJ-N3,N-1006,2026-09-20T09:15:00Z,refund,80.00,settled,
+ADJ-N4,N-1006,2026-09-21T11:20:00Z,refund,80.00,settled,ADJ-N3
+ADJ-S1,S-2001,2026-10-04T16:00:00Z,refund,250.00,settled,
+ADJ-S2,S-2002,2026-10-06T08:00:00Z,refund,100.00,settled,
+ADJ-S3,S-2003,2026-09-28T12:00:00Z,refund,50.00,settled,
+ADJ-S4,S-2003,2026-09-29T13:30:00Z,refund,50.00,reversed,ADJ-S3
+ADJ-E1,E-3002,2026-08-15T15:45:00Z,refund,650.00,settled,
+ADJ-E2,E-3004,2026-09-18T10:00:00Z,refund,100.00,settled,
+ADJ-E3,E-3005,2026-09-23T10:20:00Z,refund,25.00,settled,
+ADJ-W1,W-4001,2026-07-26T17:00:00Z,refund,180.00,settled,
+ADJ-W2,W-4002,2026-09-30T18:00:00Z,refund,120.00,approved,
+ADJ-W3,W-4004,2026-10-05T20:00:00Z,refund,700.00,settled,

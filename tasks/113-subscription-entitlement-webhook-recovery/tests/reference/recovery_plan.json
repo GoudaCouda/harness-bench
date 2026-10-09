@@ -1,0 +1,103 @@
+{
+  "decisions": [
+    {
+      "bridged_event_ids": [
+        "evt_O102"
+      ],
+      "dispute_status": "none",
+      "duplicate_event_ids": [],
+      "entitlement_state": "active",
+      "event_ids": [
+        "evt_O101",
+        "evt_O102",
+        "evt_O103",
+        "evt_O104"
+      ],
+      "external_action": "none",
+      "invoice_id": "inv_orchid",
+      "invoice_status": "partially_refunded",
+      "next_local_action": "support_review_partial_refund",
+      "paid_cents": 12000,
+      "plan_code": "pro",
+      "refunded_cents": 2500,
+      "seats": 7,
+      "source_high_watermark": 4,
+      "subscription_id": "sub_orchid",
+      "subscription_status": "active"
+    },
+    {
+      "bridged_event_ids": [],
+      "dispute_status": "lost",
+      "duplicate_event_ids": [],
+      "entitlement_state": "suspended",
+      "event_ids": [
+        "evt_A201",
+        "evt_A202"
+      ],
+      "external_action": "none",
+      "invoice_id": "inv_amber",
+      "invoice_status": "charged_back",
+      "next_local_action": "manual_billing_review",
+      "paid_cents": 20000,
+      "plan_code": "pro",
+      "refunded_cents": 0,
+      "seats": 0,
+      "source_high_watermark": 2,
+      "subscription_id": "sub_amber",
+      "subscription_status": "delinquent"
+    },
+    {
+      "bridged_event_ids": [
+        "evt_C302"
+      ],
+      "dispute_status": "none",
+      "duplicate_event_ids": [
+        "evt_C303"
+      ],
+      "entitlement_state": "active",
+      "event_ids": [
+        "evt_C301",
+        "evt_C302",
+        "evt_C303"
+      ],
+      "external_action": "none",
+      "invoice_id": "inv_cobalt",
+      "invoice_status": "paid",
+      "next_local_action": "close_recovered_payment_incident",
+      "paid_cents": 9000,
+      "plan_code": "team",
+      "refunded_cents": 0,
+      "seats": 4,
+      "source_high_watermark": 3,
+      "subscription_id": "sub_cobalt",
+      "subscription_status": "active"
+    },
+    {
+      "bridged_event_ids": [],
+      "dispute_status": "none",
+      "duplicate_event_ids": [],
+      "entitlement_state": "active",
+      "event_ids": [
+        "evt_D401"
+      ],
+      "external_action": "none",
+      "invoice_id": "inv_dahlia",
+      "invoice_status": "paid",
+      "next_local_action": "review_at_period_end",
+      "paid_cents": 6000,
+      "plan_code": "basic",
+      "refunded_cents": 0,
+      "seats": 2,
+      "source_high_watermark": 1,
+      "subscription_id": "sub_dahlia",
+      "subscription_status": "cancel_at_period_end"
+    }
+  ],
+  "external_actions_executed": false,
+  "quarantined_event_ids": [
+    "evt_X901"
+  ],
+  "run_id": "ER-20260818-01",
+  "schema_version": 1,
+  "snapshot_id": "psnap_20260818_0900"
+}

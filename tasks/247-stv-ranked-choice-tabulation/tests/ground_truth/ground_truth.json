@@ -1,0 +1,50 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1776468800
+  },
+  "artifacts": {
+    "receipt": {
+      "stream_id": "pebbleward-247",
+      "gate_clock_epoch": 1776468800,
+      "counts": {
+        "recorded": 3,
+        "conflict": 2,
+        "malformed": 2
+      },
+      "recorded_ids": [
+        "b1",
+        "b6",
+        "b7"
+      ],
+      "conflict_ids": [
+        "b2",
+        "b3"
+      ],
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "stvctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "recorded",
+      "1": "conflict",
+      "2": "conflict",
+      "3": "malformed",
+      "4": "malformed",
+      "5": "recorded",
+      "6": "recorded"
+    },
+    "recorded_ids": [
+      "b1",
+      "b6",
+      "b7"
+    ],
+    "conflict_ids": [
+      "b2",
+      "b3"
+    ]
+  }
+}

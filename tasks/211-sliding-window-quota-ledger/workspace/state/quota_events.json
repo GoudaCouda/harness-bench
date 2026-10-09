@@ -1,0 +1,41 @@
+{
+  "ledger_id": "quota-2026-03-17",
+  "events": [
+    {
+      "event_id": "e1",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 50000,
+      "at": 1773648000
+    },
+    {
+      "event_id": "e2",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 20000,
+      "at": 1773737900
+    },
+    {
+      "event_id": "e3",
+      "tenant_id": "tn-west",
+      "kind": "debit",
+      "amount_cents": 25000,
+      "at": 1773737950
+    },
+    {
+      "event_id": "e4",
+      "tenant_id": "tn-west",
+      "kind": "refund",
+      "amount_cents": 10000,
+      "at": 1773737960,
+      "refund_of": "e2"
+    },
+    {
+      "event_id": "e5",
+      "tenant_id": "tn-east",
+      "kind": "debit",
+      "amount_cents": 8000,
+      "at": 1773737990
+    }
+  ]
+}

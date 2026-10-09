@@ -1,0 +1,28 @@
+{
+  "architecture": "amd64",
+  "config": {
+    "digest": "sha256:4aed2f098652843558557c53a3e721db30af0810ecb96c6091297fed1e71ad65",
+    "size": 612
+  },
+  "layers": [
+    {
+      "digest": "sha256:6586a003b60267d616cec85bddd31228726ec59984b51e7b0127bb1192cddd43",
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 48211
+    },
+    {
+      "digest": "sha256:7fedc3c94dc9ebf9bd371add39c6b9da2b0a4a873a84d50b2194216c91136a9f",
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 12907
+    }
+  ],
+  "manifest_digest": "sha256:e4fb44a385da07034dbd157ed8788f05e2cba6913ddd0df69dcc8308ae26cde2",
+  "name": "synthetic.registry/runtime/node20",
+  "os": "linux",
+  "runtime": {
+    "glibc": "2.36.0",
+    "node_api": 9,
+    "node_version": "20.16.0",
+    "platform": "linux/amd64"
+  }
+}

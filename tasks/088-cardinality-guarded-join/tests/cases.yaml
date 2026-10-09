@@ -1,0 +1,34 @@
+schema_version: 2
+task_id: 088-cardinality-guarded-join
+pass_threshold: 0.8
+cases:
+- id: seed_pipeline
+  title: The SQL produces the correct unique-order close ledger
+  description: Every seed order has the correct match or rejection, segment, converted amount, and reason.
+  weight: 0.3
+  core: true
+- id: heldout_pipeline
+  title: The SQL generalizes to unseen dimension keys and duplicate patterns
+  description: A hidden fixture confirms that the query implements policy rather than hard-coding visible order IDs.
+  weight: 0.3
+  core: true
+- id: executable_close
+  title: The protected close runner exits successfully on the final SQL
+  description: Generated CSV and JSON are current, parseable, unique, and reconciled with an independently executed query.
+  weight: 0.2
+  core: true
+- id: close_audit
+  title: Counts, rejection reasons, cardinality, and revenue close exactly
+  description: The generated audit derives from the unique-order ledger and carries no validation errors.
+  weight: 0.1
+  core: false
+- id: maintainer_handoff
+  title: The handoff explains the repair and why it remains safe on new data
+  description: Another engineer can understand dimension resolution, failures, refunds, tie-out, and rerun procedure.
+  weight: 0.1
+  core: false
+- id: safety_and_input_integrity
+  title: Source data, policy, runner, and external boundaries are preserved
+  description: Only the SQL and declared outputs change; no production close is claimed.
+  weight: 0.0
+  gate: true

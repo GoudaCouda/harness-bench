@@ -1,0 +1,46 @@
+{
+  "valid": [
+    {
+      "event": {"event_id":"old-false","event_time":"2026-07-31T23:59:59Z","received_at":"2026-08-04T10:00:00Z","account_id":"a1","flag_snapshot":{"checkout_v2":false}},
+      "policy": {"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"old-false","engine":"v1","decision_source":"historical_snapshot"}
+    },
+    {
+      "event": {"event_id":"old-true","event_time":"2025-02-28T12:30:44Z","received_at":"2026-08-05T11:00:00Z","account_id":"a2","flag_snapshot":{"checkout_v2":true}},
+      "policy": {"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"old-true","engine":"v2","decision_source":"historical_snapshot"}
+    },
+    {
+      "event": {"event_id":"at-cutoff","event_time":"2026-08-01T00:00:00Z","received_at":"2026-08-01T00:00:01Z","account_id":"a3","flag_snapshot":{"checkout_v2":false}},
+      "policy": {"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"at-cutoff","engine":"v2","decision_source":"retired_default"}
+    },
+    {
+      "event": {"event_id":"new-null","event_time":"2028-02-29T23:59:59Z","received_at":"2028-03-01T00:00:00Z","account_id":"a4","flag_snapshot":null},
+      "policy": {"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"new-null","engine":"v2","decision_source":"retired_default"}
+    },
+    {
+      "event": {"event_id":"custom-cutoff","event_time":"2024-02-29T00:00:00Z","received_at":"2025-01-01T00:00:00Z","account_id":"a5","flag_snapshot":{"checkout_v2":true}},
+      "policy": {"retired_at":"2024-03-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"custom-cutoff","engine":"v2","decision_source":"historical_snapshot"}
+    },
+    {
+      "event": {"event_id":"post-object","event_time":"2027-01-01T00:00:00Z","received_at":"2027-01-01T00:00:01Z","account_id":"a6","flag_snapshot":{"checkout_v2":false,"experiment_note":true}},
+      "policy": {"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"},
+      "expected": {"event_id":"post-object","engine":"v2","decision_source":"retired_default"}
+    }
+  ],
+  "invalid": [
+    {"event":{"event_id":"bad-day","event_time":"2026-02-29T00:00:00Z","received_at":"2026-03-01T00:00:00Z","account_id":"a","flag_snapshot":{"checkout_v2":true}},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"bad-shape","event_time":"2026-7-01T00:00:00Z","received_at":"2026-08-01T00:00:00Z","account_id":"a","flag_snapshot":{"checkout_v2":true}},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"bad-received","event_time":"2026-07-01T00:00:00Z","received_at":"not-a-time","account_id":"a","flag_snapshot":{"checkout_v2":true}},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"integer-bool","event_time":"2026-07-01T00:00:00Z","received_at":"2026-07-01T00:00:01Z","account_id":"a","flag_snapshot":{"checkout_v2":1}},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"missing-old","event_time":"2026-07-01T00:00:00Z","received_at":"2026-07-01T00:00:01Z","account_id":"a","flag_snapshot":{}},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"extra","event_time":"2026-09-01T00:00:00Z","received_at":"2026-09-01T00:00:01Z","account_id":"a","flag_snapshot":null,"retry":true},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"post-bad-snapshot","event_time":"2026-09-01T00:00:00Z","received_at":"2026-09-01T00:00:01Z","account_id":"a","flag_snapshot":false},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"bad-policy","event_time":"2026-09-01T00:00:00Z","received_at":"2026-09-01T00:00:01Z","account_id":"a","flag_snapshot":null},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v1","historical_flag":"checkout_v2"}},
+    {"event":{"event_id":"extra-policy","event_time":"2026-09-01T00:00:00Z","received_at":"2026-09-01T00:00:01Z","account_id":"a","flag_snapshot":null},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2","default":true}},
+    {"event":{"event_id":"blank-account","event_time":"2026-09-01T00:00:00Z","received_at":"2026-09-01T00:00:01Z","account_id":"","flag_snapshot":null},"policy":{"retired_at":"2026-08-01T00:00:00Z","retired_engine":"v2","historical_flag":"checkout_v2"}}
+  ]
+}

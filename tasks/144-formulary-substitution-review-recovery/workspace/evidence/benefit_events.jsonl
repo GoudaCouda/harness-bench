@@ -1,0 +1,13 @@
+{"delivery_id": "DL-001", "event_id": "EV-RX201-PLAN", "event_type": "plan_refresh", "occurred_at": "2026-08-19T10:00:00Z", "rx_id": "RX-201", "source_sequence": 2}
+{"delivery_id": "DL-002", "event_id": "EV-RX201-PLAN", "event_type": "plan_refresh", "occurred_at": "2026-08-19T10:00:00Z", "rx_id": "RX-201", "source_sequence": 2}
+{"delivery_id": "DL-011", "event_id": "EV-IDENTITY-203", "event_type": "profile_refresh", "occurred_at": "2026-08-19T10:05:00Z", "rx_id": "RX-203", "source_sequence": 4}
+{"delivery_id": "DL-012", "event_id": "EV-IDENTITY-203", "event_type": "profile_refresh", "occurred_at": "2026-08-19T10:06:00Z", "rx_id": "RX-203", "source_sequence": 5}
+{"delivery_id": "DL-021", "event_id": "EV-RX204-A", "event_type": "step_refresh", "occurred_at": "2026-08-19T10:10:00Z", "rx_id": "RX-204", "source_sequence": 7}
+{"delivery_id": "DL-022", "event_id": "EV-RX204-B", "event_type": "step_refresh", "occurred_at": "2026-08-19T10:11:00Z", "rx_id": "RX-204", "source_sequence": 7}
+{"delivery_id": "DL-031", "event_id": "EV-UNKNOWN", "event_type": "plan_refresh", "occurred_at": "2026-08-19T10:12:00Z", "rx_id": "RX-999", "source_sequence": 1}
+{"delivery_id": "DL-041", "event_id": "EV-RX206-LATE", "event_type": "plan_refresh", "occurred_at": "2026-08-19T10:13:00Z", "rx_id": "RX-206", "source_sequence": 8}
+{"delivery_id": "DL-051", "event_id": "EV-RX207-LATE", "event_type": "plan_refresh", "occurred_at": "2026-08-19T10:14:00Z", "rx_id": "RX-207", "source_sequence": 3}
+{"delivery_id": "DL-061", "event_id": "EV-RX202-DAW", "event_type": "daw_refresh", "occurred_at": "2026-08-19T10:15:00Z", "rx_id": "RX-202", "source_sequence": 3}
+{"delivery_id": "DL-071", "event_id": "EV-RX205-PA", "event_type": "authorization_refresh", "occurred_at": "2026-08-19T10:16:00Z", "rx_id": "RX-205", "source_sequence": 4}
+{"delivery_id": "DL-081", "event_id": "EV-RX208-RULE", "event_type": "formulary_refresh", "occurred_at": "2026-08-19T10:17:00Z", "rx_id": "RX-208", "source_sequence": 3}
+{"delivery_id": "DL-091", "event_id": "EV-RX209-PA", "event_type": "authorization_refresh", "occurred_at": "2026-08-19T10:18:00Z", "rx_id": "RX-209", "source_sequence": 2}

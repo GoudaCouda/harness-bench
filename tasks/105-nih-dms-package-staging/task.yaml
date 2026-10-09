@@ -1,0 +1,69 @@
+task_id: 105-nih-dms-package-staging
+title: Reconcile and stage a consent-safe NIH-style data-sharing package
+prompt_file: instruction.md
+timeout_sec: 7200
+domain: Research
+task_category: Business Operations
+task_subcategory: Transaction Processing
+difficulty: hard
+capability_tags:
+- filesystem
+- structured_data
+- terminal
+- data_governance
+- package_staging
+- local_state_machine
+harness_demands:
+- multi_step_execution
+- evidence_grounding
+- state_management
+- error_recovery
+- verification_behavior
+- safety_boundary
+stressors:
+- partial_failure
+- conflicting_evidence
+- privacy_constraints
+required_artifacts:
+- deposit_plan.json
+- package_manifest.csv
+- revised_plan.md
+- staging
+- .dms_build_state.json
+- .dms_stage_state.json
+- dms_stage_receipt.json
+task_family: research-dms-package-staging
+variant: standalone
+design_file: design.md
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids:
+  - NIH-DMS-REPOSITORY
+  - NIH-DMS-CONTROLLED-ACCESS
+workspace_dir: workspace
+mutation_contract:
+  allowed_created:
+  - deposit_plan.json
+  - package_manifest.csv
+  - revised_plan.md
+  - staging/
+  - .dms_stage_state.json
+  - dms_stage_receipt.json
+  allowed_modified:
+  - .dms_build_state.json
+  allowed_deleted: []
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  required_tools:
+    python3: "3.12"
+  verifier: verify_environment.py
+  inputs: []
+  services: []
+  grader:
+    verifier: verify_grader_environment.py
+schema_version: 2

@@ -1,0 +1,7 @@
+[
+  {"request_id":"r1","method":"GET","stream_id":1,"response_state":"complete","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0},
+  {"request_id":"r2","method":"POST","stream_id":7,"response_state":"none","reset_code":null,"body_replayable":true,"idempotency_key":null,"attempt":0},
+  {"request_id":"r3","method":"POST","stream_id":3,"response_state":"headers","reset_code":null,"body_replayable":true,"idempotency_key":"charge-93","attempt":1},
+  {"request_id":"r4","method":"POST","stream_id":5,"response_state":"reset","reset_code":"CANCEL","body_replayable":true,"idempotency_key":null,"attempt":1},
+  {"request_id":"r5","method":"PATCH","stream_id":9,"response_state":"none","reset_code":null,"body_replayable":false,"idempotency_key":"patch-22","attempt":0}
+]

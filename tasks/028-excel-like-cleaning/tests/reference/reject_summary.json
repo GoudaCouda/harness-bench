@@ -1,0 +1,75 @@
+{
+  "missing_amount": {
+    "count": 2,
+    "source_rows": [
+      3,
+      16
+    ],
+    "order_ids": [
+      "S1003",
+      "S1015"
+    ]
+  },
+  "unsupported_currency": {
+    "count": 2,
+    "source_rows": [
+      12,
+      17
+    ],
+    "order_ids": [
+      "S1011",
+      "S1016"
+    ]
+  },
+  "invalid_quantity": {
+    "count": 1,
+    "source_rows": [
+      9
+    ],
+    "order_ids": [
+      "S1008"
+    ]
+  },
+  "inactive_customer": {
+    "count": 1,
+    "source_rows": [
+      8
+    ],
+    "order_ids": [
+      "S1007"
+    ]
+  },
+  "unknown_customer": {
+    "count": 1,
+    "source_rows": [
+      11
+    ],
+    "order_ids": [
+      "S1010"
+    ]
+  },
+  "invalid_date": {
+    "count": 4,
+    "source_rows": [
+      13,
+      14,
+      15,
+      19
+    ],
+    "order_ids": [
+      "S1012",
+      "S1013",
+      "S1014",
+      "S1017"
+    ]
+  },
+  "duplicate_order_id": {
+    "count": 1,
+    "source_rows": [
+      4
+    ],
+    "order_ids": [
+      "S1001"
+    ]
+  }
+}

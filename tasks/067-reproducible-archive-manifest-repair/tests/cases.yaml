@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 067-reproducible-archive-manifest-repair
+pass_threshold: 0.8
+cases:
+- id: canonical_members_and_metadata
+  title: Members, modes, digests, and ordering are canonical
+  description: Equivalent inputs produce a stable member plan independent of input order and source metadata.
+  weight: 0.35
+  core: true
+- id: root_timestamp_and_duplicate_safety
+  title: Build paths, timestamps, and invalid members fail closed
+  description: Root stripping and ZIP time rules are exact while unsafe or duplicate members are rejected.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_archive_report
+  title: Visible build incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Reproducibility behavior and writer risk are handed off
+  description: Notes explain normalization, verification, and residual archive-writer risk.
+  weight: 0.2
+  core: false
+- id: source_and_publish_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

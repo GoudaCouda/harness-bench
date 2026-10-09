@@ -1,0 +1,6 @@
+change_id,depends_on,required_disposition
+CH-02,CH-01,accept
+CH-04,CH-03,accept
+CH-07,CH-06,accept
+CH-08,CH-01;CH-02;CH-05,accept
+CH-10,CH-08,accept

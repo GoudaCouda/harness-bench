@@ -1,0 +1,19 @@
+{
+  "schema_version": "nami_work_tool_contract_v1",
+  "tools": [
+    {
+      "tool_id": "filesystem",
+      "allowed_actions": ["list", "read", "write_output"],
+      "read_scope": ["TASK.md", "input/*.md"],
+      "write_scope": ["output/review_report.json"]
+    },
+    {
+      "tool_id": "document_parser",
+      "allowed_actions": ["parse_markdown_sections"],
+      "read_scope": ["input/*.md"],
+      "write_scope": []
+    }
+  ],
+  "network": "offline"
+}
+

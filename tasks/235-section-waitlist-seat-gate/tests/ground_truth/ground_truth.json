@@ -1,0 +1,50 @@
+{
+  "policy": {
+    "gate_clock_epoch": 1776296000
+  },
+  "artifacts": {
+    "receipt": {
+      "stream_id": "harborwatch-235",
+      "gate_clock_epoch": 1776296000,
+      "counts": {
+        "applied": 2,
+        "deferred": 3,
+        "malformed": 2
+      },
+      "applied_ids": [
+        "q1",
+        "q3"
+      ],
+      "deferred_ids": [
+        "q2",
+        "q6",
+        "q7"
+      ],
+      "state": "gated"
+    },
+    "verification": {
+      "controller": "seatctl.py",
+      "idempotent": true
+    }
+  },
+  "expected": {
+    "decision_by_index": {
+      "0": "applied",
+      "1": "deferred",
+      "2": "applied",
+      "3": "malformed",
+      "4": "malformed",
+      "5": "deferred",
+      "6": "deferred"
+    },
+    "applied_ids": [
+      "q1",
+      "q3"
+    ],
+    "deferred_ids": [
+      "q2",
+      "q6",
+      "q7"
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "as_of": "2026-08-14T16:00:00Z",
+  "case_decisions": [
+    {
+      "address_version": 1,
+      "baseline_state": "drafted",
+      "beneficiary_keys": [
+        "P-7201-E",
+        "P-7201-S"
+      ],
+      "case_id": "COV-7201",
+      "deadline_state": "open",
+      "delivery_evidence": "none",
+      "disposition": "rebuild_beneficiary_notice",
+      "evidence_refs": [
+        "evidence/eligibility_events.jsonl#event:EV-7201-BEN3",
+        "evidence/eligibility_events.jsonl#event:EV-7201-QUAL",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7201",
+        "state/continuance.db#notices:NOTICE-7201",
+        "state/stale_checkpoint.json#cases/COV-7201"
+      ],
+      "next_local_action": "stage_corrected_notice",
+      "notice_version": 2
+    },
+    {
+      "address_version": 2,
+      "baseline_state": "delivery_timeout",
+      "beneficiary_keys": [
+        "P-7202-E"
+      ],
+      "case_id": "COV-7202",
+      "deadline_state": "satisfied",
+      "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-D",
+      "disposition": "preserve_delivered",
+      "evidence_refs": [
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-D",
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7202-T",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7202",
+        "state/continuance.db#notices:NOTICE-7202",
+        "state/stale_checkpoint.json#cases/COV-7202"
+      ],
+      "next_local_action": "none",
+      "notice_version": 1
+    },
+    {
+      "address_version": 2,
+      "baseline_state": "returned",
+      "beneficiary_keys": [
+        "P-7203-C",
+        "P-7203-E"
+      ],
+      "case_id": "COV-7203",
+      "deadline_state": "open",
+      "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7203-R",
+      "disposition": "reissue_to_verified_address",
+      "evidence_refs": [
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7203-R",
+        "evidence/eligibility_events.jsonl#event:EV-7203-ADDR2",
+        "evidence/eligibility_events.jsonl#event:EV-7203-REPLAY",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7203",
+        "state/continuance.db#notices:NOTICE-7203",
+        "state/stale_checkpoint.json#cases/COV-7203"
+      ],
+      "next_local_action": "stage_reissue_package",
+      "notice_version": 2
+    },
+    {
+      "address_version": 1,
+      "baseline_state": "delivery_timeout",
+      "beneficiary_keys": [
+        "P-7204-S"
+      ],
+      "case_id": "COV-7204",
+      "deadline_state": "open",
+      "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-A",
+      "disposition": "hold_delivery_investigation",
+      "evidence_refs": [
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-A",
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7204-T",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7204",
+        "state/continuance.db#notices:NOTICE-7204",
+        "state/stale_checkpoint.json#cases/COV-7204"
+      ],
+      "next_local_action": "investigate_provider_receipt",
+      "notice_version": 1
+    },
+    {
+      "address_version": 2,
+      "baseline_state": "elected",
+      "beneficiary_keys": [
+        "P-7205-E"
+      ],
+      "case_id": "COV-7205",
+      "deadline_state": "satisfied",
+      "delivery_evidence": "evidence/delivery_receipts.jsonl#receipt:RCPT-7205-D",
+      "disposition": "preserve_post_notice_state",
+      "evidence_refs": [
+        "evidence/delivery_receipts.jsonl#receipt:RCPT-7205-D",
+        "evidence/eligibility_events.jsonl#event:EV-7205-ELECT",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7205",
+        "state/continuance.db#notices:NOTICE-7205",
+        "state/stale_checkpoint.json#cases/COV-7205"
+      ],
+      "next_local_action": "none",
+      "notice_version": 2
+    },
+    {
+      "address_version": 1,
+      "baseline_state": "drafted",
+      "beneficiary_keys": [
+        "P-7206-E"
+      ],
+      "case_id": "COV-7206",
+      "deadline_state": "open",
+      "delivery_evidence": "none",
+      "disposition": "hold_identity_conflict",
+      "evidence_refs": [
+        "evidence/eligibility_events.jsonl#event:EV-7206-COLLIDE",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7206",
+        "state/continuance.db#notices:NOTICE-7206",
+        "state/stale_checkpoint.json#cases/COV-7206"
+      ],
+      "next_local_action": "resolve_identity",
+      "notice_version": 1
+    },
+    {
+      "address_version": 1,
+      "baseline_state": "eligible_unsent",
+      "beneficiary_keys": [
+        "P-7207-E"
+      ],
+      "case_id": "COV-7207",
+      "deadline_state": "expired",
+      "delivery_evidence": "none",
+      "disposition": "escalate_deadline_review",
+      "evidence_refs": [
+        "evidence/eligibility_events.jsonl#event:EV-7207-QUAL",
+        "policy/continuance_policy.json#decision_precedence",
+        "state/continuance.db#case:COV-7207",
+        "state/stale_checkpoint.json#cases/COV-7207"
+      ],
+      "next_local_action": "stage_compliance_review",
+      "notice_version": 1
+    }
+  ],
+  "coverage_changed": false,
+  "external_notices_sent": false,
+  "journal_actions": [
+    {
+      "action": "restore_before_image",
+      "journal_id": "J-OLD-CASE-7203",
+      "record_id": "COV-7203",
+      "table_name": "cases"
+    },
+    {
+      "action": "remove_partial_insert",
+      "journal_id": "J-OLD-QUEUE-7203",
+      "record_id": "Q-PARTIAL-7203",
+      "table_name": "recovery_queue"
+    }
+  ],
+  "queue_totals": {
+    "compliance_review": 1,
+    "corrected_notice": 1,
+    "delivery_investigation": 1,
+    "reissue": 1
+  },
+  "recovery_id": "CONT-REC-2026-08-14",
+  "schema_version": 1,
+  "source_checkpoint": "997ef2987a116b58ae937cedbffb7fc66decf170ba1dd4bc037a355f61a5fb3c"
+}

@@ -1,0 +1,12 @@
+{
+  "batch_id": "2026-07-ap-review",
+  "policy_id": "AP-POL-7.2",
+  "cutoff_date": "2026-07-31",
+  "currency": "USD",
+  "execution_state": "review_only",
+  "invoice_line_count": 11,
+  "exception_line_count": 6,
+  "invoice_total": "2855.60",
+  "approved_total": "1489.60",
+  "held_total": "1366.00"
+}

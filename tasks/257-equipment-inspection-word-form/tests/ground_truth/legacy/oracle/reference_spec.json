@@ -1,0 +1,75 @@
+{
+  "hospital": {
+    "document_code": "XQH-DEMO-MON-INSPECT-V1",
+    "hospital_name": "云杉市星桥医院（教学演示专用·完全虚构）",
+    "department": "安全运行中心",
+    "form_title": "监控系统设备巡检记录表",
+    "privacy_notice": "本表所有机构、设备和人员字段均为合成演示信息，请勿填写真实敏感信息。"
+  },
+  "devices": [
+    {
+      "asset_id": "XQH-CAM-001",
+      "device_name": "急诊大厅高清摄像机",
+      "device_type": "网络摄像机",
+      "model": "SYN-CAM-4M-A1",
+      "location": "一号楼一层·演示区 A",
+      "responsible_team": "演示运维甲组",
+      "inspection_cycle": "每周一次",
+      "inspection_items": [
+        "外观与安装固定状态",
+        "供电、指示灯与线缆连接",
+        "设备时间与巡检基准时间一致性",
+        "实时画面清晰度与遮挡情况",
+        "夜视与码流传输状态"
+      ]
+    },
+    {
+      "asset_id": "XQH-NVR-002",
+      "device_name": "门诊录像存储主机",
+      "device_type": "网络视频录像机",
+      "model": "SYN-NVR-32CH-B2",
+      "location": "二号楼负一层·演示机房 B",
+      "responsible_team": "演示运维乙组",
+      "inspection_cycle": "每周一次",
+      "inspection_items": [
+        "外观与安装固定状态",
+        "供电、指示灯与线缆连接",
+        "设备时间与巡检基准时间一致性",
+        "录像计划与通道在线状态",
+        "存储容量、磁盘健康与回放抽检"
+      ]
+    },
+    {
+      "asset_id": "XQH-DIS-003",
+      "device_name": "监控中心拼接显示单元",
+      "device_type": "显示终端",
+      "model": "SYN-DIS-55-C3",
+      "location": "综合楼三层·演示值守区 C",
+      "responsible_team": "演示运维甲组",
+      "inspection_cycle": "每两周一次",
+      "inspection_items": [
+        "外观与安装固定状态",
+        "供电、指示灯与线缆连接",
+        "设备时间与巡检基准时间一致性",
+        "显示单元亮度、色彩与坏点",
+        "信号切换和拼接布局状态"
+      ]
+    },
+    {
+      "asset_id": "XQH-UPS-004",
+      "device_name": "监控系统后备电源",
+      "device_type": "不间断电源",
+      "model": "SYN-UPS-6K-D4",
+      "location": "二号楼负一层·演示电源区 D",
+      "responsible_team": "演示运维丙组",
+      "inspection_cycle": "每月一次",
+      "inspection_items": [
+        "外观与安装固定状态",
+        "供电、指示灯与线缆连接",
+        "设备时间与巡检基准时间一致性",
+        "输入输出电压与负载比例",
+        "电池自检、告警与旁路状态"
+      ]
+    }
+  ]
+}

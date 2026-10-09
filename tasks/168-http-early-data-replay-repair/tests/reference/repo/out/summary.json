@@ -1,0 +1,10 @@
+{
+  "await_handshake": 0,
+  "block": 0,
+  "complete": 1,
+  "reject_425": 1,
+  "request_count": 7,
+  "retry_after_handshake": 2,
+  "send_0rtt": 2,
+  "send_after_handshake": 1
+}

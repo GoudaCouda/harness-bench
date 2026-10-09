@@ -1,0 +1,18 @@
+{
+  "event_state": [
+    {"events": [{"event_id": "b", "key": "x", "event_ms": 20, "value": 2}, {"event_id": "a", "key": "x", "event_ms": 10, "value": 1}, {"event_id": "a", "key": "x", "event_ms": 10, "value": 1}], "prior_windows": [], "watermark_ms": 60, "allowed_lateness_ms": 50, "window_ms": 50},
+    {"events": [{"event_id": "b", "key": "x", "event_ms": 20, "value": 2}, {"event_id": "c", "key": "x", "event_ms": 30, "value": 3}], "prior_windows": [{"key": "x", "start_ms": 0, "end_ms": 50, "sum": 1, "event_ids": ["a"], "revision": 4, "final": false}], "watermark_ms": 70, "allowed_lateness_ms": 50, "window_ms": 50},
+    {"events": [{"event_id": "a", "key": "x", "event_ms": 10, "value": 999}], "prior_windows": [{"key": "x", "start_ms": 0, "end_ms": 50, "sum": 1, "event_ids": ["a"], "revision": 4, "final": false}], "watermark_ms": 70, "allowed_lateness_ms": 50, "window_ms": 50}
+  ],
+  "watermark": [
+    {"events": [{"event_id": "open", "key": "x", "event_ms": 75, "value": 2}], "prior_windows": [], "watermark_ms": 80, "allowed_lateness_ms": 20, "window_ms": 50},
+    {"events": [{"event_id": "late", "key": "x", "event_ms": 20, "value": 2}], "prior_windows": [], "watermark_ms": 70, "allowed_lateness_ms": 20, "window_ms": 50},
+    {"events": [{"event_id": "neg", "key": "x", "event_ms": -1, "value": 2}], "prior_windows": [], "watermark_ms": 1, "allowed_lateness_ms": 60, "window_ms": 50},
+    {"events": [], "prior_windows": [{"key": "x", "start_ms": 0, "end_ms": 50, "sum": 1, "event_ids": ["a"], "revision": 2, "final": false}], "watermark_ms": 70, "allowed_lateness_ms": 20, "window_ms": 50}
+  ],
+  "invalid": [
+    {"events": [{"event_id": "a", "key": "x", "event_ms": 1, "value": 1}, {"event_id": "a", "key": "x", "event_ms": 1, "value": 2}], "prior_windows": [], "watermark_ms": 10, "allowed_lateness_ms": 1, "window_ms": 5},
+    {"events": [], "prior_windows": [{"key": "x", "start_ms": 0, "end_ms": 4, "sum": 1, "event_ids": ["a"], "revision": 1, "final": false}], "watermark_ms": 10, "allowed_lateness_ms": 1, "window_ms": 5},
+    {"events": [], "prior_windows": [], "watermark_ms": 10, "allowed_lateness_ms": -1, "window_ms": 5}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "task_id": "086-revision-vintage-ledger",
+  "comparable_rows": 12,
+  "series_used": ["EMP_SA", "HOURS_SA"],
+  "latest_period": "2026-06",
+  "changed_claims": ["employment_increased", "average_hours_decreased"],
+  "retained_claims": ["employment_above_january"]
+}

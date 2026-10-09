@@ -1,0 +1,223 @@
+{
+  "baseline_changes": [
+    {
+      "approved_substitutes": [
+        "CONN-NI-4P-A"
+      ],
+      "changed_line_no": 20,
+      "evidence_refs": [
+        "evidence/engineering_change.json#ECN-442",
+        "policy/ecn_policy.json#revision_map/ACTUATOR-MODULE",
+        "state/configuration.db#bom_items/ACTUATOR-MODULE@C/20"
+      ],
+      "from_component": "CONN-CU-4P",
+      "from_component_revision": "1",
+      "from_revision": "C",
+      "item_id": "ACTUATOR-MODULE",
+      "quantity": 2,
+      "to_component": "CONN-NI-4P",
+      "to_component_revision": "1",
+      "to_revision": "D",
+      "where_used_path": "ACTUATOR-MODULE"
+    },
+    {
+      "approved_substitutes": [],
+      "changed_line_no": 20,
+      "evidence_refs": [
+        "evidence/engineering_change.json#ECN-442",
+        "policy/ecn_policy.json#revision_map/FIELD-KIT",
+        "state/configuration.db#bom_items/FIELD-KIT@2/20"
+      ],
+      "from_component": "ACTUATOR-MODULE",
+      "from_component_revision": "C",
+      "from_revision": "2",
+      "item_id": "FIELD-KIT",
+      "quantity": 1,
+      "to_component": "ACTUATOR-MODULE",
+      "to_component_revision": "D",
+      "to_revision": "3",
+      "where_used_path": "FIELD-KIT>ACTUATOR-MODULE"
+    },
+    {
+      "approved_substitutes": [],
+      "changed_line_no": 20,
+      "evidence_refs": [
+        "evidence/engineering_change.json#ECN-442",
+        "policy/ecn_policy.json#revision_map/PUMP-100",
+        "state/configuration.db#bom_items/PUMP-100@12/20"
+      ],
+      "from_component": "ACTUATOR-MODULE",
+      "from_component_revision": "C",
+      "from_revision": "12",
+      "item_id": "PUMP-100",
+      "quantity": 1,
+      "to_component": "ACTUATOR-MODULE",
+      "to_component_revision": "D",
+      "to_revision": "13",
+      "where_used_path": "PUMP-100>ACTUATOR-MODULE"
+    },
+    {
+      "approved_substitutes": [],
+      "changed_line_no": 20,
+      "evidence_refs": [
+        "evidence/engineering_change.json#ECN-442",
+        "policy/ecn_policy.json#revision_map/SKID-900",
+        "state/configuration.db#bom_items/SKID-900@5/20"
+      ],
+      "from_component": "PUMP-100",
+      "from_component_revision": "12",
+      "from_revision": "5",
+      "item_id": "SKID-900",
+      "quantity": 2,
+      "to_component": "PUMP-100",
+      "to_component_revision": "13",
+      "to_revision": "6",
+      "where_used_path": "SKID-900>PUMP-100>ACTUATOR-MODULE"
+    }
+  ],
+  "ecn_id": "ECN-442",
+  "external_actions_executed": false,
+  "recovery_id": "ECNREC-20260819-442",
+  "schema_version": 1,
+  "source_checkpoint": "3e0a3d6ddd957b4f5b117615fb280112ae9f253338be9b468578fae9ce2ac717",
+  "work_order_decisions": [
+    {
+      "disposition": "preserve_as_built",
+      "effective": false,
+      "effectivity_basis": "serial",
+      "effectivity_value": "SN-0500",
+      "end_item": "SKID-900",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-900",
+        "policy/ecn_policy.json#effectivity/SKID-900",
+        "state/configuration.db#work_orders/WO-900"
+      ],
+      "external_action": "none",
+      "from_revision": "5",
+      "issued_component": "CONN-CU-4P",
+      "kit_state": "consumed",
+      "local_mutations": [],
+      "serial_or_lot": "SN-0498",
+      "status": "assembled",
+      "to_revision": "5",
+      "work_order_id": "WO-900"
+    },
+    {
+      "disposition": "hold_and_rekit",
+      "effective": true,
+      "effectivity_basis": "serial",
+      "effectivity_value": "SN-0500",
+      "end_item": "SKID-900",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-901",
+        "policy/ecn_policy.json#effectivity/SKID-900",
+        "state/configuration.db#work_orders/WO-901"
+      ],
+      "external_action": "none",
+      "from_revision": "5",
+      "issued_component": "CONN-CU-4P",
+      "kit_state": "issued",
+      "local_mutations": [
+        "baseline_revision",
+        "ecn_disposition"
+      ],
+      "serial_or_lot": "SN-0501",
+      "status": "kitted",
+      "to_revision": "6",
+      "work_order_id": "WO-901"
+    },
+    {
+      "disposition": "adopt_new_baseline",
+      "effective": true,
+      "effectivity_basis": "serial",
+      "effectivity_value": "SN-0500",
+      "end_item": "SKID-900",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-902",
+        "policy/ecn_policy.json#effectivity/SKID-900",
+        "state/configuration.db#work_orders/WO-902"
+      ],
+      "external_action": "none",
+      "from_revision": "5",
+      "issued_component": null,
+      "kit_state": "not_issued",
+      "local_mutations": [
+        "baseline_revision",
+        "ecn_disposition"
+      ],
+      "serial_or_lot": "SN-0502",
+      "status": "released",
+      "to_revision": "6",
+      "work_order_id": "WO-902"
+    },
+    {
+      "disposition": "preserve_pre_effectivity_kit",
+      "effective": false,
+      "effectivity_basis": "lot",
+      "effectivity_value": "LOT-2026-09",
+      "end_item": "FIELD-KIT",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-903",
+        "policy/ecn_policy.json#effectivity/FIELD-KIT",
+        "state/configuration.db#work_orders/WO-903"
+      ],
+      "external_action": "none",
+      "from_revision": "2",
+      "issued_component": "CONN-CU-4P-A",
+      "kit_state": "issued",
+      "local_mutations": [],
+      "serial_or_lot": "LOT-2026-08",
+      "status": "kitted",
+      "to_revision": "2",
+      "work_order_id": "WO-903"
+    },
+    {
+      "disposition": "accept_approved_substitute_new_baseline",
+      "effective": true,
+      "effectivity_basis": "lot",
+      "effectivity_value": "LOT-2026-09",
+      "end_item": "FIELD-KIT",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-904",
+        "policy/ecn_policy.json#effectivity/FIELD-KIT",
+        "state/configuration.db#work_orders/WO-904"
+      ],
+      "external_action": "none",
+      "from_revision": "2",
+      "issued_component": "CONN-NI-4P-A",
+      "kit_state": "issued",
+      "local_mutations": [
+        "baseline_revision",
+        "ecn_disposition"
+      ],
+      "serial_or_lot": "LOT-2026-09",
+      "status": "kitted",
+      "to_revision": "3",
+      "work_order_id": "WO-904"
+    },
+    {
+      "disposition": "adopt_new_baseline",
+      "effective": true,
+      "effectivity_basis": "lot",
+      "effectivity_value": "LOT-2026-09",
+      "end_item": "FIELD-KIT",
+      "evidence_refs": [
+        "evidence/work_orders.jsonl#WO-905",
+        "policy/ecn_policy.json#effectivity/FIELD-KIT",
+        "state/configuration.db#work_orders/WO-905"
+      ],
+      "external_action": "none",
+      "from_revision": "2",
+      "issued_component": null,
+      "kit_state": "not_issued",
+      "local_mutations": [
+        "baseline_revision",
+        "ecn_disposition"
+      ],
+      "serial_or_lot": "LOT-2026-10",
+      "status": "released",
+      "to_revision": "3",
+      "work_order_id": "WO-905"
+    }
+  ]
+}

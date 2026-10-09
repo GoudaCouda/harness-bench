@@ -1,0 +1,38 @@
+task_id: 035-workspace-dependency-resolution
+title: Repair deterministic workspace dependency resolution across peers and platforms
+prompt_file: instruction.md
+outcome_test: tests/test_outcome.py
+cases_file: tests/cases.yaml
+timeout_sec: 7200
+difficulty: hard
+domain: Software Engineering
+task_category: Software Engineering
+task_subcategory: Implementation and Repair
+capability_tags: [code_execution, filesystem, repository, structured_data, terminal]
+harness_demands: [evidence_grounding, multi_step_execution, output_contract, verification_behavior, state_management]
+stressors: [peer_constraints, optional_dependencies, platform_markers, minimal_lock_change]
+required_artifacts: [repo/src/resolver.py, repo/resolution_report.json, repo/REPAIR_NOTES.md]
+provenance:
+  origin: public_workflow_adaptation
+  real_user_log_derived: false
+  source_ids: [NPM-PACKAGE-JSON, NPM-PACKAGE-LOCK]
+task_family: workspace-dependency-resolution-repair
+variant: peer-optional-platform-lock-determinism
+design_file: design.md
+workspace_dir: workspace
+mutation_contract:
+  allowed_created: [repo/resolution_report.json, repo/REPAIR_NOTES.md]
+  allowed_modified: [repo/src/resolver.py]
+  allowed_deleted: []
+environment:
+  schema_version: 1
+  mode: shared
+  abi: harnessbench-debian-bookworm-v1
+  verifier: environment/verify_environment.py
+  required_tools:
+    python: "3.12"
+    python3: "3.12"
+  grader:
+    verifier: environment/verify_grader_environment.py
+  services: []
+schema_version: 2

@@ -1,0 +1,1 @@
+{"request_id":"REL-411-PROD","selected_artifact_id":"B-405","artifact_digest":"sha256:bundle-405","component_artifact_ids":["SDK-204","CLI-310"],"sbom_id":"SBOM-405","signature_id":"SIG-B405","attestation_id":"ATT-405","scan_id":"SCAN-405","approval_id":null,"state":"pending_human_reapproval"}

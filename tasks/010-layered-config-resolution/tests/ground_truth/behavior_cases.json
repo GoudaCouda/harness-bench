@@ -1,0 +1,26 @@
+{
+  "valid": [
+    {
+      "defaults": {"port": 1, "enabled": false}, "file": {"port": 2}, "env": {"EDGE_PORT": "3", "OTHER": "x"}, "cli": {"enabled": false},
+      "schema": {"port": {"type": "int", "min": 1, "max": 9, "nullable": false, "sensitive": false, "env": "EDGE_PORT"}, "enabled": {"type": "bool", "nullable": false, "sensitive": false, "env": "EDGE_ENABLED"}},
+      "expected": {"values": {"enabled": false, "port": 3}, "sources": {"enabled": "cli", "port": "environment"}}
+    },
+    {
+      "defaults": {"url": "base"}, "file": {"url": "file"}, "env": {}, "cli": {"url": null},
+      "schema": {"url": {"type": "string", "allow_empty": false, "nullable": true, "sensitive": false, "env": "EDGE_URL"}},
+      "expected": {"values": {"url": null}, "sources": {"url": "cli"}}
+    },
+    {
+      "defaults": {"mode": "safe"}, "file": {}, "env": {"EDGE_MODE": "fast"}, "cli": {},
+      "schema": {"mode": {"type": "enum", "choices": ["safe", "fast"], "nullable": false, "sensitive": false, "env": "EDGE_MODE"}},
+      "expected": {"values": {"mode": "fast"}, "sources": {"mode": "environment"}}
+    }
+  ],
+  "invalid": [
+    {"defaults": {"enabled": false}, "file": {}, "env": {"EDGE_ENABLED": "yes"}, "cli": {}, "schema": {"enabled": {"type": "bool", "nullable": false, "sensitive": false, "env": "EDGE_ENABLED"}}},
+    {"defaults": {"port": 2}, "file": {}, "env": {}, "cli": {"port": true}, "schema": {"port": {"type": "int", "min": 1, "max": 9, "nullable": false, "sensitive": false, "env": "EDGE_PORT"}}},
+    {"defaults": {"port": 2}, "file": {}, "env": {"EDGE_UNKNOWN": "3"}, "cli": {}, "schema": {"port": {"type": "int", "min": 1, "max": 9, "nullable": false, "sensitive": false, "env": "EDGE_PORT"}}},
+    {"defaults": {"url": "x"}, "file": {}, "env": {"EDGE_URL": "null"}, "cli": {}, "schema": {"url": {"type": "string", "allow_empty": false, "nullable": false, "sensitive": false, "env": "EDGE_URL"}}},
+    {"defaults": {}, "file": {}, "env": {}, "cli": {}, "schema": {"mode": {"type": "enum", "choices": ["a"], "nullable": false, "sensitive": false, "env": "EDGE_MODE"}}}
+  ]
+}

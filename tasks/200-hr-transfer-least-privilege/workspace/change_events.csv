@@ -1,0 +1,4 @@
+event_id,transfer_id,system,event_sequence,event_time,operation,target_value,idempotency_key,status,receipt_id,signature_state
+FIN-72-SUCCESS,TR-200,finance,80,2026-07-29T20:52:00Z,remove_entitlement,payment_admin,RV-FIN-72,succeeded,RCP-FIN-72,verified
+FIN-72-REQUEST,TR-200,finance,20,2026-07-29T20:35:00Z,remove_entitlement,payment_admin,RV-FIN-72,submitted,,none
+FIN-72-TIMEOUT,TR-200,finance,30,2026-07-29T20:36:00Z,remove_entitlement,payment_admin,RV-FIN-72,timed_out,,none

@@ -1,0 +1,58 @@
+[
+  {
+    "action": "complete",
+    "next_attempt": null,
+    "propagate_early_data": false,
+    "reason": "response",
+    "request_id": "accepted-read",
+    "reset_application_state": false
+  },
+  {
+    "action": "send_0rtt",
+    "next_attempt": null,
+    "propagate_early_data": false,
+    "reason": "eligible",
+    "request_id": "direct-read",
+    "reset_application_state": false
+  },
+  {
+    "action": "send_after_handshake",
+    "next_attempt": null,
+    "propagate_early_data": false,
+    "reason": "method_not_safe",
+    "request_id": "early-write",
+    "reset_application_state": false
+  },
+  {
+    "action": "send_0rtt",
+    "next_attempt": null,
+    "propagate_early_data": true,
+    "reason": "eligible",
+    "request_id": "proxy-forward",
+    "reset_application_state": false
+  },
+  {
+    "action": "reject_425",
+    "next_attempt": null,
+    "propagate_early_data": false,
+    "reason": "origin_no_425",
+    "request_id": "proxy-stop",
+    "reset_application_state": false
+  },
+  {
+    "action": "retry_after_handshake",
+    "next_attempt": 2,
+    "propagate_early_data": false,
+    "reason": "early_data_rejected",
+    "request_id": "rejected-read",
+    "reset_application_state": true
+  },
+  {
+    "action": "retry_after_handshake",
+    "next_attempt": 3,
+    "propagate_early_data": false,
+    "reason": "too_early",
+    "request_id": "too-early-read",
+    "reset_application_state": true
+  }
+]

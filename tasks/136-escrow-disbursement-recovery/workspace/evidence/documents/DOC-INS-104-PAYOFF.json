@@ -1,0 +1,10 @@
+{
+  "account_last4": "1122",
+  "amount_cents": 4500000,
+  "closing_id": "ESC-104",
+  "document_id": "DOC-INS-104-PAYOFF",
+  "instruction_id": "INS-104-PAYOFF",
+  "payee_id": "P-PAYOFF",
+  "schema_version": 1,
+  "signed": true
+}

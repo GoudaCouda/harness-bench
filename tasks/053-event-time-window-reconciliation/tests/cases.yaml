@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 053-event-time-window-reconciliation
+pass_threshold: 0.8
+cases:
+- id: event_time_dedup_and_revision
+  title: Event-time assignment, replay identity, and revisions remain stable
+  description: Input order and retries cannot alter accepted window state.
+  weight: 0.35
+  core: true
+- id: watermark_lateness_and_finality
+  title: Watermark, lateness, pending, and final boundaries are exact
+  description: Open, updateable, and final windows have distinct behavior.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_window_report
+  title: Visible streaming incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Reconciliation behavior and operational risk are handed off
+  description: Notes explain timing, replay, revision, verification, and checkpoint risk.
+  weight: 0.2
+  core: false
+- id: source_and_workspace_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

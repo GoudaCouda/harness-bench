@@ -1,0 +1,7 @@
+{"seq":1,"event":"certificate_directory_backup_verified","result":"pass"}
+{"seq":2,"event":"dual_root_bundle_published","path":"pki/ca-bundle.crt","contains":["OLD-CA","NEW-CA"]}
+{"seq":3,"event":"in_cluster_clients_restarted","result":"partial","deferred":["metrics-adapter"]}
+{"seq":4,"event":"server_leaf_rotated","server_id":"kube-apiserver/cp-1","from":"OLD-CA","to":"NEW-CA"}
+{"seq":5,"event":"server_leaf_rotated","server_id":"kube-apiserver/cp-2","from":"OLD-CA","to":"NEW-CA"}
+{"seq":6,"event":"controller_manager_restart_failed","reason":"ca_bundle_not_allowed_for_single_ca_flags"}
+{"seq":7,"event":"old_anchor_retirement_rejected","blockers":["controller_manager_degraded","client_without_new_trust:metrics-adapter","old_signed_server:kube-apiserver/cp-3","complete_dual_probe_missing"]}

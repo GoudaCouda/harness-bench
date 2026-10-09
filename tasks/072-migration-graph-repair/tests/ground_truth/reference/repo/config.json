@@ -1,0 +1,17 @@
+{
+  "heads": [
+    "orders.0008_merge_region"
+  ],
+  "merge": {
+    "name": "orders.0008_merge_region",
+    "dependencies": [
+      "orders.0007_add_region",
+      "orders.0007_backfill_region"
+    ]
+  },
+  "uses_historical_model": true,
+  "idempotent": true,
+  "reverse": "restore_null_region",
+  "fresh_replay": "pass",
+  "upgrade_replay": "pass"
+}

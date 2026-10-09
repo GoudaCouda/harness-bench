@@ -1,0 +1,18 @@
+[
+  {
+    "id": "DIFF-NAV",
+    "label": "Nav row dropped"
+  },
+  {
+    "id": "DIFF-BTN",
+    "label": "Button moved up"
+  },
+  {
+    "id": "DIFF-PRICE",
+    "label": "Price recolored"
+  },
+  {
+    "id": "DIFF-GAP",
+    "label": "Footer spacing gap"
+  }
+]

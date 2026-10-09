@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "recovery_id": "WMS-REC-2026-08-16-01",
+  "source_state_sha256": "3f1d7d4a24567dc1a04a16424544647f8d60c6ba4becbfa66391dacd0ab11ba6",
+  "external_actions_executed": false,
+  "actions": [
+    {
+      "action": "keep",
+      "evidence_ids": ["warehouse.db#reservations/RSV-100-A", "recovery_policy.md#duplicate-holds"],
+      "reservation_id": "RSV-100-A"
+    },
+    {
+      "action": "cancel_duplicate",
+      "evidence_ids": ["warehouse.db#reservations/RSV-100-B", "recovery_policy.md#duplicate-holds"],
+      "reservation_id": "RSV-100-B"
+    },
+    {
+      "action": "commit_shipped",
+      "evidence_ids": ["warehouse.db#reservations/RSV-200", "shipment_receipts.json#SHIP-200-A"],
+      "reservation_id": "RSV-200"
+    },
+    {
+      "action": "release_expired",
+      "evidence_ids": ["warehouse.db#reservations/RSV-300", "recovery_policy.md#expired-holds"],
+      "reservation_id": "RSV-300"
+    }
+  ]
+}

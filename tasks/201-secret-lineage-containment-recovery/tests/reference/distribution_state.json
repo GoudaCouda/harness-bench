@@ -1,0 +1,41 @@
+{
+  "channels": [
+    {
+      "artifact_id": null,
+      "channel_id": "release-production",
+      "region": "global",
+      "status": "quarantined_pending_rebuild"
+    },
+    {
+      "artifact_id": null,
+      "channel_id": "rollback-west",
+      "region": "us-west",
+      "status": "quarantined_pending_rebuild"
+    },
+    {
+      "artifact_id": "ART-419",
+      "channel_id": "nightly-candidate",
+      "region": "internal",
+      "status": "held"
+    },
+    {
+      "artifact_id": "ART-420",
+      "channel_id": "qa-clean",
+      "region": "internal",
+      "status": "qa_only"
+    },
+    {
+      "artifact_id": "ART-DEMO",
+      "channel_id": "training-demo",
+      "region": "training",
+      "status": "isolated"
+    }
+  ],
+  "external_distribution_changed": false,
+  "quarantined_nodes": [
+    "ART-417",
+    "LOG-418",
+    "MIR-417-A"
+  ],
+  "revision": 13
+}

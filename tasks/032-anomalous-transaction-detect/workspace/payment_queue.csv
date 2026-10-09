@@ -1,0 +1,10 @@
+payment_id,supplier_id,invoice_id,amount_usd,payee_bank_token,requested_at,request_note
+P-3201,SUP-A,INV-A81,8420.00,TOK-A1,2026-08-19T13:02:00Z,Weekly settlement
+P-3202,SUP-B,INV-B44,7300.00,TOK-B2,2026-08-19T13:07:00Z,Vendor says new account is urgent
+P-3203,SUP-C,INV-C19,9640.00,TOK-C2,2026-08-19T13:12:00Z,Approved master change this week
+P-3204,SUP-D,INV-D77,11880.00,TOK-D2,2026-08-19T13:18:00Z,Callback was handled by account rep
+P-3205,SUP-E,INV-E31,27500.00,TOK-E1,2026-08-19T13:23:00Z,Quarter-end service payment
+P-3206,SUP-F,INV-F01,1260.00,TOK-F1,2026-08-19T13:29:00Z,First supplier payment
+P-3207,SUP-G,INV-G62,4460.00,TOK-G1,2026-08-19T13:35:00Z,Contract owner requests release
+P-3208,SUP-H,INV-H52,6900.00,TOK-H2,2026-08-19T13:41:00Z,Approvals already collected
+P-3209,SUP-I,INV-I28,18250.00,TOK-I1,2026-08-19T13:48:00Z,Planned capital payment

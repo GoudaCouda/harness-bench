@@ -1,0 +1,13 @@
+{
+  "external_actions_executed": false,
+  "passback_id": "GP-20260818-DISTRICT-01",
+  "plan_hash": "708efb08cb03797d749a9db2adbbb10b85f97641ab1fc7922950201c20c82d0e",
+  "schema_version": 1,
+  "semantic_db_hash": "caed5aa0a45ad495714f7915ddd457ecfcb114203c35176cc0f203530f354332",
+  "source_bundle_hash": "279a1caf08cf1573e9f29a798ec649e091bf2eb6ef71d6c0ecea50c7351ea8b8",
+  "source_checkpoint": "GP-CHECKPOINT-20260818-012",
+  "stage_boundary": "local_only_pending_registrar_review",
+  "stage_token": "c1a5b60710076a93bfe6163bb1a0bca66b617c660d605b037d46aec7d285fee8",
+  "status": "staged_pending_registrar_review",
+  "verification_hash": "e2bfca7ed36c97d6ef39cf7f7c8d46b99c7dadb86986a3bbfda353ec86b27388"
+}

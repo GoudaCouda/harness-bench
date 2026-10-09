@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "case_number": 20,
+  "blocks": [
+    [
+      "materials_archive",
+      "材料归档保真且登记表一致",
+      "archive_exact_set archive_byte_fidelity archive_pdf_structure register_schema register_exact_rows download_audit_exact"
+    ],
+    [
+      "recipient_reminders",
+      "对正确对象发送对应提醒",
+      "reminder_recipients_exact reminder_content_exact"
+    ]
+  ],
+  "gates": [
+    "input_assets_unchanged",
+    "source_service_immutable",
+    "source_attachment_blobs_immutable",
+    "service_schema_no_extra_state"
+  ],
+  "protected_files": {
+    "hb_tools/README.md": "f93f1258e10faf4b522066244f5dbb018b216b02e5ccfe69ded8f02292c7d902",
+    "hb_tools/collab_cli.py": "f523e6eafe9c08c5bff05478cc651fc8b091b373218d8a50cd0fda63d7bbb521",
+    "hb_tools/filesystem_cli.py": "41f082a16555267a2d3c7f1b284b69bed357518edba929403da4fab1ddd5bb10",
+    "hb_tools/spreadsheet_cli.py": "9a3161ce6467993b7c532d636800745f97ee70c5f9160189db938a5d5ff018da",
+    "hb_tools/tool_contract.json": "2b207c60afdb9ac14af4dc1cdcb818e4668fb7d618c4aa20d8b15fb680b5771f",
+    "inputs/material_requirements.md": "5790521230ada4c44663ef6265e874594d29f2e34162cf4f76feae336187605f",
+    "inputs/person_roster.csv": "a1e5763a1abf2e02473eda7cb51304603d8d338753cd89cf0fd5e13b75f80aa8",
+    "inputs/reminder_template.txt": "2c02f7ed0fe88a726dbb3b04a29658c057ec97f8ed1e5734dac2f6f1f3d9aaac"
+  },
+  "required_artifacts": [
+    "outputs/material_register.csv"
+  ],
+  "provisional_id": 257,
+  "reset": [
+    "--case-root",
+    "{c}",
+    "--work-root",
+    "{w}"
+  ],
+  "verify": [
+    "verifier/verify.py",
+    "--case-root",
+    "{c}",
+    "--work-root",
+    "{w}",
+    "--output",
+    "{r}"
+  ]
+}

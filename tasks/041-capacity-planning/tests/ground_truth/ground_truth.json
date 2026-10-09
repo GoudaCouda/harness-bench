@@ -1,0 +1,33 @@
+{
+  "expected": {
+    "service": "checkout-api",
+    "forecast_peak_rps_min": 2380,
+    "forecast_peak_rps_max": 2405,
+    "required_capacity_rps_min": 3090,
+    "required_capacity_rps_max": 3130,
+    "required_headroom_pct": 0.30,
+    "selected_instance_type": "c7g.xlarge",
+    "instance_count": 3,
+    "provided_capacity_rps": 3660,
+    "hourly_cost_usd": 0.456,
+    "pricing_worker": {
+      "forecast_peak_rps_min": 574,
+      "forecast_peak_rps_max": 576,
+      "required_capacity_rps_min": 688,
+      "required_capacity_rps_max": 692,
+      "selected_instance_type": "m7i.large",
+      "on_demand_count": 1,
+      "spot_count": 0,
+      "provided_capacity_rps": 700,
+      "hourly_cost_usd": 0.096
+    },
+    "total_hourly_cost_usd": 0.552
+  },
+  "cost_keywords": ["1960", "1.22", "30%", "500", "1.15", "20%", "c7g.xlarge", "m7i.large", "0.456", "0.096", "0.552", "c7g.large"],
+  "risk_tradeoffs_path": "risk_tradeoffs.csv",
+  "risk_terms": ["budget", "spot", "incompatible", "headroom"],
+  "scoring": {
+    "weights": {"capacity_plan": 0.34, "cost_notes": 0.25, "risk_tradeoffs": 0.21, "planning_handoff": 0.20},
+    "thresholds": {"pass": 0.80, "good": 0.80, "excellent": 0.94}
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "dependent_inventory": {
+    "shuttle_slots": [
+      {
+        "accessibility_codes": [
+          "WCHR"
+        ],
+        "airport": "YVR",
+        "latest_flight_arrival": "2026-10-15T16:20:00-07:00",
+        "pickup": "2026-10-15T17:00:00-07:00",
+        "slot_id": "SH-1700"
+      },
+      {
+        "accessibility_codes": [],
+        "airport": "YVR",
+        "latest_flight_arrival": "2026-10-15T18:20:00-07:00",
+        "pickup": "2026-10-15T19:00:00-07:00",
+        "slot_id": "SH-1900"
+      }
+    ],
+    "station_to_hotel_minutes": 40
+  },
+  "etag": "inventory-v37",
+  "key_id": "travel-inventory-key-2026q4",
+  "options": [
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "through_checked",
+      "incremental_cost_cad": 110,
+      "option_id": "O-D",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-04:00",
+          "depart": "2026-10-15T08:00:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": true,
+          "segment_id": "LEG-1",
+          "to": "JFK"
+        },
+        {
+          "arrive": "2026-10-15T13:25:00-07:00",
+          "depart": "2026-10-15T10:10:00-04:00",
+          "from": "JFK",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OD-2",
+          "to": "YVR"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "CA"
+      ]
+    },
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "through_checked",
+      "incremental_cost_cad": 135,
+      "option_id": "O-E",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-04:00",
+          "depart": "2026-10-15T08:00:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": true,
+          "segment_id": "LEG-1",
+          "to": "JFK"
+        },
+        {
+          "arrive": "2026-10-15T14:15:00-07:00",
+          "depart": "2026-10-15T11:20:00-04:00",
+          "from": "JFK",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OE-2",
+          "to": "SEA"
+        },
+        {
+          "arrive": "2026-10-15T21:45:00-07:00",
+          "depart": "2026-10-15T17:45:00-07:00",
+          "from": "SEA",
+          "mode": "rail",
+          "reviewed_segment": false,
+          "segment_id": "OE-3",
+          "to": "Vancouver Pacific Central"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "CA"
+      ]
+    },
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "through_checked",
+      "incremental_cost_cad": 260,
+      "option_id": "O-F",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-04:00",
+          "depart": "2026-10-15T08:00:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": true,
+          "segment_id": "LEG-1",
+          "to": "JFK"
+        },
+        {
+          "arrive": "2026-10-15T16:05:00-07:00",
+          "depart": "2026-10-15T11:35:00-04:00",
+          "from": "JFK",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OF-2",
+          "to": "YVR"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "CA"
+      ]
+    },
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "recheck_required",
+      "incremental_cost_cad": 90,
+      "option_id": "O-G",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-04:00",
+          "depart": "2026-10-15T08:00:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": true,
+          "segment_id": "LEG-1",
+          "to": "JFK"
+        },
+        {
+          "arrive": "2026-10-15T22:50:00+01:00",
+          "depart": "2026-10-15T11:00:00-04:00",
+          "from": "JFK",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OG-2",
+          "to": "LHR"
+        },
+        {
+          "arrive": "2026-10-16T11:15:00-07:00",
+          "depart": "2026-10-16T09:30:00+01:00",
+          "from": "LHR",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OG-3",
+          "to": "YVR"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "GB",
+        "CA"
+      ]
+    },
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "through_checked",
+      "incremental_cost_cad": 180,
+      "option_id": "O-H",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-05:00",
+          "depart": "2026-10-15T07:25:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OH-1",
+          "to": "ORD"
+        },
+        {
+          "arrive": "2026-10-15T15:20:00-07:00",
+          "depart": "2026-10-15T11:10:00-05:00",
+          "from": "ORD",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OH-2",
+          "to": "YVR"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "CA"
+      ]
+    },
+    {
+      "accessibility_codes": [
+        "WCHR"
+      ],
+      "checked_bag_mode": "through_checked",
+      "incremental_cost_cad": 310,
+      "option_id": "O-I",
+      "segments": [
+        {
+          "arrive": "2026-10-15T09:15:00-04:00",
+          "depart": "2026-10-15T08:00:00-04:00",
+          "from": "BOS",
+          "mode": "air",
+          "reviewed_segment": true,
+          "segment_id": "LEG-1",
+          "to": "JFK"
+        },
+        {
+          "arrive": "2026-10-15T16:30:00-07:00",
+          "depart": "2026-10-15T12:05:00-04:00",
+          "from": "JFK",
+          "mode": "air",
+          "reviewed_segment": false,
+          "segment_id": "OI-2",
+          "to": "YVR"
+        }
+      ],
+      "transit_countries": [
+        "US",
+        "CA"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "signature": "9455d5df0f5ddf65514100e7914c5d8de4945cccc648c692eb172fa93e15c030",
+  "snapshot_id": "INV-20261014T221000Z",
+  "valid_until": "2026-10-14T19:00:00-04:00"
+}

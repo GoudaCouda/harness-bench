@@ -1,0 +1,12 @@
+{
+  "close_id": "PCLOSE-2026-07-CARDOPS",
+  "external_actions_executed": false,
+  "logical_close_sha256": "b3ede772d26e84e4539d2cea6bcfb80cd045eebf8fdc8f0d624e397e7ee8da8a",
+  "period": "2026-07",
+  "receipt_type": "local_pcard_close_stage",
+  "semantic_plan_sha256": "359e4568e398da11cf625551d982ec2b93966b2967c76e538b22db5939ef9655",
+  "source_checkpoint": "7ce3d7997ec3bedafbad8de3dd82f952c413f0d5c7aed09794fcdddd6dfdafeb",
+  "stage_state": "pending_erp_posting_approval",
+  "stage_token": "8e3132449dc2da3014c838bdfc9107dfd32c002ac4a610c74c846d68da897543",
+  "verification_sha256": "db048f3118fe11a09d797370e512a1da14e20cdd318f5bbcf553989fbf0e1b86"
+}

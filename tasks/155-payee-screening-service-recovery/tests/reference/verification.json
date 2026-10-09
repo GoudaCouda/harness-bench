@@ -1,0 +1,18 @@
+{
+  "audit_artifact": "screening_recovery_audit.md",
+  "decision_artifact": "recovered_screening.csv",
+  "evidence_files_checked": ["context.md", "fail_closed_policy.md", "recovery_queue.csv"],
+  "external_actions_executed": false,
+  "inputs_unchanged": true,
+  "row_count": 8,
+  "state_artifact": "screening_recovery_state.json",
+  "state_reconciled": true,
+  "tool_receipt": {
+    "artifact_bundle_sha256": "059f8eab9f5d2dd2960eaea977f9d61aa386643703ebc190a73cad64aa105cf8",
+    "input_bundle_sha256": "1e7c085080a619415d8325a7cf79176c7d1d2efacb1ab772eea0edb59715265a",
+    "structural_status": "pass",
+    "tool": "screeningctl/1"
+  },
+  "unique_item_keys": true,
+  "workflow_id": "155-payee-screening-service-recovery"
+}

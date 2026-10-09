@@ -1,0 +1,128 @@
+{
+  "channels": [
+    {
+      "channel": "合作渠道",
+      "net_revenue_yuan": "33402.90",
+      "paid_orders": 309,
+      "payment_conversion_pct": "6.32",
+      "refund_rate_pct": "6.00",
+      "visits": 4890
+    },
+    {
+      "channel": "直营网",
+      "net_revenue_yuan": "50830.50",
+      "paid_orders": 515,
+      "payment_conversion_pct": "6.70",
+      "refund_rate_pct": "6.00",
+      "visits": 7690
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-07-06",
+      "net_revenue_yuan": "12267.00",
+      "paid_orders": 120,
+      "visits": 1800
+    },
+    {
+      "date": "2026-07-07",
+      "net_revenue_yuan": "12572.50",
+      "paid_orders": 123,
+      "visits": 1840
+    },
+    {
+      "date": "2026-07-08",
+      "net_revenue_yuan": "12878.00",
+      "paid_orders": 126,
+      "visits": 1920
+    },
+    {
+      "date": "2026-07-09",
+      "net_revenue_yuan": "12887.40",
+      "paid_orders": 126,
+      "visits": 1920
+    },
+    {
+      "date": "2026-07-10",
+      "net_revenue_yuan": "13291.60",
+      "paid_orders": 130,
+      "visits": 2000
+    },
+    {
+      "date": "2026-07-11",
+      "net_revenue_yuan": "10424.60",
+      "paid_orders": 102,
+      "visits": 1590
+    },
+    {
+      "date": "2026-07-12",
+      "net_revenue_yuan": "9912.30",
+      "paid_orders": 97,
+      "visits": 1510
+    }
+  ],
+  "data_quality": {
+    "comparison_row_count": 14,
+    "current_row_count": 14,
+    "duplicate_keys": 0,
+    "invalid_rows": 0,
+    "row_count": 28
+  },
+  "highlights": {
+    "busiest_day_by_visits": "2026-07-10",
+    "top_channel_by_net_revenue": "直营网"
+  },
+  "rates": {
+    "payment_conversion_pct": "6.55",
+    "refund_rate_pct": "6.00",
+    "ticket_resolution_pct": "85.96"
+  },
+  "reporting_period": {
+    "comparison_end": "2026-07-05",
+    "comparison_start": "2026-06-29",
+    "current_end": "2026-07-12",
+    "current_start": "2026-07-06",
+    "timezone": "Asia/Shanghai"
+  },
+  "risks": [
+    {
+      "evidence": "payment_conversion_pp=-1.63，阈值lte-0.50",
+      "label": "支付转化率显著下降",
+      "recommended_action": "分渠道复盘流量质量和下单路径，优先排查转化降幅最大的渠道。",
+      "risk_id": "conversion_decline",
+      "severity": "high"
+    },
+    {
+      "evidence": "refund_rate_pct=6.00，阈值gt5.00",
+      "label": "退款率超过警戒线",
+      "recommended_action": "按商品和渠道拆分退款原因，对高频问题建立专项整改清单。",
+      "risk_id": "refund_high",
+      "severity": "high"
+    },
+    {
+      "evidence": "ticket_resolution_pct=85.96，阈值lt90.00",
+      "label": "工单解决率低于目标",
+      "recommended_action": "每日盘点未解决工单，为超时工单指定责任人和完成时间。",
+      "risk_id": "ticket_resolution_low",
+      "severity": "medium"
+    }
+  ],
+  "schema_version": "weekly_operations_summary_v1",
+  "totals": {
+    "gross_revenue_yuan": "89610.00",
+    "net_revenue_yuan": "84233.40",
+    "orders": 1001,
+    "paid_orders": 824,
+    "refund_yuan": "5376.60",
+    "tickets_opened": 285,
+    "tickets_resolved": 245,
+    "visits": 12580
+  },
+  "week_over_week": {
+    "gross_revenue_pct": "-7.42",
+    "net_revenue_pct": "-9.90",
+    "paid_orders_pct": "-11.59",
+    "payment_conversion_pp": "-1.63",
+    "visits_pct": "10.45"
+  }
+}

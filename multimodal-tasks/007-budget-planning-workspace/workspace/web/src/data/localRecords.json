@@ -1,0 +1,65 @@
+[
+  {
+    "id": "BUD-HOME",
+    "name": "Rent and utilities",
+    "category": "fixed",
+    "owner": "Alex",
+    "status": "clear",
+    "primary": 2680,
+    "secondary": 0
+  },
+  {
+    "id": "BUD-FOOD",
+    "name": "Groceries",
+    "category": "variable",
+    "owner": "Nia",
+    "status": "watch",
+    "primary": 740,
+    "secondary": 85
+  },
+  {
+    "id": "BUD-CARE",
+    "name": "Care expenses",
+    "category": "family",
+    "owner": "Remy",
+    "status": "review",
+    "primary": 620,
+    "secondary": 110
+  },
+  {
+    "id": "BUD-SAVE",
+    "name": "Emergency savings",
+    "category": "reserve",
+    "owner": "Alex",
+    "status": "clear",
+    "primary": 900,
+    "secondary": -75
+  },
+  {
+    "id": "BUD-HOME-R1",
+    "name": "Rent and utilities follow-up",
+    "category": "variable",
+    "owner": "Remy",
+    "status": "clear",
+    "primary": 2694,
+    "secondary": 6
+  },
+  {
+    "id": "BUD-FOOD-R2",
+    "name": "Groceries follow-up",
+    "category": "family",
+    "owner": "Alex",
+    "status": "watch",
+    "primary": 757,
+    "secondary": 92
+  },
+  {
+    "id": "BUD-CARE-R3",
+    "name": "Care expenses follow-up",
+    "category": "reserve",
+    "owner": "Alex",
+    "status": "review",
+    "primary": 640,
+    "secondary": 118
+  }
+]

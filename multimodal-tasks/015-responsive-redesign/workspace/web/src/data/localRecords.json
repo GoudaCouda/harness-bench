@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RESP-NAV",
+    "label": "Nav wraps into logo",
+    "area": "header",
+    "x": 58,
+    "y": 8,
+    "w": 30,
+    "h": 12,
+    "severity": "review"
+  },
+  {
+    "id": "RESP-CTA",
+    "label": "CTA overflows card",
+    "area": "pricing",
+    "x": 60,
+    "y": 61,
+    "w": 28,
+    "h": 12,
+    "severity": "review"
+  },
+  {
+    "id": "RESP-HERO",
+    "label": "Hero copy crowding",
+    "area": "hero",
+    "x": 8,
+    "y": 24,
+    "w": 42,
+    "h": 20,
+    "severity": "watch"
+  },
+  {
+    "id": "RESP-FAQ",
+    "label": "FAQ accordion cramped",
+    "area": "support",
+    "x": 10,
+    "y": 78,
+    "w": 78,
+    "h": 12,
+    "severity": "watch"
+  }
+]

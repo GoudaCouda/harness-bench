@@ -1,0 +1,30 @@
+{
+  "schema_version": "case20_tool_contract_v3",
+  "environment_variables": {
+    "CASE20_WORKSPACE": "/agent_workspace",
+    "CASE20_SERVICE_SOCKET": "/run/case20/service.sock"
+  },
+  "tools": [
+    {
+      "tool_id": "local_messaging_api",
+      "entrypoint": "/opt/case20/tools/collab_cli.py",
+      "argv_prefix": ["python3", "/opt/case20/tools/collab_cli.py"],
+      "commands": ["list-messages", "list-attachments", "download-attachment", "send-reminder"]
+    },
+    {
+      "tool_id": "filesystem",
+      "entrypoint": "/opt/case20/tools/filesystem_cli.py",
+      "argv_prefix": ["python3", "/opt/case20/tools/filesystem_cli.py"],
+      "commands": ["list-tree", "read-text", "sha256"]
+    },
+    {
+      "tool_id": "spreadsheet_writer",
+      "entrypoint": "/opt/case20/tools/spreadsheet_cli.py",
+      "argv_prefix": ["python3", "/opt/case20/tools/spreadsheet_cli.py"],
+      "commands": ["write-register"]
+    }
+  ],
+  "network": "offline",
+  "published_ports": [],
+  "fixed_time": "2026-07-20T10:00:00+08:00"
+}

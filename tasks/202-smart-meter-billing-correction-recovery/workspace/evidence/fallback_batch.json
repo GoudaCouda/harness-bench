@@ -1,0 +1,18 @@
+{
+  "batch_id": "FALLBACK-202611-RECOVERY-A",
+  "key_id": "meter-batch-key-2026",
+  "payload_checksum": "63ce8af5290d04c5b22e1a52cd931b4ff90c70686b846beeebdfca5ce08d2ba3",
+  "records": [
+    {
+      "account_id": "ACCT-FBK-88",
+      "cycle": "2026-11",
+      "export_kwh": 0.0,
+      "import_kwh": 12.4,
+      "meter_id": "MTR-FBK-88",
+      "quality": "validated_actual",
+      "record_id": "FBK-REC-88"
+    }
+  ],
+  "schema_version": 1,
+  "signature": "733339861d9e7743f83f9771e6656e2b457cfb20e054c4901013afd3d6d34f93"
+}

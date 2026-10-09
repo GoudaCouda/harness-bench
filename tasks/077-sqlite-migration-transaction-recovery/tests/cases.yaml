@@ -1,0 +1,33 @@
+schema_version: 2
+task_id: 077-sqlite-migration-transaction-recovery
+pass_threshold: 0.8
+cases:
+- id: busy_phase_and_transaction_scope
+  title: BUSY recovery respects transaction phase and retry scope
+  description: Begin, statement, and commit contention produce different rollback or retry plans.
+  weight: 0.35
+  core: true
+- id: idempotency_unknown_commit_and_divergence
+  title: Ledger identity and unknown commit outcomes fail closed
+  description: Applied work becomes a no-op, uncertain commits are probed, and divergent state is blocked.
+  weight: 0.25
+  core: true
+  score_group: validation_and_replay
+- id: visible_recovery_plan
+  title: Visible migration incidents are reproduced exactly
+  description: The report preserves case order and submitted implementation results.
+  weight: 0.05
+  core: true
+  score_group: validation_and_replay
+- id: verification_handoff
+  title: Transaction recovery and executor risks are handed off
+  description: Notes explain phase semantics, idempotency, verification, and residual risk.
+  weight: 0.2
+  core: false
+- id: evidence_and_database_action_boundary
+  title: Validation and offline task boundaries are respected
+  description: Malformed inputs fail predictably, protected evidence remains unchanged, and no prohibited
+    external action is claimed.
+  weight: 0.15
+  core: true
+  score_group: validation_and_replay

@@ -1,0 +1,131 @@
+{
+  "edges": [
+    {
+      "policy": {
+        "preserve_special": true,
+        "umask": 0
+      },
+      "records": [
+        {
+          "current_mode": 420,
+          "id": "noop",
+          "is_dir": false,
+          "operation": "chmod",
+          "symbolic": "u+rw,g=r,o=r"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "preserve_special": true,
+        "umask": 0
+      },
+      "records": [
+        {
+          "current_mode": 2040,
+          "id": "special",
+          "is_dir": true,
+          "operation": "chmod",
+          "symbolic": "o="
+        }
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "policy": {
+        "preserve_special": false,
+        "umask": 0
+      },
+      "records": [
+        {
+          "current_mode": 420,
+          "id": "bad",
+          "is_dir": false,
+          "operation": "chmod",
+          "symbolic": "a+z"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "preserve_special": false,
+        "umask": 0
+      },
+      "records": [
+        {
+          "id": "x",
+          "is_dir": false,
+          "operation": "create"
+        },
+        {
+          "id": "x",
+          "is_dir": true,
+          "operation": "create"
+        }
+      ]
+    }
+  ],
+  "primary": [
+    {
+      "policy": {
+        "preserve_special": true,
+        "umask": 18
+      },
+      "records": [
+        {
+          "id": "new-file",
+          "is_dir": false,
+          "operation": "create"
+        },
+        {
+          "id": "shared-dir",
+          "is_dir": true,
+          "operation": "create",
+          "requested_mode": 511
+        },
+        {
+          "current_mode": 2541,
+          "id": "tighten",
+          "is_dir": false,
+          "operation": "chmod",
+          "symbolic": "g-w,o="
+        }
+      ]
+    },
+    {
+      "policy": {
+        "preserve_special": false,
+        "umask": 23
+      },
+      "records": [
+        {
+          "current_mode": 3565,
+          "id": "clauses",
+          "is_dir": false,
+          "operation": "chmod",
+          "symbolic": "u=rw,g+r,o-rwx"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "preserve_special": true,
+        "umask": 63
+      },
+      "records": [
+        {
+          "id": "private-dir",
+          "is_dir": true,
+          "operation": "create"
+        },
+        {
+          "id": "explicit",
+          "is_dir": false,
+          "operation": "create",
+          "requested_mode": 511
+        }
+      ]
+    }
+  ]
+}
