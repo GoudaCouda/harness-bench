@@ -59,7 +59,7 @@ COPY docker/harnesses/antigravity/patch_litellm.py /tmp/patch_litellm.py
 RUN ln -sf /usr/local/bin/python3 /usr/bin/python3 \
     && python /opt/harnessbench/verify_toolchain.py --python-only \
     && python -m venv /opt/litellm-venv \
-    && /opt/litellm-venv/bin/pip install --no-cache-dir 'litellm[proxy]' \
+    && /opt/litellm-venv/bin/pip install --no-cache-dir 'litellm[proxy]==1.105.0' \
     && /opt/litellm-venv/bin/python /tmp/patch_litellm.py \
     && rm -f /tmp/patch_litellm.py \
     && chmod -R a+rX /opt/litellm-venv \
